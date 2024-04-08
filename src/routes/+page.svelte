@@ -61,7 +61,7 @@
 		<a href="https://www.linkedin.com/in/zixianchen/"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="hover:fill-primary"
+				class="hover:fill-white"
 				width="5rem"
 				height="5rem"
 				viewBox="-2 -2 24 24"
@@ -77,7 +77,7 @@
 		<a href="https://github.com/zachczx?tab=repositories"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="hover:fill-primary"
+				class="hover:fill-white"
 				width="5rem"
 				height="5rem"
 				viewBox="-2 -2 24 24"
@@ -252,22 +252,113 @@
 			</div>
 		</div>
 		<div class="card col-span-1 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl">
-			<div class="card-body">
+			<div class="card-body space-y-8">
 				<h3>Tech</h3>
-				<p class="text-center text-2xl">Tech placeholder.</p>
+				<div>
+					<h4 class="text-2xl font-medium">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="icon icon-tabler icons-tabler-outline icon-tabler-code inline h-8 w-8 stroke-info pb-1"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 8l-4 4l4 4" /><path
+								d="M17 8l4 4l-4 4"
+							/><path d="M14 4l-4 16" /></svg
+						><span class="ps-2">Tech Infra Policy Team Lead</span>
+					</h4>
+					<p>
+						Did policies, funding assessments for cloud, on-prem hosting, SG Tech Stack, toolchains
+						and other infra.
+					</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-medium">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="icon icon-tabler icons-tabler-outline icon-tabler-code inline h-8 w-8 stroke-info pb-1"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 8l-4 4l4 4" /><path
+								d="M17 8l4 4l-4 4"
+							/><path d="M14 4l-4 16" /></svg
+						><span class="ps-2">Comms Tech Team Lead</span>
+					</h4>
+					<p>Product owner for media analyst tools, led investments in NLP/CV research.</p>
+				</div>
 			</div>
 		</div>
 		<div class="card col-span-1 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl">
-			<div class="card-body">
+			<div class="card-body space-y-8">
 				<h3>Comms</h3>
-				<p class="text-2xl">Media Relations Officer > Managed media and media features.</p>
-				<p class="text-2xl">Communications Strategist > Crafted campaigns and strategies.</p>
+				<div>
+					<h4 class="text-2xl font-medium">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="icon icon-tabler icons-tabler-outline icon-tabler-messages inline h-8 w-8 stroke-info"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+								d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"
+							/><path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></svg
+						><span class="ps-2">Media Relations Officer</span>
+					</h4>
+					<p>Befriended media and did tons of media features of MINDEF & SAF.</p>
+				</div>
+				<div>
+					<h4 class="text-2xl font-medium">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="icon icon-tabler icons-tabler-outline icon-tabler-messages inline h-8 w-8 stroke-info"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+								d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"
+							/><path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></svg
+						><span class="ps-2">Comms Strategist</span>
+					</h4>
+					<p>Crafted comms campaigns and strategies.</p>
+				</div>
 			</div>
 		</div>
 		<div class="card col-span-1 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl">
-			<div class="card-body">
+			<div class="card-body space-y-8">
 				<h3>Policy</h3>
-				<p class="text-center text-2xl">Policy placeholder.</p>
+				<div>
+					<h4 class="text-2xl font-medium">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="icon icon-tabler icons-tabler-outline icon-tabler-file-text inline h-8 w-8 stroke-info"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+								d="M14 3v4a1 1 0 0 0 1 1h4"
+							/><path
+								d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
+							/><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></svg
+						><span class="ps-2">NS Policy Officer</span>
+					</h4>
+					<p>Did NS policies for sportsmen, leave, citizenship, exit control</p>
+				</div>
 			</div>
 		</div>
 		<div class="card col-span-1 row-span-1 w-full border border-base-300 bg-base-200 shadow-xl">
