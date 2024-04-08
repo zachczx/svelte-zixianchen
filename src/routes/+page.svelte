@@ -7,6 +7,7 @@
 	import eatyourmedsLogo from '$lib/assets/eatyourmeds-logo.webp?enhanced&w=150';
 	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=200';
 	import { fly } from 'svelte/transition';
+	import nsmen from '$lib/assets/nsmen01a.avif?enhanced&w=600';
 
 	import { onMount } from 'svelte';
 	function getMonthsBetween(date1, date2, roundUpFractionalMonths) {
@@ -358,6 +359,7 @@
 						><span class="ps-2">NS Policy Officer</span>
 					</h4>
 					<p>Did NS policies for sportsmen, leave, citizenship, exit control</p>
+					<enhanced:img src={nsmen} alt="NSmen" class="mt-5 rounded-2xl object-cover" />
 				</div>
 			</div>
 		</div>
@@ -448,6 +450,7 @@
 			</div>
 		</div>
 	</div>
+	<p class="mt-14 text-center text-base">Copyright © 2024 Zixian Chen. All rights reserved.</p>
 </section>
 
 <style>
