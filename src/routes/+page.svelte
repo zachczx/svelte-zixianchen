@@ -438,7 +438,7 @@
 					/><img
 						src={pill}
 						alt="Eat Your Meds"
-						class="absolute -right-20 top-20 z-30 rotate-[50deg] scale-50 scale-[1.1] blur-xl"
+						class="absolute -right-24 top-20 z-30 rotate-[50deg] scale-[0.4] blur-xl"
 					/>
 				</div>
 				<!--
