@@ -1,5 +1,5 @@
 <script>
-	import profilepic from '$lib/assets/kitandi.webp';
+	import profilepic from '$lib/assets/kitandi.webp?enhanced&w=500';
 	import cuteRobot from '$lib/assets/cute-robot.webp';
 	import globe from '$lib/assets/globe.webp';
 	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=500';
@@ -85,7 +85,7 @@
 			Zixian Chen
 		</h1>
 		<h2 class="montserrat text-center text-3xl leading-none tracking-tighter lg:text-5xl">
-			I speak your language, be it filled with footnotes or semicolons.
+			I speak your language, be it filled with full stops or semicolons.
 		</h2>
 	</div>
 	<div class="mb-8 flex justify-center space-x-3">
@@ -93,7 +93,7 @@
 		<a href="https://www.linkedin.com/in/zixianchen/"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="h-12 w-12 hover:fill-white"
+				class="h-12 w-12 transition duration-500 ease-in-out hover:fill-white"
 				viewBox="-2 -2 24 24"
 				><g
 					><path
@@ -107,7 +107,7 @@
 		<a href="https://github.com/zachczx?tab=repositories"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="h-12 w-12 hover:fill-white"
+				class="h-12 w-12 transition duration-500 ease-in-out hover:fill-white"
 				viewBox="-2 -2 24 24"
 				><g
 					><path
@@ -123,7 +123,7 @@
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="-2 -2 24 24"
-				class="h-12 w-12 hover:fill-white"
+				class="h-12 w-12 transition duration-500 ease-in-out hover:fill-white"
 				><g
 					><path
 						d="M5.024 12.655h3.92v1.887h-3.92zm5.881 0h3.918v1.887h-3.918zM5.021 8.881h9.802v1.887H5.021zm.003-3.774h5.881v1.887H5.024zm7.841 0h1.96v1.887h-1.96z"
@@ -138,14 +138,14 @@
 		<div class="fromLeft relative col-span-2 row-span-3 grid items-end rounded-2xl md:col-span-1">
 			<div class="absolute h-96 w-full rounded-2xl border bg-base-100 shadow-xl"></div>
 			<figure>
-				<img src={profilepic} alt="Doggo and I" class="z-20 scale-100 rounded-2xl" />
+				<enhanced:img src={profilepic} alt="Doggo and I" class="z-20 scale-100 rounded-2xl" />
 			</figure>
 		</div>
 		<div
 			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-2"
 		>
 			<div class="card-body space-y-4">
-				<h3>Work Life</h3>
+				<h3>Work</h3>
 
 				<p class="text-2xl">
 					<span class="font-bold text-primary">Generalist</span> civil servant. I write, present. I like
@@ -183,7 +183,7 @@
 
 		<div class="fromRight card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
 			<div class="card-body space-y-4">
-				<h3>Alt Life</h3>
+				<h3>Personal</h3>
 				<p class="text-2xl">
 					Hobbyist in <span class="font-bold text-primary">webdev</span>,
 					<span class="font-bold text-primary">stable diffusion</span>.
@@ -202,16 +202,27 @@
 		</div>-->
 		<div class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
 			<div class="card-body space-y-4">
-				<h3>Education Life</h3>
+				<h3>Education</h3>
 				<p class="text-2xl">
 					Did <span class="font-bold text-primary">Political Science</span> at NUS.
 				</p>
 				<p class="text-2xl">
 					Did Coursera Specializations (<span class="font-bold text-primary"
-						>Meta Back-end Developer</span
-					>, <span class="font-bold text-primary">AWS Fundamentals</span>,
+						><a href="https://www.coursera.org/account/accomplishments/specialization/D9EZKV26D69B"
+							>Meta Back-end Developer</a
+						></span
+					>,
+					<span class="font-bold text-primary"
+						><a
+							href="https://www.coursera.org/account/accomplishments/specialization/certificate/MVCFEP4ZHVSV"
+							>AWS Fundamentals</a
+						></span
+					>,
 					<span class="font-bold text-primary">Google UX</span>),
-					<span class="font-bold text-primary">Certified ScrumMaster</span> <sup>(fwiw)</sup>.
+					<span class="font-bold text-primary"
+						><a href="https://bcert.me/bc/html/show-badge.html?b=twwbrxwh">Certified ScrumMaster</a
+						></span
+					> <sup>(fwiw)</sup>.
 				</p>
 			</div>
 		</div>
@@ -408,7 +419,15 @@
 		>
 			<div class="card-body space-y-4">
 				<h2>Side Projects</h2>
-				<p class="text-2xl">I use Svelte, Django, Htmx, Tailwind.</p>
+				<div class="mockup-code">
+					<pre data-prefix=">"><code
+							>npm install <span class="text-yellow-300">svelte tailwindcss</span></code
+						></pre>
+					<pre data-prefix="$"><code>pip install <span class="text-yellow-300">Django</span></code
+						></pre>
+					<pre data-prefix=">"><code>npm install <span class="text-yellow-300">htmx.org</span></code
+						></pre>
+				</div>
 			</div>
 		</div>
 		<div
@@ -430,7 +449,7 @@
 						><enhanced:img
 							src={apptitudeLogo}
 							alt="Apptitude"
-							class="opacity-50 transition duration-700 ease-in-out group-hover:opacity-100 group-hover:brightness-100"
+							class="opacity-50 brightness-50 transition duration-700 ease-in-out group-hover:opacity-100 group-hover:brightness-100"
 						/></a
 					>
 				</div>
