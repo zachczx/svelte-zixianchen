@@ -8,8 +8,34 @@
 	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=200';
 	import kitkitPortrait from '$lib/assets/kit-baby.webp';
 	import TablerLink from '$lib/svg/TablerLink.svelte';
+	import { animate, stagger, inView } from 'motion';
 
 	import { onMount } from 'svelte';
+
+	onMount(() => {
+		inView(
+			'.fromLeft',
+			({ target }) => {
+				animate(target, { x: [-100, 0], opacity: [0, 1] }, { duration: 1, delay: stagger(0.2) });
+			},
+			{ amount: 0.5 }
+		);
+		inView(
+			'.fromRight',
+			({ target }) => {
+				animate(target, { x: [100, 0], opacity: [0, 1] }, { duration: 1, delay: stagger(0.2) });
+			},
+			{ amount: 0.5 }
+		);
+		inView(
+			'.fromBottom',
+			({ target }) => {
+				animate(target, { y: [100, 0], opacity: [0, 1] }, { duration: 1, delay: stagger(0.2) });
+			},
+			{ amount: 0.5 }
+		);
+	});
+
 	function getMonthsBetween(date1, date2, roundUpFractionalMonths) {
 		//Months will be calculated between start and end dates.
 		//Make sure start date is less than end date.
@@ -109,14 +135,14 @@
 		>
 	</div>
 	<div class="grid auto-cols-fr auto-rows-auto gap-x-3 gap-y-3 xl:grid-cols-4">
-		<div class="relative col-span-2 row-span-3 grid items-end rounded-2xl md:col-span-1">
+		<div class="fromLeft relative col-span-2 row-span-3 grid items-end rounded-2xl md:col-span-1">
 			<div class="absolute h-96 w-full rounded-2xl border bg-base-100 shadow-xl"></div>
 			<figure>
 				<img src={profilepic} alt="Doggo and I" class="z-20 scale-100 rounded-2xl" />
 			</figure>
 		</div>
 		<div
-			class="card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-2"
+			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-2"
 		>
 			<div class="card-body space-y-4">
 				<h3>Work Life</h3>
@@ -128,7 +154,7 @@
 			</div>
 		</div>
 		<div
-			class="col-span-2 row-span-1 h-full w-full space-y-0 self-center rounded-2xl opacity-0 xl:col-span-1 xl:row-span-3 xl:opacity-100"
+			class="fromRight col-span-2 row-span-1 h-full w-full space-y-0 self-center rounded-2xl opacity-0 xl:col-span-1 xl:row-span-3 xl:opacity-100"
 			style="background: url({kitkitPortrait}) no-repeat; background-size: cover; background-position: 20% 25%"
 		></div>
 		<!--<div class="card col-span-2 row-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
@@ -155,7 +181,7 @@
 			</div>
 		</div>-->
 
-		<div class="card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
+		<div class="fromRight card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
 			<div class="card-body space-y-4">
 				<h3>Alt Life</h3>
 				<p class="text-2xl">
@@ -174,7 +200,7 @@
 				<p class="text-center text-2xl">Hobbyist placeholder.</p>
 			</div>
 		</div>-->
-		<div class="card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
+		<div class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
 			<div class="card-body space-y-4">
 				<h3>Education Life</h3>
 				<p class="text-2xl">
@@ -190,7 +216,7 @@
 			</div>
 		</div>
 		<div
-			class="card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
 			<div class="card-body">
 				<h2>Career Stats</h2>
@@ -258,9 +284,9 @@
 		</div>
 
 		<div
-			class="card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+			class="fromBottom card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
-			<div class="card-body space-y-4">
+			<div class=" card-body space-y-4">
 				<h3>Tech</h3>
 				<div>
 					<h4 class="text-2xl font-medium">
@@ -304,9 +330,9 @@
 			</div>
 		</div>
 		<div
-			class="card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+			class="fromBottom card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
-			<div class="card-body space-y-4">
+			<div class=" card-body space-y-4">
 				<h3>Comms</h3>
 				<div>
 					<h4 class="text-2xl font-medium">
@@ -347,7 +373,7 @@
 			</div>
 		</div>
 		<div
-			class="card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+			class="fromRight card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
 			<div class="card-body space-y-4">
 				<h3>Policy</h3>
@@ -378,7 +404,7 @@
 		</div>
 
 		<div
-			class="card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
+			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
 		>
 			<div class="card-body space-y-4">
 				<h2>Side Projects</h2>
@@ -386,7 +412,7 @@
 			</div>
 		</div>
 		<div
-			class="card col-span-2 row-span-1 border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+			class="fromBottom card col-span-2 row-span-1 border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
 			<div class="group card-body grid gap-y-5">
 				<div class="space-y-4">
@@ -404,14 +430,14 @@
 						><enhanced:img
 							src={apptitudeLogo}
 							alt="Apptitude"
-							class="opacity-50 group-hover:opacity-100"
+							class="opacity-50 transition duration-700 ease-in-out group-hover:opacity-100 group-hover:brightness-100"
 						/></a
 					>
 				</div>
 			</div>
 		</div>
 		<div
-			class="card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+			class="fromBottom card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
 			<div class="group card-body grid gap-y-5">
 				<div class="space-y-4">
@@ -431,14 +457,14 @@
 					><enhanced:img
 						src={rankamateLogo}
 						alt="Rank-a-Mate"
-						class="absolute -bottom-0 -right-0 opacity-25 group-hover:opacity-100"
+						class="absolute -bottom-0 -right-0 opacity-25 transition duration-700 ease-in-out group-hover:opacity-100"
 					/></a
 				>
 			</div>
 		</div>
 
 		<div
-			class="card card-side col-span-2 row-span-3 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+			class="fromRight card card-side col-span-2 row-span-3 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
 			<div class="card-body relative">
 				<div class="space-y-4">
@@ -480,6 +506,18 @@
 </section>
 
 <style>
+	.fromLeft {
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+	.fromRight {
+		transform: translateX(100px);
+		opacity: 0;
+	}
+	.fromBottom {
+		transform: translateY(-100px);
+		opacity: 0;
+	}
 	.teams-circle::before {
 		content: 'CZ';
 		height: 80px;
