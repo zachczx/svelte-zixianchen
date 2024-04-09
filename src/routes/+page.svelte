@@ -8,55 +8,77 @@
 	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=200';
 	import kitkitPortrait from '$lib/assets/kit-baby.webp';
 	import TablerLink from '$lib/svg/TablerLink.svelte';
-	import { animate, stagger, inView } from 'motion';
 
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		inView(
-			'.fromLeft',
-			({ target }) => {
-				animate(
-					target,
-					{ x: [-100, 0], opacity: [0, 1] },
-					{ easing: 'ease-out', duration: 1, delay: stagger(0.4) }
-				);
-			},
-			{ amount: 0.5 }
-		);
-		inView(
-			'.fromRight',
-			({ target }) => {
-				animate(
-					target,
-					{ x: [100, 0], opacity: [0, 1] },
-					{ easing: 'ease-out', duration: 1, delay: stagger(0.4) }
-				);
-			},
-			{ amount: 0.5 }
-		);
-		inView(
-			'.fromRightBig',
-			({ target }) => {
-				animate(
-					target,
-					{ x: [100, 0], opacity: [0, 1] },
-					{ easing: 'ease-out', duration: 1, delay: stagger(0.4) }
-				);
-			},
-			{ amount: 0.3 }
-		);
-		inView(
-			'.fromBottom',
-			({ target }) => {
-				animate(
-					target,
-					{ y: [100, 0], opacity: [0, 1] },
-					{ easing: 'ease-out', duration: 1, delay: stagger(0.4) }
-				);
-			},
-			{ amount: 0.9 }
-		);
+		gsap.registerPlugin(ScrollTrigger);
+		let tl = gsap.matchMedia();
+		const elLeft = document.getElementsByClassName('fromLeft');
+		const elRight = document.getElementsByClassName('fromRight');
+		const elBottom = document.getElementsByClassName('fromBottom');
+		tl.add('(min-width: 1028px)', () => {
+			gsap.from('.fromAuto', {
+				y: 100,
+				autoAlpha: 0.5,
+				duration: 0.4,
+				ease: 'sine.out',
+				stagger: 0.05
+			});
+
+			for (let i = 0; i < elLeft.length; i++) {
+				gsap.from(elLeft[i], {
+					scrollTrigger: {
+						trigger: elLeft[i],
+						start: 'top 80%',
+						end: 'center 60%',
+						scrub: true,
+						markers: false
+					},
+					x: -100,
+					autoAlpha: 0.8,
+					duration: 1,
+					ease: 'circ.out',
+					delay: 0.3,
+					stagger: 0.3
+				});
+			}
+
+			for (let i = 0; i < elRight.length; i++) {
+				gsap.from(elRight[i], {
+					scrollTrigger: {
+						trigger: elRight[i],
+						start: 'top 80%',
+						end: 'center 60%',
+						scrub: true,
+						markers: false
+					},
+					x: 100,
+					autoAlpha: 0.8,
+					duration: 1,
+					ease: 'circ.out',
+					delay: 0.3,
+					stagger: 0.3
+				});
+			}
+
+			for (let i = 0; i < elBottom.length; i++) {
+				gsap.from(elBottom[i], {
+					scrollTrigger: {
+						trigger: elBottom[i],
+						start: 'top 80%',
+						end: 'center 70%',
+						scrub: true,
+						markers: false
+					},
+					y: 70,
+					autoAlpha: 0.8,
+					ease: 'circ.out'
+				});
+			}
+		});
 	});
 
 	function getMonthsBetween(date1, date2, roundUpFractionalMonths) {
@@ -158,14 +180,14 @@
 		>
 	</div>
 	<div class="grid auto-cols-fr auto-rows-auto gap-x-3 gap-y-3 xl:grid-cols-4">
-		<div class="fromLeft relative col-span-2 row-span-3 grid items-end rounded-2xl md:col-span-1">
+		<div class="relative col-span-2 row-span-3 grid items-end rounded-2xl md:col-span-1">
 			<div class="absolute h-96 w-full rounded-2xl border bg-base-100 shadow-xl"></div>
 			<figure>
 				<enhanced:img src={profilepic} alt="Doggo and I" class="z-20 scale-100 rounded-2xl" />
 			</figure>
 		</div>
 		<div
-			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-2"
+			class="fromAuto card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-2"
 		>
 			<div class="card-body space-y-4">
 				<h3>Work</h3>
@@ -177,7 +199,7 @@
 			</div>
 		</div>
 		<div
-			class="fromRight col-span-2 row-span-1 h-full w-full space-y-0 self-center rounded-2xl opacity-0 xl:col-span-1 xl:row-span-3 xl:opacity-100"
+			class="col-span-2 row-span-1 h-full w-full space-y-0 self-center rounded-2xl opacity-0 xl:col-span-1 xl:row-span-3 xl:opacity-100"
 			style="background: url({kitkitPortrait}) no-repeat; background-size: cover; background-position: 20% 25%"
 		></div>
 		<!--<div class="card col-span-2 row-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
@@ -204,7 +226,7 @@
 			</div>
 		</div>-->
 
-		<div class="fromRight card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
+		<div class="fromAuto card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
 			<div class="card-body space-y-4">
 				<h3>Personal</h3>
 				<p class="text-2xl">
@@ -223,12 +245,17 @@
 				<p class="text-center text-2xl">Hobbyist placeholder.</p>
 			</div>
 		</div>-->
-		<div class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
+		<div class="fromAuto card col-span-1 w-full border border-base-300 bg-base-100 shadow-xl">
 			<div class="card-body space-y-4">
 				<h3>Education</h3>
 				<p class="text-2xl">
 					Did <span class="font-bold text-primary">Political Science</span> at NUS.
 				</p>
+			</div>
+		</div>
+		<div class="fromAuto card col-span-1 w-full border border-base-300 bg-base-100 shadow-xl">
+			<div class="card-body space-y-4">
+				<h3>Certifications</h3>
 				<p class="text-2xl">
 					Did Coursera Specializations (<span class="font-bold text-primary"
 						><a href="https://www.coursera.org/account/accomplishments/specialization/D9EZKV26D69B"
@@ -505,7 +532,7 @@
 		</div>
 
 		<div
-			class="fromRightBig card card-side col-span-2 row-span-3 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+			class="fromRight card card-side col-span-2 row-span-3 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
 			<div class="card-body relative">
 				<div class="space-y-4">
@@ -547,22 +574,6 @@
 </section>
 
 <style>
-	.fromLeft {
-		transform: translateX(-100px);
-		opacity: 0;
-	}
-	.fromRight {
-		transform: translateX(100px);
-		opacity: 0;
-	}
-	.fromRightBig {
-		transform: translateX(100px);
-		opacity: 0;
-	}
-	.fromBottom {
-		transform: translateY(-100px);
-		opacity: 0;
-	}
 	.teams-circle::before {
 		content: 'CZ';
 		height: 80px;
