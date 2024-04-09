@@ -16,23 +16,46 @@
 		inView(
 			'.fromLeft',
 			({ target }) => {
-				animate(target, { x: [-100, 0], opacity: [0, 1] }, { duration: 1, delay: stagger(0.2) });
+				animate(
+					target,
+					{ x: [-100, 0], opacity: [0, 1] },
+					{ easing: 'ease-out', duration: 1, delay: stagger(0.4) }
+				);
 			},
 			{ amount: 0.5 }
 		);
 		inView(
 			'.fromRight',
 			({ target }) => {
-				animate(target, { x: [100, 0], opacity: [0, 1] }, { duration: 1, delay: stagger(0.2) });
+				animate(
+					target,
+					{ x: [100, 0], opacity: [0, 1] },
+					{ easing: 'ease-out', duration: 1, delay: stagger(0.4) }
+				);
 			},
 			{ amount: 0.5 }
 		);
 		inView(
+			'.fromRightBig',
+			({ target }) => {
+				animate(
+					target,
+					{ x: [100, 0], opacity: [0, 1] },
+					{ easing: 'ease-out', duration: 1, delay: stagger(0.4) }
+				);
+			},
+			{ amount: 0.3 }
+		);
+		inView(
 			'.fromBottom',
 			({ target }) => {
-				animate(target, { y: [100, 0], opacity: [0, 1] }, { duration: 1, delay: stagger(0.2) });
+				animate(
+					target,
+					{ y: [100, 0], opacity: [0, 1] },
+					{ easing: 'ease-out', duration: 1, delay: stagger(0.4) }
+				);
 			},
-			{ amount: 0.5 }
+			{ amount: 0.9 }
 		);
 	});
 
@@ -297,7 +320,7 @@
 		<div
 			class="fromBottom card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
-			<div class=" card-body space-y-4">
+			<div class="card-body space-y-4">
 				<h3>Tech</h3>
 				<div>
 					<h4 class="text-2xl font-medium">
@@ -343,7 +366,7 @@
 		<div
 			class="fromBottom card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
-			<div class=" card-body space-y-4">
+			<div class="card-body space-y-4">
 				<h3>Comms</h3>
 				<div>
 					<h4 class="text-2xl font-medium">
@@ -459,7 +482,7 @@
 			class="fromBottom card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
 			<div class="group card-body grid gap-y-5">
-				<div class="space-y-4">
+				<div class="relative space-y-4">
 					<h3 class="text-start">Django + SortableJS + Htmx</h3>
 					<p class="text-2xl">
 						<span class="text-primary"
@@ -468,22 +491,21 @@
 							></span
 						> offers dragging & dropping for ranking sessions, versus Excel.
 					</p>
-					<p class="h-40"></p>
+					<div class="grid h-60 place-items-center">
+						<a href="https://app.zixian.dev/rank/"
+							><enhanced:img
+								src={rankamateLogo}
+								alt="Rank-a-Mate"
+								class="opacity-25 transition duration-700 ease-in-out group-hover:opacity-100"
+							/></a
+						>
+					</div>
 				</div>
-			</div>
-			<div class="group relative">
-				<a href="https://app.zixian.dev/rank/"
-					><enhanced:img
-						src={rankamateLogo}
-						alt="Rank-a-Mate"
-						class="absolute -bottom-0 -right-0 opacity-25 transition duration-700 ease-in-out group-hover:opacity-100"
-					/></a
-				>
 			</div>
 		</div>
 
 		<div
-			class="fromRight card card-side col-span-2 row-span-3 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+			class="fromRightBig card card-side col-span-2 row-span-3 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
 			<div class="card-body relative">
 				<div class="space-y-4">
@@ -530,6 +552,10 @@
 		opacity: 0;
 	}
 	.fromRight {
+		transform: translateX(100px);
+		opacity: 0;
+	}
+	.fromRightBig {
 		transform: translateX(100px);
 		opacity: 0;
 	}
