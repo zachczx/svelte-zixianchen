@@ -264,7 +264,7 @@
 							stroke-width="2"
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							class="icon icon-tabler icons-tabler-outline icon-tabler-code inline h-8 w-8 stroke-secondary pb-1"
+							class="icon icon-tabler icons-tabler-outline icon-tabler-code inline h-8 w-8 stroke-primary pb-1"
 							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 8l-4 4l4 4" /><path
 								d="M17 8l4 4l-4 4"
 							/><path d="M14 4l-4 16" /></svg
@@ -285,7 +285,7 @@
 							stroke-width="2"
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							class="icon icon-tabler icons-tabler-outline icon-tabler-code inline h-8 w-8 stroke-secondary pb-1"
+							class="icon icon-tabler icons-tabler-outline icon-tabler-code inline h-8 w-8 stroke-primary pb-1"
 							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 8l-4 4l4 4" /><path
 								d="M17 8l4 4l-4 4"
 							/><path d="M14 4l-4 16" /></svg
@@ -308,7 +308,7 @@
 							stroke-width="2"
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							class="icon icon-tabler icons-tabler-outline icon-tabler-messages inline h-8 w-8 stroke-secondary"
+							class="icon icon-tabler icons-tabler-outline icon-tabler-messages inline h-8 w-8 stroke-primary"
 							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
 								d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"
 							/><path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></svg
@@ -326,7 +326,7 @@
 							stroke-width="2"
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							class="icon icon-tabler icons-tabler-outline icon-tabler-messages inline h-8 w-8 stroke-secondary"
+							class="icon icon-tabler icons-tabler-outline icon-tabler-messages inline h-8 w-8 stroke-primary"
 							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
 								d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"
 							/><path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></svg
@@ -349,7 +349,7 @@
 							stroke-width="2"
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							class="icon icon-tabler icons-tabler-outline icon-tabler-file-text inline h-8 w-8 stroke-secondary"
+							class="icon icon-tabler icons-tabler-outline icon-tabler-file-text inline h-8 w-8 stroke-primary"
 							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
 								d="M14 3v4a1 1 0 0 0 1 1h4"
 							/><path
@@ -407,6 +407,7 @@
 							></span
 						> offers dragging & dropping for ranking sessions, versus Excel.
 					</p>
+					<p class="h-40"></p>
 				</div>
 			</div>
 			<div class="group relative">
@@ -414,7 +415,7 @@
 					><enhanced:img
 						src={rankamateLogo}
 						alt="Rank-a-Mate"
-						class="absolute -bottom-12 -right-10 opacity-25 group-hover:opacity-100"
+						class="absolute -bottom-0 -right-0 opacity-25 group-hover:opacity-100"
 					/></a
 				>
 			</div>
