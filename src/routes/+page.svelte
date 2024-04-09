@@ -245,15 +245,20 @@
 				<p class="text-center text-2xl">Hobbyist placeholder.</p>
 			</div>
 		</div>-->
-		<div class="fromAuto card col-span-1 w-full border border-base-300 bg-base-100 shadow-xl">
+		<div
+			class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
+		>
 			<div class="card-body space-y-4">
 				<h3>Education</h3>
 				<p class="text-2xl">
-					Did <span class="font-bold text-primary">Political Science</span> at NUS.
+					Studied <span class="font-bold text-primary">Political Science</span>. Loved comparative
+					politics & money in politics.
 				</p>
 			</div>
 		</div>
-		<div class="fromAuto card col-span-1 w-full border border-base-300 bg-base-100 shadow-xl">
+		<div
+			class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
+		>
 			<div class="card-body space-y-4">
 				<h3>Certifications</h3>
 				<p class="text-2xl">
