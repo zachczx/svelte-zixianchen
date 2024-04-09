@@ -51,10 +51,14 @@
 	const percentMonthsPolicy = Math.round((28 / numMonthsTotal) * 100);
 </script>
 
-<section class="p-10">
+<section class="px-3 py-10">
 	<div id="header" class="mb-8">
-		<h1 class="montserrat text-center text-[17rem] leading-none tracking-tighter">Zixian Chen</h1>
-		<h2 class="montserrat text-center text-5xl leading-none tracking-tighter">
+		<h1
+			class="montserrat text-center text-7xl leading-none tracking-tighter text-black lg:text-[17rem]"
+		>
+			Zixian Chen
+		</h1>
+		<h2 class="montserrat text-center text-3xl leading-none tracking-tighter lg:text-5xl">
 			I speak your language, be it filled with footnotes or semicolons.
 		</h2>
 	</div>
@@ -104,14 +108,16 @@
 			></a
 		>
 	</div>
-	<div class="grid auto-rows-auto grid-cols-4 gap-x-3 gap-y-3">
-		<div class="relative row-span-3 grid items-end rounded-2xl">
+	<div class="grid auto-cols-fr auto-rows-auto gap-x-3 gap-y-3 xl:grid-cols-4">
+		<div class="relative col-span-2 row-span-3 grid items-end rounded-2xl md:col-span-1">
 			<div class="absolute h-96 w-full rounded-2xl border bg-base-100 shadow-xl"></div>
 			<figure>
 				<img src={profilepic} alt="Doggo and I" class="z-20 scale-100 rounded-2xl" />
 			</figure>
 		</div>
-		<div class="card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl">
+		<div
+			class="card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-2"
+		>
 			<div class="card-body space-y-4">
 				<h3>Work Life</h3>
 
@@ -122,11 +128,9 @@
 			</div>
 		</div>
 		<div
-			class="col-span-1 row-span-3 h-full w-full space-y-0 self-center rounded-2xl"
-			style="background: url({kitkitPortrait}); background-size: 110% auto;  background-position: 40% 25%"
-		>
-			<div></div>
-		</div>
+			class="col-span-2 row-span-1 h-full w-full space-y-0 self-center rounded-2xl opacity-0 xl:col-span-1 xl:row-span-3 xl:opacity-100"
+			style="background: url({kitkitPortrait}) no-repeat; background-size: cover; background-position: 20% 25%"
+		></div>
 		<!--<div class="card col-span-2 row-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
 			<div class="relative flex -translate-y-3 justify-center">
 				<img
@@ -185,11 +189,13 @@
 				</p>
 			</div>
 		</div>
-		<div class="card col-span-1 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl">
+		<div
+			class="card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+		>
 			<div class="card-body">
 				<h2>Career Stats</h2>
-				<div class="stats bg-base-100">
-					<div class="stat justify-items-center">
+				<div class="cols-auto-cols grid bg-base-100 lg:grid-cols-3">
+					<div class="stat justify-items-center border-b-2 lg:border-b-0 lg:border-r-2">
 						<div class="stat-title grid justify-items-center">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -208,7 +214,7 @@
 						<div class="stat-value text-primary">{percentMonthsTech}%</div>
 					</div>
 
-					<div class="stat justify-items-center">
+					<div class="stat justify-items-center border-b-2 lg:border-b-0 lg:border-r-2">
 						<div class="stat-title grid justify-items-center">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -251,7 +257,9 @@
 			</div>
 		</div>
 
-		<div class="card col-span-1 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl">
+		<div
+			class="card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+		>
 			<div class="card-body space-y-4">
 				<h3>Tech</h3>
 				<div>
@@ -295,7 +303,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="card col-span-1 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl">
+		<div
+			class="card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+		>
 			<div class="card-body space-y-4">
 				<h3>Comms</h3>
 				<div>
@@ -336,7 +346,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="card col-span-1 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl">
+		<div
+			class="card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+		>
 			<div class="card-body space-y-4">
 				<h3>Policy</h3>
 				<div>
@@ -365,13 +377,17 @@
 			</div>
 		</div>
 
-		<div class="card col-span-1 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl">
+		<div
+			class="card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
+		>
 			<div class="card-body space-y-4">
 				<h2>Side Projects</h2>
 				<p class="text-2xl">I use Svelte, Django, Htmx, Tailwind.</p>
 			</div>
 		</div>
-		<div class="card col-span-1 row-span-1 border border-base-300 bg-base-100 shadow-xl">
+		<div
+			class="card col-span-2 row-span-1 border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+		>
 			<div class="group card-body grid gap-y-5">
 				<div class="space-y-4">
 					<h3 class="text-start">Sveltekit</h3>
@@ -395,7 +411,7 @@
 			</div>
 		</div>
 		<div
-			class="card col-span-1 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl"
+			class="card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
 			<div class="group card-body grid gap-y-5">
 				<div class="space-y-4">
@@ -422,7 +438,7 @@
 		</div>
 
 		<div
-			class="card card-side col-span-1 row-span-3 w-full border border-base-300 bg-base-100 shadow-xl"
+			class="card card-side col-span-2 row-span-3 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
 			<div class="card-body relative">
 				<div class="space-y-4">
