@@ -8,6 +8,7 @@
 	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=200';
 	import kitkitPortrait from '$lib/assets/kit-baby.webp';
 	import TablerLink from '$lib/svg/TablerLink.svelte';
+	import headphoneBg from '$lib/assets/headphone-bg.webp'
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -242,7 +243,7 @@
 			</div>
 		</div>-->
 
-		<div class="fromAuto card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
+		<div class="fromAuto card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl" style="background: url({headphoneBg}); background-size: cover; background-position: right 80%">
 			<div class="card-body space-y-4">
 				<h3>Personal</h3>
 				<p class="text-2xl">
