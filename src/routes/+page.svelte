@@ -8,7 +8,8 @@
 	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=200';
 	import kitkitPortrait from '$lib/assets/kit-baby.webp';
 	import TablerLink from '$lib/svg/TablerLink.svelte';
-	import headphoneBg from '$lib/assets/headphone-bg.webp'
+	import astronautGuitar from '$lib/assets/astronaut-guitar.webp';
+	import headphoneSquare from '$lib/assets/headphone-square.webp';
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -95,6 +96,39 @@
 					ease: 'circ.out'
 				});
 			}
+
+			gsap.from(".animate-terminal", {
+					scrollTrigger: {
+						trigger: ".animate-terminal",
+						start: 'top 80%',
+						end: 'center 70%',
+						scrub: true,
+						markers: false
+					},
+					y: 50,
+					perspective: 900,
+					rotateX: 90,
+					autoAlpha: 0.5,
+					scale: 1.1,
+					ease: 'circ.inOut'
+				});
+			//my original idea: transform:perspective(900px) rotateX(45deg);
+
+			gsap.from(".animate-logo", {
+					scrollTrigger: {
+						trigger: ".animate-logo",
+						start: 'top 80%',
+						end: 'center 70%',
+						scrub: true,
+						markers: false
+					},
+					y: 50,
+					perspective: 900,
+					rotateX: 90,
+					autoAlpha: 0.5,
+					scale: 1.1,
+					ease: 'circ.out'
+				});
 		});
 	});
 
@@ -217,7 +251,7 @@
 		</div>
 		<div
 			class="fromAuto col-span-2 row-span-1 h-full w-full space-y-0 self-center rounded-2xl opacity-0 xl:col-span-1 xl:row-span-3 xl:opacity-100"
-			style="background: url({kitkitPortrait}) no-repeat; background-size: cover; background-position: 20% 25%"
+			style="background: url({headphoneSquare}) no-repeat; background-size: cover; background-position: 20% 25%"
 		></div>
 		<!--<div class="card col-span-2 row-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
 			<div class="relative flex -translate-y-3 justify-center">
@@ -243,17 +277,22 @@
 			</div>
 		</div>-->
 
-		<div class="fromAuto card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl" style="background: url({headphoneBg}); background-size: cover; background-position: right 80%">
-			<div class="card-body space-y-4">
-				<h3>Personal</h3>
-				<p class="text-2xl">
-					Hobbyist in <span class="font-bold text-primary">webdev</span>,
-					<span class="font-bold text-primary">stable diffusion</span>.
-				</p>
-				<p class="text-2xl">
-					Enjoys listening to
-					<span class="font-bold text-primary">tech business</span> issues (All-In Podcast!).
-				</p>
+		<div
+			class="fromAuto card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl"
+			style="background: url({astronautGuitar}); background-size: cover; background-position: right"
+		>
+			<div class="overlay">
+				<div class="card-body space-y-4">
+					<h3 class="z-10">Personal</h3>
+					<p class="z-10 text-2xl">
+						Hobbyist in <span class="font-bold text-primary">webdev</span>,
+						<span class="font-bold text-primary">stable diffusion</span>.
+					</p>
+					<p class="z-10 text-2xl">
+						Enjoys listening to
+						<span class="font-bold text-primary">tech business</span> issues (All-In Podcast!).
+					</p>
+				</div>
 			</div>
 		</div>
 		<!--<div class="card col-span-1 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl">
@@ -268,8 +307,8 @@
 			<div class="card-body space-y-4">
 				<h3>Education</h3>
 				<p class="text-2xl">
-					Studied <span class="font-bold text-primary">Political Science</span>. Loved comparative
-					politics & money in politics.
+					Studied <span class="font-bold text-primary">Political Science</span>. Loved comparative &
+					money politics.
 				</p>
 			</div>
 		</div>
@@ -491,7 +530,7 @@
 		>
 			<div class="card-body space-y-4">
 				<h2>Side Projects</h2>
-				<div class="mockup-code">
+				<div class="animate-terminal mockup-code">
 					<pre data-prefix=">"><code
 							>npm install <span class="text-yellow-300">svelte tailwindcss</span></code
 						></pre>
@@ -521,7 +560,7 @@
 						><enhanced:img
 							src={apptitudeLogo}
 							alt="Apptitude"
-							class="opacity-50 brightness-50 transition duration-700 ease-in-out group-hover:opacity-100 group-hover:brightness-100"
+							class="animate-logo opacity-50 brightness-50 transition duration-700 ease-in-out group-hover:opacity-100 group-hover:brightness-100"
 						/></a
 					>
 				</div>
@@ -545,7 +584,7 @@
 							><enhanced:img
 								src={rankamateLogo}
 								alt="Rank-a-Mate"
-								class="opacity-25 transition duration-700 ease-in-out group-hover:opacity-100"
+								class="animate-logo opacity-25 transition duration-700 ease-in-out group-hover:opacity-100"
 							/></a
 						>
 					</div>
@@ -572,15 +611,15 @@
 					<img
 						src={pill}
 						alt="bg"
-						class="brightness-25 z-1 group-hover:brightness-25 absolute top-0 rotate-[25deg] scale-[1] blur-lg"
-					/><img src={pill} alt="Eat Your Meds" class="z-50 rotate-[25deg]" /><img
+						class="animate-logo brightness-25 z-1 group-hover:brightness-25 absolute top-0 rotate-[25deg] scale-[1] blur-lg"
+					/><img src={pill} alt="Eat Your Meds" class="animate-logo z-50 rotate-[25deg]" /><img
 						src={pill}
 						alt="Eat Your Meds"
-						class="absolute -right-20 top-20 z-50 rotate-[50deg] scale-50"
+						class="animate-logo absolute -right-20 top-20 z-50 rotate-[50deg] scale-50"
 					/><img
 						src={pill}
 						alt="Eat Your Meds"
-						class="absolute -right-24 top-20 z-30 rotate-[50deg] scale-[0.4] blur-xl"
+						class="animate-logo absolute -right-24 top-20 z-30 rotate-[50deg] scale-[0.4] blur-xl"
 					/>
 				</div>
 				<!--
@@ -596,6 +635,18 @@
 </section>
 
 <style>
+	.overlay::before {
+		content: '';
+		z-index: 1;
+		border-radius: 15px 0 0 15px;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: block;
+		position: absolute;
+		background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 70%, rgba(0, 0, 0, 0) 90%);
+	}
 	.teams-circle::before {
 		content: 'CZ';
 		height: 80px;
