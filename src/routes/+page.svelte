@@ -1,7 +1,5 @@
 <script>
 	import profilepic from '$lib/assets/kitandi.webp?enhanced&w=500';
-	import cuteRobot from '$lib/assets/cute-robot.webp';
-	import globe from '$lib/assets/globe.webp';
 	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=500';
 	import pill from '$lib/assets/pill.webp';
 	import eatyourmedsLogo from '$lib/assets/eatyourmeds-logo.webp?enhanced&w=150';
@@ -10,6 +8,11 @@
 	import TablerLink from '$lib/svg/TablerLink.svelte';
 	import astronautGuitar from '$lib/assets/astronaut-guitar.webp';
 	import headphoneSquare from '$lib/assets/headphone-square.webp';
+	import money from '$lib/assets/money.webp';
+	import supercomputer from '$lib/assets/supercomputer.webp';
+	import TankSvg from '$lib/svg/TankSvg.svelte';
+	import treesvg from '$lib/svg/trees-tree-svgrepo-com.svg';
+	import NetworkSvg from '$lib/svg/NetworkSvg.svelte';
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -97,40 +100,71 @@
 				});
 			}
 
-			gsap.from(".animate-terminal", {
-					scrollTrigger: {
-						trigger: ".animate-terminal",
-						start: 'top 80%',
-						end: 'center 70%',
-						scrub: true,
-						markers: false
-					},
-					y: 50,
-					perspective: 900,
-					rotateX: 90,
-					autoAlpha: 0.5,
-					scale: 1.1,
-					ease: 'circ.inOut'
-				});
+			gsap.from('.animate-terminal', {
+				scrollTrigger: {
+					trigger: '.animate-terminal',
+					start: 'top 80%',
+					end: 'center 70%',
+					scrub: true,
+					markers: false
+				},
+				y: 50,
+				perspective: 900,
+				rotateX: 90,
+				autoAlpha: 0.5,
+				scale: 1.1,
+				ease: 'circ.inOut'
+			});
 			//my original idea: transform:perspective(900px) rotateX(45deg);
 
-			gsap.from(".animate-logo", {
-					scrollTrigger: {
-						trigger: ".animate-logo",
-						start: 'top 80%',
-						end: 'center 70%',
-						scrub: true,
-						markers: false
-					},
-					y: 50,
-					perspective: 900,
-					rotateX: 90,
-					autoAlpha: 0.5,
-					scale: 1.1,
-					ease: 'circ.out'
-				});
+			gsap.from('.animate-logo', {
+				scrollTrigger: {
+					trigger: '.animate-logo',
+					start: 'top 80%',
+					end: 'center 70%',
+					scrub: true,
+					markers: false
+				},
+				y: 50,
+				perspective: 900,
+				rotateX: 90,
+				autoAlpha: 0.7,
+				scale: 1.1,
+				ease: 'circ.out'
+			});
 		});
+		gsap.to('.tank-svg', {
+			scrollTrigger: {
+				trigger: '.tank-svg',
+				start: 'top 80%',
+				end: '+=900',
+				scrub: true,
+				markers: false
+			},
+			x: 600,
+			scale: 0.5,
+			ease: 'circ.out'
+		});
+
+		const networkSvg = document.getElementsByClassName('network-child');
+		for (let i = 0; i < networkSvg.length; i++) {
+			gsap.from(networkSvg[i], {
+				scrollTrigger: {
+					trigger: networkSvg[i],
+					start: 'top 80%',
+					end: 'center 70%',
+					scrub: true,
+					markers: false
+				},
+				y: 300,
+				autoAlpha: 0.8,
+				ease: 'circ.out',
+				stagger: 0.5
+			});
+		}
 	});
+
+	//////////////////////////////////
 
 	function getMonthsBetween(date1, date2, roundUpFractionalMonths) {
 		//Months will be calculated between start and end dates.
@@ -279,16 +313,16 @@
 
 		<div
 			class="fromAuto card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl"
-			style="background: url({astronautGuitar}); background-size: cover; background-position: right"
+			style="background: linear-gradient(to right, rgba(255,255,255,0.8), rgba(255,255,255,0.5)), url({astronautGuitar}); background-size: cover; background-position: right"
 		>
-			<div class="overlay">
+			<div class="overlayNo">
 				<div class="card-body space-y-4">
 					<h3 class="z-10">Personal</h3>
-					<p class="z-10 text-2xl">
+					<p class="text-2xl">
 						Hobbyist in <span class="font-bold text-primary">webdev</span>,
 						<span class="font-bold text-primary">stable diffusion</span>.
 					</p>
-					<p class="z-10 text-2xl">
+					<p class="text-2xl">
 						Enjoys listening to
 						<span class="font-bold text-primary">tech business</span> issues (All-In Podcast!).
 					</p>
@@ -303,6 +337,7 @@
 		</div>-->
 		<div
 			class="fromAuto card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
+			style="background: linear-gradient(to top, rgba(255,255,255,0.7), rgba(255,255,255,0.85)), url({money}); background-size: cover;"
 		>
 			<div class="card-body space-y-4">
 				<h3>Education</h3>
@@ -314,6 +349,7 @@
 		</div>
 		<div
 			class="fromAuto card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
+			style="background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url({supercomputer}); background-size: cover; background-position: center "
 		>
 			<div class="card-body space-y-4">
 				<h3>Certifications</h3>
@@ -410,6 +446,7 @@
 		>
 			<div class="card-body space-y-4">
 				<h3>Tech</h3>
+
 				<div>
 					<h4 class="text-2xl font-medium">
 						<svg
@@ -449,6 +486,7 @@
 					</h4>
 					<p>Owned media analyst products. Led investments in NLP & CV research.</p>
 				</div>
+				<div class="flex items-center justify-center"><NetworkSvg /><NetworkSvg /></div>
 			</div>
 		</div>
 		<div
@@ -522,6 +560,12 @@
 						Strengthen NS.
 					</p>
 				</div>
+			</div>
+			<div
+				class="flex h-28 items-end p-0"
+				style="background: url({treesvg}); background-repeat: repeat-x; background-position: top"
+			>
+				<TankSvg class="tank-svg" />
 			</div>
 		</div>
 
