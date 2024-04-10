@@ -13,6 +13,7 @@
 	import TankSvg from '$lib/svg/TankSvg.svelte';
 	import treesvg from '$lib/svg/trees-tree-svgrepo-com.svg';
 	import NetworkSvg from '$lib/svg/NetworkSvg.svelte';
+	import ChatSvg from '$lib/svg/ChatSvg.svelte';
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -103,7 +104,7 @@
 			gsap.from('.animate-terminal', {
 				scrollTrigger: {
 					trigger: '.animate-terminal',
-					start: 'top 80%',
+					start: 'bottom 80%',
 					end: 'center 70%',
 					scrub: true,
 					markers: false
@@ -115,12 +116,40 @@
 				scale: 1.1,
 				ease: 'circ.inOut'
 			});
+
+			gsap.from('.animate-stats', {
+				scrollTrigger: {
+					trigger: '.animate-stats',
+					start: 'bottom 80%',
+					end: 'center 70%',
+					scrub: true,
+					markers: false
+				},
+				autoAlpha: 0.5,
+				y: 40,
+				ease: 'circ.inOut',
+				stagger: 0.2
+			});
+
+			gsap.from('.animate-comms', {
+				scrollTrigger: {
+					trigger: '.animate-comms',
+					start: 'top 90%',
+					end: '+=200',
+					scrub: true,
+					markers: false
+				},
+				autoAlpha: 0.5,
+				y: 50,
+				ease: 'circ.inOut',
+				stagger: 0.2
+			});
 			//my original idea: transform:perspective(900px) rotateX(45deg);
 
 			gsap.from('.animate-logo', {
 				scrollTrigger: {
 					trigger: '.animate-logo',
-					start: 'top 80%',
+					start: 'bottom 80%',
 					end: 'center 70%',
 					scrub: true,
 					markers: false
@@ -279,7 +308,7 @@
 
 				<p class="text-2xl">
 					<span class="font-bold text-primary">Generalist</span> civil servant. I write, present. I like
-					being devil's advocate.
+					to play devil's advocate.
 				</p>
 			</div>
 		</div>
@@ -378,9 +407,9 @@
 		>
 			<div class="card-body">
 				<h2>Career Stats</h2>
-				<div class="cols-auto-cols grid bg-base-100 lg:grid-cols-3">
-					<div class="stat justify-items-center border-b-2 lg:border-b-0 lg:border-r-2">
-						<div class="stat-title grid justify-items-center">
+				<div class="cols-auto-cols grid justify-items-start divide-y-2 bg-base-100">
+					<div class="stat grid grid-cols-2">
+						<div class="space-x-3 text-3xl font-medium">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -389,17 +418,22 @@
 								stroke-width="2"
 								stroke-linecap="round"
 								stroke-linejoin="round"
-								class="icon icon-tabler icons-tabler-outline icon-tabler-code h-8 w-8 stroke-base-content"
-								><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 8l-4 4l4 4" /><path
-									d="M17 8l4 4l-4 4"
-								/><path d="M14 4l-4 16" /></svg
-							>Tech
+								class="icon icon-tabler icons-tabler-outline icon-tabler-code inline h-12 w-12 stroke-primary"
+								><path stroke="none" d="M0 0h24v24H0z" class="animate-stats" fill="none" /><path
+									class="animate-stats"
+									d="M7 8l-4 4l4 4"
+								/><path d="M17 8l4 4l-4 4" class="animate-stats" /><path
+									d="M14 4l-4 16"
+									class="animate-stats"
+								/></svg
+							>
+							<div class="inline-block">Tech</div>
 						</div>
-						<div class="stat-value text-primary">{percentMonthsTech}%</div>
+						<div class="text-5xl font-bold text-primary">{percentMonthsTech}%</div>
 					</div>
 
-					<div class="stat justify-items-center border-b-2 lg:border-b-0 lg:border-r-2">
-						<div class="stat-title grid justify-items-center">
+					<div class="stat grid grid-cols-2">
+						<div class="space-x-3 text-3xl font-medium">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -408,17 +442,22 @@
 								stroke-width="2"
 								stroke-linecap="round"
 								stroke-linejoin="round"
-								class="icon icon-tabler icons-tabler-outline icon-tabler-messages h-8 w-8 stroke-base-content"
-								><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+								class="icon icon-tabler icons-tabler-outline icon-tabler-messages inline h-12 w-12 stroke-base-content stroke-primary"
+								><path stroke="none" class="animate-stats" d="M0 0h24v24H0z" fill="none" /><path
 									d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"
-								/><path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></svg
-							>Comms
+									class="animate-stats"
+								/><path
+									d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2"
+									class="animate-stats"
+								/></svg
+							>
+							<div class="inline-block">Comms</div>
 						</div>
-						<div class="stat-value text-primary">{percentMonthsComms}%</div>
+						<div class="text-5xl font-bold text-primary">{percentMonthsComms}%</div>
 					</div>
 
-					<div class="stat justify-items-center">
-						<div class="stat-title grid justify-items-center">
+					<div class="stat grid grid-cols-2">
+						<div class="space-x-3 text-3xl font-medium">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -427,15 +466,21 @@
 								stroke-width="2"
 								stroke-linecap="round"
 								stroke-linejoin="round"
-								class="icon icon-tabler icons-tabler-outline icon-tabler-file-text h-8 w-8 stroke-base-content"
-								><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+								class="icon icon-tabler icons-tabler-outline icon-tabler-file-text inline h-12 w-12 stroke-base-content stroke-primary"
+								><path stroke="none" d="M0 0h24v24H0z" fill="none" class="animate-stats" /><path
 									d="M14 3v4a1 1 0 0 0 1 1h4"
+									class="animate-stats"
 								/><path
+									class="animate-stats"
 									d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
-								/><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></svg
-							>Policy
+								/><path d="M9 9l1 0" class="animate-stats" /><path
+									d="M9 13l6 0"
+									class="animate-stats"
+								/><path d="M9 17l6 0" class="animate-stats" /></svg
+							>
+							<div class="inline-block">Policy</div>
 						</div>
-						<div class="stat-value text-primary">{percentMonthsPolicy}%</div>
+						<div class="text-5xl font-bold text-primary">{percentMonthsPolicy}%</div>
 					</div>
 				</div>
 			</div>
@@ -531,6 +576,7 @@
 					<p>Crafted comms campaigns and strategies.</p>
 				</div>
 			</div>
+			<div class="item-start self-center"><ChatSvg /></div>
 		</div>
 		<div
 			class="fromRight card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
