@@ -563,7 +563,7 @@
 			</div>
 			<div
 				class="flex h-28 items-end p-0"
-				style="background: url({treesvg}); background-repeat: repeat-x; background-position: top"
+				style="background: url('/trees-tree-svgrepo-com.svg'); background-repeat: repeat-x; background-position: top"
 			>
 				<TankSvg class="tank-svg" />
 			</div>
