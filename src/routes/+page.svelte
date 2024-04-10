@@ -19,13 +19,29 @@
 		const elLeft = document.getElementsByClassName('fromLeft');
 		const elRight = document.getElementsByClassName('fromRight');
 		const elBottom = document.getElementsByClassName('fromBottom');
+		const elAuto = document.getElementsByClassName('fromAuto');
 		tl.add('(min-width: 1028px)', () => {
+			/*for (let i = 0; i < elLeft.length; i++) {
+				gsap.from(elAuto[i], {
+					scrollTrigger: {
+						trigger: elAuto[i],
+						start: 'top center',
+						end: 'center center',
+						scrub: true,
+						markers: false
+					},
+					y: -100,
+					autoAlpha: 0.8,
+					ease: 'sine.out',
+					stagger: 0.05
+				});
+			}*/
 			gsap.from('.fromAuto', {
 				y: 100,
 				autoAlpha: 0.5,
-				duration: 0.4,
+				duration: 0.5,
 				ease: 'sine.out',
-				stagger: 0.05
+				stagger: 0.08
 			});
 
 			for (let i = 0; i < elLeft.length; i++) {
@@ -133,7 +149,7 @@
 			I speak your language, be it filled with full stops or semicolons.
 		</h2>
 	</div>
-	<div class="mb-8 flex justify-center space-x-3">
+	<div class="mb-8 flex justify-center space-x-3 lg:mb-20">
 		<!-- jam icons -->
 		<a href="https://www.linkedin.com/in/zixianchen/"
 			><svg
@@ -180,7 +196,7 @@
 		>
 	</div>
 	<div class="grid auto-cols-fr auto-rows-auto gap-x-3 gap-y-3 xl:grid-cols-4">
-		<div class="relative col-span-2 row-span-3 grid items-end rounded-2xl md:col-span-1">
+		<div class="fromAuto relative col-span-2 row-span-3 grid items-end rounded-2xl md:col-span-1">
 			<div class="absolute h-96 w-full rounded-2xl border bg-base-100 shadow-xl"></div>
 			<figure>
 				<enhanced:img src={profilepic} alt="Doggo and I" class="z-20 scale-100 rounded-2xl" />
@@ -199,7 +215,7 @@
 			</div>
 		</div>
 		<div
-			class="col-span-2 row-span-1 h-full w-full space-y-0 self-center rounded-2xl opacity-0 xl:col-span-1 xl:row-span-3 xl:opacity-100"
+			class="fromAuto col-span-2 row-span-1 h-full w-full space-y-0 self-center rounded-2xl opacity-0 xl:col-span-1 xl:row-span-3 xl:opacity-100"
 			style="background: url({kitkitPortrait}) no-repeat; background-size: cover; background-position: 20% 25%"
 		></div>
 		<!--<div class="card col-span-2 row-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
@@ -246,7 +262,7 @@
 			</div>
 		</div>-->
 		<div
-			class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
+			class="fromAuto card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
 		>
 			<div class="card-body space-y-4">
 				<h3>Education</h3>
@@ -257,7 +273,7 @@
 			</div>
 		</div>
 		<div
-			class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
+			class="fromAuto card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
 		>
 			<div class="card-body space-y-4">
 				<h3>Certifications</h3>
