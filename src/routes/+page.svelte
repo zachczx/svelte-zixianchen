@@ -4,7 +4,6 @@
 	import pill from '$lib/assets/pill.webp';
 	import eatyourmedsLogo from '$lib/assets/eatyourmeds-logo.webp?enhanced&w=150';
 	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=200';
-	import kitkitPortrait from '$lib/assets/kit-baby.webp';
 	import TablerLink from '$lib/svg/TablerLink.svelte';
 	import astronautGuitar from '$lib/assets/astronaut-guitar.webp';
 	import headphoneSquare from '$lib/assets/headphone-square.webp';
@@ -253,65 +252,66 @@
 </script>
 
 <section class="px-3 py-10">
-	<div id="header" class="mb-8">
-		<h1
-			class="montserrat text-center text-7xl leading-none tracking-tighter text-black lg:text-[17rem]"
-		>
-			Zixian Chen
-		</h1>
-		<h2 class="montserrat mb-10 text-center text-3xl leading-none tracking-tighter lg:text-5xl">
-			I speak your language, be it in full stops or semicolons.
-		</h2>
-		<div class="mb-8 flex justify-center space-x-3 lg:mb-20">
-			<!-- jam icons -->
-			<a href="https://www.linkedin.com/in/zixianchen/"
-				><svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-12 w-12 transition duration-500 ease-in-out hover:fill-white"
-					viewBox="-2 -2 24 24"
-					><g
-						><path
-							d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457c-.592 0-.945.398-1.1.784c-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066c1.41 0 2.468.922 2.468 2.902M6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115c-.014-.632-.465-1.114-1.199-1.114m-1.086 9.556h2.144V8.38H5.127z"
-						/><path
-							d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4"
-						/></g
-					></svg
-				></a
+	<div id="header" class="screen mb-8 grid items-end">
+		<div class="custom-reveal-text">
+			<h1
+				class="montserrat text-center text-7xl leading-none tracking-tighter text-black lg:text-[17rem] 2xl:text-[20rem]"
 			>
-			<a href="https://github.com/zachczx?tab=repositories"
-				><svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-12 w-12 transition duration-500 ease-in-out hover:fill-white"
-					viewBox="-2 -2 24 24"
-					><g
-						><path
-							d="M8.18 15.008c.12 0 .211-.004.271-.012a.317.317 0 0 0 .18-.107c.06-.063.09-.154.09-.274l-.004-.557c-.003-.355-.004-.637-.004-.844l-.188.033a2.41 2.41 0 0 1-.455.028a3.498 3.498 0 0 1-.57-.057a1.276 1.276 0 0 1-.548-.246a1.04 1.04 0 0 1-.36-.503l-.082-.189a2.046 2.046 0 0 0-.258-.417a.989.989 0 0 0-.357-.312l-.057-.04a.602.602 0 0 1-.106-.1a.455.455 0 0 1-.074-.114c-.016-.038-.003-.07.04-.094a.533.533 0 0 1 .238-.037l.164.025c.11.021.245.087.406.196c.16.11.293.251.397.426c.126.224.277.395.455.512a.964.964 0 0 0 .536.176c.18 0 .336-.013.467-.04a1.63 1.63 0 0 0 .369-.124c.049-.365.182-.647.4-.843a5.61 5.61 0 0 1-.839-.148a3.346 3.346 0 0 1-.77-.32a2.204 2.204 0 0 1-.66-.548c-.174-.219-.317-.505-.43-.86a4.09 4.09 0 0 1-.167-1.229c0-.66.216-1.223.647-1.687c-.202-.497-.183-1.054.057-1.671c.159-.05.394-.013.705.11c.311.123.54.228.684.316c.145.087.26.16.348.22a5.814 5.814 0 0 1 1.573-.212c.54 0 1.065.07 1.573.213l.31-.197c.214-.13.465-.251.754-.36c.29-.11.511-.14.664-.09c.246.617.268 1.174.065 1.67c.432.465.648 1.027.648 1.688c0 .464-.056.875-.168 1.233c-.112.358-.257.644-.434.86a2.29 2.29 0 0 1-.664.545a3.342 3.342 0 0 1-.77.32a5.605 5.605 0 0 1-.84.147c.284.245.426.633.426 1.163v1.957c0 .093.014.168.041.226a.226.226 0 0 0 .131.119c.06.021.114.035.16.04c.047.006.113.009.2.009z"
-						/><path
-							d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4"
-						/></g
-					></svg
-				></a
-			>
-
-			<a href="https://btonomics.com/">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="-2 -2 24 24"
-					class="h-12 w-12 transition duration-500 ease-in-out hover:fill-white"
-					><g
-						><path
-							d="M5.024 12.655h3.92v1.887h-3.92zm5.881 0h3.918v1.887h-3.918zM5.021 8.881h9.802v1.887H5.021zm.003-3.774h5.881v1.887H5.024zm7.841 0h1.96v1.887h-1.96z"
-						/><path
-							d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4"
-						/></g
-					></svg
-				></a
-			>
+				<span>Zixian Chen</span>
+			</h1>
+			<h2 class="montserrat mb-10 text-center text-3xl leading-none tracking-tighter lg:text-5xl">
+				I speak your language, be it in full stops or semicolons.
+			</h2>
+			<div class="mb-8 flex justify-center space-x-3 lg:mb-20">
+				<!-- jam icons -->
+				<a href="https://www.linkedin.com/in/zixianchen/"
+					><svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-12 w-12 transition duration-500 ease-in-out hover:fill-white"
+						viewBox="-2 -2 24 24"
+						><g
+							><path
+								d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457c-.592 0-.945.398-1.1.784c-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066c1.41 0 2.468.922 2.468 2.902M6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115c-.014-.632-.465-1.114-1.199-1.114m-1.086 9.556h2.144V8.38H5.127z"
+							/><path
+								d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4"
+							/></g
+						></svg
+					></a
+				>
+				<a href="https://github.com/zachczx?tab=repositories"
+					><svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-12 w-12 transition duration-500 ease-in-out hover:fill-white"
+						viewBox="-2 -2 24 24"
+						><g
+							><path
+								d="M8.18 15.008c.12 0 .211-.004.271-.012a.317.317 0 0 0 .18-.107c.06-.063.09-.154.09-.274l-.004-.557c-.003-.355-.004-.637-.004-.844l-.188.033a2.41 2.41 0 0 1-.455.028a3.498 3.498 0 0 1-.57-.057a1.276 1.276 0 0 1-.548-.246a1.04 1.04 0 0 1-.36-.503l-.082-.189a2.046 2.046 0 0 0-.258-.417a.989.989 0 0 0-.357-.312l-.057-.04a.602.602 0 0 1-.106-.1a.455.455 0 0 1-.074-.114c-.016-.038-.003-.07.04-.094a.533.533 0 0 1 .238-.037l.164.025c.11.021.245.087.406.196c.16.11.293.251.397.426c.126.224.277.395.455.512a.964.964 0 0 0 .536.176c.18 0 .336-.013.467-.04a1.63 1.63 0 0 0 .369-.124c.049-.365.182-.647.4-.843a5.61 5.61 0 0 1-.839-.148a3.346 3.346 0 0 1-.77-.32a2.204 2.204 0 0 1-.66-.548c-.174-.219-.317-.505-.43-.86a4.09 4.09 0 0 1-.167-1.229c0-.66.216-1.223.647-1.687c-.202-.497-.183-1.054.057-1.671c.159-.05.394-.013.705.11c.311.123.54.228.684.316c.145.087.26.16.348.22a5.814 5.814 0 0 1 1.573-.212c.54 0 1.065.07 1.573.213l.31-.197c.214-.13.465-.251.754-.36c.29-.11.511-.14.664-.09c.246.617.268 1.174.065 1.67c.432.465.648 1.027.648 1.688c0 .464-.056.875-.168 1.233c-.112.358-.257.644-.434.86a2.29 2.29 0 0 1-.664.545a3.342 3.342 0 0 1-.77.32a5.605 5.605 0 0 1-.84.147c.284.245.426.633.426 1.163v1.957c0 .093.014.168.041.226a.226.226 0 0 0 .131.119c.06.021.114.035.16.04c.047.006.113.009.2.009z"
+							/><path
+								d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4"
+							/></g
+						></svg
+					></a
+				>
+				<a href="https://btonomics.com/">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="-2 -2 24 24"
+						class="h-12 w-12 transition duration-500 ease-in-out hover:fill-white"
+						><g
+							><path
+								d="M5.024 12.655h3.92v1.887h-3.92zm5.881 0h3.918v1.887h-3.918zM5.021 8.881h9.802v1.887H5.021zm.003-3.774h5.881v1.887H5.024zm7.841 0h1.96v1.887h-1.96z"
+							/><path
+								d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4"
+							/></g
+						></svg
+					></a
+				>
+			</div>
 		</div>
 	</div>
 
 	<div class="grid auto-cols-fr auto-rows-auto gap-x-3 gap-y-3 xl:grid-cols-4">
-		<div class="fromAuto relative col-span-2 row-span-3 grid items-end rounded-2xl md:col-span-1">
+		<div class="fromLeft relative col-span-2 row-span-3 grid items-end rounded-2xl md:col-span-1">
 			<div
 				class="absolute h-96 w-full rounded-2xl border bg-gradient-to-tr from-[#b5de6e] from-30% to-[#f2ffac] to-70% shadow-xl"
 			></div>
@@ -320,25 +320,25 @@
 			</figure>
 		</div>
 		<div
-			class="fromAuto card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-2"
+			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-2"
 			style="background: linear-gradient(to right, rgba(254,254,254,0.96) 40%, rgba(254,254,254,0.7) 90%), url({shirt}); background-size: cover; background-position: left"
 		>
 			<div class="card-body space-y-4">
 				<h3>Work</h3>
 
 				<p class="text-2xl">
-					<span class="font-bold text-primary">Generalist</span> civil servant. I write, present.
+					I'm a <span class="font-bold text-primary">generalist</span> civil servant. I write, present.
 				</p>
 
-				<p class="text-2xl">I play devil's advocate.</p>
+				<p class="text-2xl">I usually play devil's advocate.</p>
 			</div>
 		</div>
 		<div
-			class="fromAuto col-span-2 row-span-1 h-full w-full space-y-0 self-center rounded-2xl opacity-0 xl:col-span-1 xl:row-span-3 xl:opacity-100"
+			class="fromRight col-span-2 row-span-1 h-full w-full space-y-0 self-center rounded-2xl opacity-0 xl:col-span-1 xl:row-span-3 xl:opacity-100"
 			style="background: url({headphoneSquare}) no-repeat; background-size: cover; background-position: 20% 25%"
 		></div>
 		<div
-			class="fromAuto card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl"
+			class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl"
 			style="background: linear-gradient(to right, rgba(254,254,254,0.8), rgba(254,254,254,0.5)), url({astronautGuitar}); background-size: cover; background-position: right"
 		>
 			<div class="overlayNo">
@@ -355,14 +355,8 @@
 				</div>
 			</div>
 		</div>
-		<!--<div class="card col-span-1 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl">
-			<div class="card-body">
-				<h3>Hobbyist</h3>
-				<p class="text-center text-2xl">Hobbyist placeholder.</p>
-			</div>
-		</div>-->
 		<div
-			class="fromAuto card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
+			class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
 			style="background: linear-gradient(to top, rgba(254,254,254,0.7), rgba(254,254,254,0.85)), url({money}); background-size: cover;"
 		>
 			<div class="card-body space-y-4">
@@ -374,7 +368,7 @@
 			</div>
 		</div>
 		<div
-			class="fromAuto card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
+			class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
 			style="background: linear-gradient(rgba(254,254,254,0.8), rgba(254,254,254,0.8)), url({supercomputer}); background-size: cover; background-position: center "
 		>
 			<div class="card-body space-y-4">
@@ -406,7 +400,7 @@
 				<div class="mb-3 self-center"><PresentationStatsSvg /></div>
 				<h2>Career Stats</h2>
 				<div class="cols-auto-cols grid justify-items-start divide-y-2 bg-base-100">
-					<div class="stat grid grid-cols-3">
+					<div class="stat grid grid-cols-3 px-0">
 						<div class="col-span-2 text-3xl font-medium">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -429,7 +423,7 @@
 						</div>
 						<div class="text-5xl font-bold text-primary">{percentMonthsTech}%</div>
 					</div>
-					<div class="stat grid grid-cols-3">
+					<div class="stat grid grid-cols-3 px-0">
 						<div class="col-span-2 text-3xl font-medium">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -453,7 +447,7 @@
 						<div class="text-5xl font-bold text-lime-500">{percentMonthsComms}%</div>
 					</div>
 
-					<div class="stat grid grid-cols-3">
+					<div class="stat grid grid-cols-3 px-0">
 						<div class="col-span-2 text-3xl font-medium">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -709,12 +703,6 @@
 						class="animate-logo absolute -right-24 top-20 z-30 rotate-[50deg] scale-[0.4] blur-xl"
 					/>
 				</div>
-				<!--
-				<div class="avatar">
-					<div class="mask mask-squircle w-48">
-						<enhanced:img src={eatyourmedsLogo} alt="Eat Your Meds" />
-					</div>
-				</div>-->
 			</div>
 		</div>
 	</div>
@@ -722,7 +710,36 @@
 </section>
 
 <style>
-	.overlay::before {
+	@media only screen and (min-width: 1028px) {
+		.screen {
+			min-height: 90vh;
+		}
+	}
+
+	@keyframes scroll-reveal {
+		to {
+			background-size: 100% 100%;
+		}
+	}
+	/* for custom reveal of text */
+	.custom-reveal-text h1 span {
+		color: hsl(177 72% 37% / 30%);
+		background-clip: text;
+		background-repeat: no-repeat;
+		background-size: 0% 100%;
+		background-image: linear-gradient(90deg, black, black);
+		animation: scroll-reveal linear forwards;
+		animation-timeline: view();
+		animation-range-start: cover 60vh;
+		animation-range-end: cover 70vh;
+	}
+
+	.custom-reveal-text p span {
+		animation-range: cover 30vh;
+	}
+
+	/* for other stuff */
+	/* .overlay::before {
 		content: '';
 		z-index: 1;
 		border-radius: 15px 0 0 15px;
@@ -768,5 +785,5 @@
 		border: 3px solid #f8fdef;
 		right: 0%;
 		z-index: 5;
-	}
+	} */
 </style>
