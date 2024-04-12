@@ -33,8 +33,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@splinetool/runtime": "^1.0.93",
-		"@splinetool/viewer": "^1.0.93",
 		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/enhanced-img": "^0.2.0",
 		"gsap": "^3.12.5",
