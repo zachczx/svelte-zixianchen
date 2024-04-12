@@ -2,7 +2,6 @@
 	import profilepic from '$lib/assets/kitandi.webp?enhanced&w=500';
 	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=500';
 	import pill from '$lib/assets/pill.webp';
-	import eatyourmedsLogo from '$lib/assets/eatyourmeds-logo.webp?enhanced&w=150';
 	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=200';
 	import TablerLink from '$lib/svg/TablerLink.svelte';
 	import astronautGuitar from '$lib/assets/astronaut-guitar.webp';
@@ -307,9 +306,9 @@
 <section class="px-3 py-10">
 	<div id="header" class="screen mb-8 grid items-end">
 		<spline-viewer
-			loading-anim-type="spinner-small-dark"
+			loading-anim-type="spinner-big-dark"
 			url="https://prod.spline.design/UaBercf6C6N4dA9Z/scene.splinecode"
-			class="hidden w-2/3 justify-self-center lg:flex"
+			class="hidden justify-self-center lg:flex"
 			style="max-height: 50vh"
 		></spline-viewer>
 		<div class="custom-reveal-text">
