@@ -43,13 +43,13 @@
 					stagger: 0.05
 				});
 			}*/
-			gsap.from('.fromAuto', {
+			/*gsap.from('.fromAuto', {
 				y: 100,
 				autoAlpha: 0.5,
 				duration: 0.5,
 				ease: 'sine.out',
 				stagger: 0.08
-			});
+			}); */
 
 			for (let i = 0; i < elLeft.length; i++) {
 				gsap.from(elLeft[i], {
@@ -87,6 +87,11 @@
 				});
 			}
 
+			/*  
+			For the middle cards 
+			*/
+
+			// For fromBottom
 			for (let i = 0; i < elBottom.length; i++) {
 				gsap.from(elBottom[i], {
 					scrollTrigger: {
@@ -101,7 +106,51 @@
 					ease: 'circ.out'
 				});
 			}
+			gsap.from('.animate-education-certifications', {
+				scrollTrigger: {
+					trigger: '.animate-education-certifications',
+					start: 'top 80%',
+					end: 'center 70%',
+					scrub: true,
+					markers: false
+				},
+				y: 70,
+				autoAlpha: 0.8,
+				ease: 'circ.out',
+				stagger: 0.4
+			});
 
+			gsap.from('.animate-tech-comms', {
+				scrollTrigger: {
+					trigger: '.animate-tech-comms',
+					start: 'top 80%',
+					end: 'center 70%',
+					scrub: true,
+					markers: false
+				},
+				y: 70,
+				autoAlpha: 0.8,
+				ease: 'circ.out',
+				stagger: 0.2
+			});
+
+			gsap.from('.animate-sveltekit-django', {
+				scrollTrigger: {
+					trigger: '.animate-sveltekit-django',
+					start: 'top 80%',
+					end: 'center 70%',
+					scrub: true,
+					markers: false
+				},
+				y: 70,
+				autoAlpha: 0.8,
+				ease: 'circ.out',
+				stagger: 0.2
+			});
+
+			/*  
+			For animation within cards
+			*/
 			gsap.from('.animate-terminal', {
 				scrollTrigger: {
 					trigger: '.animate-terminal',
@@ -150,7 +199,7 @@
 				scrollTrigger: {
 					trigger: '.animate-comms',
 					start: '-200 bottom',
-					end: 'center center',
+					end: '40% center',
 					scrub: true,
 					markers: false
 				},
@@ -255,7 +304,7 @@
 	<div id="header" class="screen mb-8 grid items-end">
 		<div class="custom-reveal-text">
 			<h1
-				class="montserrat text-center text-7xl leading-none tracking-tighter text-black lg:text-[17rem] 2xl:text-[20rem]"
+				class="montserrat text-center text-7xl leading-none tracking-tighter text-black lg:text-[10rem] xl:text-[13rem] 2xl:text-[15rem] min-[1921px]:text-[20rem]"
 			>
 				<span>Zixian Chen</span>
 			</h1>
@@ -313,7 +362,7 @@
 	<div class="grid auto-cols-fr auto-rows-auto gap-x-3 gap-y-3 xl:grid-cols-4">
 		<div class="fromLeft relative col-span-2 row-span-3 grid items-end rounded-2xl md:col-span-1">
 			<div
-				class="absolute h-96 w-full rounded-2xl border bg-gradient-to-tr from-[#b5de6e] from-30% to-[#f2ffac] to-70% shadow-xl"
+				class="a_bg-gradient-to-tr a_from-[#b5de6e] a_from-30% a_to-70% absolute h-96 w-full rounded-2xl border bg-base-100 to-[#f2ffac] shadow-xl"
 			></div>
 			<figure>
 				<enhanced:img src={profilepic} alt="Doggo and I" class="z-20 scale-100 rounded-2xl" />
@@ -356,7 +405,7 @@
 			</div>
 		</div>
 		<div
-			class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
+			class="animate-education-certifications card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
 			style="background: linear-gradient(to top, rgba(254,254,254,0.7), rgba(254,254,254,0.85)), url({money}); background-size: cover;"
 		>
 			<div class="card-body space-y-4">
@@ -368,7 +417,7 @@
 			</div>
 		</div>
 		<div
-			class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
+			class="animate-education-certifications card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
 			style="background: linear-gradient(rgba(254,254,254,0.8), rgba(254,254,254,0.8)), url({supercomputer}); background-size: cover; background-position: center "
 		>
 			<div class="card-body space-y-4">
@@ -376,18 +425,19 @@
 				<p class="text-2xl">
 					Did Coursera Specializations (<span class="font-bold text-primary"
 						><a href="https://www.coursera.org/account/accomplishments/specialization/D9EZKV26D69B"
-							>Meta Back-end Developer</a
+							>Meta Back-end Developer<TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
 						></span
 					>,
 					<span class="font-bold text-primary"
 						><a
 							href="https://www.coursera.org/account/accomplishments/specialization/certificate/MVCFEP4ZHVSV"
-							>AWS Fundamentals</a
+							>AWS Fundamentals<TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
 						></span
 					>,
 					<span class="font-bold text-primary">Google UX</span>),
 					<span class="font-bold text-primary"
-						><a href="https://bcert.me/bc/html/show-badge.html?b=twwbrxwh">Certified ScrumMaster</a
+						><a href="https://bcert.me/bc/html/show-badge.html?b=twwbrxwh"
+							>Certified ScrumMaster<TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
 						></span
 					> <sup>(fwiw)</sup>.
 				</p>
@@ -478,7 +528,7 @@
 		</div>
 
 		<div
-			class="fromBottom card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+			class="animate-tech-comms card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
 			<div class="card-body space-y-4">
 				<h3>Tech</h3>
@@ -526,7 +576,7 @@
 			</div>
 		</div>
 		<div
-			class="fromBottom card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+			class="animate-tech-comms card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
 			<div class="card-body space-y-4">
 				<h3>Comms</h3>
@@ -623,7 +673,7 @@
 			</div>
 		</div>
 		<div
-			class="fromBottom card col-span-2 row-span-1 border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+			class="animate-sveltekit-django card col-span-2 row-span-1 border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
 			<div class="group card-body grid gap-y-5">
 				<div class="space-y-4">
@@ -648,7 +698,7 @@
 			</div>
 		</div>
 		<div
-			class="fromBottom card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1"
+			class="animate-sveltekit-django card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1"
 		>
 			<div class="group card-body grid gap-y-5">
 				<div class="relative space-y-4">
@@ -710,7 +760,7 @@
 </section>
 
 <style>
-	@media only screen and (min-width: 1028px) {
+	@media only screen and (min-width: 1024px) {
 		.screen {
 			min-height: 90vh;
 		}
@@ -734,8 +784,17 @@
 		animation-range-end: cover 70vh;
 	}
 
-	.custom-reveal-text p span {
-		animation-range: cover 30vh;
+	@media only screen and (min-width: 1024px) {
+		.custom-reveal-text h1 span {
+			animation-range-start: cover 40vh;
+			animation-range-end: cover 50vh;
+		}
+	}
+	@media only screen and (min-width: 1600px) {
+		.custom-reveal-text h1 span {
+			animation-range-start: cover 60vh;
+			animation-range-end: cover 70vh;
+		}
 	}
 
 	/* for other stuff */
