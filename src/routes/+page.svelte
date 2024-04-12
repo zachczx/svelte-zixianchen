@@ -308,8 +308,7 @@
 		<spline-viewer
 			loading-anim-type="spinner-big-dark"
 			url="https://prod.spline.design/UaBercf6C6N4dA9Z/scene.splinecode"
-			class="hidden w-2/3 justify-self-center lg:flex"
-			style="max-height: 50vh"
+			style="max-height: 60vh"
 		></spline-viewer>
 		<div class="custom-reveal-text">
 			<h1
@@ -415,7 +414,7 @@
 		</div>
 		<div
 			class="animate-education-certifications card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
-			style="background: linear-gradient(to top, rgba(254,254,254,0.7), rgba(254,254,254,0.85)), url({money}); background-size: cover;"
+			style="background: linear-gradient(to right, rgba(253,253,253,1), rgba(254,254,254,0.85)), url({money}); background-size: cover; background-position: right bottom;"
 		>
 			<div class="card-body space-y-4">
 				<h3>Education</h3>
