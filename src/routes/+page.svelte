@@ -202,9 +202,9 @@
 				scrollTrigger: {
 					trigger: '.animate-comms',
 					start: '-200 bottom',
-					end: '40% center',
+					end: 'center 75%',
 					scrub: true,
-					markers: false
+					markers: true
 				},
 				autoAlpha: 0.5,
 				y: 50,
@@ -308,7 +308,7 @@
 		<spline-viewer
 			loading-anim-type="spinner-big-dark"
 			url="https://prod.spline.design/UaBercf6C6N4dA9Z/scene.splinecode"
-			class="hidden justify-self-center lg:flex"
+			class="hidden w-2/3 justify-self-center lg:flex"
 			style="max-height: 50vh"
 		></spline-viewer>
 		<div class="custom-reveal-text">
