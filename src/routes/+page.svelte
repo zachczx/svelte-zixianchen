@@ -20,6 +20,10 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 
+	onMount(async () => {
+		await import('https://unpkg.com/@splinetool/viewer/build/spline-viewer.js');
+	});
+
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 		let tl = gsap.matchMedia();
@@ -302,6 +306,12 @@
 
 <section class="px-3 py-10">
 	<div id="header" class="screen mb-8 grid items-end">
+		<spline-viewer
+			loading-anim-type="spinner-small-dark"
+			url="https://prod.spline.design/UaBercf6C6N4dA9Z/scene.splinecode"
+			class="hidden w-2/3 justify-self-center lg:flex"
+			style="max-height: 50vh"
+		></spline-viewer>
 		<div class="custom-reveal-text">
 			<h1
 				class="montserrat text-center text-7xl leading-none tracking-tighter text-black lg:text-[10rem] xl:text-[13rem] 2xl:text-[15rem] min-[1921px]:text-[20rem]"
@@ -762,7 +772,7 @@
 <style>
 	@media only screen and (min-width: 1024px) {
 		.screen {
-			min-height: 90vh;
+			min-height: 100vh;
 		}
 	}
 
