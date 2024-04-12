@@ -1,3 +1,3 @@
 # Zixian's personal website
 
-Done on Svelte 5
+Done on Sveltekit
