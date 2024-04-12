@@ -204,7 +204,7 @@
 					start: '-200 bottom',
 					end: 'center 75%',
 					scrub: true,
-					markers: true
+					markers: false
 				},
 				autoAlpha: 0.5,
 				y: 50,
