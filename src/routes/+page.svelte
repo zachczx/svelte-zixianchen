@@ -13,7 +13,8 @@
 	import NetworkSvg from '$lib/svg/NetworkSvg.svelte';
 	import ChatSvg from '$lib/svg/ChatSvg.svelte';
 	import PresentationStatsSvg from '$lib/svg/PresentationStatsSvg.svelte';
-	import shirt from '$lib/assets/shirt.webp';
+	import www from '$lib/assets/www.webp';
+	import challenge from '$lib/assets/challenge.webp';
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -109,6 +110,20 @@
 					ease: 'circ.out'
 				});
 			}
+
+			gsap.from('.animate-about-work', {
+				scrollTrigger: {
+					trigger: '.animate-about-work',
+					start: 'top 70%',
+					end: 'center 70%',
+					scrub: true,
+					markers: false
+				},
+				y: 70,
+				autoAlpha: 0.8,
+				ease: 'circ.out',
+				stagger: { each: 0.5, from: 'end' }
+			});
 			gsap.from('.animate-education-certifications', {
 				scrollTrigger: {
 					trigger: '.animate-education-certifications',
@@ -134,7 +149,7 @@
 				y: 70,
 				autoAlpha: 0.8,
 				ease: 'circ.out',
-				stagger: 0.2
+				stagger: { each: 0.3, from: 'end' }
 			});
 
 			gsap.from('.animate-sveltekit-django', {
@@ -204,7 +219,7 @@
 					start: '-200 bottom',
 					end: 'top 75%',
 					scrub: true,
-					markers: true
+					markers: false
 				},
 				autoAlpha: 0.5,
 				y: 30,
@@ -378,22 +393,29 @@
 			</figure>
 		</div>
 		<div
-			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-2"
-			style="background: linear-gradient(to right, rgba(254,254,254,0.96) 40%, rgba(254,254,254,0.90) 90%), url({shirt}); background-size: cover; background-position: left"
+			class="animate-about-work card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
+			style="background: linear-gradient(to right, rgba(254,254,254,0.9) 40%, rgba(254,254,254,0.85) 90%), url({www}); background-size: cover; background-position: center 60%"
+		>
+			<div class="card-body space-y-4">
+				<h3>About</h3>
+				<div class="text-2xl">
+					I'm a <span class="font-bold text-primary"
+						>generalist who understands web technologies</span
+					>. I can go broad and deep for tech issues and technical deets.
+				</div>
+			</div>
+		</div>
+		<div
+			class="animate-about-work card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
+			style="background: linear-gradient(to right, rgba(254,254,254,0.96) 40%, rgba(254,254,254,0.9) 90%), url({challenge}); background-size: cover; background-position: left"
 		>
 			<div class="card-body space-y-4">
 				<h3>Work</h3>
-
-				<p class="text-2xl">
-					I'm a <span class="font-bold text-primary">generalist</span> in the public sector. I pinpoint
-					policy shortcomings to make them better. I call out inefficient business requirements to kickstart
-					process reengineering, instead of digitalizing said processes.
-				</p>
-
-				<p class="text-2xl">
-					I push ideas and necessary trade-offs to different levels of decision-makers - senior
-					management, business owners and technical teams.
-				</p>
+				<div class="text-2xl">
+					I <span class="font-bold text-primary">challenge flawed tech policies</span> that are
+					ineffective and archaic. I push to
+					<span class="font-bold text-primary">rewrite, not digitalize</span> poor biz requirements.
+				</div>
 			</div>
 		</div>
 		<div
@@ -408,12 +430,12 @@
 				<div class="card-body space-y-4">
 					<h3 class="z-10">Personal</h3>
 					<p class="text-2xl">
-						Hobbyist in <span class="font-bold text-primary">webdev</span>,
+						I'm a hobbyist in <span class="font-bold text-primary">webdev</span>,
 						<span class="font-bold text-primary">stable diffusion</span>.
 					</p>
 					<p class="text-2xl">
-						Enjoys listening to
-						<span class="font-bold text-primary">tech business</span> issues (All-In Podcast!).
+						I enjoy listening to
+						<span class="font-bold text-primary">tech business</span> perspectives (shoutout All-In Podcast).
 					</p>
 				</div>
 			</div>
