@@ -115,7 +115,7 @@
 				scrollTrigger: {
 					trigger: '.animate-about-work',
 					start: 'top 70%',
-					end: 'center 70%',
+					end: 'bottom 70%',
 					scrub: true,
 					markers: false
 				},
@@ -189,7 +189,7 @@
 				scrollTrigger: {
 					trigger: '.animate-stats-icon',
 					start: 'bottom 80%',
-					end: 'center center',
+					end: 'center 80%',
 					scrub: true,
 					markers: false
 				},
@@ -202,13 +202,13 @@
 			gsap.from('.animate-stats', {
 				scrollTrigger: {
 					trigger: '.animate-stats',
-					start: 'bottom 80%',
-					end: 'center 70%',
+					start: 'top bottom',
+					end: 'center center',
 					scrub: true,
 					markers: false
 				},
-				autoAlpha: 0.5,
-				y: 40,
+				autoAlpha: 0,
+				x: -40,
 				ease: 'circ.inOut',
 				stagger: 0.2
 			});
@@ -505,9 +505,9 @@
 									class="animate-stats"
 								/></svg
 							>
-							<div class="inline-block">Tech</div>
+							<div class="animate-stats inline-block">Tech</div>
 						</div>
-						<div class="text-5xl font-bold text-primary">{percentMonthsTech}%</div>
+						<div class="animate-stats text-5xl font-bold text-primary">{percentMonthsTech}%</div>
 					</div>
 					<div class="stat grid grid-cols-3 px-0">
 						<div class="col-span-2 text-3xl font-medium">
@@ -528,9 +528,9 @@
 									class="animate-stats"
 								/></svg
 							>
-							<div class="inline-block">Comms</div>
+							<div class="animate-stats inline-block">Comms</div>
 						</div>
-						<div class="text-5xl font-bold text-lime-500">{percentMonthsComms}%</div>
+						<div class="animate-stats text-5xl font-bold text-lime-500">{percentMonthsComms}%</div>
 					</div>
 
 					<div class="stat grid grid-cols-3 px-0">
@@ -544,20 +544,19 @@
 								stroke-linecap="round"
 								stroke-linejoin="round"
 								class="icon icon-tabler icons-tabler-outline icon-tabler-file-text me-3 inline h-12 w-12 stroke-base-content stroke-primary"
-								><path stroke="none" d="M0 0h24v24H0z" fill="none" class="animate-stats" /><path
-									d="M14 3v4a1 1 0 0 0 1 1h4"
-									class="animate-stats"
-								/><path
-									class="animate-stats"
-									d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
-								/><path d="M9 9l1 0" class="animate-stats" /><path
-									d="M9 13l6 0"
-									class="animate-stats"
-								/><path d="M9 17l6 0" class="animate-stats" /></svg
+								><path stroke="none" d="M0 0h24v24H0z" fill="none" class="animate-stats" />
+								<g class="animate-stats">
+									<path d="M14 3v4a1 1 0 0 0 1 1h4" /><path
+										d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
+									/></g
+								>
+								<g class="animate-stats"
+									><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></g
+								></svg
 							>
-							<div class="inline-block">Policy</div>
+							<div class="animate-stats inline-block">Policy</div>
 						</div>
-						<div class="text-5xl font-bold text-lime-500">{percentMonthsPolicy}%</div>
+						<div class="animate-stats text-5xl font-bold text-lime-500">{percentMonthsPolicy}%</div>
 					</div>
 				</div>
 			</div>
