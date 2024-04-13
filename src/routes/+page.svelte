@@ -202,14 +202,14 @@
 				scrollTrigger: {
 					trigger: '.animate-comms',
 					start: '-200 bottom',
-					end: 'center 75%',
+					end: 'top 75%',
 					scrub: true,
-					markers: false
+					markers: true
 				},
 				autoAlpha: 0.5,
-				y: 50,
-				ease: 'circ.inOut',
-				stagger: 0.2
+				y: 30,
+				ease: 'circ.out',
+				stagger: 0.25
 			});
 			//my original idea: transform:perspective(900px) rotateX(45deg);
 
@@ -309,6 +309,7 @@
 			loading-anim-type="spinner-big-dark"
 			url="https://prod.spline.design/UaBercf6C6N4dA9Z/scene.splinecode"
 			style="max-height: 60vh"
+			class="hidden lg:flex"
 		></spline-viewer>
 		<div class="custom-reveal-text">
 			<h1
@@ -317,7 +318,7 @@
 				<span>Zixian Chen</span>
 			</h1>
 			<h2 class="montserrat mb-10 text-center text-3xl leading-none tracking-tighter lg:text-5xl">
-				I speak your language, be it in full stops or semicolons.
+				I bridge the gaps between public policy, business needs and tech solutions.
 			</h2>
 			<div class="mb-8 flex justify-center space-x-3 lg:mb-20">
 				<!-- jam icons -->
@@ -378,16 +379,21 @@
 		</div>
 		<div
 			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-2"
-			style="background: linear-gradient(to right, rgba(254,254,254,0.96) 40%, rgba(254,254,254,0.7) 90%), url({shirt}); background-size: cover; background-position: left"
+			style="background: linear-gradient(to right, rgba(254,254,254,0.96) 40%, rgba(254,254,254,0.90) 90%), url({shirt}); background-size: cover; background-position: left"
 		>
 			<div class="card-body space-y-4">
 				<h3>Work</h3>
 
 				<p class="text-2xl">
-					I'm a <span class="font-bold text-primary">generalist</span> civil servant. I write, present.
+					I'm a <span class="font-bold text-primary">generalist</span> in the public sector. I pinpoint
+					policy shortcomings to make them better. I call out inefficient business requirements to kickstart
+					process reengineering, instead of digitalizing said processes.
 				</p>
 
-				<p class="text-2xl">I usually play devil's advocate.</p>
+				<p class="text-2xl">
+					I push ideas and necessary trade-offs to different levels of decision-makers - senior
+					management, business owners and technical teams.
+				</p>
 			</div>
 		</div>
 		<div
@@ -396,9 +402,9 @@
 		></div>
 		<div
 			class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl"
-			style="background: linear-gradient(to right, rgba(254,254,254,0.8), rgba(254,254,254,0.5)), url({astronautGuitar}); background-size: cover; background-position: right"
+			style="background: linear-gradient(to right, rgba(254,254,254,0.95), rgba(254,254,254,0.7)), url({astronautGuitar}); background-size: cover; background-position: right"
 		>
-			<div class="overlayNo">
+			<div>
 				<div class="card-body space-y-4">
 					<h3 class="z-10">Personal</h3>
 					<p class="text-2xl">
@@ -426,7 +432,7 @@
 		</div>
 		<div
 			class="animate-education-certifications card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
-			style="background: linear-gradient(rgba(254,254,254,0.8), rgba(254,254,254,0.8)), url({supercomputer}); background-size: cover; background-position: center "
+			style="background: linear-gradient(rgba(254,254,254,0.95), rgba(254,254,254,0.8)), url({supercomputer}); background-size: cover; background-position: center "
 		>
 			<div class="card-body space-y-4">
 				<h3>Certifications</h3>
