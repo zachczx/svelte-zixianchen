@@ -24,23 +24,23 @@
 <style>
 	.spectrum-background {
 		/* 
-		https://colorhunt.co/palette/ff8787f8c4b4e5ebb2bce29e 1st one 
-		https://mycolor.space/gradient3?ori=circle&hex=%23EFF8FD&hex2=%23FDF4EF&hex3=%23FDEFF8&submit=submit current one 
+			https://www.schemecolor.com/pastel-green-yellow-and-red.php
+			https://mycolor.space/gradient3?ori=circle&hex=%23E0FFCC&hex2=%23FFF8B8&hex3=%23CAF2C2&submit=submit
 		*/
 		background-image: radial-gradient(
 			circle,
-			#f3c6a5,
-			#fdbdb4,
-			#fbb9cb,
-			#e9bbe2,
-			#cac1f3,
-			#adc9fc,
-			#8ed0fb,
-			#76d6f1,
-			#6fdde2,
-			#7ee1cc,
-			#9ae3b4,
-			#bce29e
+			#e0ffcc,
+			#e5fec8,
+			#ebfdc3,
+			#f1fbbf,
+			#f7fabc,
+			#f5f9bb,
+			#f3f8ba,
+			#f1f7b9,
+			#e7f6ba,
+			#ddf5bd,
+			#d3f4bf,
+			#caf2c2
 		);
 	}
 	@keyframes fade-in {
