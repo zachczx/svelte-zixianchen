@@ -203,14 +203,14 @@
 				scrollTrigger: {
 					trigger: '.animate-stats',
 					start: 'top bottom',
-					end: 'center center',
+					end: 'top 70%',
 					scrub: true,
 					markers: false
 				},
 				autoAlpha: 0,
 				x: -40,
 				ease: 'circ.inOut',
-				stagger: 0.2
+				stagger: 0.1
 			});
 
 			gsap.from('.animate-comms', {
@@ -725,11 +725,7 @@
 				</div>
 				<div class="place-self-center">
 					<a href="https://titude.app/"
-						><enhanced:img
-							src={apptitudeLogo}
-							alt="Apptitude"
-							class="animate-logo opacity-50 brightness-50 transition duration-700 ease-in-out group-hover:opacity-100 group-hover:brightness-100"
-						/></a
+						><enhanced:img src={apptitudeLogo} alt="Apptitude" class="animate-logo" /></a
 					>
 				</div>
 			</div>
@@ -749,11 +745,7 @@
 					</p>
 					<div class="grid h-60 place-items-center">
 						<a href="https://app.zixian.dev/rank/"
-							><enhanced:img
-								src={rankamateLogo}
-								alt="Rank-a-Mate"
-								class="animate-logo opacity-25 transition duration-700 ease-in-out group-hover:opacity-100"
-							/></a
+							><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="animate-logo" /></a
 						>
 					</div>
 				</div>
