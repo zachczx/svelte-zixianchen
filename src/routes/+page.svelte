@@ -324,23 +324,25 @@
 			loading-anim-type="spinner-big-dark"
 			url="https://prod.spline.design/UaBercf6C6N4dA9Z/scene.splinecode"
 			style="max-height: 60vh"
-			class="hidden lg:flex"
+			class="hidden pb-20 lg:flex"
 		></spline-viewer>
-		<div class="custom-reveal-text">
+		<div class="">
 			<h1
 				class="montserrat text-center text-7xl leading-none tracking-tighter text-black lg:text-[10rem] xl:text-[13rem] 2xl:text-[15rem] min-[1921px]:text-[20rem]"
 			>
-				<span>Zixian Chen</span>
+				Zixian Chen
 			</h1>
-			<h2 class="montserrat mb-10 text-center text-3xl leading-none tracking-tighter lg:text-5xl">
-				I bridge the gaps between public policy, business needs and tech solutions.
+			<h2
+				class="custom-reveal-text montserrat mb-10 text-center text-3xl leading-none tracking-tighter lg:text-5xl"
+			>
+				<span>I bridge the gaps between public policy, business needs and tech solutions.</span>
 			</h2>
 			<div class="mb-8 flex justify-center space-x-3 lg:mb-20">
 				<!-- jam icons -->
 				<a href="https://www.linkedin.com/in/zixianchen/"
 					><svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="h-12 w-12 transition duration-500 ease-in-out hover:fill-white"
+						class="h-12 w-12 transition duration-500 ease-in-out hover:scale-[1.15] hover:fill-green-800"
 						viewBox="-2 -2 24 24"
 						><g
 							><path
@@ -354,7 +356,7 @@
 				<a href="https://github.com/zachczx?tab=repositories"
 					><svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="h-12 w-12 transition duration-500 ease-in-out hover:fill-white"
+						class="h-12 w-12 transition duration-500 ease-in-out hover:scale-[1.15] hover:fill-green-800"
 						viewBox="-2 -2 24 24"
 						><g
 							><path
@@ -369,7 +371,7 @@
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="-2 -2 24 24"
-						class="h-12 w-12 transition duration-500 ease-in-out hover:fill-white"
+						class="h-12 w-12 transition duration-500 ease-in-out hover:scale-[1.15] hover:fill-green-800"
 						><g
 							><path
 								d="M5.024 12.655h3.92v1.887h-3.92zm5.881 0h3.918v1.887h-3.918zM5.021 8.881h9.802v1.887H5.021zm.003-3.774h5.881v1.887H5.024zm7.841 0h1.96v1.887h-1.96z"
@@ -807,7 +809,7 @@
 		}
 	}
 	/* for custom reveal of text */
-	.custom-reveal-text h1 span {
+	.custom-reveal-text span {
 		color: hsl(177 72% 37% / 30%);
 		background-clip: text;
 		background-repeat: no-repeat;
@@ -815,20 +817,20 @@
 		background-image: linear-gradient(90deg, black, black);
 		animation: scroll-reveal linear forwards;
 		animation-timeline: view();
-		animation-range-start: cover 60vh;
-		animation-range-end: cover 70vh;
+		animation-range-start: cover 30vh;
+		animation-range-end: cover 40vh;
 	}
 
 	@media only screen and (min-width: 1024px) {
-		.custom-reveal-text h1 span {
-			animation-range-start: cover 40vh;
-			animation-range-end: cover 50vh;
+		.custom-reveal-text span {
+			animation-range-start: cover 20vh;
+			animation-range-end: cover 40vh;
 		}
 	}
 	@media only screen and (min-width: 1600px) {
-		.custom-reveal-text h1 span {
-			animation-range-start: cover 60vh;
-			animation-range-end: cover 70vh;
+		.custom-reveal-text span {
+			animation-range-start: cover 20vh;
+			animation-range-end: cover 40vh;
 		}
 	}
 
