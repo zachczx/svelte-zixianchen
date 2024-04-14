@@ -217,7 +217,7 @@
 				scrollTrigger: {
 					trigger: '.animate-comms',
 					start: '-200 bottom',
-					end: 'top 75%',
+					end: 'top 70%',
 					scrub: true,
 					markers: false
 				},
