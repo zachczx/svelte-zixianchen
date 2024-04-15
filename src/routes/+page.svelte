@@ -19,7 +19,6 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
-
 	onMount(async () => {
 		await import('https://unpkg.com/@splinetool/viewer/build/spline-viewer.js');
 	});
@@ -62,14 +61,14 @@
 						start: 'top 80%',
 						end: 'center 60%',
 						scrub: true,
-						markers: false
+						markers: false,
 					},
 					x: -100,
 					autoAlpha: 0.8,
 					duration: 1,
 					ease: 'circ.out',
 					delay: 0.3,
-					stagger: 0.3
+					stagger: 0.3,
 				});
 			}
 
@@ -80,14 +79,14 @@
 						start: 'top 80%',
 						end: 'center 60%',
 						scrub: true,
-						markers: false
+						markers: false,
 					},
 					x: 100,
 					autoAlpha: 0.8,
 					duration: 1,
 					ease: 'circ.out',
 					delay: 0.3,
-					stagger: 0.3
+					stagger: 0.3,
 				});
 			}
 
@@ -103,11 +102,11 @@
 						start: 'top 80%',
 						end: 'center 70%',
 						scrub: true,
-						markers: false
+						markers: false,
 					},
 					y: 70,
 					autoAlpha: 0.8,
-					ease: 'circ.out'
+					ease: 'circ.out',
 				});
 			}
 
@@ -117,12 +116,12 @@
 					start: 'top 70%',
 					end: 'bottom 70%',
 					scrub: true,
-					markers: false
+					markers: false,
 				},
 				y: 70,
 				autoAlpha: 0.8,
 				ease: 'circ.out',
-				stagger: { each: 0.5, from: 'end' }
+				stagger: { each: 0.5, from: 'end' },
 			});
 			gsap.from('.animate-education-certifications', {
 				scrollTrigger: {
@@ -130,12 +129,12 @@
 					start: 'top 80%',
 					end: 'center 70%',
 					scrub: true,
-					markers: false
+					markers: false,
 				},
 				y: 70,
 				autoAlpha: 0.8,
 				ease: 'circ.out',
-				stagger: 0.4
+				stagger: 0.4,
 			});
 
 			gsap.from('.animate-tech-comms', {
@@ -144,12 +143,12 @@
 					start: 'top 80%',
 					end: 'center 70%',
 					scrub: true,
-					markers: false
+					markers: false,
 				},
 				y: 70,
 				autoAlpha: 0.8,
 				ease: 'circ.out',
-				stagger: { each: 0.3, from: 'end' }
+				stagger: { each: 0.3, from: 'end' },
 			});
 
 			gsap.from('.animate-sveltekit-django', {
@@ -158,12 +157,12 @@
 					start: 'top 80%',
 					end: 'center 70%',
 					scrub: true,
-					markers: false
+					markers: false,
 				},
 				y: 70,
 				autoAlpha: 0.8,
 				ease: 'circ.out',
-				stagger: 0.2
+				stagger: 0.2,
 			});
 
 			/*  
@@ -175,14 +174,14 @@
 					start: 'bottom 80%',
 					end: 'center 70%',
 					scrub: true,
-					markers: false
+					markers: false,
 				},
 				y: 50,
 				perspective: 900,
 				rotateX: 90,
 				autoAlpha: 0.5,
 				scale: 1.1,
-				ease: 'circ.inOut'
+				ease: 'circ.inOut',
 			});
 
 			gsap.from('.animate-stats-icon', {
@@ -191,12 +190,12 @@
 					start: 'bottom 80%',
 					end: 'center 80%',
 					scrub: true,
-					markers: false
+					markers: false,
 				},
 				autoAlpha: 0.5,
 				y: 100,
 				ease: 'circ.inOut',
-				stagger: 0.2
+				stagger: 0.2,
 			});
 
 			gsap.from('.animate-stats', {
@@ -205,12 +204,12 @@
 					start: 'top bottom',
 					end: 'top 70%',
 					scrub: true,
-					markers: false
+					markers: false,
 				},
 				autoAlpha: 0,
 				x: -40,
 				ease: 'circ.inOut',
-				stagger: 0.1
+				stagger: 0.1,
 			});
 
 			gsap.from('.animate-comms', {
@@ -219,12 +218,12 @@
 					start: '-200 bottom',
 					end: 'top 70%',
 					scrub: true,
-					markers: false
+					markers: false,
 				},
 				autoAlpha: 0.5,
 				y: 30,
 				ease: 'circ.out',
-				stagger: 0.25
+				stagger: 0.25,
 			});
 			//my original idea: transform:perspective(900px) rotateX(45deg);
 
@@ -234,14 +233,14 @@
 					start: 'bottom 80%',
 					end: 'center 70%',
 					scrub: true,
-					markers: false
+					markers: false,
 				},
 				y: 50,
 				perspective: 900,
 				rotateX: 90,
 				autoAlpha: 0.7,
 				scale: 1.1,
-				ease: 'circ.out'
+				ease: 'circ.out',
 			});
 		});
 		gsap.to('.tank-svg', {
@@ -250,11 +249,11 @@
 				start: 'top 80%',
 				end: '+=900',
 				scrub: true,
-				markers: false
+				markers: false,
 			},
 			x: 600,
 			scale: 0.5,
-			ease: 'circ.out'
+			ease: 'circ.out',
 		});
 
 		const networkSvg = document.getElementsByClassName('network-child');
@@ -265,12 +264,12 @@
 					start: 'top 80%',
 					end: 'center 70%',
 					scrub: true,
-					markers: false
+					markers: false,
 				},
 				y: 300,
 				autoAlpha: 0.8,
 				ease: 'circ.out',
-				stagger: 0.5
+				stagger: 0.5,
 			});
 		}
 	});
@@ -324,17 +323,14 @@
 			loading-anim-type="spinner-big-dark"
 			url="https://prod.spline.design/UaBercf6C6N4dA9Z/scene.splinecode"
 			style="max-height: 60vh"
-			class="hidden pb-20 lg:flex"
-		></spline-viewer>
+			class="hidden pb-20 lg:flex"></spline-viewer>
 		<div class="">
 			<h1
-				class="montserrat text-center text-7xl leading-none tracking-tighter text-black lg:text-[10rem] xl:text-[13rem] 2xl:text-[15rem] min-[1921px]:text-[20rem]"
-			>
+				class="montserrat text-center text-7xl leading-none tracking-tighter text-black lg:text-[10rem] xl:text-[13rem] 2xl:text-[15rem] min-[1921px]:text-[20rem]">
 				Zixian Chen
 			</h1>
 			<h2
-				class="custom-reveal-text montserrat mb-10 text-center text-3xl leading-none tracking-tighter lg:text-5xl"
-			>
+				class="custom-reveal-text montserrat mb-10 text-center text-3xl leading-none tracking-tighter lg:text-5xl">
 				<span>I bridge the gaps between public policy, business needs and tech solutions.</span>
 			</h2>
 			<div class="mb-8 flex justify-center space-x-3 lg:mb-20">
@@ -346,13 +342,10 @@
 						viewBox="-2 -2 24 24"
 						><g
 							><path
-								d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457c-.592 0-.945.398-1.1.784c-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066c1.41 0 2.468.922 2.468 2.902M6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115c-.014-.632-.465-1.114-1.199-1.114m-1.086 9.556h2.144V8.38H5.127z"
-							/><path
-								d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4"
-							/></g
+								d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457c-.592 0-.945.398-1.1.784c-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066c1.41 0 2.468.922 2.468 2.902M6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115c-.014-.632-.465-1.114-1.199-1.114m-1.086 9.556h2.144V8.38H5.127z" /><path
+								d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4" /></g
 						></svg
-					></a
-				>
+					></a>
 				<a href="https://github.com/zachczx?tab=repositories"
 					><svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -360,13 +353,10 @@
 						viewBox="-2 -2 24 24"
 						><g
 							><path
-								d="M8.18 15.008c.12 0 .211-.004.271-.012a.317.317 0 0 0 .18-.107c.06-.063.09-.154.09-.274l-.004-.557c-.003-.355-.004-.637-.004-.844l-.188.033a2.41 2.41 0 0 1-.455.028a3.498 3.498 0 0 1-.57-.057a1.276 1.276 0 0 1-.548-.246a1.04 1.04 0 0 1-.36-.503l-.082-.189a2.046 2.046 0 0 0-.258-.417a.989.989 0 0 0-.357-.312l-.057-.04a.602.602 0 0 1-.106-.1a.455.455 0 0 1-.074-.114c-.016-.038-.003-.07.04-.094a.533.533 0 0 1 .238-.037l.164.025c.11.021.245.087.406.196c.16.11.293.251.397.426c.126.224.277.395.455.512a.964.964 0 0 0 .536.176c.18 0 .336-.013.467-.04a1.63 1.63 0 0 0 .369-.124c.049-.365.182-.647.4-.843a5.61 5.61 0 0 1-.839-.148a3.346 3.346 0 0 1-.77-.32a2.204 2.204 0 0 1-.66-.548c-.174-.219-.317-.505-.43-.86a4.09 4.09 0 0 1-.167-1.229c0-.66.216-1.223.647-1.687c-.202-.497-.183-1.054.057-1.671c.159-.05.394-.013.705.11c.311.123.54.228.684.316c.145.087.26.16.348.22a5.814 5.814 0 0 1 1.573-.212c.54 0 1.065.07 1.573.213l.31-.197c.214-.13.465-.251.754-.36c.29-.11.511-.14.664-.09c.246.617.268 1.174.065 1.67c.432.465.648 1.027.648 1.688c0 .464-.056.875-.168 1.233c-.112.358-.257.644-.434.86a2.29 2.29 0 0 1-.664.545a3.342 3.342 0 0 1-.77.32a5.605 5.605 0 0 1-.84.147c.284.245.426.633.426 1.163v1.957c0 .093.014.168.041.226a.226.226 0 0 0 .131.119c.06.021.114.035.16.04c.047.006.113.009.2.009z"
-							/><path
-								d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4"
-							/></g
+								d="M8.18 15.008c.12 0 .211-.004.271-.012a.317.317 0 0 0 .18-.107c.06-.063.09-.154.09-.274l-.004-.557c-.003-.355-.004-.637-.004-.844l-.188.033a2.41 2.41 0 0 1-.455.028a3.498 3.498 0 0 1-.57-.057a1.276 1.276 0 0 1-.548-.246a1.04 1.04 0 0 1-.36-.503l-.082-.189a2.046 2.046 0 0 0-.258-.417a.989.989 0 0 0-.357-.312l-.057-.04a.602.602 0 0 1-.106-.1a.455.455 0 0 1-.074-.114c-.016-.038-.003-.07.04-.094a.533.533 0 0 1 .238-.037l.164.025c.11.021.245.087.406.196c.16.11.293.251.397.426c.126.224.277.395.455.512a.964.964 0 0 0 .536.176c.18 0 .336-.013.467-.04a1.63 1.63 0 0 0 .369-.124c.049-.365.182-.647.4-.843a5.61 5.61 0 0 1-.839-.148a3.346 3.346 0 0 1-.77-.32a2.204 2.204 0 0 1-.66-.548c-.174-.219-.317-.505-.43-.86a4.09 4.09 0 0 1-.167-1.229c0-.66.216-1.223.647-1.687c-.202-.497-.183-1.054.057-1.671c.159-.05.394-.013.705.11c.311.123.54.228.684.316c.145.087.26.16.348.22a5.814 5.814 0 0 1 1.573-.212c.54 0 1.065.07 1.573.213l.31-.197c.214-.13.465-.251.754-.36c.29-.11.511-.14.664-.09c.246.617.268 1.174.065 1.67c.432.465.648 1.027.648 1.688c0 .464-.056.875-.168 1.233c-.112.358-.257.644-.434.86a2.29 2.29 0 0 1-.664.545a3.342 3.342 0 0 1-.77.32a5.605 5.605 0 0 1-.84.147c.284.245.426.633.426 1.163v1.957c0 .093.014.168.041.226a.226.226 0 0 0 .131.119c.06.021.114.035.16.04c.047.006.113.009.2.009z" /><path
+								d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4" /></g
 						></svg
-					></a
-				>
+					></a>
 				<a href="https://btonomics.com/">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -374,13 +364,10 @@
 						class="h-12 w-12 transition duration-500 ease-in-out hover:scale-[1.15] hover:fill-green-800"
 						><g
 							><path
-								d="M5.024 12.655h3.92v1.887h-3.92zm5.881 0h3.918v1.887h-3.918zM5.021 8.881h9.802v1.887H5.021zm.003-3.774h5.881v1.887H5.024zm7.841 0h1.96v1.887h-1.96z"
-							/><path
-								d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4"
-							/></g
+								d="M5.024 12.655h3.92v1.887h-3.92zm5.881 0h3.918v1.887h-3.918zM5.021 8.881h9.802v1.887H5.021zm.003-3.774h5.881v1.887H5.024zm7.841 0h1.96v1.887h-1.96z" /><path
+								d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4" /></g
 						></svg
-					></a
-				>
+					></a>
 			</div>
 		</div>
 	</div>
@@ -388,16 +375,15 @@
 	<div class="grid auto-cols-fr auto-rows-auto gap-x-3 gap-y-3 xl:grid-cols-4">
 		<div class="fromLeft relative col-span-2 row-span-3 grid items-end rounded-2xl md:col-span-1">
 			<div
-				class="a_bg-gradient-to-tr a_from-[#b5de6e] a_from-30% a_to-70% absolute h-96 w-full rounded-2xl border bg-base-100 to-[#f2ffac] shadow-xl"
-			></div>
+				class="a_bg-gradient-to-tr a_from-[#b5de6e] a_from-30% a_to-70% absolute h-96 w-full rounded-2xl border bg-base-100 to-[#f2ffac] shadow-xl">
+			</div>
 			<figure>
 				<enhanced:img src={profilepic} alt="Doggo and I" class="z-20 scale-100 rounded-2xl" />
 			</figure>
 		</div>
 		<div
 			class="animate-about-work card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
-			style="background: linear-gradient(to right, rgba(254,254,254,0.9) 40%, rgba(254,254,254,0.85) 90%), url({www}); background-size: cover; background-position: center 60%"
-		>
+			style="background: linear-gradient(to right, rgba(254,254,254,0.9) 40%, rgba(254,254,254,0.85) 90%), url({www}); background-size: cover; background-position: center 60%">
 			<div class="card-body space-y-4">
 				<h3>About</h3>
 				<div class="text-2xl">
@@ -409,8 +395,7 @@
 		</div>
 		<div
 			class="animate-about-work card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
-			style="background: linear-gradient(to right, rgba(254,254,254,0.96) 40%, rgba(254,254,254,0.9) 90%), url({challenge}); background-size: cover; background-position: left"
-		>
+			style="background: linear-gradient(to right, rgba(254,254,254,0.96) 40%, rgba(254,254,254,0.9) 90%), url({challenge}); background-size: cover; background-position: left">
 			<div class="card-body space-y-4">
 				<h3>Work</h3>
 				<div class="text-2xl">
@@ -422,12 +407,11 @@
 		</div>
 		<div
 			class="fromRight col-span-2 row-span-1 h-full w-full space-y-0 self-center rounded-2xl opacity-0 xl:col-span-1 xl:row-span-3 xl:opacity-100"
-			style="background: url({headphoneSquare}) no-repeat; background-size: cover; background-position: 20% 25%"
-		></div>
+			style="background: url({headphoneSquare}) no-repeat; background-size: cover; background-position: 20% 25%">
+		</div>
 		<div
 			class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl"
-			style="background: linear-gradient(to right, rgba(254,254,254,0.95), rgba(254,254,254,0.7)), url({astronautGuitar}); background-size: cover; background-position: right"
-		>
+			style="background: linear-gradient(to right, rgba(254,254,254,0.95), rgba(254,254,254,0.7)), url({astronautGuitar}); background-size: cover; background-position: right">
 			<div>
 				<div class="card-body space-y-4">
 					<h3 class="z-10">Personal</h3>
@@ -444,8 +428,7 @@
 		</div>
 		<div
 			class="animate-education-certifications card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
-			style="background: linear-gradient(to right, rgba(253,253,253,1), rgba(254,254,254,0.85)), url({money}); background-size: cover; background-position: right bottom;"
-		>
+			style="background: linear-gradient(to right, rgba(253,253,253,1), rgba(254,254,254,0.85)), url({money}); background-size: cover; background-position: right bottom;">
 			<div class="card-body space-y-4">
 				<h3>Education</h3>
 				<p class="text-2xl">
@@ -456,8 +439,7 @@
 		</div>
 		<div
 			class="animate-education-certifications card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
-			style="background: linear-gradient(rgba(254,254,254,0.95), rgba(254,254,254,0.8)), url({supercomputer}); background-size: cover; background-position: center "
-		>
+			style="background: linear-gradient(rgba(254,254,254,0.95), rgba(254,254,254,0.8)), url({supercomputer}); background-size: cover; background-position: center ">
 			<div class="card-body space-y-4">
 				<h3>Certifications</h3>
 				<p class="text-2xl">
@@ -477,13 +459,15 @@
 						><a href="https://bcert.me/bc/html/show-badge.html?b=twwbrxwh"
 							>Certified ScrumMaster<TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
 						></span
-					> <sup>(fwiw)</sup>.
+					>.
 				</p>
 			</div>
 		</div>
+		<!-- 
+
+		-->
 		<div
-			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
-		>
+			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body">
 				<div class="mb-3 self-center"><PresentationStatsSvg /></div>
 				<h2>Career Stats</h2>
@@ -501,12 +485,9 @@
 								class="icon icon-tabler icons-tabler-outline icon-tabler-code me-3 inline h-12 w-12 stroke-primary"
 								><path stroke="none" d="M0 0h24v24H0z" class="animate-stats" fill="none" /><path
 									class="animate-stats"
-									d="M7 8l-4 4l4 4"
-								/><path d="M17 8l4 4l-4 4" class="animate-stats" /><path
+									d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" class="animate-stats" /><path
 									d="M14 4l-4 16"
-									class="animate-stats"
-								/></svg
-							>
+									class="animate-stats" /></svg>
 							<div class="animate-stats inline-block">Tech</div>
 						</div>
 						<div class="animate-stats text-5xl font-bold text-primary">{percentMonthsTech}%</div>
@@ -524,12 +505,9 @@
 								class="icon icon-tabler icons-tabler-outline icon-tabler-messages me-3 inline h-12 w-12 stroke-base-content stroke-primary"
 								><path stroke="none" class="animate-stats" d="M0 0h24v24H0z" fill="none" /><path
 									d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"
-									class="animate-stats"
-								/><path
+									class="animate-stats" /><path
 									d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2"
-									class="animate-stats"
-								/></svg
-							>
+									class="animate-stats" /></svg>
 							<div class="animate-stats inline-block">Comms</div>
 						</div>
 						<div class="animate-stats text-5xl font-bold text-lime-500">{percentMonthsComms}%</div>
@@ -549,13 +527,10 @@
 								><path stroke="none" d="M0 0h24v24H0z" fill="none" class="animate-stats" />
 								<g class="animate-stats">
 									<path d="M14 3v4a1 1 0 0 0 1 1h4" /><path
-										d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
-									/></g
-								>
+										d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /></g>
 								<g class="animate-stats"
 									><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></g
-								></svg
-							>
+								></svg>
 							<div class="animate-stats inline-block">Policy</div>
 						</div>
 						<div class="animate-stats text-5xl font-bold text-lime-500">{percentMonthsPolicy}%</div>
@@ -565,8 +540,7 @@
 		</div>
 
 		<div
-			class="animate-tech-comms card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
-		>
+			class="animate-tech-comms card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body space-y-4">
 				<h3>Tech</h3>
 
@@ -582,8 +556,7 @@
 							stroke-linejoin="round"
 							class="icon icon-tabler icons-tabler-outline icon-tabler-code inline h-8 w-8 stroke-primary pb-1"
 							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 8l-4 4l4 4" /><path
-								d="M17 8l4 4l-4 4"
-							/><path d="M14 4l-4 16" /></svg
+								d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg
 						><span class="ps-2">Tech Infra Policy Team Lead</span>
 					</h4>
 					<p>
@@ -603,8 +576,7 @@
 							stroke-linejoin="round"
 							class="icon icon-tabler icons-tabler-outline icon-tabler-code inline h-8 w-8 stroke-primary pb-1"
 							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 8l-4 4l4 4" /><path
-								d="M17 8l4 4l-4 4"
-							/><path d="M14 4l-4 16" /></svg
+								d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg
 						><span class="ps-2">Comms Tech Team Lead</span>
 					</h4>
 					<p>Owned media analyst products. Led investments in NLP & CV research.</p>
@@ -613,8 +585,7 @@
 			</div>
 		</div>
 		<div
-			class="animate-tech-comms card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
-		>
+			class="animate-tech-comms card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body space-y-4">
 				<h3>Comms</h3>
 				<div>
@@ -629,8 +600,8 @@
 							stroke-linejoin="round"
 							class="icon icon-tabler icons-tabler-outline icon-tabler-messages inline h-8 w-8 stroke-primary"
 							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-								d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"
-							/><path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></svg
+								d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" /><path
+								d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></svg
 						><span class="ps-2">Media Relations Officer</span>
 					</h4>
 					<p>Managed media and collaborated on unpaid features of MINDEF & SAF.</p>
@@ -647,8 +618,8 @@
 							stroke-linejoin="round"
 							class="icon icon-tabler icons-tabler-outline icon-tabler-messages inline h-8 w-8 stroke-primary"
 							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-								d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"
-							/><path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></svg
+								d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" /><path
+								d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></svg
 						><span class="ps-2">Comms Strategist</span>
 					</h4>
 					<p>Crafted comms campaigns and strategies.</p>
@@ -657,8 +628,7 @@
 			</div>
 		</div>
 		<div
-			class="fromRight card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
-		>
+			class="fromRight card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body space-y-4">
 				<h3>Policy</h3>
 				<div>
@@ -673,10 +643,9 @@
 							stroke-linejoin="round"
 							class="icon icon-tabler icons-tabler-outline icon-tabler-file-text inline h-8 w-8 stroke-primary"
 							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-								d="M14 3v4a1 1 0 0 0 1 1h4"
-							/><path
-								d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"
-							/><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></svg
+								d="M14 3v4a1 1 0 0 0 1 1h4" /><path
+								d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path
+								d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></svg
 						><span class="ps-2">NS Policy Officer</span>
 					</h4>
 					<p>
@@ -687,31 +656,27 @@
 			</div>
 			<div
 				class="flex h-28 items-end p-0"
-				style="background: url('/trees-tree-svgrepo-com.svg'); background-repeat: repeat-x; background-position: top"
-			>
+				style="background: url('/trees-tree-svgrepo-com.svg'); background-repeat: repeat-x; background-position: top">
 				<TankSvg class="tank-svg" />
 			</div>
 		</div>
 
 		<div
-			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
-		>
+			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
 			<div class="card-body space-y-4">
 				<h2>Side Projects</h2>
 				<div class="animate-terminal mockup-code">
 					<pre data-prefix=">"><code
-							>npm install <span class="text-yellow-300">svelte tailwindcss</span></code
-						></pre>
-					<pre data-prefix="$"><code>pip install <span class="text-yellow-300">Django</span></code
-						></pre>
-					<pre data-prefix=">"><code>npm install <span class="text-yellow-300">htmx.org</span></code
-						></pre>
+							>npm install <span class="text-yellow-300">svelte tailwindcss</span></code></pre>
+					<pre data-prefix="$"><code
+							>pip install <span class="text-yellow-300">Django</span></code></pre>
+					<pre data-prefix=">"><code
+							>npm install <span class="text-yellow-300">htmx.org</span></code></pre>
 				</div>
 			</div>
 		</div>
 		<div
-			class="animate-sveltekit-django card col-span-2 row-span-1 border border-base-300 bg-base-100 shadow-xl md:col-span-1"
-		>
+			class="animate-sveltekit-django card col-span-2 row-span-1 border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="group card-body grid gap-y-5">
 				<div class="space-y-4">
 					<h3 class="text-start">Sveltekit</h3>
@@ -719,20 +684,17 @@
 						<span class="text-primary"
 							><a href="https://titude.app/"
 								><b>Apptitude</b><TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
-							></span
-						> helps me disseminate resources for my MINDEF teammates to upskill.
+							></span> helps me disseminate resources for my MINDEF teammates to upskill.
 					</p>
 				</div>
 				<div class="place-self-center">
 					<a href="https://titude.app/"
-						><enhanced:img src={apptitudeLogo} alt="Apptitude" class="animate-logo" /></a
-					>
+						><enhanced:img src={apptitudeLogo} alt="Apptitude" class="animate-logo" /></a>
 				</div>
 			</div>
 		</div>
 		<div
-			class="animate-sveltekit-django card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1"
-		>
+			class="animate-sveltekit-django card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="group card-body grid gap-y-5">
 				<div class="relative space-y-4">
 					<h3 class="text-start">Django + SortableJS + Htmx</h3>
@@ -740,21 +702,18 @@
 						<span class="text-primary"
 							><a href="https://app.zixian.dev/rank/"
 								><b>Rank-a-mate</b><TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
-							></span
-						> offers dragging & dropping for ranking sessions, versus Excel.
+							></span> offers dragging & dropping for ranking sessions, versus Excel.
 					</p>
 					<div class="grid h-60 place-items-center">
 						<a href="https://app.zixian.dev/rank/"
-							><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="animate-logo" /></a
-						>
+							><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="animate-logo" /></a>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<div
-			class="fromRight card card-side col-span-2 row-span-3 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1"
-		>
+			class="fromRight card card-side col-span-2 row-span-3 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body relative">
 				<div class="space-y-4">
 					<h3>Django + Htmx</h3>
@@ -762,8 +721,7 @@
 						<span class="text-primary"
 							><a href="https://app.zixian.dev/eatyourmeds/"
 								><b>Eat Your Medicine!</b><TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
-							></span
-						>
+							></span>
 						helps me plan dose timings and display medicine info for my kid.
 					</p>
 				</div>
@@ -771,16 +729,16 @@
 					<img
 						src={pill}
 						alt="bg"
-						class="animate-logo brightness-25 z-1 group-hover:brightness-25 absolute top-0 rotate-[25deg] scale-[1] blur-lg"
-					/><img src={pill} alt="Eat Your Meds" class="animate-logo z-50 rotate-[25deg]" /><img
+						class="animate-logo brightness-25 z-1 group-hover:brightness-25 absolute top-0 rotate-[25deg] scale-[1] blur-lg" /><img
 						src={pill}
 						alt="Eat Your Meds"
-						class="animate-logo absolute -right-20 top-20 z-50 rotate-[50deg] scale-50"
-					/><img
+						class="animate-logo z-50 rotate-[25deg]" /><img
 						src={pill}
 						alt="Eat Your Meds"
-						class="animate-logo absolute -right-24 top-20 z-30 rotate-[50deg] scale-[0.4] blur-xl"
-					/>
+						class="animate-logo absolute -right-20 top-20 z-50 rotate-[50deg] scale-50" /><img
+						src={pill}
+						alt="Eat Your Meds"
+						class="animate-logo absolute -right-24 top-20 z-30 rotate-[50deg] scale-[0.4] blur-xl" />
 				</div>
 			</div>
 		</div>

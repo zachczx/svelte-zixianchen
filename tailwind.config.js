@@ -2,7 +2,7 @@
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		extend: {}
+		extend: {},
 	},
 	daisyui: {
 		themes: [
@@ -11,12 +11,12 @@ export default {
 					...require('daisyui/src/theming/themes')['lemonade'],
 					'base-100': '#fefefe',
 					'base-200': '#eefad8',
-					'base-300': '#e4f7c2'
+					'base-300': '#e4f7c2',
 					//https://www.colorhexa.com/f8fdef
-				}
+				},
 			},
-			'emerald'
-		]
+			'emerald',
+		],
 	},
-	plugins: [require('daisyui')]
+	plugins: [require('daisyui')],
 };
