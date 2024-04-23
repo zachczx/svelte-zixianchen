@@ -372,7 +372,7 @@
 		</div>
 	</div>
 
-	<div class="grid auto-cols-fr auto-rows-auto gap-x-3 gap-y-3 xl:grid-cols-4">
+	<div class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
 		<div class="fromLeft relative col-span-2 row-span-3 grid items-end rounded-2xl md:col-span-1">
 			<div
 				class="a_bg-gradient-to-tr a_from-[#b5de6e] a_from-30% a_to-70% absolute h-96 w-full rounded-2xl border bg-base-100 to-[#f2ffac] shadow-xl">
@@ -726,19 +726,21 @@
 					</p>
 				</div>
 				<div class="group relative mt-10 flex">
-					<img
-						src={pill}
-						alt="bg"
-						class="animate-logo brightness-25 z-1 group-hover:brightness-25 absolute top-0 rotate-[25deg] scale-[1] blur-lg" /><img
-						src={pill}
-						alt="Eat Your Meds"
-						class="animate-logo z-50 rotate-[25deg]" /><img
-						src={pill}
-						alt="Eat Your Meds"
-						class="animate-logo absolute -right-20 top-20 z-50 rotate-[50deg] scale-50" /><img
-						src={pill}
-						alt="Eat Your Meds"
-						class="animate-logo absolute -right-24 top-20 z-30 rotate-[50deg] scale-[0.4] blur-xl" />
+					<a href="https://app.zixian.dev/eatyourmeds/">
+						<img
+							src={pill}
+							alt="bg"
+							class="animate-logo brightness-25 z-1 group-hover:brightness-25 absolute top-0 rotate-[25deg] scale-[1] blur-lg" /><img
+							src={pill}
+							alt="Eat Your Meds"
+							class="animate-logo z-50 rotate-[25deg]" /><img
+							src={pill}
+							alt="Eat Your Meds"
+							class="animate-logo absolute -right-20 top-20 z-50 rotate-[50deg] scale-50" /><img
+							src={pill}
+							alt="Eat Your Meds"
+							class="animate-logo absolute -right-24 top-20 z-30 rotate-[50deg] scale-[0.4] blur-xl" />
+					</a>
 				</div>
 			</div>
 		</div>
