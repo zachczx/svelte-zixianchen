@@ -387,9 +387,8 @@
 			<div class="card-body space-y-4">
 				<h3>About</h3>
 				<div class="text-2xl">
-					I'm a <span class="font-bold text-primary"
-						>generalist who understands web technologies</span
-					>. I can go broad and deep for tech issues and technical deets.
+					I <span class="font-bold text-primary">understand web technologies</span>. I can go broad
+					and deep for tech issues and technical stuff.
 				</div>
 			</div>
 		</div>
