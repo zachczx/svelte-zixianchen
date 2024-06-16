@@ -2,7 +2,7 @@
 	"name": "svelte-zixianchen",
 	"version": "0.0.1",
 	"engines": {
-		"node": ">=21.0"
+		"node": "22"
 	},
 	"private": true,
 	"scripts": {
