@@ -697,12 +697,14 @@
 			<div class="group card-body grid gap-y-5">
 				<div class="space-y-4">
 					<h3 class="text-start">Sveltekit</h3>
-					<p class="text-2xl">
+					<p class="pb-4 text-2xl">
 						<span class="text-primary"
 							><a href="https://titude.app/"
 								><b>Apptitude</b><TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
-							></span> helps me disseminate resources for my MINDEF teammates to upskill.
+							></span> is a website that helps me easily disseminate my notes/guides, links & Youtube
+						videos resources for my teammates.
 					</p>
+					<p class="text-2xl">Exported as a static website for better performance.</p>
 				</div>
 				<div class="place-self-center">
 					<a href="https://titude.app/"
@@ -719,8 +721,11 @@
 						<span class="text-primary"
 							><a href="https://appraize.zixian.dev/"
 								><b>Appraize</b><TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
-							></span> makes ranking sessions easier, with session management, keyboard shortcuts, bulk
-						uploads, etc.
+							></span> makes ranking sessions easier via drag & drop.
+					</p>
+					<p class="pb-4 text-2xl">
+						Also comes with a mini dashboard, more responsive UI, db backend (Drizzle/Postgres),
+						sessions, filters, keyboard shortcut, csv file upload, form actions/validation.
 					</p>
 				</div>
 				<div class="place-self-center">
@@ -738,7 +743,8 @@
 						<span class="text-primary"
 							><a href="https://app.zixian.dev/rank/"
 								><b>Rank-a-mate</b><TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
-							></span> offers dragging & dropping for ranking sessions, versus Excel.
+							></span> was my first stab at making a drag & drop tool for ranking sessions in lieu of
+						Excel.
 					</p>
 					<div class="grid h-60 place-items-center">
 						<a href="https://app.zixian.dev/rank/"
@@ -758,7 +764,8 @@
 							><a href="https://app.zixian.dev/eatyourmeds/"
 								><b>Eat Your Medicine!</b><TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
 							></span>
-						helps me plan dose timings and display medicine info for my kid.
+						was a try at making something that helped me plan dose timings and display medicine info
+						for my kid.
 					</p>
 				</div>
 				<div class="group relative mt-10 flex">
