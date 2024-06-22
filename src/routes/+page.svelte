@@ -15,14 +15,15 @@
 	import PresentationStatsSvg from '$lib/svg/PresentationStatsSvg.svelte';
 	import www from '$lib/assets/www.webp';
 	import challenge from '$lib/assets/challenge.webp';
+	import selfSndgoPic from '$lib/assets/DSC03163.webp?enhanced&w=300;500;1000';
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
-	onMount(async () => {
+	/* onMount(async () => {
 		await import('https://unpkg.com/@splinetool/viewer/build/spline-viewer.js');
 	});
-
+ */
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 		let tl = gsap.matchMedia();
@@ -319,18 +320,25 @@
 
 <section class="px-3 py-10">
 	<div id="header" class="screen mb-8 grid items-end">
-		<spline-viewer
+		<div class="justify-self-center">
+			<enhanced:img
+				src={selfSndgoPic}
+				alt="Me"
+				class="mb-8 rounded-2xl"
+				sizes="(min-width:1920px) 1000px, (min-width:1080px) 500px, (min-width:768px) 300px" />
+		</div>
+		<!-- <spline-viewer
 			loading-anim-type="spinner-big-dark"
 			url="https://prod.spline.design/UaBercf6C6N4dA9Z/scene.splinecode"
 			style="max-height: 60vh"
-			class="hidden pb-20 lg:flex"></spline-viewer>
+			class="hidden pb-20 lg:flex"></spline-viewer> -->
 		<div class="">
 			<h1
-				class="montserrat text-center text-7xl leading-none tracking-tighter text-black lg:text-[10rem] xl:text-[13rem] 2xl:text-[15rem] min-[1921px]:text-[20rem]">
+				class="montserrat text-center text-7xl leading-none tracking-tighter text-black lg:text-[10rem] xl:text-[11rem] 2xl:text-[11rem] min-[1921px]:text-[20rem]">
 				Zixian Chen
 			</h1>
 			<h2
-				class="custom-reveal-text montserrat mb-10 text-center text-3xl leading-none tracking-tighter lg:text-5xl">
+				class="custom-reveal-text montserrat mb-4 text-center text-3xl leading-none tracking-tighter lg:text-5xl">
 				<span>I bridge the gaps between public policy, business needs and tech solutions.</span>
 			</h2>
 			<div class="mb-8 flex justify-center space-x-3 lg:mb-20">
@@ -405,7 +413,7 @@
 			</div>
 		</div>
 		<div
-			class="fromRight col-span-2 row-span-1 h-full w-full space-y-0 self-center rounded-2xl opacity-0 xl:col-span-1 xl:row-span-3 xl:opacity-100"
+			class="fromRight col-span-2 row-span-1 h-full w-full space-y-0 self-center rounded-2xl opacity-0 saturate-0 xl:col-span-1 xl:row-span-3 xl:opacity-100"
 			style="background: url({headphoneSquare}) no-repeat; background-size: cover; background-position: 20% 25%">
 		</div>
 		<div
@@ -463,7 +471,11 @@
 			</div>
 		</div>
 		<!-- 
-
+			Break
+		-->
+		<div class="col-span-2 h-24 md:col-span-4"></div>
+		<!-- 
+			Break
 		-->
 		<div
 			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
@@ -659,18 +671,24 @@
 				<TankSvg class="tank-svg" />
 			</div>
 		</div>
-
+		<!-- 
+			Break
+		-->
+		<div class="col-span-2 h-24 md:col-span-4"></div>
+		<!-- 
+			Break
+		-->
 		<div
 			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
 			<div class="card-body space-y-4">
 				<h2>Side Projects</h2>
 				<div class="animate-terminal mockup-code">
 					<pre data-prefix=">"><code
-							>npm install <span class="text-yellow-300">svelte tailwindcss</span></code></pre>
+							>npm install <span class="text-yellow-300">@sveltejs/kit astro</span></code></pre>
 					<pre data-prefix="$"><code
 							>pip install <span class="text-yellow-300">Django</span></code></pre>
 					<pre data-prefix=">"><code
-							>npm install <span class="text-yellow-300">htmx.org</span></code></pre>
+							>npm install <span class="text-yellow-300">tailwindcss htmx.org</span></code></pre>
 				</div>
 			</div>
 		</div>
@@ -693,7 +711,26 @@
 			</div>
 		</div>
 		<div
-			class="animate-sveltekit-django card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			class="animate-sveltekit-django card col-span-2 row-span-1 border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			<div class="group card-body grid gap-y-5">
+				<div class="space-y-4">
+					<h3 class="text-start">Sveltekit + SortableJS</h3>
+					<p class="pb-4 text-2xl">
+						<span class="text-primary"
+							><a href="https://appraize.zixian.dev/"
+								><b>Appraize</b><TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
+							></span> makes ranking sessions easier, with session management, keyboard shortcuts, bulk
+						uploads, etc.
+					</p>
+				</div>
+				<div class="place-self-center">
+					<a href="https://appraize.zixian.dev/"
+						><h3 class="animate-logo text-6xl font-black text-purple-800">Appraize</h3></a>
+				</div>
+			</div>
+		</div>
+		<div
+			class="fromRight card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="group card-body grid gap-y-5">
 				<div class="relative space-y-4">
 					<h3 class="text-start">Django + SortableJS + Htmx</h3>
@@ -712,7 +749,7 @@
 		</div>
 
 		<div
-			class="fromRight card card-side col-span-2 row-span-3 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			class="fromBottom card card-side col-span-2 row-span-3 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body relative">
 				<div class="space-y-4">
 					<h3>Django + Htmx</h3>

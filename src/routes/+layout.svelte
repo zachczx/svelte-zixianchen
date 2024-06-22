@@ -26,7 +26,7 @@
 		/* 
 			https://www.schemecolor.com/pastel-green-yellow-and-red.php
 			https://mycolor.space/gradient3?ori=circle&hex=%23E0FFCC&hex2=%23FFF8B8&hex3=%23CAF2C2&submit=submit
-		*/
+		
 		background-image: radial-gradient(
 			circle,
 			#e0ffcc,
@@ -41,7 +41,8 @@
 			#ddf5bd,
 			#d3f4bf,
 			#caf2c2
-		);
+		);*/
+		background-image: linear-gradient(to bottom, #fefefe, #ffe8ff, #ffcece, #ffca78, #d2de32);
 	}
 	@keyframes fade-in {
 		from {
