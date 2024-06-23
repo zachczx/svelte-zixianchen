@@ -715,7 +715,8 @@
 					<p class="rounded-2xl bg-base-200 p-4 pb-4 text-2xl font-bold">Deployed in a docker container on NodeJS.</p>
 				</div>
 				<div class="place-self-center">
-					<a href="https://appraize.zixian.dev/"><h3 class="animate-logo text-[6rem] text-purple-800">Appraize</h3></a>
+					<a href="https://appraize.zixian.dev/"
+						><h3 class="animate-logo text-5xl text-purple-800 lg:text-[6rem]">Appraize</h3></a>
 				</div>
 			</div>
 		</div>
@@ -769,8 +770,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-span-3 grid grid-cols-2 gap-7">
-			<div class="fromBottom card w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl">
+		<div class="col-span-2 grid gap-7 md:col-span-3 md:grid-cols-2">
+			<div class="fromBottom card w-full border border-base-300 bg-base-100 shadow-xl">
 				<div class="group card-body grid gap-y-5">
 					<div class="relative space-y-4">
 						<h3 class="text-start">WordPress</h3>
@@ -796,7 +797,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="fromBottom card w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl">
+			<div class="fromBottom card w-full border border-base-300 bg-base-100 shadow-xl">
 				<div class="group card-body grid gap-y-5">
 					<div class="relative space-y-4">
 						<h3 class="text-start">AstroJS</h3>
@@ -813,7 +814,7 @@
 						<p class="rounded-2xl bg-base-200 p-4 pb-4 text-2xl font-bold">Deployed on Cloudflare Pages.</p>
 						<div class="grid place-items-center">
 							<a href="https://old.btonomics.com"
-								><span class="text-[6rem] font-black text-gray-500">BTOnomics</span></a>
+								><span class="text-6xl font-black text-gray-500 lg:text-[6rem]">BTOnomics</span></a>
 						</div>
 					</div>
 				</div>
