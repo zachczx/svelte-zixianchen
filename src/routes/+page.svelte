@@ -224,7 +224,7 @@
 			gsap.from('.animate-comms', {
 				scrollTrigger: {
 					trigger: '.animate-comms',
-					start: '-200 bottom',
+					start: '-300 bottom',
 					end: 'top 70%',
 					scrub: true,
 					markers: false,
