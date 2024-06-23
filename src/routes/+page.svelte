@@ -970,7 +970,7 @@
 				<div class="group card-body grid gap-y-5">
 					<div class="space-y-8">
 						<h3 class="pb-4 text-center text-6xl font-black text-gray-500">
-							<a href="https://old.btonomics.com">BTOnomics v2</a>
+							<a href="https://btonomics.com">BTOnomics v2</a>
 						</h3>
 						<p>
 							Migrated <span class="font-bold text-primary underline hover:text-secondary"
