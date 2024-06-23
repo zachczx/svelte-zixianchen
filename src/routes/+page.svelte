@@ -131,19 +131,6 @@
 				ease: 'circ.out',
 				stagger: { each: 0.5, from: 'end' },
 			});
-			gsap.from('.animate-education-certifications', {
-				scrollTrigger: {
-					trigger: '.animate-education-certifications',
-					start: 'top 80%',
-					end: 'center 70%',
-					scrub: true,
-					markers: false,
-				},
-				y: 70,
-				autoAlpha: 0.8,
-				ease: 'circ.out',
-				stagger: 0.4,
-			});
 
 			gsap.from('.animate-tech-comms', {
 				scrollTrigger: {
@@ -159,9 +146,9 @@
 				stagger: { each: 0.3, from: 'end' },
 			});
 
-			gsap.from('.animate-sveltekit-django', {
+			gsap.from('.animate-sveltekit', {
 				scrollTrigger: {
-					trigger: '.animate-sveltekit-django',
+					trigger: '.animate-sveltekit',
 					start: 'top 70%',
 					end: 'center 70%',
 					scrub: true,
@@ -169,6 +156,20 @@
 				},
 				y: 70,
 				autoAlpha: 0.8,
+				ease: 'circ.out',
+				stagger: 0.2,
+			});
+
+			gsap.from('.animate-btonomics', {
+				scrollTrigger: {
+					trigger: '.animate-btonomics',
+					start: 'top 70%',
+					end: 'center 70%',
+					scrub: true,
+					markers: false,
+				},
+				y: 70,
+				autoAlpha: 0.9,
 				ease: 'circ.out',
 				stagger: 0.2,
 			});
@@ -325,7 +326,7 @@
 	const percentMonthsPolicy = Math.round((28 / numMonthsTotal) * 100);
 </script>
 
-<section class="px-3 py-10">
+<section class="px-3 pb-2 pt-10">
 	<div id="header" class="screen mb-8 grid items-end">
 		<div class="justify-self-center">
 			<enhanced:img
@@ -387,7 +388,7 @@
 	</div>
 
 	<div class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
-		<div class="fromLeft relative col-span-2 row-span-3 grid items-end rounded-2xl md:col-span-1">
+		<div class="fromLeft relative col-span-2 row-span-2 grid items-end rounded-2xl md:col-span-1">
 			<div
 				class="a_bg-gradient-to-tr a_from-[#b5de6e] a_from-30% a_to-70% absolute h-96 w-full rounded-2xl border bg-base-100 to-[#f2ffac] shadow-xl">
 			</div>
@@ -423,42 +424,11 @@
 				</div>
 			</div>
 		</div>
-		<div
-			class="fromRight col-span-2 row-span-1 h-full w-full space-y-0 self-center rounded-2xl opacity-0 saturate-0 xl:col-span-1 xl:row-span-3 xl:opacity-100"
-			style="background: url({headphoneSquare}) no-repeat; background-size: cover; background-position: 20% 25%">
-		</div>
-		<div class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
-			<div>
-				<div class="flex justify-center"><enhanced:img src={sun3d} alt="Hobbies!" class="-mt-8" /></div>
-				<div class="card-body space-y-4">
-					<h3 class="-mt-20">Personal</h3>
-					<p>
-						I dabble in <b>webdev</b>, <b>stable diffusion</b> in my free time.
-					</p>
-					<p>
-						I enjoy listening to
-						<b>tech business</b> perspectives (shoutout All-In Podcast).
-					</p>
-				</div>
-			</div>
-		</div>
-		<div
-			class="animate-education-certifications card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
-			<div class="card-body max-h-96 space-y-4 overflow-hidden">
-				<h3>Education</h3>
-				<p>
-					Studied <b>Political Science</b>. Loved comparative & money politics. Did a ton of int'l relations before I
-					got there.
-				</p>
-				<enhanced:img src={school3d} alt="Studies" class="-mt-10" />
-			</div>
-		</div>
-		<div
-			class="animate-education-certifications card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
+		<div class="fromRight card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
 			<div class="card-body space-y-4">
 				<h3>Certifications</h3>
 				<div class="space-y-2">
-					<p>Did Coursera Specializations:</p>
+					<p>Learnt a bunch of stuff:</p>
 					<ul class="list ps-4">
 						<li>
 							<a
@@ -484,10 +454,37 @@
 				</div>
 			</div>
 		</div>
+		<div class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
+			<div>
+				<div class="flex justify-center"><enhanced:img src={sun3d} alt="Hobbies!" class="-mt-8" /></div>
+				<div class="card-body space-y-4">
+					<h3 class="-mt-20">Personal</h3>
+					<p>
+						I dabble in <b>webdev</b>, <b>stable diffusion</b> in my free time.
+					</p>
+					<p>
+						I enjoy listening to
+						<b>tech business</b> perspectives (shoutout All-In Podcast).
+					</p>
+				</div>
+			</div>
+		</div>
+		<div
+			class="fromRight card col-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
+			<div class="card-body relative max-h-96 space-y-4">
+				<h3>Education</h3>
+				<p>
+					Studied <b>Political Science</b>. Loved comparative & money politics. Did a ton of int'l relations before I
+					got there.
+				</p>
+				<enhanced:img src={school3d} alt="Studies" class="-mt-10" />
+			</div>
+		</div>
+
 		<!-- 
 			Break
 		-->
-		<div class="col-span-2 h-24 md:col-span-4"></div>
+		<div class="col-span-2 h-48 md:col-span-4"></div>
 		<!-- 
 			Break
 		-->
@@ -678,7 +675,7 @@
 		<!-- 
 			Break
 		-->
-		<div class="col-span-2 h-24 md:col-span-4"></div>
+		<div class="col-span-2 h-48 md:col-span-4"></div>
 		<!-- 
 			Break
 		-->
@@ -693,11 +690,11 @@
 			</div>
 		</div>
 		<div
-			class="animate-sveltekit-django card col-span-2 row-span-2 border border-base-300 bg-base-100 shadow-xl md:col-span-1">
-			<div class="group card-body grid gap-y-5">
+			class="animate-sveltekit card col-span-2 row-span-2 border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			<div class="group card-body grid items-center gap-y-5">
 				<div class="space-y-8">
 					<div class="place-self-center pb-4">
-						<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude" class="" /></a>
+						<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude" /></a>
 					</div>
 					<p>
 						I made
@@ -708,7 +705,7 @@
 						tech competencies to share with my non-technical teammates.
 					</p>
 					<p class="pb-4">Used JS objects in lieu of a DB/markdown.</p>
-					<div class="rounded-2xl bg-base-200 p-4 pb-8 text-2xl font-bold">
+					<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-2xl font-bold">
 						<div>
 							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
 								><g
@@ -748,8 +745,8 @@
 			</div>
 		</div>
 		<div
-			class="animate-sveltekit-django card col-span-2 row-span-2 border border-base-300 bg-base-100 shadow-xl md:col-span-1">
-			<div class="group card-body grid gap-y-5">
+			class="animate-sveltekit card col-span-2 row-span-2 border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			<div class="group card-body grid items-center gap-y-5">
 				<div class="space-y-8">
 					<div class="place-self-center pb-4">
 						<a href="https://appraize.zixian.dev/"
@@ -763,7 +760,7 @@
 						Also comes with a mini dashboard, more responsive UI, db backend (Drizzle/Postgres), sessions, filters,
 						keyboard shortcut, csv file upload, form actions/validation.
 					</p>
-					<div class="rounded-2xl bg-base-200 p-4 pb-8 text-2xl font-bold">
+					<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-2xl font-bold">
 						<div>
 							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
 								><g
@@ -804,7 +801,7 @@
 		</div>
 		<div
 			class="fromRight card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1">
-			<div class="group card-body grid gap-y-5">
+			<div class="group card-body grid items-center gap-y-5">
 				<div class="space-y-8">
 					<div class="flex h-56 justify-center pb-4">
 						<a href="https://app.zixian.dev/rank/"><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="" /></a>
@@ -813,8 +810,10 @@
 						<a href="https://app.zixian.dev/rank/" class="font-bold text-primary underline hover:text-secondary"
 							>Rank-a-mate</a> was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.
 					</p>
-
-					<div class="rounded-2xl bg-base-200 p-4 pb-8 text-2xl font-bold">
+					<p>
+						UX won't win any prizes, but it was easy to make and lightweight. HTMX and Sortable worked nicely together.
+					</p>
+					<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-2xl font-bold">
 						<div>
 							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
 								><g
@@ -828,7 +827,7 @@
 										d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12m0-3h19M7 6h.009M11 6h.009" /><path
 										d="m8 13l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L8 17m4 0h4" /></g
 								></svg
-							>Django, SortableJS, HTMX
+							>Django, HTMX, SortableJS
 						</div>
 						<div>
 							<svg
@@ -856,7 +855,7 @@
 
 		<div
 			class="fromLeft card card-side col-span-2 row-span-2 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
-			<div class="card-body relative">
+			<div class="group card-body relative grid items-center gap-y-5">
 				<div class="space-y-8">
 					<div class="avatar flex justify-center pb-4">
 						<div class="w-56 rounded-full">
@@ -864,13 +863,17 @@
 								><img src={eatYourMedsLogo} alt="Eat Your Meds!" class="" /></a>
 						</div>
 					</div>
-					<p class="text-start">
+					<p>
 						<span class="font-bold text-primary underline hover:text-secondary"
 							><a href="https://app.zixian.dev/eatyourmeds/">Eat Your Medicine!</a></span>
-						was a try at making something that helped me plan dose timings and display medicine info for my kid.
+						was a try at planning dose timings and getting medicine info. It was tedious for both of us parents to record/coord
+						medicine stuff and sync with one another.
 					</p>
-
-					<div class="rounded-2xl bg-base-200 p-4 pb-8 text-2xl font-bold">
+					<p>
+						Used Django's class-based views for CRUD and auth, nearly everything built in. Sprinkled HTMX and
+						datepicker.js for user interactions.
+					</p>
+					<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-2xl font-bold">
 						<div>
 							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
 								><g
@@ -910,8 +913,8 @@
 			</div>
 		</div>
 		<div class="col-span-2 grid gap-7 md:col-span-3 md:grid-cols-2">
-			<div class="fromBottom card w-full border border-base-300 bg-base-100 shadow-xl">
-				<div class="group card-body grid gap-y-5">
+			<div class="animate-btonomics card w-full border border-base-300 bg-base-100 shadow-xl">
+				<div class="group card-body grid items-center gap-y-5">
 					<div class="space-y-8">
 						<div class="flex justify-center pb-4">
 							<a href="https://old.btonomics.com"><img src={oldBtonomicsLogo} alt="Old Btonomics.com" /></a>
@@ -928,7 +931,7 @@
 							installing more. Got good SEO by writing organic content that people wanted and good page load speeds, esp
 							TTFB/LCP/render-blocking.
 						</p>
-						<div class="rounded-2xl bg-base-200 p-4 pb-8 text-2xl font-bold">
+						<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-2xl font-bold">
 							<div>
 								<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
 									><g
@@ -961,16 +964,16 @@
 										d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
 										d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
 										d="M10 21v-2" /></svg
-								>Ubuntu, Nginx, PHP-FPM, Apache+Litespeed.
+								>Ubuntu, Nginx, PHP-FPM, Apache.
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="fromBottom card w-full border border-base-300 bg-base-100 shadow-xl">
-				<div class="group card-body grid gap-y-5">
+			<div class="animate-btonomics card w-full border border-base-300 bg-base-100 shadow-xl">
+				<div class="group card-body grid items-center gap-y-5">
 					<div class="space-y-8">
-						<h3 class="pb-4 text-center text-6xl font-black text-gray-500">
+						<h3 class="pb-4 text-center text-6xl font-black text-[#38bdf8]">
 							<a href="https://btonomics.com">BTOnomics v2</a>
 						</h3>
 						<p>
@@ -983,7 +986,8 @@
 							Native markdown support, native view transitions, great image tools, really fast speeds. Haven't felt the
 							need to reach into Svelte or React.
 						</p>
-						<div class="rounded-2xl bg-base-200 p-4 text-2xl font-bold">
+
+						<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-2xl font-bold">
 							<div>
 								<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
 									><g
@@ -1024,7 +1028,7 @@
 			</div>
 		</div>
 	</div>
-	<p class="mt-14 text-center text-base">
+	<p class="mt-24 text-center text-base">
 		Copyright © 2024 Zixian Chen. All rights reserved. Some icons from <a
 			href="https://www.freepik.com/free-psd/3d-rendering-kawaii-time-date-icon_32312582.htm#&position=20&from_view=collections&uuid=b54263a3-356c-4242-84f8-1a3bd53f3865"
 			>Freepik</a>
