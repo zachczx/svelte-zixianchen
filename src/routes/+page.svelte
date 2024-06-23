@@ -16,7 +16,12 @@
 	import www from '$lib/assets/www.webp';
 	import challenge from '$lib/assets/challenge.webp';
 	import selfSndgoPic from '$lib/assets/DSC03163.webp?enhanced&w=300;500;1000';
+	import eatYourMedsLogo from '$lib/assets/eatyourmedslogo.webp';
 	import oldBtonomicsLogo from '$lib/assets/btonomics_logo-3-300x100.webp';
+	import fireDynamicGradient from '$lib/assets/fire-dynamic-gradient.png?enhanced&w=150';
+	import sun3d from '$lib/assets/sun3d.webp?enhanced&w=300';
+	import notebook3d from '$lib/assets/notebook-dynamic-gradient.webp?enhanced&w=200';
+	import school3d from '$lib/assets/school3d.webp?enhanced&w=500';
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -390,24 +395,30 @@
 			</figure>
 		</div>
 		<div
-			class="animate-about-work card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
-			style="background: linear-gradient(to right, rgba(254,254,254,0.9) 40%, rgba(254,254,254,0.85) 90%), url({www}); background-size: cover; background-position: center 60%">
+			class="animate-about-work card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
 			<div class="card-body space-y-4">
 				<h3>About</h3>
-				<div class="text-2xl">
-					I <span class="font-bold">understand web tech</span>. I can go broad and deep for tech issues and technical
-					stuff.
+				<div>
+					<p>
+						I <span class="font-bold">understand web tech</span>. I can go broad and deep for tech issues and technical
+						stuff.
+					</p>
 				</div>
 			</div>
 		</div>
 		<div
-			class="animate-about-work card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
-			style="background: linear-gradient(to right, rgba(254,254,254,0.96) 40%, rgba(254,254,254,0.9) 90%), url({challenge}); background-size: cover; background-position: left">
-			<div class="card-body space-y-4">
+			class="animate-about-work card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
+			<div class="card-body relative space-y-4">
+				<enhanced:img
+					src={fireDynamicGradient}
+					alt="Flamethrower ideas"
+					class="absolute -top-10 right-0 scale-x-[-1]" />
 				<h3>Work</h3>
-				<div class="text-2xl">
-					I <span class="font-bold">challenge flawed tech policies</span> that are ineffective and archaic. I push to
-					<span class="font-bold">rewrite, not digitalize</span> poor biz requirements.
+				<div>
+					<p>
+						I <span class="font-bold">challenge flawed tech policies</span> that are ineffective and archaic. I push to
+						<span class="font-bold">rewrite, not digitalize</span> poor biz requirements.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -415,56 +426,61 @@
 			class="fromRight col-span-2 row-span-1 h-full w-full space-y-0 self-center rounded-2xl opacity-0 saturate-0 xl:col-span-1 xl:row-span-3 xl:opacity-100"
 			style="background: url({headphoneSquare}) no-repeat; background-size: cover; background-position: 20% 25%">
 		</div>
-		<div
-			class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl"
-			style="background: linear-gradient(to right, rgba(254,254,254,0.95), rgba(254,254,254,0.7)), url({astronautGuitar}); background-size: cover; background-position: right">
+		<div class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
 			<div>
+				<div class="flex justify-center"><enhanced:img src={sun3d} alt="Hobbies!" class="-mt-8" /></div>
 				<div class="card-body space-y-4">
-					<h3 class="z-10">Personal</h3>
-					<p class="text-2xl">
-						I'm a hobbyist in <span class="font-bold">webdev</span>,
-						<span class="font-bold">stable diffusion</span>.
+					<h3 class="-mt-20">Personal</h3>
+					<p>
+						I dabble in <b>webdev</b>, <b>stable diffusion</b> in my free time.
 					</p>
-					<p class="text-2xl">
+					<p>
 						I enjoy listening to
-						<span class="font-bold">tech business</span> perspectives (shoutout All-In Podcast).
+						<b>tech business</b> perspectives (shoutout All-In Podcast).
 					</p>
 				</div>
 			</div>
 		</div>
 		<div
-			class="animate-education-certifications card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
-			style="background: linear-gradient(to right, rgba(253,253,253,1), rgba(254,254,254,0.85)), url({money}); background-size: cover; background-position: right bottom;">
-			<div class="card-body space-y-4">
+			class="animate-education-certifications card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
+			<div class="card-body max-h-96 space-y-4 overflow-hidden">
 				<h3>Education</h3>
-				<p class="text-2xl">
-					Studied <span class="font-bold">Political Science</span>. Loved comparative & money politics.
+				<p>
+					Studied <b>Political Science</b>. Loved comparative & money politics. Did a ton of int'l relations before I
+					got there.
 				</p>
+				<enhanced:img src={school3d} alt="Studies" class="-mt-10" />
 			</div>
 		</div>
 		<div
-			class="animate-education-certifications card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1"
-			style="background: linear-gradient(rgba(254,254,254,0.95), rgba(254,254,254,0.8)), url({supercomputer}); background-size: cover; background-position: center ">
+			class="animate-education-certifications card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
 			<div class="card-body space-y-4">
 				<h3>Certifications</h3>
-				<p class="text-2xl">
-					Did Coursera Specializations (<a
-						href="https://www.coursera.org/account/accomplishments/specialization/D9EZKV26D69B"
-						class="font-bold text-primary underline hover:text-secondary">Meta Back-end Developer</a
-					>,
-					<a
-						href="https://www.coursera.org/account/accomplishments/specialization/certificate/MVCFEP4ZHVSV"
-						class="font-bold text-primary underline hover:text-secondary">AWS Fundamentals</a
-					>,
-					<a
-						href="https://www.credly.com/badges/369dd8b6-19bd-45ba-8272-2b997111c2b7/linked_in_profile"
-						class="font-bold text-primary underline hover:text-secondary">Google UX</a
-					>),
-					<a
-						href="https://bcert.me/bc/html/show-badge.html?b=twwbrxwh"
-						class="font-bold text-primary underline hover:text-secondary">Certified ScrumMaster</a
-					>.
-				</p>
+				<div class="space-y-2">
+					<p>Did Coursera Specializations:</p>
+					<ul class="list ps-4">
+						<li>
+							<a
+								href="https://www.coursera.org/account/accomplishments/specialization/D9EZKV26D69B"
+								class="text-primary underline hover:text-secondary">Meta Back-end Developer</a>
+						</li>
+						<li>
+							<a
+								href="https://www.coursera.org/account/accomplishments/specialization/certificate/MVCFEP4ZHVSV"
+								class="text-primary underline hover:text-secondary">AWS Fundamentals</a>
+						</li>
+						<li>
+							<a
+								href="https://www.credly.com/badges/369dd8b6-19bd-45ba-8272-2b997111c2b7/linked_in_profile"
+								class="text-primary underline hover:text-secondary">Google UX</a>
+						</li>
+						<li>
+							<a
+								href="https://bcert.me/bc/html/show-badge.html?b=twwbrxwh"
+								class="text-primary underline hover:text-secondary">Certified ScrumMaster</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!-- 
@@ -477,7 +493,7 @@
 		<div class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body">
 				<div class="mb-3 self-center"><PresentationStatsSvg /></div>
-				<h2>Career Stats</h2>
+				<h2>Career</h2>
 				<div class="cols-auto-cols grid justify-items-start divide-y-2 bg-base-100">
 					<div class="stat grid grid-cols-3 px-0">
 						<div class="col-span-2 text-3xl font-medium">
@@ -548,9 +564,8 @@
 			class="animate-tech-comms card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body space-y-4">
 				<h3>Tech</h3>
-
 				<div>
-					<h4 class="text-2xl font-medium">
+					<h4>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
@@ -569,7 +584,7 @@
 					</p>
 				</div>
 				<div>
-					<h4 class="text-2xl font-medium">
+					<h4>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
@@ -593,7 +608,7 @@
 			<div class="card-body space-y-4">
 				<h3>Comms</h3>
 				<div>
-					<h4 class="text-2xl font-medium">
+					<h4>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
@@ -611,7 +626,7 @@
 					<p>Managed media and collaborated on unpaid features of MINDEF & SAF.</p>
 				</div>
 				<div>
-					<h4 class="text-2xl font-medium">
+					<h4>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
@@ -635,7 +650,7 @@
 			<div class="card-body space-y-4">
 				<h3>Policy</h3>
 				<div>
-					<h4 class="text-2xl font-medium">
+					<h4>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
@@ -679,9 +694,11 @@
 		<div
 			class="animate-sveltekit-django card col-span-2 row-span-2 border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="group card-body grid gap-y-5">
-				<div class="space-y-4">
-					<h3 class="text-start">Sveltekit</h3>
-					<p class="pb-4 text-2xl">
+				<div class="space-y-8">
+					<div class="place-self-center pb-4">
+						<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude" class="" /></a>
+					</div>
+					<p>
 						I made
 						<span class="text-primary"
 							><a href="https://titude.app/" class="font-bold text-primary underline hover:text-secondary">Apptitude</a
@@ -689,50 +706,148 @@
 						>, which gives me a clear and convenient way to distribute guides, notes, links, YouTube, organized along
 						tech competencies to share with my non-technical teammates.
 					</p>
-					<p class="pb-4 text-2xl">I used Sveltekit with tons of JS objects.</p>
-					<p class="rounded-2xl bg-base-200 p-4 text-2xl font-bold">
-						Deployed as a static website to Cloudflare Pages for better perf.
-					</p>
-				</div>
-				<div class="place-self-center">
-					<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude" class="animate-logo" /></a>
+					<p class="pb-4">Used JS objects in lieu of a DB/markdown.</p>
+					<div class="rounded-2xl bg-base-200 p-4 pb-8 text-2xl font-bold">
+						<div>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
+								><g
+									fill="none"
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									color="currentColor"
+									><path
+										d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12m0-3h19M7 6h.009M11 6h.009" /><path
+										d="m8 13l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L8 17m4 0h4" /></g
+								></svg
+							>Sveltekit, Gsap
+						</div>
+						<div>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="1em"
+								height="1em"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="icon icon-tabler icons-tabler-outline icon-tabler-cpu me-2 inline"
+								><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+									d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /><path
+									d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
+									d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
+									d="M10 21v-2" /></svg
+							>Cloudflare Pages.
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div
 			class="animate-sveltekit-django card col-span-2 row-span-2 border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="group card-body grid gap-y-5">
-				<div class="space-y-4">
-					<h3 class="text-start">Sveltekit + SortableJS</h3>
-					<p class="pb-4 text-2xl">
+				<div class="space-y-8">
+					<div class="place-self-center pb-4">
+						<a href="https://appraize.zixian.dev/"
+							><h3 class="text-center text-6xl font-black text-purple-800">Appraize</h3></a>
+					</div>
+					<p>
 						<a href="https://appraize.zixian.dev/" class="font-bold text-primary underline hover:text-secondary"
 							>Appraize</a> makes ranking sessions easier via drag & drop.
 					</p>
-					<p class="pb-4 text-2xl">
+					<p class="pb-4">
 						Also comes with a mini dashboard, more responsive UI, db backend (Drizzle/Postgres), sessions, filters,
 						keyboard shortcut, csv file upload, form actions/validation.
 					</p>
-					<p class="rounded-2xl bg-base-200 p-4 pb-4 text-2xl font-bold">Deployed in a docker container on NodeJS.</p>
-				</div>
-				<div class="place-self-center">
-					<a href="https://appraize.zixian.dev/"
-						><h3 class="animate-logo text-5xl text-purple-800 lg:text-[6rem]">Appraize</h3></a>
+					<div class="rounded-2xl bg-base-200 p-4 pb-8 text-2xl font-bold">
+						<div>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
+								><g
+									fill="none"
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									color="currentColor"
+									><path
+										d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12m0-3h19M7 6h.009M11 6h.009" /><path
+										d="m8 13l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L8 17m4 0h4" /></g
+								></svg
+							>Sveltekit, SortableJS
+						</div>
+						<div>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="1em"
+								height="1em"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="icon icon-tabler icons-tabler-outline icon-tabler-cpu me-2 inline"
+								><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+									d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /><path
+									d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
+									d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
+									d="M10 21v-2" /></svg
+							>Ubuntu, Nginx, Coolify, NodeJS, Postgres/Turso.
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div
 			class="fromRight card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="group card-body grid gap-y-5">
-				<div class="relative space-y-4">
-					<h3 class="text-start">Django + SortableJS + Htmx</h3>
-					<p class="pb-4 text-2xl">
+				<div class="space-y-8">
+					<div class="flex h-56 justify-center pb-4">
+						<a href="https://app.zixian.dev/rank/"><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="" /></a>
+					</div>
+					<p>
 						<a href="https://app.zixian.dev/rank/" class="font-bold text-primary underline hover:text-secondary"
 							>Rank-a-mate</a> was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.
 					</p>
-					<p class="rounded-2xl bg-base-200 p-4 text-2xl font-bold">Deployed on Ubuntu, Nginx, Gunicorn.</p>
-					<div class="grid h-60 place-items-center">
-						<a href="https://app.zixian.dev/rank/"
-							><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="animate-logo" /></a>
+
+					<div class="rounded-2xl bg-base-200 p-4 pb-8 text-2xl font-bold">
+						<div>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
+								><g
+									fill="none"
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									color="currentColor"
+									><path
+										d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12m0-3h19M7 6h.009M11 6h.009" /><path
+										d="m8 13l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L8 17m4 0h4" /></g
+								></svg
+							>Django, SortableJS, HTMX
+						</div>
+						<div>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="1em"
+								height="1em"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="icon icon-tabler icons-tabler-outline icon-tabler-cpu me-2 inline"
+								><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+									d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /><path
+									d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
+									d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
+									d="M10 21v-2" /></svg
+							>Ubuntu, Nginx, Gunicorn.
+						</div>
 					</div>
 				</div>
 			</div>
@@ -741,87 +856,178 @@
 		<div
 			class="fromLeft card card-side col-span-2 row-span-2 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body relative">
-				<div class="space-y-4">
-					<h3>Django + Htmx</h3>
-					<p class="pb-4 text-start text-2xl">
+				<div class="space-y-8">
+					<div class="avatar flex justify-center pb-4">
+						<div class="w-56 rounded-full">
+							<a href="https://app.zixian.dev/eatyourmeds/"
+								><img src={eatYourMedsLogo} alt="Eat Your Meds!" class="" /></a>
+						</div>
+					</div>
+					<p class="text-start">
 						<span class="font-bold text-primary underline hover:text-secondary"
 							><a href="https://app.zixian.dev/eatyourmeds/">Eat Your Medicine!</a></span>
 						was a try at making something that helped me plan dose timings and display medicine info for my kid.
 					</p>
 
-					<p class="rounded-2xl bg-base-200 p-4 text-start text-2xl font-bold">Deployed on Ubuntu, Nginx, Gunicorn</p>
-				</div>
-				<div class="group relative mt-10 flex">
-					<a href="https://app.zixian.dev/eatyourmeds/">
-						<img
-							src={pill}
-							alt="bg"
-							class="animate-logo brightness-25 z-1 group-hover:brightness-25 absolute top-0 rotate-[25deg] scale-[1] blur-lg" /><img
-							src={pill}
-							alt="Eat Your Meds"
-							class="animate-logo z-50 rotate-[25deg]" /><img
-							src={pill}
-							alt="Eat Your Meds"
-							class="animate-logo absolute -right-20 top-20 z-50 rotate-[50deg] scale-50" /><img
-							src={pill}
-							alt="Eat Your Meds"
-							class="animate-logo absolute -right-24 top-20 z-30 rotate-[50deg] scale-[0.4] blur-xl" />
-					</a>
+					<div class="rounded-2xl bg-base-200 p-4 pb-8 text-2xl font-bold">
+						<div>
+							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
+								><g
+									fill="none"
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									color="currentColor"
+									><path
+										d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12m0-3h19M7 6h.009M11 6h.009" /><path
+										d="m8 13l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L8 17m4 0h4" /></g
+								></svg
+							>Django, HTMX
+						</div>
+						<div>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="1em"
+								height="1em"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="icon icon-tabler icons-tabler-outline icon-tabler-cpu me-2 inline"
+								><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+									d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /><path
+									d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
+									d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
+									d="M10 21v-2" /></svg
+							>Ubuntu, Nginx, Gunicorn.
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-span-2 grid gap-7 md:col-span-3 md:grid-cols-2">
 			<div class="fromBottom card w-full border border-base-300 bg-base-100 shadow-xl">
 				<div class="group card-body grid gap-y-5">
-					<div class="relative space-y-4">
-						<h3 class="text-start">WordPress</h3>
-						<p class="pb-4 text-2xl">
+					<div class="space-y-8">
+						<div class="flex justify-center pb-4">
+							<a href="https://old.btonomics.com"><img src={oldBtonomicsLogo} alt="Old Btonomics.com" /></a>
+						</div>
+						<p>
 							I started
 							<span class="font-bold text-primary underline hover:text-secondary"
 								><a href="https://old.btonomics.com/">BTOnomics</a></span
-							>, a blog on home renovation in 2018. I used WordPress, with it being an obvious choice in 2018.
+							>, a blog on home renovation in 2018. I used WordPress, with it being an obvious choice in 2018. The
+							Wordpress instance is kept as an archive now.
 						</p>
-						<p class="text-2xl">
+						<p>
 							Experimented with content for SEO, themes/plug-ins, tweaking, getting perf hits, optimizing, then
 							installing more. Got good SEO by writing organic content that people wanted and good page load speeds, esp
 							TTFB/LCP/render-blocking.
 						</p>
-						<p class="rounded-2xl bg-base-200 p-4 pb-8 text-2xl font-bold">
-							Deployed on Bunny CDN, Litespeed webserver on an Apache webhost. Read-only archive now on Ubuntu, Nginx,
-							PHP-FPM.
-						</p>
-						<div class="grid place-items-center">
-							<a href="https://old.btonomics.com"
-								><img src={oldBtonomicsLogo} alt="Old Btonomics.com" class="animate-logo" /></a>
+						<div class="rounded-2xl bg-base-200 p-4 pb-8 text-2xl font-bold">
+							<div>
+								<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
+									><g
+										fill="none"
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										color="currentColor"
+										><path
+											d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12m0-3h19M7 6h.009M11 6h.009" /><path
+											d="m8 13l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L8 17m4 0h4" /></g
+									></svg
+								>Wordpress, Bunny CDN
+							</div>
+							<div>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="1em"
+									height="1em"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="icon icon-tabler icons-tabler-outline icon-tabler-cpu me-2 inline"
+									><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+										d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /><path
+										d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
+										d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
+										d="M10 21v-2" /></svg
+								>Ubuntu, Nginx, PHP-FPM, Apache+Litespeed.
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="fromBottom card w-full border border-base-300 bg-base-100 shadow-xl">
 				<div class="group card-body grid gap-y-5">
-					<div class="relative space-y-4">
-						<h3 class="text-start">AstroJS</h3>
-						<p class="pb-4 text-2xl">
+					<div class="space-y-8">
+						<h3 class="pb-4 text-center text-6xl font-black text-gray-500">
+							<a href="https://old.btonomics.com">BTOnomics v2</a>
+						</h3>
+						<p>
 							Migrated <span class="font-bold text-primary underline hover:text-secondary"
 								><a href="https://btonomics.com/">BTOnomics</a></span> to AstroJS, in part to see if it lives up to the hype.
 							Not disappointed. Chatgpt did the bulk of conversion of WordPress HTML to markdown, with a few hiccups here
 							and there.
 						</p>
-						<p class="text-2xl">
+						<p>
 							Native markdown support, native view transitions, great image tools, really fast speeds. Haven't felt the
 							need to reach into Svelte or React.
 						</p>
-						<p class="rounded-2xl bg-base-200 p-4 pb-4 text-2xl font-bold">Deployed on Cloudflare Pages.</p>
-						<div class="grid place-items-center">
-							<a href="https://old.btonomics.com"
-								><span class="text-6xl font-black text-gray-500 lg:text-[6rem]">BTOnomics</span></a>
+						<div class="rounded-2xl bg-base-200 p-4 text-2xl font-bold">
+							<div>
+								<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
+									><g
+										fill="none"
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										color="currentColor"
+										><path
+											d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12m0-3h19M7 6h.009M11 6h.009" /><path
+											d="m8 13l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L8 17m4 0h4" /></g
+									></svg
+								>AstroJS
+							</div>
+							<div>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="1em"
+									height="1em"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="icon icon-tabler icons-tabler-outline icon-tabler-cpu me-2 inline"
+									><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+										d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /><path
+										d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
+										d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
+										d="M10 21v-2" /></svg
+								>Cloudflare Pages
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<p class="mt-14 text-center text-base">Copyright © 2024 Zixian Chen. All rights reserved.</p>
+	<p class="mt-14 text-center text-base">
+		Copyright © 2024 Zixian Chen. All rights reserved. Some icons from <a
+			href="https://www.freepik.com/free-psd/3d-rendering-kawaii-time-date-icon_32312582.htm#&position=20&from_view=collections&uuid=b54263a3-356c-4242-84f8-1a3bd53f3865"
+			>Freepik</a>
+	</p>
 </section>
 
 <style>
@@ -861,7 +1067,10 @@
 			animation-range-end: cover 40vh;
 		}
 	}
-
+	.list li::before {
+		content: '🔥';
+		padding-right: 0.4rem;
+	}
 	/* for other stuff */
 	/* .overlay::before {
 		content: '';
