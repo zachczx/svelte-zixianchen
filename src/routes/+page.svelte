@@ -338,8 +338,7 @@
 				class="montserrat text-center text-7xl leading-none tracking-tighter text-black lg:text-[10rem] xl:text-[11rem] 2xl:text-[11rem] min-[1921px]:text-[20rem]">
 				Zixian Chen
 			</h1>
-			<h2
-				class="custom-reveal-text montserrat mb-4 text-center text-3xl leading-none tracking-tighter lg:text-5xl">
+			<h2 class="custom-reveal-text montserrat mb-4 text-center text-3xl leading-none tracking-tighter lg:text-5xl">
 				<span>I bridge the gaps between public policy, business needs and tech solutions.</span>
 			</h2>
 			<div class="mb-8 flex justify-center space-x-3 lg:mb-20">
@@ -396,8 +395,8 @@
 			<div class="card-body space-y-4">
 				<h3>About</h3>
 				<div class="text-2xl">
-					I <span class="font-bold text-primary">understand web technologies</span>. I can go broad
-					and deep for tech issues and technical stuff.
+					I <span class="font-bold">understand web tech</span>. I can go broad and deep for tech issues and technical
+					stuff.
 				</div>
 			</div>
 		</div>
@@ -407,9 +406,8 @@
 			<div class="card-body space-y-4">
 				<h3>Work</h3>
 				<div class="text-2xl">
-					I <span class="font-bold text-primary">challenge flawed tech policies</span> that are
-					ineffective and archaic. I push to
-					<span class="font-bold text-primary">rewrite, not digitalize</span> poor biz requirements.
+					I <span class="font-bold">challenge flawed tech policies</span> that are ineffective and archaic. I push to
+					<span class="font-bold">rewrite, not digitalize</span> poor biz requirements.
 				</div>
 			</div>
 		</div>
@@ -424,12 +422,12 @@
 				<div class="card-body space-y-4">
 					<h3 class="z-10">Personal</h3>
 					<p class="text-2xl">
-						I'm a hobbyist in <span class="font-bold text-primary">webdev</span>,
-						<span class="font-bold text-primary">stable diffusion</span>.
+						I'm a hobbyist in <span class="font-bold">webdev</span>,
+						<span class="font-bold">stable diffusion</span>.
 					</p>
 					<p class="text-2xl">
 						I enjoy listening to
-						<span class="font-bold text-primary">tech business</span> perspectives (shoutout All-In Podcast).
+						<span class="font-bold">tech business</span> perspectives (shoutout All-In Podcast).
 					</p>
 				</div>
 			</div>
@@ -440,8 +438,7 @@
 			<div class="card-body space-y-4">
 				<h3>Education</h3>
 				<p class="text-2xl">
-					Studied <span class="font-bold text-primary">Political Science</span>. Loved comparative &
-					money politics.
+					Studied <span class="font-bold">Political Science</span>. Loved comparative & money politics.
 				</p>
 			</div>
 		</div>
@@ -451,22 +448,21 @@
 			<div class="card-body space-y-4">
 				<h3>Certifications</h3>
 				<p class="text-2xl">
-					Did Coursera Specializations (<span class="font-bold text-primary"
-						><a href="https://www.coursera.org/account/accomplishments/specialization/D9EZKV26D69B"
-							>Meta Back-end Developer<TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
-						></span
+					Did Coursera Specializations (<a
+						href="https://www.coursera.org/account/accomplishments/specialization/D9EZKV26D69B"
+						class="font-bold text-primary underline hover:text-secondary">Meta Back-end Developer</a
 					>,
-					<span class="font-bold text-primary"
-						><a
-							href="https://www.coursera.org/account/accomplishments/specialization/certificate/MVCFEP4ZHVSV"
-							>AWS Fundamentals<TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
-						></span
+					<a
+						href="https://www.coursera.org/account/accomplishments/specialization/certificate/MVCFEP4ZHVSV"
+						class="font-bold text-primary underline hover:text-secondary">AWS Fundamentals</a
 					>,
-					<span class="font-bold text-primary">Google UX</span>),
-					<span class="font-bold text-primary"
-						><a href="https://bcert.me/bc/html/show-badge.html?b=twwbrxwh"
-							>Certified ScrumMaster<TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
-						></span
+					<a
+						href="https://www.credly.com/badges/369dd8b6-19bd-45ba-8272-2b997111c2b7/linked_in_profile"
+						class="font-bold text-primary underline hover:text-secondary">Google UX</a
+					>),
+					<a
+						href="https://bcert.me/bc/html/show-badge.html?b=twwbrxwh"
+						class="font-bold text-primary underline hover:text-secondary">Certified ScrumMaster</a
 					>.
 				</p>
 			</div>
@@ -478,8 +474,7 @@
 		<!-- 
 			Break
 		-->
-		<div
-			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+		<div class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body">
 				<div class="mb-3 self-center"><PresentationStatsSvg /></div>
 				<h2>Career Stats</h2>
@@ -540,9 +535,7 @@
 								<g class="animate-stats">
 									<path d="M14 3v4a1 1 0 0 0 1 1h4" /><path
 										d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /></g>
-								<g class="animate-stats"
-									><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></g
-								></svg>
+								<g class="animate-stats"><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></g></svg>
 							<div class="animate-stats inline-block">Policy</div>
 						</div>
 						<div class="animate-stats text-5xl font-bold text-lime-500">{percentMonthsPolicy}%</div>
@@ -572,8 +565,7 @@
 						><span class="ps-2">Tech Infra Policy Team Lead</span>
 					</h4>
 					<p>
-						Did policies, funding assessments for cloud, on-prem hosting, SG Tech Stack, toolchains
-						and other infra.
+						Did policies, funding assessments for cloud, on-prem hosting, SG Tech Stack, toolchains and other infra.
 					</p>
 				</div>
 				<div>
@@ -639,8 +631,7 @@
 				<div class="item-start self-center"><ChatSvg /></div>
 			</div>
 		</div>
-		<div
-			class="fromRight card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+		<div class="fromRight card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body space-y-4">
 				<h3>Policy</h3>
 				<div>
@@ -654,16 +645,12 @@
 							stroke-linecap="round"
 							stroke-linejoin="round"
 							class="icon icon-tabler icons-tabler-outline icon-tabler-file-text inline h-8 w-8 stroke-primary"
-							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-								d="M14 3v4a1 1 0 0 0 1 1h4" /><path
-								d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path
-								d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></svg
+							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path
+								d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 9l1 0" /><path
+								d="M9 13l6 0" /><path d="M9 17l6 0" /></svg
 						><span class="ps-2">NS Policy Officer</span>
 					</h4>
-					<p>
-						Did NS policies for sportsmen, leave, citizenship, exit control. Worked in Committee to
-						Strengthen NS.
-					</p>
+					<p>Did NS policies for sportsmen, leave, citizenship, exit control. Worked in Committee to Strengthen NS.</p>
 				</div>
 			</div>
 			<div
@@ -679,79 +666,69 @@
 		<!-- 
 			Break
 		-->
-		<div
-			class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
+		<div class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
 			<div class="card-body space-y-4">
 				<h2>Side Projects</h2>
 				<div class="animate-terminal mockup-code">
-					<pre data-prefix=">"><code
-							>npm install <span class="text-yellow-300">@sveltejs/kit astro</span></code></pre>
-					<pre data-prefix="$"><code
-							>pip install <span class="text-yellow-300">Django</span></code></pre>
-					<pre data-prefix=">"><code
-							>npm install <span class="text-yellow-300">tailwindcss htmx.org</span></code></pre>
+					<pre data-prefix=">"><code>npm install <span class="text-yellow-300">@sveltejs/kit astro</span></code></pre>
+					<pre data-prefix="$"><code>pip install <span class="text-yellow-300">Django</span></code></pre>
+					<pre data-prefix=">"><code>npm install <span class="text-yellow-300">tailwindcss htmx.org</span></code></pre>
 				</div>
 			</div>
 		</div>
 		<div
-			class="animate-sveltekit-django card col-span-2 row-span-1 border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			class="animate-sveltekit-django card col-span-2 row-span-2 border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="group card-body grid gap-y-5">
 				<div class="space-y-4">
 					<h3 class="text-start">Sveltekit</h3>
 					<p class="pb-4 text-2xl">
 						I made
 						<span class="text-primary"
-							><a href="https://titude.app/"
-								><b>Apptitude</b><TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
+							><a href="https://titude.app/" class="font-bold text-primary underline hover:text-secondary">Apptitude</a
 							></span
-						>, which gives me a clear and convenient way to distribute guides, notes, links,
-						YouTube, organized along tech competencies to share with my non-technical teammates.
+						>, which gives me a clear and convenient way to distribute guides, notes, links, YouTube, organized along
+						tech competencies to share with my non-technical teammates.
 					</p>
-					<p class="text-2xl">Exported as a static website for better performance.</p>
-					<p class="text-2xl">I used Sveltekit with tons of JS objects on Cloudflare Pages.</p>
+					<p class="pb-4 text-2xl">I used Sveltekit with tons of JS objects.</p>
+					<p class="rounded-2xl bg-base-200 p-4 text-2xl font-bold">
+						Deployed as a static website to Cloudflare Pages for better perf.
+					</p>
 				</div>
 				<div class="place-self-center">
-					<a href="https://titude.app/"
-						><enhanced:img src={apptitudeLogo} alt="Apptitude" class="animate-logo" /></a>
+					<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude" class="animate-logo" /></a>
 				</div>
 			</div>
 		</div>
 		<div
-			class="animate-sveltekit-django card col-span-2 row-span-1 border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			class="animate-sveltekit-django card col-span-2 row-span-2 border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="group card-body grid gap-y-5">
 				<div class="space-y-4">
 					<h3 class="text-start">Sveltekit + SortableJS</h3>
 					<p class="pb-4 text-2xl">
-						<span class="text-primary"
-							><a href="https://appraize.zixian.dev/"
-								><b>Appraize</b><TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
-							></span> makes ranking sessions easier via drag & drop.
+						<a href="https://appraize.zixian.dev/" class="font-bold text-primary underline hover:text-secondary"
+							>Appraize</a> makes ranking sessions easier via drag & drop.
 					</p>
 					<p class="pb-4 text-2xl">
-						Also comes with a mini dashboard, more responsive UI, db backend (Drizzle/Postgres),
-						sessions, filters, keyboard shortcut, csv file upload, form actions/validation.
+						Also comes with a mini dashboard, more responsive UI, db backend (Drizzle/Postgres), sessions, filters,
+						keyboard shortcut, csv file upload, form actions/validation.
 					</p>
-					<p class="pb-4 text-2xl">Deployed in a docker container via Coolify.</p>
+					<p class="rounded-2xl bg-base-200 p-4 pb-4 text-2xl font-bold">Deployed in a docker container on NodeJS.</p>
 				</div>
 				<div class="place-self-center">
-					<a href="https://appraize.zixian.dev/"
-						><h3 class="animate-logo text-6xl font-black text-purple-800">Appraize</h3></a>
+					<a href="https://appraize.zixian.dev/"><h3 class="animate-logo text-[6rem] text-purple-800">Appraize</h3></a>
 				</div>
 			</div>
 		</div>
 		<div
-			class="fromRight card col-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			class="fromRight card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="group card-body grid gap-y-5">
 				<div class="relative space-y-4">
 					<h3 class="text-start">Django + SortableJS + Htmx</h3>
 					<p class="pb-4 text-2xl">
-						<span class="text-primary"
-							><a href="https://app.zixian.dev/rank/"
-								><b>Rank-a-mate</b><TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
-							></span> was my first stab at making a drag & drop tool for ranking sessions in lieu of
-						Excel.
+						<a href="https://app.zixian.dev/rank/" class="font-bold text-primary underline hover:text-secondary"
+							>Rank-a-mate</a> was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.
 					</p>
-					<p class="text-2xl">Deployed on an Ubuntu box with Nginx, Gunicorn.</p>
+					<p class="rounded-2xl bg-base-200 p-4 text-2xl font-bold">Deployed on Ubuntu, Nginx, Gunicorn.</p>
 					<div class="grid h-60 place-items-center">
 						<a href="https://app.zixian.dev/rank/"
 							><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="animate-logo" /></a>
@@ -766,15 +743,12 @@
 				<div class="space-y-4">
 					<h3>Django + Htmx</h3>
 					<p class="pb-4 text-start text-2xl">
-						<span class="text-primary"
-							><a href="https://app.zixian.dev/eatyourmeds/"
-								><b>Eat Your Medicine!</b><TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
-							></span>
-						was a try at making something that helped me plan dose timings and display medicine info
-						for my kid.
+						<span class="font-bold text-primary underline hover:text-secondary"
+							><a href="https://app.zixian.dev/eatyourmeds/">Eat Your Medicine!</a></span>
+						was a try at making something that helped me plan dose timings and display medicine info for my kid.
 					</p>
 
-					<p class="text-start text-2xl">Deployed on an Ubuntu box with nginx, gunicorn</p>
+					<p class="rounded-2xl bg-base-200 p-4 text-start text-2xl font-bold">Deployed on Ubuntu, Nginx, Gunicorn</p>
 				</div>
 				<div class="group relative mt-10 flex">
 					<a href="https://app.zixian.dev/eatyourmeds/">
@@ -795,57 +769,52 @@
 				</div>
 			</div>
 		</div>
-		<div
-			class="fromBottom card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1">
-			<div class="group card-body grid gap-y-5">
-				<div class="relative space-y-4">
-					<h3 class="text-start">WordPress</h3>
-					<p class="pb-4 text-2xl">
-						Ran
-						<span class="text-primary"
-							><a href="https://old.btonomics.com/"
-								><b>BTOnomics</b><TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
-							></span> , a blog on home renovation. Content mattered a ton more, though I still had to
-						cache everything to improve ttfb & page load speed.
-					</p>
-					<p class="text-2xl">
-						Used WordPress, it was the gold standard in 2018. Went through the life cycle of a
-						WordPress enthusiast - installing themes/plug-ins, tweaking, getting rubbish perf,
-						dialing it hack, then installing more.
-					</p>
-					<p class="pb-8 text-2xl">
-						Used Bunny CDN, Litespeed cache, Google Analytics on a shared webhost (running Apache).
-						Now keeping it running on an Ubuntu box with php-fpm.
-					</p>
-					<div class="grid place-items-center">
-						<a href="https://old.btonomics.com"
-							><img src={oldBtonomicsLogo} alt="Old Btonomics.com" class="animate-logo" /></a>
+		<div class="col-span-3 grid grid-cols-2 gap-7">
+			<div class="fromBottom card w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl">
+				<div class="group card-body grid gap-y-5">
+					<div class="relative space-y-4">
+						<h3 class="text-start">WordPress</h3>
+						<p class="pb-4 text-2xl">
+							I started
+							<span class="font-bold text-primary underline hover:text-secondary"
+								><a href="https://old.btonomics.com/">BTOnomics</a></span
+							>, a blog on home renovation in 2018. I used WordPress, with it being an obvious choice in 2018.
+						</p>
+						<p class="text-2xl">
+							Experimented with content for SEO, themes/plug-ins, tweaking, getting perf hits, optimizing, then
+							installing more. Got good SEO by writing organic content that people wanted and good page load speeds, esp
+							TTFB/LCP/render-blocking.
+						</p>
+						<p class="rounded-2xl bg-base-200 p-4 pb-8 text-2xl font-bold">
+							Deployed on Bunny CDN, Litespeed webserver on an Apache webhost. Read-only archive now on Ubuntu, Nginx,
+							PHP-FPM.
+						</p>
+						<div class="grid place-items-center">
+							<a href="https://old.btonomics.com"
+								><img src={oldBtonomicsLogo} alt="Old Btonomics.com" class="animate-logo" /></a>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div
-			class="fromBottom card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1">
-			<div class="group card-body grid gap-y-5">
-				<div class="relative space-y-4">
-					<h3 class="text-start">AstroJS</h3>
-					<p class="pb-4 text-2xl">
-						Migrated <span class="text-primary"
-							><a href="https://btonomics.com/"
-								><b>BTOnomics</b><TablerLink class="mx-1 mb-1 inline stroke-primary" /></a
-							></span> to AstroJS, in part to see if it lives up to the hype. Not disappointed.
-					</p>
-					<p class="text-2xl">
-						Native markdown support, native view transitions, great image tools, really fast speeds.
-						Haven't felt the need to reach into Svelte or React.
-					</p>
-					<p class="pb-8 text-2xl">
-						Deployed on Cloudflare Pages without having to do much. Chatgpt did the bulk of
-						conversion of WordPress html to markdown.
-					</p>
-					<div class="grid place-items-center">
-						<a href="https://old.btonomics.com"
-							><span class="text-6xl font-black text-gray-500">BTOnomics</span></a>
+			<div class="fromBottom card w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl">
+				<div class="group card-body grid gap-y-5">
+					<div class="relative space-y-4">
+						<h3 class="text-start">AstroJS</h3>
+						<p class="pb-4 text-2xl">
+							Migrated <span class="font-bold text-primary underline hover:text-secondary"
+								><a href="https://btonomics.com/">BTOnomics</a></span> to AstroJS, in part to see if it lives up to the hype.
+							Not disappointed. Chatgpt did the bulk of conversion of WordPress HTML to markdown, with a few hiccups here
+							and there.
+						</p>
+						<p class="text-2xl">
+							Native markdown support, native view transitions, great image tools, really fast speeds. Haven't felt the
+							need to reach into Svelte or React.
+						</p>
+						<p class="rounded-2xl bg-base-200 p-4 pb-4 text-2xl font-bold">Deployed on Cloudflare Pages.</p>
+						<div class="grid place-items-center">
+							<a href="https://old.btonomics.com"
+								><span class="text-[6rem] font-black text-gray-500">BTOnomics</span></a>
+						</div>
 					</div>
 				</div>
 			</div>

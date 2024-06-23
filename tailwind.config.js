@@ -12,6 +12,7 @@ export default {
 					'base-100': '#fefefe',
 					'base-200': '#eefad8',
 					'base-300': '#e4f7c2',
+					secondary: '#E8751A',
 					//https://www.colorhexa.com/f8fdef
 				},
 			},
