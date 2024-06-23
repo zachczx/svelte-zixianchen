@@ -22,6 +22,7 @@
 	import sun3d from '$lib/assets/sun3d.webp?enhanced&w=300';
 	import notebook3d from '$lib/assets/notebook-dynamic-gradient.webp?enhanced&w=200';
 	import school3d from '$lib/assets/school3d.webp?enhanced&w=500';
+	import earth3d from '$lib/assets/earth3d.webp?enhanced&w=200';
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -396,12 +397,12 @@
 		</div>
 		<div
 			class="animate-about-work card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
-			<div class="card-body space-y-4">
+			<div class="card-body relative space-y-4">
+				<enhanced:img src={earth3d} alt="WWW" class="absolute -top-16 right-3" />
 				<h3>About</h3>
 				<div>
 					<p>
-						I <span class="font-bold">understand web tech</span>. I can go broad and deep for tech issues and technical
-						stuff.
+						I <b>understand web tech</b>. I can go broad and deep for tech issues and technical stuff.
 					</p>
 				</div>
 			</div>
