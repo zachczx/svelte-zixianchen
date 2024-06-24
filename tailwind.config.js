@@ -9,7 +9,7 @@ export default {
 			{
 				lemonade: {
 					...require('daisyui/src/theming/themes')['lemonade'],
-					'base-100': '#fefefe',
+					'base-100': '#fafafa',
 					'base-200': '#eefad8',
 					'base-300': '#e4f7c2',
 					secondary: '#E8751A',

@@ -2,7 +2,7 @@
 	import profilepic from '$lib/assets/kitandi.webp?enhanced&w=500';
 	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=500';
 	import pill from '$lib/assets/pill.webp';
-	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=200';
+	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=150';
 	import TablerLink from '$lib/svg/TablerLink.svelte';
 	import astronautGuitar from '$lib/assets/astronaut-guitar.webp';
 	import headphoneSquare from '$lib/assets/headphone-square.webp';
@@ -23,10 +23,13 @@
 	import notebook3d from '$lib/assets/notebook-dynamic-gradient.webp?enhanced&w=200';
 	import school3d from '$lib/assets/school3d.webp?enhanced&w=500';
 	import earth3d from '$lib/assets/earth3d.webp?enhanced&w=200';
+	import calendarBriefcase3d from '$lib/assets/calendarBriefcase3d.webp?enhanced&w=500';
+	import hourglass3d from '$lib/assets/hourglass3d.webp?enhanced&w=500';
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
+	import TablerArrowNarrowRight from '$lib/svg/TablerArrowNarrowRight.svelte';
 	/* onMount(async () => {
 		await import('https://unpkg.com/@splinetool/viewer/build/spline-viewer.js');
 	});
@@ -72,7 +75,7 @@
 						markers: false,
 					},
 					x: -100,
-					autoAlpha: 0.8,
+					autoAlpha: 1,
 					duration: 1,
 					ease: 'circ.out',
 					delay: 0.3,
@@ -90,7 +93,7 @@
 						markers: false,
 					},
 					x: 100,
-					autoAlpha: 0.8,
+					autoAlpha: 1,
 					duration: 1,
 					ease: 'circ.out',
 					delay: 0.3,
@@ -113,7 +116,7 @@
 						markers: false,
 					},
 					y: 70,
-					autoAlpha: 0.8,
+					autoAlpha: 1,
 					ease: 'circ.out',
 				});
 			}
@@ -127,7 +130,8 @@
 					markers: false,
 				},
 				y: 70,
-				autoAlpha: 0.8,
+				autoAlpha: 1,
+				scale: 0.9,
 				ease: 'circ.out',
 				stagger: { each: 0.5, from: 'end' },
 			});
@@ -141,7 +145,7 @@
 					markers: false,
 				},
 				y: 70,
-				autoAlpha: 0.8,
+				autoAlpha: 1,
 				ease: 'circ.out',
 				stagger: { each: 0.3, from: 'end' },
 			});
@@ -155,7 +159,7 @@
 					markers: false,
 				},
 				y: 70,
-				autoAlpha: 0.8,
+				autoAlpha: 1,
 				ease: 'circ.out',
 				stagger: 0.2,
 			});
@@ -201,7 +205,7 @@
 					scrub: true,
 					markers: false,
 				},
-				autoAlpha: 0.5,
+				autoAlpha: 1,
 				y: 100,
 				ease: 'circ.inOut',
 				stagger: 0.2,
@@ -215,7 +219,7 @@
 					scrub: true,
 					markers: false,
 				},
-				autoAlpha: 0,
+				autoAlpha: 1,
 				x: -40,
 				ease: 'circ.inOut',
 				stagger: 0.1,
@@ -389,9 +393,7 @@
 
 	<div class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
 		<div class="fromLeft relative col-span-2 row-span-2 grid items-end rounded-2xl md:col-span-1">
-			<div
-				class="a_bg-gradient-to-tr a_from-[#b5de6e] a_from-30% a_to-70% absolute h-96 w-full rounded-2xl border bg-base-100 to-[#f2ffac] shadow-xl">
-			</div>
+			<div class="absolute h-96 w-full rounded-2xl border bg-gradient-to-tr from-gray-300 to-base-100 shadow-xl"></div>
 			<figure>
 				<enhanced:img src={profilepic} alt="Doggo and I" class="z-20 scale-100 rounded-2xl" />
 			</figure>
@@ -490,76 +492,13 @@
 		-->
 		<div class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body">
-				<div class="mb-3 self-center"><PresentationStatsSvg /></div>
+				<enhanced:img src={calendarBriefcase3d} alt="" class="-mt-[10rem]" />
 				<h2>Career</h2>
-				<div class="cols-auto-cols grid justify-items-start divide-y-2 bg-base-100">
-					<div class="stat grid grid-cols-3 px-0">
-						<div class="col-span-2 text-3xl font-medium">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								class="icon icon-tabler icons-tabler-outline icon-tabler-code me-3 inline h-12 w-12 stroke-primary"
-								><path stroke="none" d="M0 0h24v24H0z" class="animate-stats" fill="none" /><path
-									class="animate-stats"
-									d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" class="animate-stats" /><path
-									d="M14 4l-4 16"
-									class="animate-stats" /></svg>
-							<div class="animate-stats inline-block">Tech</div>
-						</div>
-						<div class="animate-stats text-5xl font-bold text-primary">{percentMonthsTech}%</div>
-					</div>
-					<div class="stat grid grid-cols-3 px-0">
-						<div class="col-span-2 text-3xl font-medium">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								class="icon icon-tabler icons-tabler-outline icon-tabler-messages me-3 inline h-12 w-12 stroke-base-content stroke-primary"
-								><path stroke="none" class="animate-stats" d="M0 0h24v24H0z" fill="none" /><path
-									d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"
-									class="animate-stats" /><path
-									d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2"
-									class="animate-stats" /></svg>
-							<div class="animate-stats inline-block">Comms</div>
-						</div>
-						<div class="animate-stats text-5xl font-bold text-lime-500">{percentMonthsComms}%</div>
-					</div>
-
-					<div class="stat grid grid-cols-3 px-0">
-						<div class="col-span-2 text-3xl font-medium">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								class="icon icon-tabler icons-tabler-outline icon-tabler-file-text me-3 inline h-12 w-12 stroke-base-content stroke-primary"
-								><path stroke="none" d="M0 0h24v24H0z" fill="none" class="animate-stats" />
-								<g class="animate-stats">
-									<path d="M14 3v4a1 1 0 0 0 1 1h4" /><path
-										d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /></g>
-								<g class="animate-stats"><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></g></svg>
-							<div class="animate-stats inline-block">Policy</div>
-						</div>
-						<div class="animate-stats text-5xl font-bold text-lime-500">{percentMonthsPolicy}%</div>
-					</div>
-				</div>
 			</div>
 		</div>
 
 		<div
-			class="animate-tech-comms card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			class="animate-tech-comms card col-span-2 row-span-2 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body space-y-4">
 				<h3>Tech</h3>
 				<div>
@@ -602,7 +541,7 @@
 			</div>
 		</div>
 		<div
-			class="animate-tech-comms card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			class="animate-tech-comms card col-span-2 row-span-2 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body space-y-4">
 				<h3>Comms</h3>
 				<div>
@@ -644,7 +583,7 @@
 				<div class="item-start self-center"><ChatSvg /></div>
 			</div>
 		</div>
-		<div class="fromRight card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+		<div class="fromRight card col-span-2 row-span-2 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body space-y-4">
 				<h3>Policy</h3>
 				<div>
@@ -672,6 +611,77 @@
 				<TankSvg class="tank-svg" />
 			</div>
 		</div>
+		<div class="col-span-2 row-span-1 w-full space-y-4 md:col-span-1">
+			<div
+				class="fromLeft card col-span-2 row-span-1 w-full rounded-2xl border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+				<div class="px-4">
+					<div class="cols-auto-cols grid justify-items-start divide-y-2">
+						<div class="stat grid grid-cols-3 px-0">
+							<div class="col-span-2 text-3xl font-medium">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="icon icon-tabler icons-tabler-outline icon-tabler-code me-3 inline h-[1em] w-[1em]"
+									><path stroke="none" d="M0 0h24v24H0z" class="animate-stats" fill="none" /><path
+										class="animate-stats"
+										d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" class="animate-stats" /><path
+										d="M14 4l-4 16"
+										class="animate-stats" /></svg>
+								<div class="animate-stats inline-block">Tech</div>
+							</div>
+							<div class="animate-stats text-3xl font-bold">{percentMonthsTech}%</div>
+						</div>
+						<div class="stat grid grid-cols-3 px-0">
+							<div class="col-span-2 text-3xl font-medium">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="icon icon-tabler icons-tabler-outline icon-tabler-messages me-3 inline h-[1em] w-[1em] stroke-base-content"
+									><path stroke="none" class="animate-stats" d="M0 0h24v24H0z" fill="none" /><path
+										d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"
+										class="animate-stats" /><path
+										d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2"
+										class="animate-stats" /></svg>
+								<div class="animate-stats inline-block">Comms</div>
+							</div>
+							<div class="animate-stats text-3xl font-bold">{percentMonthsComms}%</div>
+						</div>
+
+						<div class="stat grid grid-cols-3 px-0">
+							<div class="col-span-2 text-3xl font-medium">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="icon icon-tabler icons-tabler-outline icon-tabler-file-text me-3 inline h-[1em] w-[1em] stroke-base-content"
+									><path stroke="none" d="M0 0h24v24H0z" fill="none" class="animate-stats" />
+									<g class="animate-stats">
+										<path d="M14 3v4a1 1 0 0 0 1 1h4" /><path
+											d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /></g>
+									<g class="animate-stats"><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></g></svg>
+								<div class="animate-stats inline-block">Policy</div>
+							</div>
+							<div class="animate-stats text-3xl font-bold">{percentMonthsPolicy}%</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- 
 			Break
 		-->
@@ -681,12 +691,8 @@
 		-->
 		<div class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
 			<div class="card-body space-y-4">
+				<enhanced:img src={hourglass3d} alt="" class="-mt-[10rem]" />
 				<h2>Side Projects</h2>
-				<div class="animate-terminal mockup-code">
-					<pre data-prefix=">"><code>npm install <span class="text-yellow-300">@sveltejs/kit astro</span></code></pre>
-					<pre data-prefix="$"><code>pip install <span class="text-yellow-300">Django</span></code></pre>
-					<pre data-prefix=">"><code>npm install <span class="text-yellow-300">tailwindcss htmx.org</span></code></pre>
-				</div>
 			</div>
 		</div>
 		<div
@@ -696,16 +702,7 @@
 					<div class="place-self-center pb-4">
 						<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude" /></a>
 					</div>
-					<p>
-						I made
-						<span class="text-primary"
-							><a href="https://titude.app/" class="font-bold text-primary underline hover:text-secondary">Apptitude</a
-							></span
-						>, which gives me a clear and convenient way to distribute guides, notes, links, YouTube, organized along
-						tech competencies to share with my non-technical teammates.
-					</p>
-					<p class="pb-4">Used JS objects in lieu of a DB/markdown.</p>
-					<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-2xl font-bold">
+					<div class="grid content-around gap-y-4 rounded-2xl bg-base-300 p-4 text-xl font-bold">
 						<div>
 							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
 								><g
@@ -738,10 +735,22 @@
 									d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
 									d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
 									d="M10 21v-2" /></svg
-							>Cloudflare Pages.
+							>Cloudflare Pages
 						</div>
 					</div>
+					<p class="px-2">
+						I made
+						<span class="text-primary"
+							><a href="https://titude.app/" class="font-bold text-primary underline hover:text-secondary">Apptitude</a
+							></span
+						>, which gives me a clear and convenient way to distribute guides, notes, links, YouTube, organized along
+						tech competencies to share with my non-technical teammates.
+					</p>
+
+					<p class="px-2">Used JS objects in lieu of a DB/markdown.</p>
 				</div>
+				<a href="https://titude.app/" class="btn btn-neutral mx-2 text-xl"
+					>Apptitude<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 			</div>
 		</div>
 		<div
@@ -752,15 +761,7 @@
 						<a href="https://appraize.zixian.dev/"
 							><h3 class="text-center text-6xl font-black text-purple-800">Appraize</h3></a>
 					</div>
-					<p>
-						<a href="https://appraize.zixian.dev/" class="font-bold text-primary underline hover:text-secondary"
-							>Appraize</a> makes ranking sessions easier via drag & drop.
-					</p>
-					<p class="pb-4">
-						Also comes with a mini dashboard, more responsive UI, db backend (Drizzle/Postgres), sessions, filters,
-						keyboard shortcut, csv file upload, form actions/validation.
-					</p>
-					<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-2xl font-bold">
+					<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-xl font-bold">
 						<div>
 							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
 								><g
@@ -793,27 +794,30 @@
 									d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
 									d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
 									d="M10 21v-2" /></svg
-							>Ubuntu, Nginx, Coolify, NodeJS, Postgres/Turso.
+							>Ubuntu, Nginx, Coolify, NodeJS, Postgres, Turso
 						</div>
 					</div>
+					<p class="px-2">
+						<a href="https://appraize.zixian.dev/" class="font-bold text-primary underline hover:text-secondary"
+							>Appraize</a> makes ranking sessions easier via drag & drop.
+					</p>
+					<p class="px-2">
+						Also comes with a mini dashboard, more responsive UI, db backend (Drizzle/Postgres), sessions, filters,
+						keyboard shortcut, csv file upload, form actions/validation.
+					</p>
 				</div>
+				<a href="https://appraize.zixian.dev/" class="btn btn-neutral mx-2 text-xl"
+					>Appraize<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 			</div>
 		</div>
 		<div
 			class="fromRight card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1">
 			<div class="group card-body grid items-center gap-y-5">
 				<div class="space-y-8">
-					<div class="flex h-56 justify-center pb-4">
+					<div class="flex justify-center">
 						<a href="https://app.zixian.dev/rank/"><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="" /></a>
 					</div>
-					<p>
-						<a href="https://app.zixian.dev/rank/" class="font-bold text-primary underline hover:text-secondary"
-							>Rank-a-mate</a> was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.
-					</p>
-					<p>
-						UX won't win any prizes, but it was easy to make and lightweight. HTMX and Sortable worked nicely together.
-					</p>
-					<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-2xl font-bold">
+					<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-xl font-bold">
 						<div>
 							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
 								><g
@@ -846,10 +850,17 @@
 									d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
 									d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
 									d="M10 21v-2" /></svg
-							>Ubuntu, Nginx, Gunicorn.
+							>Ubuntu, Nginx, Gunicorn
 						</div>
 					</div>
+					<p class="px-2">
+						<a href="https://app.zixian.dev/rank/" class="font-bold text-primary underline hover:text-secondary"
+							>Rank-a-mate</a> was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.
+					</p>
+					<p class="px-2">UX feels like a basic CRUD webapp, but I enjoyed HTMX and everything was lightweight.</p>
 				</div>
+				<a href="https://app.zixian.dev/rank/" class="btn btn-neutral mx-2 text-xl"
+					>Rank-a-Mate<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 			</div>
 		</div>
 
@@ -859,21 +870,10 @@
 				<div class="space-y-8">
 					<div class="avatar flex justify-center pb-4">
 						<div class="w-56 rounded-full">
-							<a href="https://app.zixian.dev/eatyourmeds/"
-								><img src={eatYourMedsLogo} alt="Eat Your Meds!" class="" /></a>
+							<a href="https://app.zixian.dev/eatyourmeds/"><img src={eatYourMedsLogo} alt="Eat Your Meds!" /></a>
 						</div>
 					</div>
-					<p>
-						<span class="font-bold text-primary underline hover:text-secondary"
-							><a href="https://app.zixian.dev/eatyourmeds/">Eat Your Medicine!</a></span>
-						was a try at planning dose timings and getting medicine info. It was tedious for both of us parents to record/coord
-						medicine stuff and sync with one another.
-					</p>
-					<p>
-						Used Django's class-based views for CRUD and auth, nearly everything built in. Sprinkled HTMX and
-						datepicker.js for user interactions.
-					</p>
-					<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-2xl font-bold">
+					<div class="grid content-around gap-y-4 rounded-2xl bg-base-300 p-4 text-xl font-bold">
 						<div>
 							<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
 								><g
@@ -906,10 +906,25 @@
 									d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
 									d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
 									d="M10 21v-2" /></svg
-							>Ubuntu, Nginx, Gunicorn.
+							>Ubuntu, Nginx, Gunicorn
 						</div>
 					</div>
 				</div>
+
+				<p class="px-2">
+					<span class="font-bold text-primary underline hover:text-secondary"
+						><a href="https://app.zixian.dev/eatyourmeds/">Eat Your Medicine!</a></span>
+					was a try at planning dose timings and getting medicine info. It was tedious for both of us parents to record/coord
+					medicine stuff and sync with one another.
+				</p>
+
+				<p class="px-2">
+					Used Django's class-based views for CRUD and auth, nearly everything built in. Sprinkled HTMX and
+					datepicker.js for user interactions.
+				</p>
+
+				<a href="https://app.zixian.dev/eatyourmeds/" class="btn btn-neutral mx-2 text-xl"
+					>Eat Your Meds!<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 			</div>
 		</div>
 		<div class="col-span-2 grid gap-7 md:col-span-3 md:grid-cols-2">
@@ -919,19 +934,7 @@
 						<div class="flex justify-center pb-4">
 							<a href="https://old.btonomics.com"><img src={oldBtonomicsLogo} alt="Old Btonomics.com" /></a>
 						</div>
-						<p>
-							I started
-							<span class="font-bold text-primary underline hover:text-secondary"
-								><a href="https://old.btonomics.com/">BTOnomics</a></span
-							>, a blog on home renovation in 2018. I used WordPress, with it being an obvious choice in 2018. The
-							Wordpress instance is kept as an archive now.
-						</p>
-						<p>
-							Experimented with content for SEO, themes/plug-ins, tweaking, getting perf hits, optimizing, then
-							installing more. Got good SEO by writing organic content that people wanted and good page load speeds, esp
-							TTFB/LCP/render-blocking.
-						</p>
-						<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-2xl font-bold">
+						<div class="grid content-around gap-y-4 rounded-2xl bg-base-300 p-4 text-xl font-bold">
 							<div>
 								<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
 									><g
@@ -964,30 +967,34 @@
 										d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
 										d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
 										d="M10 21v-2" /></svg
-								>Ubuntu, Nginx, PHP-FPM, Apache.
+								>Ubuntu, Nginx, PHP-FPM, Apache
 							</div>
 						</div>
+
+						<p class="px-2">
+							In 2018, I started
+							<span class="font-bold text-primary underline hover:text-secondary"
+								><a href="https://old.btonomics.com/">BTOnomics</a></span
+							>, a Wordpress blog on home renovation. WordPress was an obvious choice then and the instance is still
+							kept alive owing to nostalgia.
+						</p>
+
+						<p class="px-2">
+							Experimented with themes & plug-ins, tweaking, optimizing. Wrote organic content that people liked and cut
+							page load speeds, esp TTFB/LCP.
+						</p>
 					</div>
+					<a href="https://old.btonomics.com" class="btn btn-neutral mx-2 text-xl"
+						>Old Btonomics<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 				</div>
 			</div>
 			<div class="animate-btonomics card w-full border border-base-300 bg-base-100 shadow-xl">
 				<div class="group card-body grid items-center gap-y-5">
 					<div class="space-y-8">
-						<h3 class="pb-4 text-center text-6xl font-black text-[#38bdf8]">
+						<h3 class="pb-4 text-center text-4xl font-black text-base-content">
 							<a href="https://btonomics.com">BTOnomics v2</a>
 						</h3>
-						<p>
-							Migrated <span class="font-bold text-primary underline hover:text-secondary"
-								><a href="https://btonomics.com/">BTOnomics</a></span> to AstroJS, in part to see if it lives up to the hype.
-							Not disappointed. Chatgpt did the bulk of conversion of WordPress HTML to markdown, with a few hiccups here
-							and there.
-						</p>
-						<p>
-							Native markdown support, native view transitions, great image tools, really fast speeds. Haven't felt the
-							need to reach into Svelte or React.
-						</p>
-
-						<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-2xl font-bold">
+						<div class="grid content-around gap-y-4 rounded-2xl bg-base-300 p-4 text-xl font-bold">
 							<div>
 								<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
 									><g
@@ -1023,7 +1030,21 @@
 								>Cloudflare Pages
 							</div>
 						</div>
+
+						<p class="px-2">
+							Migrated <span class="font-bold text-primary underline hover:text-secondary"
+								><a href="https://btonomics.com/">BTOnomics</a></span> to AstroJS, in part to see if it lives up to the hype.
+							Not disappointed. I used ChatGPT to convert WordPress html/shortcode to markdown, which was smooth after a
+							few tries.
+						</p>
+
+						<p class="px-2">
+							Native markdown support, native view transitions, great image tools, really fast speeds. Haven't felt the
+							need to reach into Svelte or React.
+						</p>
 					</div>
+					<a href="https://btonomics.com" class="btn btn-neutral mx-2 text-xl"
+						>BTOnomics<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 				</div>
 			</div>
 		</div>
