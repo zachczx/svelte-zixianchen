@@ -37,145 +37,77 @@
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 		let tl = gsap.matchMedia();
-		const elLeft = document.getElementsByClassName('fromLeft');
-		const elRight = document.getElementsByClassName('fromRight');
-		const elBottom = document.getElementsByClassName('fromBottom');
-		const elAuto = document.getElementsByClassName('fromAuto');
+
 		tl.add('(min-width: 1028px)', () => {
-			/*for (let i = 0; i < elLeft.length; i++) {
-				gsap.from(elAuto[i], {
-					scrollTrigger: {
-						trigger: elAuto[i],
-						start: 'top center',
-						end: 'center center',
-						scrub: true,
-						markers: false
-					},
-					y: -100,
-					autoAlpha: 0.8,
-					ease: 'sine.out',
-					stagger: 0.05
-				});
-			}*/
-			/*gsap.from('.fromAuto', {
-				y: 100,
-				autoAlpha: 0.5,
-				duration: 0.5,
-				ease: 'sine.out',
-				stagger: 0.08
-			}); */
-
-			for (let i = 0; i < elLeft.length; i++) {
-				gsap.from(elLeft[i], {
-					scrollTrigger: {
-						trigger: elLeft[i],
-						start: 'top 80%',
-						end: 'center 60%',
-						scrub: true,
-						markers: false,
-					},
-					x: -100,
-					autoAlpha: 1,
-					duration: 1,
-					ease: 'circ.out',
-					delay: 0.3,
-					stagger: 0.3,
-				});
-			}
-
-			for (let i = 0; i < elRight.length; i++) {
-				gsap.from(elRight[i], {
-					scrollTrigger: {
-						trigger: elRight[i],
-						start: 'top 80%',
-						end: 'center 60%',
-						scrub: true,
-						markers: false,
-					},
-					x: 100,
-					autoAlpha: 1,
-					duration: 1,
-					ease: 'circ.out',
-					delay: 0.3,
-					stagger: 0.3,
-				});
-			}
-
-			/*  
-			For the middle cards 
-			*/
-
-			// For fromBottom
-			for (let i = 0; i < elBottom.length; i++) {
-				gsap.from(elBottom[i], {
-					scrollTrigger: {
-						trigger: elBottom[i],
-						start: 'top 80%',
-						end: 'center 70%',
-						scrub: true,
-						markers: false,
-					},
-					y: 70,
-					autoAlpha: 1,
-					ease: 'circ.out',
-				});
-			}
-
-			gsap.from('.animate-about-work', {
+			gsap.from('.animate-about-work-learned', {
 				scrollTrigger: {
-					trigger: '.animate-about-work',
+					trigger: '.animate-about-work-learned',
+					start: 'top 70%',
+					end: 'center 70%',
+					scrub: true,
+					markers: false,
+				},
+				y: 60,
+				autoAlpha: 1,
+				scale: 1,
+				ease: 'circ.out',
+				stagger: { each: 0.1, from: 'random' },
+			});
+			gsap.from('.animate-personal-education', {
+				scrollTrigger: {
+					trigger: '.animate-personal-education',
 					start: 'top 70%',
 					end: 'bottom 70%',
 					scrub: true,
 					markers: false,
 				},
-				y: 70,
+				y: 60,
 				autoAlpha: 1,
-				scale: 0.9,
+				scale: 1,
 				ease: 'circ.out',
-				stagger: { each: 0.5, from: 'end' },
+				stagger: { each: 0.1, from: 'random' },
 			});
 
-			gsap.from('.animate-tech-comms', {
+			gsap.from('.animate-tech-comms-policy', {
 				scrollTrigger: {
-					trigger: '.animate-tech-comms',
+					trigger: '.animate-tech-comms-policy',
 					start: 'top 80%',
 					end: 'center 70%',
 					scrub: true,
 					markers: false,
 				},
-				y: 70,
+				x: 60,
 				autoAlpha: 1,
 				ease: 'circ.out',
-				stagger: { each: 0.3, from: 'end' },
+				stagger: { each: 0.1, from: 'start' },
 			});
 
-			gsap.from('.animate-sveltekit', {
+			gsap.from('.animate-apptitude-appraize-rank', {
 				scrollTrigger: {
-					trigger: '.animate-sveltekit',
+					trigger: '.animate-apptitude-appraize-rank',
 					start: 'top 70%',
 					end: 'center 70%',
 					scrub: true,
 					markers: false,
 				},
-				y: 70,
+				x: -60,
 				autoAlpha: 1,
 				ease: 'circ.out',
-				stagger: 0.2,
+				stagger: { each: 0.2, from: 'end' },
 			});
 
-			gsap.from('.animate-btonomics', {
+			gsap.from('.animate-eat-btonomics', {
 				scrollTrigger: {
-					trigger: '.animate-btonomics',
+					trigger: '.animate-eat-btonomics',
 					start: 'top 70%',
 					end: 'center 70%',
 					scrub: true,
 					markers: false,
 				},
-				y: 70,
-				autoAlpha: 0.9,
+				x: -60,
+				autoAlpha: 1,
 				ease: 'circ.out',
-				stagger: 0.2,
+				stagger: { each: 0.2, from: 'start' },
 			});
 
 			/*  
@@ -324,6 +256,7 @@
 	const startWork = new Date(2013, 6, 1);
 	const startSdTech = new Date(2023, 12, 1);
 	const numMonthsTotal = getMonthsBetween(startWork, today, true);
+	const numYearsTotal = numMonthsTotal / 12;
 	const numMonthsSdTech = getMonthsBetween(startSdTech, today, true);
 	const percentMonthsTech = Math.round(((25 + 36 + numMonthsSdTech) / numMonthsTotal) * 100);
 	const percentMonthsComms = Math.round((37 / numMonthsTotal) * 100);
@@ -345,8 +278,7 @@
 			style="max-height: 60vh"
 			class="hidden pb-20 lg:flex"></spline-viewer> -->
 		<div class="">
-			<h1
-				class="montserrat text-center text-7xl leading-none tracking-tighter text-black lg:text-[10rem] xl:text-[11rem] 2xl:text-[11rem] min-[1921px]:text-[20rem]">
+			<h1 class="montserrat text-center text-7xl leading-none tracking-tighter text-black lg:text-9xl xl:text-[11rem]">
 				Zixian Chen
 			</h1>
 			<h2 class="custom-reveal-text montserrat mb-4 text-center text-3xl leading-none tracking-tighter lg:text-5xl">
@@ -392,18 +324,19 @@
 	</div>
 
 	<div class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
-		<div class="fromLeft relative col-span-2 row-span-2 grid items-end rounded-2xl md:col-span-1">
+		<div class="relative col-span-2 row-span-2 grid items-end rounded-2xl md:col-span-1">
 			<div class="absolute h-96 w-full rounded-2xl border bg-gradient-to-tr from-gray-300 to-base-100 shadow-xl"></div>
 			<figure>
 				<enhanced:img src={profilepic} alt="Doggo and I" class="z-20 scale-100 rounded-2xl" />
 			</figure>
 		</div>
 		<div
-			class="animate-about-work card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
-			<div class="card-body relative space-y-4">
-				<enhanced:img src={earth3d} alt="WWW" class="absolute -top-16 right-3" />
-				<h3>About</h3>
-				<div>
+			class="animate-about-work-learned card col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl lg:col-span-1">
+			<div class="card-body relative grid">
+				<enhanced:img src={earth3d} alt="WWW" class="absolute left-0 right-0 mx-auto -mt-[8rem] hidden md:flex" />
+
+				<div class="content-end space-y-4">
+					<h3>About</h3>
 					<p>
 						I <b>understand web tech</b>. I can go broad and deep for tech issues and technical stuff.
 					</p>
@@ -411,31 +344,33 @@
 			</div>
 		</div>
 		<div
-			class="animate-about-work card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
-			<div class="card-body relative space-y-4">
+			class="animate-about-work-learned card col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl lg:col-span-1">
+			<div class="card-body relative grid">
 				<enhanced:img
 					src={fireDynamicGradient}
 					alt="Flamethrower ideas"
-					class="absolute -top-10 right-0 scale-x-[-1]" />
-				<h3>Work</h3>
-				<div>
+					class="absolute -top-8 right-0 hidden md:flex lg:scale-x-[-1]" />
+
+				<div class="content-end space-y-4">
+					<h3>Work</h3>
 					<p>
-						I <span class="font-bold">challenge flawed tech policies</span> that are ineffective and archaic. I push to
-						<span class="font-bold">rewrite, not digitalize</span> poor biz requirements.
+						I <span class="font-bold">challenge flawed tech policies and business requirements</span> that are ineffective
+						and archaic.
 					</p>
 				</div>
 			</div>
 		</div>
-		<div class="fromRight card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
+		<div
+			class="animate-about-work-learned card col-span-2 w-full border border-gray-200 bg-base-100 shadow-xl lg:col-span-1">
 			<div class="card-body space-y-4">
-				<h3>Certifications</h3>
+				<h3>Learned</h3>
 				<div class="space-y-2">
-					<p>Learnt a bunch of stuff:</p>
-					<ul class="list ps-4">
+					<p>Studied some stuff:</p>
+					<ul class="list">
 						<li>
 							<a
 								href="https://www.coursera.org/account/accomplishments/specialization/D9EZKV26D69B"
-								class="text-primary underline hover:text-secondary">Meta Back-end Developer</a>
+								class="text-primary underline hover:text-secondary">Meta Back-end Dev</a>
 						</li>
 						<li>
 							<a
@@ -456,30 +391,27 @@
 				</div>
 			</div>
 		</div>
-		<div class="fromBottom card col-span-2 w-full border border-base-300 bg-base-100 shadow-xl">
+		<div class="animate-personal-education card col-span-2 w-full border border-gray-200 bg-base-100 shadow-xl">
 			<div>
 				<div class="flex justify-center"><enhanced:img src={sun3d} alt="Hobbies!" class="-mt-8" /></div>
 				<div class="card-body space-y-4">
 					<h3 class="-mt-20">Personal</h3>
 					<p>
-						I dabble in <b>webdev</b>, <b>stable diffusion</b> in my free time.
+						I dabble in <b>webdev</b>, <b>stable diffusion</b> in my free time. I enjoy listening to
+						<b>tech business</b> perspectives.
 					</p>
-					<p>
-						I enjoy listening to
-						<b>tech business</b> perspectives (shoutout All-In Podcast).
-					</p>
+					<p>Subscribed - All-In Podcast, Lenny's Podcast, Primeagen, Theo.</p>
 				</div>
 			</div>
 		</div>
 		<div
-			class="fromRight card col-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
+			class="animate-personal-education card col-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl lg:col-span-1">
 			<div class="card-body relative max-h-96 space-y-4">
 				<h3>Education</h3>
 				<p>
-					Studied <b>Political Science</b>. Loved comparative & money politics. Did a ton of int'l relations before I
-					got there.
+					Studied <b>Political Science</b>. Loved comparative & money politics. Did too much IR before I got there.
 				</p>
-				<enhanced:img src={school3d} alt="Studies" class="-mt-10" />
+				<enhanced:img src={school3d} alt="Studies" class="-mb-10" />
 			</div>
 		</div>
 
@@ -490,195 +422,59 @@
 		<!-- 
 			Break
 		-->
-		<div class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+		<div class="fromLeft card col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body">
-				<enhanced:img src={calendarBriefcase3d} alt="" class="-mt-[10rem]" />
+				<enhanced:img src={calendarBriefcase3d} alt="" class="" />
 				<h2>Career</h2>
+				<span class="ms-1 text-xl font-bold text-gray-500">({numYearsTotal} years)</span>
 			</div>
 		</div>
 
 		<div
-			class="animate-tech-comms card col-span-2 row-span-2 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			class="animate-tech-comms-policy card col-span-2 row-span-2 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body space-y-4">
-				<h3>Tech</h3>
+				<h3>Tech <span class="text-xl text-gray-500">({percentMonthsTech}%)</span></h3>
 				<div>
-					<h4>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="icon icon-tabler icons-tabler-outline icon-tabler-code inline h-8 w-8 stroke-primary pb-1"
-							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 8l-4 4l4 4" /><path
-								d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg
-						><span class="ps-2">Tech Infra Policy Team Lead</span>
-					</h4>
+					<h4>Tech Infra Policy Team Lead</h4>
 					<p>
 						Did policies, funding assessments for cloud, on-prem hosting, SG Tech Stack, toolchains and other infra.
 					</p>
 				</div>
 				<div>
-					<h4>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="icon icon-tabler icons-tabler-outline icon-tabler-code inline h-8 w-8 stroke-primary pb-1"
-							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 8l-4 4l4 4" /><path
-								d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg
-						><span class="ps-2">Comms Tech Team Lead</span>
-					</h4>
+					<h4>Comms Tech Team Lead</h4>
 					<p>Owned media analyst products. Led investments in NLP & CV research.</p>
 				</div>
 				<div class="flex items-center justify-center"><NetworkSvg /><NetworkSvg /></div>
 			</div>
 		</div>
 		<div
-			class="animate-tech-comms card col-span-2 row-span-2 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			class="animate-tech-comms-policy card col-span-2 row-span-2 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
 			<div class="card-body space-y-4">
-				<h3>Comms</h3>
+				<h3>Comms <span class="text-xl text-gray-500">({percentMonthsComms}%)</span></h3>
 				<div>
-					<h4>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="icon icon-tabler icons-tabler-outline icon-tabler-messages inline h-8 w-8 stroke-primary"
-							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-								d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" /><path
-								d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></svg
-						><span class="ps-2">Media Relations Officer</span>
-					</h4>
+					<h4>Media Relations Officer</h4>
 					<p>Managed media and collaborated on unpaid features of MINDEF & SAF.</p>
 				</div>
 				<div>
-					<h4>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="icon icon-tabler icons-tabler-outline icon-tabler-messages inline h-8 w-8 stroke-primary"
-							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-								d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" /><path
-								d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></svg
-						><span class="ps-2">Comms Strategist</span>
-					</h4>
+					<h4>Comms Strategist</h4>
 					<p>Crafted comms campaigns and strategies.</p>
 				</div>
 				<div class="item-start self-center"><ChatSvg /></div>
 			</div>
 		</div>
-		<div class="fromRight card col-span-2 row-span-2 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
-			<div class="card-body space-y-4">
-				<h3>Policy</h3>
+		<div
+			class="animate-tech-comms-policy card col-span-2 row-span-2 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1 md:row-span-1">
+			<div class="card-body mb-4 space-y-4">
+				<h3>Policy <span class="text-xl text-gray-500">({percentMonthsPolicy}%)<span></span></span></h3>
 				<div>
-					<h4>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="icon icon-tabler icons-tabler-outline icon-tabler-file-text inline h-8 w-8 stroke-primary"
-							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path
-								d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 9l1 0" /><path
-								d="M9 13l6 0" /><path d="M9 17l6 0" /></svg
-						><span class="ps-2">NS Policy Officer</span>
-					</h4>
+					<h4>NS Policy Officer</h4>
 					<p>Did NS policies for sportsmen, leave, citizenship, exit control. Worked in Committee to Strengthen NS.</p>
 				</div>
 			</div>
 			<div
-				class="flex h-28 items-end p-0"
+				class="flex h-36 items-end p-0"
 				style="background: url('/trees-tree-svgrepo-com.svg'); background-repeat: repeat-x; background-position: top">
 				<TankSvg class="tank-svg" />
-			</div>
-		</div>
-		<div class="col-span-2 row-span-1 w-full space-y-4 md:col-span-1">
-			<div
-				class="fromLeft card col-span-2 row-span-1 w-full rounded-2xl border border-base-300 bg-base-100 shadow-xl md:col-span-1">
-				<div class="px-4">
-					<div class="cols-auto-cols grid justify-items-start divide-y-2">
-						<div class="stat grid grid-cols-3 px-0">
-							<div class="col-span-2 text-3xl font-medium">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									class="icon icon-tabler icons-tabler-outline icon-tabler-code me-3 inline h-[1em] w-[1em]"
-									><path stroke="none" d="M0 0h24v24H0z" class="animate-stats" fill="none" /><path
-										class="animate-stats"
-										d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" class="animate-stats" /><path
-										d="M14 4l-4 16"
-										class="animate-stats" /></svg>
-								<div class="animate-stats inline-block">Tech</div>
-							</div>
-							<div class="animate-stats text-3xl font-bold">{percentMonthsTech}%</div>
-						</div>
-						<div class="stat grid grid-cols-3 px-0">
-							<div class="col-span-2 text-3xl font-medium">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									class="icon icon-tabler icons-tabler-outline icon-tabler-messages me-3 inline h-[1em] w-[1em] stroke-base-content"
-									><path stroke="none" class="animate-stats" d="M0 0h24v24H0z" fill="none" /><path
-										d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"
-										class="animate-stats" /><path
-										d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2"
-										class="animate-stats" /></svg>
-								<div class="animate-stats inline-block">Comms</div>
-							</div>
-							<div class="animate-stats text-3xl font-bold">{percentMonthsComms}%</div>
-						</div>
-
-						<div class="stat grid grid-cols-3 px-0">
-							<div class="col-span-2 text-3xl font-medium">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									class="icon icon-tabler icons-tabler-outline icon-tabler-file-text me-3 inline h-[1em] w-[1em] stroke-base-content"
-									><path stroke="none" d="M0 0h24v24H0z" fill="none" class="animate-stats" />
-									<g class="animate-stats">
-										<path d="M14 3v4a1 1 0 0 0 1 1h4" /><path
-											d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /></g>
-									<g class="animate-stats"><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></g></svg>
-								<div class="animate-stats inline-block">Policy</div>
-							</div>
-							<div class="animate-stats text-3xl font-bold">{percentMonthsPolicy}%</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 
@@ -689,14 +485,14 @@
 		<!-- 
 			Break
 		-->
-		<div class="fromLeft card col-span-2 row-span-1 w-full border border-base-300 bg-base-100 shadow-xl lg:col-span-1">
-			<div class="card-body space-y-4">
+		<div class="card z-10 col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl lg:col-span-1">
+			<div class="card-body space-y-4 px-6">
 				<enhanced:img src={hourglass3d} alt="" class="-mt-[10rem]" />
 				<h2>Side Projects</h2>
 			</div>
 		</div>
 		<div
-			class="animate-sveltekit card col-span-2 row-span-2 border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			class="animate-apptitude-appraize-rank card col-span-2 row-span-2 border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
 			<div class="group card-body grid items-center gap-y-5">
 				<div class="space-y-8">
 					<div class="place-self-center pb-4">
@@ -754,7 +550,7 @@
 			</div>
 		</div>
 		<div
-			class="animate-sveltekit card col-span-2 row-span-2 border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			class="animate-apptitude-appraize-rank card col-span-2 row-span-2 border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
 			<div class="group card-body grid items-center gap-y-5">
 				<div class="space-y-8">
 					<div class="place-self-center pb-4">
@@ -811,7 +607,7 @@
 			</div>
 		</div>
 		<div
-			class="fromRight card col-span-2 row-span-2 w-full overflow-hidden border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			class="animate-apptitude-appraize-rank card col-span-2 row-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
 			<div class="group card-body grid items-center gap-y-5">
 				<div class="space-y-8">
 					<div class="flex justify-center">
@@ -865,7 +661,7 @@
 		</div>
 
 		<div
-			class="fromLeft card card-side col-span-2 row-span-2 w-full border border-base-300 bg-base-100 shadow-xl md:col-span-1">
+			class="animate-eat-btonomics card card-side col-span-2 row-span-2 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
 			<div class="group card-body relative grid items-center gap-y-5">
 				<div class="space-y-8">
 					<div class="avatar flex justify-center pb-4">
@@ -928,7 +724,7 @@
 			</div>
 		</div>
 		<div class="col-span-2 grid gap-7 md:col-span-3 md:grid-cols-2">
-			<div class="animate-btonomics card w-full border border-base-300 bg-base-100 shadow-xl">
+			<div class="animate-eat-btonomics card w-full border border-gray-200 bg-base-100 shadow-xl">
 				<div class="group card-body grid items-center gap-y-5">
 					<div class="space-y-8">
 						<div class="flex justify-center pb-4">
@@ -988,7 +784,7 @@
 						>Old Btonomics<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 				</div>
 			</div>
-			<div class="animate-btonomics card w-full border border-base-300 bg-base-100 shadow-xl">
+			<div class="animate-eat-btonomics card w-full border border-gray-200 bg-base-100 shadow-xl">
 				<div class="group card-body grid items-center gap-y-5">
 					<div class="space-y-8">
 						<h3 class="pb-4 text-center text-4xl font-black text-base-content">

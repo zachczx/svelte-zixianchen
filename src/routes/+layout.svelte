@@ -17,8 +17,10 @@
 	});
 </script>
 
-<div class="spectrum-background min-h-dvh">
-	<slot />
+<div class="spectrum-background flex min-h-dvh justify-center">
+	<div class="max-w-screen-2xl">
+		<slot />
+	</div>
 </div>
 
 <style>
