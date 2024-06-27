@@ -4,17 +4,13 @@
 
 :root * {
 	font-family: 'Poppins', sans-serif;
-	overflow-x: clip;
+	/* overflow-x: clip; */
 }
 
 .montserrat {
 	font-family: 'Montserrat', sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 800;
-}
-
-section {
-	/* overflow: hidden;*/
 }
 
 @layer base {

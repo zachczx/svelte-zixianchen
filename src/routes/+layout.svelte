@@ -17,35 +17,9 @@
 	});
 </script>
 
-<div class="spectrum-background flex min-h-dvh justify-center">
-	<div class="max-w-screen-2xl">
-		<slot />
-	</div>
-</div>
+<slot />
 
 <style>
-	.spectrum-background {
-		/* 
-			https://www.schemecolor.com/pastel-green-yellow-and-red.php
-			https://mycolor.space/gradient3?ori=circle&hex=%23E0FFCC&hex2=%23FFF8B8&hex3=%23CAF2C2&submit=submit
-		
-		background-image: radial-gradient(
-			circle,
-			#e0ffcc,
-			#e5fec8,
-			#ebfdc3,
-			#f1fbbf,
-			#f7fabc,
-			#f5f9bb,
-			#f3f8ba,
-			#f1f7b9,
-			#e7f6ba,
-			#ddf5bd,
-			#d3f4bf,
-			#caf2c2
-		);*/
-		background-image: linear-gradient(to bottom, #fefefe, #ffe8ff, #ffcece, #ffca78, #d2de32);
-	}
 	@keyframes fade-in {
 		from {
 			opacity: 0;

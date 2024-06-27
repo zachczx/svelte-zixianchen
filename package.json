@@ -20,12 +20,14 @@
 		"@sveltejs/adapter-cloudflare": "^4.2.1",
 		"@sveltejs/kit": "^2.5.5",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
+		"@tailwindcss/typography": "^0.5.13",
 		"@types/eslint": "^8.56.0",
 		"autoprefixer": "^10.4.19",
 		"daisyui": "^4.10.1",
 		"eslint": "^9.5.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.36.0",
+		"mdsvex": "^0.11.2",
 		"postcss": "^8.4.38",
 		"prettier": "^3.2.5",
 		"prettier-plugin-svelte": "^3.2.2",
@@ -40,6 +42,7 @@
 	"dependencies": {
 		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/enhanced-img": "^0.3.0",
-		"gsap": "^3.12.5"
+		"gsap": "^3.12.5",
+		"shiki": "^1.9.1"
 	}
 }
