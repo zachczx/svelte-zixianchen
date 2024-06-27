@@ -1,6 +1,6 @@
 export async function load({ params }) {
 	let posts = [];
-	const paths = import.meta.glob('/src/posts/*.md', { eager: true });
+	const paths = import.meta.glob('./posts/*.md', { eager: true });
 
 	for (const path in paths) {
 		const file = paths[path];
