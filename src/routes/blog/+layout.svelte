@@ -15,7 +15,7 @@
 		</div>
 		<slot />
 	</div>
-	<div class="mt-auto pt-10 text-center">Copyright © 2024 Zixian Chen. All rights reserved.</div>
+	<div class="mt-auto pt-10 text-center text-xs md:text-sm">Copyright © 2024 Zixian Chen. All rights reserved.</div>
 </div>
 
 <style>
