@@ -4,27 +4,26 @@
 	import pill from '$lib/assets/pill.webp';
 	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=150';
 	import TablerLink from '$lib/svg/TablerLink.svelte';
-	import astronautGuitar from '$lib/assets/astronaut-guitar.webp';
-	import headphoneSquare from '$lib/assets/headphone-square.webp';
-	import money from '$lib/assets/money.webp';
-	import supercomputer from '$lib/assets/supercomputer.webp';
+
 	import TankSvg from '$lib/svg/TankSvg.svelte';
 	import treesvg from '$lib/svg/trees-tree-svgrepo-com.svg';
 	import NetworkSvg from '$lib/svg/NetworkSvg.svelte';
 	import ChatSvg from '$lib/svg/ChatSvg.svelte';
 	import PresentationStatsSvg from '$lib/svg/PresentationStatsSvg.svelte';
-	import www from '$lib/assets/www.webp';
-	import challenge from '$lib/assets/challenge.webp';
+	import versus from '$lib/assets/fightIronManCaptainAmerica.webp';
 	import selfSndgoPic from '$lib/assets/DSC03163.webp?enhanced&w=300;500;1000';
 	import eatYourMedsLogo from '$lib/assets/eatyourmedslogo.webp';
 	import oldBtonomicsLogo from '$lib/assets/btonomics_logo-3-300x100.webp';
-	import fireDynamicGradient from '$lib/assets/fire-dynamic-gradient.png?enhanced&w=150';
-	import sun3d from '$lib/assets/sun3d.webp?enhanced&w=300';
-	import notebook3d from '$lib/assets/notebook-dynamic-gradient.webp?enhanced&w=200';
+	import spotify from '$lib/assets/spotify.webp';
+	import courseraLogo from '$lib/assets/coursera-logo-full-rgb.png?enhanced&w=200';
+	import scrumAllianceLogo from '$lib/assets/scrumalliance.png?enhanced&w=200';
+
+	import sun3d from '$lib/assets/sun3d.webp?enhanced&w=350';
 	import school3d from '$lib/assets/school3d.webp?enhanced&w=500';
 	import earth3d from '$lib/assets/earth3d.webp?enhanced&w=200';
 	import calendarBriefcase3d from '$lib/assets/calendarBriefcase3d.webp?enhanced&w=500';
 	import hourglass3d from '$lib/assets/hourglass3d.webp?enhanced&w=500';
+	import Nav from '$lib/Nav.svelte';
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -39,123 +38,9 @@
 		let tl = gsap.matchMedia();
 
 		tl.add('(min-width: 1028px)', () => {
-			/* gsap.from('.animate-about-work-learned', {
-				scrollTrigger: {
-					trigger: '.animate-about-work-learned',
-					start: 'top 70%',
-					end: 'center 70%',
-					scrub: true,
-					markers: false,
-				},
-				y: 60,
-				autoAlpha: 1,
-				scale: 1,
-				ease: 'circ.out',
-				stagger: { each: 0.1, from: 'random' },
-			});
-			gsap.from('.animate-personal-education', {
-				scrollTrigger: {
-					trigger: '.animate-personal-education',
-					start: 'top 70%',
-					end: 'bottom 70%',
-					scrub: true,
-					markers: false,
-				},
-				y: 60,
-				autoAlpha: 1,
-				scale: 1,
-				ease: 'circ.out',
-				stagger: { each: 0.1, from: 'random' },
-			}); 
-
-			gsap.from('.animate-tech-comms-policy', {
-				scrollTrigger: {
-					trigger: '.animate-tech-comms-policy',
-					start: 'top 80%',
-					end: 'center 70%',
-					scrub: true,
-					markers: false,
-				},
-				x: 60,
-				autoAlpha: 1,
-				ease: 'circ.out',
-				stagger: { each: 0.1, from: 'start' },
-			});
-
-			gsap.from('.animate-apptitude-appraize-rank', {
-				scrollTrigger: {
-					trigger: '.animate-apptitude-appraize-rank',
-					start: 'top 70%',
-					end: 'center 70%',
-					scrub: true,
-					markers: false,
-				},
-				x: -60,
-				autoAlpha: 1,
-				ease: 'circ.out',
-				stagger: { each: 0.2, from: 'end' },
-			});
-
-			gsap.from('.animate-eat-btonomics', {
-				scrollTrigger: {
-					trigger: '.animate-eat-btonomics',
-					start: 'top 70%',
-					end: 'center 70%',
-					scrub: true,
-					markers: false,
-				},
-				x: -60,
-				autoAlpha: 1,
-				ease: 'circ.out',
-				stagger: { each: 0.2, from: 'start' },
-			});*/
-
 			/*  
 			For animation within cards
 			*/
-			gsap.from('.animate-terminal', {
-				scrollTrigger: {
-					trigger: '.animate-terminal',
-					start: 'bottom 80%',
-					end: 'center 70%',
-					scrub: true,
-					markers: false,
-				},
-				y: 50,
-				perspective: 900,
-				rotateX: 90,
-				autoAlpha: 0.5,
-				scale: 1.1,
-				ease: 'circ.inOut',
-			});
-
-			gsap.from('.animate-stats-icon', {
-				scrollTrigger: {
-					trigger: '.animate-stats-icon',
-					start: 'bottom 80%',
-					end: 'center 80%',
-					scrub: true,
-					markers: false,
-				},
-				autoAlpha: 1,
-				y: 100,
-				ease: 'circ.inOut',
-				stagger: 0.2,
-			});
-
-			gsap.from('.animate-stats', {
-				scrollTrigger: {
-					trigger: '.animate-stats',
-					start: 'top bottom',
-					end: 'top 70%',
-					scrub: true,
-					markers: false,
-				},
-				autoAlpha: 1,
-				x: -40,
-				ease: 'circ.inOut',
-				stagger: 0.1,
-			});
 
 			gsap.from('.animate-comms', {
 				scrollTrigger: {
@@ -171,22 +56,6 @@
 				stagger: 0.25,
 			});
 			//my original idea: transform:perspective(900px) rotateX(45deg);
-
-			gsap.from('.animate-logo', {
-				scrollTrigger: {
-					trigger: '.animate-logo',
-					start: 'bottom 80%',
-					end: 'center 70%',
-					scrub: true,
-					markers: false,
-				},
-				y: 50,
-				perspective: 900,
-				rotateX: 90,
-				autoAlpha: 0.7,
-				scale: 1.1,
-				ease: 'circ.out',
-			});
 		});
 		gsap.to('.tank-svg', {
 			scrollTrigger: {
@@ -263,71 +132,28 @@
 	const percentMonthsPolicy = Math.round((28 / numMonthsTotal) * 100);
 </script>
 
-<div class="spectrum-background flex min-h-dvh justify-center">
+<div class="spectrum-background grid min-h-dvh justify-items-center">
+	<Nav />
 	<div class="max-w-screen-2xl">
 		<section class="px-3 pb-2 pt-4">
-			<div class="flex justify-center space-x-3 lg:mb-14">
-				<!-- jam icons -->
-				<a href="https://www.linkedin.com/in/zixianchen/"
-					><svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-12 w-12 transition duration-500 ease-in-out hover:scale-[1.15] hover:fill-green-800"
-						viewBox="-2 -2 24 24"
-						><g
-							><path
-								d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457c-.592 0-.945.398-1.1.784c-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066c1.41 0 2.468.922 2.468 2.902M6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115c-.014-.632-.465-1.114-1.199-1.114m-1.086 9.556h2.144V8.38H5.127z" /><path
-								d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4" /></g
-						></svg
-					></a>
-				<a href="https://github.com/zachczx?tab=repositories"
-					><svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-12 w-12 transition duration-500 ease-in-out hover:scale-[1.15] hover:fill-green-800"
-						viewBox="-2 -2 24 24"
-						><g
-							><path
-								d="M8.18 15.008c.12 0 .211-.004.271-.012a.317.317 0 0 0 .18-.107c.06-.063.09-.154.09-.274l-.004-.557c-.003-.355-.004-.637-.004-.844l-.188.033a2.41 2.41 0 0 1-.455.028a3.498 3.498 0 0 1-.57-.057a1.276 1.276 0 0 1-.548-.246a1.04 1.04 0 0 1-.36-.503l-.082-.189a2.046 2.046 0 0 0-.258-.417a.989.989 0 0 0-.357-.312l-.057-.04a.602.602 0 0 1-.106-.1a.455.455 0 0 1-.074-.114c-.016-.038-.003-.07.04-.094a.533.533 0 0 1 .238-.037l.164.025c.11.021.245.087.406.196c.16.11.293.251.397.426c.126.224.277.395.455.512a.964.964 0 0 0 .536.176c.18 0 .336-.013.467-.04a1.63 1.63 0 0 0 .369-.124c.049-.365.182-.647.4-.843a5.61 5.61 0 0 1-.839-.148a3.346 3.346 0 0 1-.77-.32a2.204 2.204 0 0 1-.66-.548c-.174-.219-.317-.505-.43-.86a4.09 4.09 0 0 1-.167-1.229c0-.66.216-1.223.647-1.687c-.202-.497-.183-1.054.057-1.671c.159-.05.394-.013.705.11c.311.123.54.228.684.316c.145.087.26.16.348.22a5.814 5.814 0 0 1 1.573-.212c.54 0 1.065.07 1.573.213l.31-.197c.214-.13.465-.251.754-.36c.29-.11.511-.14.664-.09c.246.617.268 1.174.065 1.67c.432.465.648 1.027.648 1.688c0 .464-.056.875-.168 1.233c-.112.358-.257.644-.434.86a2.29 2.29 0 0 1-.664.545a3.342 3.342 0 0 1-.77.32a5.605 5.605 0 0 1-.84.147c.284.245.426.633.426 1.163v1.957c0 .093.014.168.041.226a.226.226 0 0 0 .131.119c.06.021.114.035.16.04c.047.006.113.009.2.009z" /><path
-								d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4" /></g
-						></svg
-					></a>
-				<a href="/blog">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="-2 -2 24 24"
-						class="h-12 w-12 transition duration-500 ease-in-out hover:scale-[1.15] hover:fill-green-800"
-						><g
-							><path
-								d="M5.024 12.655h3.92v1.887h-3.92zm5.881 0h3.918v1.887h-3.918zM5.021 8.881h9.802v1.887H5.021zm.003-3.774h5.881v1.887H5.024zm7.841 0h1.96v1.887h-1.96z" /><path
-								d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4" /></g
-						></svg
-					></a>
-			</div>
-			<div id="header" class="screen mb-8 grid items-end">
+			<div id="header" class="screen mb-8 grid content-center gap-y-10">
 				<div class="justify-self-center">
 					<enhanced:img
 						src={selfSndgoPic}
 						alt="Me"
-						class="mb-8 rounded-2xl"
+						class="rounded-2xl"
 						sizes="(min-width:1920px) 1000px, (min-width:1080px) 500px, (min-width:768px) 300px" />
 				</div>
-				<!-- <spline-viewer
-			loading-anim-type="spinner-big-dark"
-			url="https://prod.spline.design/UaBercf6C6N4dA9Z/scene.splinecode"
-			style="max-height: 60vh"
-			class="hidden pb-20 lg:flex"></spline-viewer> -->
-				<div class="mb-20 pb-28">
-					<h1
-						class="montserrat text-center text-7xl leading-none tracking-tighter text-black lg:text-9xl xl:text-[11rem]">
-						Zixian Chen
-					</h1>
-					<h2 class="custom-reveal-text montserrat mb-4 text-center text-3xl leading-none tracking-tighter lg:text-5xl">
+				<div class="lg:mb-20 lg:pb-28">
+					<h1 class=" text-center text-7xl leading-none tracking-tighter text-black lg:text-9xl">Hello, I'm Zixian.</h1>
+					<h2 class="custom-reveal-text mb-4 text-center text-2xl leading-none tracking-tighter lg:text-4xl">
 						<span>I bridge the gaps between public policy, business needs and tech solutions.</span>
 					</h2>
 				</div>
 			</div>
 
-			<div class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
-				<div class="relative col-span-2 row-span-2 grid items-end rounded-2xl md:col-span-1">
+			<div class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4" id="about">
+				<div class="relative col-span-2 row-span-1 grid items-end rounded-2xl md:col-span-1">
 					<div class="absolute h-96 w-full rounded-2xl border bg-gradient-to-tr from-gray-100 to-base-100 shadow-xl">
 					</div>
 					<figure>
@@ -336,10 +162,10 @@
 				</div>
 				<div
 					class="animate-about-work-learned card col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl lg:col-span-1">
-					<div class="card-body relative grid">
-						<enhanced:img src={earth3d} alt="WWW" class="absolute left-0 right-0 mx-auto -mt-[8rem] hidden md:flex" />
+					<div class="card-body grid justify-items-center">
+						<enhanced:img src={earth3d} alt="WWW" class="-mt-10 justify-self-center" />
 
-						<div class="content-end space-y-4">
+						<div class="space-y-4">
 							<h3>About</h3>
 							<p>
 								I <b>understand web tech</b>. I can go broad and deep for tech issues and technical stuff.
@@ -348,20 +174,25 @@
 					</div>
 				</div>
 				<div
-					class="animate-about-work-learned card col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl lg:col-span-1">
-					<div class="card-body relative grid">
-						<enhanced:img
-							src={fireDynamicGradient}
-							alt="Flamethrower ideas"
-							class="absolute -top-8 right-0 hidden md:flex lg:scale-x-[-1]" />
-
-						<div class="content-end space-y-4">
-							<h3>Work</h3>
-							<p>
-								I <span class="font-bold">challenge flawed tech policies and business requirements</span> that are ineffective
-								and archaic.
-							</p>
+					class="animate-about-work-learned card col-span-2 row-span-1 min-h-48 w-full border border-gray-200 bg-[#57262D] bg-base-100 shadow-xl lg:col-span-1"
+					style="background-image: url({versus}); background-size: cover; background-position: center">
+					<div class="card-body grid pb-0">
+						<div>
+							<h3 class="text-center text-base-100">Work</h3>
 						</div>
+						<div class="mb-6 self-end">
+							<p class="text-center text-base-100">I fight bad policies & business requirements.</p>
+						</div>
+					</div>
+				</div>
+				<div
+					class="animate-personal-education card col-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl lg:col-span-1">
+					<div class="card-body relative max-h-96 space-y-4">
+						<h3>Education</h3>
+						<p>
+							Studied <b>Political Science</b>. Loved comparative & money politics. Did too much IR before I got there.
+						</p>
+						<enhanced:img src={school3d} alt="Studies" class="-mb-10" />
 					</div>
 				</div>
 				<div
@@ -369,7 +200,6 @@
 					<div class="card-body space-y-4">
 						<h3>Learned</h3>
 						<div class="space-y-2">
-							<p>Studied some stuff:</p>
 							<ul class="list">
 								<li>
 									<a
@@ -393,31 +223,39 @@
 								</li>
 							</ul>
 						</div>
-					</div>
-				</div>
-				<div class="animate-personal-education card col-span-2 w-full border border-gray-200 bg-base-100 shadow-xl">
-					<div>
-						<div class="flex justify-center">
-							<enhanced:img src={sun3d} alt="Hobbies!" class="-mt-8" />
-						</div>
-						<div class="card-body space-y-4">
-							<h3 class="-mt-20">Personal</h3>
-							<p>
-								I dabble in <b>webdev</b>, <b>stable diffusion</b> in my free time. I enjoy listening to
-								<b>tech business</b> perspectives.
-							</p>
-							<p>Subscribed - All-In Podcast, Lenny's Podcast, Primeagen, Theo.</p>
+						<div class="pt-8">
+							<enhanced:img src={courseraLogo} alt="" />
+							<enhanced:img src={scrumAllianceLogo} alt="" class="ms-10" />
 						</div>
 					</div>
 				</div>
 				<div
-					class="animate-personal-education card col-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl lg:col-span-1">
-					<div class="card-body relative max-h-96 space-y-4">
-						<h3>Education</h3>
+					class="animate-personal-education card col-span-2 grid w-full grid-cols-2 border border-gray-200 bg-base-100 shadow-xl">
+					<div class="card-body space-y-4 self-center">
+						<h3 class="">Interests</h3>
 						<p>
-							Studied <b>Political Science</b>. Loved comparative & money politics. Did too much IR before I got there.
+							I dabble in <b>webdev</b>, <b>stable diffusion</b> in my free time. I like hearing about the
+							<b>business side of tech</b>.
 						</p>
-						<enhanced:img src={school3d} alt="Studies" class="-mb-10" />
+					</div>
+					<div class="self-center">
+						<enhanced:img src={sun3d} alt="Hobbies!" class="" />
+					</div>
+				</div>
+				<div
+					class="animate-personal-education card col-span-2 grid w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1"
+					style="background-image: url({spotify}); background-size: 190%; background-repeat: no-repeat; background-position: left 60%">
+					<div>
+						<div class="card-body space-y-4">
+							<h3 class="text-base-100">Playlist</h3>
+							<ul class="text-xl text-base-100">
+								<li>All-In Podcast</li>
+								<li>Lenny's Podcast</li>
+								<li>Primeagen</li>
+								<li>Theo</li>
+								<li>Syntax</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 
@@ -429,7 +267,8 @@
 			Break
 		-->
 				<div
-					class="fromLeft card col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
+					class="fromLeft card col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1"
+					id="career">
 					<div class="card-body">
 						<enhanced:img src={calendarBriefcase3d} alt="" class="" />
 						<h2>Career</h2>
@@ -494,7 +333,9 @@
 				<!-- 
 			Break
 		-->
-				<div class="card z-10 col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl lg:col-span-1">
+				<div
+					class="card z-10 col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl lg:col-span-1"
+					id="side">
 					<div class="card-body space-y-4 px-6">
 						<enhanced:img src={hourglass3d} alt="" class="-mt-[10rem]" />
 						<h2>Side Projects</h2>
@@ -943,13 +784,13 @@
 
 	@media only screen and (min-width: 1024px) {
 		.custom-reveal-text span {
-			animation-range-start: cover 20vh;
+			animation-range-start: cover 30vh;
 			animation-range-end: cover 40vh;
 		}
 	}
 	@media only screen and (min-width: 1600px) {
 		.custom-reveal-text span {
-			animation-range-start: cover 20vh;
+			animation-range-start: cover 30vh;
 			animation-range-end: cover 40vh;
 		}
 	}
