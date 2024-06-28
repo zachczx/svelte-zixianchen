@@ -7,7 +7,6 @@
 
 	import TankSvg from '$lib/svg/TankSvg.svelte';
 	import treesvg from '$lib/svg/trees-tree-svgrepo-com.svg';
-	import NetworkSvg from '$lib/svg/NetworkSvg.svelte';
 	import ChatSvg from '$lib/svg/ChatSvg.svelte';
 	import PresentationStatsSvg from '$lib/svg/PresentationStatsSvg.svelte';
 	import versus from '$lib/assets/fightIronManCaptainAmerica.webp';
@@ -20,6 +19,7 @@
 	import server from '$lib/assets/server.webp';
 	import programming from '$lib/assets/programming.webp?enhanced&w=800';
 	import study from '$lib/assets/study.webp?enhanced&w=500';
+	import chat from '$lib/assets/chat.webp?enhanced&w=500';
 
 	import sun3d from '$lib/assets/sun3d.webp?enhanced&w=600';
 	import school3d from '$lib/assets/school3d.webp?enhanced&w=500';
@@ -72,23 +72,6 @@
 			scale: 0.5,
 			ease: 'circ.out',
 		});
-
-		const networkSvg = document.getElementsByClassName('network-child');
-		for (let i = 0; i < networkSvg.length; i++) {
-			gsap.from(networkSvg[i], {
-				scrollTrigger: {
-					trigger: networkSvg[i],
-					start: 'top 80%',
-					end: 'center 70%',
-					scrub: true,
-					markers: false,
-				},
-				y: 300,
-				autoAlpha: 0.8,
-				ease: 'circ.out',
-				stagger: 0.5,
-			});
-		}
 	});
 
 	//////////////////////////////////
@@ -139,7 +122,7 @@
 	<Nav />
 	<div class="max-w-screen-2xl">
 		<section class="px-3 pb-2 pt-4">
-			<div id="header" class="screen mb-8 grid content-center gap-y-10">
+			<div id="header" class="screen mb-1 grid content-center gap-y-10">
 				<div class="justify-self-center">
 					<enhanced:img
 						src={selfSndgoPic}
@@ -193,7 +176,8 @@
 					<div class="card-body relative max-h-96 space-y-4">
 						<h3>Education</h3>
 						<p>
-							Studied <b>Political Science</b>. Loved comparative & money politics. Did too much IR before I got there.
+							Studied <b>Political Science</b>. Loved comparative & money politics. Wish I could undo all the IR I did
+							prior.
 						</p>
 						<enhanced:img src={study} alt="Studies" class="-mb-6" />
 					</div>
@@ -203,7 +187,7 @@
 					<div class="card-body space-y-4">
 						<h3>Certs</h3>
 						<div class="space-y-2 pt-2">
-							<ul class="space-y-8">
+							<ul class="space-y-6">
 								<li class="">
 									<a
 										href="https://www.coursera.org/account/accomplishments/specialization/D9EZKV26D69B"
@@ -236,19 +220,23 @@
 				<div
 					class="animate-personal-education card col-span-2 grid w-full grid-cols-2 overflow-hidden border border-gray-200 bg-base-100 shadow-xl">
 					<div class="card-body space-y-4 self-center">
-						<h3 class="">Interests</h3>
+						<h3>Interests</h3>
 						<p class="z-10">
-							I do <b>webdev</b>, <b>stable diffusion</b> in my free time. I like the
+							I do <b>webdev</b>, <b>stable diffusion</b> in my free time. Started webdev in 2000s in the era of xhtml &
+							php4.
+						</p>
+						<p>
+							I like the
 							<b>business side of tech</b>.
 						</p>
 					</div>
 					<div class="self-center">
-						<enhanced:img src={programming} alt="" class="scale-125" />
+						<enhanced:img src={programming} alt="" class="translate-x-16 scale-150" />
 					</div>
 				</div>
 				<!-- bg-[#57262D] -->
 				<div
-					class="animate-personal-education card relative col-span-2 grid w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
+					class="animate-personal-education card relative col-span-2 grid w-full overflow-hidden border border-gray-200 bg-gradient-to-tl from-base-100 to-gray-50 shadow-xl md:col-span-1">
 					<div>
 						<div class="card-body grid h-full content-center space-y-4">
 							<h3 class="">Playlist</h3>
@@ -259,7 +247,7 @@
 								<li>Theo</li>
 								<li>Syntax</li>
 							</ul>
-							<enhanced:img src={spotify} alt="" class="absolute -right-40 top-10" />
+							<enhanced:img src={spotify} alt="" class="absolute -bottom-20 -right-40 lg:bottom-0 lg:top-40" />
 						</div>
 					</div>
 				</div>
@@ -286,6 +274,10 @@
 					<div class="card-body space-y-4">
 						<h3>Tech <span class="text-xl text-gray-500">({percentMonthsTech}%)</span></h3>
 						<div>
+							<h4>Service Delivery Tech Team Lead</h4>
+							<p>Manage products and give assessments for tech service delivery projects.</p>
+						</div>
+						<div>
 							<h4>Tech Infra Policy Team Lead</h4>
 							<p>
 								Did policies, funding assessments for cloud, on-prem hosting, SG Tech Stack, toolchains and other infra.
@@ -295,11 +287,10 @@
 							<h4>Comms Tech Team Lead</h4>
 							<p>Owned media analyst products. Led investments in NLP & CV research.</p>
 						</div>
-						<div class="flex items-center justify-center"><NetworkSvg /><NetworkSvg /></div>
 					</div>
 				</div>
 				<div
-					class="animate-tech-comms-policy card col-span-2 row-span-2 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
+					class="animate-tech-comms-policy card col-span-2 row-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
 					<div class="card-body space-y-4">
 						<h3>Comms <span class="text-xl text-gray-500">({percentMonthsComms}%)</span></h3>
 						<div>
@@ -310,8 +301,8 @@
 							<h4>Comms Strategist</h4>
 							<p>Crafted comms campaigns and strategies.</p>
 						</div>
-						<div class="item-start self-center"><ChatSvg /></div>
 					</div>
+					<enhanced:img src={chat} alt="" class="-mb-28 -translate-y-10" />
 				</div>
 				<div
 					class="animate-tech-comms-policy card col-span-2 row-span-2 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1 md:row-span-1">
