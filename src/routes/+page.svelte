@@ -14,11 +14,14 @@
 	import selfSndgoPic from '$lib/assets/DSC03163.webp?enhanced&w=300;500;1000';
 	import eatYourMedsLogo from '$lib/assets/eatyourmedslogo.webp';
 	import oldBtonomicsLogo from '$lib/assets/btonomics_logo-3-300x100.webp';
-	import spotify from '$lib/assets/spotify.webp';
+	import spotify from '$lib/assets/spotify.webp?enhanced&w=300';
 	import courseraLogo from '$lib/assets/coursera-logo-full-rgb.png?enhanced&w=200';
 	import scrumAllianceLogo from '$lib/assets/scrumalliance.png?enhanced&w=200';
+	import server from '$lib/assets/server.webp';
+	import programming from '$lib/assets/programming.webp?enhanced&w=800';
+	import study from '$lib/assets/study.webp?enhanced&w=500';
 
-	import sun3d from '$lib/assets/sun3d.webp?enhanced&w=350';
+	import sun3d from '$lib/assets/sun3d.webp?enhanced&w=600';
 	import school3d from '$lib/assets/school3d.webp?enhanced&w=500';
 	import earth3d from '$lib/assets/earth3d.webp?enhanced&w=200';
 	import calendarBriefcase3d from '$lib/assets/calendarBriefcase3d.webp?enhanced&w=500';
@@ -153,22 +156,22 @@
 			</div>
 
 			<div class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4" id="about">
-				<div class="relative col-span-2 row-span-1 grid items-end rounded-2xl md:col-span-1">
-					<div class="absolute h-96 w-full rounded-2xl border bg-gradient-to-tr from-gray-100 to-base-100 shadow-xl">
-					</div>
+				<!-- <div class="relative col-span-2 row-span-1 grid items-end rounded-2xl md:col-span-1">
+					<div class="absolute h-full w-full rounded-2xl border bg-base-100 shadow-xl"></div>
 					<figure>
 						<enhanced:img src={profilepic} alt="Doggo and I" class="z-20 scale-100 rounded-2xl" />
 					</figure>
-				</div>
+				</div> -->
 				<div
-					class="animate-about-work-learned card col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl lg:col-span-1">
-					<div class="card-body grid justify-items-center">
-						<enhanced:img src={earth3d} alt="WWW" class="-mt-10 justify-self-center" />
-
-						<div class="space-y-4">
+					class="animate-about-work-learned card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl lg:col-span-2"
+					style="background-image: url({server}); background-size: 120%; background-position: right">
+					<div class="card-body grid h-full grid-cols-2 justify-items-center">
+						<div></div>
+						<div class="space-y-4 self-center text-base-100">
 							<h3>About</h3>
 							<p>
-								I <b>understand web tech</b>. I can go broad and deep for tech issues and technical stuff.
+								I understand <b>tech, the web, computers</b>. I go broad and deep into technical details, no matter if
+								they're meta frameworks or cpu coolers.
 							</p>
 						</div>
 					</div>
@@ -192,34 +195,35 @@
 						<p>
 							Studied <b>Political Science</b>. Loved comparative & money politics. Did too much IR before I got there.
 						</p>
-						<enhanced:img src={school3d} alt="Studies" class="-mb-10" />
+						<enhanced:img src={study} alt="Studies" class="-mb-6" />
 					</div>
 				</div>
 				<div
 					class="animate-about-work-learned card col-span-2 w-full border border-gray-200 bg-base-100 shadow-xl lg:col-span-1">
 					<div class="card-body space-y-4">
-						<h3>Learned</h3>
-						<div class="space-y-2">
-							<ul class="list">
-								<li>
+						<h3>Certs</h3>
+						<div class="space-y-2 pt-2">
+							<ul class="space-y-8">
+								<li class="">
 									<a
 										href="https://www.coursera.org/account/accomplishments/specialization/D9EZKV26D69B"
-										class="text-primary underline hover:text-secondary">Meta Back-end Dev</a>
+										class="rounded-full bg-red-300 px-4 py-2 hover:bg-red-500 hover:text-base-100">Meta Back-end Dev</a>
 								</li>
 								<li>
 									<a
 										href="https://www.coursera.org/account/accomplishments/specialization/certificate/MVCFEP4ZHVSV"
-										class="text-primary underline hover:text-secondary">AWS Fundamentals</a>
+										class="rounded-full bg-red-300 px-4 py-2 hover:bg-red-500 hover:text-base-100">AWS Fundamentals</a>
 								</li>
 								<li>
 									<a
 										href="https://www.credly.com/badges/369dd8b6-19bd-45ba-8272-2b997111c2b7/linked_in_profile"
-										class="text-primary underline hover:text-secondary">Google UX</a>
+										class="rounded-full bg-red-300 px-4 py-2 hover:bg-red-500 hover:text-base-100">Google UX</a>
 								</li>
 								<li>
 									<a
 										href="https://bcert.me/bc/html/show-badge.html?b=twwbrxwh"
-										class="text-primary underline hover:text-secondary">Certified ScrumMaster</a>
+										class="rounded-full bg-red-300 px-4 py-2 hover:bg-red-500 hover:text-base-100"
+										>Certified ScrumMaster</a>
 								</li>
 							</ul>
 						</div>
@@ -230,31 +234,32 @@
 					</div>
 				</div>
 				<div
-					class="animate-personal-education card col-span-2 grid w-full grid-cols-2 border border-gray-200 bg-base-100 shadow-xl">
+					class="animate-personal-education card col-span-2 grid w-full grid-cols-2 overflow-hidden border border-gray-200 bg-base-100 shadow-xl">
 					<div class="card-body space-y-4 self-center">
 						<h3 class="">Interests</h3>
-						<p>
-							I dabble in <b>webdev</b>, <b>stable diffusion</b> in my free time. I like hearing about the
+						<p class="z-10">
+							I do <b>webdev</b>, <b>stable diffusion</b> in my free time. I like the
 							<b>business side of tech</b>.
 						</p>
 					</div>
 					<div class="self-center">
-						<enhanced:img src={sun3d} alt="Hobbies!" class="" />
+						<enhanced:img src={programming} alt="" class="scale-125" />
 					</div>
 				</div>
+				<!-- bg-[#57262D] -->
 				<div
-					class="animate-personal-education card col-span-2 grid w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1"
-					style="background-image: url({spotify}); background-size: 190%; background-repeat: no-repeat; background-position: left 60%">
+					class="animate-personal-education card relative col-span-2 grid w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
 					<div>
-						<div class="card-body space-y-4">
-							<h3 class="text-base-100">Playlist</h3>
-							<ul class="text-xl text-base-100">
+						<div class="card-body grid h-full content-center space-y-4">
+							<h3 class="">Playlist</h3>
+							<ul class="list text-xl">
 								<li>All-In Podcast</li>
 								<li>Lenny's Podcast</li>
 								<li>Primeagen</li>
 								<li>Theo</li>
 								<li>Syntax</li>
 							</ul>
+							<enhanced:img src={spotify} alt="" class="absolute -right-40 top-10" />
 						</div>
 					</div>
 				</div>
