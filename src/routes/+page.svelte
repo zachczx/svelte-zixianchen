@@ -124,7 +124,7 @@
 				<div class="xl:mb-20 xl:pb-28">
 					<h1 class=" text-center text-7xl leading-none tracking-tighter text-black xl:text-9xl">Hello, I'm Zixian.</h1>
 					<h2 class="custom-reveal-text mb-4 text-center text-2xl leading-none tracking-tighter xl:text-4xl">
-						<span>I bridge the gaps between public policy, business needs and tech solutions.</span>
+						<span>I'm a civil servant trying to close gaps between policy, business needs, tech.</span>
 					</h2>
 				</div>
 			</div>
@@ -257,7 +257,7 @@
 				<div
 					class="card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1"
 					id="career">
-					<ResumeBro class="-mb-10 " />
+					<ResumeBro class="-mb-10" />
 					<div class="card-body">
 						<h2>Career</h2>
 					</div>
@@ -574,6 +574,9 @@
 	.list li::before {
 		content: '🔥';
 		padding-right: 0.4rem;
+	}
+	#navbar {
+		view-transition-name: navbar;
 	}
 	/* for other stuff */
 	/* .overlay::before {
