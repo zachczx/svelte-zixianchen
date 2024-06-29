@@ -1,5 +1,5 @@
 <div
-	class="grid h-16 w-full grid-cols-2 justify-center border-b border-b-gray-200 bg-[#FFFAFA] px-4 lg:mb-14 lg:grid-cols-3"
+	class="z-30 grid h-16 w-full grid-cols-2 justify-center border-b border-b-gray-200 bg-white/75 px-4 backdrop-blur-md lg:sticky lg:top-0 lg:mb-14 lg:grid-cols-3"
 	id="navbar">
 	<div class="flex items-center">
 		<span class="text-2xl font-extrabold text-gray-600"><a href="/">Zixian Chen</a></span>
