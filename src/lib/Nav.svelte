@@ -1,8 +1,8 @@
 <div
-	class="z-30 grid h-16 w-full grid-cols-2 justify-center border-b border-b-gray-200 bg-white/75 px-4 backdrop-blur-md lg:sticky lg:top-0 lg:mb-14 lg:grid-cols-3"
+	class="z-30 grid h-16 w-full grid-cols-2 justify-center border-b border-b-gray-200 bg-white/50 px-4 backdrop-blur-md lg:sticky lg:top-0 lg:mb-14 lg:grid-cols-3"
 	id="navbar">
 	<div class="flex items-center">
-		<span class="text-2xl font-extrabold text-gray-600"><a href="/">Zixian Chen</a></span>
+		<span class="text-2xl font-extrabold text-base-content hover:drop-shadow"><a href="/">Zixian Chen</a></span>
 	</div>
 	<div class="hidden items-center justify-center space-x-8 lg:flex">
 		<a href="/#about" class="btn btn-link text-xl font-medium text-base-content no-underline hover:no-underline"
@@ -17,7 +17,7 @@
 		<a href="https://www.linkedin.com/in/zixianchen/"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="h-6 w-6 transition duration-500 ease-in-out hover:scale-[1.15] lg:h-10 lg:w-10"
+				class="h-6 w-6 fill-base-content transition duration-500 ease-in-out hover:scale-[1.15] lg:h-10 lg:w-10"
 				viewBox="-2 -2 24 24"
 				><g
 					><path
@@ -28,7 +28,7 @@
 		<a href="https://github.com/zachczx?tab=repositories"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="h-6 w-6 transition duration-500 ease-in-out hover:scale-[1.15] lg:h-10 lg:w-10"
+				class="h-6 w-6 fill-base-content transition duration-500 ease-in-out hover:scale-[1.15] lg:h-10 lg:w-10"
 				viewBox="-2 -2 24 24"
 				><g
 					><path
@@ -40,7 +40,7 @@
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="-2 -2 24 24"
-				class="h-6 w-6 transition duration-500 ease-in-out hover:scale-[1.15] lg:h-10 lg:w-10"
+				class="h-6 w-6 fill-base-content transition duration-500 ease-in-out hover:scale-[1.15] lg:h-10 lg:w-10"
 				><g
 					><path
 						d="M5.024 12.655h3.92v1.887h-3.92zm5.881 0h3.918v1.887h-3.918zM5.021 8.881h9.802v1.887H5.021zm.003-3.774h5.881v1.887H5.024zm7.841 0h1.96v1.887h-1.96z" /><path
