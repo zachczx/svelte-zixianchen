@@ -19,7 +19,12 @@
 	import server from '$lib/assets/server.webp';
 	import programming from '$lib/assets/programming.webp?enhanced&w=800';
 	import study from '$lib/assets/study.webp?enhanced&w=500';
-	import chat from '$lib/assets/chat.webp?enhanced&w=500';
+
+	import TextingBro from '$lib/svg/Texting-bro.svelte';
+	import lego from '$lib/assets/lego-2539844.webp';
+	import ResumeBro from '$lib/svg/Resume-bro.svelte';
+
+	import Stack from '$lib/svg/Stack.svelte';
 
 	import sun3d from '$lib/assets/sun3d.webp?enhanced&w=600';
 	import school3d from '$lib/assets/school3d.webp?enhanced&w=500';
@@ -185,7 +190,7 @@
 				<div
 					class="animate-about-work-learned card col-span-2 w-full border border-gray-200 bg-base-100 shadow-xl lg:col-span-1">
 					<div class="card-body space-y-4">
-						<h3>Certs</h3>
+						<h3>Upgrades</h3>
 						<div class="space-y-2 pt-2">
 							<ul class="space-y-6">
 								<li class="">
@@ -245,7 +250,9 @@
 								<li>Lenny's Podcast</li>
 								<li>Primeagen</li>
 								<li>Theo</li>
+								<li>Fireship</li>
 								<li>Syntax</li>
+								<li>Olivio Sarikas</li>
 							</ul>
 							<enhanced:img src={spotify} alt="" class="absolute -bottom-20 -right-40 lg:bottom-0 lg:top-40" />
 						</div>
@@ -260,37 +267,46 @@
 			Break
 		-->
 				<div
-					class="fromLeft card col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1"
+					class="card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl md:col-span-1"
 					id="career">
+					<ResumeBro class="-mb-10 " />
 					<div class="card-body">
-						<enhanced:img src={calendarBriefcase3d} alt="" class="" />
 						<h2>Career</h2>
-						<span class="ms-1 text-xl font-bold text-gray-500">({numYearsTotal} years)</span>
 					</div>
 				</div>
-
 				<div
-					class="animate-tech-comms-policy card col-span-2 row-span-2 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
-					<div class="card-body space-y-4">
-						<h3>Tech <span class="text-xl text-gray-500">({percentMonthsTech}%)</span></h3>
+					class="card col-span-2 h-full min-h-96 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-3"
+					style="background: url({lego}); background-position: center 10%">
+					<div class="relative h-full w-full rounded-xl bg-black opacity-[0.3]"></div>
+					<div class="absolute left-0 right-0 top-14 mx-auto text-center text-2xl text-base-100">
+						I've worked for {numYearsTotal} years in the public service. Here's a breakdown.
+					</div>
+				</div>
+				<div
+					class="card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl md:col-span-2">
+					<div class="card-body z-20 grid grid-cols-1 content-start gap-x-8 space-y-4 md:grid-cols-3">
+						<h3 class="col-span-1 md:col-span-3">
+							Tech <span class="text-xl text-gray-500">({percentMonthsTech}%)</span>
+						</h3>
 						<div>
 							<h4>Service Delivery Tech Team Lead</h4>
-							<p>Manage products and give assessments for tech service delivery projects.</p>
+							<p>Manage products, tech consultancy for citizen & employee services.</p>
 						</div>
 						<div>
 							<h4>Tech Infra Policy Team Lead</h4>
-							<p>
-								Did policies, funding assessments for cloud, on-prem hosting, SG Tech Stack, toolchains and other infra.
-							</p>
+							<p>Policies & funding for cloud, on-prem hosting, SG Tech Stack, endpoint devices, dev toolchains.</p>
 						</div>
 						<div>
 							<h4>Comms Tech Team Lead</h4>
-							<p>Owned media analyst products. Led investments in NLP & CV research.</p>
+							<p>Developed & bought media analytic products. Led investments in NLP & CV research.</p>
 						</div>
+					</div>
+					<div>
+						<Stack class="absolute -bottom-[22rem] left-0 right-0 mx-auto" />
 					</div>
 				</div>
 				<div
-					class="animate-tech-comms-policy card col-span-2 row-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
+					class="animate-tech-comms-policy card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
 					<div class="card-body space-y-4">
 						<h3>Comms <span class="text-xl text-gray-500">({percentMonthsComms}%)</span></h3>
 						<div>
@@ -302,10 +318,10 @@
 							<p>Crafted comms campaigns and strategies.</p>
 						</div>
 					</div>
-					<enhanced:img src={chat} alt="" class="-mb-28 -translate-y-10" />
+					<TextingBro class="-mb-0 -translate-y-0" />
 				</div>
 				<div
-					class="animate-tech-comms-policy card col-span-2 row-span-2 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1 md:row-span-1">
+					class="animate-tech-comms-policy card col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1 md:row-span-1">
 					<div class="card-body mb-4 space-y-4">
 						<h3>Policy <span class="text-xl text-gray-500">({percentMonthsPolicy}%)<span></span></span></h3>
 						<div>
@@ -722,10 +738,10 @@
 					</div>
 				</div>
 			</div>
-			<p class="mt-24 text-center text-base">
-				Copyright © 2024 Zixian Chen. All rights reserved. Some icons from <a
-					href="https://www.freepik.com/free-psd/3d-rendering-kawaii-time-date-icon_32312582.htm#&position=20&from_view=collections&uuid=b54263a3-356c-4242-84f8-1a3bd53f3865"
-					>Freepik</a>
+			<p class="mt-24 text-center text-base">Copyright © 2024 Zixian Chen. All rights reserved.</p>
+			<p class="text-center text-base">
+				Communication illustrations by <a href="https://www.freepik.com/">Freepik</a> and
+				<a href="https://storyset.com/communication">Storyset</a>
 			</p>
 		</section>
 	</div>
