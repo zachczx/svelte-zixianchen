@@ -323,7 +323,12 @@
 					<div
 						class="flex h-36 items-end overflow-hidden p-0"
 						style="background: url('/trees-tree-svgrepo-com.svg'); background-repeat: repeat-x; background-position: top">
-						<div id="tank" class={animate}><TankSvg /></div>
+						<div id="tank" class={animate}>
+							<TankSvg
+								onclick={() => {
+									animate = 'drive-right-r';
+								}} />
+						</div>
 					</div>
 				</div>
 
@@ -490,7 +495,7 @@
 			<p class="mt-24 text-center text-base">Copyright © 2024 Zixian Chen. All rights reserved.</p>
 			<p class="text-center text-base">
 				Communication illustrations by <a href="https://www.freepik.com/">Freepik</a> and
-				<a href="https://storyset.com/communication">Storyset</a>
+				<a href="https://storyset.com/communication">Storyset</a>.
 			</p>
 		</section>
 	</div>
@@ -537,6 +542,14 @@
 			transform: translateX(250px) scale(0.6);
 		}
 	}
+	@keyframes drive-right-r {
+		from {
+			transform: translateX(-100px);
+		}
+		to {
+			transform: translateX(500px) scale(0.6);
+		}
+	}
 
 	.drive-right {
 		animation-name: drive-right;
@@ -545,7 +558,12 @@
 		animation-iteration-count: 1;
 		animation-fill-mode: forwards;
 	}
-
+	.drive-right-r {
+		animation-name: drive-right-r;
+		animation-duration: 4s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
 	/* for custom reveal of text */
 	.custom-reveal-text span {
 		color: hsl(177 72% 37% / 30%);
@@ -575,9 +593,7 @@
 		content: '🔥';
 		padding-right: 0.4rem;
 	}
-	#navbar {
-		view-transition-name: navbar;
-	}
+
 	/* for other stuff */
 	/* .overlay::before {
 		content: '';
