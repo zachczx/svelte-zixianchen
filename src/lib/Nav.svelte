@@ -2,7 +2,7 @@
 	class="grid h-16 w-full grid-cols-2 justify-center border-b border-b-gray-200 bg-[#FFFAFA] px-4 lg:mb-14 lg:grid-cols-3"
 	id="navbar">
 	<div class="flex items-center">
-		<span class="text-2xl font-extrabold text-gray-600">Zixian Chen</span>
+		<span class="text-2xl font-extrabold text-gray-600"><a href="/">Zixian Chen</a></span>
 	</div>
 	<div class="hidden items-center justify-center space-x-8 lg:flex">
 		<a href="/#about" class="btn btn-link text-xl font-medium text-base-content no-underline hover:no-underline"
@@ -49,3 +49,9 @@
 			></a>
 	</div>
 </div>
+
+<style>
+	#navbar {
+		view-transition-name: navbar;
+	}
+</style>
