@@ -4,6 +4,7 @@
 	import pill from '$lib/assets/pill.webp';
 	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=150';
 	import TablerLink from '$lib/svg/TablerLink.svelte';
+	import StackUsed from '$lib/StackUsed.svelte';
 
 	import TankSvg from '$lib/svg/TankSvg.svelte';
 	import treesvg from '$lib/svg/trees-tree-svgrepo-com.svg';
@@ -12,13 +13,14 @@
 	import versus from '$lib/assets/fightIronManCaptainAmerica.webp';
 	import selfSndgoPic from '$lib/assets/DSC03163.webp?enhanced&w=300;500;1000';
 	import eatYourMedsLogo from '$lib/assets/eatyourmedslogo.webp';
-	import oldBtonomicsLogo from '$lib/assets/btonomics_logo-3-300x100.webp';
+	import oldBtonomicsLogo from '$lib/assets/btonomics_logo-3-300x100.webp?enhanced&w=250';
 	import spotify from '$lib/assets/spotify.webp?enhanced&w=300';
 	import courseraLogo from '$lib/assets/coursera-logo-full-rgb.png?enhanced&w=200';
 	import scrumAllianceLogo from '$lib/assets/scrumalliance.png?enhanced&w=200';
 	import server from '$lib/assets/server.webp';
 	import programming from '$lib/assets/programming.webp?enhanced&w=800';
 	import study from '$lib/assets/study.webp?enhanced&w=500';
+	import CodeTypingBro from '$lib/svg/Code-typing-bro.svelte';
 
 	import TextingBro from '$lib/svg/Texting-bro.svelte';
 	import lego from '$lib/assets/lego-2539844.webp';
@@ -37,49 +39,33 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
 	import TablerArrowNarrowRight from '$lib/svg/TablerArrowNarrowRight.svelte';
-	/* onMount(async () => {
-		await import('https://unpkg.com/@splinetool/viewer/build/spline-viewer.js');
-	});
- */
-	onMount(() => {
-		gsap.registerPlugin(ScrollTrigger);
-		let tl = gsap.matchMedia();
-
-		tl.add('(min-width: 1028px)', () => {
-			/*  
-			For animation within cards
-			*/
-
-			gsap.from('.animate-comms', {
-				scrollTrigger: {
-					trigger: '.animate-comms',
-					start: '-300 bottom',
-					end: 'top 70%',
-					scrub: true,
-					markers: false,
-				},
-				autoAlpha: 0.5,
-				y: 30,
-				ease: 'circ.out',
-				stagger: 0.25,
-			});
-			//my original idea: transform:perspective(900px) rotateX(45deg);
-		});
-		gsap.to('.tank-svg', {
-			scrollTrigger: {
-				trigger: '.tank-svg',
-				start: 'top 80%',
-				end: '+=900',
-				scrub: true,
-				markers: false,
-			},
-			x: 400,
-			scale: 0.5,
-			ease: 'circ.out',
-		});
-	});
 
 	//////////////////////////////////
+
+	let animate = $state('');
+
+	onMount(() => {
+		let tank = document.getElementById('tank');
+
+		let observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('drive-right');
+						animate = 'drive-right';
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				root: null,
+				threshold: 0,
+				rootMargin: '0px 0px -50px 0px',
+			},
+		);
+
+		observer.observe(tank);
+	});
 
 	function getMonthsBetween(date1, date2, roundUpFractionalMonths) {
 		//Months will be calculated between start and end dates.
@@ -135,23 +121,23 @@
 						class="rounded-2xl"
 						sizes="(min-width:1920px) 1000px, (min-width:1080px) 500px, (min-width:768px) 300px" />
 				</div>
-				<div class="lg:mb-20 lg:pb-28">
-					<h1 class=" text-center text-7xl leading-none tracking-tighter text-black lg:text-9xl">Hello, I'm Zixian.</h1>
-					<h2 class="custom-reveal-text mb-4 text-center text-2xl leading-none tracking-tighter lg:text-4xl">
+				<div class="xl:mb-20 xl:pb-28">
+					<h1 class=" text-center text-7xl leading-none tracking-tighter text-black xl:text-9xl">Hello, I'm Zixian.</h1>
+					<h2 class="custom-reveal-text mb-4 text-center text-2xl leading-none tracking-tighter xl:text-4xl">
 						<span>I bridge the gaps between public policy, business needs and tech solutions.</span>
 					</h2>
 				</div>
 			</div>
 
 			<div class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4" id="about">
-				<!-- <div class="relative col-span-2 row-span-1 grid items-end rounded-2xl md:col-span-1">
+				<!-- <div class="relative col-span-2 row-span-1 grid items-end rounded-2xl xl:col-span-1">
 					<div class="absolute h-full w-full rounded-2xl border bg-base-100 shadow-xl"></div>
 					<figure>
 						<enhanced:img src={profilepic} alt="Doggo and I" class="z-20 scale-100 rounded-2xl" />
 					</figure>
 				</div> -->
 				<div
-					class="animate-about-work-learned card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl lg:col-span-2"
+					class="animate-about-work-learned card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-2"
 					style="background-image: url({server}); background-size: 120%; background-position: right">
 					<div class="card-body grid h-full grid-cols-2 justify-items-center">
 						<div></div>
@@ -165,7 +151,7 @@
 					</div>
 				</div>
 				<div
-					class="animate-about-work-learned card col-span-2 row-span-1 min-h-48 w-full border border-gray-200 bg-[#57262D] bg-base-100 shadow-xl lg:col-span-1"
+					class="animate-about-work-learned card col-span-2 row-span-1 min-h-48 w-full border border-gray-200 bg-[#57262D] bg-base-100 shadow-xl xl:col-span-1"
 					style="background-image: url({versus}); background-size: cover; background-position: center">
 					<div class="card-body grid pb-0">
 						<div>
@@ -177,7 +163,7 @@
 					</div>
 				</div>
 				<div
-					class="animate-personal-education card col-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl lg:col-span-1">
+					class="animate-personal-education card col-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
 					<div class="card-body relative max-h-96 space-y-4">
 						<h3>Education</h3>
 						<p>
@@ -187,31 +173,33 @@
 						<enhanced:img src={study} alt="Studies" class="-mb-6" />
 					</div>
 				</div>
-				<div
-					class="animate-about-work-learned card col-span-2 w-full border border-gray-200 bg-base-100 shadow-xl lg:col-span-1">
+				<div class="card col-span-2 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
 					<div class="card-body space-y-4">
 						<h3>Upgrades</h3>
 						<div class="space-y-2 pt-2">
-							<ul class="space-y-6">
+							<ul class="flex flex-wrap space-x-6 xl:grid xl:space-x-0 xl:space-y-6">
 								<li class="">
 									<a
 										href="https://www.coursera.org/account/accomplishments/specialization/D9EZKV26D69B"
-										class="rounded-full bg-red-300 px-4 py-2 hover:bg-red-500 hover:text-base-100">Meta Back-end Dev</a>
+										class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
+										>Meta Back-end Dev</a>
 								</li>
 								<li>
 									<a
 										href="https://www.coursera.org/account/accomplishments/specialization/certificate/MVCFEP4ZHVSV"
-										class="rounded-full bg-red-300 px-4 py-2 hover:bg-red-500 hover:text-base-100">AWS Fundamentals</a>
+										class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
+										>AWS Fundamentals</a>
 								</li>
 								<li>
 									<a
 										href="https://www.credly.com/badges/369dd8b6-19bd-45ba-8272-2b997111c2b7/linked_in_profile"
-										class="rounded-full bg-red-300 px-4 py-2 hover:bg-red-500 hover:text-base-100">Google UX</a>
+										class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
+										>Google UX</a>
 								</li>
 								<li>
 									<a
 										href="https://bcert.me/bc/html/show-badge.html?b=twwbrxwh"
-										class="rounded-full bg-red-300 px-4 py-2 hover:bg-red-500 hover:text-base-100"
+										class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
 										>Certified ScrumMaster</a>
 								</li>
 							</ul>
@@ -241,7 +229,7 @@
 				</div>
 				<!-- bg-[#57262D] -->
 				<div
-					class="animate-personal-education card relative col-span-2 grid w-full overflow-hidden border border-gray-200 bg-gradient-to-tl from-base-100 to-gray-50 shadow-xl md:col-span-1">
+					class="animate-personal-education card relative col-span-2 grid w-full overflow-hidden border border-gray-200 bg-gradient-to-tl from-base-100 to-gray-50 shadow-xl xl:col-span-1">
 					<div>
 						<div class="card-body grid h-full content-center space-y-4">
 							<h3 class="">Playlist</h3>
@@ -254,7 +242,7 @@
 								<li>Syntax</li>
 								<li>Olivio Sarikas</li>
 							</ul>
-							<enhanced:img src={spotify} alt="" class="absolute -bottom-20 -right-40 lg:bottom-0 lg:top-40" />
+							<enhanced:img src={spotify} alt="" class="absolute -bottom-20 -right-40 xl:bottom-0 xl:top-40" />
 						</div>
 					</div>
 				</div>
@@ -262,12 +250,12 @@
 				<!-- 
 			Break
 		-->
-				<div class="col-span-2 h-72 md:col-span-4"></div>
+				<div class="col-span-2 h-72 xl:col-span-4"></div>
 				<!-- 
 			Break
 		-->
 				<div
-					class="card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl md:col-span-1"
+					class="card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1"
 					id="career">
 					<ResumeBro class="-mb-10 " />
 					<div class="card-body">
@@ -275,17 +263,18 @@
 					</div>
 				</div>
 				<div
-					class="card col-span-2 h-full min-h-96 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-3"
+					class="card col-span-2 h-full min-h-96 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-3"
 					style="background: url({lego}); background-position: center 10%">
 					<div class="relative h-full w-full rounded-xl bg-black opacity-[0.3]"></div>
 					<div class="absolute left-0 right-0 top-14 mx-auto text-center text-2xl text-base-100">
-						I've worked for {numYearsTotal} years in the public service. Here's a breakdown.
+						I've worked for <span class="mx-3 text-4xl font-extrabold">{numYearsTotal} years</span> in the public service.
+						Here's a breakdown.
 					</div>
 				</div>
 				<div
-					class="card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl md:col-span-2">
-					<div class="card-body z-20 grid grid-cols-1 content-start gap-x-8 space-y-4 md:grid-cols-3">
-						<h3 class="col-span-1 md:col-span-3">
+					class="card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-2">
+					<div class="card-body z-20 grid grid-cols-1 content-start gap-x-8 space-y-4 xl:grid-cols-3">
+						<h3 class="col-span-1 xl:col-span-3">
 							Tech <span class="text-xl text-gray-500">({percentMonthsTech}%)</span>
 						</h3>
 						<div>
@@ -302,11 +291,11 @@
 						</div>
 					</div>
 					<div>
-						<Stack class="absolute -bottom-[22rem] left-0 right-0 mx-auto" />
+						<Stack class="absolute -bottom-[20rem] left-0 right-0 mx-auto" />
 					</div>
 				</div>
 				<div
-					class="animate-tech-comms-policy card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
+					class="animate-tech-comms-policy card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
 					<div class="card-body space-y-4">
 						<h3>Comms <span class="text-xl text-gray-500">({percentMonthsComms}%)</span></h3>
 						<div>
@@ -321,7 +310,7 @@
 					<TextingBro class="-mb-0 -translate-y-0" />
 				</div>
 				<div
-					class="animate-tech-comms-policy card col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1 md:row-span-1">
+					class="animate-tech-comms-policy card col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1 xl:row-span-1">
 					<div class="card-body mb-4 space-y-4">
 						<h3>Policy <span class="text-xl text-gray-500">({percentMonthsPolicy}%)<span></span></span></h3>
 						<div>
@@ -334,73 +323,33 @@
 					<div
 						class="flex h-36 items-end overflow-hidden p-0"
 						style="background: url('/trees-tree-svgrepo-com.svg'); background-repeat: repeat-x; background-position: top">
-						<TankSvg class="tank-svg" />
+						<div id="tank" class={animate}><TankSvg /></div>
 					</div>
 				</div>
 
 				<!-- 
 			Break
 		-->
-				<div class="col-span-2 h-72 md:col-span-4"></div>
+				<div class="col-span-2 h-72 xl:col-span-4"></div>
 				<!-- 
 			Break
 		-->
 				<div
-					class="card z-10 col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl lg:col-span-1"
+					class="card z-10 col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1"
 					id="side">
 					<div class="card-body space-y-4 px-6">
-						<enhanced:img src={hourglass3d} alt="" class="-mt-[10rem]" />
+						<CodeTypingBro class="-mx-5 -mb-[2rem] -mt-[5rem]" />
+
 						<h2>Side Projects</h2>
 					</div>
 				</div>
-				<div
-					class="animate-apptitude-appraize-rank card col-span-2 row-span-2 border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
-					<div class="group card-body grid items-center gap-y-5">
+				<div class="card col-span-2 row-span-2 border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
+					<div class="group grid items-center gap-y-5 p-4 2xl:p-8">
 						<div class="space-y-8">
-							<div class="place-self-center pb-4">
+							<div class="place-self-center pb-4 pt-4">
 								<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude" /></a>
 							</div>
-							<div class="grid content-around gap-y-4 rounded-2xl bg-base-300 p-4 text-xl font-bold">
-								<div>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="1em"
-										height="1em"
-										class="me-2 inline"
-										viewBox="0 0 24 24"
-										><g
-											fill="none"
-											stroke="currentColor"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											color="currentColor"
-											><path
-												d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12m0-3h19M7 6h.009M11 6h.009" /><path
-												d="m8 13l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L8 17m4 0h4" /></g
-										></svg
-									>Sveltekit, Gsap, Tailwind
-								</div>
-								<div>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="1em"
-										height="1em"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="icon icon-tabler icons-tabler-outline icon-tabler-cpu me-2 inline"
-										><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-											d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /><path
-											d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
-											d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
-											d="M10 21v-2" /></svg
-									>Cloudflare Pages
-								</div>
-							</div>
+							<StackUsed framework="Sveltekit" library="Gsap, Tailwind" host="Cloudflare Pages" />
 							<p class="px-2">
 								I made
 								<span class="text-primary"
@@ -417,55 +366,17 @@
 							>Apptitude<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 					</div>
 				</div>
-				<div
-					class="animate-apptitude-appraize-rank card col-span-2 row-span-2 border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
-					<div class="group card-body grid items-center gap-y-5">
+				<div class="card col-span-2 row-span-2 border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
+					<div class="group grid items-center gap-y-5 p-4 2xl:p-8">
 						<div class="space-y-8">
-							<div class="place-self-center pb-4">
+							<div class="place-self-center pb-4 pt-4">
 								<a href="https://appraize.zixian.dev/"
 									><h3 class="text-center text-6xl font-black text-purple-800">Appraize</h3></a>
 							</div>
-							<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-xl font-bold">
-								<div>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="1em"
-										height="1em"
-										class="me-2 inline"
-										viewBox="0 0 24 24"
-										><g
-											fill="none"
-											stroke="currentColor"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											color="currentColor"
-											><path
-												d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12m0-3h19M7 6h.009M11 6h.009" /><path
-												d="m8 13l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L8 17m4 0h4" /></g
-										></svg
-									>Sveltekit, SortableJS, Tailwind
-								</div>
-								<div>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="1em"
-										height="1em"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="icon icon-tabler icons-tabler-outline icon-tabler-cpu me-2 inline"
-										><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-											d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /><path
-											d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
-											d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
-											d="M10 21v-2" /></svg
-									>Ubuntu, Nginx, Coolify, NodeJS, Postgres, Turso
-								</div>
-							</div>
+							<StackUsed
+								framework="Sveltekit"
+								library="SortableJS, Tailwind"
+								host="Ubuntu, Nginx, Coolify, NodeJS, Postgres, Turso" />
 							<p class="px-2">
 								<a href="https://appraize.zixian.dev/" class="font-bold text-primary underline hover:text-secondary"
 									>Appraize</a> makes ranking sessions easier via drag & drop.
@@ -480,54 +391,14 @@
 					</div>
 				</div>
 				<div
-					class="animate-apptitude-appraize-rank card col-span-2 row-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
-					<div class="group card-body grid items-center gap-y-5">
+					class="card col-span-2 row-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
+					<div class="group grid items-center gap-y-5 p-4 2xl:p-8">
 						<div class="space-y-8">
 							<div class="flex justify-center">
 								<a href="https://app.zixian.dev/rank/"
 									><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="" /></a>
 							</div>
-							<div class="grid content-around gap-y-4 rounded-2xl bg-base-200 p-4 text-xl font-bold">
-								<div>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="1em"
-										height="1em"
-										class="me-2 inline"
-										viewBox="0 0 24 24"
-										><g
-											fill="none"
-											stroke="currentColor"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											color="currentColor"
-											><path
-												d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12m0-3h19M7 6h.009M11 6h.009" /><path
-												d="m8 13l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L8 17m4 0h4" /></g
-										></svg
-									>Django, HTMX, SortableJS, Bootstrap
-								</div>
-								<div>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="1em"
-										height="1em"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="icon icon-tabler icons-tabler-outline icon-tabler-cpu me-2 inline"
-										><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-											d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /><path
-											d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
-											d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
-											d="M10 21v-2" /></svg
-									>Ubuntu, Nginx, Gunicorn
-								</div>
-							</div>
+							<StackUsed framework="Django" library="HTMX, SortableJS, Bootstrap" host="Ubuntu, Nginx, Gunicorn" />
 							<p class="px-2">
 								<a href="https://app.zixian.dev/rank/" class="font-bold text-primary underline hover:text-secondary"
 									>Rank-a-mate</a> was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.
@@ -540,122 +411,41 @@
 				</div>
 
 				<div
-					class="animate-eat-btonomics card card-side col-span-2 row-span-2 w-full border border-gray-200 bg-base-100 shadow-xl md:col-span-1">
-					<div class="group card-body relative grid items-center gap-y-5">
+					class="card card-side col-span-2 row-span-2 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
+					<div class="group relative grid items-center gap-y-5 p-4 2xl:p-8">
 						<div class="space-y-8">
 							<div class="avatar flex justify-center pb-4">
 								<div class="w-56 rounded-full">
 									<a href="https://app.zixian.dev/eatyourmeds/"><img src={eatYourMedsLogo} alt="Eat Your Meds!" /></a>
 								</div>
 							</div>
-							<div class="grid content-around gap-y-4 rounded-2xl bg-base-300 p-4 text-xl font-bold">
-								<div>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="1em"
-										height="1em"
-										class="me-2 inline"
-										viewBox="0 0 24 24"
-										><g
-											fill="none"
-											stroke="currentColor"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											color="currentColor"
-											><path
-												d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12m0-3h19M7 6h.009M11 6h.009" /><path
-												d="m8 13l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L8 17m4 0h4" /></g
-										></svg
-									>Django, HTMX, Bootstrap
-								</div>
-								<div>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="1em"
-										height="1em"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="icon icon-tabler icons-tabler-outline icon-tabler-cpu me-2 inline"
-										><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-											d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /><path
-											d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
-											d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
-											d="M10 21v-2" /></svg
-									>Ubuntu, Nginx, Gunicorn
-								</div>
-							</div>
+							<StackUsed framework="Django" library="HTMX, Bootstrap" host="Ubuntu, Nginx, Gunicorn" />
 						</div>
 
 						<p class="px-2">
 							<span class="font-bold text-primary underline hover:text-secondary"
 								><a href="https://app.zixian.dev/eatyourmeds/">Eat Your Medicine!</a></span>
-							was a try at planning dose timings and getting medicine info. It was tedious for both of us parents to record/coord
-							medicine stuff and sync with one another.
+							was a try at planning dose timings and getting medicine info.
+						</p>
+						<p class="px-2">
+							It was tedious for both of us parents to record/coord medicine stuff and sync with one another.
 						</p>
 
-						<p class="px-2">
-							Used Django's class-based views for CRUD and auth, nearly everything built in. Sprinkled HTMX and
-							datepicker.js for user interactions.
-						</p>
+						<p class="px-2">Used Django for CRUD & auth. Sprinkled HTMX and datepicker.js for user interactions.</p>
 
 						<a href="https://app.zixian.dev/eatyourmeds/" class="btn btn-neutral mx-2 text-xl"
 							>Eat Your Meds!<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 					</div>
 				</div>
-				<div class="col-span-2 grid gap-7 md:col-span-3 md:grid-cols-2">
-					<div class="animate-eat-btonomics card w-full border border-gray-200 bg-base-100 shadow-xl">
-						<div class="group card-body grid items-center gap-y-5">
+				<div class="col-span-2 grid gap-7 xl:col-span-3 xl:grid-cols-2">
+					<div class="card w-full border border-gray-200 bg-base-100 shadow-xl">
+						<div class="group grid items-center gap-y-5 p-4 2xl:p-8">
 							<div class="space-y-8">
 								<div class="flex justify-center pb-4">
-									<a href="https://old.btonomics.com"><img src={oldBtonomicsLogo} alt="Old Btonomics.com" /></a>
+									<a href="https://old.btonomics.com"
+										><enhanced:img src={oldBtonomicsLogo} alt="Old Btonomics.com" /></a>
 								</div>
-								<div class="grid content-around gap-y-4 rounded-2xl bg-base-300 p-4 text-xl font-bold">
-									<div>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="1em"
-											height="1em"
-											class="me-2 inline"
-											viewBox="0 0 24 24"
-											><g
-												fill="none"
-												stroke="currentColor"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
-												color="currentColor"
-												><path
-													d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12m0-3h19M7 6h.009M11 6h.009" /><path
-													d="m8 13l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L8 17m4 0h4" /></g
-											></svg
-										>Wordpress, Bunny CDN
-									</div>
-									<div>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="1em"
-											height="1em"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											class="icon icon-tabler icons-tabler-outline icon-tabler-cpu me-2 inline"
-											><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-												d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /><path
-												d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
-												d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
-												d="M10 21v-2" /></svg
-										>Ubuntu, Nginx, PHP-FPM, Apache
-									</div>
-								</div>
-
+								<StackUsed framework="Wordpress" host="Ubuntu, Nginx, PHP-FPM, Apache, Bunny.net" />
 								<p class="px-2">
 									In 2018, I started
 									<span class="font-bold text-primary underline hover:text-secondary"
@@ -673,54 +463,13 @@
 								>Old Btonomics<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 						</div>
 					</div>
-					<div class="animate-eat-btonomics card w-full border border-gray-200 bg-base-100 shadow-xl">
-						<div class="group card-body grid items-center gap-y-5">
+					<div class="card w-full border border-gray-200 bg-base-100 shadow-xl">
+						<div class="group grid items-center gap-y-5 p-4 2xl:p-8">
 							<div class="space-y-8">
 								<h3 class="pb-4 text-center text-4xl font-black text-base-content">
 									<a href="https://btonomics.com">BTOnomics v2</a>
 								</h3>
-								<div class="grid content-around gap-y-4 rounded-2xl bg-base-300 p-4 text-xl font-bold">
-									<div>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="1em"
-											height="1em"
-											class="me-2 inline"
-											viewBox="0 0 24 24"
-											><g
-												fill="none"
-												stroke="currentColor"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												stroke-width="2"
-												color="currentColor"
-												><path
-													d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12m0-3h19M7 6h.009M11 6h.009" /><path
-													d="m8 13l1.227 1.057c.515.445.773.667.773.943s-.258.498-.773.943L8 17m4 0h4" /></g
-											></svg
-										>AstroJS, Tailwind, Pagefind
-									</div>
-									<div>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="1em"
-											height="1em"
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="currentColor"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											class="icon icon-tabler icons-tabler-outline icon-tabler-cpu me-2 inline"
-											><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
-												d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" /><path
-												d="M9 9h6v6h-6z" /><path d="M3 10h2" /><path d="M3 14h2" /><path d="M10 3v2" /><path
-												d="M14 3v2" /><path d="M21 10h-2" /><path d="M21 14h-2" /><path d="M14 21v-2" /><path
-												d="M10 21v-2" /></svg
-										>Cloudflare Pages
-									</div>
-								</div>
-
+								<StackUsed framework="AstroJS" library="Tailwind, Pagefind" host="Cloudflare Pages" />
 								<p class="px-2">
 									Migrated <span class="font-bold text-primary underline hover:text-secondary"
 										><a href="https://btonomics.com/">BTOnomics</a></span> to AstroJS, in part to try it. Enjoyed it. I used
@@ -746,6 +495,7 @@
 		</section>
 	</div>
 </div>
+<span class="drive-right"></span>
 
 <style>
 	.spectrum-background {
@@ -781,6 +531,21 @@
 			background-size: 100% 100%;
 		}
 	}
+
+	@keyframes drive-right {
+		to {
+			transform: translateX(250px) scale(0.6);
+		}
+	}
+
+	.drive-right {
+		animation-name: drive-right;
+		animation-duration: 2s;
+		animation-timing-function: linear;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+	}
+
 	/* for custom reveal of text */
 	.custom-reveal-text span {
 		color: hsl(177 72% 37% / 30%);
