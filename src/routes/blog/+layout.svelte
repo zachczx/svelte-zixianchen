@@ -1,7 +1,7 @@
 <div id="container" class="grid min-h-dvh justify-center p-6">
 	<div class="lg:max-w-[1024px]">
 		<div class="text-center text-6xl font-black"><a href="/blog/" class="view-blog-header">Zixian's blog</a></div>
-		<div class="space-x-6 pb-10 text-center text-lg">
+		<div class="space-x-6 pb-10 text-center text-lg lg:pb-20">
 			<a href="/" class="view-blog-home">Home</a><svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="2em"
