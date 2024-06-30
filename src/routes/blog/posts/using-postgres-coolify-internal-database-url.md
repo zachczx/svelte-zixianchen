@@ -7,7 +7,11 @@ categories:
 published: true
 ---
 
-I like using [Coolify](https://coolify.io/) now to deploy my Node apps. A minor thing that took me some time to realize (after erroring out as a newb) was this part of the documentation:
+I like using [Coolify](https://coolify.io/) now to deploy my Sveltekit + Postgres apps on NodeJS. The docs are somewhat barebones so it took some getting used to, coming from the likes of Svelte, Django, Drizzle which have comprehensive docs.
+
+## Postgres/DB Config
+
+A minor thing that took me some time to realize (after erroring out as a newb) was this part of the documentation:
 
 > ## Access database during builds
 >
