@@ -1,23 +1,39 @@
+<script>
+	/**
+	 * @type {string}
+	 */
+	export let navCurrent;
+</script>
+
 <div
-	class="z-30 grid h-16 w-full grid-cols-2 justify-center border-b border-b-gray-200 bg-white/50 px-4 backdrop-blur-md lg:sticky lg:top-0 lg:mb-14 lg:grid-cols-3"
-	id="navbar">
+	class="z-30 grid h-16 w-full grid-cols-2 justify-center border-b border-b-gray-200 bg-white/50 px-4 backdrop-blur-md lg:sticky lg:top-0 lg:mb-14 lg:grid-cols-3">
 	<div class="flex items-center">
-		<span class="text-2xl font-extrabold text-base-content hover:drop-shadow"><a href="/">Zixian Chen</a></span>
+		<span class="navLogo text-2xl font-extrabold text-base-content hover:drop-shadow"><a href="/">Zixian Chen</a></span>
 	</div>
-	<div class="hidden items-center justify-center space-x-8 lg:flex">
-		<a href="/#about" class="btn btn-link text-xl font-medium text-base-content no-underline hover:no-underline"
-			>Who am I?</a>
-		<a href="/#career" class="btn btn-link text-xl font-medium text-base-content no-underline hover:no-underline"
+	<div class="navMenu hidden items-center justify-center space-x-8 lg:flex">
+		<a
+			aria-current={navCurrent === 'about' ? 'page' : undefined}
+			id="navAbout"
+			href="/#about"
+			class=" btn btn-link text-xl font-medium text-base-content no-underline hover:no-underline">Who am I?</a>
+		<a
+			aria-current={navCurrent === 'career' ? 'page' : undefined}
+			id="navCareer"
+			href="/#career"
+			class="btn btn-link text-xl font-medium text-base-content no-underline hover:no-underline"
 			>Where have I worked?</a>
-		<a href="/#side" class="btn btn-link text-xl font-medium text-base-content no-underline hover:no-underline"
-			>What did I build?</a>
+		<a
+			aria-current={navCurrent === 'side' ? 'page' : undefined}
+			id="navSide"
+			href="/#side"
+			class="btn btn-link text-xl font-medium text-base-content no-underline hover:no-underline">What did I build?</a>
 	</div>
 	<div class="flex items-center justify-end">
 		<!-- jam icons -->
 		<a href="https://www.linkedin.com/in/zixianchen/"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="h-6 w-6 fill-base-content transition duration-500 ease-in-out hover:scale-[1.15] lg:h-10 lg:w-10"
+				class="h-6 w-6 fill-gray-600 transition duration-500 ease-in-out hover:scale-[1.15] hover:fill-gray-800 lg:h-10 lg:w-10"
 				viewBox="-2 -2 24 24"
 				><g
 					><path
@@ -28,7 +44,7 @@
 		<a href="https://github.com/zachczx?tab=repositories"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="h-6 w-6 fill-base-content transition duration-500 ease-in-out hover:scale-[1.15] lg:h-10 lg:w-10"
+				class="h-6 w-6 fill-gray-600 transition duration-500 ease-in-out hover:scale-[1.15] hover:fill-gray-800 lg:h-10 lg:w-10"
 				viewBox="-2 -2 24 24"
 				><g
 					><path
@@ -40,7 +56,7 @@
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="-2 -2 24 24"
-				class="h-6 w-6 fill-base-content transition duration-500 ease-in-out hover:scale-[1.15] lg:h-10 lg:w-10"
+				class="h-6 w-6 fill-gray-600 transition duration-500 ease-in-out hover:scale-[1.15] hover:fill-gray-800 lg:h-10 lg:w-10"
 				><g
 					><path
 						d="M5.024 12.655h3.92v1.887h-3.92zm5.881 0h3.918v1.887h-3.918zM5.021 8.881h9.802v1.887H5.021zm.003-3.774h5.881v1.887H5.024zm7.841 0h1.96v1.887h-1.96z" /><path
@@ -51,7 +67,28 @@
 </div>
 
 <style>
-	#navbar {
-		view-transition-name: navbar;
+	.navLogo {
+		view-transition-name: navLogo;
+	}
+	#navAbout {
+		view-transition-name: navAbout;
+	}
+
+	.navMenu > a {
+		position: relative;
+		height: 100%;
+	}
+
+	a[aria-current='page']::before {
+		--size: 6px;
+		content: '';
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 0;
+		left: calc(50% - var(--size));
+		border: var(--size) solid transparent;
+		border-top: var(--size) solid #1e293b;
+		view-transition-name: navCurrent;
 	}
 </style>
