@@ -2,9 +2,10 @@
 title: 'Making Pagefind Work on Sveltekit'
 description: ''
 date: '2024-06-27'
-categories:
-  - sveltekit
-  - svelte
+tags:
+  - Sveltekit
+  - SvelteJS
+  - Pagefind
 published: true
 ---
 

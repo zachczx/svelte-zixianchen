@@ -2,8 +2,9 @@
 title: 'Using Postgres on Coolify and Internal Database URL'
 description: ''
 date: '2024-06-29'
-categories:
-  - coolify
+tags:
+  - Coolify
+  - Postgres
 published: true
 ---
 

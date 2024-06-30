@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root * {
-	font-family: 'Poppins', sans-serif;
-	/* overflow-x: clip; */
-}
-
-.montserrat {
-	font-family: 'Montserrat', sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 800;
-}
-
 @layer base {
 	h1 {
 		@apply text-7xl lg:text-8xl;

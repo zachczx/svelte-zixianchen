@@ -111,6 +111,10 @@
 	const percentMonthsPolicy = Math.round((28 / numMonthsTotal) * 100);
 </script>
 
+<svelte:head
+	><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700" rel="stylesheet" />
+</svelte:head>
+
 <div class="spectrum-background grid min-h-dvh justify-items-center">
 	<Nav {navCurrent} />
 	<div class="max-w-screen-2xl">
@@ -494,6 +498,9 @@
 <span class="drive-right"></span>
 
 <style>
+	* {
+		font-family: 'Poppins', sans-serif;
+	}
 	.spectrum-background {
 		/* 
 			https://www.schemecolor.com/pastel-green-yellow-and-red.php
