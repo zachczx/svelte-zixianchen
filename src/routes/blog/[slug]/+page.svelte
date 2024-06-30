@@ -2,6 +2,7 @@
 	let { data } = $props();
 </script>
 
+<svelte:head><title>{data.metadata.title} | Zixian's Blog</title></svelte:head>
 <h1 class="text-4xl">{data.metadata.title}</h1>
 <div class="text-medium">{data.metadata.date}</div>
 <article

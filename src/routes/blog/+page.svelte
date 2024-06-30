@@ -3,6 +3,7 @@
 	console.log(data);
 </script>
 
+<svelte:head><title>Zixian's Blog</title></svelte:head>
 <div class="space-y-8">
 	{#each data.posts as post}
 		<div class="items-end">
