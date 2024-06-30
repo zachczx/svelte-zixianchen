@@ -243,7 +243,7 @@
 					</div>
 				</div>
 
-				<div class="col-span-2 h-72 xl:col-span-4"></div>
+				<div class="col-span-2 h-80 xl:col-span-4"></div>
 
 				<div
 					class="navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1"
@@ -323,13 +323,8 @@
 					</div>
 				</div>
 
-				<!-- 
-			Break
-		-->
-				<div class="col-span-2 h-72 xl:col-span-4"></div>
-				<!-- 
-			Break
-		-->
+				<div class="col-span-2 h-80 xl:col-span-4"></div>
+
 				<div
 					class="navItem card z-10 col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1"
 					id="side">
@@ -356,7 +351,10 @@
 								along tech competencies to share with my non-technical teammates.
 							</p>
 
-							<p class="px-2">Used JS objects in lieu of a DB/markdown.</p>
+							<p class="px-2">
+								Kept it simple with bento grids, static site generation. Used JS objects pre-compilation instead of
+								heavier DB/markdown.
+							</p>
 						</div>
 						<a href="https://titude.app/" class="btn btn-neutral mx-2 text-xl"
 							>Apptitude<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
@@ -399,7 +397,10 @@
 								<a href="https://app.zixian.dev/rank/" class="font-bold text-primary underline hover:text-secondary"
 									>Rank-a-mate</a> was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.
 							</p>
-							<p class="px-2">UX feels like a basic CRUD webapp, but I enjoyed HTMX and everything was lightweight.</p>
+							<p class="px-2">
+								UX is generally the same as a basic CRUD webapp on a JS framework, but HTMX gives a lot of interactivity
+								for such a small bundle size. I enjoyed the HTMX DX.
+							</p>
 						</div>
 						<a href="https://app.zixian.dev/rank/" class="btn btn-neutral mx-2 text-xl"
 							>Rank-a-Mate<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
