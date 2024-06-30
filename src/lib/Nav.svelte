@@ -3,6 +3,8 @@
 	 * @type {string}
 	 */
 	export let navCurrent;
+
+	import { page } from '$app/stores';
 </script>
 
 <div
@@ -15,18 +17,22 @@
 			aria-current={navCurrent === 'about' ? 'page' : undefined}
 			id="navAbout"
 			href="/#about"
-			class=" btn btn-link text-xl font-medium text-base-content no-underline hover:no-underline">Who am I?</a>
+			class="btn btn-link text-xl font-bold text-gray-600 no-underline hover:no-underline">About</a>
 		<a
 			aria-current={navCurrent === 'career' ? 'page' : undefined}
 			id="navCareer"
 			href="/#career"
-			class="btn btn-link text-xl font-medium text-base-content no-underline hover:no-underline"
-			>Where have I worked?</a>
+			class="btn btn-link text-xl font-bold text-gray-600 no-underline hover:no-underline">Career</a>
 		<a
 			aria-current={navCurrent === 'side' ? 'page' : undefined}
 			id="navSide"
 			href="/#side"
-			class="btn btn-link text-xl font-medium text-base-content no-underline hover:no-underline">What did I build?</a>
+			class="btn btn-link text-xl font-bold text-gray-600 no-underline hover:no-underline">Projects</a>
+		<a
+			aria-current={$page.url.pathname === '/contact' ? 'page' : undefined}
+			id="navContact"
+			href="/contact"
+			class="btn btn-link text-xl font-bold text-gray-600 no-underline hover:no-underline">Contact</a>
 	</div>
 	<div class="flex items-center justify-end">
 		<!-- jam icons -->
@@ -72,6 +78,15 @@
 	}
 	#navAbout {
 		view-transition-name: navAbout;
+	}
+	#navCareer {
+		view-transition-name: navCareer;
+	}
+	#navSide {
+		view-transition-name: navSide;
+	}
+	#navContact {
+		view-transition-name: navContact;
 	}
 
 	.navMenu > a {
