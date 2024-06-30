@@ -111,10 +111,6 @@
 	const percentMonthsPolicy = Math.round((28 / numMonthsTotal) * 100);
 </script>
 
-<svelte:head
-	><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700" rel="stylesheet" />
-</svelte:head>
-
 <div class="spectrum-background grid min-h-dvh justify-items-center">
 	<Nav {navCurrent} />
 	<div class="max-w-screen-2xl">
@@ -125,7 +121,7 @@
 						src={selfSndgoPic}
 						alt="Me"
 						class="rounded-2xl"
-						sizes="(min-width:1920px) 1000px, (min-width:1080px) 500px, (min-width:768px) 300px" />
+						sizes="(min-width:1920px) 1000px, (min-width:1080px) 800px, (min-width:768px) 600px" />
 				</div>
 				<div class="xl:mb-20 xl:pb-28">
 					<h1 class=" text-center text-7xl leading-none tracking-tighter text-black xl:text-9xl">Hello, I'm Zixian.</h1>
@@ -498,9 +494,6 @@
 <span class="drive-right"></span>
 
 <style>
-	* {
-		font-family: 'Poppins', sans-serif;
-	}
 	.spectrum-background {
 		/* 
 			https://www.schemecolor.com/pastel-green-yellow-and-red.php

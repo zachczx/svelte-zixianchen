@@ -7,7 +7,7 @@
 <h1 class="text-2xl xl:text-4xl">{data.metadata.title}</h1>
 <div class="text-medium">{changeDateFormat(data.metadata.date)}</div>
 <article
-	class="prose:max-w-sm prose prose-sm mt-6 prose-a:font-semibold prose-a:text-green-600 prose-a:decoration-[2px] prose-a:underline-offset-4 hover:prose-a:text-orange-600 lg:mt-10 lg:max-w-none">
+	class="prose:max-w-sm prose prose-sm mt-6 prose-a:font-semibold prose-a:text-orange-600 prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:text-orange-400 prose-code:font-['Fira_Code_Variable'] lg:mt-10 lg:max-w-none">
 	<svelte:component this={data.content} />
 </article>
 <div class="pt-10 text-gray-600 lg:pt-20">

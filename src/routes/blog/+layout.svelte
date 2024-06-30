@@ -2,24 +2,18 @@
 	let ghostColor = $state('');
 </script>
 
-<svelte:head>
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400..900');
-	</style>
-</svelte:head>
-
 <div id="container" class="grid min-h-dvh justify-center p-6">
 	<div class="lg:max-w-[1024px]">
 		<div class="text-center text-4xl lg:text-6xl xl:text-8xl">
 			<a
 				href="/blog/"
-				class="view-blog-header inline-block bg-gradient-to-r from-orange-400 via-pink-500 to-red-500 bg-clip-text pb-2 font-extrabold text-transparent"
-				>//Zixian's blog</a>
+				class="view-blog-header inline-block bg-gradient-to-r from-orange-400 via-pink-500 to-red-500 bg-clip-text pb-2 font-extrabold text-transparent xl:pb-4"
+				>// Zixian's blog</a>
 		</div>
 		<div class="space-x-6 pb-10 text-center lg:pb-20">
 			<a
 				href="/blog"
-				class="view-blog-blog font-semibold"
+				class="view-blog-blog font-bold"
 				onmouseover={() => {
 					ghostColor = 'orange';
 				}}
@@ -44,7 +38,7 @@
 			{/key}
 			<a
 				href="/"
-				class="view-blog-home font-semibold"
+				class="view-blog-home font-bold"
 				onmouseover={() => {
 					ghostColor = 'red';
 				}}
@@ -76,11 +70,5 @@
 	}
 	.view-blog-blog {
 		view-transition-name: view-blog-blog;
-	}
-
-	* {
-		font-style: normal;
-		font-family: 'Montserrat', sans-serif !important;
-		font-weight: 400 900 !important;
 	}
 </style>

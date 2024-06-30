@@ -3,19 +3,14 @@ import adapter from '@sveltejs/adapter-cloudflare';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 /** @type {import('@sveltejs/kit').Config} */
 import { mdsvex, escapeSvelte } from 'mdsvex';
-import { createHighlighter } from 'shiki';
+import { createHighlighter, codeToHtml } from 'shiki';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	extensions: ['.md'],
 	highlight: {
 		highlighter: async (code, lang = 'text') => {
-			const highlighter = await createHighlighter({
-				themes: ['catppuccin-mocha'],
-				langs: ['svelte'],
-			});
-			await highlighter.loadLanguage('svelte');
-			const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'catppuccin-mocha' }));
+			const html = escapeSvelte(await codeToHtml(code, { lang: 'js', theme: 'vitesse-dark' }));
 			return `{@html \`${html}\` }`;
 		},
 	},

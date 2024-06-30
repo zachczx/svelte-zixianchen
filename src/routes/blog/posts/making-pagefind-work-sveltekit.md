@@ -3,13 +3,14 @@ title: 'Making Pagefind Work on Sveltekit'
 description: ''
 date: '2024-06-27'
 tags:
-  - Sveltekit
+  - SvelteKit
   - SvelteJS
   - Pagefind
+  - search
 published: true
 ---
 
-I like [pagefind](https://pagefind.app/docs/ui-usage/), there’s something about just having a simple js library that works instead of having to do tons of stuff backend for Meilisearch. Unlike for Astro, where [there’s a package that does everything](https://github.com/shishkin/astro-pagefind), there’s some config to do for Sveltekit and I didn’t find anything.
+I like [Pagefind](https://pagefind.app/docs/ui-usage/), there’s something about just having a simple js library that works instead of having to do tons of stuff backend for Meilisearch. Unlike for Astro, where [there’s a package that does everything](https://github.com/shishkin/astro-pagefind), there’s some config to do for Sveltekit and I didn’t find anything.
 
 This is how I eventually got it to work.
 

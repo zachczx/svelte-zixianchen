@@ -1,5 +1,7 @@
 <script>
 	import '../app.css';
+	import '@fontsource-variable/fira-code';
+
 	import { onNavigate } from '$app/navigation';
 
 	onNavigate((navigation) => {
@@ -20,6 +22,10 @@
 <slot />
 
 <style>
+	:root {
+		font-family: 'Poppins', sans-serif;
+	}
+
 	@keyframes fade-in {
 		from {
 			opacity: 0;
