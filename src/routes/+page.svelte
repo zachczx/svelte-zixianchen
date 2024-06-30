@@ -141,8 +141,8 @@
 						<div class="space-y-4 self-center text-base-100">
 							<h3>About</h3>
 							<p>
-								I understand <b>tech, the web, computers</b>. I go broad and deep into technical details, no matter if
-								they're meta frameworks or cpu coolers.
+								I'm into <b>tech, the web & computers</b>. I go broad and deep into technical details — be it a webapp,
+								JS meta framework or hardware.
 							</p>
 						</div>
 					</div>
@@ -335,7 +335,7 @@
 					</div>
 				</div>
 				<div class="card col-span-2 row-span-2 border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
-					<div class="group grid items-center gap-y-5 p-4 2xl:p-8">
+					<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
 						<div class="space-y-8">
 							<div class="place-self-center pb-4 pt-4">
 								<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude" /></a>
@@ -356,12 +356,14 @@
 								heavier DB/markdown.
 							</p>
 						</div>
-						<a href="https://titude.app/" class="btn btn-neutral mx-2 text-xl"
-							>Apptitude<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+						<div class="self-end">
+							<a href="https://titude.app/" class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
+								>Apptitude<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+						</div>
 					</div>
 				</div>
 				<div class="card col-span-2 row-span-2 border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
-					<div class="group grid items-center gap-y-5 p-4 2xl:p-8">
+					<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
 						<div class="space-y-8">
 							<div class="place-self-center pb-4 pt-4">
 								<a href="https://appraize.zixian.dev/"
@@ -380,13 +382,17 @@
 								keyboard shortcut, csv file upload, form actions/validation.
 							</p>
 						</div>
-						<a href="https://appraize.zixian.dev/" class="btn btn-neutral mx-2 text-xl"
-							>Appraize<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+						<div class="self-end">
+							<a
+								href="https://appraize.zixian.dev/"
+								class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
+								>Appraize<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+						</div>
 					</div>
 				</div>
 				<div
 					class="card col-span-2 row-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
-					<div class="group grid items-center gap-y-5 p-4 2xl:p-8">
+					<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
 						<div class="space-y-8">
 							<div class="flex justify-center">
 								<a href="https://app.zixian.dev/rank/"
@@ -395,21 +401,25 @@
 							<StackUsed framework="Django" library="HTMX, SortableJS, Bootstrap" host="Ubuntu, Nginx, Gunicorn" />
 							<p class="px-2">
 								<a href="https://app.zixian.dev/rank/" class="font-bold text-primary underline hover:text-secondary"
-									>Rank-a-mate</a> was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.
+									>Rank-a-Mate</a> was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.
 							</p>
 							<p class="px-2">
 								UX is generally the same as a basic CRUD webapp on a JS framework, but HTMX gives a lot of interactivity
 								for such a small bundle size. I enjoyed the HTMX DX.
 							</p>
 						</div>
-						<a href="https://app.zixian.dev/rank/" class="btn btn-neutral mx-2 text-xl"
-							>Rank-a-Mate<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+						<div class="self-end">
+							<a
+								href="https://app.zixian.dev/rank/"
+								class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
+								>Rank-a-Mate<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+						</div>
 					</div>
 				</div>
 
 				<div
 					class="card card-side col-span-2 row-span-2 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
-					<div class="group relative grid items-center gap-y-5 p-4 2xl:p-8">
+					<div class="group relative grid h-full items-center gap-y-5 p-4 2xl:p-8">
 						<div class="space-y-8">
 							<div class="avatar flex justify-center pb-4">
 								<div class="w-56 rounded-full">
@@ -429,14 +439,17 @@
 						</p>
 
 						<p class="px-2">Used Django for CRUD & auth. Sprinkled HTMX and datepicker.js for user interactions.</p>
-
-						<a href="https://app.zixian.dev/eatyourmeds/" class="btn btn-neutral mx-2 text-xl"
-							>Eat Your Meds!<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+						<div class="self-end">
+							<a
+								href="https://app.zixian.dev/eatyourmeds/"
+								class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
+								>Eat Your Meds!<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+						</div>
 					</div>
 				</div>
 				<div class="col-span-2 grid gap-7 xl:col-span-3 xl:grid-cols-2">
 					<div class="card w-full border border-gray-200 bg-base-100 shadow-xl">
-						<div class="group grid items-center gap-y-5 p-4 2xl:p-8">
+						<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
 							<div class="space-y-8">
 								<div class="flex justify-center pb-4">
 									<a href="https://old.btonomics.com"
@@ -456,12 +469,16 @@
 									cut page load speeds, esp TTFB/LCP.
 								</p>
 							</div>
-							<a href="https://old.btonomics.com" class="btn btn-neutral mx-2 text-xl"
-								>Old Btonomics<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+							<div class="self-end">
+								<a
+									href="https://old.btonomics.com"
+									class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
+									>Old Btonomics<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+							</div>
 						</div>
 					</div>
 					<div class="card w-full border border-gray-200 bg-base-100 shadow-xl">
-						<div class="group grid items-center gap-y-5 p-4 2xl:p-8">
+						<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
 							<div class="space-y-8">
 								<h3 class="pb-4 text-center text-4xl font-black text-base-content">
 									<a href="https://btonomics.com">BTOnomics v2</a>
@@ -478,8 +495,10 @@
 									the need to reach into Svelte or React.
 								</p>
 							</div>
-							<a href="https://btonomics.com" class="btn btn-neutral mx-2 text-xl"
-								>BTOnomics<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+							<div class="self-end">
+								<a href="https://btonomics.com" class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
+									>BTOnomics<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+							</div>
 						</div>
 					</div>
 				</div>
