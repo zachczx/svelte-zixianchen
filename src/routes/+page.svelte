@@ -11,8 +11,11 @@
 	import eatYourMedsLogo from '$lib/assets/eatyourmedslogo.webp';
 	import oldBtonomicsLogo from '$lib/assets/btonomics_logo-3-300x100.webp?enhanced&w=250';
 	import spotify from '$lib/assets/spotify.webp?enhanced&w=300';
-	import courseraLogo from '$lib/assets/coursera-logo-full-rgb.png?enhanced&w=200';
-	import scrumAllianceLogo from '$lib/assets/scrumalliance.png?enhanced&w=200';
+	import courseraLogo from '$lib/assets/coursera-logo-full-rgb.png?enhanced&w=150';
+	import awsLogo from '$lib/assets/aws-logo.png?enhanced&w=50';
+	import googleLogo from '$lib/assets/google-logo.png?enhanced&w=80';
+	import metaLogo from '$lib/assets/meta-logo.webp?enhanced&w=80';
+	import scrumAllianceLogo from '$lib/assets/scrumalliance.png?enhanced&w=120';
 	import server from '$lib/assets/server.webp';
 	import programming from '$lib/assets/programming.webp?enhanced&w=800';
 	import study from '$lib/assets/study.webp?enhanced&w=500';
@@ -114,7 +117,7 @@
 <div class="spectrum-background grid min-h-dvh justify-items-center">
 	<Nav {navCurrent} />
 	<div class="max-w-screen-2xl">
-		<section class="px-3 pb-2 pt-4">
+		<section class="px-3 pb-2 pt-4 lg:pt-0">
 			<div id="header" class="screen mb-1 grid content-center gap-y-10">
 				<div class="justify-self-center">
 					<enhanced:img
@@ -171,7 +174,7 @@
 				</div>
 				<div class="card col-span-2 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
 					<div class="card-body space-y-4">
-						<h3>Upgrades</h3>
+						<h3>Certification</h3>
 						<div class="space-y-2 pt-2">
 							<ul class="flex flex-wrap space-x-6 xl:grid xl:space-x-0 xl:space-y-6">
 								<li class="">
@@ -200,9 +203,12 @@
 								</li>
 							</ul>
 						</div>
-						<div class="pt-8">
+						<div class="flex flex-wrap items-center space-x-4 space-y-4 pt-8">
 							<enhanced:img src={courseraLogo} alt="" />
-							<enhanced:img src={scrumAllianceLogo} alt="" class="ms-10" />
+							<enhanced:img src={scrumAllianceLogo} alt="" />
+							<enhanced:img src={metaLogo} alt="" />
+							<enhanced:img src={awsLogo} alt="" class="mt-3" />
+							<enhanced:img src={googleLogo} alt="" />
 						</div>
 					</div>
 				</div>
@@ -223,7 +229,7 @@
 						<enhanced:img src={programming} alt="" class="translate-x-16 scale-150" />
 					</div>
 				</div>
-				<!-- bg-[#57262D] -->
+
 				<div
 					class="card relative col-span-2 grid w-full overflow-hidden border border-gray-200 bg-gradient-to-tl from-base-100 to-gray-50 shadow-xl xl:col-span-1">
 					<div>
@@ -243,7 +249,7 @@
 					</div>
 				</div>
 
-				<div class="col-span-2 h-80 xl:col-span-4"></div>
+				<div class="break col-span-2 h-24 lg:h-80 xl:col-span-4"></div>
 
 				<div
 					class="navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1"
@@ -323,7 +329,7 @@
 					</div>
 				</div>
 
-				<div class="col-span-2 h-80 xl:col-span-4"></div>
+				<div class="break col-span-2 h-24 lg:h-80 xl:col-span-4"></div>
 
 				<div
 					class="navItem card z-10 col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1"
