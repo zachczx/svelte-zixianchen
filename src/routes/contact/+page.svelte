@@ -57,6 +57,11 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Send Zixian a message</title>
+	<meta name="description" content="Send Zixian a message." />
+</svelte:head>
+
 <div class="spectrum-background grid min-h-dvh justify-items-center">
 	<Nav {navCurrent} />
 	<div class="max-w-screen-2xl">

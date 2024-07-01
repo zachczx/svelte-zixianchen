@@ -3,7 +3,11 @@
 	import changeDateFormat from '$lib/BlogDate';
 </script>
 
-<svelte:head><title>Zixian's Blog</title></svelte:head>
+<svelte:head>
+	<title>Zixian's Blog</title>
+	<meta name="description" content="Zixian's blog on web dev, javascript, or random stuff." />
+</svelte:head>
+
 <div class="space-y-8">
 	{#each data.posts as post}
 		<div class="items-end border-2 border-gray-400 px-4 py-2 lg:px-6 lg:py-4">

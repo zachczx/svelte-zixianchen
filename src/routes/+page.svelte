@@ -115,6 +115,11 @@
 	const percentMonthsPolicy = Math.round((28 / numMonthsTotal) * 100);
 </script>
 
+<svelte:head>
+	<title>Hi! I'm Zixian.</title>
+	<meta name="description" content="Hello, I'm Zixian Chen." />
+</svelte:head>
+
 <div class="spectrum-background grid min-h-dvh justify-items-center">
 	<Nav {navCurrent} />
 	<div class="max-w-screen-2xl">
