@@ -27,6 +27,7 @@
 	import Nav from '$lib/Nav.svelte';
 	import { onMount } from 'svelte';
 	import TablerArrowNarrowRight from '$lib/svg/TablerArrowNarrowRight.svelte';
+	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
 
 	//////////////////////////////////
 
@@ -509,11 +510,7 @@
 					</div>
 				</div>
 			</div>
-			<p class="mt-24 text-center text-base">Copyright © 2024 Zixian Chen. All rights reserved.</p>
-			<p class="text-center text-base">
-				Communication illustrations by <a href="https://www.freepik.com/">Freepik</a> and
-				<a href="https://storyset.com/communication">Storyset</a>.
-			</p>
+			<WebsiteFooter />
 		</section>
 	</div>
 </div>
