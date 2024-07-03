@@ -699,13 +699,13 @@
 
 	@media only screen and (min-width: 1024px) {
 		.custom-reveal-text span {
-			animation-range-start: cover 30vh;
+			animation-range-start: cover 20vh;
 			animation-range-end: cover 40vh;
 		}
 	}
 	@media only screen and (min-width: 1600px) {
 		.custom-reveal-text span {
-			animation-range-start: cover 30vh;
+			animation-range-start: cover 20vh;
 			animation-range-end: cover 40vh;
 		}
 	}
