@@ -28,6 +28,10 @@
 	import { onMount } from 'svelte';
 	import TablerArrowNarrowRight from '$lib/svg/TablerArrowNarrowRight.svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
+	import { gsap } from 'gsap';
+
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import Profile from '$lib/svg/Profile.svelte';
 
 	//////////////////////////////////
 
@@ -71,6 +75,23 @@
 		for (let i = 0; i < navItem.length; i++) {
 			observerNav.observe(navItem[i]);
 		}
+
+		// gsap.registerPlugin(ScrollTrigger);
+		// let tl = gsap.timeline();
+		// tl.from('.profile', { autoAlpha: 0, y: -300 });
+		// tl.to('.profile', {
+		// 	scrollTrigger: {
+		// 		trigger: '.profile',
+		// 		start: 'center center',
+		// 		end: '+=400',
+		// 		pin: true,
+		// 		scrub: true,
+		// 		markers: false,
+		// 	},
+		// 	autoAlpha: 1,
+		// 	rotate: 320,
+		// 	scale: 1.3,
+		// });
 	});
 
 	/**
@@ -130,8 +151,8 @@
 <div class="spectrum-background grid min-h-dvh justify-items-center">
 	<Nav {navCurrent} />
 	<div class="max-w-screen-2xl">
-		<section class="px-3 pb-2 pt-4 lg:pt-0">
-			<div id="header" class="screen mb-1 grid content-center gap-y-10">
+		<div class="px-3 pb-2 pt-4 lg:pt-0">
+			<section id="header" class="screen mb-1 grid content-center gap-y-10">
 				<div class="justify-self-center">
 					<enhanced:img
 						src={selfSndgoPic}
@@ -140,14 +161,17 @@
 						sizes="(min-width:1920px) 1000px, (min-width:1080px) 800px, (min-width:768px) 600px"></enhanced:img>
 				</div>
 				<div class="xl:mb-20 xl:pb-28">
-					<h1 class="text-center text-7xl leading-none tracking-tighter text-black xl:text-9xl">Hello, I'm Zixian.</h1>
+					<h1 class="text-center text-7xl leading-none tracking-tighter text-black xl:text-9xl">
+						Hello, I'm <span class="zixian pin inline-block underline decoration-pink-700">Zixian</span>.
+					</h1>
 					<h2 class="custom-reveal-text mb-4 text-center text-2xl leading-none tracking-tighter xl:text-4xl">
 						<span>I'm a civil servant trying to close gaps between policy, business needs, tech.</span>
 					</h2>
 				</div>
-			</div>
+			</section>
 
-			<div class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
+			<!-- <Profile class="profile h-96 w-96" /> -->
+			<section class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
 				<div
 					class="navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-2"
 					style="background-image: url({server}); background-size: 120%; background-position: right"
@@ -310,9 +334,10 @@
 						</div>
 					</div>
 				</div>
+			</section>
 
-				<div class="break col-span-2 h-24 lg:h-80 xl:col-span-4"></div>
-
+			<div class="break h-24 lg:h-80"></div>
+			<section class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
 				<div
 					class="navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1"
 					id="career">
@@ -390,9 +415,10 @@
 						</div>
 					</div>
 				</div>
+			</section>
 
-				<div class="break col-span-2 h-24 lg:h-80 xl:col-span-4"></div>
-
+			<div class="break h-24 lg:h-80"></div>
+			<section class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
 				<div
 					class="navItem card z-10 col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1"
 					id="side">
@@ -570,9 +596,9 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 			<WebsiteFooter />
-		</section>
+		</div>
 	</div>
 </div>
 <span class="drive-right"></span>
@@ -705,7 +731,7 @@
 	}
 	@media only screen and (min-width: 1600px) {
 		.custom-reveal-text span {
-			animation-range-start: cover 20vh;
+			animation-range-start: cover 25vh;
 			animation-range-end: cover 40vh;
 		}
 	}
