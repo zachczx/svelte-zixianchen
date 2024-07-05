@@ -15,8 +15,8 @@
 				<a href="/blog/{post.slug}">{post.title}</a>
 			</h2>
 			<div>{changeDateFormat(post.date)}</div>
-			<div class="pt-4">
-				{#each post.tags as tag}<span class="me-2 border border-gray-400 px-2">{tag}</span>{/each}
+			<div class="flex flex-wrap pt-4">
+				{#each post.tags as tag}<span class="mb-2 me-2 border border-gray-400 px-2">{tag}</span>{/each}
 			</div>
 		</div>
 	{/each}
