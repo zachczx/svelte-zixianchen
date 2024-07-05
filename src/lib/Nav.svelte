@@ -7,7 +7,7 @@
 	import { page } from '$app/stores';
 </script>
 
-<div
+<nav
 	class="z-30 grid h-16 w-full grid-cols-2 justify-center border-b border-b-gray-200 bg-white/50 px-4 backdrop-blur-md lg:sticky lg:top-0 lg:mb-14 lg:grid-cols-3">
 	<div class="flex items-center">
 		<span class="navLogo text-2xl font-extrabold text-base-content hover:drop-shadow"><a href="/">Zixian Chen</a></span>
@@ -70,7 +70,7 @@
 				></svg
 			></a>
 	</div>
-</div>
+</nav>
 
 <style>
 	.navLogo {

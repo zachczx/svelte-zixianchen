@@ -75,23 +75,6 @@
 		for (let i = 0; i < navItem.length; i++) {
 			observerNav.observe(navItem[i]);
 		}
-
-		// gsap.registerPlugin(ScrollTrigger);
-		// let tl = gsap.timeline();
-		// tl.from('.profile', { autoAlpha: 0, y: -300 });
-		// tl.to('.profile', {
-		// 	scrollTrigger: {
-		// 		trigger: '.profile',
-		// 		start: 'center center',
-		// 		end: '+=400',
-		// 		pin: true,
-		// 		scrub: true,
-		// 		markers: false,
-		// 	},
-		// 	autoAlpha: 1,
-		// 	rotate: 320,
-		// 	scale: 1.3,
-		// });
 	});
 
 	/**
@@ -170,7 +153,6 @@
 				</div>
 			</section>
 
-			<!-- <Profile class="profile h-96 w-96" /> -->
 			<section class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
 				<div
 					class="navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-2"
@@ -179,7 +161,7 @@
 					<div class="card-body grid h-full grid-cols-2 justify-items-center">
 						<div></div>
 						<div class="space-y-4 self-center text-base-100">
-							<h3>About</h3>
+							<h3>Zixian</h3>
 							<p>
 								I'm into <b>tech, the web & computers</b>. I go broad and deep into technical details — be it a webapp,
 								JS meta framework or hardware.
