@@ -161,7 +161,7 @@
 					<div class="card-body grid h-full grid-cols-2 justify-items-center">
 						<div></div>
 						<div class="space-y-4 self-center text-base-100">
-							<h3>Zixian</h3>
+							<h3>About Me</h3>
 							<p>
 								I'm into <b>tech, the web & computers</b>. I go broad and deep into technical details — be it a webapp,
 								JS meta framework or hardware.
