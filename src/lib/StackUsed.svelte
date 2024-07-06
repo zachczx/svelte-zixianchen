@@ -1,12 +1,12 @@
-<script>
+<script lang="ts">
 	/** @type {string} */
-	export let framework = '';
+	export let framework: string = '';
 
 	/** @type {string} */
-	export let library;
+	export let library: string;
 
 	/** @type {string} */
-	export let host;
+	export let host: string;
 </script>
 
 <div class="grid content-around gap-y-2 rounded-2xl bg-base-300 p-4 text-lg font-bold">

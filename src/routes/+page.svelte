@@ -471,12 +471,12 @@
 					<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
 						<div class="space-y-8">
 							<div class="flex justify-center">
-								<a href="https://app.zixian.dev/rank/"
+								<a href="https://django.zixian.dev/rank/"
 									><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="" /></a>
 							</div>
 							<StackUsed framework="Django" library="HTMX, SortableJS, Bootstrap" host="Ubuntu, Nginx, Gunicorn" />
 							<p class="px-2">
-								<a href="https://app.zixian.dev/rank/" class="font-bold text-primary underline hover:text-secondary"
+								<a href="https://django.zixian.dev/rank/" class="font-bold text-primary underline hover:text-secondary"
 									>Rank-a-Mate</a> was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.
 							</p>
 							<p class="px-2">
@@ -486,7 +486,7 @@
 						</div>
 						<div class="self-end">
 							<a
-								href="https://app.zixian.dev/rank/"
+								href="https://django.zixian.dev/rank/"
 								class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
 								>Rank-a-Mate<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 						</div>
@@ -499,7 +499,8 @@
 						<div class="space-y-8">
 							<div class="avatar flex justify-center pb-4">
 								<div class="w-56 rounded-full">
-									<a href="https://app.zixian.dev/eatyourmeds/"><img src={eatYourMedsLogo} alt="Eat Your Meds!" /></a>
+									<a href="https://django.zixian.dev/eatyourmeds/"
+										><img src={eatYourMedsLogo} alt="Eat Your Meds!" /></a>
 								</div>
 							</div>
 							<StackUsed framework="Django" library="HTMX, Bootstrap" host="Ubuntu, Nginx, Gunicorn" />
@@ -507,7 +508,7 @@
 
 						<p class="px-2">
 							<span class="font-bold text-primary underline hover:text-secondary"
-								><a href="https://app.zixian.dev/eatyourmeds/">Eat Your Medicine!</a></span>
+								><a href="https://django.zixian.dev/eatyourmeds/">Eat Your Medicine!</a></span>
 							was a try at planning dose timings and getting medicine info.
 						</p>
 						<p class="px-2">
@@ -517,7 +518,7 @@
 						<p class="px-2">Used Django for CRUD & auth. Sprinkled HTMX and datepicker.js for user interactions.</p>
 						<div class="self-end">
 							<a
-								href="https://app.zixian.dev/eatyourmeds/"
+								href="https://django.zixian.dev/eatyourmeds/"
 								class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
 								>Eat Your Meds!<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 						</div>

@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	/**
 	 * @type {string}
 	 */
-	export let navCurrent;
+	export let navCurrent: string;
 
 	import { page } from '$app/stores';
 </script>
