@@ -27,7 +27,7 @@ Oracle's docs were all about Oracle Linux. I tried Googling and every blog post 
 2. Paste into your CLI the command that OCI gives you after a successful edit, like
 
    ```
-   sudo dd iflag=direct if=/dev/oracleoci/oraclevda of=/dev/null count=1
+   $ sudo dd iflag=direct if=/dev/oracleoci/oraclevda of=/dev/null count=1
    echo “1” | sudo tee /sys/class/block/`readlink /dev/oracleoci/oraclevda | cut -d’/’ -f 2`/device/rescan
    ```
 
@@ -46,7 +46,7 @@ Oracle's docs were all about Oracle Linux. I tried Googling and every blog post 
 5. One last thing is to resize the filesystem, otherwise [the system info for _/_ will still show the old size](https://serverfault.com/questions/701296/ive-just-increased-the-disks-size-but-the-old-size-is-still-display-what-coul).
 
    ```
-   sudo resize2fs /dev/sda 1
+   $ sudo resize2fs /dev/sda 1
    ```
 
 6. That's all, the OCI Utils thing made it 10x longer than needed. 😔
