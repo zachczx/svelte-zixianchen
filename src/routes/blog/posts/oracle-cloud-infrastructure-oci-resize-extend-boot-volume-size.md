@@ -14,7 +14,7 @@ A few container images and a lot of caching later, I started running out of spac
 
 ## The Problem - I'm using Ubuntu, not Oracle Linux
 
-maybe it's a skill issue, but it took me way too long to sort it out.
+Maybe it's a skill issue, but it took me way too long to sort it out. This should've been a 5 min thing but it took me too long to install OCI CLI, trying growfs etc.
 
 Oracle's docs were all about Oracle Linux. I tried Googling and every blog post (which looked like everyone just copied from one another) just repeated this Oracle Linux setup.
 
