@@ -4,7 +4,9 @@ description: ''
 date: '2024-07-07'
 tags:
   - Coolify
+  - Oracle
   - OCI
+  - Ubuntu
 published: true
 ---
 
