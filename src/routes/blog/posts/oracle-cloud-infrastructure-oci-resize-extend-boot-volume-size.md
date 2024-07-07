@@ -1,6 +1,6 @@
 ---
 title: 'Oracle Cloud Infrastructure - Resize & Extend Boot Volume Size'
-description: ''
+description: 'I resized my boot volume on Oracle Cloud using growpart, not oci-growfs.'
 date: '2024-07-07'
 tags:
   - Coolify

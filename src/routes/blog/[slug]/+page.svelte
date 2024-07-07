@@ -3,7 +3,12 @@
 	import changeDateFormat from '$lib/BlogDate';
 </script>
 
-<svelte:head><title>{data.metadata.title} | Zixian's Blog</title></svelte:head>
+<svelte:head>
+	<title>{data.metadata.title} | Zixian's Blog</title>
+	{#if data.metadata.description}
+		<meta name="description" content={data.metadata.description} />
+	{/if}
+</svelte:head>
 <h1 class="px-3 text-2xl sm:px-6 xl:text-4xl">{data.metadata.title}</h1>
 <div class="text-medium px-3 sm:px-6">{changeDateFormat(data.metadata.date)}</div>
 <article

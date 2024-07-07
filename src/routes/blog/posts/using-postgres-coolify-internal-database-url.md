@@ -1,6 +1,6 @@
 ---
 title: 'Using Postgres on Coolify and Internal Database URL'
-description: ''
+description: 'I wrote how to do Postgres on Coolify, using the internal database URL.'
 date: '2024-06-29'
 tags:
   - Coolify
