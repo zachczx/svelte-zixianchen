@@ -471,12 +471,12 @@
 					<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
 						<div class="space-y-8">
 							<div class="flex justify-center">
-								<a href="https://django.zixian.dev/rank/"
+								<a href="https://rankamate.zixian.dev/"
 									><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="" /></a>
 							</div>
 							<StackUsed framework="Django" library="HTMX, SortableJS, Bootstrap" host="Ubuntu, Nginx, Gunicorn" />
 							<p class="px-2">
-								<a href="https://django.zixian.dev/rank/" class="font-bold text-primary underline hover:text-secondary"
+								<a href="https://rankamate.zixian.dev/" class="font-bold text-primary underline hover:text-secondary"
 									>Rank-a-Mate</a> was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.
 							</p>
 							<p class="px-2">
@@ -486,7 +486,7 @@
 						</div>
 						<div class="self-end">
 							<a
-								href="https://django.zixian.dev/rank/"
+								href="https://rankamate.zixian.dev/"
 								class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
 								>Rank-a-Mate<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 						</div>
