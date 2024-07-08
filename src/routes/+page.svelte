@@ -135,7 +135,7 @@
 	<Nav {navCurrent} />
 	<div class="max-w-screen-2xl">
 		<div class="px-3 pb-2 pt-4 lg:pt-0">
-			<section id="header" class="screen mb-1 grid content-center gap-y-10">
+			<header id="header" class="screen mb-4 grid content-center gap-y-10">
 				<div class="justify-self-center">
 					<enhanced:img
 						src={selfSndgoPic}
@@ -143,7 +143,7 @@
 						class="rounded-2xl"
 						sizes="(min-width:1920px) 1000px, (min-width:1080px) 800px, (min-width:768px) 600px"></enhanced:img>
 				</div>
-				<div class="xl:mb-20 xl:pb-28">
+				<div class="space-y-4 xl:mb-20 xl:pb-28">
 					<h1 class="text-center text-7xl leading-none tracking-tighter text-black xl:text-9xl">
 						Hello, I'm <span class="zixian pin inline-block underline decoration-pink-700">Zixian</span>.
 					</h1>
@@ -151,435 +151,437 @@
 						<span>I'm a civil servant trying to close gaps between policy, business needs, tech.</span>
 					</h2>
 				</div>
-			</section>
-
-			<section class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
-				<div
-					class="navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-2"
-					style="background-image: url({server}); background-size: 120%; background-position: right"
-					id="about">
-					<div class="card-body grid h-full grid-cols-2 justify-items-center">
-						<div></div>
-						<div class="space-y-4 self-center text-base-100">
-							<h3>About Me</h3>
-							<p>
-								I'm into <b>tech, the web & computers</b>. I go broad and deep into technical details — be it a webapp,
-								JS meta framework or hardware.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div
-					class="card col-span-2 row-span-1 min-h-48 w-full border border-gray-200 bg-[#57262D] bg-base-100 shadow-xl xl:col-span-1"
-					style="background-image: url({versus}); background-size: cover; background-position: center">
-					<div class="card-body grid pb-0">
-						<div>
-							<h3 class="text-center text-base-100">Work</h3>
-						</div>
-						<div class="mb-6 self-end">
-							<p class="text-center text-base-100">I fight bad policies & business requirements.</p>
-						</div>
-					</div>
-				</div>
-				<div class="card col-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
-					<div class="card-body relative max-h-96 space-y-4">
-						<h3>Education</h3>
-						<p>
-							Studied <b>Political Science</b>. Loved comparative & money politics. Wish I could undo all the IR I did
-							prior.
-						</p>
-						<enhanced:img src={study} alt="Studies" class="-mb-6"></enhanced:img>
-					</div>
-				</div>
-				<div class="card col-span-2 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
-					<div class="card-body space-y-4 overflow-hidden">
-						<h3>Certification</h3>
-						<div class="space-y-2 pt-2">
-							<ul class="flex flex-wrap space-x-6 xl:grid xl:space-x-0 xl:space-y-6">
-								<li class="">
-									<a
-										href="https://www.coursera.org/account/accomplishments/specialization/D9EZKV26D69B"
-										class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
-										>Meta Back-end Dev</a>
-								</li>
-								<li>
-									<a
-										href="https://www.coursera.org/account/accomplishments/specialization/certificate/MVCFEP4ZHVSV"
-										class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
-										>AWS Fundamentals</a>
-								</li>
-								<li>
-									<a
-										href="https://www.credly.com/badges/369dd8b6-19bd-45ba-8272-2b997111c2b7/linked_in_profile"
-										class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
-										>Google UX</a>
-								</li>
-								<li>
-									<a
-										href="https://bcert.me/bc/html/show-badge.html?b=twwbrxwh"
-										class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
-										>Certified ScrumMaster</a>
-								</li>
-							</ul>
-						</div>
-						<div class="containerC relative -m-12 h-36">
-							<div class="circle0"></div>
-							<div class="circle"></div>
-							<div class="circle2"></div>
-							<div
-								id="google"
-								class="absolute left-48 top-6 z-10 rounded-full border-2 border-gray-200 bg-pink-200 p-1 shadow-md">
-								<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-									><path
-										fill="none"
-										stroke="#888888"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M20.945 11a9 9 0 1 1-3.284-5.997l-2.655 2.392A5.5 5.5 0 1 0 17.125 14H13v-3z" /></svg>
+			</header>
+			<main>
+				<section class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
+					<div
+						class="navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-2"
+						style="background-image: url({server}); background-size: 120%; background-position: right"
+						id="about">
+						<div class="card-body grid h-full grid-cols-2 justify-items-center">
+							<div></div>
+							<div class="space-y-4 self-center text-base-100">
+								<h3>About Me</h3>
+								<p>
+									I'm into <b>tech, the web & computers</b>. I go broad and deep into technical details — be it a
+									webapp, JS meta framework or hardware.
+								</p>
 							</div>
-							<div
-								id="aws"
-								class="absolute left-36 top-20 z-10 rounded-full border-2 border-gray-200 bg-pink-200 p-1 shadow-md">
-								<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-									><path
-										fill="none"
-										stroke="#888888"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M17 18.5a15.198 15.198 0 0 1-7.37 1.44A14.62 14.62 0 0 1 3 17m16.5 4c.907-1.411 1.451-3.323 1.5-5c-1.197-.773-2.577-.935-4-1M3 11V6.5a1.5 1.5 0 0 1 3 0V11M3 9h3m3-4l1.2 6L12 7l1.8 4L15 5m3 5.25c0 .414.336.75.75.75H20a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1h-1a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.25a.75.75 0 0 1 .75.75" /></svg>
-							</div>
-							<div
-								id="meta"
-								class="absolute left-20 top-32 z-10 rounded-full border-2 border-gray-200 bg-pink-200 p-1 shadow-md">
-								<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-									><path
-										fill="none"
-										stroke="#888888"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="2"
-										d="M12 10.174C13.766 7.39 15.315 6 16.648 6c2 0 3.263 2.213 4 5.217c.704 2.869.5 6.783-2 6.783c-1.114 0-2.648-1.565-4.148-3.652a27.627 27.627 0 0 1-2.5-4.174m0 0C10.234 7.39 8.685 6 7.352 6c-2 0-3.263 2.213-4 5.217c-.704 2.869-.5 6.783 2 6.783C6.466 18 8 16.435 9.5 14.348c1-1.391 1.833-2.783 2.5-4.174" /></svg>
-							</div>
-							<div
-								id="coursera"
-								class="absolute left-72 top-20 z-10 rounded-full border-2 border-gray-200 bg-pink-200 p-1 shadow-md">
-								<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 32 32"
-									><path
-										fill="#888888"
-										d="M31.99 15.74a4.181 4.181 0 0 0-.026-.37v-.005a7.929 7.929 0 0 0-1.318-3.75a8.18 8.18 0 0 0-1.156-1.385a8.307 8.307 0 0 0-2.188-1.51a9.381 9.381 0 0 0-4.068-.891a9.821 9.821 0 0 0-3.396.594a8.465 8.465 0 0 0-2.427 1.328c-.151.125-.302.25-.443.385l-.115.115l-.156.167l-.109.109l-.188.198c-.141.156-.271.313-.396.464l-.005-.005c-.255.307-.49.635-.667.922c-.12.188-.234.38-.344.573l-1.531 3.089h.005l-.083.161l-.167.339c-.333.682-.693 1.359-1.094 1.917c-.896.979-1.906 1.464-3.208 1.464c-.089 0-.182-.005-.276-.01c-.786-.031-1.458-.219-2.052-.573a3.425 3.425 0 0 1-1.328-1.37a3.566 3.566 0 0 1-.432-1.828v-.047c.042-1.01.427-1.802 1.208-2.479c.188-.167.385-.302.594-.427c.026-.016.057-.031.083-.047c.583-.318 1.24-.474 1.99-.474l.234.005c1.203.047 2.125.422 2.865 1.151l2.307-4.151a8.973 8.973 0 0 0-1.865-.943c-.026-.01-.052-.026-.078-.031c-.083-.031-.167-.063-.25-.089a9.81 9.81 0 0 0-2.286-.464c-.021 0-.042-.005-.063-.005c-.12-.01-.245-.021-.365-.026c-.13-.005-.266-.01-.396-.01h-.073a9.314 9.314 0 0 0-4.036.891a8.238 8.238 0 0 0-3.339 2.891a8.008 8.008 0 0 0-1.354 4.505c-.005 2.089.755 3.917 2.266 5.458c1.583 1.615 3.63 2.484 6.094 2.589c.156.005.313.01.469.01c1.391 0 2.682-.25 3.839-.745c.286-.125.568-.266.854-.427c.156-.089.302-.188.453-.286l.104-.073l.182-.125c.219-.156.422-.328.625-.51l.068-.068c.12-.109.234-.224.344-.339l.417-.469l.156-.198l.078-.109l.073-.104c.615-1.031 2.62-4.802 2.62-4.802v-.005l.12-.229l.099-.182c.292-.536.505-.917.792-1.318l.005-.016c.656-.953 1.792-1.635 3.13-1.75c2.24-.193 4.203 1.281 4.38 3.286c.182 2.01-1.49 3.797-3.729 3.99c-.453.036-.906.01-1.349-.089l-.01.005c-1.646-.344-2.693-1.536-3.208-2.078l-2.156 3.969s.672.672 1.13 1.01a8.75 8.75 0 0 0 1.531.875a9.525 9.525 0 0 0 3.781.786c.161 0 .13 0 .297-.01c2.458-.099 4.651-1.042 6.234-2.656c1.495-1.536 2.307-3.286 2.318-5.359v-.063z" /></svg>
-							</div>
-							<div
-								class="absolute -bottom-14 right-28 z-10 rounded-full border-2 border-gray-200 bg-pink-200 p-1 shadow-md">
-								<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
-									><path
-										fill="#888888"
-										d="M1.611 7.684a.3.3 0 1 0 .34.254a.3.3 0 0 0-.34-.254m.88.002a.325.325 0 0 0-.296.324a.325.325 0 0 0 .327.326a.325.325 0 0 0 .324-.326a.325.325 0 0 0-.325-.324zm-1.665.392a.275.275 0 0 0-.232.31c.022.15.16.253.31.231a.27.27 0 0 0 .23-.309a.273.273 0 0 0-.308-.232m2.086.375a.35.35 0 0 0 .35.35a.35.35 0 0 0 .347-.35a.35.35 0 0 0-.348-.347a.35.35 0 0 0-.349.347m3.965.027c-.613 0-1.17.34-1.17.989c0 .999 1.344.734 1.344 1.435c0 .36-.287.611-.692.611c-.296 0-.626-.098-.574-.392l.047-.262h-.4l-.061.332c-.096.564.536.744.932.744c.643 0 1.195-.397 1.195-1.06c0-1.037-1.344-.768-1.344-1.436c0-.336.297-.545.666-.545c.218 0 .513.072.469.3l-.04.232h.401l.07-.362c.083-.43-.482-.586-.843-.586m-6.541.287a.245.245 0 0 0-.207.278a.244.244 0 0 0 .277.205a.243.243 0 0 0 .207-.275a.246.246 0 0 0-.277-.207m3.326.127a.367.367 0 0 0-.31.416a.367.367 0 0 0 .415.311a.367.367 0 0 0 .311-.416a.367.367 0 0 0-.416-.31m5.664.534c-.778 0-1.4.68-1.4 1.457c0 .625.403 1.052 1.047 1.052c.578 0 .914-.355.914-.355l-.121-.355s-.315.312-.754.312c-.41 0-.657-.27-.657-.687c0-.554.448-1.028.926-1.028c.209 0 .452.085.422.28l-.03.162h.374l.052-.276c.07-.426-.455-.562-.773-.562m7.625 0c-.413 0-.768.369-.873.582h-.01c.03-.085.067-.272.067-.328c0-.128-.066-.198-.24-.198h-.497l-.064.356h.273c.07 0 .087.036.078.097l-.347 1.944h.422l.191-1.07c.087-.474.405-.967.826-.967c.244 0 .315.138.315.332c0 .08-.019.174-.032.27l-.255 1.435h.42l.197-1.096c.078-.46.391-.941.8-.941c.253 0 .32.137.32.345c0 .228-.185 1.028-.185 1.25c0 .408.287.45.483.45c.104 0 .187-.008.187-.008l.065-.356s-.045.01-.106.01c-.109 0-.195-.03-.195-.209c0-.19.191-.981.191-1.266c0-.407-.229-.632-.603-.632c-.366 0-.696.255-.865.582h-.01c-.022-.38-.2-.582-.553-.582m-4.963.027c-.348 0-.643.298-.79.639h-.01c.034-.114.077-.345.077-.407c0-.137-.064-.203-.234-.203h-.496l-.07.354h.275c.074 0 .087.048.078.105l-.343 1.938h.421l.157-.89c.095-.55.46-1.087.865-1.087c.056 0 .096.011.117.016l.084-.455a1 1 0 0 0-.13-.01m.492.03l-.066.353h.365l-.203 1.166a1.6 1.6 0 0 0-.031.303c0 .45.282.63.617.63c.461 0 .767-.328.91-.574h.008c-.03.36.144.526.44.526a3 3 0 0 0 .2-.008l.065-.356s-.04.01-.105.01c-.109 0-.196-.038-.196-.209a1 1 0 0 1 .014-.146l.305-1.696h-.787l-.067.354h.365l-.129.734c-.078.455-.435.947-.875.947c-.247 0-.33-.127-.33-.336c0-.075.014-.174.036-.273l.252-1.426zM.193 9.57a.226.226 0 0 0-.191.256a.23.23 0 0 0 .258.192a.225.225 0 0 0 .191-.256a.23.23 0 0 0-.258-.192m.219.778a.19.19 0 0 0-.162.216a.193.193 0 0 0 .219.162a.19.19 0 0 0 .162-.216a.194.194 0 0 0-.219-.162m.494.648a.166.166 0 0 0-.14.188a.164.164 0 0 0 .187.138a.166.166 0 0 0 .14-.187a.164.164 0 0 0-.187-.139m2.487.22a.401.401 0 1 0 0 .803a.403.403 0 0 0 .402-.402c0-.221-.18-.4-.402-.4m-1.811.077a.157.157 0 0 0-.145.156a.157.157 0 0 0 .159.158a.157.157 0 0 0 .156-.158a.157.157 0 0 0-.156-.156zm.672.092a.436.436 0 0 0-.418.435a.436.436 0 1 0 .435-.435zm2.205.175a.366.366 0 0 0-.365.368c0 .202.163.367.365.367a.367.367 0 0 0 .367-.367a.37.37 0 0 0-.367-.368m-3.065.51a.466.466 0 0 0-.466.467c0 .258.208.467.466.467a.466.466 0 0 0 .467-.467a.466.466 0 0 0-.467-.467m3.858.323a.32.32 0 0 0-.318.32c0 .177.14.32.318.32a.32.32 0 0 0 .32-.32a.32.32 0 0 0-.32-.32m2.812.482L6.49 15.93h-.308l-.05.275h.98l.052-.275h-.348l.44-.858h1.191l.135.858h-.354l-.046.275h.964l.05-.275h-.31l-.484-3.055zm1.684 0l-.049.266h.393l-.44 2.466a1 1 0 0 0-.021.18c0 .374.256.432.426.432c.07 0 .152-.014.152-.014l.047-.275s-.034.01-.108.01c-.104 0-.209-.015-.209-.214c0-.037.01-.1.018-.156l.478-2.695zm1.162 0l-.049.266h.39l-.437 2.466a1 1 0 0 0-.023.18c0 .374.258.432.428.432c.07 0 .152-.014.152-.014l.047-.275s-.034.01-.108.01c-.104 0-.209-.015-.209-.214c0-.037.01-.1.018-.156l.477-2.695zm1.639 0l-.074.402h.336l.074-.402zm-11.592.299a.493.493 0 0 0-.492.492c0 .272.22.49.492.49a.49.49 0 0 0 .492-.49a.493.493 0 0 0-.492-.492m22.576.039c-.256 0-.463.23-.463.518c0 .287.207.517.463.517c.26 0 .467-.23.467-.517c0-.289-.208-.518-.467-.518m-15.355.004h.008s0 .104.017.213l.21 1.363H7.39l.703-1.363c.052-.11.084-.213.084-.213m15.355.092c.21 0 .371.184.371.421s-.161.422-.37.422c-.208 0-.368-.185-.368-.422s.16-.422.367-.422m-17.945.097a.297.297 0 0 0-.297.297a.298.298 0 0 0 .596 0a.3.3 0 0 0-.3-.297m17.787.055v.535h.092v-.207h.08l.092.207h.101l-.094-.197c-.011-.024-.017-.03-.017-.03v-.003c.04-.012.09-.059.09-.141c0-.1-.062-.164-.155-.164zm.092.076h.078c.048 0 .08.033.08.088c0 .057-.032.09-.08.09h-.078zm-9.16.229c-.457 0-.795.246-.795.246l.09.261s.297-.222.658-.222c.335 0 .447.174.447.426c0 .085-.035.27-.035.27h-.143c-.6 0-1.484.155-1.484.917c0 .384.288.598.64.598c.518 0 .81-.512.805-.512h.008c-.022.317.14.465.397.465c.078 0 .164-.01.164-.01l.049-.265s-.04.01-.114.01c-.1 0-.205-.025-.205-.223c0-.2.219-1.018.219-1.297c0-.46-.284-.664-.701-.664m2.92 0c-.54 0-.888.427-.975.63h-.01a1.6 1.6 0 0 0 .074-.379c0-.123-.055-.195-.22-.195h-.418l-.05.266h.298c.07 0 .087.047.078.103l-.361 2.014h.295l.197-1.094c.095-.558.53-1.043 1-1.043c.243 0 .379.129.379.399c0 .265-.205 1.127-.205 1.34c0 .36.26.408.418.408c.073 0 .16-.01.16-.01l.049-.265s-.04.01-.11.01c-.104 0-.209-.02-.209-.223c0-.19.205-1.057.205-1.35c0-.393-.213-.611-.595-.611m2.53 0c-.726 0-1.378.649-1.378 1.459c0 .639.408 1.037 1.004 1.037c.557 0 .888-.356.888-.356l-.095-.265s-.313.332-.77.332c-.426 0-.722-.29-.722-.768c0-.649.53-1.15 1.039-1.15c.213 0 .51.09.474.312l-.031.176h.275l.043-.252c.066-.388-.43-.525-.726-.525m2.311 0c-.74 0-1.279.715-1.279 1.492c0 .601.392 1.004.992 1.004c.461 0 .822-.313.822-.313l-.091-.265s-.323.289-.719.289c-.461 0-.7-.327-.7-.739c0-.118.022-.218.022-.218h1.68s.06-.204.06-.389c0-.497-.247-.861-.787-.861m-10.058.056l-.047.266h.39l-.277 1.535c-.009.066-.023.126-.023.174c0 .374.262.418.427.418c.061 0 .153-.01.153-.01l.047-.266s-.036.01-.11.01c-.104 0-.207-.024-.207-.222a1 1 0 0 1 .012-.137l.322-1.768zm10.045.213c.287 0 .5.186.5.565c0 .094-.018.18-.018.18h-1.369c.157-.484.526-.745.887-.745M5.45 14.46a.25.25 0 1 0 0 .502a.25.25 0 1 0 0-.502m9.051.53h.127l-.022.103c-.095.412-.439.904-.847.904c-.292 0-.414-.175-.414-.379c0-.587.79-.629 1.156-.629m-9.568.404a.22.22 0 0 0-.22.216a.22.22 0 0 0 .22.22c.12 0 .216-.1.216-.22a.216.216 0 0 0-.216-.216m-.809.513a.21.21 0 0 0-.207.207c0 .114.093.205.207.205a.204.204 0 0 0 .205-.205a.206.206 0 0 0-.205-.207" /></svg>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div
-					class="card col-span-2 grid w-full grid-cols-2 overflow-hidden border border-gray-200 bg-base-100 shadow-xl">
-					<div class="card-body space-y-4 self-center">
-						<h3>Interests</h3>
-						<p class="z-10">
-							I do <b>webdev</b>, <b>stable diffusion</b> in my free time. Started webdev in 2000s in the era of xhtml &
-							php4.
-						</p>
-						<p>
-							I like the
-							<b>business side of tech</b>.
-						</p>
-					</div>
-					<div class="self-center">
-						<enhanced:img src={programming} alt="" class="translate-x-16 scale-150" />
-					</div>
-				</div>
-
-				<div
-					class="card relative col-span-2 grid w-full overflow-hidden border border-gray-200 bg-gradient-to-tl from-base-100 to-gray-50 shadow-xl xl:col-span-1">
-					<div>
-						<div class="card-body grid h-full content-center space-y-4">
-							<h3 class="">Playlist</h3>
-							<ul class="list text-xl">
-								<li>All-In Podcast</li>
-								<li>Primeagen</li>
-								<li>Theo</li>
-								<li>Fireship</li>
-								<li>Syntax</li>
-								<li>Lenny's Podcast</li>
-								<li>Olivio Sarikas</li>
-							</ul>
-							<enhanced:img src={spotify} alt="" class="absolute -bottom-20 -right-40 xl:bottom-0 xl:top-40" />
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<div class="break h-24 lg:h-80"></div>
-			<section class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
-				<div
-					class="navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1"
-					id="career">
-					<ResumeBro class="-mb-10" />
-					<div class="card-body">
-						<h2>Career</h2>
-					</div>
-				</div>
-				<div
-					class="card col-span-2 h-full min-h-96 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-3"
-					style="background: url({lego}); background-position: center 10%">
-					<div class="relative h-full w-full rounded-xl bg-black opacity-[0.3]"></div>
-					<div class="absolute left-0 right-0 top-14 mx-auto text-center text-2xl text-base-100">
-						I've worked for <span class="mx-3 text-4xl font-extrabold">{numYearsTotal} years</span> in the public service.
-						Here's a breakdown.
-					</div>
-				</div>
-				<div
-					class="card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-2">
-					<div class="card-body z-20 grid grid-cols-1 content-start gap-x-8 space-y-4 xl:grid-cols-3">
-						<h3 class="col-span-1 xl:col-span-3">
-							Tech <span class="text-xl text-gray-500">({percentMonthsTech}%)</span>
-						</h3>
-						<div>
-							<h4>Service Delivery Tech Team Lead</h4>
-							<p>Manage products, tech consultancy for citizen & employee services.</p>
-						</div>
-						<div>
-							<h4>Tech Infra Policy Team Lead</h4>
-							<p>Policies & funding for cloud, on-prem hosting, SG Tech Stack, endpoint devices, dev toolchains.</p>
-						</div>
-						<div>
-							<h4>Comms Tech Team Lead</h4>
-							<p>Developed & bought media analytic products. Led investments in NLP & CV research.</p>
-						</div>
-					</div>
-					<div>
-						<Stack class="absolute -bottom-[20rem] left-0 right-0 mx-auto" />
-					</div>
-				</div>
-				<div
-					class="card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
-					<div class="card-body space-y-4">
-						<h3>Comms <span class="text-xl text-gray-500">({percentMonthsComms}%)</span></h3>
-						<div>
-							<h4>Media Relations Officer</h4>
-							<p>Managed media and collaborated on unpaid features of MINDEF & SAF.</p>
-						</div>
-						<div>
-							<h4>Comms Strategist</h4>
-							<p>Crafted comms campaigns and strategies.</p>
-						</div>
-					</div>
-					<TextingBro class="-mb-0 -translate-y-0" />
-				</div>
-				<div
-					class="card col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1 xl:row-span-1">
-					<div class="card-body mb-4 space-y-4">
-						<h3>Policy <span class="text-xl text-gray-500">({percentMonthsPolicy}%)<span></span></span></h3>
-						<div>
-							<h4>NS Policy Officer</h4>
-							<p>
-								Did NS policies for sportsmen, leave, citizenship, exit control. Worked in Committee to Strengthen NS.
-							</p>
 						</div>
 					</div>
 					<div
-						class="flex h-36 items-end overflow-hidden p-0"
-						style="background: url('/trees-tree-svgrepo-com.svg'); background-repeat: repeat-x; background-position: top">
-						<div id="tank" class={animate}>
-							<TankSvg
-								onclick={() => {
-									animate = 'drive-right-r';
-								}} />
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<div class="break h-24 lg:h-80"></div>
-			<section class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
-				<div
-					class="navItem card z-10 col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1"
-					id="side">
-					<div class="card-body space-y-4 px-6">
-						<CodeTypingBro class="-mx-5 -mb-[2rem] -mt-[5rem]" />
-
-						<h2>Side Projects</h2>
-					</div>
-				</div>
-				<div class="card col-span-2 row-span-2 border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
-					<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
-						<div class="space-y-8">
-							<div class="place-self-center pb-4 pt-4">
-								<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude" /></a>
+						class="card col-span-2 row-span-1 min-h-48 w-full border border-gray-200 bg-[#57262D] bg-base-100 shadow-xl xl:col-span-1"
+						style="background-image: url({versus}); background-size: cover; background-position: center">
+						<div class="card-body grid pb-0">
+							<div>
+								<h3 class="text-center text-base-100">Work</h3>
 							</div>
-							<StackUsed framework="Sveltekit" library="Gsap, Tailwind" host="Cloudflare Pages" />
-							<p class="px-2">
-								I made
-								<span class="text-primary"
-									><a href="https://titude.app/" class="font-bold text-primary underline hover:text-secondary"
-										>Apptitude</a
-									></span
-								>, which gives me a clear and convenient way to distribute guides, notes, links, YouTube, organized
-								along tech competencies to share with my non-technical teammates.
-							</p>
-
-							<p class="px-2">
-								Kept it simple with bento grids, static site generation. Used JS objects pre-compilation instead of
-								heavier DB/markdown.
-							</p>
-						</div>
-						<div class="self-end">
-							<a href="https://titude.app/" class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
-								>Apptitude<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
-						</div>
-					</div>
-				</div>
-				<div class="card col-span-2 row-span-2 border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
-					<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
-						<div class="space-y-8">
-							<div class="place-self-center pb-4 pt-4">
-								<a href="https://appraize.zixian.dev/"
-									><h3 class="text-center text-6xl font-black text-purple-800">Appraize</h3></a>
+							<div class="mb-6 self-end">
+								<p class="text-center text-base-100">I fight bad policies & business requirements.</p>
 							</div>
-							<StackUsed
-								framework="Sveltekit"
-								library="SortableJS, Tailwind"
-								host="Ubuntu, Nginx, Coolify, NodeJS, Postgres, Turso" />
-							<p class="px-2">
-								<a href="https://appraize.zixian.dev/" class="font-bold text-primary underline hover:text-secondary"
-									>Appraize</a> makes ranking sessions easier via drag & drop.
-							</p>
-							<p class="px-2">
-								Also comes with a mini dashboard, more responsive UI, db backend (Drizzle/Postgres), sessions, filters,
-								keyboard shortcut, csv file upload, form actions/validation.
-							</p>
-						</div>
-						<div class="self-end">
-							<a
-								href="https://appraize.zixian.dev/"
-								class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
-								>Appraize<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 						</div>
 					</div>
-				</div>
-				<div
-					class="card col-span-2 row-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
-					<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
-						<div class="space-y-8">
-							<div class="flex justify-center">
-								<a href="https://rankamate.zixian.dev/"
-									><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="" /></a>
+					<div
+						class="card col-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
+						<div class="card-body relative max-h-96 space-y-4">
+							<h3>Education</h3>
+							<p>
+								Studied <b>Political Science</b>. Loved comparative & money politics. Wish I could undo all the IR I did
+								prior.
+							</p>
+							<enhanced:img src={study} alt="Studies" class="-mb-6"></enhanced:img>
+						</div>
+					</div>
+					<div class="card col-span-2 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
+						<div class="card-body space-y-4 overflow-hidden">
+							<h3>Certification</h3>
+							<div class="space-y-2 pt-2">
+								<ul class="flex flex-wrap space-x-6 xl:grid xl:space-x-0 xl:space-y-6">
+									<li class="">
+										<a
+											href="https://www.coursera.org/account/accomplishments/specialization/D9EZKV26D69B"
+											class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
+											>Meta Back-end Dev</a>
+									</li>
+									<li>
+										<a
+											href="https://www.coursera.org/account/accomplishments/specialization/certificate/MVCFEP4ZHVSV"
+											class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
+											>AWS Fundamentals</a>
+									</li>
+									<li>
+										<a
+											href="https://www.credly.com/badges/369dd8b6-19bd-45ba-8272-2b997111c2b7/linked_in_profile"
+											class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
+											>Google UX</a>
+									</li>
+									<li>
+										<a
+											href="https://bcert.me/bc/html/show-badge.html?b=twwbrxwh"
+											class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
+											>Certified ScrumMaster</a>
+									</li>
+								</ul>
 							</div>
-							<StackUsed framework="Django" library="HTMX, SortableJS, Bootstrap" host="Ubuntu, Nginx, Gunicorn" />
-							<p class="px-2">
-								<a href="https://rankamate.zixian.dev/" class="font-bold text-primary underline hover:text-secondary"
-									>Rank-a-Mate</a> was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.
-							</p>
-							<p class="px-2">
-								UX is generally the same as a basic CRUD webapp on a JS framework, but HTMX gives a lot of interactivity
-								for such a small bundle size. I enjoyed the HTMX DX.
-							</p>
-						</div>
-						<div class="self-end">
-							<a
-								href="https://rankamate.zixian.dev/"
-								class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
-								>Rank-a-Mate<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
-						</div>
-					</div>
-				</div>
-
-				<div
-					class="card card-side col-span-2 row-span-2 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
-					<div class="group relative grid h-full items-center gap-y-5 p-4 2xl:p-8">
-						<div class="space-y-8">
-							<div class="avatar flex justify-center pb-4">
-								<div class="w-56 rounded-full">
-									<a href="https://django.zixian.dev/eatyourmeds/"
-										><img src={eatYourMedsLogo} alt="Eat Your Meds!" /></a>
+							<div class="containerC relative -m-12 h-36">
+								<div class="circle0"></div>
+								<div class="circle"></div>
+								<div class="circle2"></div>
+								<div
+									id="google"
+									class="absolute left-48 top-6 z-10 rounded-full border-2 border-gray-200 bg-pink-200 p-1 shadow-md">
+									<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
+										><path
+											fill="none"
+											stroke="#888888"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M20.945 11a9 9 0 1 1-3.284-5.997l-2.655 2.392A5.5 5.5 0 1 0 17.125 14H13v-3z" /></svg>
+								</div>
+								<div
+									id="aws"
+									class="absolute left-36 top-20 z-10 rounded-full border-2 border-gray-200 bg-pink-200 p-1 shadow-md">
+									<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
+										><path
+											fill="none"
+											stroke="#888888"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M17 18.5a15.198 15.198 0 0 1-7.37 1.44A14.62 14.62 0 0 1 3 17m16.5 4c.907-1.411 1.451-3.323 1.5-5c-1.197-.773-2.577-.935-4-1M3 11V6.5a1.5 1.5 0 0 1 3 0V11M3 9h3m3-4l1.2 6L12 7l1.8 4L15 5m3 5.25c0 .414.336.75.75.75H20a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1h-1a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.25a.75.75 0 0 1 .75.75" /></svg>
+								</div>
+								<div
+									id="meta"
+									class="absolute left-20 top-32 z-10 rounded-full border-2 border-gray-200 bg-pink-200 p-1 shadow-md">
+									<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
+										><path
+											fill="none"
+											stroke="#888888"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M12 10.174C13.766 7.39 15.315 6 16.648 6c2 0 3.263 2.213 4 5.217c.704 2.869.5 6.783-2 6.783c-1.114 0-2.648-1.565-4.148-3.652a27.627 27.627 0 0 1-2.5-4.174m0 0C10.234 7.39 8.685 6 7.352 6c-2 0-3.263 2.213-4 5.217c-.704 2.869-.5 6.783 2 6.783C6.466 18 8 16.435 9.5 14.348c1-1.391 1.833-2.783 2.5-4.174" /></svg>
+								</div>
+								<div
+									id="coursera"
+									class="absolute left-72 top-20 z-10 rounded-full border-2 border-gray-200 bg-pink-200 p-1 shadow-md">
+									<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 32 32"
+										><path
+											fill="#888888"
+											d="M31.99 15.74a4.181 4.181 0 0 0-.026-.37v-.005a7.929 7.929 0 0 0-1.318-3.75a8.18 8.18 0 0 0-1.156-1.385a8.307 8.307 0 0 0-2.188-1.51a9.381 9.381 0 0 0-4.068-.891a9.821 9.821 0 0 0-3.396.594a8.465 8.465 0 0 0-2.427 1.328c-.151.125-.302.25-.443.385l-.115.115l-.156.167l-.109.109l-.188.198c-.141.156-.271.313-.396.464l-.005-.005c-.255.307-.49.635-.667.922c-.12.188-.234.38-.344.573l-1.531 3.089h.005l-.083.161l-.167.339c-.333.682-.693 1.359-1.094 1.917c-.896.979-1.906 1.464-3.208 1.464c-.089 0-.182-.005-.276-.01c-.786-.031-1.458-.219-2.052-.573a3.425 3.425 0 0 1-1.328-1.37a3.566 3.566 0 0 1-.432-1.828v-.047c.042-1.01.427-1.802 1.208-2.479c.188-.167.385-.302.594-.427c.026-.016.057-.031.083-.047c.583-.318 1.24-.474 1.99-.474l.234.005c1.203.047 2.125.422 2.865 1.151l2.307-4.151a8.973 8.973 0 0 0-1.865-.943c-.026-.01-.052-.026-.078-.031c-.083-.031-.167-.063-.25-.089a9.81 9.81 0 0 0-2.286-.464c-.021 0-.042-.005-.063-.005c-.12-.01-.245-.021-.365-.026c-.13-.005-.266-.01-.396-.01h-.073a9.314 9.314 0 0 0-4.036.891a8.238 8.238 0 0 0-3.339 2.891a8.008 8.008 0 0 0-1.354 4.505c-.005 2.089.755 3.917 2.266 5.458c1.583 1.615 3.63 2.484 6.094 2.589c.156.005.313.01.469.01c1.391 0 2.682-.25 3.839-.745c.286-.125.568-.266.854-.427c.156-.089.302-.188.453-.286l.104-.073l.182-.125c.219-.156.422-.328.625-.51l.068-.068c.12-.109.234-.224.344-.339l.417-.469l.156-.198l.078-.109l.073-.104c.615-1.031 2.62-4.802 2.62-4.802v-.005l.12-.229l.099-.182c.292-.536.505-.917.792-1.318l.005-.016c.656-.953 1.792-1.635 3.13-1.75c2.24-.193 4.203 1.281 4.38 3.286c.182 2.01-1.49 3.797-3.729 3.99c-.453.036-.906.01-1.349-.089l-.01.005c-1.646-.344-2.693-1.536-3.208-2.078l-2.156 3.969s.672.672 1.13 1.01a8.75 8.75 0 0 0 1.531.875a9.525 9.525 0 0 0 3.781.786c.161 0 .13 0 .297-.01c2.458-.099 4.651-1.042 6.234-2.656c1.495-1.536 2.307-3.286 2.318-5.359v-.063z" /></svg>
+								</div>
+								<div
+									class="absolute -bottom-14 right-28 z-10 rounded-full border-2 border-gray-200 bg-pink-200 p-1 shadow-md">
+									<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
+										><path
+											fill="#888888"
+											d="M1.611 7.684a.3.3 0 1 0 .34.254a.3.3 0 0 0-.34-.254m.88.002a.325.325 0 0 0-.296.324a.325.325 0 0 0 .327.326a.325.325 0 0 0 .324-.326a.325.325 0 0 0-.325-.324zm-1.665.392a.275.275 0 0 0-.232.31c.022.15.16.253.31.231a.27.27 0 0 0 .23-.309a.273.273 0 0 0-.308-.232m2.086.375a.35.35 0 0 0 .35.35a.35.35 0 0 0 .347-.35a.35.35 0 0 0-.348-.347a.35.35 0 0 0-.349.347m3.965.027c-.613 0-1.17.34-1.17.989c0 .999 1.344.734 1.344 1.435c0 .36-.287.611-.692.611c-.296 0-.626-.098-.574-.392l.047-.262h-.4l-.061.332c-.096.564.536.744.932.744c.643 0 1.195-.397 1.195-1.06c0-1.037-1.344-.768-1.344-1.436c0-.336.297-.545.666-.545c.218 0 .513.072.469.3l-.04.232h.401l.07-.362c.083-.43-.482-.586-.843-.586m-6.541.287a.245.245 0 0 0-.207.278a.244.244 0 0 0 .277.205a.243.243 0 0 0 .207-.275a.246.246 0 0 0-.277-.207m3.326.127a.367.367 0 0 0-.31.416a.367.367 0 0 0 .415.311a.367.367 0 0 0 .311-.416a.367.367 0 0 0-.416-.31m5.664.534c-.778 0-1.4.68-1.4 1.457c0 .625.403 1.052 1.047 1.052c.578 0 .914-.355.914-.355l-.121-.355s-.315.312-.754.312c-.41 0-.657-.27-.657-.687c0-.554.448-1.028.926-1.028c.209 0 .452.085.422.28l-.03.162h.374l.052-.276c.07-.426-.455-.562-.773-.562m7.625 0c-.413 0-.768.369-.873.582h-.01c.03-.085.067-.272.067-.328c0-.128-.066-.198-.24-.198h-.497l-.064.356h.273c.07 0 .087.036.078.097l-.347 1.944h.422l.191-1.07c.087-.474.405-.967.826-.967c.244 0 .315.138.315.332c0 .08-.019.174-.032.27l-.255 1.435h.42l.197-1.096c.078-.46.391-.941.8-.941c.253 0 .32.137.32.345c0 .228-.185 1.028-.185 1.25c0 .408.287.45.483.45c.104 0 .187-.008.187-.008l.065-.356s-.045.01-.106.01c-.109 0-.195-.03-.195-.209c0-.19.191-.981.191-1.266c0-.407-.229-.632-.603-.632c-.366 0-.696.255-.865.582h-.01c-.022-.38-.2-.582-.553-.582m-4.963.027c-.348 0-.643.298-.79.639h-.01c.034-.114.077-.345.077-.407c0-.137-.064-.203-.234-.203h-.496l-.07.354h.275c.074 0 .087.048.078.105l-.343 1.938h.421l.157-.89c.095-.55.46-1.087.865-1.087c.056 0 .096.011.117.016l.084-.455a1 1 0 0 0-.13-.01m.492.03l-.066.353h.365l-.203 1.166a1.6 1.6 0 0 0-.031.303c0 .45.282.63.617.63c.461 0 .767-.328.91-.574h.008c-.03.36.144.526.44.526a3 3 0 0 0 .2-.008l.065-.356s-.04.01-.105.01c-.109 0-.196-.038-.196-.209a1 1 0 0 1 .014-.146l.305-1.696h-.787l-.067.354h.365l-.129.734c-.078.455-.435.947-.875.947c-.247 0-.33-.127-.33-.336c0-.075.014-.174.036-.273l.252-1.426zM.193 9.57a.226.226 0 0 0-.191.256a.23.23 0 0 0 .258.192a.225.225 0 0 0 .191-.256a.23.23 0 0 0-.258-.192m.219.778a.19.19 0 0 0-.162.216a.193.193 0 0 0 .219.162a.19.19 0 0 0 .162-.216a.194.194 0 0 0-.219-.162m.494.648a.166.166 0 0 0-.14.188a.164.164 0 0 0 .187.138a.166.166 0 0 0 .14-.187a.164.164 0 0 0-.187-.139m2.487.22a.401.401 0 1 0 0 .803a.403.403 0 0 0 .402-.402c0-.221-.18-.4-.402-.4m-1.811.077a.157.157 0 0 0-.145.156a.157.157 0 0 0 .159.158a.157.157 0 0 0 .156-.158a.157.157 0 0 0-.156-.156zm.672.092a.436.436 0 0 0-.418.435a.436.436 0 1 0 .435-.435zm2.205.175a.366.366 0 0 0-.365.368c0 .202.163.367.365.367a.367.367 0 0 0 .367-.367a.37.37 0 0 0-.367-.368m-3.065.51a.466.466 0 0 0-.466.467c0 .258.208.467.466.467a.466.466 0 0 0 .467-.467a.466.466 0 0 0-.467-.467m3.858.323a.32.32 0 0 0-.318.32c0 .177.14.32.318.32a.32.32 0 0 0 .32-.32a.32.32 0 0 0-.32-.32m2.812.482L6.49 15.93h-.308l-.05.275h.98l.052-.275h-.348l.44-.858h1.191l.135.858h-.354l-.046.275h.964l.05-.275h-.31l-.484-3.055zm1.684 0l-.049.266h.393l-.44 2.466a1 1 0 0 0-.021.18c0 .374.256.432.426.432c.07 0 .152-.014.152-.014l.047-.275s-.034.01-.108.01c-.104 0-.209-.015-.209-.214c0-.037.01-.1.018-.156l.478-2.695zm1.162 0l-.049.266h.39l-.437 2.466a1 1 0 0 0-.023.18c0 .374.258.432.428.432c.07 0 .152-.014.152-.014l.047-.275s-.034.01-.108.01c-.104 0-.209-.015-.209-.214c0-.037.01-.1.018-.156l.477-2.695zm1.639 0l-.074.402h.336l.074-.402zm-11.592.299a.493.493 0 0 0-.492.492c0 .272.22.49.492.49a.49.49 0 0 0 .492-.49a.493.493 0 0 0-.492-.492m22.576.039c-.256 0-.463.23-.463.518c0 .287.207.517.463.517c.26 0 .467-.23.467-.517c0-.289-.208-.518-.467-.518m-15.355.004h.008s0 .104.017.213l.21 1.363H7.39l.703-1.363c.052-.11.084-.213.084-.213m15.355.092c.21 0 .371.184.371.421s-.161.422-.37.422c-.208 0-.368-.185-.368-.422s.16-.422.367-.422m-17.945.097a.297.297 0 0 0-.297.297a.298.298 0 0 0 .596 0a.3.3 0 0 0-.3-.297m17.787.055v.535h.092v-.207h.08l.092.207h.101l-.094-.197c-.011-.024-.017-.03-.017-.03v-.003c.04-.012.09-.059.09-.141c0-.1-.062-.164-.155-.164zm.092.076h.078c.048 0 .08.033.08.088c0 .057-.032.09-.08.09h-.078zm-9.16.229c-.457 0-.795.246-.795.246l.09.261s.297-.222.658-.222c.335 0 .447.174.447.426c0 .085-.035.27-.035.27h-.143c-.6 0-1.484.155-1.484.917c0 .384.288.598.64.598c.518 0 .81-.512.805-.512h.008c-.022.317.14.465.397.465c.078 0 .164-.01.164-.01l.049-.265s-.04.01-.114.01c-.1 0-.205-.025-.205-.223c0-.2.219-1.018.219-1.297c0-.46-.284-.664-.701-.664m2.92 0c-.54 0-.888.427-.975.63h-.01a1.6 1.6 0 0 0 .074-.379c0-.123-.055-.195-.22-.195h-.418l-.05.266h.298c.07 0 .087.047.078.103l-.361 2.014h.295l.197-1.094c.095-.558.53-1.043 1-1.043c.243 0 .379.129.379.399c0 .265-.205 1.127-.205 1.34c0 .36.26.408.418.408c.073 0 .16-.01.16-.01l.049-.265s-.04.01-.11.01c-.104 0-.209-.02-.209-.223c0-.19.205-1.057.205-1.35c0-.393-.213-.611-.595-.611m2.53 0c-.726 0-1.378.649-1.378 1.459c0 .639.408 1.037 1.004 1.037c.557 0 .888-.356.888-.356l-.095-.265s-.313.332-.77.332c-.426 0-.722-.29-.722-.768c0-.649.53-1.15 1.039-1.15c.213 0 .51.09.474.312l-.031.176h.275l.043-.252c.066-.388-.43-.525-.726-.525m2.311 0c-.74 0-1.279.715-1.279 1.492c0 .601.392 1.004.992 1.004c.461 0 .822-.313.822-.313l-.091-.265s-.323.289-.719.289c-.461 0-.7-.327-.7-.739c0-.118.022-.218.022-.218h1.68s.06-.204.06-.389c0-.497-.247-.861-.787-.861m-10.058.056l-.047.266h.39l-.277 1.535c-.009.066-.023.126-.023.174c0 .374.262.418.427.418c.061 0 .153-.01.153-.01l.047-.266s-.036.01-.11.01c-.104 0-.207-.024-.207-.222a1 1 0 0 1 .012-.137l.322-1.768zm10.045.213c.287 0 .5.186.5.565c0 .094-.018.18-.018.18h-1.369c.157-.484.526-.745.887-.745M5.45 14.46a.25.25 0 1 0 0 .502a.25.25 0 1 0 0-.502m9.051.53h.127l-.022.103c-.095.412-.439.904-.847.904c-.292 0-.414-.175-.414-.379c0-.587.79-.629 1.156-.629m-9.568.404a.22.22 0 0 0-.22.216a.22.22 0 0 0 .22.22c.12 0 .216-.1.216-.22a.216.216 0 0 0-.216-.216m-.809.513a.21.21 0 0 0-.207.207c0 .114.093.205.207.205a.204.204 0 0 0 .205-.205a.206.206 0 0 0-.205-.207" /></svg>
 								</div>
 							</div>
-							<StackUsed framework="Django" library="HTMX, Bootstrap" host="Ubuntu, Nginx, Gunicorn" />
-						</div>
-
-						<p class="px-2">
-							<span class="font-bold text-primary underline hover:text-secondary"
-								><a href="https://django.zixian.dev/eatyourmeds/">Eat Your Medicine!</a></span>
-							was a try at planning dose timings and getting medicine info.
-						</p>
-						<p class="px-2">
-							It was tedious for both of us parents to record/coord medicine stuff and sync with one another.
-						</p>
-
-						<p class="px-2">Used Django for CRUD & auth. Sprinkled HTMX and datepicker.js for user interactions.</p>
-						<div class="self-end">
-							<a
-								href="https://django.zixian.dev/eatyourmeds/"
-								class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
-								>Eat Your Meds!<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 						</div>
 					</div>
-				</div>
-				<div class="col-span-2 grid gap-7 xl:col-span-3 xl:grid-cols-2">
-					<div class="card w-full border border-gray-200 bg-base-100 shadow-xl">
+					<div
+						class="card col-span-2 grid w-full grid-cols-2 overflow-hidden border border-gray-200 bg-base-100 shadow-xl">
+						<div class="card-body space-y-4 self-center">
+							<h3>Interests</h3>
+							<p class="z-10">
+								I do <b>webdev</b>, <b>stable diffusion</b> in my free time. Started webdev in 2000s in the era of xhtml
+								& php4.
+							</p>
+							<p>
+								I like the
+								<b>business side of tech</b>.
+							</p>
+						</div>
+						<div class="self-center">
+							<enhanced:img src={programming} alt="" class="translate-x-16 scale-150" />
+						</div>
+					</div>
+
+					<div
+						class="card relative col-span-2 grid w-full overflow-hidden border border-gray-200 bg-gradient-to-tl from-base-100 to-gray-50 shadow-xl xl:col-span-1">
+						<div>
+							<div class="card-body grid h-full content-center space-y-4">
+								<h3 class="">Playlist</h3>
+								<ul class="list text-xl">
+									<li>All-In Podcast</li>
+									<li>Primeagen</li>
+									<li>Theo</li>
+									<li>Fireship</li>
+									<li>Syntax</li>
+									<li>Lenny's Podcast</li>
+									<li>Olivio Sarikas</li>
+								</ul>
+								<enhanced:img src={spotify} alt="" class="absolute -bottom-20 -right-40 xl:bottom-0 xl:top-40" />
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="break h-24 lg:h-80"></div>
+				<section class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
+					<div
+						class="navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1"
+						id="career">
+						<ResumeBro class="-mb-10" />
+						<div class="card-body">
+							<h2>Career</h2>
+						</div>
+					</div>
+					<div
+						class="card col-span-2 h-full min-h-96 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-3"
+						style="background: url({lego}); background-position: center 10%">
+						<div class="relative h-full w-full rounded-xl bg-black opacity-[0.3]"></div>
+						<div class="absolute left-0 right-0 top-14 mx-auto text-center text-2xl text-base-100">
+							I've worked for <span class="mx-3 text-4xl font-extrabold">{numYearsTotal} years</span> in the public service.
+							Here's a breakdown.
+						</div>
+					</div>
+					<div
+						class="card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-2">
+						<div class="card-body z-20 grid grid-cols-1 content-start gap-x-8 space-y-4 xl:grid-cols-3">
+							<h3 class="col-span-1 xl:col-span-3">
+								Tech <span class="text-xl text-gray-500">({percentMonthsTech}%)</span>
+							</h3>
+							<div>
+								<h4>Service Delivery Tech Team Lead</h4>
+								<p>Manage products, tech consultancy for citizen & employee services.</p>
+							</div>
+							<div>
+								<h4>Tech Infra Policy Team Lead</h4>
+								<p>Policies & funding for cloud, on-prem hosting, SG Tech Stack, endpoint devices, dev toolchains.</p>
+							</div>
+							<div>
+								<h4>Comms Tech Team Lead</h4>
+								<p>Developed & bought media analytic products. Led investments in NLP & CV research.</p>
+							</div>
+						</div>
+						<div>
+							<Stack class="absolute -bottom-[20rem] left-0 right-0 mx-auto hue-rotate-30" />
+						</div>
+					</div>
+					<div
+						class="card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
+						<div class="card-body space-y-4">
+							<h3>Comms <span class="text-xl text-gray-500">({percentMonthsComms}%)</span></h3>
+							<div>
+								<h4>Media Relations Officer</h4>
+								<p>Managed media and collaborated on unpaid features of MINDEF & SAF.</p>
+							</div>
+							<div>
+								<h4>Comms Strategist</h4>
+								<p>Crafted comms campaigns and strategies.</p>
+							</div>
+						</div>
+						<TextingBro class="-mb-0 -translate-y-0" />
+					</div>
+					<div
+						class="card col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1 xl:row-span-1">
+						<div class="card-body mb-4 space-y-4">
+							<h3>Policy <span class="text-xl text-gray-500">({percentMonthsPolicy}%)<span></span></span></h3>
+							<div>
+								<h4>NS Policy Officer</h4>
+								<p>
+									Did NS policies for sportsmen, leave, citizenship, exit control. Worked in Committee to Strengthen NS.
+								</p>
+							</div>
+						</div>
+						<div
+							class="flex h-36 items-end overflow-hidden p-0"
+							style="background: url('/trees-tree-svgrepo-com.svg'); background-repeat: repeat-x; background-position: top">
+							<div id="tank" class={animate}>
+								<TankSvg
+									onclick={() => {
+										animate = 'drive-right-r';
+									}} />
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="break h-24 lg:h-80"></div>
+				<section class="grid auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
+					<div
+						class="navItem card z-10 col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1"
+						id="side">
+						<div class="card-body space-y-4 px-6">
+							<CodeTypingBro class="-mx-5 -mb-[2rem] -mt-[5rem]" />
+
+							<h2>Side Projects</h2>
+						</div>
+					</div>
+					<div class="card col-span-2 row-span-2 border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
 						<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
 							<div class="space-y-8">
-								<div class="flex justify-center pb-4">
-									<a href="https://old.btonomics.com"
-										><enhanced:img src={oldBtonomicsLogo} alt="Old Btonomics.com" /></a>
+								<div class="place-self-center pb-4 pt-4">
+									<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude" /></a>
 								</div>
-								<StackUsed framework="Wordpress" host="Ubuntu, Nginx, PHP-FPM, Apache, Bunny.net" />
+								<StackUsed framework="Sveltekit" library="Gsap, Tailwind" host="Cloudflare Pages" />
 								<p class="px-2">
-									In 2018, I started
-									<span class="font-bold text-primary underline hover:text-secondary"
-										><a href="https://old.btonomics.com/">BTOnomics</a></span
-									>, a Wordpress blog on home renovation. WordPress was an obvious choice then and the instance is still
-									kept alive owing to nostalgia.
+									I made
+									<span class="text-primary"
+										><a href="https://titude.app/" class="font-bold text-primary underline hover:text-secondary"
+											>Apptitude</a
+										></span
+									>, which gives me a clear and convenient way to distribute guides, notes, links, YouTube, organized
+									along tech competencies to share with my non-technical teammates.
 								</p>
 
 								<p class="px-2">
-									Experimented with themes & plug-ins, tweaking, optimizing. Wrote organic content that people liked and
-									cut page load speeds, esp TTFB/LCP.
+									Kept it simple with bento grids, static site generation. Used JS objects pre-compilation instead of
+									heavier DB/markdown.
+								</p>
+							</div>
+							<div class="self-end">
+								<a href="https://titude.app/" class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
+									>Apptitude<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+							</div>
+						</div>
+					</div>
+					<div class="card col-span-2 row-span-2 border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
+						<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
+							<div class="space-y-8">
+								<div class="place-self-center pb-4 pt-4">
+									<a href="https://appraize.zixian.dev/"
+										><h3 class="text-center text-6xl font-black text-purple-800">Appraize</h3></a>
+								</div>
+								<StackUsed
+									framework="Sveltekit"
+									library="SortableJS, Tailwind"
+									host="Ubuntu, Nginx, Coolify, NodeJS, Postgres, Turso" />
+								<p class="px-2">
+									<a href="https://appraize.zixian.dev/" class="font-bold text-primary underline hover:text-secondary"
+										>Appraize</a> makes ranking sessions easier via drag & drop.
+								</p>
+								<p class="px-2">
+									Also comes with a mini dashboard, more responsive UI, db backend (Drizzle/Postgres), sessions,
+									filters, keyboard shortcut, csv file upload, form actions/validation.
 								</p>
 							</div>
 							<div class="self-end">
 								<a
-									href="https://old.btonomics.com"
+									href="https://appraize.zixian.dev/"
 									class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
-									>Old Btonomics<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+									>Appraize<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 							</div>
 						</div>
 					</div>
-					<div class="card w-full border border-gray-200 bg-base-100 shadow-xl">
+					<div
+						class="card col-span-2 row-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
 						<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
 							<div class="space-y-8">
-								<h3 class="pb-4 text-center text-4xl font-black text-base-content">
-									<a href="https://btonomics.com">BTOnomics v2</a>
-								</h3>
-								<StackUsed framework="AstroJS" library="Tailwind, Pagefind" host="Cloudflare Pages" />
+								<div class="flex justify-center">
+									<a href="https://rankamate.zixian.dev/"
+										><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="" /></a>
+								</div>
+								<StackUsed framework="Django" library="HTMX, SortableJS, Bootstrap" host="Ubuntu, Nginx, Gunicorn" />
 								<p class="px-2">
-									Migrated <span class="font-bold text-primary underline hover:text-secondary"
-										><a href="https://btonomics.com/">BTOnomics</a></span> to AstroJS, in part to try it. Enjoyed it. I used
-									ChatGPT to convert WordPress html/shortcode to markdown, which was smooth after a few tries.
+									<a href="https://rankamate.zixian.dev/" class="font-bold text-primary underline hover:text-secondary"
+										>Rank-a-Mate</a> was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.
 								</p>
-
 								<p class="px-2">
-									Native markdown support, native view transitions, great image tools, really fast speeds. Haven't felt
-									the need to reach into Svelte or React.
+									UX is generally the same as a basic CRUD webapp on a JS framework, but HTMX gives a lot of
+									interactivity for such a small bundle size. I enjoyed the HTMX DX.
 								</p>
 							</div>
 							<div class="self-end">
-								<a href="https://btonomics.com" class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
-									>BTOnomics<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+								<a
+									href="https://rankamate.zixian.dev/"
+									class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
+									>Rank-a-Mate<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+
+					<div
+						class="card card-side col-span-2 row-span-2 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
+						<div class="group relative grid h-full items-center gap-y-5 p-4 2xl:p-8">
+							<div class="space-y-8">
+								<div class="avatar flex justify-center pb-4">
+									<div class="w-56 rounded-full">
+										<a href="https://django.zixian.dev/eatyourmeds/"
+											><img src={eatYourMedsLogo} alt="Eat Your Meds!" /></a>
+									</div>
+								</div>
+								<StackUsed framework="Django" library="HTMX, Bootstrap" host="Ubuntu, Nginx, Gunicorn" />
+							</div>
+
+							<p class="px-2">
+								<span class="font-bold text-primary underline hover:text-secondary"
+									><a href="https://django.zixian.dev/eatyourmeds/">Eat Your Medicine!</a></span>
+								was a try at planning dose timings and getting medicine info.
+							</p>
+							<p class="px-2">
+								It was tedious for both of us parents to record/coord medicine stuff and sync with one another.
+							</p>
+
+							<p class="px-2">Used Django for CRUD & auth. Sprinkled HTMX and datepicker.js for user interactions.</p>
+							<div class="self-end">
+								<a
+									href="https://django.zixian.dev/eatyourmeds/"
+									class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
+									>Eat Your Meds!<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-span-2 grid gap-7 xl:col-span-3 xl:grid-cols-2">
+						<div class="card w-full border border-gray-200 bg-base-100 shadow-xl">
+							<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
+								<div class="space-y-8">
+									<div class="flex justify-center pb-4">
+										<a href="https://old.btonomics.com"
+											><enhanced:img src={oldBtonomicsLogo} alt="Old Btonomics.com" /></a>
+									</div>
+									<StackUsed framework="Wordpress" host="Ubuntu, Nginx, PHP-FPM, Apache, Bunny.net" />
+									<p class="px-2">
+										In 2018, I started
+										<span class="font-bold text-primary underline hover:text-secondary"
+											><a href="https://old.btonomics.com/">BTOnomics</a></span
+										>, a Wordpress blog on home renovation. WordPress was an obvious choice then and the instance is
+										still kept alive owing to nostalgia.
+									</p>
+
+									<p class="px-2">
+										Experimented with themes & plug-ins, tweaking, optimizing. Wrote organic content that people liked
+										and cut page load speeds, esp TTFB/LCP.
+									</p>
+								</div>
+								<div class="self-end">
+									<a
+										href="https://old.btonomics.com"
+										class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
+										>Old Btonomics<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+								</div>
+							</div>
+						</div>
+						<div class="card w-full border border-gray-200 bg-base-100 shadow-xl">
+							<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
+								<div class="space-y-8">
+									<h3 class="pb-4 text-center text-4xl font-black text-base-content">
+										<a href="https://btonomics.com">BTOnomics v2</a>
+									</h3>
+									<StackUsed framework="AstroJS" library="Tailwind, Pagefind" host="Cloudflare Pages" />
+									<p class="px-2">
+										Migrated <span class="font-bold text-primary underline hover:text-secondary"
+											><a href="https://btonomics.com/">BTOnomics</a></span> to AstroJS, in part to try it. Enjoyed it. I
+										used ChatGPT to convert WordPress html/shortcode to markdown, which was smooth after a few tries.
+									</p>
+
+									<p class="px-2">
+										Native markdown support, native view transitions, great image tools, really fast speeds. Haven't
+										felt the need to reach into Svelte or React.
+									</p>
+								</div>
+								<div class="self-end">
+									<a href="https://btonomics.com" class="btn w-full bg-lime-600 text-xl text-base-100 hover:bg-lime-800"
+										>BTOnomics<TablerArrowNarrowRight class="ms-2 h-[1.5em] w-[1.5em]" /></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
 			<WebsiteFooter />
 		</div>
 	</div>

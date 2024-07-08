@@ -2,6 +2,10 @@
 	let ghostColor = $state('');
 </script>
 
+<svelte:head>
+	<meta name="keywords" content="Zixian, blog" />
+</svelte:head>
+
 <div id="container" class="grid min-h-dvh justify-center p-6">
 	<div class="lg:max-w-[1024px]">
 		<div class="text-center text-4xl lg:text-6xl xl:text-8xl">

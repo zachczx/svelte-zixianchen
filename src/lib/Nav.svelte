@@ -95,12 +95,12 @@
 	}
 
 	a[aria-current='page']::before {
-		--size: 6px;
+		--size: 8px;
 		content: '';
 		width: 0;
 		height: 0;
 		position: absolute;
-		top: 0;
+		top: -1px;
 		left: calc(50% - var(--size));
 		border: var(--size) solid transparent;
 		border-top: var(--size) solid #1e293b;

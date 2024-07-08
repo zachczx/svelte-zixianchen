@@ -2,6 +2,7 @@
 title: 'Making Pagefind Work on Sveltekit'
 description: "I got Pagefind to work on Sveltekit, couldn't find relevant guides, so I wrote this."
 date: '2024-06-27'
+date_updated: ''
 tags:
   - SvelteKit
   - SvelteJS
@@ -35,10 +36,10 @@ This is how I eventually got it to work.
     import { sveltekit } from '@sveltejs/kit/vite';
     import { enhancedImages } from '@sveltejs/enhanced-img';
     import { defineConfig } from 'vite';
-    import pagefind from 'vite-plugin-pagefind';
+    import pagefind from 'vite-plugin-pagefind'; // [!code highlight]
 
     export default defineConfig({
-    	plugins: [pagefind(), enhancedImages(), sveltekit()],
+    	plugins: [pagefind(), enhancedImages(), sveltekit()], // [!code highlight]
     });
     ```
 
