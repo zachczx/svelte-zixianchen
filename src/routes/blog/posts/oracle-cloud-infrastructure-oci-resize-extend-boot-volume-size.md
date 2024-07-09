@@ -9,6 +9,7 @@ tags:
   - OCI
   - Ubuntu
 published: true
+slug: oracle-cloud-infrastructure-oci-resize-extend-boot-volume-size
 ---
 
 I'm using [Oracle Cloud Infra (OCI)'s](https://www.oracle.com/sg/cloud/free/#free-cloud-trial) generous free tier to deploy Coolify and I had a separate VM for my Python/Django stuff from some time back. Though I really liked the feeling of apt update / apt upgrade, it made sense to manage everything within Coolify.

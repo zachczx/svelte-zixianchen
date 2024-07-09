@@ -286,12 +286,16 @@
 						<div class="card-body space-y-4 self-center">
 							<h3>Interests</h3>
 							<p class="z-10">
-								I do <b>webdev</b>, <b>stable diffusion</b> in my free time. Started webdev in 2000s in the era of xhtml
-								& php4.
+								<b>Webdev</b> since 2000s (XHTML, PHP4), back for Wordpress, then Javascript and Python frameworks.
 							</p>
-							<p>
-								I like the
-								<b>business side of tech</b>.
+							<p class="z-10">
+								<b>Building PCs</b>, love the value but hate the cable mgmt.
+							</p>
+							<p class="z-10">
+								<b>Tech business & entrepreneurship</b>, listening to people talk problems.
+							</p>
+							<p class="z-10">
+								<b>Stable diffusion LORAs</b> to get free Korean AI portraits
 							</p>
 						</div>
 						<div class="self-center">

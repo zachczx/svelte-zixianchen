@@ -2,10 +2,12 @@
 title: 'Using Postgres on Coolify and Internal Database URL'
 description: 'I wrote how to do Postgres on Coolify, using the internal database URL.'
 date: '2024-06-29'
+date_updated: ''
 tags:
   - Coolify
   - Postgres
 published: true
+slug: using-postgres-coolify-internal-database-url
 ---
 
 I like using [Coolify](https://coolify.io/) now to deploy my Sveltekit + Postgres apps on NodeJS. The docs are somewhat barebones so it took some getting used to, coming from the likes of Svelte, Django, Drizzle which have comprehensive docs.
