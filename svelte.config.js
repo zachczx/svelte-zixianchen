@@ -4,7 +4,11 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 /** @type {import('@sveltejs/kit').Config} */
 import { mdsvex, escapeSvelte } from 'mdsvex';
 import { codeToHtml } from 'shiki';
-import { transformerNotationDiff, transformerNotationHighlight } from '@shikijs/transformers';
+import {
+	transformerNotationDiff,
+	transformerNotationHighlight,
+	transformerCompactLineOptions,
+} from '@shikijs/transformers';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
@@ -12,7 +16,11 @@ const mdsvexOptions = {
 	highlight: {
 		highlighter: async (code, lang = 'text') => {
 			const html = escapeSvelte(
-				await codeToHtml(code, { lang: 'js', theme: 'aurora-x', transformers: [transformerNotationHighlight()] }),
+				await codeToHtml(code, {
+					lang: 'js',
+					theme: 'github-dark-default',
+					transformers: [transformerNotationHighlight(), transformerNotationDiff(), transformerCompactLineOptions()],
+				}),
 			);
 			return `{@html \`${html}\` }`;
 		},

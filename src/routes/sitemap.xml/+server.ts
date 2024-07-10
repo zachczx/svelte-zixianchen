@@ -20,8 +20,6 @@ interface PostArray {
 	};
 }
 
-interface Post {}
-
 export const GET: RequestHandler = async () => {
 	// Get data for parameterized routes however you need to; this is only an example.
 	let blogSlugs: string[] = [];

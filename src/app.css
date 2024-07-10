@@ -101,9 +101,32 @@
 		margin-bottom: 1em;
 	}
 
+	/* code > span {
+		margin-top: -0.5rem;
+	} */
+
 	code > .highlighted {
 		width: 100%;
-		display: block;
-		background-color: rgba(179, 197, 216, 0.16);
+		display: inline-block;
+		background-color: rgba(197, 214, 232, 0.16);
+	}
+
+	code > span.diff.add,
+	code > .diff.remove {
+		width: 100%;
+		display: inline-block;
+		background-color: rgba(197, 214, 232, 0.16);
+		/* Negative margin bottom to get rid of uncolored space between highlighted lines  */
+		margin-bottom: -0.63rem;
+	}
+
+	.diff.add::before {
+		content: '+';
+		color: limegreen;
+	}
+
+	.diff.remove::before {
+		content: '-';
+		color: red;
 	}
 }

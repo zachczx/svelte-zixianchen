@@ -30,26 +30,26 @@ Oracle's docs were all about Oracle Linux. I tried Googling and every blog post 
 
 2. Paste into your CLI the command that OCI gives you after a successful edit, like
 
-```
+```bash
 $ sudo dd iflag=direct if=/dev/oracleoci/oraclevda of=/dev/null count=1
 echo “1” | sudo tee /sys/class/block/`readlink /dev/oracleoci/oraclevda | cut -d’/’ -f 2`/device/rescan
 ```
 
 3. Do _lsblk_ to see the partition number/name
 
-```
+```bash
 $ lsblk
 ```
 
 4. Use growpart on the partition. For me it was
 
-```
+```bash
 $ sudo growpart /dev/sda 1
 ```
 
 5. One last thing is to resize the filesystem, otherwise [the system info for _/_ will still show the old size](https://serverfault.com/questions/701296/ive-just-increased-the-disks-size-but-the-old-size-is-still-display-what-coul).
 
-```
+```bash
 $ sudo resize2fs /dev/sda 1
 ```
 
