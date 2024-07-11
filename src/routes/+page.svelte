@@ -416,7 +416,7 @@
 						</div>
 					</div>
 					<div class="card col-span-2 row-span-2 border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
-						<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
+						<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-6">
 							<div class="space-y-8">
 								<div class="place-self-center pb-4 pt-4">
 									<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude" /></a>
@@ -428,8 +428,8 @@
 										><a href="https://titude.app/" class="font-bold text-primary underline hover:text-secondary"
 											>Apptitude</a
 										></span
-									>, which gives me a clear and convenient way to distribute guides, notes, links, YouTube, organized
-									along tech competencies to share with my non-technical teammates.
+									>, which is a convenient way to distribute guides, notes, links, YouTube, organized along tech
+									competencies to share with teammates.
 								</p>
 
 								<p class="px-2">
@@ -444,7 +444,7 @@
 						</div>
 					</div>
 					<div class="card col-span-2 row-span-2 border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
-						<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
+						<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-6">
 							<div class="space-y-8">
 								<div class="place-self-center pb-4 pt-4">
 									<a href="https://appraize.zixian.dev/"
@@ -473,7 +473,7 @@
 					</div>
 					<div
 						class="card col-span-2 row-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
-						<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
+						<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-6">
 							<div class="space-y-8">
 								<div class="flex justify-center">
 									<a href="https://rankamate.zixian.dev/"
@@ -500,7 +500,7 @@
 
 					<div
 						class="card card-side col-span-2 row-span-2 w-full border border-gray-200 bg-base-100 shadow-xl xl:col-span-1">
-						<div class="group relative grid h-full items-center gap-y-5 p-4 2xl:p-8">
+						<div class="group relative grid h-full items-center gap-y-5 p-4 2xl:p-6">
 							<div class="space-y-8">
 								<div class="avatar flex justify-center pb-4">
 									<div class="w-56 rounded-full">
@@ -531,7 +531,7 @@
 					</div>
 					<div class="col-span-2 grid gap-7 xl:col-span-3 xl:grid-cols-2">
 						<div class="card w-full border border-gray-200 bg-base-100 shadow-xl">
-							<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
+							<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-6">
 								<div class="space-y-8">
 									<div class="flex justify-center pb-4">
 										<a href="https://old.btonomics.com"
@@ -560,9 +560,9 @@
 							</div>
 						</div>
 						<div class="card w-full border border-gray-200 bg-base-100 shadow-xl">
-							<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-8">
+							<div class="group grid h-full items-center gap-y-5 p-4 2xl:p-6">
 								<div class="space-y-8">
-									<h3 class="pb-4 text-center text-4xl font-black text-base-content">
+									<h3 class="pb-4 pt-6 text-center text-4xl font-black text-base-content">
 										<a href="https://btonomics.com">BTOnomics v2</a>
 									</h3>
 									<StackUsed framework="AstroJS" library="Tailwind, Pagefind" host="Cloudflare Pages" />
