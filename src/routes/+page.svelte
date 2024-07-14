@@ -595,7 +595,9 @@
 </div>
 
 {#if viewStatic === false}
-	<Gsap />
+	<section id="side" class="navItem">
+		<Gsap />
+	</section>
 {/if}
 <WebsiteFooter class="bg-gray-100" />
 <span class="drive-right"></span>
