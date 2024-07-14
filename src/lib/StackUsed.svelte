@@ -7,9 +7,11 @@
 
 	/** @type {string} */
 	export let host: string;
+
+	export let className: string;
 </script>
 
-<div class="grid content-around gap-y-2 rounded-2xl bg-base-300 p-4 text-lg font-bold">
+<div class="mt-6 grid content-around gap-y-2 rounded-2xl p-4 text-lg font-bold {className}">
 	{#if framework}
 		<div>
 			<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="me-2 inline" viewBox="0 0 24 24"
