@@ -13,7 +13,7 @@
 	import Tailwind from '$lib/logos/Tailwind.svelte';
 	import Cloudflare from '$lib/logos/Cloudflare.svelte';
 	import Svelte from '$lib/logos/Svelte.svelte';
-	import Sortable from '$lib/logos/Sortable.svelte';
+	import Sortable from '$lib/logos/Sortablejs.png?enhanced&w=60';
 	import Nginx from '$lib/logos/Nginx.svelte';
 	import Coolify from '$lib/logos/Coolify.svelte';
 	import Nodejs from '$lib/logos/Nodejs.svelte';
@@ -72,76 +72,83 @@
 		 */
 		const mm = gsap.matchMedia();
 
-		mm.add('(min-width: 1024px)', () => {
-			const tl = gsap.timeline({
-				defaults: {
-					scale: 0.7,
-					autoAlpha: 0,
-					ease: 'circ.out',
-					stagger: { each: 0.3 },
-				},
-			});
-			tl.from(segments1, {
-				scrollTrigger: {
-					trigger: '.scroll-container1',
-					start: 'center center',
-					scrub: true,
-					pin: true,
-					end: '+=1000',
-					markers: false,
-				},
-			});
-			tl.from(segments2, {
-				scrollTrigger: {
-					trigger: '.scroll-container2',
-					start: 'center center',
-					scrub: true,
-					pin: true,
-					end: '+=1000',
-					markers: false,
-				},
-			});
-			tl.from(segments3, {
-				scrollTrigger: {
-					trigger: '.scroll-container3',
-					start: 'center center',
-					scrub: true,
-					pin: true,
-					end: '+=1000',
-					markers: false,
-				},
-			});
-			tl.from(segments4, {
-				scrollTrigger: {
-					trigger: '.scroll-container4',
-					start: 'center center',
-					scrub: true,
-					pin: true,
-					end: '+=1000',
-					markers: false,
-				},
-			});
-			tl.from(segments5, {
-				scrollTrigger: {
-					trigger: '.scroll-container5',
-					start: 'center center',
-					scrub: true,
-					pin: true,
-					end: '+=1000',
-					markers: false,
-				},
-			});
-			tl.from(segments6, {
-				scrollTrigger: {
-					trigger: '.scroll-container6',
-					start: 'center center',
-					scrub: true,
-					pin: true,
-					end: '+=1000',
-					markers: false,
-				},
-			});
-		});
+		mm.add(
+			{ isLgBreakpoint: '(min-width: 1024px)', prefersReducedMotion: '(prefers-reduced-motion: no-preference)' },
+			(context) => {
+				let { isLgBreakpoint, prefersReducedMotion } = context.conditions;
+
+				if (isLgBreakpoint && prefersReducedMotion) {
+					const tl = gsap.timeline({
+						defaults: {
+							scale: 0.7,
+							autoAlpha: 0,
+							ease: 'circ.out',
+							stagger: { each: 0.3 },
+						},
+					});
+					tl.from(segments1, {
+						scrollTrigger: {
+							trigger: '.scroll-container1',
+							start: 'center center',
+							scrub: true,
+							pin: true,
+							end: '+=1000',
+							markers: false,
+						},
+					});
+					tl.from(segments2, {
+						scrollTrigger: {
+							trigger: '.scroll-container2',
+							start: 'center center',
+							scrub: true,
+							pin: true,
+							end: '+=1000',
+							markers: false,
+						},
+					});
+					tl.from(segments3, {
+						scrollTrigger: {
+							trigger: '.scroll-container3',
+							start: 'center center',
+							scrub: true,
+							pin: true,
+							end: '+=1000',
+							markers: false,
+						},
+					});
+					tl.from(segments4, {
+						scrollTrigger: {
+							trigger: '.scroll-container4',
+							start: 'center center',
+							scrub: true,
+							pin: true,
+							end: '+=1000',
+							markers: false,
+						},
+					});
+					tl.from(segments5, {
+						scrollTrigger: {
+							trigger: '.scroll-container5',
+							start: 'center center',
+							scrub: true,
+							pin: true,
+							end: '+=1000',
+							markers: false,
+						},
+					});
+					tl.from(segments6, {
+						scrollTrigger: {
+							trigger: '.scroll-container6',
+							start: 'center center',
+							scrub: true,
+							pin: true,
+							end: '+=1000',
+							markers: false,
+						},
+					});
+				}
+			},
+		);
 		// tl.from(logoIcon, {
 		// 	autoAlpha: 0,
 		// 	scale: 0.6,
@@ -217,7 +224,7 @@
 		<StackUsed framework="Sveltekit" library="Gsap, Tailwind" host="Cloudflare Pages" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
 			<Sveltekit class="h-10 pe-6" />
-			<Sortable class="h-10 pe-6" />
+			<enhanced:img src={Sortable} class="pe-6" alt="Sortable JS" />
 			<Tailwind class="h-10 pe-6" />
 			<Nginx class="h-10 pe-6" />
 			<Coolify class="h-10 pe-6" />
@@ -272,7 +279,7 @@
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
 			<Django class="h-10 pe-6" />
 			<Htmx class="h-10 pe-6" />
-			<Sortable class="h-10 pe-6" />
+			<enhanced:img src={Sortable} class="pe-6" alt="Sortable JS" />
 			<Nginx class="h-10 pe-6" />
 			<Gunicorn class="h-10 pe-6" />
 			<Bootstrap class="h-10 pe-6" />
@@ -368,7 +375,7 @@
 		<div class="flex justify-center">
 			<a href="https://old.btonomics.com"><enhanced:img src={oldBtonomicsLogo} alt="Btonomics Old Logo" class="" /> </a>
 		</div>
-		<ExitLinks url="https://old.btonomics.com" className="fill-yellow-400" />
+		<ExitLinks url="https://old.btonomics.com" className="fill-yellow-500" />
 		<StackUsed framework="Wordpress" host="Ubuntu, Nginx, PHP-FPM, Apache, Bunny.net" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
 			<Wordpress class="h-10 pe-6" />
@@ -380,14 +387,14 @@
 	</div>
 	<div class="grid space-y-6 p-8 lg:col-span-2">
 		<div class="scroll-content5 grid content-center lg:w-2/3 lg:justify-start">
-			<h3 class="mb-4 underline decoration-yellow-400 decoration-8 underline-offset-4">Problem I tried solving</h3>
+			<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>
 				There was barely any info online to guide me through the renovation journey (choosing an ID/contractor, deciding
 				on a design, buying from Taobao).
 			</p>
 		</div>
 		<div class="scroll-content5 grid content-center lg:w-2/3 lg:justify-self-end">
-			<h3 class="mb-4 underline decoration-yellow-400 decoration-8 underline-offset-4">What I wanted to do</h3>
+			<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">What I wanted to do</h3>
 			<p>
 				Started <a href="https://old.btonomics.com" class="font-bold text-primary underline hover:text-secondary"
 					>BTOnomics</a> (previously pewpewpew.cc) in 2018, which was a blog that documented my journey and my advice to
@@ -395,8 +402,8 @@
 			</p>
 		</div>
 		<div class="scroll-content5 grid content-center lg:w-2/3 lg:justify-self-start">
-			<h3 class="mb-4 underline decoration-yellow-400 decoration-8 underline-offset-4">What I built</h3>
-			<ul class="ml-6 list-outside list-disc marker:text-yellow-400">
+			<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">What I built</h3>
+			<ul class="ml-6 list-outside list-disc marker:text-yellow-500">
 				<li>WordPress was the obvious choice.</li>
 				<li>Wrote organic content that other people liked as well.</li>
 				<li>Tinkered with themes & plug-ins, tweaking, optimizing.</li>
@@ -404,7 +411,7 @@
 			</ul>
 		</div>
 		<div class="scroll-content5 grid content-center lg:w-2/3 lg:justify-self-end">
-			<h3 class="mb-4 underline decoration-yellow-400 decoration-8 underline-offset-4">Not yet done</h3>
+			<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">Not yet done</h3>
 			<p>
 				Wordpress got too bulky and tiresome to manage and host. Not least the sprawling repository of images (not least
 				the multiple resized copies of every image). I'm still keeping this Wordpress instance out of nostalgia.

@@ -135,7 +135,7 @@
 <Nav {navCurrent} />
 <div class="grid min-h-dvh justify-items-center 2xl:overflow-x-clip">
 	<!-- max-w-screen-2xl -->
-	<header id="header" class="screen mb-4 grid content-center gap-y-10 px-4">
+	<header id="header" class="screen mb-4 grid content-center gap-y-10 px-4 pb-10 pt-8 lg:pb-0 lg:pt-0">
 		<div class="justify-self-center">
 			<enhanced:img
 				src={selfSndgoPic}
@@ -155,7 +155,7 @@
 
 	<main>
 		<section class="spectrum-background grid justify-items-center px-4 2xl:w-dvw">
-			<div class="grid auto-cols-fr auto-rows-auto gap-7 py-28 xl:grid-cols-4 2xl:max-w-screen-2xl">
+			<div class="grid auto-cols-fr auto-rows-auto gap-7 py-10 lg:py-28 xl:grid-cols-4 2xl:max-w-screen-2xl">
 				<div
 					class="navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2"
 					style="background-image: url({server}); background-size: 120%; background-position: right"
@@ -328,7 +328,7 @@
 			<Quote />
 		</section>
 
-		<div class="wrapper spectrum-background2 grid justify-items-center px-4 py-28">
+		<div class="wrapper spectrum-background2 grid justify-items-center px-4 py-10 lg:py-28">
 			<section class="grid max-w-screen-2xl auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
 				<div
 					class="navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1"
