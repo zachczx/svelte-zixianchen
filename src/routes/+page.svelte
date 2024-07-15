@@ -19,6 +19,7 @@
 	import server from '$lib/assets/server.webp';
 	import programming from '$lib/assets/programming.webp?enhanced&w=800';
 	import study from '$lib/assets/study.webp?enhanced&w=500';
+	import codeBackground from '$lib/assets/sl_031420_28950_12.webp?enhanced&w=900;500';
 	import CodeTypingBro from '$lib/svg/Code-typing-bro.svelte';
 	import TextingBro from '$lib/svg/Texting-bro.svelte';
 	import lego from '$lib/assets/lego-2539844.webp';
@@ -184,12 +185,12 @@
 					</div>
 				</div>
 				<div class="card col-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1">
-					<div class="card-body relative max-h-96 space-y-4">
+					<div class="card-body grid max-h-96 content-center space-y-4">
 						<h3>Education</h3>
 						<p>
 							Studied <b>Political Science</b>. Loved comparative & money politics. Also did a lot of IR.
 						</p>
-						<enhanced:img src={study} alt="Studies" class="-mb-6"></enhanced:img>
+						<!-- <enhanced:img src={study} alt="Studies" class="-mb-6"></enhanced:img> -->
 					</div>
 				</div>
 				<div class="card col-span-2 w-full border border-gray-200 bg-base-100 xl:col-span-1">
@@ -348,6 +349,11 @@
 				</div>
 				<div
 					class="card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2">
+					<enhanced:img
+						src={codeBackground}
+						alt=""
+						class="-mb-10 -mt-[250px]"
+						sizes="(min-width:1920px) 900px, (min-width:1080px) 500px" />
 					<div class="card-body z-20 grid grid-cols-1 content-start gap-x-8 space-y-4 xl:grid-cols-3">
 						<h3 class="col-span-1 xl:col-span-3">
 							Tech <span class="text-xl text-gray-500">({percentMonthsTech}%)</span>
@@ -365,9 +371,9 @@
 							<p>Developed & bought media analytic products. Led investments in NLP & CV research.</p>
 						</div>
 					</div>
-					<div>
+					<!-- <div>
 						<Stack class="absolute -bottom-[20rem] left-0 right-0 mx-auto hue-rotate-30" />
-					</div>
+					</div> -->
 				</div>
 				<div class="card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1">
 					<div class="card-body space-y-4">
