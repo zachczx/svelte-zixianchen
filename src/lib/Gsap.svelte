@@ -1,7 +1,7 @@
 <script>
 	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=450';
 	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=200';
-	import eatYourMedsLogo from '$lib/assets/eatyourmedslogo.webp';
+	import eatYourMedsLogo from '$lib/assets/eatyourmedslogo.webp?enhanced&w=250';
 	import oldBtonomicsLogo from '$lib/assets/btonomics_logo-3-300x100.webp?enhanced&w=300';
 
 	import { gsap } from 'gsap';
@@ -183,7 +183,7 @@
 			<Greensock class="h-10 pe-6" />
 		</div>
 	</div>
-	<div class="grid space-y-10 p-8 lg:col-span-2">
+	<div class="grid p-8 lg:col-span-2">
 		<div class="scroll-content1 grid max-h-36 lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>
@@ -191,7 +191,7 @@
 				tech-related competencies?
 			</p>
 		</div>
-		<div class="scroll-content1 grid max-h-36 content-center justify-self-end lg:w-2/3">
+		<div class="scroll-content1 grid max-h-36 content-center lg:w-2/3 lg:justify-self-end">
 			<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">What I wanted to do</h3>
 			<p>Display lists of tech resources from Youtube, blogs, tutorials, courses, sorted by tech competency.</p>
 		</div>
@@ -233,7 +233,7 @@
 			<Turso class="h-10 pe-6" />
 		</div>
 	</div>
-	<div class="grid space-y-6 p-8 lg:col-span-2">
+	<div class="grid p-8 lg:col-span-2">
 		<div class="scroll-content2 grid content-center lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>
@@ -255,7 +255,7 @@
 				<li>Form actions/validation</li>
 			</ul>
 		</div>
-		<div class="scroll-content2 grid content-center justify-self-end lg:w-2/3">
+		<div class="scroll-content2 grid content-center lg:w-2/3 lg:justify-self-end">
 			<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Not yet done</h3>
 			<p>Haven't added authentication, which is probably needed for a private thing like ranking.</p>
 		</div>
@@ -286,7 +286,7 @@
 			<Postgresql class="h-10 pe-6" />
 		</div>
 	</div>
-	<div class="grid space-y-6 p-8 lg:col-span-2">
+	<div class="grid p-8 lg:col-span-2">
 		<div class="scroll-content3 grid content-center lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>
@@ -325,7 +325,7 @@
 	<div class="place-self-center px-20">
 		<div class="avatar flex justify-center">
 			<div class="w-56 rounded-full">
-				<a href="https://eatyourmeds.zixian.dev/"><img src={eatYourMedsLogo} alt="Eat Your Meds!" /></a>
+				<a href="https://eatyourmeds.zixian.dev/"><enhanced:img src={eatYourMedsLogo} alt="Eat Your Meds!" /></a>
 			</div>
 		</div>
 		<ExitLinks
@@ -342,7 +342,7 @@
 			<Postgresql class="h-10 pe-6" />
 		</div>
 	</div>
-	<div class="grid space-y-6 p-8 lg:col-span-2">
+	<div class="grid p-8 lg:col-span-2">
 		<div class="scroll-content4 grid content-center lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>How might I make it easier and shorter to plan medicine dose timings and get accurate info.</p>
@@ -354,10 +354,6 @@
 		<div class="scroll-content4 grid content-center lg:w-2/3 lg:justify-self-start">
 			<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">What I built</h3>
 			<ul class="ml-6 list-outside list-disc marker:text-lime-700">
-				<li>
-					<a href="https://eatyourmeds.zixian.dev/" class="font-bold text-primary underline hover:text-secondary"
-						>Eat Your Medicine!</a>
-				</li>
 				<li>Basic CRUD webapp with user authentication.</li>
 				<li>Sprinkled HTMX and datepicker.js for user interactions.</li>
 				<li>Backend via Django</li>
@@ -385,7 +381,7 @@
 			<Bunny class="h-10 pe-6" />
 		</div>
 	</div>
-	<div class="grid space-y-6 p-8 lg:col-span-2">
+	<div class="grid p-8 lg:col-span-2">
 		<div class="scroll-content5 grid content-center lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>
