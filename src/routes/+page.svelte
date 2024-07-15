@@ -705,19 +705,20 @@
 			transform: translateX(500px) scale(0.6);
 		}
 	}
-
-	.drive-right {
-		animation-name: drive-right;
-		animation-duration: 2s;
-		animation-timing-function: linear;
-		animation-iteration-count: 1;
-		animation-fill-mode: forwards;
-	}
-	.drive-right-r {
-		animation-name: drive-right-r;
-		animation-duration: 4s;
-		animation-timing-function: linear;
-		animation-iteration-count: infinite;
+	@media (prefers-reduced-motion: no-preference) {
+		.drive-right {
+			animation-name: drive-right;
+			animation-duration: 2s;
+			animation-timing-function: linear;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+		}
+		.drive-right-r {
+			animation-name: drive-right-r;
+			animation-duration: 4s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
 	}
 	/* for custom reveal of text */
 	.custom-reveal-text span {
