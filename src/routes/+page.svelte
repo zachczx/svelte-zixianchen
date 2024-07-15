@@ -187,8 +187,7 @@
 					<div class="card-body relative max-h-96 space-y-4">
 						<h3>Education</h3>
 						<p>
-							Studied <b>Political Science</b>. Loved comparative & money politics. Wish I could undo all the IR I did
-							prior.
+							Studied <b>Political Science</b>. Loved comparative & money politics. Also did a lot of IR.
 						</p>
 						<enhanced:img src={study} alt="Studies" class="-mb-6"></enhanced:img>
 					</div>
@@ -694,7 +693,7 @@
 
 	@keyframes drive-right {
 		to {
-			transform: translateX(250px) scale(0.6);
+			transform: translateX(300px) scale(0.6);
 		}
 	}
 	@keyframes drive-right-r {
@@ -702,7 +701,7 @@
 			transform: translateX(-100px);
 		}
 		to {
-			transform: translateX(500px) scale(0.6);
+			transform: translateX(700px) scale(0.6);
 		}
 	}
 	@media (prefers-reduced-motion: no-preference) {
