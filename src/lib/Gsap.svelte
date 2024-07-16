@@ -289,14 +289,14 @@
 	<div class="grid p-8 lg:col-span-2">
 		<div class="scroll-content3 grid content-center lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">Problem I tried solving</h3>
-			<p>
-				<a href="https://rankamate.zixian.dev/" class="font-bold text-primary underline hover:text-secondary"
-					>Rank-a-Mate</a> was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.
-			</p>
-			<p>
-				Same problem statement - How might we speed up ranking sessions, which need manual selection to form a numbered
-				list "1, 2, 3..." on Excel. Every change to the list required manual reordering.
-			</p>
+			<p>Rank-a-Mate was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.</p>
+			<ul class="ml-6 list-outside list-disc marker:text-red-800">
+				<li>
+					Same problem statement - How might we speed up ranking sessions, which need manual selection to form a
+					numbered list "1, 2, 3..." on Excel.
+				</li>
+				<li>Every change to the list required manual reordering.</li>
+			</ul>
 		</div>
 		<div class="scroll-content3 grid content-center lg:w-2/3 lg:justify-self-end">
 			<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">What I wanted to do</h3>
