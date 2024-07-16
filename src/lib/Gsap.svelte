@@ -165,9 +165,32 @@
 	});
 </script>
 
-<div class="grid content-center justify-items-center bg-gray-50 px-4 lg:min-h-dvh">
-	<h2>Here are my side projects</h2>
-	<div><CodeTypingBro class="h-96 w-96 xl:h-[50rem] xl:w-[50rem]" /></div>
+<div class="grid content-center justify-items-center bg-gray-50 px-4 lg:min-h-dvh lg:grid-cols-10">
+	<div class="hidden items-center justify-end lg:col-span-3 lg:flex">
+		<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="scale-75" /> </a>
+	</div>
+	<div class="grid justify-items-center lg:col-span-4">
+		<h2 class="text-center">Here are my projects</h2>
+		<div><CodeTypingBro class="h-96 w-96 xl:h-[40rem] xl:w-[40rem]" /></div>
+	</div>
+	<div class="hidden items-center justify-start lg:col-span-3 lg:flex">
+		<a href="https://appraize.zixian.dev/"
+			><h3 class="text-center text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3></a>
+	</div>
+	<div class="lg:col-span-3"></div>
+	<div class="lg:col-span-4 lg:flex lg:items-center lg:justify-center">
+		<a href="https://rankamate.zixian.dev/"
+			><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="hidden scale-[0.6] lg:flex" /></a>
+		<div class="avatar me-8">
+			<div class="w-32 rounded-full">
+				<a href="https://eatyourmeds.zixian.dev/"
+					><enhanced:img src={eatYourMedsLogo} alt="Eat Your Meds!" class="hidden lg:flex" /></a>
+			</div>
+		</div>
+		<a href="https://btonomics.com"
+			><h3 class="hidden text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3></a>
+	</div>
+	<div class="lg:col-span-3"></div>
 </div>
 <div class="scroll-container1 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3">
 	<div class="w-full content-center justify-self-center px-20">
@@ -183,7 +206,7 @@
 			<Greensock class="h-10 pe-6" />
 		</div>
 	</div>
-	<div class="grid p-8 lg:col-span-2">
+	<div class="grid content-around p-8 lg:col-span-2">
 		<div class="scroll-content1 grid max-h-36 lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>
@@ -233,7 +256,7 @@
 			<Turso class="h-10 pe-6" />
 		</div>
 	</div>
-	<div class="grid p-8 lg:col-span-2">
+	<div class="grid content-around p-8 lg:col-span-2">
 		<div class="scroll-content2 grid content-center lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>
@@ -286,7 +309,7 @@
 			<Postgresql class="h-10 pe-6" />
 		</div>
 	</div>
-	<div class="grid p-8 lg:col-span-2">
+	<div class="grid content-around p-8 lg:col-span-2">
 		<div class="scroll-content3 grid content-center lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>Rank-a-Mate was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.</p>
@@ -342,7 +365,7 @@
 			<Postgresql class="h-10 pe-6" />
 		</div>
 	</div>
-	<div class="grid p-8 lg:col-span-2">
+	<div class="grid content-around p-8 lg:col-span-2">
 		<div class="scroll-content4 grid content-center lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>How might I make it easier and shorter to plan medicine dose timings and get accurate info.</p>
@@ -381,7 +404,7 @@
 			<Bunny class="h-10 pe-6" />
 		</div>
 	</div>
-	<div class="grid p-8 lg:col-span-2">
+	<div class="grid content-around p-8 lg:col-span-2">
 		<div class="scroll-content5 grid content-center lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>
@@ -392,9 +415,8 @@
 		<div class="scroll-content5 grid content-center lg:w-2/3 lg:justify-self-end">
 			<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">What I wanted to do</h3>
 			<p>
-				Started <a href="https://old.btonomics.com" class="font-bold text-primary underline hover:text-secondary"
-					>BTOnomics</a> (previously pewpewpew.cc) in 2018, which was a blog that documented my journey and my advice to
-				other people in similar shoes.
+				Started BTOnomics as pewpewpew.cc in 2018, which was a blog that documented my journey and my advice to other
+				people in similar shoes.
 			</p>
 		</div>
 		<div class="scroll-content5 grid content-center lg:w-2/3 lg:justify-self-start">
@@ -419,9 +441,8 @@
 <div class="scroll-container6 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3 {oddColor}">
 	<div class="place-self-center px-20">
 		<div class="flex justify-center">
-			<h3 class="pb-4 pt-6 text-center text-4xl font-bold text-[#38bdf8] lg:text-7xl">
-				<a href="https://btonomics.com">BTOnomics</a>
-			</h3>
+			<a href="https://btonomics.com"
+				><h3 class="pb-4 pt-6 text-center text-4xl font-bold text-[#38bdf8] lg:text-7xl">BTOnomics</h3></a>
 		</div>
 		<ExitLinks
 			url="https://btonomics.com"
@@ -435,7 +456,7 @@
 			<Pagefind class="h-10 pe-6" />
 		</div>
 	</div>
-	<div class="grid space-y-6 p-8 lg:col-span-2">
+	<div class="grid content-around space-y-6 p-8 lg:col-span-2">
 		<div class="scroll-content6 grid content-center lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>Wordpress got too bulky and tiresome to manage and host.</p>

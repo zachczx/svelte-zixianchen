@@ -66,10 +66,9 @@
 		let observerNav = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
-					console.log(entry.target.id);
 					navCurrent = entry.target.id;
 				} else {
-					console.log('exiting', entry.target.id);
+					//console.log('exiting', entry.target.id);
 				}
 			});
 		});
@@ -85,7 +84,7 @@
 		const context = canvas.getContext('2d');
 
 		canvas.width = window.innerWidth;
-		canvas.height = 700; //window.innerHeight;
+		canvas.height = 800; //window.innerHeight;
 		const katakana =
 			'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
 		const latin =
@@ -184,12 +183,12 @@
 <Nav {navCurrent} />
 <div class="grid min-h-dvh justify-items-center 2xl:overflow-x-clip">
 	<!-- max-w-screen-2xl -->
-	<header id="header" class="screen mb-4 grid content-center gap-y-10 px-4 pb-10 pt-8 lg:pb-0 lg:pt-0">
+	<header id="header" class="screen grid content-center gap-y-10 bg-gray-100 px-4 pb-14 pt-8 lg:pb-0 lg:pt-0 2xl:w-dvw">
 		<div class="justify-self-center">
 			<enhanced:img
 				src={selfSndgoPic}
 				alt="Me"
-				class="rounded-2xl"
+				class="new-morphism rounded-2xl"
 				sizes="(min-width:1920px) 1000px, (min-width:1080px) 800px, (min-width:768px) 600px"></enhanced:img>
 		</div>
 		<div class="space-y-4">
@@ -395,7 +394,7 @@
 					<!-- subgrid -->
 					<div
 						class="card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2">
-						<canvas class=" block" id="c"></canvas>
+						<canvas class="block hidden md:grid" id="c"></canvas>
 					</div>
 					<div
 						class="card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2">
@@ -478,6 +477,13 @@
 	/* * {
 		border: red solid 1px;
 	} */
+
+	.new-morphism {
+		box-shadow:
+			12px 12px 12px rgba(0, 0, 0, 0.1),
+			-10px -10px 10px white;
+	}
+
 	/* Orbit for courses */
 	.containerC {
 		display: flex;
