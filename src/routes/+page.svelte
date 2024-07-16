@@ -47,8 +47,8 @@
 			(entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						entry.target.classList.add('drive-right');
-						animate = 'drive-right';
+						// entry.target.classList.add('drive-right');
+						animate = 'drive-right-r';
 						observer.unobserve(entry.target);
 					}
 				});
@@ -77,6 +77,55 @@
 		for (let i = 0; i < navItem.length; i++) {
 			observerNav.observe(navItem[i]);
 		}
+
+		/**
+		 * Matrix code
+		 */
+
+		const canvas = document.getElementById('c');
+		const context = canvas.getContext('2d');
+
+		canvas.width = window.innerWidth;
+		canvas.height = 700; //window.innerHeight;
+		const katakana =
+			'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+		const latin =
+			'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		const nums = '0123456789012345678901234567890123456789012345678901234567890123456789';
+
+		const alphabet = katakana + latin + nums;
+
+		const fontSize = 48;
+		const columns = canvas.width / fontSize;
+
+		/** @type {string[]}*/
+		const rainDrops = [];
+
+		for (let x = 0; x < columns; x++) {
+			rainDrops[x] = 1;
+		}
+
+		const draw = () => {
+			// lies under new characters raining down, transparency does subtle overlay effect
+			context.fillStyle = 'rgb(255, 114, 94, 0.09)';
+			context.fillRect(0, 0, canvas.width, canvas.height);
+
+			context.fillStyle = '#fafafa'; //'#FF725E';
+
+			context.font = fontSize + 'px monospace';
+
+			for (let i = 0; i < rainDrops.length; i++) {
+				const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+				context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+				if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+					rainDrops[i] = 0;
+				}
+				rainDrops[i]++;
+			}
+		};
+
+		setInterval(draw, 90);
 	});
 
 	/**
@@ -328,7 +377,7 @@
 			<Quote />
 		</section>
 
-		<div class="wrapper spectrum-background2 grid justify-items-center px-4 py-10 lg:py-28">
+		<div class="wrapper spectrum-background3 grid justify-items-center px-4 py-10 lg:py-28">
 			<section class="grid max-w-screen-2xl auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
 				<div
 					class="navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1"
@@ -347,33 +396,32 @@
 						Here's a breakdown.
 					</div>
 				</div>
-				<div
-					class="card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2">
-					<enhanced:img
-						src={codeBackground}
-						alt=""
-						class="-mb-10 -mt-[250px]"
-						sizes="(min-width:1920px) 900px, (min-width:1080px) 500px" />
-					<div class="card-body z-20 grid grid-cols-1 content-start gap-x-8 space-y-4 xl:grid-cols-3">
-						<h3 class="col-span-1 xl:col-span-3">
-							Tech <span class="text-xl text-gray-500">({percentMonthsTech}%)</span>
-						</h3>
-						<div>
-							<h4>Service Delivery Tech Team Lead</h4>
-							<p>Manage products, tech consultancy for citizen & employee services.</p>
-						</div>
-						<div>
-							<h4>Tech Infra Policy Team Lead</h4>
-							<p>Policies & funding for cloud, on-prem hosting, SG Tech Stack, endpoint devices, dev toolchains.</p>
-						</div>
-						<div>
-							<h4>Comms Tech Team Lead</h4>
-							<p>Developed & bought media analytic products. Led investments in NLP & CV research.</p>
+				<div class="col-span-2 grid gap-7">
+					<!-- subgrid -->
+					<div
+						class="card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2">
+						<canvas class=" block" id="c"></canvas>
+					</div>
+					<div
+						class="card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2">
+						<div class="card-body z-20 grid grid-cols-1 content-start gap-x-8 space-y-4 xl:grid-cols-3">
+							<h3 class="col-span-1 xl:col-span-3">
+								Tech <span class="text-xl text-gray-500">({percentMonthsTech}%)</span>
+							</h3>
+							<div>
+								<h4>Service Delivery Tech Team Lead</h4>
+								<p>Manage products, tech consultancy for citizen & employee services.</p>
+							</div>
+							<div>
+								<h4>Tech Infra Policy Team Lead</h4>
+								<p>Policies & funding for cloud, on-prem hosting, SG Tech Stack, endpoint devices, dev toolchains.</p>
+							</div>
+							<div>
+								<h4>Comms Tech Team Lead</h4>
+								<p>Developed & bought media analytic products. Led investments in NLP & CV research.</p>
+							</div>
 						</div>
 					</div>
-					<!-- <div>
-						<Stack class="absolute -bottom-[20rem] left-0 right-0 mx-auto hue-rotate-30" />
-					</div> -->
 				</div>
 				<div class="card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1">
 					<div class="card-body space-y-4">
@@ -389,24 +437,30 @@
 					</div>
 					<TextingBro class="-mb-0 -translate-y-0" />
 				</div>
-				<div class="card col-span-2 row-span-1 w-full border border-gray-200 bg-base-100 xl:col-span-1 xl:row-span-1">
-					<div class="card-body mb-4 space-y-4">
-						<h3>Policy <span class="text-xl text-gray-500">({percentMonthsPolicy}%)<span></span></span></h3>
-						<div>
-							<h4>NS Policy Officer</h4>
-							<p>
-								Did NS policies for sportsmen, leave, citizenship, exit control. Worked in Committee to Strengthen NS.
-							</p>
+				<div class="col-span-2 grid gap-7 xl:col-span-1">
+					<!-- subgrid -->
+					<div class="card row-span-1 w-full border border-gray-200 bg-base-100">
+						<div class="card-body mb-4 grid content-center space-y-4">
+							<h3>Policy <span class="text-xl text-gray-500">({percentMonthsPolicy}%)<span></span></span></h3>
+							<div>
+								<h4>NS Policy Officer</h4>
+								<p>
+									Did NS policies for sportsmen, leave, citizenship, exit control. Worked in Committee to Strengthen NS.
+								</p>
+							</div>
 						</div>
 					</div>
-					<div
-						class="flex h-36 items-end overflow-hidden p-0"
-						style="background: url('/trees-tree-svgrepo-com.svg'); background-repeat: repeat-x; background-position: top">
-						<div id="tank" class={animate}>
-							<TankSvg
-								onclick={() => {
-									animate = 'drive-right-r';
-								}} />
+					<div class="card row-span-1 grid w-full content-center overflow-hidden border border-gray-200 bg-base-100">
+						<div
+							class="p-0 pt-4"
+							style="background: url('/trees-tree-svgrepo-com.svg'); background-repeat: repeat-x; background-position: top">
+							<div id="tank" class={animate}>
+								<TankSvg
+									onclick={() => {
+										let tank = document.getElementById('tank');
+										tank?.classList.remove('drive-right-r');
+									}} />
+							</div>
 						</div>
 					</div>
 				</div>
@@ -684,6 +738,14 @@
 
 	.spectrum-background2 {
 		background-image: linear-gradient(to bottom, #ffca78, #d2de32);
+	}
+
+	.spectrum-background3 {
+		background-image: linear-gradient(
+			to bottom,
+			/* rgba(255, 102, 149, 0.1) 35%,  rgba(255, 114, 94, 0.3) 65%,*/ hsla(8, 100%, 91%, 0.7) 0%,
+			rgba(245, 123, 0, 0.4) 100%
+		);
 	}
 	@media only screen and (min-width: 1024px) {
 		.screen {
