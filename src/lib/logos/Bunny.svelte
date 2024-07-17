@@ -1,6 +1,7 @@
 <svg
 	version="1.1"
 	id="Layer_1"
+	{...$$props}
 	xmlns:x="ns_extend;"
 	xmlns:i="ns_ai;"
 	xmlns:graph="ns_graphs;"

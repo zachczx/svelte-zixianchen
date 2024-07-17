@@ -1,4 +1,5 @@
 <svg
+	{...$$props}
 	viewBox="0 0 132.06784 152.49881"
 	version="1.1"
 	id="svg8"
