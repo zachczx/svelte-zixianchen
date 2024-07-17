@@ -8,17 +8,17 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount, tick } from 'svelte';
 	import StackUsed from '$lib/StackUsed.svelte';
-	import Sveltekit from '$lib/logos/Sveltekit.svelte';
-	import Greensock from '$lib/logos/Greensock.svelte';
-	import Tailwind from '$lib/logos/Tailwind.svelte';
-	import Cloudflare from '$lib/logos/Cloudflare.svelte';
-	import Svelte from '$lib/logos/Svelte.svelte';
+	import Sveltekit from '$lib/logos/Sveltekit.svg';
+	import Greensock from '$lib/logos/Greensock.svg';
+	import Tailwind from '$lib/logos/Tailwind.svg';
+	import Cloudflare from '$lib/logos/Cloudflare.svg';
+	import Svelte from '$lib/logos/Svelte.svg';
 	import Sortable from '$lib/logos/Sortablejs.png?enhanced&w=60';
 	import Nginx from '$lib/logos/Nginx.svg';
-	import Coolify from '$lib/logos/Coolify.svelte';
-	import Nodejs from '$lib/logos/Nodejs.svelte';
+	import Coolify from '$lib/logos/Coolify.svg';
+	import Nodejs from '$lib/logos/Nodejs.svg';
 	import Postgresql from '$lib/logos/Postgresql.svg';
-	import Turso from '$lib/logos/Turso.svelte';
+	import Turso from '$lib/logos/Turso.svg';
 	import Htmx from '$lib/logos/Htmx.svg';
 	import Django from '$lib/logos/Django.svg';
 	import Bootstrap from '$lib/logos/Bootstrap.svg';
@@ -27,9 +27,9 @@
 	import ApacheHttp from '$lib/logos/Apache-http.svg';
 	import Mysql from '$lib/logos/Mysql.svg';
 	import Bunny from '$lib/logos/Bunny.svg';
-	import Astro from '$lib/logos/Astro.svelte';
-	import CloudflarePages from '$lib/logos/Cloudflare-pages.svelte';
-	import Pagefind from '$lib/logos/Pagefind.svelte';
+	import Astro from '$lib/logos/Astro.svg';
+	import CloudflarePages from '$lib/logos/Cloudflare-pages.svg';
+	import Pagefind from '$lib/logos/Pagefind.svg';
 	import CodeTypingBro from './svg/Code-typing-bro.svelte';
 	import ExitLinks from './ExitLinks.svelte';
 
@@ -200,10 +200,10 @@
 		<ExitLinks url="https://titude.app/" github="https://github.com/zachczx/apptitude" className="fill-lime-400" />
 		<StackUsed framework="Sveltekit" library="Gsap, Tailwind" host="Cloudflare Pages" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
-			<Sveltekit class="h-10 pe-6" />
-			<Tailwind class="h-10 grow pe-6" />
-			<Cloudflare class="h-10 pe-6" />
-			<Greensock class="h-10 pe-6" />
+			<img src={Sveltekit} class="h-10 pe-6" alt="Sveltekit" />
+			<img src={Tailwind} class="h-10 grow pe-6" alt="Tailwind" />
+			<img src={Cloudflare} class="h-10 pe-6" alt="Cloudflare" />
+			<img src={Greensock} class="h-10 pe-6" alt="Gsap" />
 		</div>
 	</div>
 	<div class="grid content-around p-8 lg:col-span-2">
@@ -246,14 +246,14 @@
 			className="fill-[#491eff]" />
 		<StackUsed framework="Sveltekit" library="Gsap, Tailwind" host="Cloudflare Pages" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
-			<Sveltekit class="h-10 pe-6" />
+			<img src={Sveltekit} class="h-10 pe-6" alt="Sveltekit" />
 			<enhanced:img src={Sortable} class="pe-6" alt="Sortable JS" />
-			<Tailwind class="h-10 pe-6" />
+			<img src={Tailwind} class="h-10 pe-6" alt="Tailwind" />
 			<img src={Nginx} class="h-10 pe-6" alt="Nginx" />
-			<Coolify class="h-10 pe-6" />
-			<Nodejs class="h-10 pe-6" />
+			<img src={Coolify} class="h-10 pe-6" alt="Coolify" />
+			<img src={Nodejs} class="h-10 pe-6" alt="Nodejs" />
 			<img src={Postgresql} class="h-10 pe-6" alt="Postgres" />
-			<Turso class="h-10 pe-6" />
+			<img src={Turso} class="h-10 pe-6" alt="Turso" />
 		</div>
 	</div>
 	<div class="grid content-around p-8 lg:col-span-2">
@@ -450,10 +450,10 @@
 			className="fill-[#38bdf8]" />
 		<StackUsed framework="AstroJS" library="Tailwind, Pagefind" host="Cloudflare Pages" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
-			<Astro class="h-14 pe-6" />
-			<Tailwind class="h-10 grow pe-6" />
-			<Cloudflare class="h-10 pe-6" />
-			<Pagefind class="h-10 pe-6" />
+			<img src={Astro} class="h-14 pe-6" alt="Astro" />
+			<img src={Tailwind} class="h-10 grow pe-6" alt="Tailwind" />
+			<img src={Cloudflare} class="h-10 pe-6" alt="Cloudflare" />
+			<img src={Pagefind} class="h-10 pe-6" alt="Pagefind" />
 		</div>
 	</div>
 	<div class="grid content-around space-y-6 p-8 lg:col-span-2">
