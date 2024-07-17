@@ -23,7 +23,7 @@
 	import Django from '$lib/logos/Django.svelte';
 	import Bootstrap from '$lib/logos/Bootstrap.svelte';
 	import Gunicorn from '$lib/logos/Gunicorn.svelte';
-	import Wordpress from '$lib/logos/Wordpress.svg?enhanced';
+	import Wordpress from '$lib/logos/Wordpress.svg';
 	import ApacheHttp from '$lib/logos/Apache-http.svelte';
 	import Mysql from '$lib/logos/Mysql.svelte';
 	import Bunny from '$lib/logos/Bunny.svelte';
@@ -397,7 +397,7 @@
 		<ExitLinks url="https://old.btonomics.com" className="fill-yellow-500" />
 		<StackUsed framework="Wordpress" host="Ubuntu, Nginx, PHP-FPM, Apache, Bunny.net" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
-			<enhanced:img src={Wordpress} class="h-10 pe-6" />
+			<img src={Wordpress} class="h-10 pe-6" />
 			<ApacheHttp class="h-10 pe-6" />
 			<Nginx class="h-6 pe-6" />
 			<Mysql class="h-10 pe-6" />
