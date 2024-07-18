@@ -8,11 +8,9 @@
 	import TextingBro from '$lib/svg/Texting-bro.svg?dataurl';
 	import lego from '$lib/assets/lego-2539844.webp';
 	import ResumeBro from '$lib/svg/Resume-bro.svg?dataurl';
-	import Stack from '$lib/svg/Stack.svelte';
 	import Nav from '$lib/Nav.svelte';
 	import { onMount } from 'svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
-	import Profile from '$lib/svg/Profile.svelte';
 	import Gsap from '$lib/Gsap.svelte';
 	import Quote from '$lib/Quote.svelte';
 	import Intermission from '$lib/Intermission.svelte';
