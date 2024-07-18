@@ -9,7 +9,7 @@ export default defineConfig({
 		enhancedImages(),
 		sveltekit(),
 		svg({
-			includePaths: ['./src/lib/icons/', './static/'],
+			includePaths: ['./static/'],
 			svgoOptions: {
 				multipass: true,
 				plugins: [
