@@ -1,40 +1,23 @@
 <script>
-	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=500';
-	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=150';
-	import StackUsed from '$lib/StackUsed.svelte';
 	import TankSvg from '$lib/svg/TankSvg.svelte';
-	import treesvg from '$lib/svg/trees-tree-svgrepo-com.svg';
-	import ChatSvg from '$lib/svg/ChatSvg.svelte';
-	import PresentationStatsSvg from '$lib/svg/PresentationStatsSvg.svelte';
 	import versus from '$lib/assets/fightIronManCaptainAmerica.webp';
 	import selfSndgoPic from '$lib/assets/DSC03163.webp?enhanced&w=300;500;1000';
-	import eatYourMedsLogo from '$lib/assets/eatyourmedslogo.webp';
-	import oldBtonomicsLogo from '$lib/assets/btonomics_logo-3-300x100.webp?enhanced&w=250';
 	import spotify from '$lib/assets/spotify.webp?enhanced&w=300';
-	import courseraLogo from '$lib/assets/coursera-logo-full-rgb.png?enhanced&w=150';
-	import awsLogo from '$lib/assets/aws-logo.png?enhanced&w=70';
-	import googleLogo from '$lib/assets/google-logo.png?enhanced&w=80';
-	import metaLogo from '$lib/assets/meta-logo.webp?enhanced&w=100';
-	import scrumAllianceLogo from '$lib/assets/scrumalliance.png?enhanced&w=120';
 	import server from '$lib/assets/server.webp';
 	import programming from '$lib/assets/programming.webp?enhanced&w=800';
-	import study from '$lib/assets/study.webp?enhanced&w=500';
-	import codeBackground from '$lib/assets/sl_031420_28950_12.webp?enhanced&w=900;500';
-	import CodeTypingBro from '$lib/svg/Code-typing-bro.svelte';
-	import TextingBro from '$lib/svg/Texting-bro.svelte';
+	import TextingBro from '$lib/svg/Texting-bro.svg?dataurl';
 	import lego from '$lib/assets/lego-2539844.webp';
-	import ResumeBro from '$lib/svg/Resume-bro.svelte';
+	import ResumeBro from '$lib/svg/Resume-bro.svg?dataurl';
 	import Stack from '$lib/svg/Stack.svelte';
 	import Nav from '$lib/Nav.svelte';
 	import { onMount } from 'svelte';
-	import TablerArrowNarrowRight from '$lib/svg/TablerArrowNarrowRight.svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
 	import Profile from '$lib/svg/Profile.svelte';
 	import Gsap from '$lib/Gsap.svelte';
 	import Quote from '$lib/Quote.svelte';
 	import Intermission from '$lib/Intermission.svelte';
 
-	//////////////////////////////////
+	///////////////////////////////////
 
 	let animate = $state('');
 	let navCurrent = $state('');
@@ -376,7 +359,7 @@
 				<div
 					class="navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1"
 					id="career">
-					<ResumeBro class="-mb-10" />
+					<img src={ResumeBro} class="-mb-10" alt="Career" />
 					<div class="card-body">
 						<h2>Career</h2>
 					</div>
@@ -429,7 +412,7 @@
 							<p>Crafted comms campaigns and strategies.</p>
 						</div>
 					</div>
-					<TextingBro class="-mb-0 -translate-y-0" />
+					<img src={TextingBro} class="-mb-0 -translate-y-0" alt="Comms" />
 				</div>
 				<div class="col-span-2 grid gap-7 xl:col-span-1">
 					<!-- subgrid -->
