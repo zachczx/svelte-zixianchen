@@ -50,6 +50,7 @@
 	"dependencies": {
 		"@fontsource-variable/fira-code": "^5.0.18",
 		"@fontsource/poppins": "^5.0.14",
+		"@poppanator/sveltekit-svg": "^5.0.0-svelte5.5",
 		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/enhanced-img": "^0.3.0",
 		"gsap": "^3.12.5",

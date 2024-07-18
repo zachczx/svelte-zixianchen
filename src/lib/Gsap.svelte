@@ -8,28 +8,28 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount, tick } from 'svelte';
 	import StackUsed from '$lib/StackUsed.svelte';
-	import Sveltekit from '$lib/logos/Sveltekit.svelte';
-	import Greensock from '$lib/logos/Greensock.svelte';
-	import Tailwind from '$lib/logos/Tailwind.svelte';
-	import Cloudflare from '$lib/logos/Cloudflare.svelte';
-	import Svelte from '$lib/logos/Svelte.svelte';
+	import Sveltekit from '$lib/logos/Sveltekit.svg?dataurl';
+	import Greensock from '$lib/logos/Greensock.svg?dataurl';
+	import Tailwind from '$lib/logos/Tailwind.svg?dataurl';
+	import Cloudflare from '$lib/logos/Cloudflare.svg?dataurl';
+	import Svelte from '$lib/logos/Svelte.svg';
 	import Sortable from '$lib/logos/Sortablejs.png?enhanced&w=60';
-	import Nginx from '$lib/logos/Nginx.svelte';
-	import Coolify from '$lib/logos/Coolify.svelte';
-	import Nodejs from '$lib/logos/Nodejs.svelte';
-	import Postgresql from '$lib/logos/Postgresql.svelte';
-	import Turso from '$lib/logos/Turso.svelte';
-	import Htmx from '$lib/logos/Htmx.svelte';
-	import Django from '$lib/logos/Django.svelte';
-	import Bootstrap from '$lib/logos/Bootstrap.svelte';
-	import Gunicorn from '$lib/logos/Gunicorn.svelte';
-	import Wordpress from '$lib/logos/Wordpress.svelte';
-	import ApacheHttp from '$lib/logos/Apache-http.svelte';
-	import Mysql from '$lib/logos/Mysql.svelte';
-	import Bunny from '$lib/logos/Bunny.svelte';
-	import Astro from '$lib/logos/Astro.svelte';
-	import CloudflarePages from '$lib/logos/Cloudflare-pages.svelte';
-	import Pagefind from '$lib/logos/Pagefind.svelte';
+	import Nginx from '$lib/logos/Nginx.svg?dataurl';
+	import Coolify from '$lib/logos/Coolify.svg?dataurl';
+	import Nodejs from '$lib/logos/Nodejs.svg?dataurl';
+	import Postgresql from '$lib/logos/Postgresql.svg?dataurl';
+	import Turso from '$lib/logos/Turso.svg?dataurl';
+	import Htmx from '$lib/logos/Htmx.svg?dataurl';
+	import Django from '$lib/logos/Django.svg?dataurl';
+	import Bootstrap from '$lib/logos/Bootstrap.svg?dataurl';
+	import Gunicorn from '$lib/logos/Gunicorn.svg?dataurl';
+	import Wordpress from '$lib/logos/Wordpress.svg?dataurl';
+	import ApacheHttp from '$lib/logos/Apache-http.svg?dataurl';
+	import Mysql from '$lib/logos/Mysql.svg?dataurl';
+	import Bunny from '$lib/logos/Bunny.svg?dataurl';
+	import Astro from '$lib/logos/Astro.svg?dataurl';
+	import CloudflarePages from '$lib/logos/Cloudflare-pages.svg?dataurl';
+	import Pagefind from '$lib/logos/Pagefind.svg?dataurl';
 	import CodeTypingBro from './svg/Code-typing-bro.svelte';
 	import ExitLinks from './ExitLinks.svelte';
 
@@ -200,10 +200,10 @@
 		<ExitLinks url="https://titude.app/" github="https://github.com/zachczx/apptitude" className="fill-lime-400" />
 		<StackUsed framework="Sveltekit" library="Gsap, Tailwind" host="Cloudflare Pages" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
-			<Sveltekit class="h-10 pe-6" />
-			<Tailwind class="h-10 grow pe-6" />
-			<Cloudflare class="h-10 pe-6" />
-			<Greensock class="h-10 pe-6" />
+			<img src={Sveltekit} class="h-10 pe-6" alt="Sveltekit" />
+			<img src={Tailwind} class="h-10 grow pe-6" alt="Tailwind" />
+			<img src={Cloudflare} class="h-10 pe-6" alt="Cloudflare" />
+			<img src={Greensock} class="h-10 pe-6" alt="Gsap" />
 		</div>
 	</div>
 	<div class="grid content-around p-8 lg:col-span-2">
@@ -246,14 +246,14 @@
 			className="fill-[#491eff]" />
 		<StackUsed framework="Sveltekit" library="Gsap, Tailwind" host="Cloudflare Pages" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
-			<Sveltekit class="h-10 pe-6" />
+			<img src={Sveltekit} class="h-10 pe-6" alt="Sveltekit" />
 			<enhanced:img src={Sortable} class="pe-6" alt="Sortable JS" />
-			<Tailwind class="h-10 pe-6" />
-			<Nginx class="h-10 pe-6" />
-			<Coolify class="h-10 pe-6" />
-			<Nodejs class="h-10 pe-6" />
-			<Postgresql class="h-10 pe-6" />
-			<Turso class="h-10 pe-6" />
+			<img src={Tailwind} class="h-10 pe-6" alt="Tailwind" />
+			<img src={Nginx} class="h-10 pe-6" alt="Nginx" />
+			<img src={Coolify} class="h-10 pe-6" alt="Coolify" />
+			<img src={Nodejs} class="h-10 pe-6" alt="Nodejs" />
+			<img src={Postgresql} class="h-10 pe-6" alt="Postgres" />
+			<img src={Turso} class="h-10 pe-6" alt="Turso" />
 		</div>
 	</div>
 	<div class="grid content-around p-8 lg:col-span-2">
@@ -300,13 +300,13 @@
 			host="Ubuntu, Nginx, Gunicorn"
 			className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
-			<Django class="h-10 pe-6" />
-			<Htmx class="h-10 pe-6" />
+			<img src={Django} class="h-10 pe-6" alt="Django" />
+			<img src={Htmx} class="h-10 pe-6" alt="Htmx" />
 			<enhanced:img src={Sortable} class="pe-6" alt="Sortable JS" />
-			<Nginx class="h-10 pe-6" />
-			<Gunicorn class="h-10 pe-6" />
-			<Bootstrap class="h-10 pe-6" />
-			<Postgresql class="h-10 pe-6" />
+			<img src={Nginx} class="h-10 pe-6" alt="Nginx" />
+			<img src={Gunicorn} class="h-10 pe-6" alt="Gunicorn" />
+			<img src={Bootstrap} class="h-10 pe-6" alt="Bootstrap" />
+			<img src={Postgresql} class="h-10 pe-6" alt="Postgres" />
 		</div>
 	</div>
 	<div class="grid content-around p-8 lg:col-span-2">
@@ -357,12 +357,12 @@
 			className="fill-lime-700" />
 		<StackUsed framework="Django" library="HTMX, Bootstrap" host="Ubuntu, Nginx, Gunicorn" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
-			<Django class="h-10 pe-6" />
-			<Htmx class="h-10 pe-6" />
-			<Nginx class="h-10 pe-6" />
-			<Gunicorn class="h-10 pe-6" />
-			<Bootstrap class="h-10 pe-6" />
-			<Postgresql class="h-10 pe-6" />
+			<img src={Django} class="h-10 pe-6" alt="Django" />
+			<img src={Htmx} class="h-10 pe-6" alt="Htmx" />
+			<img src={Nginx} class="h-10 pe-6" alt="Nginx" />
+			<img src={Gunicorn} class="h-10 pe-6" alt="Gunicorn" />
+			<img src={Bootstrap} class="h-10 pe-6" alt="Bootstrap" />
+			<img src={Postgresql} class="h-10 pe-6" alt="Postgres" />
 		</div>
 	</div>
 	<div class="grid content-around p-8 lg:col-span-2">
@@ -397,11 +397,11 @@
 		<ExitLinks url="https://old.btonomics.com" className="fill-yellow-500" />
 		<StackUsed framework="Wordpress" host="Ubuntu, Nginx, PHP-FPM, Apache, Bunny.net" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
-			<Wordpress class="h-10 pe-6" />
-			<ApacheHttp class="h-10 pe-6" />
-			<Nginx class="h-6 pe-6" />
-			<Mysql class="h-10 pe-6" />
-			<Bunny class="h-10 pe-6" />
+			<img src={Wordpress} class="h-10 pe-6" alt="Wordpress" />
+			<img src={ApacheHttp} class="h-10 pe-6" alt="Apache" />
+			<img src={Nginx} class="h-6 pe-6" alt="Nginx" />
+			<img src={Mysql} class="h-10 pe-6" alt="MySQL" />
+			<img src={Bunny} class="h-10 pe-6" alt="BunnyCDN" />
 		</div>
 	</div>
 	<div class="grid content-around p-8 lg:col-span-2">
@@ -450,10 +450,10 @@
 			className="fill-[#38bdf8]" />
 		<StackUsed framework="AstroJS" library="Tailwind, Pagefind" host="Cloudflare Pages" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
-			<Astro class="h-14 pe-6" />
-			<Tailwind class="h-10 grow pe-6" />
-			<Cloudflare class="h-10 pe-6" />
-			<Pagefind class="h-10 pe-6" />
+			<img src={Astro} class="h-14 pe-6" alt="Astro" />
+			<img src={Tailwind} class="h-10 grow pe-6" alt="Tailwind" />
+			<img src={Cloudflare} class="h-10 pe-6" alt="Cloudflare" />
+			<img src={Pagefind} class="h-10 pe-6" alt="Pagefind" />
 		</div>
 	</div>
 	<div class="grid content-around space-y-6 p-8 lg:col-span-2">
