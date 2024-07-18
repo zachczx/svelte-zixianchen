@@ -8,7 +8,7 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount, tick } from 'svelte';
 	import StackUsed from '$lib/StackUsed.svelte';
-	import Sveltekit from '$lib/logos/Sveltekit.svg?component';
+	import Sveltekit from '$lib/logos/Sveltekit.svg?dataurl';
 	import Greensock from '$lib/logos/Greensock.svg?dataurl';
 	import Tailwind from '$lib/logos/Tailwind.svg?dataurl';
 	import Cloudflare from '$lib/logos/Cloudflare.svg?dataurl';
@@ -200,7 +200,7 @@
 		<ExitLinks url="https://titude.app/" github="https://github.com/zachczx/apptitude" className="fill-lime-400" />
 		<StackUsed framework="Sveltekit" library="Gsap, Tailwind" host="Cloudflare Pages" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
-			<Sveltekit class="h-10 pe-6" alt="Sveltekit" />
+			<img src={Sveltekit} class="h-10 pe-6" alt="Sveltekit" />
 			<img src={Tailwind} class="h-10 grow pe-6" alt="Tailwind" />
 			<img src={Cloudflare} class="h-10 pe-6" alt="Cloudflare" />
 			<img src={Greensock} class="h-10 pe-6" alt="Gsap" />
@@ -246,8 +246,8 @@
 			className="fill-[#491eff]" />
 		<StackUsed framework="Sveltekit" library="Gsap, Tailwind" host="Cloudflare Pages" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
-			<Sveltekit class="h-10 pe-6" alt="Sveltekit" />
-			<enhanced:img src={Sortable} class="pe-6" alt="Sortable JS" />
+			<img src={Sveltekit} class="h-10 pe-6" alt="Sveltekit" />
+			<enhanced:img src={Sortable} class="pe-6" alt="Sortable JS"></enhanced:img>
 			<img src={Tailwind} class="h-10 pe-6" alt="Tailwind" />
 			<img src={Nginx} class="h-10 pe-6" alt="Nginx" />
 			<img src={Coolify} class="h-10 pe-6" alt="Coolify" />
