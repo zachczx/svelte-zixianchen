@@ -49,10 +49,9 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/fira-code": "^5.0.18",
-		"@fontsource-variable/inter": "^5.0.19",
 		"@fontsource-variable/open-sans": "^5.0.29",
-		"@fontsource-variable/raleway": "^5.0.20",
-		"@fontsource/poppins": "^5.0.14",
+		"@fontsource/ibm-plex-serif": "^5.0.13",
+		"@fontsource/lora": "^5.0.17",
 		"@poppanator/sveltekit-svg": "^5.0.0-svelte5.5",
 		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/enhanced-img": "^0.3.0",

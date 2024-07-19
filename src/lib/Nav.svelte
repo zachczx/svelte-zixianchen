@@ -10,7 +10,8 @@
 <nav
 	class="z-30 grid h-12 w-full grid-cols-2 justify-center border-b border-b-gray-200 bg-gray-100/50 px-4 backdrop-blur-md lg:sticky lg:top-0 lg:grid-cols-3">
 	<div class="flex items-center">
-		<span class="navLogo text-2xl font-extrabold text-base-content hover:drop-shadow"><a href="/">Zixian Chen</a></span>
+		<span class="navLogo font-serif text-2xl font-extrabold text-base-content hover:drop-shadow"
+			><a href="/">Zixian Chen</a></span>
 	</div>
 	<div class="navMenu hidden items-center justify-center space-x-8 lg:flex">
 		<a

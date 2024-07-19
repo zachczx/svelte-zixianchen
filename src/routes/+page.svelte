@@ -173,10 +173,10 @@
 				sizes="(min-width:1920px) 1000px, (min-width:1080px) 800px, (min-width:768px) 600px"></enhanced:img>
 		</div>
 		<div class="space-y-4">
-			<h1 class="headline text-center text-7xl leading-none tracking-tighter text-black xl:text-9xl">
+			<h1 class="text-center font-serif text-7xl leading-none tracking-tighter text-black xl:text-9xl">
 				Hello, I'm <span class="zixian pin inline-block underline decoration-pink-700">Zixian</span>.
 			</h1>
-			<h2 class="custom-reveal-text mb-4 text-center text-2xl leading-none tracking-tighter xl:text-4xl">
+			<h2 class="custom-reveal-text mb-4 text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
 				<span>I'm a civil servant trying to close gaps between policy, business needs, tech.</span>
 			</h2>
 		</div>
@@ -215,39 +215,41 @@
 				<div class="card col-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1">
 					<div class="card-body grid max-h-96 content-center space-y-4">
 						<h3>Education</h3>
-						<p>
-							Studied <b>Political Science</b>. Loved comparative & money politics. Also did a lot of IR.
-						</p>
-						<!-- <enhanced:img src={study} alt="Studies" class="-mb-6"></enhanced:img> -->
+						<div class="space-y-2">
+							<p>
+								Studied <b>Political Science</b> at NUS.
+							</p>
+							<p>I loved comparative & money politics. But I did lots of IR. 🥲</p>
+						</div>
 					</div>
 				</div>
 				<div class="card col-span-2 w-full border border-gray-200 bg-base-100 xl:col-span-1">
 					<div class="card-body space-y-4 overflow-hidden">
 						<h3>Certification</h3>
 						<div class="space-y-2 pt-2">
-							<ul class="flex flex-wrap space-x-6 xl:grid xl:space-x-0 xl:space-y-6">
-								<li class="">
+							<ul class="grid gap-y-8">
+								<li>
 									<a
 										href="https://www.coursera.org/account/accomplishments/specialization/D9EZKV26D69B"
-										class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
+										class="rounded-full bg-red-300 px-4 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
 										>Meta Back-end Dev</a>
 								</li>
 								<li>
 									<a
 										href="https://www.coursera.org/account/accomplishments/specialization/certificate/MVCFEP4ZHVSV"
-										class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
+										class="rounded-full bg-red-300 px-4 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
 										>AWS Fundamentals</a>
 								</li>
 								<li>
 									<a
 										href="https://www.credly.com/badges/369dd8b6-19bd-45ba-8272-2b997111c2b7/linked_in_profile"
-										class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
+										class="rounded-full bg-red-300 px-4 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
 										>Google UX</a>
 								</li>
 								<li>
 									<a
 										href="https://bcert.me/bc/html/show-badge.html?b=twwbrxwh"
-										class="rounded-full bg-red-300 px-2 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
+										class="rounded-full bg-red-300 px-4 py-2 text-lg hover:bg-red-500 hover:text-base-100 xl:px-4 xl:text-xl"
 										>Certified ScrumMaster</a>
 								</li>
 							</ul>
@@ -410,7 +412,7 @@
 							<p>Crafted comms campaigns and strategies.</p>
 						</div>
 					</div>
-					<img src={TextingBro} class="-mb-0 -translate-y-0" alt="Comms" />
+					<img src={TextingBro} class="-mb-0 lg:-translate-y-8 lg:scale-125" alt="Comms" />
 				</div>
 				<div class="col-span-2 grid gap-7 xl:col-span-1">
 					<!-- subgrid -->
@@ -459,10 +461,7 @@
 	/* * {
 		border: red solid 1px;
 	} */
-	.headline {
-		font-family: 'Raleway Variable', sans-serif;
-		font-weight: 900;
-	}
+
 	.new-morphism {
 		box-shadow:
 			12px 12px 12px rgba(0, 0, 0, 0.1),

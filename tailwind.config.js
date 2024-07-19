@@ -3,6 +3,10 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {},
+		fontFamily: {
+			sans: ['Open Sans Variable'],
+			serif: ['IBM Plex Serif', 'Lora'],
+		},
 	},
 	daisyui: {
 		themes: [

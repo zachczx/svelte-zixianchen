@@ -12,6 +12,8 @@
 	import Greensock from '$lib/logos/Greensock.svg?dataurl';
 	import Tailwind from '$lib/logos/Tailwind.svg?dataurl';
 	import Cloudflare from '$lib/logos/Cloudflare.svg?dataurl';
+	import Drizzle from '$lib/logos/Drizzle.svg?dataurl';
+	import DrizzlePng from '$lib/logos/Drizzle.png?enhanced&w=40';
 	import Svelte from '$lib/logos/Svelte.svg';
 	import Sortable from '$lib/logos/Sortablejs.png?enhanced&w=60';
 	import Nginx from '$lib/logos/Nginx.svg?dataurl';
@@ -178,7 +180,7 @@
 	</div>
 
 	<figure class="col-span-3 hidden space-y-4 self-center lg:grid">
-		<h3 class="text-center text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
+		<h3 class="text-center font-sans text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
 		<figcaption class="text-center italic">Drop & drop ranking</figcaption>
 	</figure>
 
@@ -200,8 +202,8 @@
 
 	<div class="hidden self-start lg:col-span-4 lg:flex lg:items-center lg:justify-center">
 		<figure class="grid justify-items-center space-y-3">
-			<h3 class="hidden text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
-			<figcaption class="italic">Home renovation blog</figcaption>
+			<h3 class="hidden font-serif text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
+			<figcaption class="italic">Budget home renovation blog</figcaption>
 		</figure>
 	</div>
 
@@ -213,7 +215,6 @@
 			<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class=""></enhanced:img></a>
 		</div>
 		<ExitLinks url="https://titude.app/" github="https://github.com/zachczx/apptitude" className="fill-lime-400" />
-		<StackUsed framework="Sveltekit" library="Gsap, Tailwind" host="Cloudflare Pages" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
 			<img src={Sveltekit} class="h-10 pe-6" alt="Sveltekit" />
 			<img src={Tailwind} class="h-10 grow pe-6" alt="Tailwind" />
@@ -222,7 +223,8 @@
 			<img src={Pagefind} class="h-10 pe-6" alt="Pagefind" />
 		</div>
 	</div>
-	<div class="grid content-around p-8 lg:col-span-2">
+	<StackUsed framework="Sveltekit" library="Gsap, Tailwind, Pagefind" host="Cloudflare" className="lg:hidden" />
+	<div class="grid content-around gap-y-8 p-8 lg:col-span-2 lg:gap-y-0">
 		<div class="scroll-content1 grid max-h-36 lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>
@@ -255,15 +257,15 @@
 <div class="scroll-container2 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3 {oddColor}">
 	<div class="place-self-center px-20">
 		<a href="https://appraize.zixian.dev/"
-			><h3 class="text-center text-6xl font-black text-[#491eff] lg:text-8xl">Appraize</h3></a>
+			><h3 class="text-center font-sans text-6xl font-black text-[#491eff] lg:text-8xl">Appraize</h3></a>
 		<ExitLinks
 			url="https://appraize.zixian.dev/"
 			github="https://github.com/zachczx/svelte-appraize"
 			className="fill-[#491eff]" />
-		<StackUsed framework="Sveltekit" library="Gsap, Tailwind" host="Cloudflare Pages" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
 			<img src={Sveltekit} class="h-10 pe-6" alt="Sveltekit" />
 			<enhanced:img src={Sortable} class="pe-6" alt="Sortable JS"></enhanced:img>
+			<enhanced:img src={DrizzlePng} class="me-6 rounded-2xl" alt="Drizzle"></enhanced:img>
 			<img src={Tailwind} class="h-10 pe-6" alt="Tailwind" />
 			<img src={Nginx} class="h-10 pe-6" alt="Nginx" />
 			<img src={Coolify} class="h-10 pe-6" alt="Coolify" />
@@ -272,7 +274,12 @@
 			<img src={Turso} class="h-10 pe-6" alt="Turso" />
 		</div>
 	</div>
-	<div class="grid content-around p-8 lg:col-span-2">
+	<StackUsed
+		framework="Sveltekit"
+		library="Sortable, Drizzle, Tailwind, Postgresql, Turso"
+		host="Coolify, NodeJS, Nginx"
+		className="lg:hidden" />
+	<div class="grid content-around gap-y-8 p-8 lg:col-span-2 lg:gap-y-0">
 		<div class="scroll-content2 grid content-center lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>
@@ -310,11 +317,7 @@
 			url="https://rankamate.zixian.dev/"
 			github="https://github.com/zachczx/django-rankamate"
 			className="fill-red-800" />
-		<StackUsed
-			framework="Django"
-			library="HTMX, SortableJS, Bootstrap"
-			host="Ubuntu, Nginx, Gunicorn"
-			className="lg:hidden" />
+
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
 			<img src={Django} class="h-10 pe-6" alt="Django" />
 			<img src={Htmx} class="h-10 pe-6" alt="Htmx" />
@@ -325,7 +328,12 @@
 			<img src={Postgresql} class="h-10 pe-6" alt="Postgres" />
 		</div>
 	</div>
-	<div class="grid content-around p-8 lg:col-span-2">
+	<StackUsed
+		framework="Django"
+		library="HTMX, SortableJS, Bootstrap, Postgresql"
+		host="Nginx, Gunicorn"
+		className="lg:hidden" />
+	<div class="grid content-around gap-y-8 p-8 lg:col-span-2 lg:gap-y-0">
 		<div class="scroll-content3 grid content-center lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>Rank-a-Mate was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.</p>
@@ -372,7 +380,6 @@
 			url="https://eatyourmeds.zixian.dev/"
 			github="https://github.com/zachczx/django-eatyourmeds"
 			className="fill-lime-700" />
-		<StackUsed framework="Django" library="HTMX, Bootstrap" host="Ubuntu, Nginx, Gunicorn" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
 			<img src={Django} class="h-10 pe-6" alt="Django" />
 			<img src={Htmx} class="h-10 pe-6" alt="Htmx" />
@@ -382,7 +389,8 @@
 			<img src={Postgresql} class="h-10 pe-6" alt="Postgres" />
 		</div>
 	</div>
-	<div class="grid content-around p-8 lg:col-span-2">
+	<StackUsed framework="Django" library="HTMX, Bootstrap, Postgresql" host="Nginx, Gunicorn" className="lg:hidden" />
+	<div class="grid content-around gap-y-8 p-8 lg:col-span-2 lg:gap-y-0">
 		<div class="scroll-content4 grid content-center lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>How might I make it easier and shorter to plan medicine dose timings and get accurate info.</p>
@@ -413,16 +421,16 @@
 				><enhanced:img src={oldBtonomicsLogo} alt="Btonomics Old Logo" class=""></enhanced:img></a>
 		</div>
 		<ExitLinks url="https://old.btonomics.com" className="fill-yellow-500" />
-		<StackUsed framework="Wordpress" host="Ubuntu, Nginx, PHP-FPM, Apache, Bunny.net" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
 			<img src={Wordpress} class="h-10 pe-6" alt="Wordpress" />
 			<img src={ApacheHttp} class="h-10 pe-6" alt="Apache" />
-			<img src={Nginx} class="h-6 pe-6" alt="Nginx" />
+			<img src={Nginx} class="h-8 pb-2 pe-6" alt="Nginx" />
 			<img src={Mysql} class="h-10 pe-6" alt="MySQL" />
 			<img src={Bunny} class="h-10 pe-6" alt="BunnyCDN" />
 		</div>
 	</div>
-	<div class="grid content-around p-8 lg:col-span-2">
+	<StackUsed framework="Wordpress" library="Mysql" host="Nginx, Apache, Bunny CDN" className="lg:hidden" />
+	<div class="grid content-around gap-y-8 p-8 lg:col-span-2 lg:gap-y-0">
 		<div class="scroll-content5 grid content-center lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>
@@ -460,13 +468,12 @@
 	<div class="place-self-center px-20">
 		<div class="flex justify-center">
 			<a href="https://btonomics.com"
-				><h3 class="pb-4 pt-6 text-center text-4xl font-bold text-[#38bdf8] lg:text-7xl">BTOnomics</h3></a>
+				><h3 class="pb-4 pt-6 text-center font-serif text-5xl font-bold text-[#38bdf8] lg:text-7xl">BTOnomics</h3></a>
 		</div>
 		<ExitLinks
 			url="https://btonomics.com"
 			github="https://github.com/zachczx/astro-btonomics"
 			className="fill-[#38bdf8]" />
-		<StackUsed framework="AstroJS" library="Tailwind, Pagefind" host="Cloudflare Pages" className="lg:hidden" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
 			<img src={Astro} class="h-14 pe-6" alt="Astro" />
 			<img src={Tailwind} class="h-10 grow pe-6" alt="Tailwind" />
@@ -474,7 +481,8 @@
 			<img src={Pagefind} class="h-10 pe-6" alt="Pagefind" />
 		</div>
 	</div>
-	<div class="grid content-around space-y-6 p-8 lg:col-span-2">
+	<StackUsed framework="AstroJS" library="Tailwind, Pagefind" host="Cloudflare" className="lg:hidden" />
+	<div class="grid content-around gap-y-8 space-y-6 p-8 lg:col-span-2 lg:gap-y-0">
 		<div class="scroll-content6 grid content-center lg:w-2/3 lg:justify-start">
 			<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Problem I tried solving</h3>
 			<p>Wordpress got too bulky and tiresome to manage and host.</p>
