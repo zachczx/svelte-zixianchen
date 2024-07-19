@@ -173,7 +173,7 @@
 				sizes="(min-width:1920px) 1000px, (min-width:1080px) 800px, (min-width:768px) 600px"></enhanced:img>
 		</div>
 		<div class="space-y-4">
-			<h1 class="text-center text-7xl leading-none tracking-tighter text-black xl:text-9xl">
+			<h1 class="headline text-center text-7xl leading-none tracking-tighter text-black xl:text-9xl">
 				Hello, I'm <span class="zixian pin inline-block underline decoration-pink-700">Zixian</span>.
 			</h1>
 			<h2 class="custom-reveal-text mb-4 text-center text-2xl leading-none tracking-tighter xl:text-4xl">
@@ -459,7 +459,10 @@
 	/* * {
 		border: red solid 1px;
 	} */
-
+	.headline {
+		font-family: 'Raleway Variable', sans-serif;
+		font-weight: 900;
+	}
 	.new-morphism {
 		box-shadow:
 			12px 12px 12px rgba(0, 0, 0, 0.1),
