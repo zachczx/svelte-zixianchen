@@ -165,37 +165,52 @@
 	});
 </script>
 
-<div class="grid content-center justify-items-center bg-gray-50 px-4 lg:min-h-dvh lg:grid-cols-10">
-	<div class="hidden items-center justify-end lg:col-span-3 lg:flex">
-		<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="scale-75" /> </a>
+<div class="grid justify-items-center bg-gray-50 px-4 pb-20 lg:min-h-dvh lg:grid-cols-10">
+	<h2 class="text-center lg:col-span-10">Here's a few I've done.</h2>
+
+	<figure class="hidden self-center lg:col-span-3 lg:grid">
+		<enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="scale-75"></enhanced:img>
+		<figcaption class="-mt-3 text-center italic">Tech-related upskilling</figcaption>
+	</figure>
+
+	<div class="lg:col-span-4 lg:row-span-2">
+		<CodeTypingBro class="h-96 w-96 xl:h-[40rem] xl:w-[40rem]" />
 	</div>
-	<div class="grid justify-items-center lg:col-span-4">
-		<h2 class="text-center">Here are my projects</h2>
-		<div><CodeTypingBro class="h-96 w-96 xl:h-[40rem] xl:w-[40rem]" /></div>
-	</div>
-	<div class="hidden items-center justify-start lg:col-span-3 lg:flex">
-		<a href="https://appraize.zixian.dev/"
-			><h3 class="text-center text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3></a>
-	</div>
-	<div class="lg:col-span-3"></div>
-	<div class="lg:col-span-4 lg:flex lg:items-center lg:justify-center">
-		<a href="https://rankamate.zixian.dev/"
-			><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="hidden scale-[0.6] lg:flex" /></a>
-		<div class="avatar me-8">
+
+	<figure class="col-span-3 hidden space-y-4 self-center lg:grid">
+		<h3 class="text-center text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
+		<figcaption class="text-center italic">Drop & drop ranking</figcaption>
+	</figure>
+
+	<figure class="col-span-3 hidden content-center justify-items-center space-y-4 self-center lg:grid">
+		<div class="avatar">
 			<div class="w-32 rounded-full">
-				<a href="https://eatyourmeds.zixian.dev/"
-					><enhanced:img src={eatYourMedsLogo} alt="Eat Your Meds!" class="hidden lg:flex" /></a>
+				<enhanced:img src={eatYourMedsLogo} alt="Eat Your Meds!"></enhanced:img>
 			</div>
 		</div>
-		<a href="https://btonomics.com"
-			><h3 class="hidden text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3></a>
+		<figcaption class="text-center italic">Medicine dose tracker</figcaption>
+	</figure>
+
+	<figure class="col-span-3 hidden content-center justify-items-center self-center lg:grid">
+		<enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="scale-[0.6]"></enhanced:img>
+		<figcaption class="-mt-6 italic">First stab at drag & drop ranking</figcaption>
+	</figure>
+
+	<div class="hidden lg:col-span-3 lg:grid"></div>
+
+	<div class="hidden self-start lg:col-span-4 lg:flex lg:items-center lg:justify-center">
+		<figure class="grid justify-items-center space-y-3">
+			<h3 class="hidden text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
+			<figcaption class="italic">Home renovation blog</figcaption>
+		</figure>
 	</div>
-	<div class="lg:col-span-3"></div>
+
+	<div class="hidden lg:col-span-3 lg:grid"></div>
 </div>
-<div class="scroll-container1 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3">
+<div id="apptitude" class="scroll-container1 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3">
 	<div class="w-full content-center justify-self-center px-20">
 		<div class="flex justify-center">
-			<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="" /> </a>
+			<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class=""></enhanced:img></a>
 		</div>
 		<ExitLinks url="https://titude.app/" github="https://github.com/zachczx/apptitude" className="fill-lime-400" />
 		<StackUsed framework="Sveltekit" library="Gsap, Tailwind" host="Cloudflare Pages" className="lg:hidden" />
@@ -204,6 +219,7 @@
 			<img src={Tailwind} class="h-10 grow pe-6" alt="Tailwind" />
 			<img src={Cloudflare} class="h-10 pe-6" alt="Cloudflare" />
 			<img src={Greensock} class="h-10 pe-6" alt="Gsap" />
+			<img src={Pagefind} class="h-10 pe-6" alt="Pagefind" />
 		</div>
 	</div>
 	<div class="grid content-around p-8 lg:col-span-2">
@@ -288,7 +304,7 @@
 <div class="scroll-container3 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3 {evenColor}">
 	<div class="w-full place-self-center px-20">
 		<div class="flex content-center items-center justify-center">
-			<a href="https://rankamate.zixian.dev/"><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" /></a>
+			<a href="https://rankamate.zixian.dev/"><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img></a>
 		</div>
 		<ExitLinks
 			url="https://rankamate.zixian.dev/"
@@ -302,7 +318,7 @@
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
 			<img src={Django} class="h-10 pe-6" alt="Django" />
 			<img src={Htmx} class="h-10 pe-6" alt="Htmx" />
-			<enhanced:img src={Sortable} class="pe-6" alt="Sortable JS" />
+			<enhanced:img src={Sortable} class="pe-6" alt="Sortable JS"></enhanced:img>
 			<img src={Nginx} class="h-10 pe-6" alt="Nginx" />
 			<img src={Gunicorn} class="h-10 pe-6" alt="Gunicorn" />
 			<img src={Bootstrap} class="h-10 pe-6" alt="Bootstrap" />
@@ -348,7 +364,8 @@
 	<div class="place-self-center px-20">
 		<div class="avatar flex justify-center">
 			<div class="w-56 rounded-full">
-				<a href="https://eatyourmeds.zixian.dev/"><enhanced:img src={eatYourMedsLogo} alt="Eat Your Meds!" /></a>
+				<a href="https://eatyourmeds.zixian.dev/"
+					><enhanced:img src={eatYourMedsLogo} alt="Eat Your Meds!"></enhanced:img></a>
 			</div>
 		</div>
 		<ExitLinks
@@ -392,7 +409,8 @@
 <div class="scroll-container5 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3 {evenColor}">
 	<div class="place-self-center px-20">
 		<div class="flex justify-center">
-			<a href="https://old.btonomics.com"><enhanced:img src={oldBtonomicsLogo} alt="Btonomics Old Logo" class="" /> </a>
+			<a href="https://old.btonomics.com"
+				><enhanced:img src={oldBtonomicsLogo} alt="Btonomics Old Logo" class=""></enhanced:img></a>
 		</div>
 		<ExitLinks url="https://old.btonomics.com" className="fill-yellow-500" />
 		<StackUsed framework="Wordpress" host="Ubuntu, Nginx, PHP-FPM, Apache, Bunny.net" className="lg:hidden" />
@@ -415,8 +433,8 @@
 		<div class="scroll-content5 grid content-center lg:w-2/3 lg:justify-self-end">
 			<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">What I wanted to do</h3>
 			<p>
-				Started BTOnomics as pewpewpew.cc in 2018, which was a blog that documented my journey and my advice to other
-				people in similar shoes.
+				Started BTOnomics as <a href="https://web.archive.org/web/20180513112335/http://pewpewpew.cc/">pewpewpew.cc</a> in
+				2018, which was a blog that documented my journey and my advice to other people in similar shoes.
 			</p>
 		</div>
 		<div class="scroll-content5 grid content-center lg:w-2/3 lg:justify-self-start">

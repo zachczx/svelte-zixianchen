@@ -11,7 +11,7 @@
 	import Nav from '$lib/Nav.svelte';
 	import { onMount } from 'svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
-	import Gsap from '$lib/Gsap.svelte';
+	import Portfolio from '$lib/Portfolio.svelte';
 	import Quote from '$lib/Quote.svelte';
 	import Intermission from '$lib/Intermission.svelte';
 
@@ -442,14 +442,15 @@
 			</section>
 		</div>
 
-		<section class="wrapper grid min-h-[40rem] content-center justify-items-center gap-y-10 bg-gray-50 px-4 xl:py-20">
+		<section
+			class="wrapper grid min-h-[40rem] content-center justify-items-center gap-y-10 bg-gray-50 px-4 lg:min-h-[50rem] xl:py-20">
 			<Intermission />
 		</section>
 	</main>
 </div>
 
 <section id="side" class="navItem">
-	<Gsap />
+	<Portfolio />
 </section>
 <WebsiteFooter class="bg-gray-100" />
 <span class="drive-right"></span>
