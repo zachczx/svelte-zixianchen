@@ -166,7 +166,7 @@
 </script>
 
 <div class="grid justify-items-center bg-gray-50 px-4 pb-20 lg:min-h-dvh lg:grid-cols-10">
-	<h2 class="text-center lg:col-span-10">Here's a few I've done.</h2>
+	<h2 class="text-center lg:col-span-10">Here are a few I've done.</h2>
 
 	<figure class="hidden self-center lg:col-span-3 lg:grid">
 		<enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="scale-75"></enhanced:img>
@@ -193,7 +193,7 @@
 
 	<figure class="col-span-3 hidden content-center justify-items-center self-center lg:grid">
 		<enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="scale-[0.6]"></enhanced:img>
-		<figcaption class="-mt-6 italic">First stab at drag & drop ranking</figcaption>
+		<figcaption class="-mt-6 italic">Drag & drop ranking v0.1</figcaption>
 	</figure>
 
 	<div class="hidden lg:col-span-3 lg:grid"></div>
