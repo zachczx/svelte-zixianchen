@@ -461,7 +461,11 @@
 	/* * {
 		border: red solid 1px;
 	} */
-
+	h1,
+	h2,
+	h3 {
+		font-family: 'Lora', serif;
+	}
 	.new-morphism {
 		box-shadow:
 			12px 12px 12px rgba(0, 0, 0, 0.1),

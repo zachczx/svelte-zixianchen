@@ -1,5 +1,6 @@
 <h2 class="px-4 lg:max-w-[1024px]">I hope to do tech better in govt.</h2>
 <div class="px-4 lg:max-w-[1024px]">
+	<!-- bxs:quote-alt-left -->
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		class="mx-auto mb-3 h-16 w-16 text-gray-600 dark:text-gray-600"

@@ -62,6 +62,9 @@
 </div>
 
 <style>
+	* {
+		font-family: 'Plus Jakarta Sans Variable', sans-serif;
+	}
 	.view-blog-header {
 		view-transition-name: view-blog-header;
 	}

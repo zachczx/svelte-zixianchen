@@ -50,6 +50,7 @@
 	"dependencies": {
 		"@fontsource-variable/fira-code": "^5.0.18",
 		"@fontsource-variable/open-sans": "^5.0.29",
+		"@fontsource-variable/plus-jakarta-sans": "^5.0.21",
 		"@fontsource/ibm-plex-serif": "^5.0.13",
 		"@fontsource/lora": "^5.0.17",
 		"@poppanator/sveltekit-svg": "^5.0.0-svelte5.5",
