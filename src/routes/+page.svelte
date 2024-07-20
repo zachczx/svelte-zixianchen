@@ -174,7 +174,7 @@
 		</div>
 		<div class="space-y-4">
 			<h1 class="text-center font-serif text-7xl leading-none tracking-tighter text-black xl:text-9xl">
-				Hello, I'm <span class="zixian pin inline-block underline decoration-pink-700">Zixian</span>.
+				Hello, I'm <span class="inline-block underline decoration-pink-700">Zixian</span>.
 			</h1>
 			<h2 class="custom-reveal-text mb-4 text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
 				<span>I'm a civil servant trying to close gaps between policy, business needs, tech.</span>
