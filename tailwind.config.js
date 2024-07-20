@@ -7,6 +7,11 @@ export default {
 			sans: ['Open Sans Variable'],
 			serif: ['IBM Plex Serif', 'Lora'],
 		},
+		borderRadius: {
+			'4xl': '2rem',
+			'5xl': '2.5rem',
+			'6xl': '3rem',
+		},
 	},
 	daisyui: {
 		themes: [

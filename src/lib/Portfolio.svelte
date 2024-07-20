@@ -239,9 +239,9 @@
 		<div class="scroll-content1 grid max-h-36 content-center justify-self-start lg:w-2/3">
 			<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">What I built</h3>
 			<ul class="ml-6 list-outside list-disc marker:text-lime-400">
-				<li>Website through static site generation</li>
-				<li>Used JS objects to store slices of info</li>
-				<li>A CMS or DB was unnecessary overhead</li>
+				<li>Static Website</li>
+				<li>Used JS objects to store/read info</li>
+				<li>I felt CMS, DB, markdown files were unnecessary overhead</li>
 			</ul>
 		</div>
 		<div class="scroll-content1 grid max-h-36 content-center justify-self-end lg:w-2/3">
@@ -516,7 +516,7 @@
 	h1:not(.font-sans),
 	h2:not(.font-sans),
 	h3:not(.font-sans) {
-		font-family: 'Lora', serif;
+		font-family: 'IBM Plex Serif', serif;
 	}
 	.fullWidth {
 		width: 100vw;

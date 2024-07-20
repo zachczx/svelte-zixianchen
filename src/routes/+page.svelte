@@ -1,7 +1,7 @@
 <script>
 	import TankSvg from '$lib/svg/TankSvg.svelte';
 	import versus from '$lib/assets/fightIronManCaptainAmerica.webp';
-	import selfSndgoPic from '$lib/assets/DSC03163.webp?enhanced&w=300;500;1000';
+	import selfSndgoPic from '$lib/assets/DSC03163.webp?enhanced&w=700;900;1100';
 	import spotify from '$lib/assets/spotify.webp?enhanced&w=400';
 	import server from '$lib/assets/server.webp';
 	import programming from '$lib/assets/programming.webp?enhanced&w=800';
@@ -164,21 +164,26 @@
 <Nav {navCurrent} />
 <div class="grid min-h-dvh justify-items-center 2xl:overflow-x-clip">
 	<!-- max-w-screen-2xl -->
-	<header id="header" class="screen grid content-center gap-y-10 bg-gray-100 px-4 pb-14 pt-8 lg:pb-0 lg:pt-0 2xl:w-dvw">
-		<div class="justify-self-center">
+	<header
+		id="header"
+		class="screen grid content-center justify-items-center bg-gray-100 px-4 pb-14 pt-8 lg:grid-cols-5 lg:pb-0 lg:pt-0 2xl:w-dvw">
+		<div class="col-span-5 grid max-w-[40rem] content-center space-y-10 lg:col-span-2">
+			<h1 class="w-full font-serif text-4xl leading-none tracking-tighter text-black xl:text-6xl">
+				Hello. I'm<br /><span
+					class="inline-block bg-gradient-to-r from-pink-600 via-orange-600 to-red-700 bg-clip-text text-[11rem] text-transparent"
+					>ZIXIAN</span
+				>.
+			</h1>
+			<h2 class="custom-reveal-text mb-4 w-full font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
+				<span>I'm a public servant trying to close gaps between policy, business needs, tech.</span>
+			</h2>
+		</div>
+		<div class="col-span-5 justify-self-center lg:col-span-3 lg:justify-self-start">
 			<enhanced:img
 				src={selfSndgoPic}
 				alt="Me"
-				class="new-morphism rounded-2xl"
-				sizes="(min-width:1920px) 1000px, (min-width:1080px) 800px, (min-width:768px) 600px"></enhanced:img>
-		</div>
-		<div class="space-y-4">
-			<h1 class="text-center font-serif text-7xl leading-none tracking-tighter text-black xl:text-9xl">
-				Hello, I'm <span class="inline-block underline decoration-pink-700">Zixian</span>.
-			</h1>
-			<h2 class="custom-reveal-text mb-4 text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
-				<span>I'm a civil servant trying to close gaps between policy, business needs, tech.</span>
-			</h2>
+				class="rounded-5xl"
+				sizes="(min-width:1920px) 1100px, (min-width:1080px) 900px, (min-width:768px) 700px"></enhanced:img>
 		</div>
 	</header>
 
@@ -186,7 +191,7 @@
 		<section class="spectrum-background grid justify-items-center px-4 2xl:w-dvw">
 			<div class="grid auto-cols-fr auto-rows-auto gap-7 py-10 lg:py-28 xl:grid-cols-4 2xl:max-w-screen-2xl">
 				<div
-					class="navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2"
+					class="navItem rounded-5xl card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2"
 					style="background-image: url({server}); background-size: 120%; background-position: right"
 					id="about">
 					<div class="card-body grid h-full grid-cols-2 justify-items-center">
@@ -201,7 +206,7 @@
 					</div>
 				</div>
 				<div
-					class="card col-span-2 row-span-1 min-h-48 w-full border border-gray-200 bg-[#57262D] bg-base-100 xl:col-span-1"
+					class="rounded-5xl card col-span-2 row-span-1 min-h-48 w-full border border-gray-200 bg-[#57262D] bg-base-100 xl:col-span-1"
 					style="background-image: url({versus}); background-size: cover; background-position: center">
 					<div class="card-body grid pb-0">
 						<div>
@@ -212,7 +217,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="card col-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1">
+				<div
+					class="rounded-5xl card col-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1">
 					<div class="card-body grid max-h-96 content-center space-y-4">
 						<h3>Education</h3>
 						<div class="space-y-2">
@@ -223,7 +229,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="card col-span-2 w-full border border-gray-200 bg-base-100 xl:col-span-1">
+				<div class="rounded-5xl card col-span-2 w-full border border-gray-200 bg-base-100 xl:col-span-1">
 					<div class="card-body space-y-4 overflow-hidden">
 						<h3>Certification</h3>
 						<div class="space-y-2 pt-2">
@@ -308,7 +314,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="card col-span-2 grid w-full grid-cols-2 overflow-hidden border border-gray-200 bg-base-100">
+				<div
+					class="rounded-5xl card col-span-2 grid w-full grid-cols-2 overflow-hidden border border-gray-200 bg-base-100">
 					<div class="card-body space-y-4 self-center">
 						<h3>Interests</h3>
 						<p class="z-10">
@@ -330,7 +337,7 @@
 				</div>
 
 				<div
-					class="card relative col-span-2 grid w-full overflow-hidden border border-gray-200 bg-gradient-to-tl from-base-100 to-gray-50 xl:col-span-1">
+					class="rounded-5xl card relative col-span-2 grid w-full overflow-hidden border border-gray-200 bg-gradient-to-tl from-base-100 to-gray-50 xl:col-span-1">
 					<div>
 						<div class="card-body grid h-full content-start space-y-4">
 							<h3 class="">Playlist</h3>
@@ -464,9 +471,9 @@
 	h1:not(.font-sans),
 	h2:not(.font-sans),
 	h3:not(.font-sans) {
-		font-family: 'Lora', serif;
+		font-family: 'IBM Plex Serif', serif;
 	}
-	.new-morphism {
+	.neumorphism {
 		box-shadow:
 			12px 12px 12px rgba(0, 0, 0, 0.1),
 			-10px -10px 10px white;
@@ -603,20 +610,20 @@
 		background-image: linear-gradient(90deg, black, black);
 		animation: scroll-reveal linear forwards;
 		animation-timeline: view();
-		animation-range-start: cover 30vh;
-		animation-range-end: cover 40vh;
+		animation-range-start: cover 50vh;
+		animation-range-end: cover 60vh;
 	}
 
 	@media only screen and (min-width: 1024px) {
 		.custom-reveal-text span {
-			animation-range-start: cover 20vh;
-			animation-range-end: cover 40vh;
+			animation-range-start: cover 45vh;
+			animation-range-end: cover 50vh;
 		}
 	}
 	@media only screen and (min-width: 1600px) {
 		.custom-reveal-text span {
-			animation-range-start: cover 25vh;
-			animation-range-end: cover 40vh;
+			animation-range-start: cover 45vh;
+			animation-range-end: cover 50vh;
 		}
 	}
 	.list {
