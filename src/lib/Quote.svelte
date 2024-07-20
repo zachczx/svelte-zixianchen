@@ -21,3 +21,11 @@
 		</footer>
 	</blockquote>
 </div>
+
+<style>
+	h1:not(.font-sans),
+	h2:not(.font-sans),
+	h3:not(.font-sans) {
+		font-family: 'Lora', serif;
+	}
+</style>

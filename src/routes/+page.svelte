@@ -2,7 +2,7 @@
 	import TankSvg from '$lib/svg/TankSvg.svelte';
 	import versus from '$lib/assets/fightIronManCaptainAmerica.webp';
 	import selfSndgoPic from '$lib/assets/DSC03163.webp?enhanced&w=300;500;1000';
-	import spotify from '$lib/assets/spotify.webp?enhanced&w=300';
+	import spotify from '$lib/assets/spotify.webp?enhanced&w=400';
 	import server from '$lib/assets/server.webp';
 	import programming from '$lib/assets/programming.webp?enhanced&w=800';
 	import TextingBro from '$lib/svg/Texting-bro.svg?dataurl';
@@ -332,9 +332,9 @@
 				<div
 					class="card relative col-span-2 grid w-full overflow-hidden border border-gray-200 bg-gradient-to-tl from-base-100 to-gray-50 xl:col-span-1">
 					<div>
-						<div class="card-body grid h-full content-center space-y-4">
+						<div class="card-body grid h-full content-start space-y-4">
 							<h3 class="">Playlist</h3>
-							<ul class="list text-xl">
+							<ul class="list flex flex-wrap text-xl">
 								<li>All-In Podcast</li>
 								<li>Primeagen</li>
 								<li>Theo</li>
@@ -343,7 +343,7 @@
 								<li>Lenny's Podcast</li>
 								<li>Olivio Sarikas</li>
 							</ul>
-							<enhanced:img src={spotify} alt="" class="absolute -bottom-20 -right-40 xl:bottom-0 xl:top-40" />
+							<enhanced:img src={spotify} alt="" class="absolute left-0 right-0 m-auto" />
 						</div>
 					</div>
 				</div>
@@ -461,9 +461,9 @@
 	/* * {
 		border: red solid 1px;
 	} */
-	h1,
-	h2,
-	h3 {
+	h1:not(.font-sans),
+	h2:not(.font-sans),
+	h3:not(.font-sans) {
 		font-family: 'Lora', serif;
 	}
 	.new-morphism {
@@ -619,9 +619,31 @@
 			animation-range-end: cover 40vh;
 		}
 	}
-	.list li::before {
-		content: '🔥';
-		padding-right: 0.4rem;
+	.list {
+		li::before {
+			content: '🔥';
+			/* padding-right: 0.4rem; */
+			padding-right: 0.2rem;
+			padding-left: 0.2rem;
+		}
+		li:nth-child(2)::before {
+			content: '🚀';
+		}
+		li:nth-child(3)::before {
+			content: '✨';
+		}
+		li:nth-child(4)::before {
+			content: '🎃';
+		}
+		li:nth-child(5)::before {
+			content: '👑';
+		}
+		li:nth-child(6)::before {
+			content: '🌞';
+		}
+		li:nth-child(7)::before {
+			content: '🤖';
+		}
 	}
 
 	/* for other stuff */

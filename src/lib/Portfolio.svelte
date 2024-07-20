@@ -513,7 +513,11 @@
 	/* * {
 		border: red solid 1px;
 	} */
-
+	h1:not(.font-sans),
+	h2:not(.font-sans),
+	h3:not(.font-sans) {
+		font-family: 'Lora', serif;
+	}
 	.fullWidth {
 		width: 100vw;
 	}
