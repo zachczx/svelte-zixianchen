@@ -154,6 +154,26 @@
 	const percentMonthsTech = Math.round(((25 + 36 + numMonthsSdTech) / numMonthsTotal) * 100);
 	const percentMonthsComms = Math.round((37 / numMonthsTotal) * 100);
 	const percentMonthsPolicy = Math.round((28 / numMonthsTotal) * 100);
+
+	/**
+	 * Insert neumorphism css class
+	 * @param {Event} evt
+	 */
+	function addNeumorphismInset(evt) {
+		const el = evt.currentTarget;
+		el?.classList.add('neumorphism-inset');
+		el.classList.remove('neumorphism');
+	}
+
+	/**
+	 * Remove neumorphism css class
+	 * @param {Event} evt
+	 */
+	function removeNeumorphismInset(evt) {
+		const el = evt.currentTarget;
+		el?.classList.remove('neumorphism-inset');
+		el.classList.add('neumorphism');
+	}
 </script>
 
 <svelte:head>
@@ -179,26 +199,10 @@
 			<div class="flex justify-center space-x-8">
 				<a
 					href="https://www.linkedin.com/in/zixianchen/"
-					onkeydown={(evt) => {
-						const el = evt.currentTarget;
-						el?.classList.add('neumorphism-inset');
-						el.classList.remove('neumorphism');
-					}}
-					onmousedown={(evt) => {
-						const el = evt.currentTarget;
-						el?.classList.add('neumorphism-inset');
-						el.classList.remove('neumorphism');
-					}}
-					onmouseup={(evt) => {
-						const el = evt.currentTarget;
-						el?.classList.remove('neumorphism-inset');
-						el.classList.add('neumorphism');
-					}}
-					onkeyup={(evt) => {
-						const el = evt.currentTarget;
-						el?.classList.remove('neumorphism-inset');
-						el.classList.add('neumorphism');
-					}}
+					onkeydown={addNeumorphismInset}
+					onmousedown={addNeumorphismInset}
+					onmouseup={removeNeumorphismInset}
+					onkeyup={removeNeumorphismInset}
 					class="neumorphism rounded-full p-2"
 					id="linkedinCircle">
 					<!-- flowbite:linkedin-solid -->
@@ -214,26 +218,10 @@
 					href="https://github.com/zachczx?tab=repositories"
 					class="neumorphism rounded-full p-2"
 					id="elGithub"
-					onkeydown={(evt) => {
-						const el = evt.currentTarget;
-						el?.classList.add('neumorphism-inset');
-						el.classList.remove('neumorphism');
-					}}
-					onmousedown={(evt) => {
-						const el = evt.currentTarget;
-						el?.classList.add('neumorphism-inset');
-						el.classList.remove('neumorphism');
-					}}
-					onmouseup={(evt) => {
-						const el = evt.currentTarget;
-						el?.classList.remove('neumorphism-inset');
-						el.classList.add('neumorphism');
-					}}
-					onkeyup={(evt) => {
-						const el = evt.currentTarget;
-						el?.classList.remove('neumorphism-inset');
-						el.classList.add('neumorphism');
-					}}>
+					onkeydown={addNeumorphismInset}
+					onmousedown={addNeumorphismInset}
+					onmouseup={removeNeumorphismInset}
+					onkeyup={removeNeumorphismInset}>
 					<!-- tabler:brand-github-filled -->
 					<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
 						><path
@@ -243,26 +231,10 @@
 				<a
 					href="/blog"
 					class="neumorphism rounded-full p-2"
-					onkeydown={(evt) => {
-						const el = evt.currentTarget;
-						el?.classList.add('neumorphism-inset');
-						el.classList.remove('neumorphism');
-					}}
-					onmousedown={(evt) => {
-						const el = evt.currentTarget;
-						el?.classList.add('neumorphism-inset');
-						el.classList.remove('neumorphism');
-					}}
-					onmouseup={(evt) => {
-						const el = evt.currentTarget;
-						el?.classList.remove('neumorphism-inset');
-						el.classList.add('neumorphism');
-					}}
-					onkeyup={(evt) => {
-						const el = evt.currentTarget;
-						el?.classList.remove('neumorphism-inset');
-						el.classList.add('neumorphism');
-					}}>
+					onkeydown={addNeumorphismInset}
+					onmousedown={addNeumorphismInset}
+					onmouseup={removeNeumorphismInset}
+					onkeyup={removeNeumorphismInset}>
 					<!-- material-symbols:article -->
 					<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
 						><path
