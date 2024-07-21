@@ -176,16 +176,45 @@
 						>Zixian.</span>
 				</div>
 			</h1>
-			<h2 class="custom-reveal-text mb-4 w-full font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
+			<div class="flex justify-center space-x-8">
+				<div class="neumorphism rounded-full p-2">
+					<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
+						><g fill="#888888"
+							><path
+								fill-rule="evenodd"
+								d="M12.51 8.796v1.697a3.74 3.74 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766c-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483a1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.6 1.6 0 0 1 1.6 1.606"
+								clip-rule="evenodd" /><path d="M7.2 8.809H4V19.5h3.2z" /></g
+						></svg>
+				</div>
+				<div class="neumorphism rounded-full p-2">
+					<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
+						><path
+							fill="#888888"
+							d="M5.315 2.1c.791-.113 1.9.145 3.333.966l.272.161l.16.1l.397-.083a13.3 13.3 0 0 1 4.59-.08l.456.08l.396.083l.161-.1c1.385-.84 2.487-1.17 3.322-1.148l.164.008l.147.017l.076.014l.05.011l.144.047a1 1 0 0 1 .53.514a5.2 5.2 0 0 1 .397 2.91l-.047.267l-.046.196l.123.163c.574.795.93 1.728 1.03 2.707l.023.295L21 9.5c0 3.855-1.659 5.883-4.644 6.68l-.245.061l-.132.029l.014.161l.008.157l.004.365l-.002.213L16 21a1 1 0 0 1-.883.993L15 22H9a1 1 0 0 1-.993-.883L8 21v-.734c-1.818.26-3.03-.424-4.11-1.878l-.535-.766c-.28-.396-.455-.579-.589-.644l-.048-.019a1 1 0 0 1 .564-1.918c.642.188 1.074.568 1.57 1.239l.538.769c.76 1.079 1.36 1.459 2.609 1.191L8 17.562l-.018-.168a5.03 5.03 0 0 1-.021-.824l.017-.185l.019-.12l-.108-.024c-2.976-.71-4.703-2.573-4.875-6.139l-.01-.31L3 9.5a5.6 5.6 0 0 1 .908-3.051l.152-.222l.122-.163l-.045-.196a5.2 5.2 0 0 1 .145-2.642l.1-.282l.106-.253a1 1 0 0 1 .529-.514l.144-.047z" /></svg>
+				</div>
+				<div class="neumorphism rounded-full p-2">
+					<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
+						><path
+							fill="#888888"
+							d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm2-4h7v-2H7zm0-4h10v-2H7zm0-4h10V7H7z" /></svg>
+				</div>
+			</div>
+			<h2
+				class="custom-reveal-text mb-4 w-full rounded-5xl font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
 				<span>I'm a public servant trying to close gaps between policy, business needs, tech.</span>
 			</h2>
 		</div>
-		<div class="mt-8 justify-self-center lg:mt-0 lg:justify-self-start">
+		<div
+			class="neumorphism relative mt-8 justify-self-center rounded-5xl border-[3rem] border-gray-100 lg:mt-0 lg:justify-self-start">
 			<enhanced:img
 				src={selfSndgoPic}
 				alt="Me"
-				class="rounded-5xl"
+				class="relative rounded-5xl"
 				sizes="(min-width:1920px) 1100px, (min-width:1080px) 900px, (min-width:768px) 700px"></enhanced:img>
+
+			<div
+				class="neumorphism-inset absolute top-0 z-10 h-full w-full rounded-5xl border border-gray-200 bg-white/[0.0.1] opacity-75">
+			</div>
 		</div>
 	</header>
 
@@ -194,10 +223,10 @@
 			<div
 				class="neumorphism-children grid auto-cols-fr auto-rows-auto gap-7 py-10 lg:py-28 xl:grid-cols-4 2xl:max-w-screen-2xl">
 				<div
-					class="navItem card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl border border-gray-200 bg-base-100 xl:col-span-2"
-					style="background-image: url({server}); background-size: 120%; background-position: right"
+					class="navItem card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-base-100 xl:col-span-3"
+					style="background-image: url({server}); background-size: 100%; background-position: right"
 					id="about">
-					<div class="card-body grid h-full grid-cols-2 justify-items-center">
+					<div class="card-body grid h-full grid-cols-2 justify-items-center pe-4 ps-20">
 						<div></div>
 						<div class="space-y-4 self-center text-base-100">
 							<h3>About Me</h3>
@@ -208,10 +237,10 @@
 						</div>
 					</div>
 				</div>
-				<div
-					class="card col-span-2 row-span-1 min-h-48 w-full rounded-5xl border border-gray-200 bg-[#57262D] bg-base-100 xl:col-span-1"
+				<!-- <div
+					class="card relative col-span-2 row-span-1 min-h-48 w-full overflow-hidden rounded-5xl bg-gray-800 xl:col-span-1"
 					style="background-image: url({versus}); background-size: cover; background-position: center">
-					<div class="card-body grid pb-0">
+					<div class="card-body z-10 grid pb-0">
 						<div>
 							<h3 class="text-center text-base-100">Work</h3>
 						</div>
@@ -219,9 +248,10 @@
 							<p class="text-center text-base-100">I fight bad policies & business requirements.</p>
 						</div>
 					</div>
-				</div>
+					<div class="absolute h-full w-full bg-pink-900/50"></div>
+				</div> -->
 				<div
-					class="card col-span-2 w-full overflow-hidden rounded-5xl border border-gray-200 bg-base-100 xl:col-span-1">
+					class="card col-span-2 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200 xl:col-span-1">
 					<div class="card-body grid max-h-96 content-center space-y-4">
 						<h3>Education</h3>
 						<div class="space-y-2">
@@ -232,7 +262,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="card col-span-2 w-full rounded-5xl border border-gray-200 bg-base-100 xl:col-span-1">
+				<div class="card col-span-2 w-full rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200 xl:col-span-1">
 					<div class="card-body space-y-4 overflow-hidden">
 						<h3>Certification</h3>
 						<div class="space-y-2 pt-2">
@@ -318,7 +348,7 @@
 					</div>
 				</div>
 				<div
-					class="card col-span-2 grid w-full grid-cols-2 overflow-hidden rounded-5xl border border-gray-200 bg-base-100">
+					class="card col-span-2 grid w-full grid-cols-2 overflow-hidden rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200">
 					<div class="card-body space-y-4 self-center">
 						<h3>Interests</h3>
 						<p class="z-10">
@@ -340,7 +370,7 @@
 				</div>
 
 				<div
-					class="card relative col-span-2 grid w-full overflow-hidden rounded-5xl border border-gray-200 bg-gradient-to-tl from-base-100 to-gray-50 xl:col-span-1">
+					class="card relative col-span-2 grid w-full overflow-hidden rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200 xl:col-span-1">
 					<div>
 						<div class="card-body grid h-full content-start space-y-4">
 							<h3 class="">Playlist</h3>
@@ -365,9 +395,10 @@
 		</section>
 
 		<div class="wrapper grid justify-items-center bg-gray-100 px-4 py-10 lg:py-28">
+			<!-- color scheme https://convertingcolors.com/hex-color-FF725E.html -->
 			<section class="grid max-w-screen-2xl auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
 				<div
-					class="neumorphism navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1"
+					class="neumorphism navItem card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE] xl:col-span-1"
 					id="career">
 					<img src={ResumeBro} class="-mb-10" alt="Career" />
 					<div class="card-body">
@@ -375,9 +406,9 @@
 					</div>
 				</div>
 				<div
-					class="neumorphism card col-span-2 h-full min-h-96 w-full border border-gray-200 bg-base-100 xl:col-span-3"
+					class="neumorphism card col-span-2 h-full min-h-96 w-full rounded-5xl bg-base-100 xl:col-span-3"
 					style="background: url({lego}); background-position: center 10%">
-					<div class="relative h-full w-full rounded-xl bg-black opacity-[0.3]"></div>
+					<div class="relative h-full w-full rounded-5xl bg-black opacity-[0.3]"></div>
 					<div class="absolute left-0 right-0 top-14 mx-auto text-center text-2xl text-base-100">
 						I've worked for <span class="mx-3 text-4xl font-extrabold">{numYearsTotal} years</span> in the public service.
 						Here's a breakdown.
@@ -385,12 +416,12 @@
 				</div>
 				<div class="col-span-2 grid gap-7">
 					<!-- subgrid -->
-					<div
-						class="neumorphism card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2">
+					<div class="card relative col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-base-100 xl:col-span-2">
 						<canvas class="block hidden md:grid" id="c"></canvas>
+						<div class="neumorphism-inset absolute h-full w-full"></div>
 					</div>
 					<div
-						class="neumorphism card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2">
+						class="neumorphism card relative col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE] xl:col-span-2">
 						<div class="card-body z-20 grid grid-cols-1 content-start gap-x-8 space-y-4 xl:grid-cols-3">
 							<h3 class="col-span-1 xl:col-span-3">
 								Tech <span class="text-xl text-gray-500">({percentMonthsTech}%)</span>
@@ -411,7 +442,7 @@
 					</div>
 				</div>
 				<div
-					class="neumorphism card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1">
+					class="neumorphism card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE] xl:col-span-1">
 					<div class="card-body space-y-4">
 						<h3>Comms <span class="text-xl text-gray-500">({percentMonthsComms}%)</span></h3>
 						<div>
@@ -427,7 +458,7 @@
 				</div>
 				<div class="col-span-2 grid gap-7 xl:col-span-1">
 					<!-- subgrid -->
-					<div class="neumorphism card row-span-1 w-full border border-gray-200 bg-base-100">
+					<div class="neumorphism card row-span-1 w-full rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE]">
 						<div class="card-body mb-4 grid content-center space-y-4">
 							<h3>Policy <span class="text-xl text-gray-500">({percentMonthsPolicy}%)<span></span></span></h3>
 							<div>
@@ -439,7 +470,7 @@
 						</div>
 					</div>
 					<div
-						class="neumorphism-inset card row-span-1 grid w-full content-center overflow-hidden border border-gray-200 bg-base-100">
+						class="neumorphism-inset card row-span-1 grid w-full content-center overflow-hidden rounded-5xl bg-gradient-to-tl from-[#FFF8F7] to-[#FFE2DE]">
 						<div
 							class="p-0 pt-4"
 							style="background: url('/trees-tree-svgrepo-com.svg'); background-repeat: repeat-x; background-position: top">
@@ -457,7 +488,7 @@
 		</div>
 
 		<section
-			class="wrapper grid min-h-[40rem] content-center justify-items-center gap-y-10 bg-gray-50 px-4 lg:min-h-[50rem] xl:py-20">
+			class="wrapper grid min-h-[40rem] content-center justify-items-center gap-y-10 bg-gray-100 px-4 lg:min-h-[50rem] xl:py-20">
 			<Intermission />
 		</section>
 	</main>
@@ -481,7 +512,7 @@
 
 	.neumorphism {
 		box-shadow:
-			12px 12px 12px rgba(0, 0, 0, 0.1),
+			12px 12px 12px rgba(0, 0, 0, 0.15),
 			-10px -10px 10px white;
 	}
 	.neumorphism-children > div {

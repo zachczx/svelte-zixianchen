@@ -11,6 +11,7 @@
 	import Sveltekit from '$lib/logos/Sveltekit.svg?dataurl';
 	import Greensock from '$lib/logos/Greensock.svg?dataurl';
 	import Tailwind from '$lib/logos/Tailwind.svg?dataurl';
+	import TailwindSmall from '$lib/logos/tailwindcss-small.svg?dataurl';
 	import Cloudflare from '$lib/logos/Cloudflare.svg?dataurl';
 	import Drizzle from '$lib/logos/Drizzle.svg?dataurl';
 	import DrizzlePng from '$lib/logos/Drizzle.png?enhanced&w=40';
@@ -167,7 +168,7 @@
 	});
 </script>
 
-<div class="grid justify-items-center bg-gray-50 px-4 pb-20 lg:min-h-dvh lg:grid-cols-10">
+<div class="grid justify-items-center bg-gray-50 px-4 pb-20 pt-20 lg:min-h-dvh lg:grid-cols-10">
 	<h2 class="text-center lg:col-span-10">Here are a few I've done.</h2>
 
 	<figure class="hidden self-center lg:col-span-3 lg:grid">
@@ -200,7 +201,7 @@
 
 	<div class="hidden lg:col-span-3 lg:grid"></div>
 
-	<div class="hidden self-start lg:col-span-4 lg:flex lg:items-center lg:justify-center">
+	<div class="-mt-28 hidden self-start lg:col-span-4 lg:flex lg:items-center lg:justify-center">
 		<figure class="grid justify-items-center space-y-3">
 			<h3 class="hidden font-serif text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
 			<figcaption class="italic">Budget home renovation blog</figcaption>
@@ -217,7 +218,7 @@
 		<ExitLinks url="https://titude.app/" github="https://github.com/zachczx/apptitude" className="fill-lime-400" />
 		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
 			<img src={Sveltekit} class="h-10 pe-6" alt="Sveltekit" />
-			<img src={Tailwind} class="h-10 grow pe-6" alt="Tailwind" />
+			<img src={TailwindSmall} class="h-10 grow pe-6" alt="Tailwind" />
 			<img src={Cloudflare} class="h-10 pe-6" alt="Cloudflare" />
 			<img src={Greensock} class="h-10 pe-6" alt="Gsap" />
 			<img src={Pagefind} class="h-10 pe-6" alt="Pagefind" />
@@ -268,7 +269,7 @@
 			<img src={Sveltekit} class="h-10 pe-6" alt="Sveltekit" />
 			<enhanced:img src={Sortable} class="pe-6" alt="Sortable JS"></enhanced:img>
 			<enhanced:img src={DrizzlePng} class="me-6 rounded-2xl" alt="Drizzle"></enhanced:img>
-			<img src={Tailwind} class="h-10 pe-6" alt="Tailwind" />
+			<img src={TailwindSmall} class="h-10 pe-6" alt="Tailwind" />
 			<img src={Nginx} class="h-10 pe-6" alt="Nginx" />
 			<img src={Coolify} class="h-10 pe-6" alt="Coolify" />
 			<img src={Nodejs} class="h-10 pe-6" alt="Nodejs" />
@@ -485,9 +486,9 @@
 			url="https://btonomics.com"
 			github="https://github.com/zachczx/astro-btonomics"
 			className="fill-[#38bdf8]" />
-		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
-			<img src={Astro} class="h-14 pe-6" alt="Astro" />
-			<img src={Tailwind} class="h-10 grow pe-6" alt="Tailwind" />
+		<div class="mt-10 hidden flex-wrap items-center justify-center space-y-4 lg:flex">
+			<img src={Astro} class="mt-5 h-14 pe-6" alt="Astro" />
+			<img src={TailwindSmall} class="h-10 grow pe-6" alt="Tailwind" />
 			<img src={Cloudflare} class="h-10 pe-6" alt="Cloudflare" />
 			<img src={Pagefind} class="h-10 pe-6" alt="Pagefind" />
 		</div>
@@ -507,10 +508,7 @@
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#38bdf8]">
 					<li>Migrated to AstroJS as a static site.</li>
-					<li>
-						I enjoy using Astro. Native markdown support, native view transitions, great image tools, really fast
-						speeds.
-					</li>
+					<li>I enjoyed using Astro. Native markdown support, view transitions, image tooling, fast.</li>
 					<li>There's always the option to reach into Svelte/React/Alpine if I wanted to.</li>
 					<li>Used ChatGPT to convert WordPress html/shortcode to markdown.</li>
 				</ul>
