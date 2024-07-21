@@ -177,27 +177,33 @@
 				</div>
 			</h1>
 			<div class="flex justify-center space-x-8">
-				<div class="neumorphism rounded-full p-2">
-					<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
-						><g fill="#888888"
+				<a href="https://www.linkedin.com/in/zixianchen/"
+					><div class="neumorphism rounded-full p-2">
+						<!-- flowbite:linkedin-solid -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
+							><g fill="#888888"
+								><path
+									fill-rule="evenodd"
+									d="M12.51 8.796v1.697a3.74 3.74 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766c-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483a1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.6 1.6 0 0 1 1.6 1.606"
+									clip-rule="evenodd" /><path d="M7.2 8.809H4V19.5h3.2z" /></g
+							></svg>
+					</div></a>
+				<a href="https://github.com/zachczx?tab=repositories"
+					><div class="neumorphism rounded-full p-2">
+						<!-- tabler:brand-github-filled -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
 							><path
-								fill-rule="evenodd"
-								d="M12.51 8.796v1.697a3.74 3.74 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766c-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483a1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.6 1.6 0 0 1 1.6 1.606"
-								clip-rule="evenodd" /><path d="M7.2 8.809H4V19.5h3.2z" /></g
-						></svg>
-				</div>
-				<div class="neumorphism rounded-full p-2">
-					<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
-						><path
-							fill="#888888"
-							d="M5.315 2.1c.791-.113 1.9.145 3.333.966l.272.161l.16.1l.397-.083a13.3 13.3 0 0 1 4.59-.08l.456.08l.396.083l.161-.1c1.385-.84 2.487-1.17 3.322-1.148l.164.008l.147.017l.076.014l.05.011l.144.047a1 1 0 0 1 .53.514a5.2 5.2 0 0 1 .397 2.91l-.047.267l-.046.196l.123.163c.574.795.93 1.728 1.03 2.707l.023.295L21 9.5c0 3.855-1.659 5.883-4.644 6.68l-.245.061l-.132.029l.014.161l.008.157l.004.365l-.002.213L16 21a1 1 0 0 1-.883.993L15 22H9a1 1 0 0 1-.993-.883L8 21v-.734c-1.818.26-3.03-.424-4.11-1.878l-.535-.766c-.28-.396-.455-.579-.589-.644l-.048-.019a1 1 0 0 1 .564-1.918c.642.188 1.074.568 1.57 1.239l.538.769c.76 1.079 1.36 1.459 2.609 1.191L8 17.562l-.018-.168a5.03 5.03 0 0 1-.021-.824l.017-.185l.019-.12l-.108-.024c-2.976-.71-4.703-2.573-4.875-6.139l-.01-.31L3 9.5a5.6 5.6 0 0 1 .908-3.051l.152-.222l.122-.163l-.045-.196a5.2 5.2 0 0 1 .145-2.642l.1-.282l.106-.253a1 1 0 0 1 .529-.514l.144-.047z" /></svg>
-				</div>
-				<div class="neumorphism rounded-full p-2">
-					<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
-						><path
-							fill="#888888"
-							d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm2-4h7v-2H7zm0-4h10v-2H7zm0-4h10V7H7z" /></svg>
-				</div>
+								fill="#888888"
+								d="M5.315 2.1c.791-.113 1.9.145 3.333.966l.272.161l.16.1l.397-.083a13.3 13.3 0 0 1 4.59-.08l.456.08l.396.083l.161-.1c1.385-.84 2.487-1.17 3.322-1.148l.164.008l.147.017l.076.014l.05.011l.144.047a1 1 0 0 1 .53.514a5.2 5.2 0 0 1 .397 2.91l-.047.267l-.046.196l.123.163c.574.795.93 1.728 1.03 2.707l.023.295L21 9.5c0 3.855-1.659 5.883-4.644 6.68l-.245.061l-.132.029l.014.161l.008.157l.004.365l-.002.213L16 21a1 1 0 0 1-.883.993L15 22H9a1 1 0 0 1-.993-.883L8 21v-.734c-1.818.26-3.03-.424-4.11-1.878l-.535-.766c-.28-.396-.455-.579-.589-.644l-.048-.019a1 1 0 0 1 .564-1.918c.642.188 1.074.568 1.57 1.239l.538.769c.76 1.079 1.36 1.459 2.609 1.191L8 17.562l-.018-.168a5.03 5.03 0 0 1-.021-.824l.017-.185l.019-.12l-.108-.024c-2.976-.71-4.703-2.573-4.875-6.139l-.01-.31L3 9.5a5.6 5.6 0 0 1 .908-3.051l.152-.222l.122-.163l-.045-.196a5.2 5.2 0 0 1 .145-2.642l.1-.282l.106-.253a1 1 0 0 1 .529-.514l.144-.047z" /></svg>
+					</div></a>
+				<a href="/blog"
+					><div class="neumorphism rounded-full p-2">
+						<!-- material-symbols:article -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
+							><path
+								fill="#888888"
+								d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm2-4h7v-2H7zm0-4h10v-2H7zm0-4h10V7H7z" /></svg>
+					</div></a>
 			</div>
 			<h2
 				class="custom-reveal-text mb-4 w-full rounded-5xl font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
@@ -205,7 +211,7 @@
 			</h2>
 		</div>
 		<div
-			class="neumorphism relative mt-8 justify-self-center rounded-5xl border-[3rem] border-gray-100 lg:mt-0 lg:justify-self-start">
+			class="neumorphism relative mt-8 justify-self-center rounded-5xl border-8 border-gray-100 lg:mt-0 lg:justify-self-start lg:border-[3rem]">
 			<enhanced:img
 				src={selfSndgoPic}
 				alt="Me"
@@ -213,7 +219,7 @@
 				sizes="(min-width:1920px) 1100px, (min-width:1080px) 900px, (min-width:768px) 700px"></enhanced:img>
 
 			<div
-				class="neumorphism-inset absolute top-0 z-10 h-full w-full rounded-5xl border border-gray-200 bg-white/[0.0.1] opacity-75">
+				class="neumorphism-inset absolute top-0 z-10 h-full w-full rounded-5xl border border-gray-200 bg-white/[0.7] opacity-75">
 			</div>
 		</div>
 	</header>
@@ -231,8 +237,8 @@
 						<div class="space-y-4 self-center text-base-100">
 							<h3>About Me</h3>
 							<p>
-								I'm into <b>tech, the web & computers</b>. I go broad and deep into technical details — be it a webapp,
-								JS meta framework or hardware.
+								I'm into <b>tech, the web & computers</b>. Both hardware and software. From the technical details to
+								design. From the products to surrounding ecosystems.
 							</p>
 						</div>
 					</div>
@@ -535,8 +541,8 @@
 	.circle0 {
 		height: 200px;
 		width: 200px;
-		background-color: #fafafa;
-		border-color: rgb(216, 216, 216);
+		background-color: rgba(250, 250, 250, 0.8);
+		border-color: rgb(176, 176, 176);
 		border-width: 4px;
 		border-radius: 50%;
 		top: 100px;
@@ -548,8 +554,8 @@
 	.circle {
 		height: 300px;
 		width: 300px;
-		background-color: #fafafa;
-		border-color: rgb(216, 216, 216);
+		background-color: rgba(250, 250, 250, 0.6);
+		border-color: rgb(176, 176, 176);
 		border-width: 4px;
 		border-radius: 50%;
 		top: 50px;
@@ -561,8 +567,8 @@
 	.circle2 {
 		height: 100px;
 		width: 100px;
-		background-color: #fafafa;
-		border-color: rgb(216, 216, 216);
+		background-color: rgba(250, 250, 250, 0.4);
+		border-color: rgb(176, 176, 176);
 		border-width: 4px;
 		border-radius: 50%;
 		top: 150px;
