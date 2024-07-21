@@ -168,7 +168,7 @@
 	});
 </script>
 
-<div class="grid justify-items-center bg-gray-50 px-4 pb-20 pt-20 lg:min-h-dvh lg:grid-cols-10">
+<div class="grid justify-items-center bg-gray-50 pb-20 pt-20 lg:min-h-dvh lg:grid-cols-10">
 	<h2 class="text-center lg:col-span-10">Here are a few I've done.</h2>
 
 	<figure class="hidden self-center lg:col-span-3 lg:grid">
@@ -201,7 +201,7 @@
 
 	<div class="hidden lg:col-span-3 lg:grid"></div>
 
-	<div class="-mt-28 hidden self-start lg:col-span-4 lg:flex lg:items-center lg:justify-center">
+	<div class="-mt-4 hidden self-start lg:col-span-4 lg:flex lg:items-center lg:justify-center">
 		<figure class="grid justify-items-center space-y-3">
 			<h3 class="hidden font-serif text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
 			<figcaption class="italic">Budget home renovation blog</figcaption>
@@ -258,7 +258,7 @@
 </div>
 
 <div class="scroll-container2 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3 {oddColor}">
-	<div class="place-self-center px-20">
+	<div class="place-self-center">
 		<a href="https://appraize.zixian.dev/"
 			><h3 class="text-center font-sans text-6xl font-black text-[#491eff] lg:text-8xl">Appraize</h3></a>
 		<ExitLinks
@@ -477,7 +477,7 @@
 </div>
 
 <div class="scroll-container6 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3 {oddColor}">
-	<div class="place-self-center px-20">
+	<div class="place-self-center">
 		<div class="flex justify-center">
 			<a href="https://btonomics.com"
 				><h3 class="pb-4 pt-6 text-center font-serif text-5xl font-bold text-[#38bdf8] lg:text-7xl">BTOnomics</h3></a>
@@ -506,7 +506,7 @@
 			</div>
 			<div class="scroll-content6 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I built</h3>
-				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#38bdf8]">
+				<ul class="ms-6 list-outside list-disc space-y-2 marker:text-[#38bdf8]">
 					<li>Migrated to AstroJS as a static site.</li>
 					<li>I enjoyed using Astro. Native markdown support, view transitions, image tooling, fast.</li>
 					<li>There's always the option to reach into Svelte/React/Alpine if I wanted to.</li>
