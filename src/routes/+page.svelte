@@ -189,9 +189,11 @@
 		id="header"
 		class="screen grid grid-flow-dense content-center justify-items-center gap-y-10 bg-gray-100 px-4 pb-14 pt-8 lg:pb-0 lg:pt-0 xl:grid-cols-2 2xl:w-dvw">
 		<div class="order-last grid max-w-[40rem] content-center justify-items-center space-y-10 lg:ms-8 xl:order-none">
-			<h1 class="w-full text-center font-sans text-4xl leading-none tracking-tighter text-black xl:text-6xl">
+			<h1
+				class="w-full text-center font-sans text-4xl leading-none tracking-tighter text-[#341319] xl:text-start xl:text-6xl">
+				Hello, I'm
 				<span
-					class="inline-block bg-gradient-to-r from-pink-600 via-orange-600 to-red-700 bg-clip-text font-serif text-6xl text-transparent xl:text-[8rem] 2xl:text-[13rem]"
+					class="inline-block bg-gradient-to-r from-pink-600 via-orange-600 to-red-700 bg-clip-text text-start font-serif text-6xl text-transparent xl:text-center xl:text-[8rem] 2xl:text-[13rem]"
 					>Zixian.</span>
 			</h1>
 
@@ -242,17 +244,17 @@
 				</a>
 			</div>
 			<h2
-				class="neumorphism-inset custom-reveal-text mb-4 w-full rounded-5xl p-8 font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
+				class="custom-reveal-text mb-4 w-full rounded-5xl font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
 				<span>I'm a public servant trying to close gaps between policy, business, tech.</span>
 			</h2>
 		</div>
-		<div class="relative mt-8 h-fit content-center justify-self-center rounded-5xl lg:me-10 lg:mt-0 lg:max-w-fit">
+		<div class="relative mt-8 h-fit content-center justify-self-center rounded-5xl xl:me-10 xl:mt-0 xl:max-w-fit">
 			<!-- border-8 border-gray-100 lg:border-[1rem] 2xl:border-[3rem] -->
 			<enhanced:img
 				src={selfSndgoPic}
 				alt="Me"
 				class="rounded-5xl"
-				sizes="(min-width:2560px) 1000px,(min-width:1920px) 600px, (min-width:1600px) 400px, (min-width:1080px) 400px, (min-width:768px) 600px"
+				sizes="(min-width:2560px) 1000px, (min-width:1920px) 600px, (min-width:1600px) 400px, (min-width:1080px) 400px, (min-width:768px) 600px"
 			></enhanced:img>
 			<!-- 
 			<div
@@ -293,7 +295,7 @@
 					<div class="absolute h-full w-full bg-pink-900/50"></div>
 				</div> -->
 				<div
-					class="neumorphism-inset card col-span-2 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200 xl:col-span-1">
+					class="neumorphism card col-span-2 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200 xl:col-span-1">
 					<div class="card-body grid max-h-96 content-center space-y-4">
 						<h3>Education</h3>
 						<div class="space-y-2">
@@ -700,27 +702,28 @@
 	}
 	/* for custom reveal of text */
 	.custom-reveal-text span {
-		color: hsl(177 72% 37% / 30%);
+		color: hsl(350 46% 47% / 30%);
+		/* color: hsl(177 72% 37% / 30%); */
 		background-clip: text;
 		background-repeat: no-repeat;
 		background-size: 0% 100%;
 		background-image: linear-gradient(90deg, black, black);
 		animation: scroll-reveal linear forwards;
 		animation-timeline: view();
-		animation-range-start: cover 50vh;
+		animation-range-start: cover 40vh;
 		animation-range-end: cover 60vh;
 	}
 
 	@media only screen and (min-width: 1024px) {
 		.custom-reveal-text span {
-			animation-range-start: cover 45vh;
-			animation-range-end: cover 50vh;
+			animation-range-start: cover 30vh;
+			animation-range-end: cover 45vh;
 		}
 	}
 	@media only screen and (min-width: 1600px) {
 		.custom-reveal-text span {
-			animation-range-start: cover 45vh;
-			animation-range-end: cover 50vh;
+			animation-range-start: cover 30vh;
+			animation-range-end: cover 45vh;
 		}
 	}
 	.list {
