@@ -2,15 +2,18 @@
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		extend: {},
+		extend: {
+			borderRadius: {
+				'4xl': '2rem',
+				'5xl': '2.5rem',
+				'6xl': '3rem',
+				'7xl': '3.5rem',
+				'8xl': '4rem',
+			},
+		},
 		fontFamily: {
 			sans: ['Open Sans Variable'],
 			serif: ['IBM Plex Serif', 'Lora'],
-		},
-		borderRadius: {
-			'4xl': '2rem',
-			'5xl': '2.5rem',
-			'6xl': '3rem',
 		},
 	},
 	daisyui: {

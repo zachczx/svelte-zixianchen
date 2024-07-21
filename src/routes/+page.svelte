@@ -166,19 +166,21 @@
 	<!-- max-w-screen-2xl -->
 	<header
 		id="header"
-		class="screen grid content-center justify-items-center bg-gray-100 px-4 pb-14 pt-8 lg:grid-cols-5 lg:pb-0 lg:pt-0 2xl:w-dvw">
-		<div class="col-span-5 grid max-w-[40rem] content-center space-y-10 lg:col-span-2">
-			<h1 class="w-full font-serif text-4xl leading-none tracking-tighter text-black xl:text-6xl">
-				Hello. I'm<br /><span
-					class="inline-block bg-gradient-to-r from-pink-600 via-orange-600 to-red-700 bg-clip-text text-[11rem] text-transparent"
-					>ZIXIAN</span
-				>.
+		class="screen grid content-center justify-items-center bg-gray-100 px-4 pb-14 pt-8 lg:grid-cols-2 lg:pb-0 lg:pt-0 2xl:w-dvw">
+		<div class="grid max-w-[40rem] content-center space-y-10">
+			<h1 class="w-full font-sans text-4xl leading-none tracking-tighter text-black xl:text-6xl">
+				Hello. I'm
+				<div class="flex items-end">
+					<span
+						class="inline-block bg-gradient-to-r from-pink-600 via-orange-600 to-red-700 bg-clip-text font-serif text-6xl text-transparent xl:text-[8rem] 2xl:text-[13rem]"
+						>Zixian.</span>
+				</div>
 			</h1>
 			<h2 class="custom-reveal-text mb-4 w-full font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
 				<span>I'm a public servant trying to close gaps between policy, business needs, tech.</span>
 			</h2>
 		</div>
-		<div class="col-span-5 justify-self-center lg:col-span-3 lg:justify-self-start">
+		<div class="mt-8 justify-self-center lg:mt-0 lg:justify-self-start">
 			<enhanced:img
 				src={selfSndgoPic}
 				alt="Me"
@@ -188,10 +190,11 @@
 	</header>
 
 	<main>
-		<section class="spectrum-background grid justify-items-center px-4 2xl:w-dvw">
-			<div class="grid auto-cols-fr auto-rows-auto gap-7 py-10 lg:py-28 xl:grid-cols-4 2xl:max-w-screen-2xl">
+		<section class="grid justify-items-center bg-gray-100 px-4 2xl:w-dvw">
+			<div
+				class="neumorphism-children grid auto-cols-fr auto-rows-auto gap-7 py-10 lg:py-28 xl:grid-cols-4 2xl:max-w-screen-2xl">
 				<div
-					class="navItem rounded-5xl card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2"
+					class="navItem card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl border border-gray-200 bg-base-100 xl:col-span-2"
 					style="background-image: url({server}); background-size: 120%; background-position: right"
 					id="about">
 					<div class="card-body grid h-full grid-cols-2 justify-items-center">
@@ -206,7 +209,7 @@
 					</div>
 				</div>
 				<div
-					class="rounded-5xl card col-span-2 row-span-1 min-h-48 w-full border border-gray-200 bg-[#57262D] bg-base-100 xl:col-span-1"
+					class="card col-span-2 row-span-1 min-h-48 w-full rounded-5xl border border-gray-200 bg-[#57262D] bg-base-100 xl:col-span-1"
 					style="background-image: url({versus}); background-size: cover; background-position: center">
 					<div class="card-body grid pb-0">
 						<div>
@@ -218,7 +221,7 @@
 					</div>
 				</div>
 				<div
-					class="rounded-5xl card col-span-2 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1">
+					class="card col-span-2 w-full overflow-hidden rounded-5xl border border-gray-200 bg-base-100 xl:col-span-1">
 					<div class="card-body grid max-h-96 content-center space-y-4">
 						<h3>Education</h3>
 						<div class="space-y-2">
@@ -229,7 +232,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="rounded-5xl card col-span-2 w-full border border-gray-200 bg-base-100 xl:col-span-1">
+				<div class="card col-span-2 w-full rounded-5xl border border-gray-200 bg-base-100 xl:col-span-1">
 					<div class="card-body space-y-4 overflow-hidden">
 						<h3>Certification</h3>
 						<div class="space-y-2 pt-2">
@@ -315,7 +318,7 @@
 					</div>
 				</div>
 				<div
-					class="rounded-5xl card col-span-2 grid w-full grid-cols-2 overflow-hidden border border-gray-200 bg-base-100">
+					class="card col-span-2 grid w-full grid-cols-2 overflow-hidden rounded-5xl border border-gray-200 bg-base-100">
 					<div class="card-body space-y-4 self-center">
 						<h3>Interests</h3>
 						<p class="z-10">
@@ -337,7 +340,7 @@
 				</div>
 
 				<div
-					class="rounded-5xl card relative col-span-2 grid w-full overflow-hidden border border-gray-200 bg-gradient-to-tl from-base-100 to-gray-50 xl:col-span-1">
+					class="card relative col-span-2 grid w-full overflow-hidden rounded-5xl border border-gray-200 bg-gradient-to-tl from-base-100 to-gray-50 xl:col-span-1">
 					<div>
 						<div class="card-body grid h-full content-start space-y-4">
 							<h3 class="">Playlist</h3>
@@ -474,6 +477,11 @@
 		font-family: 'IBM Plex Serif', serif;
 	}
 	.neumorphism {
+		box-shadow:
+			12px 12px 12px rgba(0, 0, 0, 0.1),
+			-10px -10px 10px white;
+	}
+	.neumorphism-children > div {
 		box-shadow:
 			12px 12px 12px rgba(0, 0, 0, 0.1),
 			-10px -10px 10px white;
