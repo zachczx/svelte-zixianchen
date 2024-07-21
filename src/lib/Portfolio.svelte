@@ -72,7 +72,7 @@
 		/**
 		 * For the individual pages
 		 */
-		const mm = gsap.matchMedia();
+		/* const mm = gsap.matchMedia();
 
 		mm.add(
 			{ isLgBreakpoint: '(min-width: 1024px)', prefersReducedMotion: '(prefers-reduced-motion: no-preference)' },
@@ -82,7 +82,7 @@
 				if (isLgBreakpoint && prefersReducedMotion) {
 					const tl = gsap.timeline({
 						defaults: {
-							scale: 0.7,
+							// scale: 0.7,
 							autoAlpha: 0,
 							ease: 'circ.out',
 							stagger: { each: 0.3 },
@@ -150,7 +150,7 @@
 					});
 				}
 			},
-		);
+		); */
 		// tl.from(logoIcon, {
 		// 	autoAlpha: 0,
 		// 	scale: 0.6,
@@ -224,32 +224,34 @@
 		</div>
 	</div>
 	<StackUsed framework="Sveltekit" library="Gsap, Tailwind, Pagefind" host="Cloudflare" className="lg:hidden" />
-	<div class="grid content-around gap-y-8 p-8 lg:col-span-2 lg:gap-y-0">
-		<div class="scroll-content1 grid max-h-36 lg:w-2/3 lg:justify-start">
-			<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">Problem I tried solving</h3>
-			<p>
-				How might I help my non-technical teammates access to vast repositories of free-to-access knowledge to gain
-				tech-related competencies?
-			</p>
-		</div>
-		<div class="scroll-content1 grid max-h-36 content-center lg:w-2/3 lg:justify-self-end">
-			<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">What I wanted to do</h3>
-			<p>Display lists of tech resources from Youtube, blogs, tutorials, courses, sorted by tech competency.</p>
-		</div>
-		<div class="scroll-content1 grid max-h-36 content-center justify-self-start lg:w-2/3">
-			<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">What I built</h3>
-			<ul class="ml-6 list-outside list-disc marker:text-lime-400">
-				<li>Static Website</li>
-				<li>Used JS objects to store/read info</li>
-				<li>I felt CMS, DB, markdown files were unnecessary overhead</li>
-			</ul>
-		</div>
-		<div class="scroll-content1 grid max-h-36 content-center justify-self-end lg:w-2/3">
-			<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">Not yet done</h3>
-			<p>
-				Making learning plans the front and center to learning, so all the suggested resources revolve around a learning
-				plan once committed.
-			</p>
+	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
+		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+			<div class="scroll-content1 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">The Problem</h3>
+				<p>
+					How might I help my non-technical teammates access to vast repositories of free-to-access knowledge to gain
+					tech-related competencies?
+				</p>
+			</div>
+			<div class="scroll-content1 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">What I wanted</h3>
+				<p>Display lists of tech resources from Youtube, blogs, tutorials, courses, sorted by tech competency.</p>
+			</div>
+			<div class="scroll-content1 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">What I built</h3>
+				<ul class="ml-6 list-outside list-disc marker:text-lime-400">
+					<li>Static Website</li>
+					<li>Used JS objects to store/read info</li>
+					<li>I felt CMS, DB, markdown files were unnecessary overhead</li>
+				</ul>
+			</div>
+			<div class="scroll-content1 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">Not yet done</h3>
+				<p>
+					Making learning plans the front and center to learning, so all the suggested resources revolve around a
+					learning plan once committed.
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -279,31 +281,33 @@
 		library="Sortable, Drizzle, Tailwind, Postgresql, Turso"
 		host="Coolify, NodeJS, Nginx"
 		className="lg:hidden" />
-	<div class="grid content-around gap-y-8 p-8 lg:col-span-2 lg:gap-y-0">
-		<div class="scroll-content2 grid content-center lg:w-2/3 lg:justify-start">
-			<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Problem I tried solving</h3>
-			<p>
-				How might we speed up ranking sessions, which need manual selection to form a numbered list "1, 2, 3..." on
-				Excel. Every change to the list required manual reordering.
-			</p>
-		</div>
-		<div class="scroll-content2 grid content-center lg:w-2/3 lg:justify-self-end">
-			<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">What I wanted to do</h3>
-			<p>Speed up ranking sessions via drag & drop.</p>
-		</div>
-		<div class="scroll-content2 grid content-center justify-self-start lg:w-2/3">
-			<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">What I built</h3>
-			<ul class="ml-6 list-outside list-disc marker:text-[#491eff]">
-				<li>Drag & drop of officers and supplementary info (grades, dept, remarks)</li>
-				<li>Sessions and mini dashboard each session</li>
-				<li>Backend DB (Drizzle/Postgres) and CSV bulk uploads</li>
-				<li>Filters and keyboard shortcuts</li>
-				<li>Form actions/validation</li>
-			</ul>
-		</div>
-		<div class="scroll-content2 grid content-center lg:w-2/3 lg:justify-self-end">
-			<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Not yet done</h3>
-			<p>Haven't added authentication, which is probably needed for a private thing like ranking.</p>
+	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
+		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+			<div class="scroll-content2 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">The Problem</h3>
+				<p>
+					How might we speed up ranking sessions, which need manual selection to form a numbered list "1, 2, 3..." on
+					Excel. Every change to the list required manual reordering.
+				</p>
+			</div>
+			<div class="scroll-content2 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">What I wanted</h3>
+				<p>Speed up ranking sessions via drag & drop.</p>
+			</div>
+			<div class="scroll-content2 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">What I built</h3>
+				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#491eff]">
+					<li>Drag & drop of officers and supplementary info (grades, dept, remarks)</li>
+					<li>Sessions and mini dashboard each session</li>
+					<li>Backend DB (Drizzle/Postgres) and CSV bulk uploads</li>
+					<li>Filters and keyboard shortcuts</li>
+					<li>Form actions/validation</li>
+				</ul>
+			</div>
+			<div class="scroll-content2 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Not yet done</h3>
+				<p>Haven't added authentication, which is probably needed for a private thing like ranking.</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -333,37 +337,39 @@
 		library="HTMX, SortableJS, Bootstrap, Postgresql"
 		host="Nginx, Gunicorn"
 		className="lg:hidden" />
-	<div class="grid content-around gap-y-8 p-8 lg:col-span-2 lg:gap-y-0">
-		<div class="scroll-content3 grid content-center lg:w-2/3 lg:justify-start">
-			<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">Problem I tried solving</h3>
-			<p>Rank-a-Mate was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.</p>
-			<ul class="ml-6 list-outside list-disc marker:text-red-800">
-				<li>
-					Same problem statement - How might we speed up ranking sessions, which need manual selection to form a
-					numbered list "1, 2, 3..." on Excel.
-				</li>
-				<li>Every change to the list required manual reordering.</li>
-			</ul>
-		</div>
-		<div class="scroll-content3 grid content-center lg:w-2/3 lg:justify-self-end">
-			<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">What I wanted to do</h3>
-			<p>Speed up ranking sessions via drag & drop.</p>
-		</div>
-		<div class="scroll-content3 grid content-center lg:w-2/3 lg:justify-self-start">
-			<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">What I built</h3>
-			<ul class="ml-6 list-outside list-disc marker:text-red-800">
-				<li>Basic CRUD webapp with drag & drop of officers and session-based workflow</li>
-				<li>Allowed addition of supplementary info (grades, dept)</li>
-				<li>Sliders to adjust quotas for each grade</li>
-				<li>Backend DB via Django</li>
-			</ul>
-		</div>
-		<div class="scroll-content3 grid content-center lg:w-2/3 lg:justify-self-end">
-			<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">Not yet done</h3>
-			<p>
-				Rebuilt this as Appraize. This lacked filters, dashboard, keyboard shortcuts, uploads, etc that I subsequently
-				built in Appraize.
-			</p>
+	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
+		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+			<div class="scroll-content3 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">The Problem</h3>
+				<p>Rank-a-Mate was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.</p>
+				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-red-800">
+					<li>
+						Same problem statement - How might we speed up ranking sessions, which need manual selection to form a
+						numbered list "1, 2, 3..." on Excel.
+					</li>
+					<li>Every change to the list required manual reordering.</li>
+				</ul>
+			</div>
+			<div class="scroll-content3 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">What I wanted</h3>
+				<p>Speed up ranking sessions via drag & drop.</p>
+			</div>
+			<div class="scroll-content3 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">What I built</h3>
+				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-red-800">
+					<li>Basic CRUD webapp with drag & drop of officers and session-based workflow</li>
+					<li>Allowed addition of supplementary info (grades, dept)</li>
+					<li>Sliders to adjust quotas for each grade</li>
+					<li>Backend DB via Django</li>
+				</ul>
+			</div>
+			<div class="scroll-content3 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">Not yet done</h3>
+				<p>
+					Rebuilt this as Appraize. This lacked filters, dashboard, keyboard shortcuts, uploads, etc that I subsequently
+					built in Appraize.
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -390,26 +396,28 @@
 		</div>
 	</div>
 	<StackUsed framework="Django" library="HTMX, Bootstrap, Postgresql" host="Nginx, Gunicorn" className="lg:hidden" />
-	<div class="grid content-around gap-y-8 p-8 lg:col-span-2 lg:gap-y-0">
-		<div class="scroll-content4 grid content-center lg:w-2/3 lg:justify-start">
-			<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">Problem I tried solving</h3>
-			<p>How might I make it easier and shorter to plan medicine dose timings and get accurate info.</p>
-		</div>
-		<div class="scroll-content4 grid content-center justify-self-end lg:w-2/3">
-			<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">What I wanted to do</h3>
-			<p>Make it less tedious for both of us parents to record/coord medicine stuff and sync with one another.</p>
-		</div>
-		<div class="scroll-content4 grid content-center lg:w-2/3 lg:justify-self-start">
-			<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">What I built</h3>
-			<ul class="ml-6 list-outside list-disc marker:text-lime-700">
-				<li>Basic CRUD webapp with user authentication.</li>
-				<li>Sprinkled HTMX and datepicker.js for user interactions.</li>
-				<li>Backend via Django</li>
-			</ul>
-		</div>
-		<div class="scroll-content4 grid content-center lg:w-2/3 lg:justify-self-end">
-			<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">Not yet done</h3>
-			<p>Honestly, ChatGPT does it better (Gemini refuses, so no luck there).</p>
+	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
+		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+			<div class="scroll-content4 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">The Problem</h3>
+				<p>How might I make it easier and shorter to plan medicine dose timings and get accurate info.</p>
+			</div>
+			<div class="scroll-content4 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">What I wanted</h3>
+				<p>Make it less tedious for both of us parents to record/coord medicine stuff and sync with one another.</p>
+			</div>
+			<div class="scroll-content4 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">What I built</h3>
+				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-lime-700">
+					<li>Basic CRUD webapp with user authentication.</li>
+					<li>Sprinkled HTMX and datepicker.js for user interactions.</li>
+					<li>Backend via Django</li>
+				</ul>
+			</div>
+			<div class="scroll-content4 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">Not yet done</h3>
+				<p>Honestly, ChatGPT does it better (Gemini refuses, so no luck there).</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -430,36 +438,39 @@
 		</div>
 	</div>
 	<StackUsed framework="Wordpress" library="Mysql" host="Nginx, Apache, Bunny CDN" className="lg:hidden" />
-	<div class="grid content-around gap-y-8 p-8 lg:col-span-2 lg:gap-y-0">
-		<div class="scroll-content5 grid content-center lg:w-2/3 lg:justify-start">
-			<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">Problem I tried solving</h3>
-			<p>
-				There was barely any info online to guide me through the renovation journey (choosing an ID/contractor, deciding
-				on a design, buying from Taobao).
-			</p>
-		</div>
-		<div class="scroll-content5 grid content-center lg:w-2/3 lg:justify-self-end">
-			<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">What I wanted to do</h3>
-			<p>
-				Started BTOnomics as <a href="https://web.archive.org/web/20180513112335/http://pewpewpew.cc/">pewpewpew.cc</a> in
-				2018, which was a blog that documented my journey and my advice to other people in similar shoes.
-			</p>
-		</div>
-		<div class="scroll-content5 grid content-center lg:w-2/3 lg:justify-self-start">
-			<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">What I built</h3>
-			<ul class="ml-6 list-outside list-disc marker:text-yellow-500">
-				<li>WordPress was the obvious choice.</li>
-				<li>Wrote organic content that other people liked as well.</li>
-				<li>Tinkered with themes & plug-ins, tweaking, optimizing.</li>
-				<li>Finetuned content for SEO and Core Web Vitals, esp TTFB/LCP.</li>
-			</ul>
-		</div>
-		<div class="scroll-content5 grid content-center lg:w-2/3 lg:justify-self-end">
-			<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">Not yet done</h3>
-			<p>
-				Wordpress got too bulky and tiresome to manage and host. Not least the sprawling repository of images (not least
-				the multiple resized copies of every image). I'm still keeping this Wordpress instance out of nostalgia.
-			</p>
+	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
+		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+			<div class="scroll-content5 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">The Problem</h3>
+				<p>
+					There was barely any info online to guide me through the renovation journey (choosing an ID/contractor,
+					deciding on a design, buying from Taobao).
+				</p>
+			</div>
+			<div class="scroll-content5 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">What I wanted</h3>
+				<p>
+					Started BTOnomics as <a href="https://web.archive.org/web/20180513112335/http://pewpewpew.cc/"
+						>pewpewpew.cc</a> in 2018, which was a blog that documented my journey and my advice to other people in similar
+					shoes.
+				</p>
+			</div>
+			<div class="scroll-content5 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">What I built</h3>
+				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-yellow-500">
+					<li>WordPress was the obvious choice.</li>
+					<li>Wrote organic content that other people liked as well.</li>
+					<li>Tinkered with themes & plug-ins, tweaking, optimizing.</li>
+					<li>Finetuned content for SEO and Core Web Vitals, esp TTFB/LCP.</li>
+				</ul>
+			</div>
+			<div class="scroll-content5 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">Not yet done</h3>
+				<p>
+					Wordpress got too bulky and tiresome to manage and host. Not least the sprawling repository of images (not
+					least the multiple resized copies of every image). I'm still keeping this Wordpress instance out of nostalgia.
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -482,29 +493,35 @@
 		</div>
 	</div>
 	<StackUsed framework="AstroJS" library="Tailwind, Pagefind" host="Cloudflare" className="lg:hidden" />
-	<div class="grid content-around gap-y-8 space-y-6 p-8 lg:col-span-2 lg:gap-y-0">
-		<div class="scroll-content6 grid content-center lg:w-2/3 lg:justify-start">
-			<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Problem I tried solving</h3>
-			<p>Wordpress got too bulky and tiresome to manage and host.</p>
-		</div>
-		<div class="scroll-content6 grid content-center lg:w-2/3 lg:justify-self-end">
-			<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I wanted to do</h3>
-			<p>I moved BTOnomics to a more modern framework and tried AstroJS, which had been gaining a lot of praise.</p>
-		</div>
-		<div class="scroll-content6 grid content-center justify-self-start lg:w-2/3">
-			<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I built</h3>
-			<ul class="ml-6 list-outside list-disc marker:text-[#38bdf8]">
-				<li>Migrated to AstroJS as a static site.</li>
-				<li>
-					I enjoy using Astro. Native markdown support, native view transitions, great image tools, really fast speeds.
-				</li>
-				<li>There's always the option to reach into Svelte/React/Alpine if I wanted to.</li>
-				<li>Used ChatGPT to convert WordPress html/shortcode to markdown.</li>
-			</ul>
-		</div>
-		<div class="scroll-content6 grid content-center justify-self-end lg:w-2/3">
-			<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Not yet done</h3>
-			<p>Haven't recreated all the old functionalities, especially comments, but I figured I don't need it anyway.</p>
+	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
+		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+			<div class="scroll-content6 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">The Problem</h3>
+				<p>Wordpress got too bulky and tiresome to manage and host.</p>
+			</div>
+			<div class="scroll-content6 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I wanted</h3>
+				<p>I moved BTOnomics to a more modern framework and tried AstroJS, which had been gaining a lot of praise.</p>
+			</div>
+			<div class="scroll-content6 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I built</h3>
+				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#38bdf8]">
+					<li>Migrated to AstroJS as a static site.</li>
+					<li>
+						I enjoy using Astro. Native markdown support, native view transitions, great image tools, really fast
+						speeds.
+					</li>
+					<li>There's always the option to reach into Svelte/React/Alpine if I wanted to.</li>
+					<li>Used ChatGPT to convert WordPress html/shortcode to markdown.</li>
+				</ul>
+			</div>
+			<div class="scroll-content6 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Not yet done</h3>
+				<p>
+					Haven't recreated all the old functionalities from plugins, especially comments, but I figured I didn't need
+					it anyway.
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -513,6 +530,7 @@
 	/* * {
 		border: red solid 1px;
 	} */
+
 	h1:not(.font-sans),
 	h2:not(.font-sans),
 	h3:not(.font-sans) {

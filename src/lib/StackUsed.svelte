@@ -11,7 +11,7 @@
 	export let className: string;
 </script>
 
-<div class="mt-6 grid content-around gap-y-2 rounded-2xl p-4 px-8 text-lg font-bold {className}">
+<div class="mt-6 grid content-around gap-y-2 rounded-2xl px-4 py-8 text-lg font-bold {className}">
 	{#if framework}
 		<div class="grid grid-cols-10">
 			<div class="col-span-1">

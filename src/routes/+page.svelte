@@ -360,14 +360,14 @@
 			</div>
 		</section>
 
-		<section class="grid min-h-[40rem] w-auto content-center justify-items-center gap-y-10 bg-gray-50 px-4 py-20">
+		<section class="grid min-h-[50rem] w-auto content-center justify-items-center gap-y-10 bg-gray-50 px-4 py-20">
 			<Quote />
 		</section>
 
-		<div class="wrapper spectrum-background3 grid justify-items-center px-4 py-10 lg:py-28">
+		<div class="wrapper grid justify-items-center bg-gray-100 px-4 py-10 lg:py-28">
 			<section class="grid max-w-screen-2xl auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
 				<div
-					class="navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1"
+					class="neumorphism navItem card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1"
 					id="career">
 					<img src={ResumeBro} class="-mb-10" alt="Career" />
 					<div class="card-body">
@@ -375,7 +375,7 @@
 					</div>
 				</div>
 				<div
-					class="card col-span-2 h-full min-h-96 w-full border border-gray-200 bg-base-100 xl:col-span-3"
+					class="neumorphism card col-span-2 h-full min-h-96 w-full border border-gray-200 bg-base-100 xl:col-span-3"
 					style="background: url({lego}); background-position: center 10%">
 					<div class="relative h-full w-full rounded-xl bg-black opacity-[0.3]"></div>
 					<div class="absolute left-0 right-0 top-14 mx-auto text-center text-2xl text-base-100">
@@ -386,11 +386,11 @@
 				<div class="col-span-2 grid gap-7">
 					<!-- subgrid -->
 					<div
-						class="card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2">
+						class="neumorphism card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2">
 						<canvas class="block hidden md:grid" id="c"></canvas>
 					</div>
 					<div
-						class="card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2">
+						class="neumorphism card relative col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-2">
 						<div class="card-body z-20 grid grid-cols-1 content-start gap-x-8 space-y-4 xl:grid-cols-3">
 							<h3 class="col-span-1 xl:col-span-3">
 								Tech <span class="text-xl text-gray-500">({percentMonthsTech}%)</span>
@@ -410,7 +410,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1">
+				<div
+					class="neumorphism card col-span-2 row-span-1 w-full overflow-hidden border border-gray-200 bg-base-100 xl:col-span-1">
 					<div class="card-body space-y-4">
 						<h3>Comms <span class="text-xl text-gray-500">({percentMonthsComms}%)</span></h3>
 						<div>
@@ -426,7 +427,7 @@
 				</div>
 				<div class="col-span-2 grid gap-7 xl:col-span-1">
 					<!-- subgrid -->
-					<div class="card row-span-1 w-full border border-gray-200 bg-base-100">
+					<div class="neumorphism card row-span-1 w-full border border-gray-200 bg-base-100">
 						<div class="card-body mb-4 grid content-center space-y-4">
 							<h3>Policy <span class="text-xl text-gray-500">({percentMonthsPolicy}%)<span></span></span></h3>
 							<div>
@@ -437,7 +438,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="card row-span-1 grid w-full content-center overflow-hidden border border-gray-200 bg-base-100">
+					<div
+						class="neumorphism-inset card row-span-1 grid w-full content-center overflow-hidden border border-gray-200 bg-base-100">
 						<div
 							class="p-0 pt-4"
 							style="background: url('/trees-tree-svgrepo-com.svg'); background-repeat: repeat-x; background-position: top">
@@ -476,6 +478,7 @@
 	h3:not(.font-sans) {
 		font-family: 'IBM Plex Serif', serif;
 	}
+
 	.neumorphism {
 		box-shadow:
 			12px 12px 12px rgba(0, 0, 0, 0.1),
@@ -485,6 +488,12 @@
 		box-shadow:
 			12px 12px 12px rgba(0, 0, 0, 0.1),
 			-10px -10px 10px white;
+	}
+
+	.neumorphism-inset {
+		box-shadow:
+			inset 5px 5px 10px rgba(163, 177, 198, 0.5),
+			inset -5px -5px 12px rgba(255, 255, 255, 0.8);
 	}
 
 	/* Orbit for courses */
