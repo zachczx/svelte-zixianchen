@@ -1,7 +1,8 @@
 <script>
 	import TankSvg from '$lib/svg/TankSvg.svelte';
 	import versus from '$lib/assets/fightIronManCaptainAmerica.webp';
-	import selfSndgoPic from '$lib/assets/DSC03163.webp?enhanced&w=400;600;700;900';
+	import selfSndgoPic from '$lib/assets/DSC03163.webp?enhanced';
+	//&w=400;600;700;1000';
 	import spotify from '$lib/assets/spotify.webp?enhanced&w=400';
 	import server from '$lib/assets/server.webp';
 	import programming from '$lib/assets/programming.webp?enhanced&w=800';
@@ -186,16 +187,14 @@
 	<!-- max-w-screen-2xl -->
 	<header
 		id="header"
-		class="screen grid content-center justify-items-center bg-gray-100 px-4 pb-14 pt-8 lg:grid-cols-2 lg:pb-0 lg:pt-0 2xl:w-dvw">
-		<div class="grid max-w-[40rem] content-center space-y-10">
-			<h1 class="w-full font-sans text-4xl leading-none tracking-tighter text-black xl:text-6xl">
-				Hello. I'm
-				<div class="flex items-end">
-					<span
-						class="inline-block bg-gradient-to-r from-pink-600 via-orange-600 to-red-700 bg-clip-text font-serif text-6xl text-transparent xl:text-[8rem] 2xl:text-[13rem]"
-						>Zixian.</span>
-				</div>
+		class="screen grid grid-flow-dense content-center justify-items-center gap-y-10 bg-gray-100 px-4 pb-14 pt-8 lg:pb-0 lg:pt-0 xl:grid-cols-2 2xl:w-dvw">
+		<div class="order-last grid max-w-[40rem] content-center justify-items-center space-y-10 lg:ms-8 xl:order-none">
+			<h1 class="w-full text-center font-sans text-4xl leading-none tracking-tighter text-black xl:text-6xl">
+				<span
+					class="inline-block bg-gradient-to-r from-pink-600 via-orange-600 to-red-700 bg-clip-text font-serif text-6xl text-transparent xl:text-[8rem] 2xl:text-[13rem]"
+					>Zixian.</span>
 			</h1>
+
 			<div class="flex justify-center space-x-8">
 				<a
 					href="https://www.linkedin.com/in/zixianchen/"
@@ -203,10 +202,10 @@
 					onmousedown={addNeumorphismInset}
 					onmouseup={removeNeumorphismInset}
 					onkeyup={removeNeumorphismInset}
-					class="neumorphism rounded-full p-2"
+					class="neumorphism flex h-16 w-16 items-center justify-center rounded-full"
 					id="linkedinCircle">
 					<!-- flowbite:linkedin-solid -->
-					<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24"
 						><g fill="#888888"
 							><path
 								fill-rule="evenodd"
@@ -216,57 +215,57 @@
 				</a>
 				<a
 					href="https://github.com/zachczx?tab=repositories"
-					class="neumorphism rounded-full p-2"
+					class="neumorphism flex h-16 w-16 items-center justify-center rounded-full"
 					id="elGithub"
 					onkeydown={addNeumorphismInset}
 					onmousedown={addNeumorphismInset}
 					onmouseup={removeNeumorphismInset}
 					onkeyup={removeNeumorphismInset}>
 					<!-- tabler:brand-github-filled -->
-					<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24"
 						><path
 							fill="#888888"
 							d="M5.315 2.1c.791-.113 1.9.145 3.333.966l.272.161l.16.1l.397-.083a13.3 13.3 0 0 1 4.59-.08l.456.08l.396.083l.161-.1c1.385-.84 2.487-1.17 3.322-1.148l.164.008l.147.017l.076.014l.05.011l.144.047a1 1 0 0 1 .53.514a5.2 5.2 0 0 1 .397 2.91l-.047.267l-.046.196l.123.163c.574.795.93 1.728 1.03 2.707l.023.295L21 9.5c0 3.855-1.659 5.883-4.644 6.68l-.245.061l-.132.029l.014.161l.008.157l.004.365l-.002.213L16 21a1 1 0 0 1-.883.993L15 22H9a1 1 0 0 1-.993-.883L8 21v-.734c-1.818.26-3.03-.424-4.11-1.878l-.535-.766c-.28-.396-.455-.579-.589-.644l-.048-.019a1 1 0 0 1 .564-1.918c.642.188 1.074.568 1.57 1.239l.538.769c.76 1.079 1.36 1.459 2.609 1.191L8 17.562l-.018-.168a5.03 5.03 0 0 1-.021-.824l.017-.185l.019-.12l-.108-.024c-2.976-.71-4.703-2.573-4.875-6.139l-.01-.31L3 9.5a5.6 5.6 0 0 1 .908-3.051l.152-.222l.122-.163l-.045-.196a5.2 5.2 0 0 1 .145-2.642l.1-.282l.106-.253a1 1 0 0 1 .529-.514l.144-.047z" /></svg>
 				</a>
 				<a
 					href="/blog"
-					class="neumorphism rounded-full p-2"
+					class="neumorphism flex h-16 w-16 items-center justify-center rounded-full"
 					onkeydown={addNeumorphismInset}
 					onmousedown={addNeumorphismInset}
 					onmouseup={removeNeumorphismInset}
 					onkeyup={removeNeumorphismInset}>
 					<!-- material-symbols:article -->
-					<svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24"
 						><path
 							fill="#888888"
 							d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm2-4h7v-2H7zm0-4h10v-2H7zm0-4h10V7H7z" /></svg>
 				</a>
 			</div>
 			<h2
-				class="custom-reveal-text mb-4 w-full rounded-5xl font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
-				<span>I'm a public servant trying to close gaps between policy, business needs, tech.</span>
+				class="neumorphism-inset custom-reveal-text mb-4 w-full rounded-5xl p-8 font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
+				<span>I'm a public servant trying to close gaps between policy, business, tech.</span>
 			</h2>
 		</div>
-		<div
-			class="neumorphism relative mt-8 justify-self-center rounded-5xl border-8 border-gray-100 lg:mt-0 lg:justify-self-start lg:border-[3rem]">
+		<div class="relative mt-8 h-fit content-center justify-self-center rounded-5xl lg:me-10 lg:mt-0 lg:max-w-fit">
+			<!-- border-8 border-gray-100 lg:border-[1rem] 2xl:border-[3rem] -->
 			<enhanced:img
 				src={selfSndgoPic}
 				alt="Me"
-				class="relative rounded-5xl"
-				sizes="(min-width:1920px) 900px, (min-width:1600px) 700px, (min-width:1080px) 400px, (min-width:768px) 600px"
+				class="rounded-5xl"
+				sizes="(min-width:2560px) 1000px,(min-width:1920px) 600px, (min-width:1600px) 400px, (min-width:1080px) 400px, (min-width:768px) 600px"
 			></enhanced:img>
+			<!-- 
 			<div
 				class="neumorphism-inset absolute top-0 z-10 h-full w-full rounded-5xl border border-gray-200 bg-white/[0.7] opacity-75">
-			</div>
+			</div> -->
 		</div>
 	</header>
 
 	<main>
 		<section class="grid justify-items-center bg-gray-100 px-4 2xl:w-dvw">
-			<div
-				class="neumorphism-children grid auto-cols-fr auto-rows-auto gap-7 py-10 lg:py-28 xl:grid-cols-4 2xl:max-w-screen-2xl">
+			<div class="grid auto-cols-fr auto-rows-auto gap-7 py-10 lg:py-28 xl:grid-cols-4 2xl:max-w-screen-2xl">
 				<div
-					class="navItem card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-base-100 xl:col-span-3"
+					class="navItem neumorphism card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-base-100 xl:col-span-3"
 					style="background-image: url({server}); background-size: 100%; background-position: right"
 					id="about">
 					<div class="card-body grid h-full grid-cols-2 justify-items-center pe-4 ps-20">
@@ -294,7 +293,7 @@
 					<div class="absolute h-full w-full bg-pink-900/50"></div>
 				</div> -->
 				<div
-					class="card col-span-2 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200 xl:col-span-1">
+					class="neumorphism-inset card col-span-2 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200 xl:col-span-1">
 					<div class="card-body grid max-h-96 content-center space-y-4">
 						<h3>Education</h3>
 						<div class="space-y-2">
@@ -305,7 +304,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="card col-span-2 w-full rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200 xl:col-span-1">
+				<div
+					class="neumorphism card col-span-2 w-full rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200 xl:col-span-1">
 					<div class="card-body space-y-4 overflow-hidden">
 						<h3>Certification</h3>
 						<div class="space-y-2 pt-2">
@@ -391,7 +391,7 @@
 					</div>
 				</div>
 				<div
-					class="card col-span-2 grid w-full grid-cols-2 overflow-hidden rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200">
+					class="neumorphism card col-span-2 grid w-full grid-cols-2 overflow-hidden rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200">
 					<div class="card-body space-y-4 self-center">
 						<h3>Interests</h3>
 						<p class="z-10">
@@ -408,12 +408,12 @@
 						</p>
 					</div>
 					<div class="self-center">
-						<enhanced:img src={programming} alt="" class="translate-x-16 scale-150" />
+						<enhanced:img src={programming} alt="" class="translate-x-16 scale-150"></enhanced:img>
 					</div>
 				</div>
 
 				<div
-					class="card relative col-span-2 grid w-full overflow-hidden rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200 xl:col-span-1">
+					class="neumorphism card relative col-span-2 grid w-full overflow-hidden rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200 xl:col-span-1">
 					<div>
 						<div class="card-body grid h-full content-start space-y-4">
 							<h3 class="">Playlist</h3>
@@ -568,6 +568,12 @@
 		box-shadow:
 			inset 5px 5px 10px rgba(163, 177, 198, 0.5),
 			inset -5px -5px 12px rgba(255, 255, 255, 0.8);
+	}
+
+	.neumorphism-alt {
+		box-shadow:
+			13px 13px 20px #cbced1,
+			-13px -13px 20px #ffffff;
 	}
 
 	/* Orbit for courses */
