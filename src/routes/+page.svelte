@@ -162,7 +162,7 @@
 	 */
 	function addNeumorphismInset(evt) {
 		const el = evt.currentTarget;
-		el?.classList.add('neumorphism-inset');
+		el.classList.add('neumorphism-inset');
 		el.classList.remove('neumorphism');
 	}
 
@@ -172,7 +172,7 @@
 	 */
 	function removeNeumorphismInset(evt) {
 		const el = evt.currentTarget;
-		el?.classList.remove('neumorphism-inset');
+		el.classList.remove('neumorphism-inset');
 		el.classList.add('neumorphism');
 	}
 </script>
