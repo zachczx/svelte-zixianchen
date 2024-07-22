@@ -543,7 +543,7 @@
 		</div>
 
 		<section
-			class="wrapper grid min-h-[40rem] content-center justify-items-center gap-y-10 bg-gray-100 px-4 lg:min-h-[50rem] xl:py-20">
+			class="wrapper grid min-h-[40rem] content-center justify-items-center gap-y-10 px-4 lg:min-h-[50rem] xl:py-20">
 			<Intermission />
 		</section>
 	</main>
