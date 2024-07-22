@@ -1,8 +1,7 @@
 <script>
 	import TankSvg from '$lib/svg/TankSvg.svelte';
 	import versus from '$lib/assets/fightIronManCaptainAmerica.webp';
-	import selfSndgoPic from '$lib/assets/DSC03163.webp?enhanced';
-	//&w=400;600;700;1000';
+	import selfSndgoPic from '$lib/assets/profile.webp?enhanced&w=800';
 	import spotify from '$lib/assets/spotify.webp?enhanced&w=400';
 	import server from '$lib/assets/server.webp';
 	import programming from '$lib/assets/programming.webp?enhanced&w=800';
@@ -15,7 +14,13 @@
 	import Portfolio from '$lib/Portfolio.svelte';
 	import Quote from '$lib/Quote.svelte';
 	import Intermission from '$lib/Intermission.svelte';
+	import { addNeumorphismInset, removeNeumorphismInset } from '$lib/Neumorphism';
+	import robotEyes from '$lib/assets/robot-eyes.webp?enhanced&w=900';
+	import ryzen from '$lib/assets/ryzen.webp?enhanced&w=1000';
+	import heroTopSmartNation from '$lib/assets/hero-top-smart-nation.webp';
 
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	///////////////////////////////////
 
 	let animate = $state('');
@@ -106,6 +111,42 @@
 		};
 
 		setInterval(draw, 90);
+
+		//////////////// End Canvas
+
+		// For GSAP
+
+		gsap.registerPlugin(ScrollTrigger);
+		const mm = gsap.matchMedia();
+
+		mm.add(
+			{ isLgBreakpoint: '(min-width: 1024px)', prefersReducedMotion: '(prefers-reduced-motion: no-preference)' },
+			(context) => {
+				let { isLgBreakpoint, prefersReducedMotion } = context.conditions;
+
+				if (isLgBreakpoint && prefersReducedMotion) {
+					const tl = gsap.timeline({
+						defaults: {
+							// scale: 0.7,
+							y: -100,
+							ease: 'circ.out',
+							//stagger: { each: 0.3 },
+						},
+					});
+
+					tl.to('.hero-scroll', {
+						scrollTrigger: {
+							trigger: '.hero-scroll',
+							start: '30% center',
+							scrub: true,
+							pin: false,
+							end: '+=300',
+							markers: false,
+						},
+					});
+				}
+			},
+		);
 	});
 
 	/**
@@ -155,26 +196,6 @@
 	const percentMonthsTech = Math.round(((25 + 36 + numMonthsSdTech) / numMonthsTotal) * 100);
 	const percentMonthsComms = Math.round((37 / numMonthsTotal) * 100);
 	const percentMonthsPolicy = Math.round((28 / numMonthsTotal) * 100);
-
-	/**
-	 * Insert neumorphism css class
-	 * @param {Event} evt
-	 */
-	function addNeumorphismInset(evt) {
-		const el = evt.currentTarget;
-		el.classList.add('neumorphism-inset');
-		el.classList.remove('neumorphism');
-	}
-
-	/**
-	 * Remove neumorphism css class
-	 * @param {Event} evt
-	 */
-	function removeNeumorphismInset(evt) {
-		const el = evt.currentTarget;
-		el.classList.remove('neumorphism-inset');
-		el.classList.add('neumorphism');
-	}
 </script>
 
 <svelte:head>
@@ -184,86 +205,73 @@
 
 <Nav {navCurrent} />
 <div class="grid min-h-dvh justify-items-center 2xl:overflow-x-clip">
-	<!-- max-w-screen-2xl -->
 	<header
 		id="header"
-		class="screen grid grid-flow-dense content-center justify-items-center gap-y-10 bg-gray-100 px-4 pb-14 pt-8 lg:pb-0 lg:pt-0 xl:grid-cols-2 2xl:w-dvw">
-		<div class="order-last grid max-w-[40rem] content-center justify-items-center space-y-10 lg:ms-8 xl:order-none">
-			<h1
-				class="w-full text-center font-sans text-4xl leading-none tracking-tighter text-[#341319] xl:text-start xl:text-6xl">
-				Hello, I'm
-				<span
-					class="inline-block bg-gradient-to-r from-pink-600 via-orange-600 to-red-700 bg-clip-text text-start font-serif text-6xl text-transparent xl:text-center xl:text-[8rem] 2xl:text-[13rem]"
-					>Zixian.</span>
-			</h1>
-
-			<div class="flex justify-center space-x-8">
-				<a
-					href="https://www.linkedin.com/in/zixianchen/"
-					onkeydown={addNeumorphismInset}
-					onmousedown={addNeumorphismInset}
-					onmouseup={removeNeumorphismInset}
-					onkeyup={removeNeumorphismInset}
-					class="neumorphism flex h-16 w-16 items-center justify-center rounded-full"
-					id="linkedinCircle">
-					<!-- flowbite:linkedin-solid -->
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24"
-						><g fill="#888888"
-							><path
-								fill-rule="evenodd"
-								d="M12.51 8.796v1.697a3.74 3.74 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766c-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483a1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.6 1.6 0 0 1 1.6 1.606"
-								clip-rule="evenodd" /><path d="M7.2 8.809H4V19.5h3.2z" /></g
-						></svg>
-				</a>
-				<a
-					href="https://github.com/zachczx?tab=repositories"
-					class="neumorphism flex h-16 w-16 items-center justify-center rounded-full"
-					id="elGithub"
-					onkeydown={addNeumorphismInset}
-					onmousedown={addNeumorphismInset}
-					onmouseup={removeNeumorphismInset}
-					onkeyup={removeNeumorphismInset}>
-					<!-- tabler:brand-github-filled -->
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24"
-						><path
-							fill="#888888"
-							d="M5.315 2.1c.791-.113 1.9.145 3.333.966l.272.161l.16.1l.397-.083a13.3 13.3 0 0 1 4.59-.08l.456.08l.396.083l.161-.1c1.385-.84 2.487-1.17 3.322-1.148l.164.008l.147.017l.076.014l.05.011l.144.047a1 1 0 0 1 .53.514a5.2 5.2 0 0 1 .397 2.91l-.047.267l-.046.196l.123.163c.574.795.93 1.728 1.03 2.707l.023.295L21 9.5c0 3.855-1.659 5.883-4.644 6.68l-.245.061l-.132.029l.014.161l.008.157l.004.365l-.002.213L16 21a1 1 0 0 1-.883.993L15 22H9a1 1 0 0 1-.993-.883L8 21v-.734c-1.818.26-3.03-.424-4.11-1.878l-.535-.766c-.28-.396-.455-.579-.589-.644l-.048-.019a1 1 0 0 1 .564-1.918c.642.188 1.074.568 1.57 1.239l.538.769c.76 1.079 1.36 1.459 2.609 1.191L8 17.562l-.018-.168a5.03 5.03 0 0 1-.021-.824l.017-.185l.019-.12l-.108-.024c-2.976-.71-4.703-2.573-4.875-6.139l-.01-.31L3 9.5a5.6 5.6 0 0 1 .908-3.051l.152-.222l.122-.163l-.045-.196a5.2 5.2 0 0 1 .145-2.642l.1-.282l.106-.253a1 1 0 0 1 .529-.514l.144-.047z" /></svg>
-				</a>
-				<a
-					href="/blog"
-					class="neumorphism flex h-16 w-16 items-center justify-center rounded-full"
-					onkeydown={addNeumorphismInset}
-					onmousedown={addNeumorphismInset}
-					onmouseup={removeNeumorphismInset}
-					onkeyup={removeNeumorphismInset}>
-					<!-- material-symbols:article -->
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24"
-						><path
-							fill="#888888"
-							d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm2-4h7v-2H7zm0-4h10v-2H7zm0-4h10V7H7z" /></svg>
-				</a>
-			</div>
-			<h2
-				class="custom-reveal-text mb-4 w-full rounded-5xl font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
-				<span>I'm a public servant trying to close gaps between policy, business, tech.</span>
-			</h2>
+		class="hidden content-center justify-items-center xl:grid xl:min-h-dvh xl:max-w-[1500px] xl:grid-cols-5 xl:gap-x-10 xl:gap-y-10">
+		<div class="content-center justify-self-center xl:col-span-1">
+			<span
+				class="inline-block w-full bg-gradient-to-r from-gray-700 to-slate-700 bg-clip-text font-serif text-4xl leading-none tracking-tighter text-[#341319] text-transparent xl:text-start xl:text-[7rem]"
+				>Hi
+			</span>
 		</div>
-		<div class="relative mt-8 h-fit content-center justify-self-center rounded-5xl xl:me-10 xl:mt-0 xl:max-w-fit">
-			<!-- border-8 border-gray-100 lg:border-[1rem] 2xl:border-[3rem] -->
-			<enhanced:img
-				src={selfSndgoPic}
-				alt="Me"
-				class="rounded-5xl"
-				sizes="(min-width:2560px) 1000px, (min-width:1920px) 600px, (min-width:1600px) 400px, (min-width:1080px) 400px, (min-width:768px) 600px"
-			></enhanced:img>
-			<!-- 
-			<div
-				class="neumorphism-inset absolute top-0 z-10 h-full w-full rounded-5xl border border-gray-200 bg-white/[0.7] opacity-75">
-			</div> -->
+		<div class="h-[10rem] w-full justify-self-end overflow-hidden rounded-br-full rounded-tl-full xl:col-span-4">
+			<img src={heroTopSmartNation} alt="" class="-translate-x-0 -translate-y-[6.5rem]" />
+		</div>
+		<div
+			class="hidden h-[10rem] w-full justify-self-end overflow-hidden rounded-br-full rounded-br-full rounded-tl-full xl:col-span-2 xl:grid">
+			<enhanced:img src={ryzen} alt="" class="-translate-x-[3rem] -translate-y-[9rem] scale-[1.5]" />
+		</div>
+
+		<div class=" x h-[10rem] w-full justify-self-end overflow-hidden rounded-bl-full rounded-tr-full xl:col-span-2">
+			<enhanced:img src={robotEyes} alt="" class="-translate-y-[9rem] translate-x-[0rem] scale-[1]" />
+		</div>
+		<div class="content-center justify-self-center xl:col-span-1">
+			<span
+				class="inline-block w-full bg-gradient-to-r from-gray-700 to-slate-700 bg-clip-text font-serif text-4xl leading-none tracking-tighter text-[#341319] text-transparent xl:text-start xl:text-[7rem]"
+				>I'm</span>
+		</div>
+		<div class="xl:col-span-3 xl:justify-self-end">
+			<h1
+				class="inline-block bg-gradient-to-r from-pink-600 via-orange-600 to-red-700 bg-clip-text text-start font-serif text-6xl text-transparent xl:text-center xl:text-[8rem] 2xl:text-[15rem]">
+				Zixian.
+			</h1>
+		</div>
+		<div class="h-[15rem] w-[30rem] justify-self-center overflow-hidden rounded-full xl:col-span-2">
+			<enhanced:img src={selfSndgoPic} alt="" class="hero-scroll -translate-x-0 -translate-y-10" />
 		</div>
 	</header>
-
+	<enhanced:img src={selfSndgoPic} alt="" class="xl:hidden" />
 	<main>
+		<section class="max-w-dvw hidden min-h-[30rem] place-items-center content-center gap-y-10 xl:grid">
+			<h2
+				class="custom-reveal-text mb-4 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
+				<span>I'm a public servant trying to close gaps between</span><span class="opacity-0">
+					policy, business, tech.</span>
+			</h2>
+			<h2
+				class="custom-reveal-text mb-4 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
+				<span class="opacity-0">I'm a public servant trying to close gaps between</span>
+				<span class="neumorphism-inset rounded-full px-6 py-4">policy,</span><span class="opacity-0"
+					>business, tech.</span>
+			</h2>
+			<h2
+				class="custom-reveal-text mb-4 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
+				<span class="opacity-0">I'm a public servant trying to close gaps between policy,</span><span
+					class="neumorphism-inset rounded-full px-6 py-4">business,</span
+				><span class="opacity-0"> tech.</span>
+			</h2>
+			<h2
+				class="custom-reveal-text mb-4 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
+				<span class="opacity-0">I'm a public servant trying to close gaps between policy, business,</span>
+				<span class="neumorphism-inset rounded-full px-6 py-4">tech.</span>
+			</h2>
+		</section>
+		<section class="max-w-dvw grid min-h-[7.5rem] place-items-center content-center gap-y-10 text-center xl:hidden">
+			<h2
+				class="custom-reveal-text mb-4 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
+				<span>I'm a public servant trying to close gaps between policy, business, tech.</span>
+			</h2>
+		</section>
 		<section class="grid justify-items-center bg-gray-100 px-4 2xl:w-dvw">
 			<div class="grid auto-cols-fr auto-rows-auto gap-7 py-10 lg:py-28 xl:grid-cols-4 2xl:max-w-screen-2xl">
 				<div
@@ -451,7 +459,7 @@
 					</div>
 				</div>
 				<div
-					class="neumorphism card col-span-2 h-full min-h-96 w-full rounded-5xl bg-base-100 xl:col-span-3"
+					class="card col-span-2 h-full min-h-96 w-full rounded-5xl bg-base-100 xl:col-span-3"
 					style="background: url({lego}); background-position: center 10%">
 					<div class="relative h-full w-full rounded-5xl bg-black opacity-[0.3]"></div>
 					<div class="absolute left-0 right-0 top-14 mx-auto text-center text-2xl text-base-100">
@@ -553,29 +561,6 @@
 	h2:not(.font-sans),
 	h3:not(.font-sans) {
 		font-family: 'IBM Plex Serif', serif;
-	}
-
-	.neumorphism {
-		box-shadow:
-			12px 12px 12px rgba(0, 0, 0, 0.15),
-			-10px -10px 10px white;
-	}
-	.neumorphism-children > div {
-		box-shadow:
-			12px 12px 12px rgba(0, 0, 0, 0.1),
-			-10px -10px 10px white;
-	}
-
-	.neumorphism-inset {
-		box-shadow:
-			inset 5px 5px 10px rgba(163, 177, 198, 0.5),
-			inset -5px -5px 12px rgba(255, 255, 255, 0.8);
-	}
-
-	.neumorphism-alt {
-		box-shadow:
-			13px 13px 20px #cbced1,
-			-13px -13px 20px #ffffff;
 	}
 
 	/* Orbit for courses */

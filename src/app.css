@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+	.neumorphism {
+		box-shadow:
+			12px 12px 12px rgba(0, 0, 0, 0.15),
+			-10px -10px 10px white;
+	}
+
+	.neumorphism-inset {
+		box-shadow:
+			inset 5px 5px 10px rgba(163, 177, 198, 0.5),
+			inset -5px -5px 12px rgba(255, 255, 255, 0.8);
+	}
+
+	.neumorphism-alt {
+		box-shadow:
+			13px 13px 20px #cbced1,
+			-13px -13px 20px #ffffff;
+	}
+}
+
 @layer base {
 	h1 {
 		@apply text-7xl lg:text-8xl;

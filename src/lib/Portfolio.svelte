@@ -210,13 +210,14 @@
 
 	<div class="hidden lg:col-span-3 lg:grid"></div>
 </div>
-<div id="apptitude" class="scroll-container1 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3">
+<div id="apptitude" class="scroll-container1 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3 {evenColor}">
 	<div class="w-full content-center justify-self-center px-20">
 		<div class="flex justify-center">
 			<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class=""></enhanced:img></a>
 		</div>
 		<ExitLinks url="https://titude.app/" github="https://github.com/zachczx/apptitude" className="fill-lime-400" />
-		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
+		<div
+			class="neumorphism-inset mx-10 mt-10 hidden flex-wrap items-end justify-center space-y-4 rounded-5xl bg-gray-200/20 p-4 lg:flex">
 			<img src={Sveltekit} class="h-10 pe-6" alt="Sveltekit" />
 			<img src={TailwindSmall} class="h-10 grow pe-6" alt="Tailwind" />
 			<img src={Cloudflare} class="h-10 pe-6" alt="Cloudflare" />
@@ -258,14 +259,15 @@
 </div>
 
 <div class="scroll-container2 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3 {oddColor}">
-	<div class="place-self-center">
+	<div class="grid place-self-center">
 		<a href="https://appraize.zixian.dev/"
 			><h3 class="text-center font-sans text-6xl font-black text-[#491eff] lg:text-8xl">Appraize</h3></a>
 		<ExitLinks
 			url="https://appraize.zixian.dev/"
 			github="https://github.com/zachczx/svelte-appraize"
 			className="fill-[#491eff]" />
-		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
+		<div
+			class="neumorphism-inset mx-10 mt-10 hidden flex-wrap items-end justify-center space-y-4 rounded-5xl bg-gray-200/60 p-4 lg:flex">
 			<img src={Sveltekit} class="h-10 pe-6" alt="Sveltekit" />
 			<enhanced:img src={Sortable} class="pe-6" alt="Sortable JS"></enhanced:img>
 			<enhanced:img src={DrizzlePng} class="me-6 rounded-2xl" alt="Drizzle"></enhanced:img>
@@ -284,19 +286,31 @@
 		className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
-			<div class="scroll-content2 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
-				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">The Problem</h3>
+			<div
+				class="xl:neumorphism scroll-content2 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:bg-gradient-to-br xl:from-gray-50 xl:to-gray-200">
+				<h3
+					class="xl:neumorphism-inset mb-4 rounded-4xl underline decoration-[#491eff] decoration-8 underline-offset-4 xl:bg-[#491eff]/5 xl:p-4 xl:no-underline xl:decoration-0 xl:underline-offset-0">
+					The Problem
+				</h3>
 				<p>
 					How might we speed up ranking sessions, which need manual selection to form a numbered list "1, 2, 3..." on
 					Excel. Every change to the list required manual reordering.
 				</p>
 			</div>
-			<div class="scroll-content2 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
-				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">What I wanted</h3>
+			<div
+				class="xl:neumorphism scroll-content2 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:bg-gradient-to-br xl:from-gray-50 xl:to-gray-200">
+				<h3
+					class="xl:neumorphism-inset mb-4 rounded-4xl underline decoration-[#491eff] decoration-8 underline-offset-4 xl:bg-[#491eff]/5 xl:p-4 xl:no-underline xl:decoration-0 xl:underline-offset-0">
+					What I wanted
+				</h3>
 				<p>Speed up ranking sessions via drag & drop.</p>
 			</div>
-			<div class="scroll-content2 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
-				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">What I built</h3>
+			<div
+				class="xl:neumorphism scroll-content2 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:bg-gradient-to-br xl:from-gray-50 xl:to-gray-200">
+				<h3
+					class="xl:neumorphism-inset mb-4 rounded-4xl underline decoration-[#491eff] decoration-8 underline-offset-4 xl:bg-[#491eff]/5 xl:p-4 xl:no-underline xl:decoration-0 xl:underline-offset-0">
+					What I built
+				</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#491eff]">
 					<li>Drag & drop of officers and supplementary info (grades, dept, remarks)</li>
 					<li>Sessions and mini dashboard each session</li>
@@ -305,8 +319,12 @@
 					<li>Form actions/validation</li>
 				</ul>
 			</div>
-			<div class="scroll-content2 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
-				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Not yet done</h3>
+			<div
+				class="xl:neumorphism scroll-content2 grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:bg-gradient-to-br xl:from-gray-50 xl:to-gray-200">
+				<h3
+					class="xl:neumorphism-inset mb-4 rounded-4xl underline decoration-[#491eff] decoration-8 underline-offset-4 xl:bg-[#491eff]/5 xl:p-4 xl:no-underline xl:decoration-0 xl:underline-offset-0">
+					Not yet done
+				</h3>
 				<p>Haven't added authentication, which is probably needed for a private thing like ranking.</p>
 			</div>
 		</div>
@@ -322,8 +340,8 @@
 			url="https://rankamate.zixian.dev/"
 			github="https://github.com/zachczx/django-rankamate"
 			className="fill-red-800" />
-
-		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
+		<div
+			class="neumorphism-inset mx-10 mt-10 hidden flex-wrap items-end justify-center space-y-4 rounded-5xl bg-gray-200/20 p-4 lg:flex">
 			<img src={Django} class="h-10 pe-6" alt="Django" />
 			<img src={Htmx} class="h-10 pe-6" alt="Htmx" />
 			<enhanced:img src={Sortable} class="pe-6" alt="Sortable JS"></enhanced:img>
@@ -387,7 +405,8 @@
 			url="https://eatyourmeds.zixian.dev/"
 			github="https://github.com/zachczx/django-eatyourmeds"
 			className="fill-lime-700" />
-		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
+		<div
+			class="neumorphism-inset mx-10 mt-10 hidden flex-wrap items-end justify-center space-y-4 rounded-5xl bg-gray-200/60 p-4 lg:flex">
 			<img src={Django} class="h-10 pe-6" alt="Django" />
 			<img src={Htmx} class="h-10 pe-6" alt="Htmx" />
 			<img src={Nginx} class="h-10 pe-6" alt="Nginx" />
@@ -430,7 +449,8 @@
 				><enhanced:img src={oldBtonomicsLogo} alt="Btonomics Old Logo" class=""></enhanced:img></a>
 		</div>
 		<ExitLinks url="https://old.btonomics.com" className="fill-yellow-500" />
-		<div class="mt-10 hidden flex-wrap items-end justify-center space-y-4 lg:flex">
+		<div
+			class="neumorphism-inset mx-10 mt-10 hidden flex-wrap items-end justify-center space-y-4 rounded-5xl bg-gray-200/20 p-4 lg:flex">
 			<img src={Wordpress} class="h-10 pe-6" alt="Wordpress" />
 			<img src={ApacheHttp} class="h-10 pe-6" alt="Apache" />
 			<img src={Nginx} class="h-8 pb-2 pe-6" alt="Nginx" />
@@ -486,7 +506,8 @@
 			url="https://btonomics.com"
 			github="https://github.com/zachczx/astro-btonomics"
 			className="fill-[#38bdf8]" />
-		<div class="mt-10 hidden flex-wrap items-center justify-center space-y-4 lg:flex">
+		<div
+			class="neumorphism-inset mx-10 mt-10 hidden flex-wrap items-end justify-center space-y-4 rounded-5xl bg-gray-200/60 p-4 lg:flex">
 			<img src={Astro} class="mt-5 h-14 pe-6" alt="Astro" />
 			<img src={TailwindSmall} class="h-10 grow pe-6" alt="Tailwind" />
 			<img src={Cloudflare} class="h-10 pe-6" alt="Cloudflare" />
