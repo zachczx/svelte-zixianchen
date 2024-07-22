@@ -1,5 +1,5 @@
-<h2 class="px-4 lg:max-w-[1024px]">I hope to do tech better in govt.</h2>
-<div class="px-4 lg:max-w-[1024px]">
+<h2 class="mb-12 px-4 lg:max-w-[900px]">Hoping to do tech better.</h2>
+<div class="px-4 lg:max-w-[900px]">
 	<!-- bxs:quote-alt-left -->
 	<svg
 		xmlns="http://www.w3.org/2000/svg"

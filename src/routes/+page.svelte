@@ -18,6 +18,7 @@
 	import robotEyes from '$lib/assets/robot-eyes.webp?enhanced&w=900';
 	import ryzen from '$lib/assets/ryzen.webp?enhanced&w=1000';
 	import heroTopSmartNation from '$lib/assets/hero-top-smart-nation.webp';
+	import building from '$lib/assets/joel-filipe-Nw3ddCwbUKg-unsplash-cropped.webp';
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -146,6 +147,18 @@
 							},
 						});
 					}
+
+					gsap.to('.quote-scroll', {
+						y: -150,
+						scrollTrigger: {
+							trigger: '.quote-container',
+							start: '30% center',
+							scrub: true,
+							pin: false,
+							end: '+=500',
+							markers: false,
+						},
+					});
 				}
 			},
 		);
@@ -242,7 +255,7 @@
 			<enhanced:img src={selfSndgoPic} alt="" class="hero-scroll -translate-x-0 -translate-y-10" />
 		</div>
 	</header>
-	<enhanced:img src={selfSndgoPic} alt="" class="xl:hidden" />
+	<enhanced:img src={selfSndgoPic} alt="" class="max-w-screen xl:hidden" />
 	<main>
 		<section class="max-w-dvw hidden min-h-[30rem] place-items-center content-center gap-y-10 xl:grid">
 			<h2
@@ -272,7 +285,7 @@
 				<span>I'm a public servant trying to close gaps between policy, business, tech.</span>
 			</h2>
 		</section>
-		<section class="grid justify-items-center bg-gray-100 px-4 2xl:w-dvw">
+		<section class="grid justify-items-center px-4 2xl:w-dvw">
 			<div class="grid auto-cols-fr auto-rows-auto gap-7 py-10 lg:py-28 xl:grid-cols-4 2xl:max-w-screen-2xl">
 				<div
 					class="navItem neumorphism card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-base-100 xl:col-span-3"
@@ -289,19 +302,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- <div
-					class="card relative col-span-2 row-span-1 min-h-48 w-full overflow-hidden rounded-5xl bg-gray-800 xl:col-span-1"
-					style="background-image: url({versus}); background-size: cover; background-position: center">
-					<div class="card-body z-10 grid pb-0">
-						<div>
-							<h3 class="text-center text-base-100">Work</h3>
-						</div>
-						<div class="mb-6 self-end">
-							<p class="text-center text-base-100">I fight bad policies & business requirements.</p>
-						</div>
-					</div>
-					<div class="absolute h-full w-full bg-pink-900/50"></div>
-				</div> -->
 				<div
 					class="neumorphism card col-span-2 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200 xl:col-span-1">
 					<div class="card-body grid max-h-96 content-center space-y-4">
@@ -443,8 +443,10 @@
 			</div>
 		</section>
 
-		<section class="grid min-h-[50rem] w-auto content-center justify-items-center gap-y-10 bg-gray-50 px-4 py-20">
-			<Quote />
+		<section
+			class="quote-container relative grid min-h-[30rem] w-auto content-center justify-items-center gap-y-10 overflow-hidden bg-gray-50 px-4 xl:min-h-[70rem]">
+			<div class="z-10 border border-gray-100 p-12 xl:rounded-4xl xl:bg-white/40 xl:backdrop-blur-md"><Quote /></div>
+			<img src={building} alt="" class="quote-scroll absolute -top-[0rem] h-fit w-full" />
 		</section>
 
 		<div class="wrapper grid justify-items-center bg-gray-100 px-4 py-10 lg:py-28">
@@ -611,6 +613,7 @@
 	.overflow-x-clip {
 		overflow-x: clip;
 	}
+
 	.spectrum-background {
 		/* 
 			https://www.schemecolor.com/pastel-green-yellow-and-red.php
