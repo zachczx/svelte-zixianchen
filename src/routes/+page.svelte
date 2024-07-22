@@ -118,7 +118,7 @@
 
 		gsap.registerPlugin(ScrollTrigger);
 		const mm = gsap.matchMedia();
-
+		let elHeroScroll = document.getElementsByClassName('hero-scroll');
 		mm.add(
 			{ isLgBreakpoint: '(min-width: 1024px)', prefersReducedMotion: '(prefers-reduced-motion: no-preference)' },
 			(context) => {
@@ -128,22 +128,24 @@
 					const tl = gsap.timeline({
 						defaults: {
 							// scale: 0.7,
-							y: -100,
+							y: -50,
+							filter: 'grayscale(70%)',
 							ease: 'circ.out',
-							//stagger: { each: 0.3 },
+							stagger: { each: 0.1 },
 						},
 					});
-
-					tl.to('.hero-scroll', {
-						scrollTrigger: {
-							trigger: '.hero-scroll',
-							start: '30% center',
-							scrub: true,
-							pin: false,
-							end: '+=300',
-							markers: false,
-						},
-					});
+					for (let i = 0; i < elHeroScroll.length; i++) {
+						tl.to(elHeroScroll[i], {
+							scrollTrigger: {
+								trigger: elHeroScroll[i],
+								start: '30% center',
+								scrub: true,
+								pin: false,
+								end: '+=300',
+								markers: false,
+							},
+						});
+					}
 				}
 			},
 		);
@@ -219,11 +221,11 @@
 		</div>
 		<div
 			class="hidden h-[10rem] w-full justify-self-end overflow-hidden rounded-br-full rounded-br-full rounded-tl-full xl:col-span-2 xl:grid">
-			<enhanced:img src={ryzen} alt="" class="-translate-x-[3rem] -translate-y-[9rem] scale-[1.5]" />
+			<enhanced:img src={ryzen} alt="" class="hero-scroll -translate-x-[3rem] -translate-y-[9rem] scale-[1.5]" />
 		</div>
 
 		<div class=" x h-[10rem] w-full justify-self-end overflow-hidden rounded-bl-full rounded-tr-full xl:col-span-2">
-			<enhanced:img src={robotEyes} alt="" class="-translate-y-[9rem] translate-x-[0rem] scale-[1]" />
+			<enhanced:img src={robotEyes} alt="" class="hero-scroll -mt-28 scale-[1]" />
 		</div>
 		<div class="content-center justify-self-center xl:col-span-1">
 			<span
@@ -251,19 +253,17 @@
 			<h2
 				class="custom-reveal-text mb-4 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
 				<span class="opacity-0">I'm a public servant trying to close gaps between</span>
-				<span class="neumorphism-inset rounded-full px-6 py-4">policy,</span><span class="opacity-0"
-					>business, tech.</span>
+				<span>policy,</span><span class="opacity-0">business, tech.</span>
 			</h2>
 			<h2
 				class="custom-reveal-text mb-4 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
-				<span class="opacity-0">I'm a public servant trying to close gaps between policy,</span><span
-					class="neumorphism-inset rounded-full px-6 py-4">business,</span
+				<span class="opacity-0">I'm a public servant trying to close gaps between policy,</span><span>business,</span
 				><span class="opacity-0"> tech.</span>
 			</h2>
 			<h2
 				class="custom-reveal-text mb-4 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
 				<span class="opacity-0">I'm a public servant trying to close gaps between policy, business,</span>
-				<span class="neumorphism-inset rounded-full px-6 py-4">tech.</span>
+				<span>tech.</span>
 			</h2>
 		</section>
 		<section class="max-w-dvw grid min-h-[7.5rem] place-items-center content-center gap-y-10 text-center xl:hidden">
