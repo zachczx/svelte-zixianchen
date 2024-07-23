@@ -235,7 +235,7 @@
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">The Problem</h3>
 				<p>
 					How might I help my non-technical teammates access to vast repositories of free-to-access knowledge to gain
@@ -243,12 +243,12 @@
 				</p>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">What I wanted</h3>
 				<p>Display lists of tech resources from Youtube, blogs, tutorials, courses, sorted by tech competency.</p>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ml-6 list-outside list-disc marker:text-lime-400">
 					<li>Static Website</li>
@@ -257,7 +257,7 @@
 				</ul>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">Not yet done</h3>
 				<p>
 					Making learning plans the front and center to learning, so all the suggested resources revolve around a
@@ -305,7 +305,7 @@
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">The Problem</h3>
 				<p>
 					How might we speed up ranking sessions, which need manual selection to form a numbered list "1, 2, 3..." on
@@ -313,12 +313,12 @@
 				</p>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">What I wanted</h3>
 				<p>Speed up ranking sessions via drag & drop.</p>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#491eff]">
 					<li>Drag & drop of officers and add. info</li>
@@ -330,7 +330,7 @@
 				</ul>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Not yet done</h3>
 				<p>Haven't added authentication, which is probably needed for a private thing like ranking.</p>
 			</div>
@@ -379,7 +379,7 @@
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">The Problem</h3>
 				<p>Rank-a-Mate was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.</p>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-red-800">
@@ -391,12 +391,12 @@
 				</ul>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">What I wanted</h3>
 				<p>Speed up ranking sessions via drag & drop.</p>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-red-800">
 					<li>Basic CRUD webapp with drag & drop of officers and session-based workflow</li>
@@ -406,7 +406,7 @@
 				</ul>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">Not yet done</h3>
 				<p>
 					Rebuilt this as Appraize. This lacked filters, dashboard, keyboard shortcuts, uploads, etc that I subsequently
@@ -454,17 +454,17 @@
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">The Problem</h3>
 				<p>How might I make it easier and shorter to plan medicine dose timings and get accurate info.</p>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">What I wanted</h3>
 				<p>Make it less tedious for both of us parents to record/coord medicine stuff and sync with one another.</p>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-lime-700">
 					<li>Basic CRUD webapp with user authentication.</li>
@@ -473,7 +473,7 @@
 				</ul>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">Not yet done</h3>
 				<p>Honestly, ChatGPT does it better (Gemini refuses, so no luck there).</p>
 			</div>
@@ -507,7 +507,7 @@
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">The Problem</h3>
 				<p>
 					There was barely any info online to guide me through the renovation journey (choosing an ID/contractor,
@@ -515,7 +515,7 @@
 				</p>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">What I wanted</h3>
 				<p>
 					Started BTOnomics as <a href="https://web.archive.org/web/20180513112335/http://pewpewpew.cc/"
@@ -524,7 +524,7 @@
 				</p>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-yellow-500">
 					<li>WordPress was the obvious choice.</li>
@@ -534,7 +534,7 @@
 				</ul>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">Not yet done</h3>
 				<p>
 					Wordpress got too bulky and tiresome to manage and host. Not least the sprawling repository of images (not
@@ -572,17 +572,17 @@
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">The Problem</h3>
 				<p>Wordpress got too bulky and tiresome to manage and host.</p>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I wanted</h3>
 				<p>I moved BTOnomics to a more modern framework and tried AstroJS, which had been gaining a lot of praise.</p>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ms-6 list-outside list-disc space-y-2 marker:text-[#38bdf8]">
 					<li>Migrated to AstroJS as a static site.</li>
@@ -592,7 +592,7 @@
 				</ul>
 			</div>
 			<div
-				class="scroll-content1 grid content-start space-y-2 border border-gray-200 bg-white/40 shadow-md backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10">
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Not yet done</h3>
 				<p>
 					Haven't recreated all the old functionalities from plugins, especially comments, but I figured I didn't need
@@ -635,31 +635,38 @@
 		overflow-x: clip;
 	} */
 
-	.background-1 {
-		background: radial-gradient(600px at 40% 30%, rgb(180, 227, 115, 1), #fafafa 40%, transparent),
-			radial-gradient(300px at 50% 70%, rgb(180, 227, 115, 0.99), #fafafa 80%, transparent),
-			radial-gradient(600px at 90% 70%, rgb(180, 227, 115, 0.7), #fafafa, transparent);
-	}
-	.background-2 {
-		background: radial-gradient(500px at 30% 30%, rgba(73, 30, 255, 0.2), #fafafa, transparent),
-			radial-gradient(600px at 90% 50%, rgb(73, 30, 255, 0.6), #fafafa 40%, transparent);
-	}
-	.background-3 {
-		background: radial-gradient(300px at 10% 20%, rgb(153, 27, 27, 0.2), #fafafa, transparent),
-			radial-gradient(800px at 70% 50%, rgb(153, 27, 27, 0.6), #fafafa, transparent),
-			radial-gradient(750px at 90% 30%, rgb(153, 27, 27, 0.1), #fafafa, transparent);
-	}
-	.background-4 {
-		background: radial-gradient(500px at 40% 50%, rgba(77, 124, 15, 0.2), #fafafa, transparent),
-			radial-gradient(800px at 90% 70%, rgb(77, 124, 15, 0.05), #fafafa, transparent);
-	}
-	.background-5 {
-		background: radial-gradient(200px at 10% 20%, rgb(234, 179, 8, 0.3), #fafafa, transparent),
-			radial-gradient(600px at 40% 30%, rgb(234, 179, 8, 0.99), #fafafa, transparent),
-			radial-gradient(600px at 90% 50%, rgb(234, 179, 8, 0.4), #fafafa, transparent);
-	}
-	.background-6 {
-		background: radial-gradient(700px at 45% 40%, rgb(56, 189, 248, 0.5), #fafafa, transparent),
-			radial-gradient(700px at 90% 65%, rgb(56, 189, 248, 0.8), #fafafa, transparent);
+	/* 	
+	##Device = Desktops
+	##Screen = 1281px to higher resolution desktops
+	https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488
+	 */
+	@media (min-width: 1281px) {
+		.background-1 {
+			background: radial-gradient(600px at 40% 30%, rgb(180, 227, 115, 1), #fafafa 40%, transparent),
+				radial-gradient(300px at 50% 70%, rgb(180, 227, 115, 0.99), #fafafa 80%, transparent),
+				radial-gradient(600px at 90% 70%, rgb(180, 227, 115, 0.7), #fafafa, transparent);
+		}
+		.background-2 {
+			background: radial-gradient(500px at 30% 30%, rgba(73, 30, 255, 0.2), #fafafa, transparent),
+				radial-gradient(600px at 90% 50%, rgb(73, 30, 255, 0.6), #fafafa 40%, transparent);
+		}
+		.background-3 {
+			background: radial-gradient(300px at 10% 20%, rgb(153, 27, 27, 0.2), #fafafa, transparent),
+				radial-gradient(800px at 70% 50%, rgb(153, 27, 27, 0.6), #fafafa, transparent),
+				radial-gradient(750px at 90% 30%, rgb(153, 27, 27, 0.1), #fafafa, transparent);
+		}
+		.background-4 {
+			background: radial-gradient(500px at 40% 50%, rgba(77, 124, 15, 0.2), #fafafa, transparent),
+				radial-gradient(800px at 90% 70%, rgb(77, 124, 15, 0.05), #fafafa, transparent);
+		}
+		.background-5 {
+			background: radial-gradient(200px at 10% 20%, rgb(234, 179, 8, 0.3), #fafafa, transparent),
+				radial-gradient(600px at 40% 30%, rgb(234, 179, 8, 0.99), #fafafa, transparent),
+				radial-gradient(600px at 90% 50%, rgb(234, 179, 8, 0.4), #fafafa, transparent);
+		}
+		.background-6 {
+			background: radial-gradient(700px at 45% 40%, rgb(56, 189, 248, 0.5), #fafafa, transparent),
+				radial-gradient(700px at 90% 65%, rgb(56, 189, 248, 0.8), #fafafa, transparent);
+		}
 	}
 </style>
