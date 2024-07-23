@@ -16,7 +16,7 @@
 	import Drizzle from '$lib/logos/Drizzle.svg?dataurl';
 	import DrizzlePng from '$lib/logos/Drizzle.png?enhanced&w=40';
 	import Svelte from '$lib/logos/Svelte.svg';
-	import Sortable from '$lib/logos/Sortablejs.png?enhanced&w=60';
+	import Sortable from '$lib/logos/Sortablejs.png?enhanced&w=40';
 	import Nginx from '$lib/logos/Nginx.svg?dataurl';
 	import Coolify from '$lib/logos/Coolify.svg?dataurl';
 	import Nodejs from '$lib/logos/Nodejs.svg?dataurl';
@@ -42,16 +42,16 @@
 	onMount(() => {
 		// let segments = gsap.utils.toArray('.scroll-content');
 		const svgTyping = document.getElementsByClassName('bubble');
-		const segments1 = document.getElementsByClassName('scroll-content1');
-		const segments2 = document.getElementsByClassName('scroll-content2');
-		const segments3 = document.getElementsByClassName('scroll-content3');
-		const segments4 = document.getElementsByClassName('scroll-content4');
-		const segments5 = document.getElementsByClassName('scroll-content5');
-		const segments6 = document.getElementsByClassName('scroll-content6');
-		const logoIcon = document.getElementsByClassName('logoIcon');
-		const scrollLogo = document.getElementsByClassName('scroll-logo');
-		console.log(segments1);
-		gsap.registerPlugin(ScrollTrigger);
+		// const segments1 = document.getElementsByClassName('scroll-content1');
+		// const segments2 = document.getElementsByClassName('scroll-content2');
+		// const segments3 = document.getElementsByClassName('scroll-content3');
+		// const segments4 = document.getElementsByClassName('scroll-content4');
+		// const segments5 = document.getElementsByClassName('scroll-content5');
+		// const segments6 = document.getElementsByClassName('scroll-content6');
+		// const logoIcon = document.getElementsByClassName('logoIcon');
+		// const scrollLogo = document.getElementsByClassName('scroll-logo');
+
+		// gsap.registerPlugin(ScrollTrigger);
 
 		/**
 		 * For the coding bros typing svg animations
@@ -59,14 +59,14 @@
 		const svgTypingAnimation = gsap.timeline({ repeat: -1 });
 		svgTypingAnimation.to(svgTyping, {
 			stagger: { each: 0.2, from: 'random' },
-			duration: 1,
-			ease: 'bounce.out',
+			duration: 0.5,
+			// ease: 'bounce.out',
 			scale: 1.4,
 		});
 		svgTypingAnimation.to(svgTyping, {
 			stagger: { each: 0.2, from: 'random' },
 			duration: 0.9,
-			ease: 'bounce.out',
+			// ease: 'bounce.out',
 			scale: 1,
 		});
 
@@ -210,19 +210,25 @@
 
 	<div class="hidden lg:col-span-3 lg:grid"></div>
 </div>
-<div id="apptitude" class="scroll-container1 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3 {evenColor}">
+<div id="apptitude" class="scroll-container1 max-w-dvw background-1 grid min-h-dvh py-10 lg:grid-cols-3">
 	<div class="w-full content-center justify-self-center px-20">
 		<div class="flex justify-center">
 			<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class=""></enhanced:img></a>
 		</div>
 		<ExitLinks url="https://titude.app/" github="https://github.com/zachczx/apptitude" className="fill-lime-400" />
-		<div
-			class="neumorphism-inset mx-10 mt-10 hidden flex-wrap items-end justify-center space-y-4 rounded-5xl bg-gray-200/20 p-4 lg:flex">
-			<img src={Sveltekit} class="h-10 pe-6" alt="Sveltekit" />
-			<img src={TailwindSmall} class="h-10 grow pe-6" alt="Tailwind" />
-			<img src={Cloudflare} class="h-10 pe-6" alt="Cloudflare" />
-			<img src={Greensock} class="h-10 pe-6" alt="Gsap" />
-			<img src={Pagefind} class="h-10 pe-6" alt="Pagefind" />
+		<div class="mx-10 mt-10 hidden flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Sveltekit} class="h-10" alt="Sveltekit" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={TailwindSmall} class="h-10 grow" alt="Tailwind" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Greensock} class="h-10" alt="Gsap" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Pagefind} class="h-10" alt="Pagefind" />
+			</div>
 		</div>
 	</div>
 	<StackUsed framework="Sveltekit" library="Gsap, Tailwind, Pagefind" host="Cloudflare" className="lg:hidden" />
@@ -258,7 +264,7 @@
 	</div>
 </div>
 
-<div class="scroll-container2 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3 {oddColor}">
+<div class="scroll-container2 max-w-dvw background-2 grid min-h-dvh py-10 lg:grid-cols-3">
 	<div class="place-self-center">
 		<a href="https://appraize.zixian.dev/"
 			><h3 class="text-center font-sans text-6xl font-black text-[#491eff] lg:text-8xl">Appraize</h3></a>
@@ -266,17 +272,25 @@
 			url="https://appraize.zixian.dev/"
 			github="https://github.com/zachczx/svelte-appraize"
 			className="fill-[#491eff]" />
-		<div
-			class="neumorphism-inset mx-10 mt-10 hidden max-w-[40rem] flex-wrap items-end justify-center space-y-4 rounded-5xl bg-gray-200/20 p-4 lg:flex">
-			<img src={Sveltekit} class="h-10 pe-6" alt="Sveltekit" />
-			<enhanced:img src={Sortable} class="pe-6" alt="Sortable JS"></enhanced:img>
-			<enhanced:img src={DrizzlePng} class="me-6 rounded-2xl" alt="Drizzle"></enhanced:img>
-			<img src={TailwindSmall} class="h-10 pe-6" alt="Tailwind" />
-			<img src={Nginx} class="h-10 pe-6" alt="Nginx" />
-			<img src={Coolify} class="h-10 pe-6" alt="Coolify" />
-			<img src={Nodejs} class="h-10 pe-6" alt="Nodejs" />
-			<img src={Postgresql} class="h-10 pe-6" alt="Postgres" />
-			<img src={Turso} class="h-10 pe-6" alt="Turso" />
+		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Sveltekit} class="h-10" alt="Sveltekit" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<enhanced:img src={Sortable} class="" alt="Sortable JS"></enhanced:img>
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<enhanced:img src={DrizzlePng} class="rounded-xl" alt="Drizzle"></enhanced:img>
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={TailwindSmall} class="h-10" alt="Tailwind" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Coolify} class="h-10" alt="Coolify" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Postgresql} class="h-10" alt="Postgres" />
+			</div>
 		</div>
 	</div>
 	<StackUsed
@@ -302,7 +316,7 @@
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#491eff]">
 					<li>Drag & drop of officers and supplementary info (grades, dept, remarks)</li>
 					<li>Sessions and mini dashboard each session</li>
-					<li>Backend DB (Drizzle/Postgres) and CSV bulk uploads</li>
+					<li>Backend DB (Drizzle + Postgres/Turso) and CSV bulk uploads</li>
 					<li>Filters and keyboard shortcuts</li>
 					<li>Form actions/validation</li>
 				</ul>
@@ -315,7 +329,7 @@
 	</div>
 </div>
 
-<div class="scroll-container3 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3 {evenColor}">
+<div class="scroll-container3 max-w-dvw background-3 grid min-h-dvh py-10 lg:grid-cols-3">
 	<div class="w-full place-self-center px-20">
 		<div class="flex content-center items-center justify-center">
 			<a href="https://rankamate.zixian.dev/"><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img></a>
@@ -324,15 +338,28 @@
 			url="https://rankamate.zixian.dev/"
 			github="https://github.com/zachczx/django-rankamate"
 			className="fill-red-800" />
-		<div
-			class="neumorphism-inset mx-10 mt-10 hidden flex-wrap items-end justify-center space-y-4 rounded-5xl bg-gray-200/20 p-4 lg:flex">
-			<img src={Django} class="h-10 pe-6" alt="Django" />
-			<img src={Htmx} class="h-10 pe-6" alt="Htmx" />
-			<enhanced:img src={Sortable} class="pe-6" alt="Sortable JS"></enhanced:img>
-			<img src={Nginx} class="h-10 pe-6" alt="Nginx" />
-			<img src={Gunicorn} class="h-10 pe-6" alt="Gunicorn" />
-			<img src={Bootstrap} class="h-10 pe-6" alt="Bootstrap" />
-			<img src={Postgresql} class="h-10 pe-6" alt="Postgres" />
+		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Django} class="h-10" alt="Django" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+				<img src={Htmx} class="h-8" alt="Htmx" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<enhanced:img src={Sortable} class="" alt="Sortable JS"></enhanced:img>
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+				<img src={Nginx} class="h-8" alt="Nginx" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Gunicorn} class="h-10" alt="Gunicorn" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Bootstrap} class="h-10" alt="Bootstrap" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Postgresql} class="h-10" alt="Postgres" />
+			</div>
 		</div>
 	</div>
 	<StackUsed
@@ -377,7 +404,7 @@
 	</div>
 </div>
 
-<div class="scroll-container4 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3 {oddColor}">
+<div class="scroll-container4 max-w-dvw background-4 grid min-h-dvh py-10 lg:grid-cols-3">
 	<div class="place-self-center px-20">
 		<div class="avatar flex justify-center">
 			<div class="w-56 rounded-full">
@@ -389,14 +416,25 @@
 			url="https://eatyourmeds.zixian.dev/"
 			github="https://github.com/zachczx/django-eatyourmeds"
 			className="fill-lime-700" />
-		<div
-			class="neumorphism-inset mx-10 mt-10 hidden flex-wrap items-end justify-center space-y-4 rounded-5xl bg-gray-200/60 p-4 lg:flex">
-			<img src={Django} class="h-10 pe-6" alt="Django" />
-			<img src={Htmx} class="h-10 pe-6" alt="Htmx" />
-			<img src={Nginx} class="h-10 pe-6" alt="Nginx" />
-			<img src={Gunicorn} class="h-10 pe-6" alt="Gunicorn" />
-			<img src={Bootstrap} class="h-10 pe-6" alt="Bootstrap" />
-			<img src={Postgresql} class="h-10 pe-6" alt="Postgres" />
+		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Django} class="h-10" alt="Django" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+				<img src={Htmx} class="h-8" alt="Htmx" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+				<img src={Nginx} class="h-8" alt="Nginx" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Gunicorn} class="h-10" alt="Gunicorn" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Bootstrap} class="h-10" alt="Bootstrap" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Postgresql} class="h-10" alt="Postgres" />
+			</div>
 		</div>
 	</div>
 	<StackUsed framework="Django" library="HTMX, Bootstrap, Postgresql" host="Nginx, Gunicorn" className="lg:hidden" />
@@ -426,20 +464,26 @@
 	</div>
 </div>
 
-<div class="scroll-container5 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3 {evenColor}">
+<div class="scroll-container5 max-w-dvw background-5 grid min-h-dvh py-10 lg:grid-cols-3">
 	<div class="place-self-center px-20">
 		<div class="flex justify-center">
 			<a href="https://old.btonomics.com"
 				><enhanced:img src={oldBtonomicsLogo} alt="Btonomics Old Logo" class=""></enhanced:img></a>
 		</div>
 		<ExitLinks url="https://old.btonomics.com" className="fill-yellow-500" />
-		<div
-			class="neumorphism-inset mx-10 mt-10 hidden flex-wrap items-end justify-center space-y-4 rounded-5xl bg-gray-200/20 p-4 lg:flex">
-			<img src={Wordpress} class="h-10 pe-6" alt="Wordpress" />
-			<img src={ApacheHttp} class="h-10 pe-6" alt="Apache" />
-			<img src={Nginx} class="h-8 pb-2 pe-6" alt="Nginx" />
-			<img src={Mysql} class="h-10 pe-6" alt="MySQL" />
-			<img src={Bunny} class="h-10 pe-6" alt="BunnyCDN" />
+		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Wordpress} class="h-10" alt="Wordpress" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+				<img src={Nginx} class="h-8" alt="Nginx" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Mysql} class="h-10" alt="MySQL" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Bunny} class="h-10" alt="BunnyCDN" />
+			</div>
 		</div>
 	</div>
 	<StackUsed framework="Wordpress" library="Mysql" host="Nginx, Apache, Bunny CDN" className="lg:hidden" />
@@ -480,7 +524,8 @@
 	</div>
 </div>
 
-<div class="scroll-container6 max-w-dvw grid min-h-dvh py-10 lg:grid-cols-3 {oddColor}">
+<div class="scroll-container6 max-w-dvw background-6 grid min-h-dvh py-10 lg:grid-cols-3">
+	<!-- <style="background: linear-gradient(rgba(250,250,250,0.7), rgba(250,250,250,0.7)), url({shape}); background-size: cover;"> -->
 	<div class="place-self-center">
 		<div class="flex justify-center">
 			<a href="https://btonomics.com"
@@ -490,12 +535,16 @@
 			url="https://btonomics.com"
 			github="https://github.com/zachczx/astro-btonomics"
 			className="fill-[#38bdf8]" />
-		<div
-			class="neumorphism-inset mx-10 mt-10 hidden flex-wrap items-end justify-center space-y-4 rounded-5xl bg-gray-200/60 p-4 lg:flex">
-			<img src={Astro} class="mt-5 h-14 pe-6" alt="Astro" />
-			<img src={TailwindSmall} class="h-10 grow pe-6" alt="Tailwind" />
-			<img src={Cloudflare} class="h-10 pe-6" alt="Cloudflare" />
-			<img src={Pagefind} class="h-10 pe-6" alt="Pagefind" />
+		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Astro} class="h-10 scale-125" alt="Astro" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={TailwindSmall} class="h-10 grow" alt="Tailwind" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+				<img src={Pagefind} class="h-8" alt="Pagefind" />
+			</div>
 		</div>
 	</div>
 	<StackUsed framework="AstroJS" library="Tailwind, Pagefind" host="Cloudflare" className="lg:hidden" />
@@ -560,4 +609,32 @@
 	.scroll-container6 {
 		overflow-x: clip;
 	} */
+
+	.background-1 {
+		background: radial-gradient(600px at 40% 30%, rgb(180, 227, 115, 0.3), #fafafa, transparent),
+			radial-gradient(300px at 50% 70%, rgb(180, 227, 115, 0.4), #fafafa, transparent),
+			radial-gradient(600px at 90% 70%, rgb(180, 227, 115, 0.2), #fafafa, transparent);
+	}
+	.background-2 {
+		background: radial-gradient(500px at 30% 30%, rgba(73, 30, 255, 0.2), #fafafa, transparent),
+			radial-gradient(700px at 90% 50%, rgb(73, 30, 255, 0.2), #fafafa, transparent);
+	}
+	.background-3 {
+		background: radial-gradient(300px at 10% 20%, rgb(153, 27, 27, 0.2), #fafafa, transparent),
+			radial-gradient(600px at 50% 70%, rgb(153, 27, 27, 0.1), #fafafa, transparent),
+			radial-gradient(750px at 90% 30%, rgb(153, 27, 27, 0.06), #fafafa, transparent);
+	}
+	.background-4 {
+		background: radial-gradient(500px at 40% 50%, rgba(77, 124, 15, 0.2), #fafafa, transparent),
+			radial-gradient(800px at 90% 70%, rgb(77, 124, 15, 0.05), #fafafa, transparent);
+	}
+	.background-5 {
+		background: radial-gradient(200px at 10% 20%, rgb(234, 179, 8, 0.2), #fafafa, transparent),
+			radial-gradient(600px at 40% 30%, rgb(234, 179, 8, 0.15), #fafafa, transparent),
+			radial-gradient(600px at 90% 50%, rgb(234, 179, 8, 0.2), #fafafa, transparent);
+	}
+	.background-6 {
+		background: radial-gradient(700px at 45% 60%, rgb(56, 189, 248, 0.1), #fafafa, transparent),
+			radial-gradient(700px at 90% 70%, rgb(56, 189, 248, 0.2), #fafafa, transparent);
+	}
 </style>

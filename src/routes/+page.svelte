@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import TankSvg from '$lib/svg/TankSvg.svelte';
 	import versus from '$lib/assets/fightIronManCaptainAmerica.webp';
 	import selfSndgoPic from '$lib/assets/profile.webp?enhanced&w=800';
@@ -18,17 +18,20 @@
 	import robotEyes from '$lib/assets/robot-eyes.webp?enhanced&w=900';
 	import ryzen from '$lib/assets/ryzen.webp?enhanced&w=1000';
 	import heroTopSmartNation from '$lib/assets/hero-top-smart-nation.webp';
-	import building from '$lib/assets/joel-filipe-Nw3ddCwbUKg-unsplash-cropped.webp';
+	import building from '$lib/assets/joel-filipe-jU9VAZDGMzs-unsplash.webp';
+	import winXp from '$lib/assets/windowsxp.png?enhanced';
+	import ubuntuCli from '$lib/assets/ubuntu-cli.webp?enhanced&w=600';
+	import bridge from '$lib/assets/thomas-kelley-hgbdG_QHNcw-unsplash.webp';
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	///////////////////////////////////
 
-	let animate = $state('');
-	let navCurrent = $state('');
+	let animate: string = $state('');
+	let navCurrent: string = $state('');
 
 	onMount(() => {
-		let tank = document.getElementById('tank');
+		let tank = document.getElementById('tank') as HTMLElement;
 
 		let observer = new IntersectionObserver(
 			(entries) => {
@@ -48,10 +51,9 @@
 
 		observer.observe(tank);
 
-		let navItem = document.querySelectorAll('.navItem');
-		console.log(navItem);
+		let navItem: NodeListOf<HTMLElement> = document.querySelectorAll('.navItem') as NodeListOf<HTMLElement>;
 
-		let observerNav = new IntersectionObserver((entries) => {
+		let observerNav: IntersectionObserver = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					navCurrent = entry.target.id;
@@ -68,7 +70,7 @@
 		 * Matrix code
 		 */
 
-		const canvas = document.getElementById('c');
+		const canvas = document.getElementById('c') as HTMLCanvasElement;
 		const context = canvas.getContext('2d');
 
 		canvas.width = window.innerWidth;
@@ -81,11 +83,10 @@
 
 		const alphabet = katakana + latin + nums;
 
-		const fontSize = 48;
+		const fontSize: number = 48;
 		const columns = canvas.width / fontSize;
 
-		/** @type {string[]}*/
-		const rainDrops = [];
+		const rainDrops: string | number[] = [];
 
 		for (let x = 0; x < columns; x++) {
 			rainDrops[x] = 1;
@@ -93,21 +94,23 @@
 
 		const draw = () => {
 			// lies under new characters raining down, transparency does subtle overlay effect
-			context.fillStyle = 'rgb(255, 114, 94, 0.09)';
-			context.fillRect(0, 0, canvas.width, canvas.height);
+			if (context != null) {
+				context.fillStyle = 'rgb(255, 114, 94, 0.09)';
+				context.fillRect(0, 0, canvas.width, canvas.height);
 
-			context.fillStyle = '#fafafa'; //'#FF725E';
+				context.fillStyle = '#fafafa'; //'#FF725E';
 
-			context.font = fontSize + 'px monospace';
+				context.font = fontSize + 'px monospace';
 
-			for (let i = 0; i < rainDrops.length; i++) {
-				const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-				context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+				for (let i = 0; i < rainDrops.length; i++) {
+					const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+					context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
 
-				if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-					rainDrops[i] = 0;
+					if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+						rainDrops[i] = 0;
+					}
+					rainDrops[i]++;
 				}
-				rainDrops[i]++;
 			}
 		};
 
@@ -120,6 +123,7 @@
 		gsap.registerPlugin(ScrollTrigger);
 		const mm = gsap.matchMedia();
 		let elHeroScroll = document.getElementsByClassName('hero-scroll');
+		let elTaglineShift = document.getElementsByClassName('tagline-shift');
 		mm.add(
 			{ isLgBreakpoint: '(min-width: 1024px)', prefersReducedMotion: '(prefers-reduced-motion: no-preference)' },
 			(context) => {
@@ -128,28 +132,69 @@
 				if (isLgBreakpoint && prefersReducedMotion) {
 					const tl = gsap.timeline({
 						defaults: {
-							// scale: 0.7,
-							y: -50,
-							filter: 'grayscale(70%)',
+							filter: 'grayscale(100%)',
 							ease: 'circ.out',
-							stagger: { each: 0.1 },
+							// stagger: { each: 0.1 },
 						},
 					});
 					for (let i = 0; i < elHeroScroll.length; i++) {
 						tl.to(elHeroScroll[i], {
+							y: -50,
 							scrollTrigger: {
 								trigger: elHeroScroll[i],
-								start: '30% center',
+								start: 'center 30%',
 								scrub: true,
 								pin: false,
-								end: '+=300',
+								end: '+=100',
 								markers: false,
 							},
 						});
 					}
 
+					tl.to('.hero-scroll-sn', {
+						y: -50,
+						scrollTrigger: {
+							trigger: '.hero-scroll-sn',
+							start: 'center 20%',
+							scrub: true,
+							pin: false,
+							end: '+=200',
+							markers: false,
+						},
+					});
+					for (let i = 0; i < elTaglineShift.length; i++) {
+						gsap.to(elTaglineShift[i], {
+							y: -120 * (i + 1),
+							textDecoration: 'solid underline red 10px',
+
+							autoAlpha: 1,
+							scrollTrigger: {
+								trigger: elTaglineShift[i],
+								start: 'bottom 80%',
+								scrub: true,
+								pin: false,
+								end: '+=100',
+								markers: false,
+							},
+						});
+					}
+					gsap.to('.tagline-no-shift', {
+						textDecoration: 'solid underline red 10px',
+
+						autoAlpha: 1,
+						scrollTrigger: {
+							trigger: '.tagline-no-shift',
+							start: 'bottom 80%',
+							scrub: true,
+							pin: false,
+							end: '+=100',
+							markers: false,
+						},
+					});
+
 					gsap.to('.quote-scroll', {
-						y: -150,
+						y: -100,
+						scale: 1.03,
 						scrollTrigger: {
 							trigger: '.quote-container',
 							start: '30% center',
@@ -226,19 +271,19 @@
 		<div class="content-center justify-self-center xl:col-span-1">
 			<span
 				class="inline-block w-full bg-gradient-to-r from-gray-700 to-slate-700 bg-clip-text font-serif text-4xl leading-none tracking-tighter text-[#341319] text-transparent xl:text-start xl:text-[7rem]"
-				>Hi
+				>Hello
 			</span>
 		</div>
 		<div class="h-[10rem] w-full justify-self-end overflow-hidden rounded-br-full rounded-tl-full xl:col-span-4">
-			<img src={heroTopSmartNation} alt="" class="-translate-x-0 -translate-y-[6.5rem]" />
+			<img src={heroTopSmartNation} alt="" class="hero-scroll-sn -mt-[7.5rem] -translate-x-0" />
 		</div>
 		<div
 			class="hidden h-[10rem] w-full justify-self-end overflow-hidden rounded-br-full rounded-br-full rounded-tl-full xl:col-span-2 xl:grid">
-			<enhanced:img src={ryzen} alt="" class="hero-scroll -translate-x-[3rem] -translate-y-[9rem] scale-[1.5]" />
+			<enhanced:img src={ryzen} alt="" class="hero-scroll -mt-[4rem]"></enhanced:img>
 		</div>
 
 		<div class=" x h-[10rem] w-full justify-self-end overflow-hidden rounded-bl-full rounded-tr-full xl:col-span-2">
-			<enhanced:img src={robotEyes} alt="" class="hero-scroll -mt-28 scale-[1]" />
+			<enhanced:img src={robotEyes} alt="" class="hero-scroll -mt-28 scale-[1]"></enhanced:img>
 		</div>
 		<div class="content-center justify-self-center xl:col-span-1">
 			<span
@@ -252,31 +297,35 @@
 			</h1>
 		</div>
 		<div class="h-[15rem] w-[30rem] justify-self-center overflow-hidden rounded-full xl:col-span-2">
-			<enhanced:img src={selfSndgoPic} alt="" class="hero-scroll -translate-x-0 -translate-y-10" />
+			<enhanced:img src={selfSndgoPic} alt="" class="hero-scroll -translate-x-0 -translate-y-10"></enhanced:img>
 		</div>
 	</header>
-	<enhanced:img src={selfSndgoPic} alt="" class="max-w-screen xl:hidden" />
+	<enhanced:img src={selfSndgoPic} alt="" class="max-w-screen xl:hidden"></enhanced:img>
 	<main>
-		<section class="max-w-dvw hidden min-h-[30rem] place-items-center content-center gap-y-10 xl:grid">
+		<section
+			class="max-w-dvw hidden min-h-[30rem] content-center gap-y-20 xl:grid xl:min-h-[60rem]"
+			style="background:url({bridge}); background-size: cover; background-position: center">
 			<h2
 				class="custom-reveal-text mb-4 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
 				<span>I'm a public servant trying to close gaps between</span><span class="opacity-0">
 					policy, business, tech.</span>
 			</h2>
 			<h2
-				class="custom-reveal-text mb-4 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
-				<span class="opacity-0">I'm a public servant trying to close gaps between</span>
-				<span>policy,</span><span class="opacity-0">business, tech.</span>
+				class="custom-reveal-text tagline-no-shift mb-4 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
+				<span class="opacity-0">I'm a public servant trying to close gaps between </span><span>policy,</span><span
+					class="opacity-0">business, tech.</span>
 			</h2>
 			<h2
-				class="custom-reveal-text mb-4 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
-				<span class="opacity-0">I'm a public servant trying to close gaps between policy,</span><span>business,</span
-				><span class="opacity-0"> tech.</span>
+				class="custom-reveal-text tagline-shift mb-4 mt-10 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
+				<span class="opacity-0">I'm a public servant trying to close gaps between policy,</span><span
+					>business,
+				</span><span class="opacity-0"> tech.</span>
 			</h2>
 			<h2
-				class="custom-reveal-text mb-4 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
-				<span class="opacity-0">I'm a public servant trying to close gaps between policy, business,</span>
-				<span>tech.</span>
+				class="custom-reveal-text tagline-shift mb-4 mt-10 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
+				<span class="opacity-0">I'm a public servant trying to close gaps between policy, business, </span><span
+					>tech.
+				</span>
 			</h2>
 		</section>
 		<section class="max-w-dvw grid min-h-[7.5rem] place-items-center content-center gap-y-10 text-center xl:hidden">
@@ -285,25 +334,32 @@
 				<span>I'm a public servant trying to close gaps between policy, business, tech.</span>
 			</h2>
 		</section>
-		<section class="grid justify-items-center px-4 2xl:w-dvw">
+		<section class="grid justify-items-center bg-[#E9ECEF] px-4 2xl:w-dvw">
 			<div class="grid auto-cols-fr auto-rows-auto gap-7 py-10 lg:py-28 xl:grid-cols-4 2xl:max-w-screen-2xl">
 				<div
-					class="navItem neumorphism card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-base-100 xl:col-span-3"
-					style="background-image: url({server}); background-size: 100%; background-position: right"
+					class="navItem neumorphism card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200 xl:col-span-3"
 					id="about">
-					<div class="card-body grid h-full grid-cols-2 justify-items-center pe-4 ps-20">
-						<div></div>
-						<div class="space-y-4 self-center text-base-100">
+					<div class="card-body relative grid h-fit grid-cols-2 justify-items-center p-8">
+						<div class="z-10 hidden max-h-56 xl:flex">
+							<enhanced:img src={winXp} alt="Windows XP ugh" class="-ms-20 mt-14 rounded-2xl"></enhanced:img>
+						</div>
+
+						<div class="z-10 col-span-2 space-y-4 self-center xl:col-span-1">
 							<h3>About Me</h3>
 							<p>
-								I'm into <b>tech, the web & computers</b>. Both hardware and software. From the technical details to
-								design. From the products to surrounding ecosystems.
+								I'm into <b>the web, computers, hardware, gadgets, sysadmin</b>.
 							</p>
+							<p>I'll die on the Windows, Ubuntu, Android hills.</p>
+							<p>Never used a Mac.</p>
 						</div>
+						<enhanced:img
+							src={ubuntuCli}
+							alt="Ubuntu"
+							class="absolute -left-14 top-4 hidden -rotate-[0deg] rounded-2xl xl:flex"></enhanced:img>
 					</div>
 				</div>
 				<div
-					class="neumorphism card col-span-2 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200 xl:col-span-1">
+					class="neumorphism card col-span-2 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200 xl:col-span-1">
 					<div class="card-body grid max-h-96 content-center space-y-4">
 						<h3>Education</h3>
 						<div class="space-y-2">
@@ -315,7 +371,7 @@
 					</div>
 				</div>
 				<div
-					class="neumorphism card col-span-2 w-full rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200 xl:col-span-1">
+					class="neumorphism card col-span-2 w-full rounded-5xl bg-gradient-to-br from-red-50 to-red-200 xl:col-span-1">
 					<div class="card-body space-y-4 overflow-hidden">
 						<h3>Certification</h3>
 						<div class="space-y-2 pt-2">
@@ -401,17 +457,17 @@
 					</div>
 				</div>
 				<div
-					class="neumorphism card col-span-2 grid w-full grid-cols-2 overflow-hidden rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200">
+					class="neumorphism card col-span-2 grid w-full grid-cols-2 overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200">
 					<div class="card-body space-y-4 self-center">
 						<h3>Interests</h3>
 						<p class="z-10">
-							<b>Webdev</b> since 2000s (XHTML, PHP4), back for Wordpress, then Javascript and Python frameworks.
+							<b>Webdev</b> on-off since 2000s — PHP4 days, Wordpress, Javascript, Python frameworks
 						</p>
 						<p class="z-10">
-							<b>Building PCs</b>, love the value but hate the cable mgmt.
+							<b>Building PCs</b>, love building rigs for cheap, hate cable mgmt
 						</p>
 						<p class="z-10">
-							<b>Tech business & entrepreneurship</b>, listening to people talk problems.
+							<b>Tech business & entrepreneurship</b>, I like listening to people's ideas
 						</p>
 						<p class="z-10">
 							<b>Stable diffusion LORAs</b> to get free Korean AI portraits
@@ -423,7 +479,7 @@
 				</div>
 
 				<div
-					class="neumorphism card relative col-span-2 grid w-full overflow-hidden rounded-5xl bg-gradient-to-br from-pink-50 to-pink-200 xl:col-span-1">
+					class="neumorphism card relative col-span-2 grid w-full overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200 xl:col-span-1">
 					<div>
 						<div class="card-body grid h-full content-start space-y-4">
 							<h3 class="">Playlist</h3>
@@ -444,12 +500,12 @@
 		</section>
 
 		<section
-			class="quote-container relative grid min-h-[30rem] w-auto content-center justify-items-center gap-y-10 overflow-hidden bg-gray-50 px-4 xl:min-h-[70rem]">
+			class="quote-container relative grid min-h-[30rem] w-auto content-center justify-items-center gap-y-10 overflow-hidden bg-gray-100 px-4 xl:min-h-[70rem]">
 			<div class="z-10 border border-gray-100 p-12 xl:rounded-4xl xl:bg-white/40 xl:backdrop-blur-md"><Quote /></div>
-			<img src={building} alt="" class="quote-scroll absolute -top-[0rem] h-fit w-full" />
+			<img src={building} alt="" class="quote-scroll absolute -top-[0rem] h-fit w-full saturate-50" />
 		</section>
 
-		<div class="wrapper grid justify-items-center bg-gray-100 px-4 py-10 lg:py-28">
+		<div class="wrapper grid justify-items-center bg-gray-100 px-4 pb-10 lg:py-28">
 			<!-- color scheme https://convertingcolors.com/hex-color-FF725E.html -->
 			<section class="grid max-w-screen-2xl auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
 				<div
@@ -552,7 +608,7 @@
 <section id="side" class="navItem">
 	<Portfolio />
 </section>
-<WebsiteFooter class="bg-gray-100" />
+<WebsiteFooter />
 <span class="drive-right"></span>
 
 <style>
@@ -710,8 +766,8 @@
 	}
 	@media only screen and (min-width: 1600px) {
 		.custom-reveal-text span {
-			animation-range-start: cover 30vh;
-			animation-range-end: cover 45vh;
+			animation-range-start: cover 20vh;
+			animation-range-end: cover 30vh;
 		}
 	}
 	.list {

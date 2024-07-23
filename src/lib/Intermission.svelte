@@ -1,4 +1,4 @@
-<h2 class="max-w-[1024px] text-center">I enjoy side projects.<br />I get to build things, try new tools.</h2>
+<h2 class="max-w-[1024px] text-center">I enjoy side projects.<br />Build things, try new tools.</h2>
 <div class="max-w-[1024px]">
 	<blockquote class="space-y-4">
 		<p>
