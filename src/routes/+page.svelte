@@ -216,13 +216,13 @@
 	 * @param {boolean} roundUpFractionalMonths
 	 * @returns {number}
 	 */
-	function getMonthsBetween(date1, date2, roundUpFractionalMonths) {
+	function getMonthsBetween(date1: Date, date2: Date, roundUpFractionalMonths: boolean): number {
 		//Months will be calculated between start and end dates.
 		//Make sure start date is less than end date.
 		//But remember if the difference should be negative.
-		var startDate = date1;
-		var endDate = date2;
-		var inverse = false;
+		let startDate = date1;
+		let endDate = date2;
+		let inverse = false;
 		if (date1 > date2) {
 			startDate = date2;
 			endDate = date1;
@@ -230,11 +230,11 @@
 		}
 
 		//Calculate the differences between the start and end dates
-		var yearsDifference = endDate.getFullYear() - startDate.getFullYear();
-		var monthsDifference = endDate.getMonth() - startDate.getMonth();
-		var daysDifference = endDate.getDate() - startDate.getDate();
+		let yearsDifference = endDate.getFullYear() - startDate.getFullYear();
+		let monthsDifference = endDate.getMonth() - startDate.getMonth();
+		let daysDifference = endDate.getDate() - startDate.getDate();
 
-		var monthCorrection = 0;
+		let monthCorrection = 0;
 		//If roundUpFractionalMonths is true, check if an extra month needs to be added from rounding up.
 		//The difference is done by ceiling (round up), e.g. 3 months and 1 day will be 4 months.
 		if (roundUpFractionalMonths === true && daysDifference > 0) {
@@ -247,15 +247,15 @@
 
 		return (inverse ? -1 : 1) * (yearsDifference * 12 + monthsDifference + monthCorrection);
 	}
-	const today = new Date();
-	const startWork = new Date(2013, 6, 1);
-	const startSdTech = new Date(2023, 12, 1);
-	const numMonthsTotal = getMonthsBetween(startWork, today, true);
-	const numYearsTotal = Math.round(numMonthsTotal / 12);
-	const numMonthsSdTech = getMonthsBetween(startSdTech, today, true);
-	const percentMonthsTech = Math.round(((25 + 36 + numMonthsSdTech) / numMonthsTotal) * 100);
-	const percentMonthsComms = Math.round((37 / numMonthsTotal) * 100);
-	const percentMonthsPolicy = Math.round((28 / numMonthsTotal) * 100);
+	const today: Date = new Date();
+	const startWork: Date = new Date(2013, 6, 1);
+	const startSdTech: Date = new Date(2023, 12, 1);
+	const numMonthsTotal: number = getMonthsBetween(startWork, today, true);
+	const numYearsTotal: number = Math.round(numMonthsTotal / 12);
+	const numMonthsSdTech: number = getMonthsBetween(startSdTech, today, true);
+	const percentMonthsTech: number = Math.round(((25 + 36 + numMonthsSdTech) / numMonthsTotal) * 100);
+	const percentMonthsComms: number = Math.round((37 / numMonthsTotal) * 100);
+	const percentMonthsPolicy: number = Math.round((28 / numMonthsTotal) * 100);
 </script>
 
 <svelte:head>
