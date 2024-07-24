@@ -501,6 +501,8 @@
 
 		<section
 			class="quote-container relative grid min-h-[30rem] w-auto content-center justify-items-center gap-y-10 overflow-hidden bg-gray-100 px-4 xl:min-h-[70rem]">
+			<!-- <h2 class="z-10 max-w-[60rem] justify-self-start">My web dev skills help my tech decision making & ideas.</h2> -->
+
 			<div class="z-10 border border-gray-100 p-12 lg:max-w-[900px] xl:rounded-4xl xl:bg-white/40 xl:backdrop-blur-md">
 				<Quote />
 			</div>

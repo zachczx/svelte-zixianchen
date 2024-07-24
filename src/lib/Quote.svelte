@@ -1,10 +1,10 @@
 <h2 class="mb-12">My web dev skills help my tech decision making & ideas.</h2>
 <div class="grid grid-cols-3 gap-8">
 	<div class="neumorphism-inset rounded-6xl p-6 text-xl">
-		I see opportunities, gaps. I glean insights from brilliant thinkers in dev communities.
+		I see opportunities, gaps in ideas & processes. I try to use insights I hear from product leaders.
 	</div>
 	<div class="neumorphism-inset rounded-6xl p-6 text-xl">
-		I understand complexity, trade-offs, and what good looks like.
+		I understand complexity, trade-offs, and what good looks like. For that I lean on wisdom from FOSS communities.
 	</div>
 	<div class="neumorphism-inset rounded-6xl p-6 text-xl">
 		I am better at judging if costs are inflated, estimate development time needed.
