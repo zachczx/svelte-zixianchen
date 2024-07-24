@@ -501,7 +501,9 @@
 
 		<section
 			class="quote-container relative grid min-h-[30rem] w-auto content-center justify-items-center gap-y-10 overflow-hidden bg-gray-100 px-4 xl:min-h-[70rem]">
-			<div class="z-10 border border-gray-100 p-12 xl:rounded-4xl xl:bg-white/40 xl:backdrop-blur-md"><Quote /></div>
+			<div class="z-10 border border-gray-100 p-12 lg:max-w-[900px] xl:rounded-4xl xl:bg-white/40 xl:backdrop-blur-md">
+				<Quote />
+			</div>
 			<img src={building} alt="" class="quote-scroll absolute -top-[0rem] h-fit w-full saturate-50" />
 		</section>
 

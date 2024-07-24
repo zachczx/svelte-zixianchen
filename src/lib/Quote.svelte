@@ -1,8 +1,20 @@
-<h2 class="mb-12 px-4 lg:max-w-[900px]">Hoping to do tech better.</h2>
-<div class="px-4 lg:max-w-[900px]">
-	<!-- bxs:quote-alt-left -->
+<h2 class="mb-12">My web dev skills help my tech decision making & ideas.</h2>
+<div class="grid grid-cols-3 gap-8">
+	<div class="neumorphism-inset rounded-6xl p-6 text-xl">
+		I see opportunities, gaps. I glean insights from brilliant thinkers in dev communities.
+	</div>
+	<div class="neumorphism-inset rounded-6xl p-6 text-xl">
+		I understand complexity, trade-offs, and what good looks like.
+	</div>
+	<div class="neumorphism-inset rounded-6xl p-6 text-xl">
+		I am better at judging if costs are inflated, estimate development time needed.
+	</div>
+</div>
+
+<!-- 
+<div>
 	<svg
-		xmlns="http://www.w3.org/2000/svg"
+		xmlns="http://www.w3.org/2000/svg" id="bxs:quote-alt-left"
 		class="mx-auto mb-3 h-16 w-16 text-gray-600 dark:text-gray-600"
 		viewBox="0 0 24 24"
 		aria-hidden="true"
@@ -20,7 +32,7 @@
 			—Recoding America: Why Government Is Failing in the Digital Age and How We Can Do Better
 		</footer>
 	</blockquote>
-</div>
+</div> -->
 
 <style>
 	h1:not(.font-sans),
