@@ -613,18 +613,6 @@
 	h3:not(.font-sans) {
 		font-family: 'IBM Plex Serif', serif;
 	}
-	.fullWidth {
-		width: 100vw;
-	}
-
-	.z150vw {
-		width: 150vw;
-	}
-
-	.list li::before {
-		content: '🔥';
-		padding-right: 0.4rem;
-	}
 
 	/* .scroll-container1,
 	.scroll-container2,

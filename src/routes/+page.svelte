@@ -337,7 +337,7 @@
 							<p>
 								I'm into <b>the web, computers, hardware, gadgets, sysadmin</b>.
 							</p>
-							<p>I'll die on the Windows, Ubuntu, Android hills.</p>
+							<p>I'll die on the hills of Windows, Ubuntu, Android.</p>
 							<p>Never used a Mac.</p>
 						</div>
 						<enhanced:img
@@ -488,37 +488,38 @@
 		</section>
 
 		<section
-			class="quote-container relative grid min-h-[30rem] w-auto content-center justify-items-center gap-y-10 overflow-hidden bg-gray-100 px-4 py-10 lg:min-h-[70rem] lg:grid-cols-2">
+			class="relative grid min-h-[30rem] w-auto content-center justify-items-center gap-y-10 overflow-hidden bg-gray-100 px-4 py-10 lg:min-h-[70rem] lg:grid-cols-2">
 			<div class="content-center justify-self-center">
 				<img src={moneySvg} alt="$$$" class="w-[90vw] lg:w-[40vw]" />
 			</div>
-			<div class="space-y-10 self-start justify-self-start lg:ms-8 lg:mt-8 lg:max-w-[50vw] lg:p-10">
-				<h2 class="">Doing web dev helps my work.</h2>
+			<div class="space-y-20 self-center justify-self-center lg:ms-8 lg:mt-8 lg:max-w-[50vw] lg:p-10">
+				<h2>Doing web dev helps my work.</h2>
 				<div class="grid gap-4 lg:grid-cols-2 lg:gap-14">
-					<div class="space-y-6 rounded-6xl py-6">
-						<h3>Opportunities and Gaps</h3>
+					<div class="space-y-6 rounded-6xl">
+						<h3>Opportunities, Gaps</h3>
 						<p>
 							I get to spot opportunities and gaps in systems, ideas and processes. I'm no genius - I often just apply
 							things I gleaned from what product leaders, engineers, tech influencers put out online.
 						</p>
 						<p>I have Hacker News, Reddit, daily.dev, and Youtube to thank.</p>
 					</div>
-					<div class="space-y-6 rounded-6xl py-6">
-						<h3>Navigating Complexity</h3>
+					<div class="space-y-6 rounded-6xl">
+						<h3>What It Takes</h3>
 						<p>
-							I more deeply understand complexity, trade-offs, best practices, and a reasonable "definition of done".
+							I more deeply understand technical complexities, trade-offs, best practices, and a reasonable "definition
+							of done".
 						</p>
 						<p>Much of it I owe to the collective wisdom of open-source communities to tackle intricate challenges.</p>
 					</div>
-					<div class="space-y-6 rounded-6xl py-6">
+					<div class="space-y-6 rounded-6xl">
 						<h3>Cost Cynicism</h3>
 						<p>
 							I challenge cost estimates and estimating development timelines. We shouldn't be spending money if it
 							doesn't get good outcomes in a cost effective way.
 						</p>
 					</div>
-					<div class="space-y-6 rounded-6xl py-6">
-						<h3>Blank space</h3>
+					<div class="space-y-6 rounded-6xl">
+						<h3>Blank Space</h3>
 						<p>
 							There's no fourth point, but for the sake of balance ChatGPT's writing more. This is an ostensibly verbose
 							sentence, meticulously crafted to occupy space while eschewing any substantive content.
