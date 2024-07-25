@@ -36,9 +36,6 @@
 	import CodeTypingBro from './svg/Code-typing-bro.svelte';
 	import ExitLinks from './ExitLinks.svelte';
 
-	const oddColor = 'bg-gray-100';
-	const evenColor = 'bg-gray-50';
-
 	onMount(() => {
 		// let segments = gsap.utils.toArray('.scroll-content');
 		const svgTyping = document.getElementsByClassName('bubble');
