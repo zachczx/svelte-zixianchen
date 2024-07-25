@@ -8,11 +8,11 @@
 	import TextingBro from '$lib/svg/Texting-bro.svg?dataurl';
 	import lego from '$lib/assets/lego-2539844.webp';
 	import ResumeBro from '$lib/svg/Resume-bro.svg?dataurl';
+	import OnlineResume from '$lib/svg/Online-resume-rafiki.svg?dataurl';
 	import Nav from '$lib/Nav.svelte';
 	import { onMount } from 'svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
 	import Portfolio from '$lib/Portfolio.svelte';
-	import Quote from '$lib/Quote.svelte';
 	import Intermission from '$lib/Intermission.svelte';
 	import { addNeumorphismInset, removeNeumorphismInset } from '$lib/Neumorphism';
 	import robotEyes from '$lib/assets/robot-eyes.webp?enhanced&w=900';
@@ -22,6 +22,7 @@
 	import winXp from '$lib/assets/windowsxp.png?enhanced';
 	import ubuntuCli from '$lib/assets/ubuntu-cli.webp?enhanced&w=600';
 	import bridge from '$lib/assets/thomas-kelley-hgbdG_QHNcw-unsplash.webp';
+	import moneySvg from '$lib/svg/Manage money-cuate.svg?dataurl';
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -188,19 +189,6 @@
 							scrub: true,
 							pin: false,
 							end: '+=100',
-							markers: false,
-						},
-					});
-
-					gsap.to('.quote-scroll', {
-						y: -100,
-						scale: 1.03,
-						scrollTrigger: {
-							trigger: '.quote-container',
-							start: '30% center',
-							scrub: true,
-							pin: false,
-							end: '+=500',
 							markers: false,
 						},
 					});
@@ -500,13 +488,44 @@
 		</section>
 
 		<section
-			class="quote-container relative grid min-h-[30rem] w-auto content-center justify-items-center gap-y-10 overflow-hidden bg-gray-100 px-4 xl:min-h-[70rem]">
-			<!-- <h2 class="z-10 max-w-[60rem] justify-self-start">My web dev skills help my tech decision making & ideas.</h2> -->
-
-			<div class="z-10 border border-gray-100 p-12 lg:max-w-[900px] xl:rounded-4xl xl:bg-white/40 xl:backdrop-blur-md">
-				<Quote />
+			class="quote-container relative grid min-h-[30rem] w-auto content-center justify-items-center gap-y-10 overflow-hidden bg-gray-100 px-4 py-10 lg:min-h-[70rem] lg:grid-cols-2">
+			<div class="content-center justify-self-center">
+				<img src={moneySvg} alt="$$$" class="w-[90vw] lg:w-[40vw]" />
 			</div>
-			<img src={building} alt="" class="quote-scroll absolute -top-[0rem] h-fit w-full saturate-50" />
+			<div class="space-y-10 self-start justify-self-start lg:ms-8 lg:mt-8 lg:max-w-[50vw] lg:p-10">
+				<h2 class="">Doing web dev helps my work.</h2>
+				<div class="grid gap-4 lg:grid-cols-2 lg:gap-14">
+					<div class="space-y-6 rounded-6xl py-6">
+						<h3>Opportunities and Gaps</h3>
+						<p>
+							I get to spot opportunities and gaps in systems, ideas and processes. I'm no genius - I often just apply
+							things I gleaned from what product leaders, engineers, tech influencers put out online.
+						</p>
+						<p>I have Hacker News, Reddit, daily.dev, and Youtube to thank.</p>
+					</div>
+					<div class="space-y-6 rounded-6xl py-6">
+						<h3>Navigating Complexity</h3>
+						<p>
+							I more deeply understand complexity, trade-offs, best practices, and a reasonable "definition of done".
+						</p>
+						<p>Much of it I owe to the collective wisdom of open-source communities to tackle intricate challenges.</p>
+					</div>
+					<div class="space-y-6 rounded-6xl py-6">
+						<h3>Cost Cynicism</h3>
+						<p>
+							I challenge cost estimates and estimating development timelines. We shouldn't be spending money if it
+							doesn't get good outcomes in a cost effective way.
+						</p>
+					</div>
+					<div class="space-y-6 rounded-6xl py-6">
+						<h3>Blank space</h3>
+						<p>
+							There's no fourth point, but for the sake of balance ChatGPT's writing more. This is an ostensibly verbose
+							sentence, meticulously crafted to occupy space while eschewing any substantive content.
+						</p>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<div class="wrapper grid justify-items-center bg-gray-100 px-4 pb-10 lg:py-28">
@@ -515,7 +534,7 @@
 				<div
 					class="neumorphism navItem card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE] xl:col-span-1"
 					id="career">
-					<img src={ResumeBro} class="-mb-10" alt="Career" />
+					<img src={OnlineResume} class="" alt="Career" />
 					<div class="card-body">
 						<h2>Career</h2>
 					</div>
