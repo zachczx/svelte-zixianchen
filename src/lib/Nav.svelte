@@ -14,7 +14,7 @@
 			><a href="/">Zixian Chen</a></span>
 	</div>
 	<div
-		class="navMenu hidden items-center justify-center space-x-8 rounded-b-6xl border-b border-b-gray-200 bg-gray-900/70 shadow backdrop-blur-md lg:flex">
+		class="navMenu hidden items-center justify-center rounded-b-6xl border-b border-b-gray-200 bg-gray-900/70 shadow backdrop-blur-md xl:flex xl:space-x-1 2xl:space-x-8">
 		<a
 			aria-current={navCurrent === 'about' ? 'page' : undefined}
 			id="navAbout"
