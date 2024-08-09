@@ -637,18 +637,21 @@
 			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
 				<img src={Golang} class="h-10 scale-125" alt="Golang" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
-				<img src={Sqlite} class="h-10 grow" alt="Sqlite" />
-			</div>
 			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
 				<img src={Htmx} class="h-8" alt="Htmx" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={TailwindSmall} class="h-10 grow" alt="Tailwind" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Sqlite} class="h-10 grow" alt="Sqlite" />
 			</div>
 			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
 				<img src={Templ} class="h-8" alt="Templ" />
 			</div>
 		</div>
 	</div>
-	<StackUsed framework="Go" library="Templ, HTMX" host="" className="lg:hidden" />
+	<StackUsed framework="Go" library="HTMX, Templ, Tailwind" host="" className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
@@ -675,7 +678,8 @@
 					<li>Focused on being performant, fast.</li>
 					<li>Uses fuzzy matching (Jaro-Winkler) for error tolerance.</li>
 					<li>
-						Experimented with Metaphone for string matching, but opted against it for accuracy and copyright issues.
+						Experimented with Metaphone, Levenshtein, Aho Corasick, Soundex, for string matching, but opted against it
+						for accuracy and copyright issues.
 					</li>
 				</ul>
 			</div>
