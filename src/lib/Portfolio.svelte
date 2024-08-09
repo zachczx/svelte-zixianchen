@@ -35,6 +35,9 @@
 	import Pagefind from '$lib/logos/Pagefind.svg?dataurl';
 	import CodeTypingBro from './svg/Code-typing-bro.svelte';
 	import ExitLinks from './ExitLinks.svelte';
+	import Golang from '$lib/logos/Golang.svg?dataurl';
+	import Sqlite from '$lib/logos/sqlite.svg?dataurl';
+	import Templ from '$lib/logos/templ.svg?dataurl';
 
 	onMount(() => {
 		// let segments = gsap.utils.toArray('.scroll-content');
@@ -600,6 +603,91 @@
 	</div>
 </div>
 
+<div class="scroll-container7 max-w-dvw background-7 grid min-h-dvh py-10 lg:grid-cols-3">
+	<div class="place-self-center">
+		<div class="flex justify-center">
+			<a href="https://abbreviation.zixian.dev"
+				><h3 class="pb-4 pt-6 text-center font-sans text-5xl font-extrabold text-[#0069ff] lg:text-7xl">
+					Abbreviati<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="1em"
+						height="1em"
+						class="-mx-[0.2em] inline"
+						viewBox="0 0 24 24"
+						><g fill="none"
+							><path
+								fill="#0069ff"
+								fill-opacity=".25"
+								fill-rule="evenodd"
+								d="M12 19a7 7 0 1 0 0-14a7 7 0 0 0 0 14M10.087 7.38A5 5 0 0 1 12 7a.5.5 0 0 0 0-1a6 6 0 0 0-6 6a.5.5 0 0 0 1 0a5 5 0 0 1 3.087-4.62"
+								clip-rule="evenodd" /><path stroke="#0069ff" stroke-linecap="round" d="M20.5 20.5L17 17" /><circle
+								cx="11"
+								cy="11"
+								r="8.5"
+								stroke="#0069ff" /></g
+						></svg
+					>n
+				</h3></a>
+		</div>
+		<ExitLinks
+			url="https://abbreviation.zixian.dev"
+			github="https://github.com/zachczx/go-abbreviation"
+			className="fill-[#0069ff]" />
+		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Golang} class="h-10 scale-125" alt="Golang" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+				<img src={Sqlite} class="h-10 grow" alt="Sqlite" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+				<img src={Htmx} class="h-8" alt="Htmx" />
+			</div>
+			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+				<img src={Templ} class="h-8" alt="Templ" />
+			</div>
+		</div>
+	</div>
+	<StackUsed framework="Go" library="Templ, HTMX" host="" className="lg:hidden" />
+	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
+		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+			<div
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">The Problem</h3>
+				<p>
+					People forget what acronyms and abbreviations mean. They then need to ask a colleague or pray that it shows up
+					in email archives.
+				</p>
+			</div>
+			<div
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">What I wanted</h3>
+				<p>
+					I wanted to build a search engine and database of abbreviations. There was already one available, but I
+					figured I could build a better, faster, more modern one.
+				</p>
+			</div>
+			<div
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">What I built</h3>
+				<ul class="ms-6 list-outside list-disc space-y-2 marker:text-[#0069ff]">
+					<li>A search engine and database of abbreviations & acronyms in Go.</li>
+					<li>Focused on being performant, fast.</li>
+					<li>Uses fuzzy matching (Jaro-Winkler) for error tolerance.</li>
+					<li>
+						Experimented with Metaphone for string matching, but opted against it for accuracy and copyright issues.
+					</li>
+				</ul>
+			</div>
+			<div
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">Not yet done</h3>
+				<p>Semantic search would be useful (e.g., searching CEO of ministry should ideally return Minister/PS)</p>
+			</div>
+		</div>
+	</div>
+</div>
+
 <style>
 	/* * {
 		border: red solid 1px;
@@ -652,6 +740,11 @@
 		.background-6 {
 			background: radial-gradient(700px at 45% 40%, rgb(56, 189, 248, 0.5), #fafafa, transparent),
 				radial-gradient(700px at 90% 65%, rgb(56, 189, 248, 0.8), #fafafa, transparent);
+		}
+		.background-7 {
+			background: radial-gradient(500px at 10% 20%, rgb(0, 105, 255, 0.3), #fafafa, transparent),
+				radial-gradient(800px at 70% 50%, rgb(0, 105, 255, 0.6), #fafafa, transparent),
+				radial-gradient(750px at 90% 30%, rgb(0, 105, 255, 0.4), #fafafa, transparent);
 		}
 	}
 </style>
