@@ -48,6 +48,5 @@ export const GET: RequestHandler = async () => {
 		paramValues: {
 			'/blog/[slug]': blogSlugs, // e.g. ['hello-world', 'another-post']
 		},
-		additionalPaths: ['/#about', '/#career', '/#projects'],
 	});
 };
