@@ -2,6 +2,7 @@
 title: 'Adding Delay to a CSS Loader When Using HTMX Swaps'
 description: "I wanted to solve white flashes flickering when using HTMX's hx-indicator."
 date: '2024-08-10'
+date_updated: '2024-08-11'
 tags:
   - HTMX
   - UX
@@ -22,7 +23,7 @@ Hx-swap caused white flashes from very fast transitions. The hx-target element c
 
 The obvious solution would be to set a delay, but unfortunately hx-indicator does not come in-built with a delay option.
 
-## Solution: Adding Delay Via htmx:beforeRequest and htmx:afterRequest
+## Solution 1: DIY Adding Delay (htmx:beforeRequest and htmx:afterRequest)
 
 After some digging, the [HTMX creator gave some tips to DIY a delay](https://www.reddit.com/r/htmx/comments/10qxzji/set_a_minimum_time_for_an_hxindicator_animation/):
 
@@ -82,10 +83,23 @@ document.body.addEventListener('htmx:afterRequest', () => {
 </button>
 ```
 
-## What's Next?
+I ended up not using hx-indicator, though I'm sure I'll eventually find out if that's a good choice.
 
-Nothing actually. This has been straightforward.
+## Solution 2: Do Transition Delay on hx-indicator Element
 
-Maybe I'll try writing an HTMX extension if I continue using Go and Templ.
+Add a CSS transition delay of 1000ms, so the CSS loader appears after 1000ms and we're still in between a htmx:beforeRequest and htmx:afterRequest.
 
-I also ended up not using hx-indicator, though I'm sure I'll eventually find out if that's a good choice.
+There're 2 ways to go.
+
+- If you're just doing opacity transitions, this should work perfectly, e.g. animating opacity 100% when loader shows and back to 0% thereafter.
+- It's more complicated with _display: none_ transiting to _display: inline_ or _display: block_. Display none doesn't transit well. There're a couple of newish CSS properties that help with that - _transition-behavior: allow-discrete_ and _@starting-style_. Syntax Podcast had a great episode on this. Browser support is not fantastic, at ~71% support, so I won't be scrambling to use this at the moment.
+
+## Solution 3: Use HTMX Loading States Extension
+
+HTMX has an extension called [loading-states](https://github.com/bigskysoftware/htmx-extensions/blob/main/src/loading-states/README.md). It offers an attribute _data-loading-delay_, which is really a setTimeout under the hood.
+
+```html
+<span class="loader" data-loading-delay="1000"></span>
+```
+
+I'd have opted for this if I found this first, instead of writing a couple of simple eventListeners. A very good option if you're not keen on tinkering with much under the hood. Set and forget it.
