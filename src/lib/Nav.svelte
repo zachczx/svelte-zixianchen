@@ -30,9 +30,9 @@
 				? 'text-[#FF725E]'
 				: undefined}">Career</a>
 		<a
-			aria-current={navCurrent === 'side' || navCurrent === 'side-full' ? 'page' : undefined}
+			aria-current={navCurrent === 'projects' || navCurrent === 'side-full' ? 'page' : undefined}
 			id="navSide"
-			href="/#side"
+			href="/#projects"
 			class="btn btn-link text-xl font-bold text-gray-100 no-underline hover:no-underline {navCurrent === 'side'
 				? 'text-[#FF725E]'
 				: undefined}">Projects</a>

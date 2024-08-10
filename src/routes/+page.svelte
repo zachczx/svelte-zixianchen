@@ -629,7 +629,7 @@
 	</main>
 </div>
 
-<section id="side" class="navItem">
+<section id="projects" class="navItem">
 	<Portfolio />
 </section>
 <WebsiteFooter />

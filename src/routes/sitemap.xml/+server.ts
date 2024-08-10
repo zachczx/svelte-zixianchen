@@ -40,7 +40,7 @@ export const GET: RequestHandler = async () => {
 
 	return await sitemap.response({
 		origin: 'https://zixianchen.com',
-		excludePatterns: [
+		excludeRoutePatterns: [
 			'^/dashboard.*', // i.e. routes starting with `/dashboard`
 			'.*\\[page=integer\\].*', // i.e. routes containing `[page=integer]`–e.g. `/blog/2`
 			'.*\\(authenticated\\).*', // i.e. routes within a group
@@ -48,5 +48,6 @@ export const GET: RequestHandler = async () => {
 		paramValues: {
 			'/blog/[slug]': blogSlugs, // e.g. ['hello-world', 'another-post']
 		},
+		additionalPaths: ['/#about', '/#career', '/#projects'],
 	});
 };
