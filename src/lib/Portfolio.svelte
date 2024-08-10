@@ -695,8 +695,8 @@
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">What I wanted</h3>
 				<p>
-					I wanted to build a search engine and database of abbreviations. There was already one available, but I
-					figured I could build a better, faster, more modern one.
+					I wanted to build a search engine and database of abbreviations. There were already a couple of
+					implementations out there, but I wanted to build a better, faster, more modern one.
 				</p>
 			</div>
 			<div
@@ -704,11 +704,11 @@
 				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ms-6 list-outside list-disc space-y-2 marker:text-[#0069ff]">
 					<li>A search engine and database of abbreviations & acronyms in Go.</li>
-					<li>Focused on being performant, fast.</li>
-					<li>Uses fuzzy matching (Jaro-Winkler) for error tolerance.</li>
+					<li>Focused on being minimal, fast, and usable.</li>
+					<li>Uses fuzzy matching (Jaro-Winkler) and Phonetic word indexing (Metaphone) for useful searching.</li>
 					<li>
-						Experimented with Metaphone, Levenshtein, Aho Corasick, Soundex, for string matching, but opted against it
-						for accuracy and copyright issues.
+						Experimented with Levenshtein, Aho Corasick, Soundex, for string matching, but decided they weren't accurate
+						enough.
 					</li>
 				</ul>
 			</div>
@@ -721,10 +721,11 @@
 						Semantic-based search would be fun to implement (e.g., searching CEO of ministry should ideally return
 						Minister/PS)
 					</li>
+					<li>Interested in trying Jaccard similarity coefficient, seems like it might work.</li>
 					<li>If this scales way bigger (or maybe just for fun) - trying Minhash and Bloom filters</li>
 					<li>
-						Already at IO read limits, but I hope to try if Valkey or Redis is faster. This read-only use-case sounds
-						perfect for an in-memory DB.
+						Already at IO read limits for now, but I hope to try if Valkey or Redis is faster. This read-only use-case
+						sounds perfect for an in-memory DB.
 					</li>
 				</ul>
 			</div>
