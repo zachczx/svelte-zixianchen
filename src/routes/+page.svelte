@@ -493,7 +493,7 @@
 				<img src={moneySvg} alt="$$$" class="w-[90vw] lg:w-[40vw]" />
 			</div>
 			<div class="space-y-20 self-center justify-self-center lg:ms-8 lg:mt-8 lg:max-w-[50vw] lg:p-10">
-				<h2>Doing web dev helps my work.</h2>
+				<h2>My web dev side projects help my work.</h2>
 				<div class="grid gap-4 lg:grid-cols-2 lg:gap-14">
 					<div class="space-y-6 rounded-6xl">
 						<h3>Opportunities, Gaps</h3>
@@ -504,7 +504,7 @@
 						<p>I have Hacker News, Reddit, daily.dev, and Youtube to thank.</p>
 					</div>
 					<div class="space-y-6 rounded-6xl">
-						<h3>What It Takes</h3>
+						<h3>Know What It Takes</h3>
 						<p>
 							I more deeply understand technical complexities, trade-offs, best practices, and a reasonable "definition
 							of done".

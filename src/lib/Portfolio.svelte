@@ -168,48 +168,80 @@
 	});
 </script>
 
-<div class="grid justify-items-center bg-gray-50 pb-20 pt-20 lg:min-h-dvh lg:grid-cols-10">
-	<h2 class="text-center lg:col-span-10">Here are a few I've done.</h2>
+<div class="grid justify-items-center bg-gray-50 pb-20 pt-20 lg:min-h-dvh lg:grid-cols-12">
+	<h2 class="text-center lg:col-span-12">Here are a few I've done.</h2>
 
 	<figure class="hidden self-center lg:col-span-3 lg:grid">
-		<enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="scale-75"></enhanced:img>
+		<a href="#apptitude"><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="scale-75"></enhanced:img></a>
 		<figcaption class="-mt-3 text-center italic">Tech-related upskilling</figcaption>
 	</figure>
 
-	<div class="lg:col-span-4 lg:row-span-2">
+	<div class="lg:col-span-6 lg:row-span-2">
 		<CodeTypingBro class="h-96 w-96 xl:h-[40rem] xl:w-[40rem]" />
 	</div>
 
 	<figure class="col-span-3 hidden space-y-4 self-center lg:grid">
-		<h3 class="text-center font-sans text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
+		<a href="#appraize"
+			><h3 class="text-center font-sans text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
+		</a>
 		<figcaption class="text-center italic">Drop & drop ranking</figcaption>
 	</figure>
 
 	<figure class="col-span-3 hidden content-center justify-items-center space-y-4 self-center lg:grid">
 		<div class="avatar">
 			<div class="w-32 rounded-full">
-				<enhanced:img src={eatYourMedsLogo} alt="Eat Your Meds!"></enhanced:img>
+				<a href="#eatyourmeds"><enhanced:img src={eatYourMedsLogo} alt="Eat Your Meds!"></enhanced:img> </a>
 			</div>
 		</div>
 		<figcaption class="text-center italic">Medicine dose tracker</figcaption>
 	</figure>
 
 	<figure class="col-span-3 hidden content-center justify-items-center self-center lg:grid">
-		<enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="scale-[0.6]"></enhanced:img>
+		<a href="#rankamate"><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="scale-[0.6]"></enhanced:img> </a>
 		<figcaption class="-mt-6 italic">Drag & drop ranking v0.1</figcaption>
 	</figure>
 
 	<div class="hidden lg:col-span-3 lg:grid"></div>
 
-	<div class="-mt-4 hidden self-start lg:col-span-4 lg:flex lg:items-center lg:justify-center">
+	<div class="-mt-4 hidden self-start lg:col-span-3 lg:flex lg:items-center lg:justify-center">
 		<figure class="grid justify-items-center space-y-3">
-			<h3 class="hidden font-serif text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
+			<a href="#btonomics"
+				><h3 class="hidden font-serif text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
+			</a>
 			<figcaption class="italic">Budget home renovation blog</figcaption>
 		</figure>
 	</div>
-
+	<div class="-mt-4 hidden self-start lg:col-span-3 lg:flex lg:items-center lg:justify-center">
+		<figure class="grid justify-items-center space-y-3">
+			<a href="#abbreviation"
+				><h3 class="hidden font-sans text-4xl font-extrabold text-[#0069ff] lg:flex lg:text-6xl">
+					Abbreviati<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="1em"
+						height="1em"
+						class="-mx-[0.2em] inline"
+						viewBox="0 0 24 24"
+						><g fill="none"
+							><path
+								fill="#0069ff"
+								fill-opacity=".25"
+								fill-rule="evenodd"
+								d="M12 19a7 7 0 1 0 0-14a7 7 0 0 0 0 14M10.087 7.38A5 5 0 0 1 12 7a.5.5 0 0 0 0-1a6 6 0 0 0-6 6a.5.5 0 0 0 1 0a5 5 0 0 1 3.087-4.62"
+								clip-rule="evenodd" /><path stroke="#0069ff" stroke-linecap="round" d="M20.5 20.5L17 17" /><circle
+								cx="11"
+								cy="11"
+								r="8.5"
+								stroke="#0069ff" /></g
+						></svg
+					>n
+				</h3>
+			</a>
+			<figcaption class="italic">Abbreviation/acronym search</figcaption>
+		</figure>
+	</div>
 	<div class="hidden lg:col-span-3 lg:grid"></div>
 </div>
+
 <div id="apptitude" class="scroll-container1 max-w-dvw background-1 grid min-h-dvh py-10 lg:grid-cols-3">
 	<div class="w-full content-center justify-self-center px-20">
 		<div class="flex justify-center">
@@ -268,7 +300,7 @@
 	</div>
 </div>
 
-<div class="scroll-container2 max-w-dvw background-2 grid min-h-dvh py-10 lg:grid-cols-3">
+<div id="appraize" class="scroll-container2 max-w-dvw background-2 grid min-h-dvh py-10 lg:grid-cols-3">
 	<div class="place-self-center">
 		<a href="https://appraize.zixian.dev/"
 			><h3 class="text-center font-sans text-6xl font-black text-[#491eff] lg:text-8xl">Appraize</h3></a>
@@ -338,7 +370,7 @@
 	</div>
 </div>
 
-<div class="scroll-container3 max-w-dvw background-3 grid min-h-dvh py-10 lg:grid-cols-3">
+<div id="rankamate" class="scroll-container3 max-w-dvw background-3 grid min-h-dvh py-10 lg:grid-cols-3">
 	<div class="w-full place-self-center px-20">
 		<div class="flex content-center items-center justify-center">
 			<a href="https://rankamate.zixian.dev/"><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img></a>
@@ -417,7 +449,7 @@
 	</div>
 </div>
 
-<div class="scroll-container4 max-w-dvw background-4 grid min-h-dvh py-10 lg:grid-cols-3">
+<div id="eatyourmeds" class="scroll-container4 max-w-dvw background-4 grid min-h-dvh py-10 lg:grid-cols-3">
 	<div class="place-self-center px-20">
 		<div class="avatar flex justify-center">
 			<div class="w-56 rounded-full">
@@ -481,7 +513,7 @@
 	</div>
 </div>
 
-<div class="scroll-container5 max-w-dvw background-5 grid min-h-dvh py-10 lg:grid-cols-3">
+<div id="btonomics-old" class="scroll-container5 max-w-dvw background-5 grid min-h-dvh py-10 lg:grid-cols-3">
 	<div class="place-self-center px-20">
 		<div class="flex justify-center">
 			<a href="https://old.btonomics.com"
@@ -545,7 +577,7 @@
 	</div>
 </div>
 
-<div class="scroll-container6 max-w-dvw background-6 grid min-h-dvh py-10 lg:grid-cols-3">
+<div id="btonomics" class="scroll-container6 max-w-dvw background-6 grid min-h-dvh py-10 lg:grid-cols-3">
 	<!-- <style="background: linear-gradient(rgba(250,250,250,0.7), rgba(250,250,250,0.7)), url({shape}); background-size: cover;"> -->
 	<div class="place-self-center">
 		<div class="flex justify-center">
@@ -603,7 +635,7 @@
 	</div>
 </div>
 
-<div class="scroll-container7 max-w-dvw background-7 grid min-h-dvh py-10 lg:grid-cols-3">
+<div id="abbreviation" class="scroll-container7 max-w-dvw background-7 grid min-h-dvh py-10 lg:grid-cols-3">
 	<div class="place-self-center">
 		<div class="flex justify-center">
 			<a href="https://abbreviation.zixian.dev"
@@ -651,7 +683,7 @@
 			</div>
 		</div>
 	</div>
-	<StackUsed framework="Go" library="HTMX, Templ, Tailwind" host="" className="lg:hidden" />
+	<StackUsed framework="Go, Sqlite" library="HTMX, Templ, Tailwind" host="" className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
@@ -686,7 +718,18 @@
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">Not yet done</h3>
-				<p>Semantic search would be useful (e.g., searching CEO of ministry should ideally return Minister/PS)</p>
+				<ul class="ms-6 list-outside list-disc space-y-2 marker:text-[#0069ff]">
+					<li>Users say a tagging feature will be useful, but is too much work for now.</li>
+					<li>
+						Semantic-based search would be fun to implement (e.g., searching CEO of ministry should ideally return
+						Minister/PS)
+					</li>
+					<li>If this scales way bigger (or maybe just for fun) - trying Minhash and Bloom filters</li>
+					<li>
+						Already at IO read limits, but I hope to try if Valkey or Redis is faster. This read-only use-case sounds
+						perfect for an in-memory DB.
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -738,7 +781,7 @@
 		}
 		.background-5 {
 			background: radial-gradient(200px at 10% 20%, rgb(234, 179, 8, 0.3), #fafafa, transparent),
-				radial-gradient(600px at 40% 30%, rgb(234, 179, 8, 0.99), #fafafa, transparent),
+				radial-gradient(900px at 50% 50%, rgb(234, 179, 8, 0.3), #fafafa, transparent),
 				radial-gradient(600px at 90% 50%, rgb(234, 179, 8, 0.4), #fafafa, transparent);
 		}
 		.background-6 {
@@ -746,8 +789,8 @@
 				radial-gradient(700px at 90% 65%, rgb(56, 189, 248, 0.8), #fafafa, transparent);
 		}
 		.background-7 {
-			background: radial-gradient(500px at 10% 20%, rgb(0, 105, 255, 0.3), #fafafa, transparent),
-				radial-gradient(800px at 70% 50%, rgb(0, 105, 255, 0.6), #fafafa, transparent),
+			background: radial-gradient(450px at 10% 25%, rgb(0, 105, 255, 0.3), #fafafa, transparent),
+				radial-gradient(900px at 70% 50%, rgb(0, 105, 255, 0.6), #fafafa, transparent),
 				radial-gradient(750px at 90% 30%, rgb(0, 105, 255, 0.4), #fafafa, transparent);
 		}
 	}
