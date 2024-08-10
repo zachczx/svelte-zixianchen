@@ -661,10 +661,7 @@
 					>n
 				</h3></a>
 		</div>
-		<ExitLinks
-			url="https://abbreviation.zixian.dev"
-			github="https://github.com/zachczx/go-abbreviation"
-			className="fill-[#0069ff]" />
+		<ExitLinks url="https://abbreviation.zixian.dev" className="fill-[#0069ff]" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
 				<img src={Golang} class="h-10 scale-125" alt="Golang" />
