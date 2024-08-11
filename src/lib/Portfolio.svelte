@@ -707,7 +707,7 @@
 					<li>Focused on being minimal, fast, and usable.</li>
 					<li>Uses fuzzy matching (Jaro-Winkler) and Phonetic word indexing (Metaphone) for useful searching.</li>
 					<li>
-						Experimented with other algorithms for matching - Levenshtein, Aho Corasick, Beider-Morse, Soundex - but
+						Experimented with other algorithms for matching - Levenshtein, Aho Corasick, Jaccard, Beider-Morse, Soundex - but
 						they weren't good enough for this use-case.
 					</li>
 				</ul>
