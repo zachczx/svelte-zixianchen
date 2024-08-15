@@ -682,7 +682,7 @@
 	</div>
 	<StackUsed framework="Go, Sqlite" library="HTMX, Templ, Tailwind" host="" className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
-		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+		<div class="grid max-h-[1000px] content-start gap-10 lg:grid-cols-2 xl:max-w-[1600px]">
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">The Problem</h3>
@@ -705,10 +705,16 @@
 				<ul class="ms-6 list-outside list-disc space-y-2 marker:text-[#0069ff]">
 					<li>A search engine and database of abbreviations & acronyms in Go.</li>
 					<li>Focused on being minimal, fast, and usable.</li>
-					<li>Uses fuzzy matching (Jaro-Winkler) and Phonetic word indexing (Metaphone) for useful searching.</li>
 					<li>
-						Experimented with other algorithms for matching - Levenshtein, Aho Corasick, Jaccard, Beider-Morse, Soundex - but
-						they weren't good enough for this use-case.
+						Uses fuzzy matching (Jaro-Winkler) and Phonetic word indexing (Metaphone) on top of simple full-text search.
+					</li>
+					<li>
+						Experimented with other algorithms for matching — Levenshtein, Jaccard, Aho Corasick, Jaccard, Beider-Morse,
+						Soundex — but I didn't like the results they gave.
+					</li>
+					<li>
+						It was interesting learning stuff on Go, Docker, Makefile, Templ and dev toolchain (Air, Tailwind, Esbuild,
+						Prettier).
 					</li>
 				</ul>
 			</div>
@@ -721,11 +727,10 @@
 						Semantic-based search would be fun to implement (e.g., searching CEO of ministry should ideally return
 						Minister/PS)
 					</li>
-					<li>Interested in trying Jaccard similarity coefficient, seems like it might work.</li>
 					<li>If this scales way bigger (or maybe just for fun) - trying Minhash and Bloom filters</li>
 					<li>
-						Already at IO read limits for now, but I hope to try if Valkey or Redis is faster. This read-only use-case
-						sounds perfect for an in-memory DB.
+						Adding Valkey makes it slower than just using SQLite, but I'd love to continue trying ways to cache
+						expensive results/queries.
 					</li>
 				</ul>
 			</div>
