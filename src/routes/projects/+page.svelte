@@ -33,47 +33,27 @@
 	import Astro from '$lib/logos/Astro.svg?dataurl';
 	import CloudflarePages from '$lib/logos/Cloudflare-pages.svg?dataurl';
 	import Pagefind from '$lib/logos/Pagefind.svg?dataurl';
-	import CodeTypingBro from './svg/Code-typing-bro.svelte';
-	import ExitLinks from './ExitLinks.svelte';
+
+	import ExitLinks from '$lib/ExitLinks.svelte';
 	import Golang from '$lib/logos/Golang.svg?dataurl';
 	import Sqlite from '$lib/logos/sqlite.svg?dataurl';
 	import Templ from '$lib/logos/templ.svg?dataurl';
 
-	onMount(() => {
-		// let segments = gsap.utils.toArray('.scroll-content');
-		const svgTyping = document.getElementsByClassName('bubble');
-		// const segments1 = document.getElementsByClassName('scroll-content1');
-		// const segments2 = document.getElementsByClassName('scroll-content2');
-		// const segments3 = document.getElementsByClassName('scroll-content3');
-		// const segments4 = document.getElementsByClassName('scroll-content4');
-		// const segments5 = document.getElementsByClassName('scroll-content5');
-		// const segments6 = document.getElementsByClassName('scroll-content6');
-		// const logoIcon = document.getElementsByClassName('logoIcon');
-		// const scrollLogo = document.getElementsByClassName('scroll-logo');
-
-		// gsap.registerPlugin(ScrollTrigger);
-
-		/**
-		 * For the coding bros typing svg animations
-		 */
-		const svgTypingAnimation = gsap.timeline({ repeat: -1 });
-		svgTypingAnimation.to(svgTyping, {
-			stagger: { each: 0.2, from: 'random' },
-			duration: 0.5,
-			// ease: 'bounce.out',
-			scale: 1.4,
-		});
-		svgTypingAnimation.to(svgTyping, {
-			stagger: { each: 0.2, from: 'random' },
-			duration: 0.9,
-			// ease: 'bounce.out',
-			scale: 1,
-		});
-
-		/**
-		 * For the individual pages
-		 */
-		/* const mm = gsap.matchMedia();
+	// onMount(() => {
+	// let segments = gsap.utils.toArray('.scroll-content');
+	// const segments1 = document.getElementsByClassName('scroll-content1');
+	// const segments2 = document.getElementsByClassName('scroll-content2');
+	// const segments3 = document.getElementsByClassName('scroll-content3');
+	// const segments4 = document.getElementsByClassName('scroll-content4');
+	// const segments5 = document.getElementsByClassName('scroll-content5');
+	// const segments6 = document.getElementsByClassName('scroll-content6');
+	// const logoIcon = document.getElementsByClassName('logoIcon');
+	// const scrollLogo = document.getElementsByClassName('scroll-logo');
+	// gsap.registerPlugin(ScrollTrigger);
+	/**
+	 * For the individual pages
+	 */
+	/* const mm = gsap.matchMedia();
 
 		mm.add(
 			{ isLgBreakpoint: '(min-width: 1024px)', prefersReducedMotion: '(prefers-reduced-motion: no-preference)' },
@@ -152,95 +132,21 @@
 				}
 			},
 		); */
-		// tl.from(logoIcon, {
-		// 	autoAlpha: 0,
-		// 	scale: 0.6,
-		// 	ease: 'bounce.out',
-		// 	stagger: { each: 0.3 },
-		// 	scrollTrigger: {
-		// 		trigger: logoIcon,
-		// 		start: 'center 90%',
-		// 		scrub: true,
-		// 		end: 'center center',
-		// 		markers: false,
-		// 	},
-		// });
-	});
+	// tl.from(logoIcon, {
+	// 	autoAlpha: 0,
+	// 	scale: 0.6,
+	// 	ease: 'bounce.out',
+	// 	stagger: { each: 0.3 },
+	// 	scrollTrigger: {
+	// 		trigger: logoIcon,
+	// 		start: 'center 90%',
+	// 		scrub: true,
+	// 		end: 'center center',
+	// 		markers: false,
+	// 	},
+	// });
+	// });
 </script>
-
-<div class="grid justify-items-center bg-gray-50 pb-20 pt-20 lg:min-h-dvh lg:grid-cols-12">
-	<h2 class="text-center lg:col-span-12">Here are a few I've done.</h2>
-
-	<figure class="hidden self-center lg:col-span-3 lg:grid">
-		<a href="#apptitude"><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="scale-75"></enhanced:img></a>
-		<figcaption class="-mt-3 text-center italic">Tech-related upskilling</figcaption>
-	</figure>
-
-	<div class="lg:col-span-6 lg:row-span-2">
-		<CodeTypingBro class="h-96 w-96 xl:h-[40rem] xl:w-[40rem]" />
-	</div>
-
-	<figure class="col-span-3 hidden space-y-4 self-center lg:grid">
-		<a href="#appraize"
-			><h3 class="text-center font-sans text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
-		</a>
-		<figcaption class="text-center italic">Drop & drop ranking</figcaption>
-	</figure>
-
-	<figure class="col-span-3 hidden content-center justify-items-center space-y-4 self-center lg:grid">
-		<div class="avatar">
-			<div class="w-32 rounded-full">
-				<a href="#eatyourmeds"><enhanced:img src={eatYourMedsLogo} alt="Eat Your Meds!"></enhanced:img> </a>
-			</div>
-		</div>
-		<figcaption class="text-center italic">Medicine dose tracker</figcaption>
-	</figure>
-
-	<figure class="col-span-3 hidden content-center justify-items-center self-center lg:grid">
-		<a href="#rankamate"><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class="scale-[0.6]"></enhanced:img> </a>
-		<figcaption class="-mt-6 italic">Drag & drop ranking v0.1</figcaption>
-	</figure>
-
-	<div class="hidden lg:col-span-3 lg:grid"></div>
-
-	<div class="-mt-4 hidden self-start lg:col-span-3 lg:flex lg:items-center lg:justify-center">
-		<figure class="grid justify-items-center space-y-3">
-			<a href="#btonomics"
-				><h3 class="hidden font-serif text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
-			</a>
-			<figcaption class="italic">Budget home renovation blog</figcaption>
-		</figure>
-	</div>
-	<div class="-mt-4 hidden self-start lg:col-span-3 lg:flex lg:items-center lg:justify-center">
-		<figure class="grid justify-items-center space-y-3">
-			<a href="#abbreviation"
-				><h3 class="hidden font-sans text-4xl font-extrabold text-[#0069ff] lg:flex lg:text-6xl">
-					Abbreviati<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="1em"
-						height="1em"
-						class="-mx-[0.2em] inline"
-						viewBox="0 0 24 24"
-						><g fill="none"
-							><path
-								fill="#0069ff"
-								fill-opacity=".25"
-								fill-rule="evenodd"
-								d="M12 19a7 7 0 1 0 0-14a7 7 0 0 0 0 14M10.087 7.38A5 5 0 0 1 12 7a.5.5 0 0 0 0-1a6 6 0 0 0-6 6a.5.5 0 0 0 1 0a5 5 0 0 1 3.087-4.62"
-								clip-rule="evenodd" /><path stroke="#0069ff" stroke-linecap="round" d="M20.5 20.5L17 17" /><circle
-								cx="11"
-								cy="11"
-								r="8.5"
-								stroke="#0069ff" /></g
-						></svg
-					>n
-				</h3>
-			</a>
-			<figcaption class="italic">Abbreviation/acronym search</figcaption>
-		</figure>
-	</div>
-	<div class="hidden lg:col-span-3 lg:grid"></div>
-</div>
 
 <div id="apptitude" class="scroll-container1 max-w-dvw background-1 grid min-h-dvh py-10 lg:grid-cols-3">
 	<div class="w-full content-center justify-self-center px-20">

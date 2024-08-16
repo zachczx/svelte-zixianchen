@@ -12,7 +12,6 @@
 	import Nav from '$lib/Nav.svelte';
 	import { onMount } from 'svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
-	import Portfolio from '$lib/Portfolio.svelte';
 	import Intermission from '$lib/Intermission.svelte';
 	import { addNeumorphismInset, removeNeumorphismInset } from '$lib/Neumorphism';
 	import robotEyes from '$lib/assets/robot-eyes.webp?enhanced&w=900';
@@ -23,6 +22,11 @@
 	import ubuntuCli from '$lib/assets/ubuntu-cli.webp?enhanced&w=600';
 	import bridge from '$lib/assets/thomas-kelley-hgbdG_QHNcw-unsplash.webp';
 	import moneySvg from '$lib/svg/Manage money-cuate.svg?dataurl';
+
+	import CodeTypingBro from '$lib/svg/Code-typing-bro.svelte';
+	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=280';
+	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=120';
+	import eatYourMedsLogo from '$lib/assets/eatyourmedslogo.webp?enhanced&w=250';
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -195,6 +199,24 @@
 				}
 			},
 		);
+
+		const svgTyping = document.getElementsByClassName('bubble');
+		/**
+		 * For the coding bros typing svg animations
+		 */
+		const svgTypingAnimation = gsap.timeline({ repeat: -1 });
+		svgTypingAnimation.to(svgTyping, {
+			stagger: { each: 0.2, from: 'random' },
+			duration: 0.5,
+			// ease: 'bounce.out',
+			scale: 1.4,
+		});
+		svgTypingAnimation.to(svgTyping, {
+			stagger: { each: 0.2, from: 'random' },
+			duration: 0.9,
+			// ease: 'bounce.out',
+			scale: 1,
+		});
 	});
 
 	/**
@@ -325,7 +347,7 @@
 		<section class="grid justify-items-center bg-[#E9ECEF] px-4 2xl:w-dvw">
 			<div class="grid auto-cols-fr auto-rows-auto gap-7 py-10 lg:py-28 xl:grid-cols-4 2xl:max-w-screen-2xl">
 				<div
-					class="navItem neumorphism card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200 xl:col-span-3"
+					class="navItem xl:neumorphism card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200 xl:col-span-3"
 					id="about">
 					<div class="card-body relative grid h-fit grid-cols-2 justify-items-center p-8">
 						<div class="z-10 hidden max-h-56 xl:flex">
@@ -347,7 +369,7 @@
 					</div>
 				</div>
 				<div
-					class="neumorphism card col-span-2 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200 xl:col-span-1">
+					class="card col-span-2 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200 xl:col-span-1">
 					<div class="card-body grid max-h-96 content-center space-y-4">
 						<h3>Education</h3>
 						<div class="space-y-2">
@@ -358,8 +380,7 @@
 						</div>
 					</div>
 				</div>
-				<div
-					class="neumorphism card col-span-2 w-full rounded-5xl bg-gradient-to-br from-red-50 to-red-200 xl:col-span-1">
+				<div class="card col-span-2 w-full rounded-5xl bg-gradient-to-br from-red-50 to-red-200 xl:col-span-1">
 					<div class="card-body space-y-4 overflow-hidden">
 						<h3>Certification</h3>
 						<div class="space-y-2 pt-2">
@@ -445,7 +466,7 @@
 					</div>
 				</div>
 				<div
-					class="neumorphism card col-span-2 grid w-full grid-cols-2 overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200">
+					class="card col-span-2 grid w-full grid-cols-2 overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200">
 					<div class="card-body space-y-4 self-center">
 						<h3>Interests</h3>
 						<p class="z-10">
@@ -467,7 +488,7 @@
 				</div>
 
 				<div
-					class="neumorphism card relative col-span-2 grid w-full overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200 xl:col-span-1">
+					class="card relative col-span-2 grid w-full overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200 xl:col-span-1">
 					<div>
 						<div class="card-body grid h-full content-start space-y-4">
 							<h3 class="">Playlist</h3>
@@ -533,7 +554,7 @@
 			<!-- color scheme https://convertingcolors.com/hex-color-FF725E.html -->
 			<section class="grid max-w-screen-2xl auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
 				<div
-					class="neumorphism navItem card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE] xl:col-span-1"
+					class="xl:neumorphism navItem card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE] xl:col-span-1"
 					id="career">
 					<img src={OnlineResume} class="" alt="Career" />
 					<div class="card-body">
@@ -553,10 +574,10 @@
 					<!-- subgrid -->
 					<div class="card relative col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-base-100 xl:col-span-2">
 						<canvas class="block hidden md:grid" id="c"></canvas>
-						<div class="neumorphism-inset absolute h-full w-full"></div>
+						<div class="absolute h-full w-full"></div>
 					</div>
 					<div
-						class="neumorphism card relative col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE] xl:col-span-2">
+						class="card relative col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE] xl:col-span-2">
 						<div class="card-body z-20 grid grid-cols-1 content-start gap-x-8 space-y-4 xl:grid-cols-3">
 							<h3 class="col-span-1 xl:col-span-3">
 								Tech <span class="text-xl text-gray-500">({percentMonthsTech}%)</span>
@@ -577,7 +598,7 @@
 					</div>
 				</div>
 				<div
-					class="neumorphism card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE] xl:col-span-1">
+					class="card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE] xl:col-span-1">
 					<div class="card-body space-y-4">
 						<h3>Comms <span class="text-xl text-gray-500">({percentMonthsComms}%)</span></h3>
 						<div>
@@ -593,7 +614,7 @@
 				</div>
 				<div class="col-span-2 grid gap-7 xl:col-span-1">
 					<!-- subgrid -->
-					<div class="neumorphism card row-span-1 w-full rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE]">
+					<div class="card row-span-1 w-full rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE]">
 						<div class="card-body mb-4 grid content-center space-y-4">
 							<h3>Policy <span class="text-xl text-gray-500">({percentMonthsPolicy}%)<span></span></span></h3>
 							<div>
@@ -605,7 +626,7 @@
 						</div>
 					</div>
 					<div
-						class="neumorphism-inset card row-span-1 grid w-full content-center overflow-hidden rounded-5xl bg-gradient-to-tl from-[#FFF8F7] to-[#FFE2DE]">
+						class="xl:neumorphism-inset card row-span-1 grid w-full content-center overflow-hidden rounded-5xl bg-gradient-to-tl from-[#FFF8F7] to-[#FFE2DE]">
 						<div
 							class="p-0 pt-4"
 							style="background: url('/trees-tree-svgrepo-com.svg'); background-repeat: repeat-x; background-position: top">
@@ -622,16 +643,89 @@
 			</section>
 		</div>
 
-		<section
-			class="wrapper grid min-h-[40rem] content-center justify-items-center gap-y-10 px-4 lg:min-h-[50rem] xl:py-20">
+		<section class="wrapper grid content-center justify-items-center gap-y-10 px-4 py-20 lg:min-h-[50rem]">
 			<Intermission />
+		</section>
+		<section id="projects" class="navItem">
+			<div class="grid justify-items-center gap-y-20 bg-gray-50 pb-20 pt-20 lg:min-h-dvh lg:grid-cols-12">
+				<h2 class="pb-10 text-center lg:col-span-12 lg:pb-0">Here are a few I've done.</h2>
+
+				<figure class="self-center lg:col-span-3 lg:grid">
+					<a href="/projects/#apptitude"><enhanced:img src={apptitudeLogo} alt="Apptitude Logo"></enhanced:img></a>
+					<figcaption class="text-center italic">Tech-related upskilling</figcaption>
+				</figure>
+
+				<div class="hidden lg:col-span-6 lg:row-span-2 lg:flex">
+					<a href="/projects"><CodeTypingBro class="h-96 w-96 xl:h-[40rem] xl:w-[40rem]" /></a>
+				</div>
+
+				<figure class="space-y-2 self-center lg:col-span-3 lg:grid">
+					<a href="/projects/#appraize"
+						><h3 class="text-center font-sans text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
+					</a>
+					<figcaption class="text-center italic">Drop & drop ranking</figcaption>
+				</figure>
+
+				<figure class="content-center justify-items-center space-y-2 self-center lg:col-span-3 lg:grid">
+					<div class="avatar flex justify-center">
+						<div class="w-24 rounded-full lg:w-28">
+							<a href="/projects/#eatyourmeds"
+								><enhanced:img src={eatYourMedsLogo} alt="Eat Your Meds!"></enhanced:img>
+							</a>
+						</div>
+					</div>
+					<figcaption class="text-center italic">Medicine dose tracker</figcaption>
+				</figure>
+
+				<figure class="grid content-center justify-items-center space-y-2 self-center lg:col-span-3">
+					<a href="/projects/#rankamate"><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img></a>
+					<figcaption class="italic">Drag & drop ranking v0.1</figcaption>
+				</figure>
+
+				<div class="hidden lg:col-span-3 lg:grid"></div>
+
+				<div class="self-start lg:col-span-3 lg:-mt-4 lg:flex lg:items-center lg:justify-center">
+					<figure class="grid justify-items-center space-y-2">
+						<a href="/projects/#btonomics"
+							><h3 class="font-serif text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
+						</a>
+						<figcaption class="italic">Budget home renovation blog</figcaption>
+					</figure>
+				</div>
+				<div class="self-start lg:col-span-3 lg:-mt-4 lg:flex lg:items-center lg:justify-center">
+					<figure class="grid justify-items-center space-y-2">
+						<a href="/projects/#abbreviation"
+							><h3 class="font-sans text-4xl font-extrabold text-[#0069ff] lg:flex lg:text-6xl">
+								Abbreviati<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="1em"
+									height="1em"
+									class="-mx-[0.2em] inline"
+									viewBox="0 0 24 24"
+									><g fill="none"
+										><path
+											fill="#0069ff"
+											fill-opacity=".25"
+											fill-rule="evenodd"
+											d="M12 19a7 7 0 1 0 0-14a7 7 0 0 0 0 14M10.087 7.38A5 5 0 0 1 12 7a.5.5 0 0 0 0-1a6 6 0 0 0-6 6a.5.5 0 0 0 1 0a5 5 0 0 1 3.087-4.62"
+											clip-rule="evenodd" /><path stroke="#0069ff" stroke-linecap="round" d="M20.5 20.5L17 17" /><circle
+											cx="11"
+											cy="11"
+											r="8.5"
+											stroke="#0069ff" /></g
+									></svg
+								>n
+							</h3>
+						</a>
+						<figcaption class="italic">Abbreviation/acronym search</figcaption>
+					</figure>
+				</div>
+				<div class="hidden lg:col-span-3 lg:grid"></div>
+			</div>
 		</section>
 	</main>
 </div>
 
-<section id="projects" class="navItem">
-	<Portfolio />
-</section>
 <WebsiteFooter />
 <span class="drive-right"></span>
 
@@ -639,11 +733,11 @@
 	/* * {
 		border: red solid 1px;
 	} */
-	h1:not(.font-sans),
+	/* h1:not(.font-sans),
 	h2:not(.font-sans),
 	h3:not(.font-sans) {
 		font-family: 'IBM Plex Serif', serif;
-	}
+	} */
 
 	/* Orbit for courses */
 	.containerC {

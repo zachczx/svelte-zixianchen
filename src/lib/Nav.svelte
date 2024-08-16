@@ -9,12 +9,30 @@
 </script>
 
 <nav class="z-30 grid h-fit w-full grid-cols-2 justify-center px-4 lg:sticky lg:top-0 lg:grid-cols-3">
-	<div class="hidden items-center lg:flex lg:opacity-0">
+	<div class="navbar-start col-span-2 -mx-4 w-full xl:hidden">
+		<div class="dropdown">
+			<div tabindex="0" role="button" class="btn btn-circle btn-ghost">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+				</svg>
+			</div>
+			<ul tabindex="0" class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
+				<li><a href="/#about">About</a></li>
+				<li><a href="/#career">Career</a></li>
+				<li><a href="/#projects">Projects</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+		</div>
+		<span class="navLogo font-serif text-2xl font-extrabold text-base-content hover:drop-shadow"
+			><a href="/">Zixian Chen</a></span>
+	</div>
+
+	<div class="hidden items-center lg:opacity-0 xl:flex">
 		<span class="navLogo font-serif text-2xl font-extrabold text-base-content hover:drop-shadow"
 			><a href="/">Zixian Chen</a></span>
 	</div>
 	<div
-		class="navMenu hidden items-center justify-center rounded-b-6xl border-b border-b-gray-200 bg-gray-900/70 shadow backdrop-blur-md xl:flex xl:space-x-1 2xl:space-x-8">
+		class="navMenu hidden items-center justify-center rounded-b-3xl border-b border-b-gray-200 bg-gray-900/70 shadow backdrop-blur-md xl:flex xl:space-x-1 2xl:space-x-8">
 		<a
 			aria-current={navCurrent === 'about' ? 'page' : undefined}
 			id="navAbout"
@@ -45,7 +63,7 @@
 				? 'text-[#FF725E]'
 				: undefined}">Contact</a>
 	</div>
-	<div class="flex items-center justify-end space-x-6">
+	<div class="hidden items-center justify-end space-x-6 xl:flex">
 		<!-- jam icons -->
 		<!-- <a href="https://www.linkedin.com/in/zixianchen/"
 			><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-gray-600 lg:h-10 lg:w-10" viewBox="-2 -2 24 24"
@@ -78,7 +96,7 @@
 			onmousedown={addNeumorphismInset}
 			onmouseup={removeNeumorphismInset}
 			onkeyup={removeNeumorphismInset}
-			class="neumorphism flex h-10 w-10 items-center justify-center rounded-full bg-gray-900/70"
+			class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-900/70"
 			draggable="false">
 			<!-- flowbite:linkedin-solid -->
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
@@ -91,7 +109,7 @@
 		</a>
 		<a
 			href="https://github.com/zachczx?tab=repositories"
-			class="neumorphism flex h-10 w-10 items-center justify-center rounded-full bg-gray-900/70"
+			class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-900/70"
 			onkeydown={addNeumorphismInset}
 			onmousedown={addNeumorphismInset}
 			onmouseup={removeNeumorphismInset}
@@ -105,7 +123,7 @@
 		</a>
 		<a
 			href="/blog"
-			class="neumorphism flex h-10 w-10 items-center justify-center rounded-full bg-gray-900/70"
+			class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-900/70"
 			onkeydown={addNeumorphismInset}
 			onmousedown={addNeumorphismInset}
 			onmouseup={removeNeumorphismInset}
