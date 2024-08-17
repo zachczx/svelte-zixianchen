@@ -155,7 +155,7 @@
 	// });
 </script>
 
-<div id="abbreviation" class="scroll-container7 max-w-dvw background-abbreviation grid min-h-dvh py-10 lg:grid-cols-3">
+<div id="abbreviation" class="scroll-container7 max-w-dvw background-abbreviation grid min-h-dvh lg:grid-cols-3">
 	<div class="place-self-center">
 		<div class="flex justify-center">
 			<a href="https://abbreviation.zixian.dev"
@@ -181,21 +181,23 @@
 					>n
 				</h3></a>
 		</div>
-		<ExitLinks url="https://abbreviation.zixian.dev" className="fill-[#0069ff]" />
+		<ExitLinks url="https://abbreviation.zixian.dev" className="fill-[#0069ff]  shadow-md" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md">
 				<img src={Golang} class="h-10 scale-125" alt="Golang" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+			<div class="flex items-center justify-center rounded-3xl bg-gray-200/20 p-5 shadow-md backdrop-blur-md">
 				<img src={Htmx} class="h-8" alt="Htmx" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={TailwindSmall} class="h-10 grow" alt="Tailwind" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Sqlite} class="h-10 grow" alt="Sqlite" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+			<div class="flex items-center justify-center rounded-3xl bg-gray-200/20 p-5 shadow-md backdrop-blur-md">
 				<img src={Templ} class="h-8" alt="Templ" />
 			</div>
 		</div>
@@ -255,9 +257,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-span-3 -mt-[8rem] hidden xl:flex"><Abbreviation /></div>
+	<div class="col-span-3 -mt-[15rem] hidden xl:flex"><Abbreviation /></div>
 </div>
-<div id="appraize" class="scroll-container2 max-w-dvw background-appraize grid min-h-dvh py-10 lg:grid-cols-3">
+<div
+	id="appraize"
+	class="scroll-container2 max-w-dvw background-appraize grid min-h-dvh bg-[#491eff]/5 pt-10 lg:grid-cols-3">
 	<div class="place-self-center">
 		<a href="https://appraize.zixian.dev/"
 			><h3 class="text-center font-sans text-6xl font-black tracking-tighter text-[#491eff] lg:text-8xl">
@@ -268,22 +272,28 @@
 			github="https://github.com/zachczx/svelte-appraize"
 			className="fill-[#491eff]" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Sveltekit} class="h-10" alt="Sveltekit" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<enhanced:img src={Sortable} class="" alt="Sortable JS"></enhanced:img>
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<enhanced:img src={DrizzlePng} class="rounded-xl" alt="Drizzle"></enhanced:img>
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={TailwindSmall} class="h-10" alt="Tailwind" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Coolify} class="h-10" alt="Coolify" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Postgresql} class="h-10" alt="Postgres" />
 			</div>
 		</div>
@@ -327,26 +337,32 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-span-3 -mt-[8rem] hidden xl:flex"><Appraize /></div>
+	<div class="col-span-3 -mt-[12rem] hidden xl:flex"><Appraize /></div>
 </div>
 
-<div id="apptitude" class="scroll-container1 max-w-dvw background-apptitude grid min-h-dvh py-10 lg:grid-cols-3">
+<div
+	id="apptitude"
+	class="scroll-container1 max-w-dvw background-apptitude grid min-h-dvh bg-lime-400/10 pt-10 lg:grid-cols-3">
 	<div class="w-full content-center justify-self-center px-20">
 		<div class="flex justify-center">
 			<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class=""></enhanced:img></a>
 		</div>
 		<ExitLinks url="https://titude.app/" github="https://github.com/zachczx/apptitude" className="fill-lime-400" />
 		<div class="mx-10 mt-10 hidden flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Sveltekit} class="h-10" alt="Sveltekit" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={TailwindSmall} class="h-10 grow" alt="Tailwind" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Greensock} class="h-10" alt="Gsap" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Pagefind} class="h-10" alt="Pagefind" />
 			</div>
 		</div>
@@ -389,7 +405,9 @@
 	<div class="col-span-3 -mt-[4rem] hidden xl:flex"><Apptitude /></div>
 </div>
 
-<div id="btonomics" class="scroll-container6 max-w-dvw background-btonomics grid min-h-dvh py-10 lg:grid-cols-3">
+<div
+	id="btonomics"
+	class="scroll-container6 max-w-dvw background-btonomics grid min-h-dvh bg-[#38bdf8]/10 pt-10 lg:grid-cols-3">
 	<!-- <style="background: linear-gradient(rgba(250,250,250,0.7), rgba(250,250,250,0.7)), url({shape}); background-size: cover;"> -->
 	<div class="place-self-center">
 		<div class="flex justify-center">
@@ -401,13 +419,15 @@
 			github="https://github.com/zachczx/astro-btonomics"
 			className="fill-[#38bdf8]" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Astro} class="h-10 scale-125" alt="Astro" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={TailwindSmall} class="h-10 grow" alt="Tailwind" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+			<div class="flex items-center justify-center rounded-3xl bg-gray-200/20 p-5 shadow-md backdrop-blur-md">
 				<img src={Pagefind} class="h-8" alt="Pagefind" />
 			</div>
 		</div>
@@ -448,7 +468,9 @@
 	<div class="col-span-3 -mt-[4rem] hidden xl:flex"><Btonomics /></div>
 </div>
 
-<div id="btonomics-old" class="scroll-container5 max-w-dvw background-btonomicsold grid min-h-dvh py-10 lg:grid-cols-3">
+<div
+	id="btonomics-old"
+	class="scroll-container5 max-w-dvw background-btonomicsold grid min-h-dvh bg-yellow-500/10 pt-10 lg:grid-cols-3">
 	<div class="place-self-center px-20">
 		<div class="flex justify-center">
 			<a href="https://old.btonomics.com"
@@ -456,16 +478,19 @@
 		</div>
 		<ExitLinks url="https://old.btonomics.com" className="fill-yellow-500" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Wordpress} class="h-10" alt="Wordpress" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+			<div class="flex items-center justify-center rounded-3xl bg-gray-200/20 p-5 shadow-md backdrop-blur-md">
 				<img src={Nginx} class="h-8" alt="Nginx" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Mysql} class="h-10" alt="MySQL" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Bunny} class="h-10" alt="BunnyCDN" />
 			</div>
 		</div>
@@ -513,7 +538,9 @@
 	<div class="col-span-3 -mt-[4rem] hidden xl:flex"><Btonomicsold /></div>
 </div>
 
-<div id="eatyourmeds" class="scroll-container4 max-w-dvw background-eatyourmeds grid min-h-dvh py-10 lg:grid-cols-3">
+<div
+	id="eatyourmeds"
+	class="scroll-container4 max-w-dvw background-eatyourmeds grid min-h-dvh bg-lime-700/10 pt-10 lg:grid-cols-3">
 	<div class="place-self-center px-20">
 		<div class="avatar flex justify-center">
 			<div class="w-56 rounded-full">
@@ -526,22 +553,26 @@
 			github="https://github.com/zachczx/django-eatyourmeds"
 			className="fill-lime-700" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Django} class="h-10" alt="Django" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+			<div class="flex items-center justify-center rounded-3xl bg-gray-200/20 p-5 shadow-md backdrop-blur-md">
 				<img src={Htmx} class="h-8" alt="Htmx" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+			<div class="flex items-center justify-center rounded-3xl bg-gray-200/20 p-5 shadow-md backdrop-blur-md">
 				<img src={Nginx} class="h-8" alt="Nginx" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Gunicorn} class="h-10" alt="Gunicorn" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Bootstrap} class="h-10" alt="Bootstrap" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Postgresql} class="h-10" alt="Postgres" />
 			</div>
 		</div>
@@ -578,7 +609,9 @@
 	<div class="col-span-3 -mt-[4rem] hidden xl:flex"><Eatyourmeds /></div>
 </div>
 
-<div id="rankamate" class="scroll-container3 max-w-dvw background-rankamate grid min-h-dvh py-10 lg:grid-cols-3">
+<div
+	id="rankamate"
+	class="scroll-container3 max-w-dvw background-rankamate grid min-h-dvh bg-red-800/10 pt-10 lg:grid-cols-3">
 	<div class="w-full place-self-center px-20">
 		<div class="flex content-center items-center justify-center">
 			<a href="https://rankamate.zixian.dev/"><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img></a>
@@ -588,25 +621,30 @@
 			github="https://github.com/zachczx/django-rankamate"
 			className="fill-red-800" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Django} class="h-10" alt="Django" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+			<div class="flex items-center justify-center rounded-3xl bg-gray-200/20 p-5 shadow-md backdrop-blur-md">
 				<img src={Htmx} class="h-8" alt="Htmx" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<enhanced:img src={Sortable} class="" alt="Sortable JS"></enhanced:img>
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl bg-gray-200/20 p-5">
+			<div class="flex items-center justify-center rounded-3xl bg-gray-200/20 p-5 shadow-md backdrop-blur-md">
 				<img src={Nginx} class="h-8" alt="Nginx" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Gunicorn} class="h-10" alt="Gunicorn" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Bootstrap} class="h-10" alt="Bootstrap" />
 			</div>
-			<div class="neumorphism flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={Postgresql} class="h-10" alt="Postgres" />
 			</div>
 		</div>

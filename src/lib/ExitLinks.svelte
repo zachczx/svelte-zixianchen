@@ -10,7 +10,7 @@
 	<!-- ci:external-link -->
 	<a
 		href={url}
-		class="neumorphism flex h-12 w-12 items-center justify-center rounded-full border border-white"
+		class="neumorphism-alt flex h-12 w-12 items-center justify-center rounded-full border border-white"
 		onkeydown={addNeumorphismInset}
 		onmousedown={addNeumorphismInset}
 		onmouseup={removeNeumorphismInset}
@@ -27,7 +27,7 @@
 	{#if github !== ''}
 		<a
 			href={github === '' || github === undefined ? '' : github}
-			class="neumorphism flex h-12 w-12 items-center justify-center rounded-full border border-white"
+			class="neumorphism-alt flex h-12 w-12 items-center justify-center rounded-full border border-white"
 			onkeydown={addNeumorphismInset}
 			onmousedown={addNeumorphismInset}
 			onmouseup={removeNeumorphismInset}

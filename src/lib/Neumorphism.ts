@@ -1,5 +1,5 @@
 const buttonPressed: string[] = ['neumorphism-inset', 'border-gray-200'];
-const buttonNormal: string[] = ['neumorphism', 'border-white'];
+const buttonNormal: string[] = ['neumorphism-alt', 'border-white'];
 
 /**
  * Insert neumorphism css class
