@@ -651,8 +651,9 @@
 				<h2 class="pb-10 text-center lg:col-span-12 lg:pb-0">Here are a few I've done.</h2>
 
 				<figure class="self-center lg:col-span-3 lg:grid">
-					<a href="/projects/#apptitude"><enhanced:img src={apptitudeLogo} alt="Apptitude Logo"></enhanced:img></a>
-					<figcaption class="text-center italic">Tech-related upskilling</figcaption>
+					<a href="/projects/#apptitude"
+						><enhanced:img src={apptitudeLogo} alt="Apptitude Logo"></enhanced:img>
+						<figcaption class="text-center italic">Tech-related upskilling</figcaption></a>
 				</figure>
 
 				<div class="hidden lg:col-span-6 lg:row-span-2 lg:flex">
@@ -660,10 +661,9 @@
 				</div>
 
 				<figure class="space-y-2 self-center lg:col-span-3 lg:grid">
-					<a href="/projects/#appraize"
-						><h3 class="text-center font-sans text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
-					</a>
-					<figcaption class="text-center italic">Drop & drop ranking</figcaption>
+					<a href="/projects/#appraize">
+						<h3 class="text-center font-sans text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
+						<figcaption class="text-center italic">Drop & drop ranking</figcaption></a>
 				</figure>
 
 				<figure class="content-center justify-items-center space-y-2 self-center lg:col-span-3 lg:grid">
@@ -678,8 +678,9 @@
 				</figure>
 
 				<figure class="grid content-center justify-items-center space-y-2 self-center lg:col-span-3">
-					<a href="/projects/#rankamate"><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img></a>
-					<figcaption class="italic">Drag & drop ranking v0.1</figcaption>
+					<a href="/projects/#rankamate" class="grid justify-items-center"
+						><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img>
+						<figcaption class="text-center italic">Drag & drop ranking v0.1</figcaption></a>
 				</figure>
 
 				<div class="hidden lg:col-span-3 lg:grid"></div>
@@ -688,8 +689,7 @@
 					<figure class="grid justify-items-center space-y-2">
 						<a href="/projects/#btonomics"
 							><h3 class="font-serif text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
-						</a>
-						<figcaption class="italic">Budget home renovation blog</figcaption>
+							<figcaption class="text-center italic">Budget home renovation blog</figcaption></a>
 					</figure>
 				</div>
 				<div class="self-start lg:col-span-3 lg:-mt-4 lg:flex lg:items-center lg:justify-center">
@@ -716,8 +716,7 @@
 									></svg
 								>n
 							</h3>
-						</a>
-						<figcaption class="italic">Abbreviation/acronym search</figcaption>
+							<figcaption class="text-center italic">Abbreviation/acronym search</figcaption></a>
 					</figure>
 				</div>
 				<div class="hidden lg:col-span-3 lg:grid"></div>

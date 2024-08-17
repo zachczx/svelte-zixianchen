@@ -209,7 +209,9 @@
 <div id="appraize" class="scroll-container2 max-w-dvw background-2 grid min-h-dvh py-10 lg:grid-cols-3">
 	<div class="place-self-center">
 		<a href="https://appraize.zixian.dev/"
-			><h3 class="text-center font-sans text-6xl font-black text-[#491eff] lg:text-8xl">Appraize</h3></a>
+			><h3 class="text-center font-sans text-6xl font-black tracking-tighter text-[#491eff] lg:text-8xl">
+				Appraize
+			</h3></a>
 		<ExitLinks
 			url="https://appraize.zixian.dev/"
 			github="https://github.com/zachczx/svelte-appraize"
@@ -545,7 +547,7 @@
 	<div class="place-self-center">
 		<div class="flex justify-center">
 			<a href="https://abbreviation.zixian.dev"
-				><h3 class="pb-4 pt-6 text-center font-sans text-5xl font-extrabold text-[#0069ff] lg:text-7xl">
+				><h3 class="pb-4 pt-6 text-center text-5xl font-bold tracking-tighter text-[#0069ff] lg:text-7xl">
 					Abbreviati<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="1em"
@@ -611,13 +613,12 @@
 				<ul class="ms-6 list-outside list-disc space-y-2 marker:text-[#0069ff]">
 					<li>A search engine and database of abbreviations & acronyms in Go.</li>
 					<li>Focused on being minimal, fast, and usable.</li>
-					<li>
-						Uses fuzzy matching (Jaro-Winkler) and Phonetic word indexing (Metaphone) on top of simple full-text search.
-					</li>
+					<li>Uses full-text search and fuzzy matching (Jaro-Winkler and Metaphone [Phonetic]).</li>
 					<li>
 						Experimented with other algorithms for matching — Levenshtein, Jaccard, Aho Corasick, Jaccard, Beider-Morse,
-						Soundex — but I didn't like the results they gave.
+						Soundex. Results were meh though.
 					</li>
+					<li>Implemented backend admin features for identifying duplicate entries.</li>
 					<li>
 						It was interesting learning stuff on Go, Docker, Makefile, Templ and dev toolchain (Air, Tailwind, Esbuild,
 						Prettier).
@@ -649,11 +650,11 @@
 		border: red solid 1px;
 	} */
 
-	h1:not(.font-sans),
+	/* h1:not(.font-sans),
 	h2:not(.font-sans),
 	h3:not(.font-sans) {
 		font-family: 'IBM Plex Serif', serif;
-	}
+	} */
 
 	/* .scroll-container1,
 	.scroll-container2,
