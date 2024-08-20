@@ -257,7 +257,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-span-3 -mt-[15rem] hidden xl:flex"><Abbreviation /></div>
+	<div class="col-span-3 -mt-[12rem] hidden xl:flex"><Abbreviation /></div>
 </div>
 <div
 	id="appraize"
