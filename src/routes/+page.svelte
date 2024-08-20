@@ -539,20 +539,13 @@
 							doesn't get good outcomes in a cost effective way.
 						</p>
 					</div>
-					<div class="space-y-6 rounded-6xl">
-						<h3>Blank Space</h3>
-						<p>
-							There's no fourth point, but for the sake of balance ChatGPT's writing more. This is an ostensibly verbose
-							sentence, meticulously crafted to occupy space while eschewing any substantive content.
-						</p>
-					</div>
 				</div>
 			</div>
 		</section>
 
-		<div class="wrapper bg-colored-pattern grid justify-items-center bg-gray-100 px-4 pb-10 lg:py-28">
+		<div class="wrapper bg-colored-pattern grid justify-items-center bg-gray-100 px-4">
 			<!-- color scheme https://convertingcolors.com/hex-color-FF725E.html -->
-			<section class="grid max-w-screen-2xl auto-cols-fr auto-rows-auto gap-7 xl:grid-cols-4">
+			<section class="grid max-w-screen-2xl auto-cols-fr auto-rows-auto gap-7 pb-10 lg:py-28 xl:grid-cols-4">
 				<div
 					class="navItem card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE] xl:col-span-1"
 					id="career">
@@ -641,11 +634,11 @@
 					</div>
 				</div>
 			</section>
-		</div>
 
-		<section class="wrapper grid content-center justify-items-center gap-y-10 px-4 py-20 lg:min-h-[50rem]">
-			<Intermission />
-		</section>
+			<section class="wrapper grid content-center justify-items-center gap-y-10 px-4 py-20 lg:min-h-[50rem]">
+				<Intermission />
+			</section>
+		</div>
 		<section id="projects" class="navItem">
 			<div class="grid justify-items-center gap-y-20 bg-gray-50 pb-20 pt-20 lg:min-h-dvh lg:grid-cols-12">
 				<h2 class="pb-10 text-center lg:col-span-12 lg:pb-0">Here are a few I've done.</h2>
