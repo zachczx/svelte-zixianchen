@@ -543,7 +543,7 @@
 			</div>
 		</section>
 
-		<div class="wrapper bg-colored-pattern grid justify-items-center bg-gray-100 px-4">
+		<div class="wrapper bg-colored-pattern grid justify-items-center bg-gray-100 px-4 py-4">
 			<!-- color scheme https://convertingcolors.com/hex-color-FF725E.html -->
 			<section class="grid max-w-screen-2xl auto-cols-fr auto-rows-auto gap-7 pb-10 lg:py-28 xl:grid-cols-4">
 				<div
@@ -644,9 +644,11 @@
 				<h2 class="pb-10 text-center lg:col-span-12 lg:pb-0">Here are a few I've done.</h2>
 
 				<figure class="self-center lg:col-span-3 lg:grid">
-					<a href="/projects/#apptitude"
-						><enhanced:img src={apptitudeLogo} alt="Apptitude Logo"></enhanced:img>
-						<figcaption class="text-center italic">Tech-related upskilling</figcaption></a>
+					<figcaption>
+						<a href="/projects/#apptitude"
+							><enhanced:img src={apptitudeLogo} alt="Apptitude Logo"></enhanced:img>
+							<div class="text-center italic">Tech-related upskilling</div></a>
+					</figcaption>
 				</figure>
 
 				<div class="hidden lg:col-span-6 lg:row-span-2 lg:flex">
@@ -654,9 +656,11 @@
 				</div>
 
 				<figure class="space-y-2 self-center lg:col-span-3 lg:grid">
-					<a href="/projects/#appraize">
-						<h3 class="text-center font-sans text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
-						<figcaption class="text-center italic">Drop & drop ranking</figcaption></a>
+					<figcaption class="text-center">
+						<a href="/projects/#appraize">
+							<h3 class="font-sans text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
+							<div class="italic">Drop & drop ranking</div></a>
+					</figcaption>
 				</figure>
 
 				<figure class="content-center justify-items-center space-y-2 self-center lg:col-span-3 lg:grid">
@@ -671,45 +675,52 @@
 				</figure>
 
 				<figure class="grid content-center justify-items-center space-y-2 self-center lg:col-span-3">
-					<a href="/projects/#rankamate" class="grid justify-items-center"
-						><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img>
-						<figcaption class="text-center italic">Drag & drop ranking v0.1</figcaption></a>
+					<figcaption class="text-center">
+						<a href="/projects/#rankamate" class="grid justify-items-center"
+							><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img>
+							<div class="italic">Drag & drop ranking v0.1</div>
+						</a>
+					</figcaption>
 				</figure>
 
 				<div class="hidden lg:col-span-3 lg:grid"></div>
 
 				<div class="self-start lg:col-span-3 lg:-mt-4 lg:flex lg:items-center lg:justify-center">
 					<figure class="grid justify-items-center space-y-2">
-						<a href="/projects/#btonomics"
-							><h3 class="font-serif text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
-							<figcaption class="text-center italic">Budget home renovation blog</figcaption></a>
+						<figcaption class="text-center">
+							<a href="/projects/#btonomics"
+								><h3 class="font-serif text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
+								<div class="text-center italic">Budget home renovation blog</div></a>
+						</figcaption>
 					</figure>
 				</div>
 				<div class="self-start lg:col-span-3 lg:-mt-4 lg:flex lg:items-center lg:justify-center">
 					<figure class="grid justify-items-center space-y-2">
-						<a href="/projects/#abbreviation"
-							><h3 class="font-sans text-4xl font-extrabold text-[#0069ff] lg:flex lg:text-6xl">
-								Abbreviati<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="1em"
-									height="1em"
-									class="-mx-[0.2em] inline"
-									viewBox="0 0 24 24"
-									><g fill="none"
-										><path
-											fill="#0069ff"
-											fill-opacity=".25"
-											fill-rule="evenodd"
-											d="M12 19a7 7 0 1 0 0-14a7 7 0 0 0 0 14M10.087 7.38A5 5 0 0 1 12 7a.5.5 0 0 0 0-1a6 6 0 0 0-6 6a.5.5 0 0 0 1 0a5 5 0 0 1 3.087-4.62"
-											clip-rule="evenodd" /><path stroke="#0069ff" stroke-linecap="round" d="M20.5 20.5L17 17" /><circle
-											cx="11"
-											cy="11"
-											r="8.5"
-											stroke="#0069ff" /></g
-									></svg
-								>n
-							</h3>
-							<figcaption class="text-center italic">Abbreviation/acronym search</figcaption></a>
+						<figcaption class="text-center">
+							<a href="/projects/#abbreviation"
+								><h3 class="font-sans text-4xl font-extrabold text-[#0069ff] lg:flex lg:text-6xl">
+									Abbreviati<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="1em"
+										height="1em"
+										class="-mx-[0.2em] inline"
+										viewBox="0 0 24 24"
+										><g fill="none"
+											><path
+												fill="#0069ff"
+												fill-opacity=".25"
+												fill-rule="evenodd"
+												d="M12 19a7 7 0 1 0 0-14a7 7 0 0 0 0 14M10.087 7.38A5 5 0 0 1 12 7a.5.5 0 0 0 0-1a6 6 0 0 0-6 6a.5.5 0 0 0 1 0a5 5 0 0 1 3.087-4.62"
+												clip-rule="evenodd" /><path
+												stroke="#0069ff"
+												stroke-linecap="round"
+												d="M20.5 20.5L17 17" /><circle cx="11" cy="11" r="8.5" stroke="#0069ff" /></g
+										></svg
+									>n
+								</h3>
+								<div class="italic">Abbreviation/acronym search</div>
+							</a>
+						</figcaption>
 					</figure>
 				</div>
 				<div class="hidden lg:col-span-3 lg:grid"></div>
