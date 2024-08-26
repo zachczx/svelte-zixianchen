@@ -202,7 +202,7 @@
 			</div>
 		</div>
 	</div>
-	<StackUsed framework="Go, Sqlite" library="HTMX, Templ, Tailwind" host="" className="lg:hidden" />
+	<StackUsed framework="Go, SQLite" library="HTMX, Templ, Tailwind" host="" className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="grid max-h-[1000px] content-start gap-10 lg:grid-cols-2 xl:max-w-[1600px]">
 			<div
