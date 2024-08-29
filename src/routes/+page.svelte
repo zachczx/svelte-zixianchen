@@ -519,16 +519,16 @@
 					<div class="space-y-6 rounded-6xl">
 						<h3>Opportunities, Gaps</h3>
 						<p>
-							I get to spot opportunities and gaps in systems, ideas and processes. I'm no genius - I often just apply
-							things I gleaned from what product leaders, engineers, tech influencers put out online.
+							I spot opportunities and gaps in systems, ideas and processes. I'm no genius - I often just apply things I
+							gleaned from what product leaders, engineers, tech influencers put out online.
 						</p>
 						<p>I have Hacker News, Reddit, daily.dev, and Youtube to thank.</p>
 					</div>
 					<div class="space-y-6 rounded-6xl">
 						<h3>Know What It Takes</h3>
 						<p>
-							I more deeply understand technical complexities, trade-offs, best practices, and a reasonable "definition
-							of done".
+							Because I do some dev work, I better understand technical complexities, trade-offs, best practices, and a
+							reasonable "definition of done".
 						</p>
 						<p>Much of it I owe to the collective wisdom of open-source communities to tackle intricate challenges.</p>
 					</div>
