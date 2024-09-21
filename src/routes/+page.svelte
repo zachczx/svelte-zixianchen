@@ -344,7 +344,7 @@
 				<span>I'm a public servant trying to close gaps between policy, business, tech.</span>
 			</h2>
 		</section>
-		<section class="bg-colored-pattern grid justify-items-center bg-[#E9ECEF] px-4 2xl:w-dvw">
+		<section class="grid justify-items-center bg-[#E9ECEF] px-4 2xl:w-dvw">
 			<div class="grid auto-cols-fr auto-rows-auto gap-7 py-10 lg:py-28 xl:grid-cols-4 2xl:max-w-screen-2xl">
 				<div
 					class="navItem card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200 xl:col-span-3"
@@ -508,42 +508,40 @@
 			</div>
 		</section>
 
-		<section
-			class="relative grid min-h-[30rem] w-auto content-center justify-items-center gap-y-10 overflow-hidden bg-gray-100 px-4 py-10 lg:min-h-[70rem] lg:grid-cols-2">
-			<div class="content-center justify-self-center">
-				<img src={moneySvg} alt="$$$" class="w-[90vw] lg:w-[40vw]" />
-			</div>
-			<div class="space-y-20 self-center justify-self-center lg:ms-8 lg:mt-8 lg:max-w-[50vw] lg:p-10">
-				<h2>My web dev side projects help my work.</h2>
-				<div class="grid gap-4 lg:grid-cols-2 lg:gap-14">
-					<div class="space-y-6 rounded-6xl">
-						<h3>Opportunities, Gaps</h3>
-						<p>
-							I spot opportunities and gaps in systems, ideas and processes. I'm no genius - I often just apply things I
-							gleaned from what product leaders, engineers, tech influencers put out online.
-						</p>
-						<p>I have Hacker News, Reddit, daily.dev, and Youtube to thank.</p>
-					</div>
-					<div class="space-y-6 rounded-6xl">
-						<h3>Know What It Takes</h3>
-						<p>
-							Because I do some dev work, I better understand technical complexities, trade-offs, best practices, and a
-							reasonable "definition of done".
-						</p>
-						<p>Much of it I owe to the collective wisdom of open-source communities to tackle intricate challenges.</p>
-					</div>
-					<div class="space-y-6 rounded-6xl">
-						<h3>Cost Cynicism</h3>
-						<p>
-							I challenge cost estimates and estimating development timelines. We shouldn't be spending money if it
-							doesn't get good outcomes in a cost effective way.
-						</p>
+		<section class="grid justify-items-center bg-gray-100">
+			<div
+				class="relative grid min-h-[30rem] w-auto max-w-screen-2xl content-center justify-items-center gap-y-10 overflow-hidden px-4 py-10 lg:min-h-[70rem] lg:grid-cols-2">
+				<div class="content-center justify-self-center">
+					<img src={moneySvg} alt="$$$" class="w-[90vw] lg:w-[40rem]" />
+				</div>
+				<div class="space-y-20 self-center justify-self-center lg:ms-8 lg:mt-8 lg:max-w-[50vw] lg:p-10">
+					<h2>My side projects help my work.</h2>
+					<div class="grid gap-4 lg:grid-cols-1 lg:gap-14">
+						<div class="space-y-6 rounded-6xl">
+							<h3>Opportunities, Gaps</h3>
+							<p>
+								I spot opportunities and gaps in systems, ideas and processes. I'm no genius - I often just apply things
+								I gleaned from what product leaders, engineers, tech influencers put out online.
+							</p>
+							<p>I have Hacker News, Reddit, daily.dev, and Youtube to thank.</p>
+						</div>
+						<div class="space-y-6 rounded-6xl">
+							<h3>Know What It Takes</h3>
+							<p>
+								Because I do coding, I can understand technical complexities, trade-offs, best practices, and
+								"definition of done".
+							</p>
+						</div>
+						<div class="space-y-6 rounded-6xl">
+							<h3>Cost Scrutiny</h3>
+							<p>I challenge cost estimates and hidden assumptions. We shouldn't spend just because we can.</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<div class="wrapper bg-colored-pattern grid justify-items-center bg-gray-100 px-4 py-4">
+		<div class="wrapper grid justify-items-center bg-gray-100 px-4 py-4">
 			<!-- color scheme https://convertingcolors.com/hex-color-FF725E.html -->
 			<section class="grid max-w-screen-2xl auto-cols-fr auto-rows-auto gap-7 pb-10 lg:py-28 xl:grid-cols-4">
 				<div
@@ -634,98 +632,100 @@
 					</div>
 				</div>
 			</section>
-
-			<section class="wrapper grid content-center justify-items-center gap-y-10 px-4 py-20 lg:min-h-[50rem]">
+		</div>
+		<div class="bg-colored-pattern">
+			<section class="grid content-center justify-items-center gap-y-10 px-4 py-20 lg:min-h-[50rem]">
 				<Intermission />
 			</section>
-		</div>
-		<section id="projects" class="navItem">
-			<div class="grid justify-items-center gap-y-20 bg-gray-50 pb-20 pt-20 lg:min-h-dvh lg:grid-cols-12">
-				<h2 class="pb-10 text-center lg:col-span-12 lg:pb-0">Here are a few I've done.</h2>
 
-				<figure class="self-center lg:col-span-3 lg:grid">
-					<figcaption>
-						<a href="/projects/#apptitude"
-							><enhanced:img src={apptitudeLogo} alt="Apptitude Logo"></enhanced:img>
-							<div class="text-center italic">Tech-related upskilling</div></a>
-					</figcaption>
-				</figure>
+			<section id="projects" class="navItem">
+				<div class="grid justify-items-center gap-y-20 bg-gray-50 pb-20 pt-20 lg:min-h-dvh lg:grid-cols-12">
+					<h2 class="pb-10 text-center lg:col-span-12 lg:pb-0">Here are a few I've done.</h2>
 
-				<div class="hidden lg:col-span-6 lg:row-span-2 lg:flex">
-					<a href="/projects"><CodeTypingBro class="h-96 w-96 xl:h-[40rem] xl:w-[40rem]" /></a>
-				</div>
+					<figure class="self-center lg:col-span-3 lg:grid">
+						<figcaption>
+							<a href="/projects/#apptitude"
+								><enhanced:img src={apptitudeLogo} alt="Apptitude Logo"></enhanced:img>
+								<div class="text-center italic">Tech-related upskilling</div></a>
+						</figcaption>
+					</figure>
 
-				<figure class="space-y-2 self-center lg:col-span-3 lg:grid">
-					<figcaption class="text-center">
-						<a href="/projects/#appraize">
-							<h3 class="font-sans text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
-							<div class="italic">Drop & drop ranking</div></a>
-					</figcaption>
-				</figure>
-
-				<figure class="content-center justify-items-center space-y-2 self-center lg:col-span-3 lg:grid">
-					<div class="avatar flex justify-center">
-						<div class="w-24 rounded-full lg:w-28">
-							<a href="/projects/#eatyourmeds"
-								><enhanced:img src={eatYourMedsLogo} alt="Eat Your Meds!"></enhanced:img>
-							</a>
-						</div>
+					<div class="hidden lg:col-span-6 lg:row-span-2 lg:flex">
+						<a href="/projects"><CodeTypingBro class="h-96 w-96 xl:h-[40rem] xl:w-[40rem]" /></a>
 					</div>
-					<figcaption class="text-center italic">Medicine dose tracker</figcaption>
-				</figure>
 
-				<figure class="grid content-center justify-items-center space-y-2 self-center lg:col-span-3">
-					<figcaption class="text-center">
-						<a href="/projects/#rankamate" class="grid justify-items-center"
-							><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img>
-							<div class="italic">Drag & drop ranking v0.1</div>
-						</a>
-					</figcaption>
-				</figure>
-
-				<div class="hidden lg:col-span-3 lg:grid"></div>
-
-				<div class="self-start lg:col-span-3 lg:-mt-4 lg:flex lg:items-center lg:justify-center">
-					<figure class="grid justify-items-center space-y-2">
+					<figure class="space-y-2 self-center lg:col-span-3 lg:grid">
 						<figcaption class="text-center">
-							<a href="/projects/#btonomics"
-								><h3 class="font-serif text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
-								<div class="text-center italic">Budget home renovation blog</div></a>
+							<a href="/projects/#appraize">
+								<h3 class="font-sans text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
+								<div class="italic">Drop & drop ranking</div></a>
 						</figcaption>
 					</figure>
-				</div>
-				<div class="self-start lg:col-span-3 lg:-mt-4 lg:flex lg:items-center lg:justify-center">
-					<figure class="grid justify-items-center space-y-2">
+
+					<figure class="content-center justify-items-center space-y-2 self-center lg:col-span-3 lg:grid">
+						<div class="avatar flex justify-center">
+							<div class="w-24 rounded-full lg:w-28">
+								<a href="/projects/#eatyourmeds"
+									><enhanced:img src={eatYourMedsLogo} alt="Eat Your Meds!"></enhanced:img>
+								</a>
+							</div>
+						</div>
+						<figcaption class="text-center italic">Medicine dose tracker</figcaption>
+					</figure>
+
+					<figure class="grid content-center justify-items-center space-y-2 self-center lg:col-span-3">
 						<figcaption class="text-center">
-							<a href="/projects/#abbreviation"
-								><h3 class="font-sans text-4xl font-extrabold text-[#0069ff] lg:flex lg:text-6xl">
-									Abbreviati<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="1em"
-										height="1em"
-										class="-mx-[0.2em] inline"
-										viewBox="0 0 24 24"
-										><g fill="none"
-											><path
-												fill="#0069ff"
-												fill-opacity=".25"
-												fill-rule="evenodd"
-												d="M12 19a7 7 0 1 0 0-14a7 7 0 0 0 0 14M10.087 7.38A5 5 0 0 1 12 7a.5.5 0 0 0 0-1a6 6 0 0 0-6 6a.5.5 0 0 0 1 0a5 5 0 0 1 3.087-4.62"
-												clip-rule="evenodd" /><path
-												stroke="#0069ff"
-												stroke-linecap="round"
-												d="M20.5 20.5L17 17" /><circle cx="11" cy="11" r="8.5" stroke="#0069ff" /></g
-										></svg
-									>n
-								</h3>
-								<div class="italic">Abbreviation/acronym search</div>
+							<a href="/projects/#rankamate" class="grid justify-items-center"
+								><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img>
+								<div class="italic">Drag & drop ranking v0.1</div>
 							</a>
 						</figcaption>
 					</figure>
+
+					<div class="hidden lg:col-span-3 lg:grid"></div>
+
+					<div class="self-start lg:col-span-3 lg:-mt-4 lg:flex lg:items-center lg:justify-center">
+						<figure class="grid justify-items-center space-y-2">
+							<figcaption class="text-center">
+								<a href="/projects/#btonomics"
+									><h3 class="font-serif text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
+									<div class="text-center italic">Budget home renovation blog</div></a>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="self-start lg:col-span-3 lg:-mt-4 lg:flex lg:items-center lg:justify-center">
+						<figure class="grid justify-items-center space-y-2">
+							<figcaption class="text-center">
+								<a href="/projects/#abbreviation"
+									><h3 class="font-sans text-4xl font-extrabold text-[#0069ff] lg:flex lg:text-6xl">
+										Abbreviati<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="1em"
+											height="1em"
+											class="-mx-[0.2em] inline"
+											viewBox="0 0 24 24"
+											><g fill="none"
+												><path
+													fill="#0069ff"
+													fill-opacity=".25"
+													fill-rule="evenodd"
+													d="M12 19a7 7 0 1 0 0-14a7 7 0 0 0 0 14M10.087 7.38A5 5 0 0 1 12 7a.5.5 0 0 0 0-1a6 6 0 0 0-6 6a.5.5 0 0 0 1 0a5 5 0 0 1 3.087-4.62"
+													clip-rule="evenodd" /><path
+													stroke="#0069ff"
+													stroke-linecap="round"
+													d="M20.5 20.5L17 17" /><circle cx="11" cy="11" r="8.5" stroke="#0069ff" /></g
+											></svg
+										>n
+									</h3>
+									<div class="italic">Abbreviation/acronym search</div>
+								</a>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="hidden lg:col-span-3 lg:grid"></div>
 				</div>
-				<div class="hidden lg:col-span-3 lg:grid"></div>
-			</div>
-		</section>
+			</section>
+		</div>
 	</main>
 </div>
 
