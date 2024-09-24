@@ -14,14 +14,25 @@ import {
 const mdsvexOptions = {
 	extensions: ['.md'],
 	highlight: {
-		highlighter: async (code, lang = 'text') => {
-			const html = escapeSvelte(
-				await codeToHtml(code, {
-					lang: 'js',
-					theme: 'github-dark-default',
-					transformers: [transformerNotationHighlight(), transformerNotationDiff(), transformerCompactLineOptions()],
-				}),
-			);
+		highlighter: async (code, lang) => {
+			let html;
+			if (lang === 'text') {
+				html = escapeSvelte(
+					await codeToHtml(code, {
+						lang: 'text',
+						theme: 'github-dark-default',
+						transformers: [transformerNotationHighlight(), transformerNotationDiff(), transformerCompactLineOptions()],
+					}),
+				);
+			} else {
+				html = escapeSvelte(
+					await codeToHtml(code, {
+						lang: 'js',
+						theme: 'github-dark-default',
+						transformers: [transformerNotationHighlight(), transformerNotationDiff(), transformerCompactLineOptions()],
+					}),
+				);
+			}
 			return `{@html \`${html}\` }`;
 		},
 	},
