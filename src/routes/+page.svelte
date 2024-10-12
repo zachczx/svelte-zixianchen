@@ -357,7 +357,7 @@
 						<div class="z-10 col-span-2 space-y-4 self-center xl:col-span-1">
 							<h3>About Me</h3>
 							<p>
-								I'm into <b>the web, computers, hardware, gadgets, sysadmin</b>.
+								I'm into <b>web dev, computers, devices, sysadmin</b>.
 							</p>
 							<p>I'll die on the hills of Windows, Ubuntu, Android.</p>
 							<p>Never used a Mac.</p>
