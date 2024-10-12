@@ -16,30 +16,30 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
-		"@shikijs/transformers": "^1.18.0",
+		"@shikijs/transformers": "^1.22.0",
 		"@sveltejs/adapter-auto": "^3.2.5",
-		"@sveltejs/adapter-cloudflare": "^4.7.2",
-		"@sveltejs/kit": "^2.5.28",
+		"@sveltejs/adapter-cloudflare": "^4.7.3",
+		"@sveltejs/kit": "^2.7.0",
 		"@sveltejs/vite-plugin-svelte": "4.0.0-next.6",
 		"@tailwindcss/typography": "^0.5.15",
 		"@types/eslint": "^9.6.1",
 		"autoprefixer": "^10.4.20",
-		"daisyui": "^4.12.10",
-		"eslint": "^9.11.1",
+		"daisyui": "^4.12.13",
+		"eslint": "^9.12.0",
 		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-svelte": "^2.44.0",
+		"eslint-plugin-svelte": "^2.44.1",
 		"mdsvex": "^0.12.3",
 		"postcss": "^8.4.47",
 		"prettier": "^3.3.3",
-		"prettier-plugin-svelte": "^3.2.6",
-		"prettier-plugin-tailwindcss": "^0.6.6",
+		"prettier-plugin-svelte": "^3.2.7",
+		"prettier-plugin-tailwindcss": "^0.6.8",
 		"rollup-plugin-visualizer": "^5.12.0",
 		"super-sitemap": "^0.15.1",
-		"svelte": "5.0.0-next.258",
+		"svelte": "5.0.0-next.264",
 		"svelte-check": "^3.8.6",
 		"tailwindcss": "^3.4.13",
-		"typescript": "^5.6.2",
-		"vite": "^5.4.7"
+		"typescript": "^5.6.3",
+		"vite": "^5.4.8"
 	},
 	"overrides": {
 		"super-sitemap": {
@@ -55,8 +55,8 @@
 		"@fontsource/lora": "^5.1.0",
 		"@poppanator/sveltekit-svg": "5.0.0-svelte5.5",
 		"@sveltejs/adapter-static": "^3.0.5",
-		"@sveltejs/enhanced-img": "^0.3.8",
+		"@sveltejs/enhanced-img": "^0.3.9",
 		"gsap": "^3.12.5",
-		"shiki": "^1.18.0"
+		"shiki": "^1.22.0"
 	}
 }
