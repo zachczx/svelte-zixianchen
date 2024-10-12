@@ -61,7 +61,7 @@ But it's 2024, things don't work that way anymore. I dug around and found Brevo,
 
 Unfortunately it looks like Brevo’s use of shared IP just gets my emails flagged out as suspicious – Gmail labels it “This message seems dangerous”. This is almost certainly because their algorithm looks out for emails where the sender IP is different from the domain name being used.
 
-![Feels bad man](/src/lib/assets/blog/suspicious-screenshot.webp)_Feels bad seeing my emails flagged out as dangerous._
+![Feels bad man](/suspicious-screenshot.webp)_Feels bad seeing my emails flagged out as dangerous._
 
 ## Minor mistake during testing - Don't make it too
 
