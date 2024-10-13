@@ -12,4 +12,4 @@ published: true
 slug: using-brevo-pocketbase-send-emails
 ---
 
-I rewrote the post to change my recommendation to Resend.com - [refer to that post instead](/blog/using-resend-pocketbase-send-emails).
+I rewrote the post to change my recommendation to Resend.com - [refer to that post instead](https://zixianchen.com/blog/using-resend-pocketbase-send-emails).
