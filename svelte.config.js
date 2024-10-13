@@ -47,6 +47,9 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 		}),
+		prerender: {
+			entries: ['*', '/blog/using-brevo-pocketbase-send-emails'], //for previous entry
+		},
 	},
 	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
 };

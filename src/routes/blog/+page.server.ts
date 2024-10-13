@@ -8,10 +8,10 @@ export async function load() {
 		const file = paths[path];
 		const slug = path.split('/').at(-1)?.replace('.md', '');
 
-		// // Hide specific posts
-		// if (slug === 'using-brevo-pocketbase-send-emails') {
-		// 	continue;
-		// }
+		// Hide specific posts
+		if (slug === 'using-brevo-pocketbase-send-emails') {
+			continue;
+		}
 
 		console.log(slug);
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {

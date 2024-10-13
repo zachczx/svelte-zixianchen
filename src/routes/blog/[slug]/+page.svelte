@@ -17,7 +17,7 @@
 	{/if}
 </div>
 <article
-	class="prose mt-6 w-screen px-3 prose-a:font-semibold prose-a:text-orange-600 prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:text-orange-400 prose-blockquote:my-8 prose-blockquote:ms-8 prose-code:font-['Fira_Code_Variable'] prose-pre:p-0 sm:px-6 md:max-w-none lg:mt-10 lg:w-[1024px]">
+	class="prose mt-6 w-screen px-3 prose-a:font-semibold prose-a:text-orange-600 prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:text-orange-400 prose-blockquote:my-8 prose-blockquote:ms-8 prose-code:font-['Fira_Code_Variable'] prose-pre:p-0 sm:px-6 md:max-w-none lg:mt-10 xl:w-[1024px]">
 	<svelte:component this={data.content} />
 </article>
 <div class="px-3 pt-10 text-gray-600 sm:px-6 lg:pt-20">
