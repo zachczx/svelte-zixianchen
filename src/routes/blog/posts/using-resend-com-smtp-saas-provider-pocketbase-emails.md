@@ -20,7 +20,7 @@ I'm old enough to remember the Wild West days of using PHP's mail() function or 
 
 ## Using Resend.com
 
-But it's 2024, things don't work that way anymore. I dug around and found Resend.com (and there were others like Brevo, which I'll come to in a minute), though any SMTP SaaS provider would work equally (or even better, given that I'm on a shared IP.)
+But it's 2024, things don't work that way anymore. I dug around and found Resend.com (and there were others like Brevo and SendGrid, which I'll come to in a minute), though any SMTP SaaS provider would work equally (or even better, given that I'm on a shared IP.)
 
 1. Create an account on [Resend.com](https://resend.com/)
 
