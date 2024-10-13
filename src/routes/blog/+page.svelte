@@ -8,7 +8,7 @@
 	<meta name="description" content="Zixian's blog on web dev, javascript, or random stuff." />
 </svelte:head>
 
-<div class="space-y-8">
+<main class="space-y-8">
 	{#each data.posts as post}
 		<div class="items-end border-2 border-neutral/30 px-4 py-2 lg:px-6 lg:py-4">
 			<h2 class="text-2xl font-bold text-orange-600 underline hover:text-orange-400">
@@ -20,4 +20,4 @@
 			</div>
 		</div>
 	{/each}
-</div>
+</main>
