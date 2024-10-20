@@ -207,7 +207,7 @@
 		<div class="grid max-h-[1000px] content-start gap-10 lg:grid-cols-2 xl:max-w-[1600px]">
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
-				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">The Problem</h3>
+				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">Problem</h3>
 				<p>
 					People forget what acronyms and abbreviations mean. They then need to ask a colleague or pray that it shows up
 					in email archives.
@@ -307,7 +307,7 @@
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
-				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">The Problem</h3>
+				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Problem</h3>
 				<p>
 					How might we speed up ranking sessions, which need manual selection to form a numbered list "1, 2, 3..." on
 					Excel. Every change to the list required manual reordering.
@@ -372,7 +372,7 @@
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
-				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">The Problem</h3>
+				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">Problem</h3>
 				<p>
 					How might I help my non-technical teammates access to vast repositories of free-to-access knowledge to gain
 					tech-related competencies?
@@ -437,7 +437,7 @@
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
-				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">The Problem</h3>
+				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Problem</h3>
 				<p>Wordpress got too bulky and tiresome to manage and host.</p>
 			</div>
 			<div
@@ -500,7 +500,7 @@
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
-				<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">The Problem</h3>
+				<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">Problem</h3>
 				<p>
 					There was barely any info online to guide me through the renovation journey (choosing an ID/contractor,
 					deciding on a design, buying from Taobao).
@@ -582,7 +582,7 @@
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
-				<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">The Problem</h3>
+				<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">Problem</h3>
 				<p>How might I make it easier and shorter to plan medicine dose timings and get accurate info.</p>
 			</div>
 			<div
@@ -658,7 +658,7 @@
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
-				<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">The Problem</h3>
+				<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">Problem</h3>
 				<p>Rank-a-Mate was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.</p>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-red-800">
 					<li>
