@@ -24,12 +24,14 @@
 	import moneySvg from '$lib/svg/Manage money-cuate.svg?dataurl';
 
 	import CodeTypingBro from '$lib/svg/Code-typing-bro.svelte';
-	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=280';
+	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=310';
 	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=120';
 	import eatYourMedsLogo from '$lib/assets/eatyourmedslogo.webp?enhanced&w=250';
+	import btonomicsOldLogo from '$lib/assets/btonomics_logo-3-300x100.webp?enhanced&w=250';
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
 	///////////////////////////////////
 
 	let animate: string = $state('');
@@ -200,23 +202,24 @@
 			},
 		);
 
-		const svgTyping = document.getElementsByClassName('bubble');
 		/**
 		 * For the coding bros typing svg animations
 		 */
-		const svgTypingAnimation = gsap.timeline({ repeat: -1 });
-		svgTypingAnimation.to(svgTyping, {
-			stagger: { each: 0.2, from: 'random' },
-			duration: 0.5,
-			// ease: 'bounce.out',
-			scale: 1.4,
-		});
-		svgTypingAnimation.to(svgTyping, {
-			stagger: { each: 0.2, from: 'random' },
-			duration: 0.9,
-			// ease: 'bounce.out',
-			scale: 1,
-		});
+		// const svgTyping = document.getElementsByClassName('bubble');
+
+		// const svgTypingAnimation = gsap.timeline({ repeat: -1 });
+		// svgTypingAnimation.to(svgTyping, {
+		// 	stagger: { each: 0.2, from: 'random' },
+		// 	duration: 0.5,
+		// 	// ease: 'bounce.out',
+		// 	scale: 1.4,
+		// });
+		// svgTypingAnimation.to(svgTyping, {
+		// 	stagger: { each: 0.2, from: 'random' },
+		// 	duration: 0.9,
+		// 	// ease: 'bounce.out',
+		// 	scale: 1,
+		// });
 	});
 
 	/**
@@ -638,66 +641,20 @@
 				<Intermission />
 			</section>
 
-			<section id="projects" class="navItem">
-				<div class="grid justify-items-center gap-y-20 bg-gray-50 pb-20 pt-20 lg:min-h-dvh lg:grid-cols-12">
-					<h2 class="pb-10 text-center lg:col-span-12 lg:pb-0">Here are a few I've done.</h2>
-
-					<figure class="self-center lg:col-span-3 lg:grid">
-						<figcaption>
-							<a href="/projects/#apptitude"
-								><enhanced:img src={apptitudeLogo} alt="Apptitude Logo"></enhanced:img>
-								<div class="text-center italic">Tech-related upskilling</div></a>
-						</figcaption>
-					</figure>
-
-					<div class="hidden lg:col-span-6 lg:row-span-2 lg:flex">
-						<a href="/projects"><CodeTypingBro class="h-96 w-96 xl:h-[40rem] xl:w-[40rem]" /></a>
-					</div>
-
-					<figure class="space-y-2 self-center lg:col-span-3 lg:grid">
-						<figcaption class="text-center">
-							<a href="/projects/#appraize">
-								<h3 class="font-sans text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
-								<div class="italic">Drop & drop ranking</div></a>
-						</figcaption>
-					</figure>
-
-					<figure class="content-center justify-items-center space-y-2 self-center lg:col-span-3 lg:grid">
-						<div class="avatar flex justify-center">
-							<div class="w-24 rounded-full lg:w-28">
-								<a href="/projects/#eatyourmeds"
-									><enhanced:img src={eatYourMedsLogo} alt="Eat Your Meds!"></enhanced:img>
-								</a>
-							</div>
-						</div>
-						<figcaption class="text-center italic">Medicine dose tracker</figcaption>
-					</figure>
-
-					<figure class="grid content-center justify-items-center space-y-2 self-center lg:col-span-3">
-						<figcaption class="text-center">
-							<a href="/projects/#rankamate" class="grid justify-items-center"
-								><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img>
-								<div class="italic">Drag & drop ranking v0.1</div>
-							</a>
-						</figcaption>
-					</figure>
-
-					<div class="hidden lg:col-span-3 lg:grid"></div>
-
-					<div class="self-start lg:col-span-3 lg:-mt-4 lg:flex lg:items-center lg:justify-center">
-						<figure class="grid justify-items-center space-y-2">
-							<figcaption class="text-center">
-								<a href="/projects/#btonomics"
-									><h3 class="font-serif text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
-									<div class="text-center italic">Budget home renovation blog</div></a>
-							</figcaption>
-						</figure>
-					</div>
-					<div class="self-start lg:col-span-3 lg:-mt-4 lg:flex lg:items-center lg:justify-center">
-						<figure class="grid justify-items-center space-y-2">
+			<section id="projects" class="navItem grid justify-items-center bg-gray-50">
+				<div
+					class="grid max-w-[1600px] content-center justify-items-center gap-y-20 pb-20 pt-20 lg:min-h-dvh lg:grid-cols-3">
+					<h2 class="mb-20 text-center lg:col-span-3 lg:pb-0">
+						These are my projects to solve personal and work pain points.
+					</h2>
+					<!-- <div class="hidden lg:col-span-3 lg:flex">
+						<a href="/projects"><CodeTypingBro class="h-96 w-96 xl:h-[25rem] xl:w-[25rem]" /></a>
+					</div> -->
+					<div class="lg:flex lg:items-center lg:justify-center">
+						<figure class="grid content-center justify-items-center space-y-2">
 							<figcaption class="text-center">
 								<a href="/projects/#abbreviation"
-									><h3 class="font-sans text-4xl font-extrabold text-[#0069ff] lg:flex lg:text-6xl">
+									><h3 class="pb-1 font-sans text-4xl font-extrabold text-[#0069ff] lg:flex lg:text-6xl">
 										Abbreviati<svg
 											xmlns="http://www.w3.org/2000/svg"
 											width="1em"
@@ -722,7 +679,89 @@
 							</figcaption>
 						</figure>
 					</div>
-					<div class="hidden lg:col-span-3 lg:grid"></div>
+
+					<figure class="grid content-center space-y-2 self-center">
+						<figcaption class="text-center">
+							<a href="/projects/#appraize">
+								<h3 class="pb-2 font-sans text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
+								<div class="italic">Drop & drop ranking</div></a>
+						</figcaption>
+					</figure>
+
+					<figure class="lg:grid">
+						<figcaption>
+							<a href="/projects/#apptitude"
+								><enhanced:img src={apptitudeLogo} alt="Apptitude Logo"></enhanced:img>
+								<div class="text-center italic">Tech-related upskilling</div></a>
+						</figcaption>
+					</figure>
+
+					<a href="/projects/#cancelninja" class="group inline-block"
+						><h3 class="text-4xl font-extrabold tracking-tighter text-base-content lg:text-5xl">
+							Cancel Ninj<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="1em"
+								height="1em"
+								class="-ms-1 inline rotate-45 group-hover:text-[#3b82f6]"
+								viewBox="0 0 512 512"
+								><path
+									fill="currentColor"
+									d="m395.13 313l89.869-100.857H388.08c-45.748 0-82.824-37.063-82.824-82.824l-.297-33.208l-100.857-77.147v96.917c0 45.751-37.06 82.824-82.822 82.824l-9.844.298L27.001 299.86h96.92c45.75 0 82.822 37.062 82.822 82.824l.298 20.484l100.854 89.868v-96.913c0-45.749 37.062-82.823 82.824-82.823zM256 306.669c-27.99 0-50.666-22.685-50.666-50.665c0-27.99 22.679-50.671 50.665-50.671c27.99 0 50.67 22.682 50.67 50.671c0 27.98-22.683 50.665-50.67 50.665z" /></svg>
+						</h3>
+						<div class="text-center italic">SaaS & Dark Pattern tracker</div>
+					</a>
+
+					<div class="lg:flex lg:items-center lg:justify-center">
+						<figure class="grid justify-items-center space-y-2">
+							<figcaption class="text-center">
+								<a href="/projects/#btonomics"
+									><h3 class="pb-1 font-serif text-4xl font-bold text-[#38bdf8] lg:flex lg:text-6xl">BTOnomics</h3>
+									<div class="text-center italic">Home renovation blog for budget folks</div></a>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+
+				<div class="grid content-center justify-items-center gap-y-20 bg-gray-50 pb-20 lg:grid-cols-3">
+					<h2 class="mb-20 text-center lg:col-span-3 lg:pb-0">And projects of the past.</h2>
+
+					<div class="grid w-full max-w-[1600px] gap-20 lg:col-span-3 lg:grid-cols-3">
+						<figure class="content-center justify-items-center space-y-2 self-center lg:grid">
+							<div class="avatar flex justify-center">
+								<div class="w-24 rounded-full lg:w-28">
+									<a href="/projects/#eatyourmeds " class="group"
+										><enhanced:img
+											src={eatYourMedsLogo}
+											alt="Eat Your Meds!"
+											class="saturate-[0.2] group-hover:saturate-100"></enhanced:img>
+									</a>
+								</div>
+							</div>
+							<figcaption class="text-center italic">Medicine dose tracker</figcaption>
+						</figure>
+
+						<figure class="grid content-center justify-items-center space-y-2 self-center">
+							<figcaption class="text-center">
+								<a href="/projects/#rankamate" class="group grid justify-items-center"
+									><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class=" saturate-[0.2] group-hover:saturate-100"
+									></enhanced:img>
+									<div class="italic">Drag & drop ranking v0.1</div>
+								</a>
+							</figcaption>
+						</figure>
+
+						<figure class="grid content-center justify-items-center space-y-2 self-center">
+							<figcaption class="text-center">
+								<a href="/projects/#btonomics-old" class="group grid justify-items-center"
+									><enhanced:img
+										src={btonomicsOldLogo}
+										alt="BTOnomics on Wordpress"
+										class="mb-2 saturate-[0.2] group-hover:saturate-100"></enhanced:img>
+									<div class="italic">Original BTOnomics on Wordpress</div>
+								</a>
+							</figcaption>
+						</figure>
+					</div>
 				</div>
 			</section>
 		</div>

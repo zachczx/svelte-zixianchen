@@ -33,6 +33,7 @@
 	import Astro from '$lib/logos/Astro.svg?dataurl';
 	import CloudflarePages from '$lib/logos/Cloudflare-pages.svg?dataurl';
 	import Pagefind from '$lib/logos/Pagefind.svg?dataurl';
+	import Pocketbase from '$lib/logos/pocketbase.svg?dataurl';
 
 	import ExitLinks from '$lib/ExitLinks.svelte';
 	import Golang from '$lib/logos/Golang.svg?dataurl';
@@ -45,6 +46,7 @@
 	import Btonomicsold from '$lib/waves/Btonomicsold.svelte';
 	import Eatyourmeds from '$lib/waves/Eatyourmeds.svelte';
 	import Rankamate from '$lib/waves/Rankamate.svelte';
+	import Cancelninja from '$lib/waves/Cancelninja.svelte';
 
 	// onMount(() => {
 	// let segments = gsap.utils.toArray('.scroll-content');
@@ -259,6 +261,7 @@
 	</div>
 	<div class="col-span-3 -mt-[12rem] hidden xl:flex"><Abbreviation /></div>
 </div>
+
 <div
 	id="appraize"
 	class="scroll-container2 max-w-dvw background-appraize grid min-h-dvh bg-[#491eff]/5 pt-10 lg:grid-cols-3">
@@ -403,6 +406,73 @@
 		</div>
 	</div>
 	<div class="col-span-3 -mt-[4rem] hidden xl:flex"><Apptitude /></div>
+</div>
+
+<div
+	id="cancelninja"
+	class="scroll-container4 max-w-dvw background-eatyourmeds grid min-h-dvh bg-sky-500/10 pt-10 lg:grid-cols-3">
+	<div class="place-self-center px-20 text-center">
+		<a href="/projects/#cancelninja" class="group inline-block">
+			<h3 class="text-5xl font-extrabold tracking-tighter text-base-content lg:text-7xl">
+				Cancel Ninj<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="1em"
+					height="1em"
+					class="-ms-1 inline rotate-45 group-hover:text-[#3b82f6]"
+					viewBox="0 0 512 512"
+					><path
+						fill="currentColor"
+						d="m395.13 313l89.869-100.857H388.08c-45.748 0-82.824-37.063-82.824-82.824l-.297-33.208l-100.857-77.147v96.917c0 45.751-37.06 82.824-82.822 82.824l-9.844.298L27.001 299.86h96.92c45.75 0 82.822 37.062 82.822 82.824l.298 20.484l100.854 89.868v-96.913c0-45.749 37.062-82.823 82.824-82.823zM256 306.669c-27.99 0-50.666-22.685-50.666-50.665c0-27.99 22.679-50.671 50.665-50.671c27.99 0 50.67 22.682 50.67 50.671c0 27.98-22.683 50.665-50.67 50.665z" /></svg>
+			</h3>
+		</a>
+		<ExitLinks url="https://cancelninja.com" className="fill-lime-700" />
+		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
+				<img src={Sveltekit} class="h-10" alt="Sveltekit" />
+			</div>
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
+				<img src={TailwindSmall} class="h-10" alt="Tailwind" />
+			</div>
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
+				<img src={Pocketbase} class="h-10" alt="Pocketbase" />
+			</div>
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
+				<img src={Coolify} class="h-10" alt="Coolify" />
+			</div>
+		</div>
+	</div>
+	<StackUsed framework="Sveltekit, Pocketbase" library="Tailwind" host="Coolify" className="lg:hidden" />
+	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
+		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+			<div
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-sky-500 decoration-8 underline-offset-4">Problem</h3>
+				<p>How might I stop getting tricked into paying for subscriptions I don't want.</p>
+			</div>
+			<div
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-sky-500 decoration-8 underline-offset-4">What I wanted</h3>
+				<p>Subscription tracker that alerts me about known dark patterns and companies' dirty tricks.</p>
+			</div>
+			<div
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-sky-500 decoration-8 underline-offset-4">What I built</h3>
+				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-sky-500">
+					<li>CRUD webapp, with authentication, user stuff, and calendar view.</li>
+				</ul>
+			</div>
+			<div
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-sky-500 decoration-8 underline-offset-4">Not yet done</h3>
+				<p>Probably OCR or natural language processing for greater automation.</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-span-3 -mt-[1rem] hidden xl:flex"><Cancelninja /></div>
 </div>
 
 <div
