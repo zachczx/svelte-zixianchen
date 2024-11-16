@@ -23,8 +23,6 @@
 
 <style>
 	:root {
-		/* font-family: 'Poppins', sans-serif; */
-		font-family: 'Open Sans Variable', sans-serif;
 		text-decoration-skip-ink: none;
 	}
 

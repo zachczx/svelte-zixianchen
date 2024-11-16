@@ -12,8 +12,9 @@ export default {
 			},
 		},
 		fontFamily: {
-			sans: ['Open Sans Variable'],
-			serif: ['IBM Plex Serif', 'Lora'],
+			sans: ['"Open Sans Variable"', 'sans-serif'],
+			serif: ['"IBM Plex Serif"', 'Lora'],
+			inter: ['"Inter"'],
 		},
 	},
 	daisyui: {
