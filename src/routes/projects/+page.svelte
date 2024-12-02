@@ -47,6 +47,8 @@
 	import Eatyourmeds from '$lib/waves/Eatyourmeds.svelte';
 	import Rankamate from '$lib/waves/Rankamate.svelte';
 	import Cancelninja from '$lib/waves/Cancelninja.svelte';
+	import Stytch from '$lib/logos/Stytch.svelte';
+	import Particles from '$lib/magic-ui/Particles.svelte';
 
 	// onMount(() => {
 	// let segments = gsap.utils.toArray('.scroll-content');
@@ -409,6 +411,69 @@
 </div>
 
 <div
+	id="btonomics"
+	class="scroll-container6 max-w-dvw background-btonomics grid min-h-dvh bg-[#38bdf8]/10 pt-10 lg:grid-cols-3">
+	<!-- <style="background: linear-gradient(rgba(250,250,250,0.7), rgba(250,250,250,0.7)), url({shape}); background-size: cover;"> -->
+	<div class="place-self-center">
+		<div class="flex justify-center">
+			<a href="https://btonomics.com"
+				><h3 class="pb-4 pt-6 text-center font-serif text-5xl font-bold text-[#38bdf8] lg:text-7xl">BTOnomics</h3></a>
+		</div>
+		<ExitLinks
+			url="https://btonomics.com"
+			github="https://github.com/zachczx/astro-btonomics"
+			className="fill-[#38bdf8]" />
+		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
+				<img src={Astro} class="h-10 scale-125" alt="Astro" />
+			</div>
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
+				<img src={TailwindSmall} class="h-10 grow" alt="Tailwind" />
+			</div>
+			<div class="flex items-center justify-center rounded-3xl bg-gray-200/20 p-5 shadow-md backdrop-blur-md">
+				<img src={Pagefind} class="h-8" alt="Pagefind" />
+			</div>
+		</div>
+	</div>
+	<StackUsed framework="AstroJS" library="Tailwind, Pagefind" host="Cloudflare" className="lg:hidden" />
+	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
+		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+			<div
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Problem</h3>
+				<p>Wordpress got too bulky and tiresome to manage and host.</p>
+			</div>
+			<div
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I wanted</h3>
+				<p>I moved BTOnomics to a more modern framework and tried AstroJS, which had been gaining a lot of praise.</p>
+			</div>
+			<div
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I built</h3>
+				<ul class="ms-6 list-outside list-disc space-y-2 marker:text-[#38bdf8]">
+					<li>Migrated to AstroJS as a static site.</li>
+					<li>I enjoyed using Astro. Native markdown support, view transitions, image tooling, fast.</li>
+					<li>There's always the option to reach into Svelte/React/Alpine if I wanted to.</li>
+					<li>Used ChatGPT to convert WordPress html/shortcode to markdown.</li>
+				</ul>
+			</div>
+			<div
+				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Not yet done</h3>
+				<p>
+					Haven't recreated all the old functionalities from plugins, especially comments, but I figured I didn't need
+					it anyway.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-span-3 -mt-[4rem] hidden xl:flex"><Btonomics /></div>
+</div>
+
+<div
 	id="cancelninja"
 	class="scroll-container4 max-w-dvw background-eatyourmeds grid min-h-dvh bg-sky-500/10 pt-10 lg:grid-cols-3">
 	<div class="place-self-center px-20 text-center">
@@ -476,66 +541,73 @@
 </div>
 
 <div
-	id="btonomics"
-	class="scroll-container6 max-w-dvw background-btonomics grid min-h-dvh bg-[#38bdf8]/10 pt-10 lg:grid-cols-3">
-	<!-- <style="background: linear-gradient(rgba(250,250,250,0.7), rgba(250,250,250,0.7)), url({shape}); background-size: cover;"> -->
-	<div class="place-self-center">
-		<div class="flex justify-center">
-			<a href="https://btonomics.com"
-				><h3 class="pb-4 pt-6 text-center font-serif text-5xl font-bold text-[#38bdf8] lg:text-7xl">BTOnomics</h3></a>
-		</div>
-		<ExitLinks
-			url="https://btonomics.com"
-			github="https://github.com/zachczx/astro-btonomics"
-			className="fill-[#38bdf8]" />
+	id="rantkit"
+	class="scroll-container4 max-w-dvw background-eatyourmeds relative grid min-h-dvh bg-lime-200/30 pt-10 lg:grid-cols-3">
+	<div class="z-[1] place-self-center px-20 text-center">
+		<a href="/projects/#rantkit" class="group inline-block">
+			<h3 class="font-inter text-5xl font-normal tracking-tighter text-[#1b510f] lg:text-7xl">
+				<span class="inline rounded-3xl bg-[#1b510f] px-6 text-white/90">Rant</span>
+				Kit
+			</h3>
+		</a>
+		<ExitLinks url="https://rantkit.com" github="https://github.com/zachczx/gorant" className="fill-[#1b510f]" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
-			<div
-				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
-				<img src={Astro} class="h-10 scale-125" alt="Astro" />
+			<div class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md">
+				<img src={Golang} class="h-10 scale-125" alt="Golang" />
+			</div>
+			<div class="flex items-center justify-center rounded-3xl bg-gray-200/20 p-5 shadow-md backdrop-blur-md">
+				<img src={Htmx} class="h-8" alt="Htmx" />
 			</div>
 			<div
 				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
 				<img src={TailwindSmall} class="h-10 grow" alt="Tailwind" />
 			</div>
 			<div class="flex items-center justify-center rounded-3xl bg-gray-200/20 p-5 shadow-md backdrop-blur-md">
-				<img src={Pagefind} class="h-8" alt="Pagefind" />
+				<img src={Templ} class="h-8" alt="Templ" />
+			</div>
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
+				<img src={Postgresql} class="h-10" alt="Postgres" />
+			</div>
+			<div>
+				<div
+					class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
+					<Stytch />
+				</div>
 			</div>
 		</div>
 	</div>
-	<StackUsed framework="AstroJS" library="Tailwind, Pagefind" host="Cloudflare" className="lg:hidden" />
-	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
+	<StackUsed framework="Go, Postgres" library="Templ, HTMX, Tailwind" host="Coolify" className="lg:hidden" />
+	<div class="z-[1] grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
-				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Problem</h3>
-				<p>Wordpress got too bulky and tiresome to manage and host.</p>
+				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">Problem</h3>
+				<p>
+					I just wanted to build a bulletin board with Go. I also wanted to try using authentication SaaS, especially
+					those that provide magic link logins.
+				</p>
 			</div>
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
-				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I wanted</h3>
-				<p>I moved BTOnomics to a more modern framework and tried AstroJS, which had been gaining a lot of praise.</p>
+				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">What I wanted</h3>
+				<p>The usual posting, commenting, upvoting, anonymous mode, tagging, user management.</p>
 			</div>
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
-				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I built</h3>
-				<ul class="ms-6 list-outside list-disc space-y-2 marker:text-[#38bdf8]">
-					<li>Migrated to AstroJS as a static site.</li>
-					<li>I enjoyed using Astro. Native markdown support, view transitions, image tooling, fast.</li>
-					<li>There's always the option to reach into Svelte/React/Alpine if I wanted to.</li>
-					<li>Used ChatGPT to convert WordPress html/shortcode to markdown.</li>
+				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">What I built</h3>
+				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#1b510f]">
+					<li>A small bullet board, with posting, commenting, upvoting, tagging, authentication, user management.</li>
 				</ul>
 			</div>
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
-				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Not yet done</h3>
-				<p>
-					Haven't recreated all the old functionalities from plugins, especially comments, but I figured I didn't need
-					it anyway.
-				</p>
+				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">Not yet done</h3>
+				<p>Probably not.</p>
 			</div>
 		</div>
 	</div>
-	<div class="col-span-3 -mt-[4rem] hidden xl:flex"><Btonomics /></div>
+	<Particles className="absolute inset-0 opacity-[0.2]" refresh={true} color="#1b510f" quantity="20" size="10" />
 </div>
 
 <div
