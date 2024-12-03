@@ -1,5 +1,6 @@
 <svg
 	class="overflow-visible"
+	{...$$props}
 	width="109"
 	height="21"
 	viewBox="0 0 109 21"

@@ -159,7 +159,9 @@
 	// });
 </script>
 
-<div id="abbreviation" class="scroll-container7 max-w-dvw background-abbreviation grid min-h-dvh lg:grid-cols-3">
+<div
+	id="abbreviation"
+	class="scroll-container7 max-w-dvw background-abbreviation relative grid min-h-dvh lg:grid-cols-3">
 	<div class="place-self-center">
 		<div class="flex justify-center">
 			<a href="https://abbreviation.zixian.dev"
@@ -208,7 +210,7 @@
 	</div>
 	<StackUsed framework="Go, SQLite" library="HTMX, Templ, Tailwind" host="" className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
-		<div class="grid max-h-[1000px] content-start gap-10 lg:grid-cols-2 xl:max-w-[1600px]">
+		<div class="z-[1] grid max-h-[1000px] content-start gap-10 lg:grid-cols-2 xl:max-w-[1600px]">
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">Problem</h3>
@@ -261,12 +263,13 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-span-3 -mt-[12rem] hidden xl:flex"><Abbreviation /></div>
+	<!-- <div class="col-span-3 -mt-[12rem] hidden xl:flex"><Abbreviation /></div> -->
+	<Particles className="absolute inset-0 opacity-[0.3]" refresh={true} color="#0069ff" quantity="70" size="5" />
 </div>
 
 <div
 	id="appraize"
-	class="scroll-container2 max-w-dvw background-appraize grid min-h-dvh bg-[#491eff]/5 pt-10 lg:grid-cols-3">
+	class="scroll-container2 max-w-dvw background-appraize relative grid min-h-dvh bg-[#491eff]/5 pt-10 lg:grid-cols-3">
 	<div class="place-self-center">
 		<a href="https://appraize.zixian.dev/"
 			><h3 class="text-center font-sans text-6xl font-black tracking-tighter text-[#491eff] lg:text-8xl">
@@ -309,7 +312,7 @@
 		host="Coolify, NodeJS, Nginx"
 		className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
-		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+		<div class="z-[1] grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Problem</h3>
@@ -342,12 +345,13 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-span-3 -mt-[12rem] hidden xl:flex"><Appraize /></div>
+	<!-- <div class="col-span-3 -mt-[12rem] hidden xl:flex"><Appraize /></div> -->
+	<Particles className="absolute inset-0 opacity-[0.3]" refresh={true} color="#491eff" quantity="25" size="15" />
 </div>
 
 <div
 	id="apptitude"
-	class="scroll-container1 max-w-dvw background-apptitude grid min-h-dvh bg-lime-400/10 pt-10 lg:grid-cols-3">
+	class="scroll-container1 max-w-dvw background-apptitude relative grid min-h-dvh bg-lime-400/10 pt-10 lg:grid-cols-3">
 	<div class="w-full content-center justify-self-center px-20">
 		<div class="flex justify-center">
 			<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class=""></enhanced:img></a>
@@ -374,7 +378,7 @@
 	</div>
 	<StackUsed framework="Sveltekit" library="Gsap, Tailwind, Pagefind" host="Cloudflare" className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
-		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+		<div class="z-[1] grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">Problem</h3>
@@ -407,12 +411,13 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-span-3 -mt-[4rem] hidden xl:flex"><Apptitude /></div>
+	<!-- <div class="col-span-3 -mt-[4rem] hidden xl:flex"><Apptitude /></div> -->
+	<Particles className="absolute inset-0 opacity-[0.5]" refresh={true} color="#a3e635" quantity="30" size="10" />
 </div>
 
 <div
 	id="btonomics"
-	class="scroll-container6 max-w-dvw background-btonomics grid min-h-dvh bg-[#38bdf8]/10 pt-10 lg:grid-cols-3">
+	class="scroll-container6 max-w-dvw background-btonomics relative grid min-h-dvh bg-[#38bdf8]/10 pt-10 lg:grid-cols-3">
 	<!-- <style="background: linear-gradient(rgba(250,250,250,0.7), rgba(250,250,250,0.7)), url({shape}); background-size: cover;"> -->
 	<div class="place-self-center">
 		<div class="flex justify-center">
@@ -439,7 +444,7 @@
 	</div>
 	<StackUsed framework="AstroJS" library="Tailwind, Pagefind" host="Cloudflare" className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
-		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+		<div class="z-[1] grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Problem</h3>
@@ -470,12 +475,13 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-span-3 -mt-[4rem] hidden xl:flex"><Btonomics /></div>
+	<!-- <div class="col-span-3 -mt-[4rem] hidden xl:flex"><Btonomics /></div> -->
+	<Particles className="absolute inset-0 opacity-[0.3]" refresh={true} color="#38bdf8" quantity="20" size="15" />
 </div>
 
 <div
 	id="cancelninja"
-	class="scroll-container4 max-w-dvw background-eatyourmeds grid min-h-dvh bg-sky-500/10 pt-10 lg:grid-cols-3">
+	class="scroll-container4 max-w-dvw background-eatyourmeds relative grid min-h-dvh bg-sky-500/10 pt-10 lg:grid-cols-3">
 	<div class="place-self-center px-20 text-center">
 		<a href="/projects/#cancelninja" class="group inline-block">
 			<h3 class="text-5xl font-extrabold tracking-tighter text-base-content lg:text-7xl">
@@ -512,7 +518,7 @@
 	</div>
 	<StackUsed framework="Sveltekit, Pocketbase" library="Tailwind" host="Coolify" className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
-		<div class="grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+		<div class="z-[1] grid max-h-[1000px] max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-sky-500 decoration-8 underline-offset-4">Problem</h3>
@@ -537,7 +543,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-span-3 -mt-[1rem] hidden xl:flex"><Cancelninja /></div>
+	<!-- <div class="col-span-3 -mt-[1rem] hidden xl:flex"><Cancelninja /></div> -->
+	<Particles className="absolute inset-0 opacity-[0.1]" refresh={true} color="#0ea5e9" quantity="30" size="10" />
 </div>
 
 <div
@@ -545,10 +552,7 @@
 	class="scroll-container4 max-w-dvw background-eatyourmeds relative grid min-h-dvh bg-lime-200/30 pt-10 lg:grid-cols-3">
 	<div class="z-[1] place-self-center px-20 text-center">
 		<a href="/projects/#rantkit" class="group inline-block">
-			<h3 class="font-inter text-5xl font-normal tracking-tighter text-[#1b510f] lg:text-7xl">
-				<span class="inline rounded-3xl bg-[#1b510f] px-6 text-white/90">Rant</span>
-				Kit
-			</h3>
+			<h3 class="font-inter text-5xl font-normal tracking-tighter text-[#1b510f] lg:text-7xl">RantKit</h3>
 		</a>
 		<ExitLinks url="https://rantkit.com" github="https://github.com/zachczx/gorant" className="fill-[#1b510f]" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
@@ -558,10 +562,7 @@
 			<div class="flex items-center justify-center rounded-3xl bg-gray-200/20 p-5 shadow-md backdrop-blur-md">
 				<img src={Htmx} class="h-8" alt="Htmx" />
 			</div>
-			<div
-				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
-				<img src={TailwindSmall} class="h-10 grow" alt="Tailwind" />
-			</div>
+
 			<div class="flex items-center justify-center rounded-3xl bg-gray-200/20 p-5 shadow-md backdrop-blur-md">
 				<img src={Templ} class="h-8" alt="Templ" />
 			</div>
@@ -572,8 +573,12 @@
 			<div>
 				<div
 					class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
-					<Stytch />
+					<Stytch class="h-10" />
 				</div>
+			</div>
+			<div
+				class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md backdrop-blur-md">
+				<img src={TailwindSmall} class="h-10 grow" alt="Tailwind" />
 			</div>
 		</div>
 	</div>
@@ -603,16 +608,16 @@
 			<div
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">Not yet done</h3>
-				<p>Probably not.</p>
+				<p>Probably QOL stuff like markdown formatting, polls, admin moderation.</p>
 			</div>
 		</div>
 	</div>
-	<Particles className="absolute inset-0 opacity-[0.2]" refresh={true} color="#1b510f" quantity="20" size="10" />
+	<Particles className="absolute inset-0 opacity-[0.1]" refresh={true} color="#1b510f" quantity="30" size="10" />
 </div>
 
 <div
 	id="btonomics-old"
-	class="scroll-container5 max-w-dvw background-btonomicsold grid min-h-dvh bg-yellow-500/10 pt-10 lg:grid-cols-3">
+	class="scroll-container5 max-w-dvw background-btonomicsold grid min-h-dvh bg-yellow-500/10 pt-10 saturate-50 hover:saturate-100 lg:grid-cols-3">
 	<div class="place-self-center px-20">
 		<div class="flex justify-center">
 			<a href="https://old.btonomics.com"
@@ -682,7 +687,7 @@
 
 <div
 	id="eatyourmeds"
-	class="scroll-container4 max-w-dvw background-eatyourmeds grid min-h-dvh bg-lime-700/10 pt-10 lg:grid-cols-3">
+	class="scroll-container4 max-w-dvw background-eatyourmeds grid min-h-dvh bg-lime-700/10 pt-10 saturate-50 hover:saturate-100 lg:grid-cols-3">
 	<div class="place-self-center px-20">
 		<div class="avatar flex justify-center">
 			<div class="w-56 rounded-full">
@@ -753,7 +758,7 @@
 
 <div
 	id="rankamate"
-	class="scroll-container3 max-w-dvw background-rankamate grid min-h-dvh bg-red-800/10 pt-10 lg:grid-cols-3">
+	class="scroll-container3 max-w-dvw background-rankamate grid min-h-dvh bg-red-800/10 pt-10 saturate-50 hover:saturate-100 lg:grid-cols-3">
 	<div class="w-full place-self-center px-20">
 		<div class="flex content-center items-center justify-center">
 			<a href="https://rankamate.zixian.dev/"><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img></a>
