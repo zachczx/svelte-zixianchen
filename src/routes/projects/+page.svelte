@@ -548,13 +548,13 @@
 </div>
 
 <div
-	id="rantkit"
+	id="grumplr"
 	class="scroll-container4 max-w-dvw background-eatyourmeds relative grid min-h-dvh bg-lime-200/30 pt-10 lg:grid-cols-3">
 	<div class="z-[1] place-self-center px-20 text-center">
-		<a href="/projects/#rantkit" class="group inline-block">
-			<h3 class="font-inter text-5xl font-normal tracking-tighter text-[#1b510f] lg:text-7xl">RantKit</h3>
+		<a href="/projects/#grumplr" class="group inline-block">
+			<h3 class="font-inter text-5xl font-normal tracking-tighter text-[#1b510f] lg:text-7xl">Grumplr</h3>
 		</a>
-		<ExitLinks url="https://rantkit.com" github="https://github.com/zachczx/gorant" className="fill-[#1b510f]" />
+		<ExitLinks url="https://grumplr.com" github="https://github.com/zachczx/gorant" className="fill-[#1b510f]" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div class="flex items-center justify-center rounded-3xl border border-white/50 bg-gray-200/20 p-4 shadow-md">
 				<img src={Golang} class="h-10 scale-125" alt="Golang" />

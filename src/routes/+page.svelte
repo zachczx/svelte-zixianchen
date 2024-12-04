@@ -727,8 +727,7 @@
 								<a href="/projects/"
 									><h3
 										class="content-center pb-1 text-center font-inter text-4xl font-normal text-[#1b510f] lg:flex lg:justify-center lg:text-6xl">
-										<span class="inline rounded-xl bg-[#1b510f] px-4 py-1 text-white/90">Rant</span>
-										<span class="py-1 ps-2">Kit</span>
+										Grumplr
 									</h3>
 									<div class="text-center italic">Reddit-lite style bulletin board</div></a>
 							</figcaption>
