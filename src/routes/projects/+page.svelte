@@ -589,7 +589,7 @@
 				class="scroll-content1 grid content-start space-y-2 backdrop-blur-md lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 xl:border xl:border-gray-200 xl:bg-white/40 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">Problem</h3>
 				<p>
-					I just wanted to build a bulletin board with Go. I also wanted to try using authentication SaaS, especially
+					I just wanted to reinvent the wheel to learn building a bulletin board with Go,writing raw SQL. I also wanted to try using authentication SaaS, especially
 					those that provide magic link logins.
 				</p>
 			</div>
