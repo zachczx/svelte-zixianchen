@@ -254,7 +254,7 @@
 	</div>
 </div>
 
-<div id="apptitude" class="max-w-dvw relative grid bg-lime-400/10 py-10 lg:grid-cols-3 lg:py-20">
+<div id="apptitude" class="max-w-dvw relative grid bg-lime-400/5 py-10 lg:grid-cols-3 lg:py-20">
 	<div class="z-[1] w-full content-center justify-self-center px-20">
 		<div class="flex justify-center">
 			<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class=""></enhanced:img></a>
@@ -315,7 +315,7 @@
 		</div>
 	</div>
 	<div class="hidden lg:flex">
-		<Particles className="absolute inset-0 opacity-[0.5]" refresh={true} color="#a3e635" quantity="30" size="10" />
+		<Particles className="absolute inset-0 opacity-[0.5]" refresh={true} color="#a3e635" quantity="20" size="2" />
 	</div>
 </div>
 
