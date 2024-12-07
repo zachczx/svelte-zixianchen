@@ -291,7 +291,7 @@
 			<img src={heroTopSmartNation} alt="" class="hero-scroll-sn -mt-[7.5rem] -translate-x-0" />
 		</div>
 		<div
-			class="hidden h-[10rem] w-full justify-self-end overflow-hidden rounded-br-full rounded-br-full rounded-tl-full xl:col-span-2 xl:grid">
+			class="hidden h-[10rem] w-full justify-self-end overflow-hidden rounded-br-full rounded-tl-full xl:col-span-2 xl:grid">
 			<enhanced:img src={ryzen} alt="" class="hero-scroll -mt-[4rem]"></enhanced:img>
 		</div>
 
