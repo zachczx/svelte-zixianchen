@@ -8,7 +8,7 @@
 	import { addNeumorphismInset, removeNeumorphismInset } from '$lib/Neumorphism';
 </script>
 
-<nav class="z-30 grid h-fit w-full grid-cols-2 justify-center px-4 lg:sticky lg:top-0 lg:grid-cols-3">
+<nav class="z-30 grid h-fit w-full grid-cols-2 justify-center px-4 lg:fixed lg:top-0 lg:grid-cols-3">
 	<div class="navbar-start col-span-2 -mx-4 w-full xl:hidden">
 		<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-circle btn-ghost">
