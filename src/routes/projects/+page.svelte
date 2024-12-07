@@ -94,21 +94,21 @@
 		</div>
 		<ExitLinks url="https://abbreviation.zixian.dev" className="fill-[#0069ff] shadow-md" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
-			<div class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md">
+			<div class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md">
 				<img src={Golang} class="h-10 scale-125" alt="Golang" />
 			</div>
-			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/50 p-5 shadow-md backdrop-blur-md">
+			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/70 p-5 shadow-md backdrop-blur-md">
 				<img src={Htmx} class="h-8" alt="Htmx" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={TailwindSmall} class="h-10 grow" alt="Tailwind" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Sqlite} class="h-10 grow" alt="Sqlite" />
 			</div>
-			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/50 p-5 shadow-md backdrop-blur-md">
+			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/70 p-5 shadow-md backdrop-blur-md">
 				<img src={Templ} class="h-8" alt="Templ" />
 			</div>
 		</div>
@@ -117,7 +117,7 @@
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="z-[1] grid content-start gap-10 lg:grid-cols-2 xl:max-w-[1600px]">
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">Problem</h3>
 				<p>
 					People forget what acronyms and abbreviations mean. They then need to ask a colleague or pray that it shows up
@@ -125,7 +125,7 @@
 				</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">What I wanted</h3>
 				<p>
 					I wanted to build a search engine and database of abbreviations. There were already a couple of
@@ -133,7 +133,7 @@
 				</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ms-6 list-outside list-disc space-y-2 marker:text-[#0069ff]">
 					<li>A search engine and database of abbreviations & acronyms in Go.</li>
@@ -151,7 +151,7 @@
 				</ul>
 			</div>
 			<div
-				class="grid h-full content-start space-y-2 lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid h-full content-start space-y-2 lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">Not yet done</h3>
 				<ul class="ms-6 list-outside list-disc space-y-2 marker:text-[#0069ff]">
 					<li>Users say a tagging feature will be useful, but is too much work for now.</li>
@@ -185,27 +185,27 @@
 			className="fill-[#491eff]" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Sveltekit} class="h-10" alt="Sveltekit" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<enhanced:img src={Sortable} class="" alt="Sortable JS"></enhanced:img>
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<enhanced:img src={DrizzlePng} class="rounded-xl" alt="Drizzle"></enhanced:img>
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={TailwindSmall} class="h-10" alt="Tailwind" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Coolify} class="h-10" alt="Coolify" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Postgresql} class="h-10" alt="Postgres" />
 			</div>
 		</div>
@@ -218,7 +218,7 @@
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="z-[1] grid max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Problem</h3>
 				<p>
 					How might we speed up ranking sessions, which need manual selection to form a numbered list "1, 2, 3..." on
@@ -226,12 +226,12 @@
 				</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">What I wanted</h3>
 				<p>Speed up ranking sessions via drag & drop.</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#491eff]">
 					<li>Drag & drop of officers and add. info</li>
@@ -243,7 +243,7 @@
 				</ul>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Not yet done</h3>
 				<p>Haven't added authentication, which is probably needed for a private thing like ranking.</p>
 			</div>
@@ -262,19 +262,19 @@
 		<ExitLinks url="https://titude.app/" github="https://github.com/zachczx/apptitude" className="fill-lime-400" />
 		<div class="mx-10 mt-10 hidden flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Sveltekit} class="h-10" alt="Sveltekit" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={TailwindSmall} class="h-10 grow" alt="Tailwind" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Greensock} class="h-10" alt="Gsap" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Pagefind} class="h-10" alt="Pagefind" />
 			</div>
 		</div>
@@ -283,7 +283,7 @@
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="z-[1] grid max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">Problem</h3>
 				<p>
 					How might I help my non-technical teammates access to vast repositories of free-to-access knowledge to gain
@@ -291,12 +291,12 @@
 				</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">What I wanted</h3>
 				<p>Display lists of tech resources from Youtube, blogs, tutorials, courses, sorted by tech competency.</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ml-6 list-outside list-disc marker:text-lime-400">
 					<li>Static Website</li>
@@ -305,7 +305,7 @@
 				</ul>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">Not yet done</h3>
 				<p>
 					Making learning plans the front and center to learning, so all the suggested resources revolve around a
@@ -331,14 +331,14 @@
 			className="fill-[#38bdf8]" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Astro} class="h-10 scale-125" alt="Astro" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={TailwindSmall} class="h-10 grow" alt="Tailwind" />
 			</div>
-			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/50 p-5 shadow-md backdrop-blur-md">
+			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/70 p-5 shadow-md backdrop-blur-md">
 				<img src={Pagefind} class="h-8" alt="Pagefind" />
 			</div>
 		</div>
@@ -347,17 +347,17 @@
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="z-[1] grid max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Problem</h3>
 				<p>Wordpress got too bulky and tiresome to manage and host.</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I wanted</h3>
 				<p>I moved BTOnomics to a more modern framework and tried AstroJS, which had been gaining a lot of praise.</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ms-6 list-outside list-disc space-y-2 marker:text-[#38bdf8]">
 					<li>Migrated to AstroJS as a static site.</li>
@@ -367,7 +367,7 @@
 				</ul>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Not yet done</h3>
 				<p>
 					Haven't recreated all the old functionalities from plugins, especially comments, but I figured I didn't need
@@ -399,19 +399,19 @@
 		<ExitLinks url="https://cancelninja.com" className="fill-lime-700" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Sveltekit} class="h-10" alt="Sveltekit" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={TailwindSmall} class="h-10" alt="Tailwind" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Pocketbase} class="h-10" alt="Pocketbase" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Coolify} class="h-10" alt="Coolify" />
 			</div>
 		</div>
@@ -420,24 +420,24 @@
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="z-[1] grid max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-sky-500 decoration-8 underline-offset-4">Problem</h3>
 				<p>How might I stop getting tricked into paying for subscriptions I don't want.</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-sky-500 decoration-8 underline-offset-4">What I wanted</h3>
 				<p>Subscription tracker that alerts me about known dark patterns and companies' dirty tricks.</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-sky-500 decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-sky-500">
 					<li>CRUD webapp, with authentication, user stuff, and calendar view.</li>
 				</ul>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-sky-500 decoration-8 underline-offset-4">Not yet done</h3>
 				<p>Probably OCR or natural language processing for greater automation.</p>
 			</div>
@@ -455,28 +455,28 @@
 		</a>
 		<ExitLinks url="https://grumplr.com" github="https://github.com/zachczx/gorant" className="fill-[#1b510f]" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
-			<div class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md">
+			<div class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md">
 				<img src={Golang} class="h-10 scale-125" alt="Golang" />
 			</div>
-			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/50 p-5 shadow-md backdrop-blur-md">
+			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/70 p-5 shadow-md backdrop-blur-md">
 				<img src={Htmx} class="h-8" alt="Htmx" />
 			</div>
 
-			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/50 p-5 shadow-md backdrop-blur-md">
+			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/70 p-5 shadow-md backdrop-blur-md">
 				<img src={Templ} class="h-8" alt="Templ" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Postgresql} class="h-10" alt="Postgres" />
 			</div>
 			<div>
 				<div
-					class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+					class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 					<Stytch class="h-10" />
 				</div>
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={TailwindSmall} class="h-10 grow" alt="Tailwind" />
 			</div>
 		</div>
@@ -485,7 +485,7 @@
 	<div class="z-[1] grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="grid max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">Problem</h3>
 				<p>
 					I'm reinventing the wheel to learn building a bulletin board with Go, writing SQL, vanilla JS. I also wanted
@@ -493,19 +493,19 @@
 				</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">What I wanted</h3>
 				<p>The usual posting, commenting, upvoting, anonymous mode, tagging, user management.</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#1b510f]">
 					<li>A small bullet board, with posting, commenting, upvoting, tagging, authentication, user management.</li>
 				</ul>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">Not yet done</h3>
 				<p>Probably QOL stuff like markdown formatting, polls, admin moderation.</p>
 			</div>
@@ -530,7 +530,7 @@
 
 <div
 	id="btonomics-old"
-	class="max-w-dvw grid bg-yellow-500/10 py-10 saturate-50 hover:saturate-100 lg:grid-cols-3 lg:py-20">
+	class="max-w-dvw grid bg-yellow-500/20 py-10 saturate-50 hover:saturate-100 lg:grid-cols-3 lg:py-20">
 	<div class="z-[1] place-self-center px-20">
 		<div class="flex justify-center">
 			<a href="https://old.btonomics.com"
@@ -539,18 +539,18 @@
 		<ExitLinks url="https://old.btonomics.com" className="fill-yellow-500" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Wordpress} class="h-10" alt="Wordpress" />
 			</div>
-			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/50 p-5 shadow-md backdrop-blur-md">
+			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/70 p-5 shadow-md backdrop-blur-md">
 				<img src={Nginx} class="h-8" alt="Nginx" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Mysql} class="h-10" alt="MySQL" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Bunny} class="h-10" alt="BunnyCDN" />
 			</div>
 		</div>
@@ -559,7 +559,7 @@
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="grid max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">Problem</h3>
 				<p>
 					There was barely any info online to guide me through the renovation journey (choosing an ID/contractor,
@@ -567,7 +567,7 @@
 				</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">What I wanted</h3>
 				<p>
 					Started BTOnomics as <a href="https://web.archive.org/web/20180513112335/http://pewpewpew.cc/"
@@ -576,7 +576,7 @@
 				</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-yellow-500">
 					<li>WordPress was the obvious choice.</li>
@@ -586,7 +586,7 @@
 				</ul>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">Not yet done</h3>
 				<p>
 					Wordpress got too bulky and tiresome to manage and host. Not least the sprawling repository of images (not
@@ -599,7 +599,7 @@
 
 <div
 	id="eatyourmeds"
-	class="max-w-dvw grid bg-lime-700/10 py-10 saturate-50 hover:saturate-100 lg:grid-cols-3 lg:py-20">
+	class="max-w-dvw grid bg-lime-700/20 py-10 saturate-50 hover:saturate-100 lg:grid-cols-3 lg:py-20">
 	<div class="z-[1] place-self-center px-20">
 		<div class="avatar flex justify-center">
 			<div class="w-56 rounded-full">
@@ -613,25 +613,25 @@
 			className="fill-lime-700" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Django} class="h-10" alt="Django" />
 			</div>
-			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/50 p-5 shadow-md backdrop-blur-md">
+			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/70 p-5 shadow-md backdrop-blur-md">
 				<img src={Htmx} class="h-8" alt="Htmx" />
 			</div>
-			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/50 p-5 shadow-md backdrop-blur-md">
+			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/70 p-5 shadow-md backdrop-blur-md">
 				<img src={Nginx} class="h-8" alt="Nginx" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Gunicorn} class="h-10" alt="Gunicorn" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Bootstrap} class="h-10" alt="Bootstrap" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Postgresql} class="h-10" alt="Postgres" />
 			</div>
 		</div>
@@ -640,17 +640,17 @@
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="grid max-w-[1000px] content-start gap-10 lg:grid-cols-2">
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">Problem</h3>
 				<p>How might I make it easier and shorter to plan medicine dose timings and get accurate info.</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">What I wanted</h3>
 				<p>Make it less tedious for both of us parents to record/coord medicine stuff and sync with one another.</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-lime-700">
 					<li>Basic CRUD webapp with user authentication.</li>
@@ -659,7 +659,7 @@
 				</ul>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">Not yet done</h3>
 				<p>Honestly, ChatGPT does it better (Gemini refuses, so no luck there).</p>
 			</div>
@@ -667,7 +667,7 @@
 	</div>
 </div>
 
-<div id="rankamate" class="max-w-dvw grid bg-red-800/10 py-10 saturate-50 hover:saturate-100 lg:grid-cols-3 lg:py-20">
+<div id="rankamate" class="max-w-dvw grid bg-red-800/20 py-10 saturate-50 hover:saturate-100 lg:grid-cols-3 lg:py-20">
 	<div class="z-[1] w-full place-self-center px-20">
 		<div class="flex content-center items-center justify-center">
 			<a href="https://rankamate.zixian.dev/"><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img></a>
@@ -678,29 +678,29 @@
 			className="fill-red-800" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Django} class="h-10" alt="Django" />
 			</div>
-			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/50 p-5 shadow-md backdrop-blur-md">
+			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/70 p-5 shadow-md backdrop-blur-md">
 				<img src={Htmx} class="h-8" alt="Htmx" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<enhanced:img src={Sortable} class="" alt="Sortable JS"></enhanced:img>
 			</div>
-			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/50 p-5 shadow-md backdrop-blur-md">
+			<div class="z-[1] flex items-center justify-center rounded-3xl bg-white/70 p-5 shadow-md backdrop-blur-md">
 				<img src={Nginx} class="h-8" alt="Nginx" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Gunicorn} class="h-10" alt="Gunicorn" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Bootstrap} class="h-10" alt="Bootstrap" />
 			</div>
 			<div
-				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/50 p-4 shadow-md backdrop-blur-md">
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
 				<img src={Postgresql} class="h-10" alt="Postgres" />
 			</div>
 		</div>
@@ -713,7 +713,7 @@
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
 		<div class="grid max-w-[1400px] content-start gap-10 lg:grid-cols-2">
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">Problem</h3>
 				<p>Rank-a-Mate was my first stab at making a drag & drop tool for ranking sessions in lieu of Excel.</p>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-red-800">
@@ -725,12 +725,12 @@
 				</ul>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">What I wanted</h3>
 				<p>Speed up ranking sessions via drag & drop.</p>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-red-800">
 					<li>Basic CRUD webapp with drag & drop of officers and session-based workflow</li>
@@ -740,7 +740,7 @@
 				</ul>
 			</div>
 			<div
-				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/50 xl:shadow-md">
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-red-800 decoration-8 underline-offset-4">Not yet done</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-red-800">
 					<li>Rebuilt this as Appraize.</li>
