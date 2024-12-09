@@ -62,9 +62,9 @@
 	<meta name="description" content="Send Zixian a message." />
 </svelte:head>
 
-<div class="spectrum-background bg-colored-pattern-orange grid min-h-dvh justify-items-center">
+<div class="spectrum-background bg-colored-pattern-orange grid min-h-dvh grid-rows-[1fr_auto] justify-items-center">
 	<Nav {navCurrent} />
-	<div class="max-w-screen-2xl">
+	<div class="flex max-w-screen-2xl items-center">
 		<section class="space-y-4 px-3 pb-2 xl:grid xl:min-w-[40rem] xl:grid-cols-2">
 			<div class="flex justify-center"><MailSentRafiki class="w-96" /></div>
 			<div class="rounded-3xl bg-gray-100 p-4 xl:min-w-[35rem]">
@@ -108,7 +108,7 @@
 						required
 						rows="5"></textarea>
 					<div class="w-full">
-						<button class="btn btn-neutral min-w-36 text-lg text-base-100" disabled={disabledSubmitButton}
+						<button class="btn btn-neutral w-full text-lg text-base-100" disabled={disabledSubmitButton}
 							>{#if formStatus === 'Submitting'}
 								<span class="loading loading-dots loading-md text-base-100"></span>
 							{:else}

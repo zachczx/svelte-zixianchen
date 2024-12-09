@@ -512,33 +512,26 @@
 		</section>
 
 		<section class="grid justify-items-center bg-gray-100">
-			<div
-				class="relative grid min-h-[30rem] w-auto max-w-screen-2xl content-center justify-items-center gap-y-10 overflow-hidden px-4 py-10 lg:min-h-[70rem] lg:grid-cols-2">
-				<div class="content-center justify-self-center">
-					<img src={moneySvg} alt="$$$" class="w-[90vw] lg:w-[40rem]" />
-				</div>
-				<div class="space-y-20 self-center justify-self-center lg:ms-8 lg:mt-8 lg:max-w-[50vw] lg:p-10">
-					<h2>My side projects help my work.</h2>
-					<div class="grid gap-4 lg:grid-cols-1 lg:gap-14">
-						<div class="space-y-6 rounded-6xl">
-							<h3>Opportunities, Gaps</h3>
-							<p>
-								I spot opportunities and gaps in systems, ideas and processes. I'm no genius - I often just apply things
-								I gleaned from what product leaders, engineers, tech influencers put out online.
-							</p>
-							<p>I have Hacker News, Reddit, daily.dev, and Youtube to thank.</p>
-						</div>
-						<div class="space-y-6 rounded-6xl">
-							<h3>Know What It Takes</h3>
-							<p>
-								Because I do coding, I can understand technical complexities, trade-offs, best practices, and
-								"definition of done".
-							</p>
-						</div>
-						<div class="space-y-6 rounded-6xl">
-							<h3>Cost Scrutiny</h3>
-							<p>I challenge cost estimates and hidden assumptions. We shouldn't spend just because we can.</p>
-						</div>
+			<div class="grid w-auto max-w-[1000px] content-center justify-items-center gap-y-10 overflow-hidden px-4 py-10">
+				<h2 class="pb-10">My side projects help me do my work better.</h2>
+				<div class="grid gap-4 lg:grid-cols-1 lg:gap-14">
+					<div class="space-y-6 rounded-6xl">
+						<h3>Opportunities, Gaps</h3>
+						<p>
+							I spot opportunities and gaps in systems, ideas and processes. I'm no genius - I just recall ideas from
+							product leaders and engineers.
+						</p>
+					</div>
+					<div class="space-y-6 rounded-6xl">
+						<h3>Know What It Takes</h3>
+						<p>Because I can somewhat code, I know complexity, trade-offs, and "definition of done".</p>
+					</div>
+					<div class="space-y-6 rounded-6xl">
+						<h3>Cost Scrutiny</h3>
+						<p>
+							I hate wastage, bloated stuff, and getting ripped off. So much of these are hidden in dumb requirements
+							and hidden assumptions, written by people who either don't know or don't care.
+						</p>
 					</div>
 				</div>
 			</div>

@@ -8,7 +8,7 @@
 	import { addNeumorphismInset, removeNeumorphismInset } from '$lib/Neumorphism';
 </script>
 
-<nav class="z-30 grid h-fit w-full grid-cols-2 justify-center px-4 lg:fixed lg:top-0 lg:grid-cols-3">
+<nav class="z-30 grid h-fit w-full grid-cols-2 justify-center px-4 lg:fixed lg:top-4 lg:grid-cols-3">
 	<div class="navbar-start col-span-2 -mx-4 w-full xl:hidden">
 		<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-circle btn-ghost">
@@ -32,22 +32,108 @@
 			><a href="/">Zixian Chen</a></span>
 	</div>
 	<div
-		class="navMenu hidden items-center justify-center rounded-b-3xl border-b border-b-gray-200 bg-gray-900/70 shadow backdrop-blur-md xl:flex xl:space-x-1 2xl:space-x-8">
+		class="navMenu hidden h-16 w-fit min-w-[40rem] items-center justify-center justify-self-center rounded-2xl border border-b-gray-100 bg-black/70 shadow backdrop-blur-md transition-all duration-500 ease-out lg:relative lg:flex">
+		<!-- <a
+			aria-current={navCurrent === 'about' ? 'page' : undefined}
+			id="navAbout"
+			href="/#about"
+			class="btn btn-link text-xl font-bold text-gray-100 no-underline transition-all duration-500 ease-out hover:no-underline {navCurrent ===
+			'about'
+				? 'text-[#FF725E]'
+				: undefined}">About</a> -->
 		<a
 			aria-current={navCurrent === 'about' ? 'page' : undefined}
 			id="navAbout"
 			href="/#about"
-			class="btn btn-link text-xl font-bold text-gray-100 no-underline hover:no-underline {navCurrent === 'about'
-				? 'text-[#FF725E]'
-				: undefined}">About</a>
+			class="dock group btn btn-link font-bold text-white no-underline transition-all duration-500 ease-out hover:no-underline">
+			<div
+				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-300 text-red-950 transition-all duration-500 ease-out group-hover:bg-pink-700 group-hover:text-white">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="1em"
+					height="1em"
+					class="hugeicons:user-account"
+					viewBox="0 0 24 24"
+					><g
+						fill="none"
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="1.5"
+						color="currentColor"
+						><path d="M14 9h4m-4 3.5h3" /><rect width="20" height="18" x="2" y="3" rx="5" /><path
+							d="M5 16c1.208-2.581 5.712-2.75 7 0m-1.5-7a2 2 0 1 1-4 0a2 2 0 0 1 4 0" /></g
+					></svg>
+			</div>
+			<div
+				class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 rounded text-base font-bold text-red-950 group-hover:-top-6 group-hover:flex">
+				<div class="text-center text-white">About</div>
+			</div>
+		</a>
 		<a
 			aria-current={navCurrent === 'career' ? 'page' : undefined}
 			id="navCareer"
 			href="/#career"
-			class="btn btn-link text-xl font-bold text-base-100 no-underline hover:no-underline {navCurrent === 'career'
+			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-500 ease-out hover:no-underline {navCurrent ===
+			'career'
 				? 'text-[#FF725E]'
-				: undefined}">Career</a>
+				: undefined}">
+			<div
+				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-300 text-red-950 transition-all duration-500 ease-out group-hover:bg-pink-700 group-hover:text-white">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="1em"
+					height="1em"
+					class="hugeicons:archive-02"
+					viewBox="0 0 24 24"
+					><g
+						fill="none"
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="1.5"
+						color="currentColor"
+						><path
+							d="M2 16c0-2.339 0-3.508.536-4.362a3.5 3.5 0 0 1 1.102-1.101C4.492 10 5.66 10 8 10h8c2.339 0 3.508 0 4.362.537a3.5 3.5 0 0 1 1.102 1.1C22 12.493 22 13.662 22 16s0 3.508-.537 4.362a3.5 3.5 0 0 1-1.1 1.102C19.507 22 18.338 22 16 22H8c-2.339 0-3.508 0-4.362-.537a3.5 3.5 0 0 1-1.102-1.1C2 19.507 2 18.338 2 16m18-6c0-1.4 0-2.1-.273-2.635a2.5 2.5 0 0 0-1.092-1.093C18.1 6 17.4 6 16 6H8c-1.4 0-2.1 0-2.635.272a2.5 2.5 0 0 0-1.093 1.093C4 7.9 4 8.6 4 10m14-4c0-1.886 0-2.828-.586-3.414S15.886 2 14 2h-4c-1.886 0-2.828 0-3.414.586S6 4.114 6 6" /><path
+							d="M15 14a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2" /></g
+					></svg>
+			</div>
+			<div
+				class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 rounded text-base font-bold text-red-950 group-hover:-top-6 group-hover:flex">
+				<div class="text-center text-white">Career</div>
+			</div>
+		</a>
 		<a
+			aria-current={navCurrent === 'projects' || navCurrent === 'side-full' ? 'page' : undefined}
+			id="navSide"
+			href="/#projects"
+			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-500 ease-out hover:no-underline">
+			<div
+				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-300 text-red-950 transition-all duration-500 ease-out group-hover:bg-pink-700 group-hover:text-white">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="1em"
+					height="1em"
+					class="hugeicons:repository"
+					viewBox="0 0 24 24"
+					><g
+						fill="none"
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="1.5"
+						color="currentColor"
+						><path
+							d="M6 19.623c-.69-.195-1.232-.491-1.682-.941C3 17.364 3 15.242 3 11s0-6.364 1.318-7.682S7.758 2 12 2s6.364 0 7.682 1.318S21 6.758 21 11s0 6.364-1.318 7.682c-.45.45-.993.746-1.682.941" /><path
+							d="M12 20.193c-.414 0-.748.32-1.414.958c-.647.619-.97.929-1.242.831a.5.5 0 0 1-.096-.046C9 21.779 9 21.31 9 20.376v-3.125c0-1.532 0-2.299.44-2.775C9.878 14 10.585 14 12 14s2.121 0 2.56.476s.44 1.243.44 2.775v3.125c0 .935 0 1.403-.248 1.56a.5.5 0 0 1-.096.046c-.272.098-.595-.212-1.242-.831c-.666-.639-1-.958-1.414-.958M8 10h8M8 6h4" /></g
+					></svg>
+			</div>
+			<div
+				class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 rounded text-base font-bold text-red-950 group-hover:-top-6 group-hover:flex">
+				<div class="text-center text-white">Projects</div>
+			</div>
+		</a>
+		<!-- <a
 			aria-current={navCurrent === 'projects' || navCurrent === 'side-full' ? 'page' : undefined}
 			id="navSide"
 			href="/#projects"
@@ -61,81 +147,108 @@
 			class="btn btn-link text-xl font-bold text-gray-100 no-underline hover:no-underline {$page.url.pathname ===
 			'/contact'
 				? 'text-[#FF725E]'
-				: undefined}">Contact</a>
-	</div>
-	<div class="hidden items-center justify-end space-x-6 xl:flex">
-		<!-- jam icons -->
-		<!-- <a href="https://www.linkedin.com/in/zixianchen/"
-			><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-gray-600 lg:h-10 lg:w-10" viewBox="-2 -2 24 24"
-				><g
-					><path
-						d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457c-.592 0-.945.398-1.1.784c-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066c1.41 0 2.468.922 2.468 2.902M6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115c-.014-.632-.465-1.114-1.199-1.114m-1.086 9.556h2.144V8.38H5.127z" /><path
-						d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4" /></g
-				></svg
-			></a>
-		<a href="https://github.com/zachczx?tab=repositories"
-			><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-gray-600 lg:h-10 lg:w-10" viewBox="-2 -2 24 24"
-				><g
-					><path
-						d="M8.18 15.008c.12 0 .211-.004.271-.012a.317.317 0 0 0 .18-.107c.06-.063.09-.154.09-.274l-.004-.557c-.003-.355-.004-.637-.004-.844l-.188.033a2.41 2.41 0 0 1-.455.028a3.498 3.498 0 0 1-.57-.057a1.276 1.276 0 0 1-.548-.246a1.04 1.04 0 0 1-.36-.503l-.082-.189a2.046 2.046 0 0 0-.258-.417a.989.989 0 0 0-.357-.312l-.057-.04a.602.602 0 0 1-.106-.1a.455.455 0 0 1-.074-.114c-.016-.038-.003-.07.04-.094a.533.533 0 0 1 .238-.037l.164.025c.11.021.245.087.406.196c.16.11.293.251.397.426c.126.224.277.395.455.512a.964.964 0 0 0 .536.176c.18 0 .336-.013.467-.04a1.63 1.63 0 0 0 .369-.124c.049-.365.182-.647.4-.843a5.61 5.61 0 0 1-.839-.148a3.346 3.346 0 0 1-.77-.32a2.204 2.204 0 0 1-.66-.548c-.174-.219-.317-.505-.43-.86a4.09 4.09 0 0 1-.167-1.229c0-.66.216-1.223.647-1.687c-.202-.497-.183-1.054.057-1.671c.159-.05.394-.013.705.11c.311.123.54.228.684.316c.145.087.26.16.348.22a5.814 5.814 0 0 1 1.573-.212c.54 0 1.065.07 1.573.213l.31-.197c.214-.13.465-.251.754-.36c.29-.11.511-.14.664-.09c.246.617.268 1.174.065 1.67c.432.465.648 1.027.648 1.688c0 .464-.056.875-.168 1.233c-.112.358-.257.644-.434.86a2.29 2.29 0 0 1-.664.545a3.342 3.342 0 0 1-.77.32a5.605 5.605 0 0 1-.84.147c.284.245.426.633.426 1.163v1.957c0 .093.014.168.041.226a.226.226 0 0 0 .131.119c.06.021.114.035.16.04c.047.006.113.009.2.009z" /><path
-						d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4" /></g
-				></svg
-			></a>
-		<a href="/blog">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" class="h-6 w-6 fill-gray-600 lg:h-10 lg:w-10"
-				><g
-					><path
-						d="M5.024 12.655h3.92v1.887h-3.92zm5.881 0h3.918v1.887h-3.918zM5.021 8.881h9.802v1.887H5.021zm.003-3.774h5.881v1.887H5.024zm7.841 0h1.96v1.887h-1.96z" /><path
-						d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4" /></g
-				></svg
-			></a> -->
+				: undefined}">Contact</a> -->
+		<a
+			aria-current={$page.url.pathname === '/contact' ? 'page' : undefined}
+			id="navContact"
+			href="/contact"
+			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-500 ease-out hover:no-underline">
+			<div
+				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-300 text-red-950 transition-all duration-500 ease-out group-hover:bg-pink-700 group-hover:text-white">
+				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="hugeicons:mail-open" viewBox="0 0 24 24"
+					><g
+						fill="none"
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="1.5"
+						color="currentColor"
+						><path
+							d="m5 7l-1.218.813c-.874.582-1.311.873-1.548 1.317c-.237.445-.235.967-.231 2.01c.004 1.258.016 2.538.048 3.834c.077 3.075.115 4.612 1.246 5.742c1.13 1.13 2.688 1.17 5.804 1.248a116 116 0 0 0 5.799 0c3.116-.078 4.674-.117 5.804-1.248c1.13-1.13 1.169-2.667 1.246-5.742c.032-1.296.044-2.576.048-3.833c.003-1.044.005-1.566-.232-2.01c-.236-.445-.673-.736-1.547-1.318L19 7" /><path
+							d="m2 10l6.913 4.148C10.417 15.05 11.169 15.5 12 15.5s1.583-.45 3.087-1.353L22 10" /><path
+							d="M5 12V6c0-1.886 0-2.828.586-3.414S7.114 2 9 2h6c1.886 0 2.828 0 3.414.586S19 4.114 19 6v6m-9-2h4m-4-4h4" /></g
+					></svg>
+			</div>
+			<div
+				class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 rounded text-base font-bold text-red-950 group-hover:-top-6 group-hover:flex">
+				<div class="text-center text-white">Contact</div>
+			</div>
+		</a>
 
 		<a
 			href="https://www.linkedin.com/in/zixianchen/"
-			onkeydown={addNeumorphismInset}
-			onmousedown={addNeumorphismInset}
-			onmouseup={removeNeumorphismInset}
-			onkeyup={removeNeumorphismInset}
-			class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-900/70"
-			draggable="false">
-			<!-- flowbite:linkedin-solid -->
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
-				><g fill="#fafafa"
+			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-500 ease-out hover:no-underline">
+			<div
+				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-300 text-red-950 transition-all duration-500 ease-out group-hover:bg-pink-700 group-hover:text-white">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="1em"
+					height="1em"
+					class="akar-icons:linkedin-v2-fill"
+					viewBox="0 0 24 24"
 					><path
+						fill="currentColor"
 						fill-rule="evenodd"
-						d="M12.51 8.796v1.697a3.74 3.74 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766c-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483a1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.6 1.6 0 0 1 1.6 1.606"
-						clip-rule="evenodd" /><path d="M7.2 8.809H4V19.5h3.2z" /></g
-				></svg>
+						d="M9.429 8.969h3.714v1.85c.535-1.064 1.907-2.02 3.968-2.02c3.951 0 4.889 2.118 4.889 6.004V22h-4v-6.312c0-2.213-.535-3.461-1.897-3.461c-1.889 0-2.674 1.345-2.674 3.46V22h-4zM2.57 21.83h4V8.799h-4zM7.143 4.55a2.53 2.53 0 0 1-.753 1.802a2.57 2.57 0 0 1-1.82.748a2.6 2.6 0 0 1-1.818-.747A2.55 2.55 0 0 1 2 4.55c0-.677.27-1.325.753-1.803A2.58 2.58 0 0 1 4.571 2c.682 0 1.336.269 1.819.747s.753 1.126.753 1.803"
+						clip-rule="evenodd" /></svg>
+			</div>
+			<div
+				class="absolute -top-6 left-1/2 hidden h-auto w-fit -translate-x-1/2 rounded text-base font-bold text-red-950 group-hover:-bottom-16 group-hover:flex">
+				<div class="text-center text-white">LinkedIn</div>
+			</div>
 		</a>
+
 		<a
 			href="https://github.com/zachczx?tab=repositories"
-			class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-900/70"
-			onkeydown={addNeumorphismInset}
-			onmousedown={addNeumorphismInset}
-			onmouseup={removeNeumorphismInset}
-			onkeyup={removeNeumorphismInset}
-			draggable="false">
-			<!-- tabler:brand-github-filled -->
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
-				><path
-					fill="#fafafa"
-					d="M5.315 2.1c.791-.113 1.9.145 3.333.966l.272.161l.16.1l.397-.083a13.3 13.3 0 0 1 4.59-.08l.456.08l.396.083l.161-.1c1.385-.84 2.487-1.17 3.322-1.148l.164.008l.147.017l.076.014l.05.011l.144.047a1 1 0 0 1 .53.514a5.2 5.2 0 0 1 .397 2.91l-.047.267l-.046.196l.123.163c.574.795.93 1.728 1.03 2.707l.023.295L21 9.5c0 3.855-1.659 5.883-4.644 6.68l-.245.061l-.132.029l.014.161l.008.157l.004.365l-.002.213L16 21a1 1 0 0 1-.883.993L15 22H9a1 1 0 0 1-.993-.883L8 21v-.734c-1.818.26-3.03-.424-4.11-1.878l-.535-.766c-.28-.396-.455-.579-.589-.644l-.048-.019a1 1 0 0 1 .564-1.918c.642.188 1.074.568 1.57 1.239l.538.769c.76 1.079 1.36 1.459 2.609 1.191L8 17.562l-.018-.168a5.03 5.03 0 0 1-.021-.824l.017-.185l.019-.12l-.108-.024c-2.976-.71-4.703-2.573-4.875-6.139l-.01-.31L3 9.5a5.6 5.6 0 0 1 .908-3.051l.152-.222l.122-.163l-.045-.196a5.2 5.2 0 0 1 .145-2.642l.1-.282l.106-.253a1 1 0 0 1 .529-.514l.144-.047z" /></svg>
+			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-500 ease-out hover:no-underline">
+			<div
+				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-300 text-red-950 transition-all duration-500 ease-out group-hover:bg-pink-700 group-hover:text-white">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="1em"
+					height="1em"
+					class="akar-icons:github-fill"
+					viewBox="0 0 24 24"
+					><g fill="none"
+						><g clip-path="url(#akarIconsGithubFill0)"
+							><path
+								fill="currentColor"
+								fill-rule="evenodd"
+								d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385c.6.105.825-.255.825-.57c0-.285-.015-1.23-.015-2.235c-3.015.555-3.795-.735-4.035-1.41c-.135-.345-.72-1.41-1.23-1.695c-.42-.225-1.02-.78-.015-.795c.945-.015 1.62.87 1.845 1.23c1.08 1.815 2.805 1.305 3.495.99c.105-.78.42-1.305.765-1.605c-2.67-.3-5.46-1.335-5.46-5.925c0-1.305.465-2.385 1.23-3.225c-.12-.3-.54-1.53.12-3.18c0 0 1.005-.315 3.3 1.23c.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23c.66 1.65.24 2.88.12 3.18c.765.84 1.23 1.905 1.23 3.225c0 4.605-2.805 5.625-5.475 5.925c.435.375.81 1.095.81 2.22c0 1.605-.015 2.895-.015 3.3c0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12"
+								clip-rule="evenodd" /></g
+						><defs><clipPath id="akarIconsGithubFill0"><path fill="#fff" d="M0 0h24v24H0z" /></clipPath></defs></g
+					></svg>
+			</div>
+			<div
+				class="absolute -top-6 left-1/2 hidden h-auto w-fit -translate-x-1/2 rounded text-base font-bold text-red-950 group-hover:-bottom-16 group-hover:flex">
+				<div class="text-center text-white">GitHub</div>
+			</div>
 		</a>
+
 		<a
 			href="/blog"
-			class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-900/70"
-			onkeydown={addNeumorphismInset}
-			onmousedown={addNeumorphismInset}
-			onmouseup={removeNeumorphismInset}
-			onkeyup={removeNeumorphismInset}
-			draggable="false">
-			<!-- material-symbols:article -->
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
-				><path
-					fill="#fafafa"
-					d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm2-4h7v-2H7zm0-4h10v-2H7zm0-4h10V7H7z" /></svg>
+			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-500 ease-out hover:no-underline">
+			<div
+				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-300 text-red-950 transition-all duration-500 ease-out group-hover:bg-pink-700 group-hover:text-white">
+				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="hugeicons:book-04" viewBox="0 0 24 24"
+					><g
+						fill="none"
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="1.5"
+						color="currentColor"
+						><path d="M7.5 4.945H16a1.5 1.5 0 0 1 1.5 1.5v1.5m-2.5 5H9m3 4H9" /><path
+							d="M18.497 2H6.307c-.496 0-1.005.073-1.406.368c-1.274.935-2.256 3.02-.273 4.903c.556.528 1.334.72 2.099.72h11.557c.793 0 2.216.113 2.216 2.536v7.454c0 2.22-1.79 4.019-3.997 4.019h-9.03c-2.204 0-3.807-1.557-3.933-3.929L3.506 5.166" /></g
+					></svg>
+				<div
+					class="absolute -top-6 left-1/2 hidden h-auto w-fit -translate-x-1/2 rounded text-base font-bold text-red-950 group-hover:-bottom-16 group-hover:flex">
+					<div class="text-center text-white">Blog</div>
+				</div>
+			</div>
 		</a>
 	</div>
+	<div class="hidden items-center justify-end space-x-6 xl:flex"></div>
 </nav>
 
 <style>
@@ -161,10 +274,10 @@
 
 	.navMenu > a {
 		position: relative;
-		height: 100%;
+		/* height: 100%; */
 	}
 
-	a[aria-current='page']::before {
+	/* a[aria-current='page']::before {
 		--size: 8px;
 		content: '';
 		width: 0;
@@ -173,7 +286,66 @@
 		top: -1px;
 		left: calc(50% - var(--size));
 		border: var(--size) solid transparent;
-		border-top: var(--size) solid rgb(255, 114, 94, 1); /*#1e293b;*/
+		border-top: var(--size) solid rgb(255, 114, 94, 1); #1e293b;
 		view-transition-name: navCurrent;
+	} */
+
+	nav {
+		--font-scaler: 0.3;
+		--dimensions-scaler: 0.3;
+		--margin-scaler: 0.4;
+	}
+
+	.dock {
+		font-size: calc(var(--font-scaler) * 6rem);
+		div {
+			height: calc(var(--dimensions-scaler) * 9rem);
+			width: calc(var(--dimensions-scaler) * 9rem);
+		}
+	}
+
+	.dock:hover {
+		font-size: calc(var(--font-scaler) * 9rem);
+		div {
+			height: calc(var(--dimensions-scaler) * 13rem);
+			width: calc(var(--dimensions-scaler) * 13rem);
+		}
+		margin-bottom: calc(var(--margin-scaler) * -5rem);
+	}
+
+	/* Adjacent to hover */
+	.dock:hover + .dock,
+	.dock:has(+ .dock:hover) {
+		font-size: calc(var(--font-scaler) * 8rem);
+		/* background-color: fuchsia; */
+		div {
+			height: calc(var(--dimensions-scaler) * 11rem);
+			width: calc(var(--dimensions-scaler) * 11rem);
+		}
+		margin-bottom: calc(var(--margin-scaler) * -3rem);
+	}
+
+	/* Next next - beside adjacent */
+	.dock:hover + .dock + .dock,
+	.dock:has(+ .dock + .dock:hover) {
+		font-size: calc(var(--font-scaler) * 7rem);
+		/* background-color: green; */
+		div {
+			height: calc(var(--dimensions-scaler) * 10rem);
+			width: calc(var(--dimensions-scaler) * 10rem);
+		}
+		margin-bottom: calc(var(--margin-scaler) * -2rem);
+	}
+
+	/* Next next next */
+	.dock:hover + .dock + .dock + .dock,
+	.dock:has(+ .dock + .dock + .dock:hover) {
+		font-size: calc(var(--font-scaler) * 6rem);
+		/* background-color: purple; */
+		div {
+			height: calc(var(--dimensions-scaler) * 9rem);
+			width: calc(var(--dimensions-scaler) * 9rem);
+		}
+		margin-bottom: calc(var(--margin-scaler) * -1rem);
 	}
 </style>
