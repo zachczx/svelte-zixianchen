@@ -40,7 +40,7 @@
 				d="M80.99 121.3v3.63l-36.08.24l.03-3.9zm-35.37-8.82l34.65.01v3.82H45.62z" /></svg>
 	</div>
 	<span
-		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-red-400 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
+		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
 		>Home</span>
 </a>
 
@@ -105,7 +105,7 @@
 			></svg>
 	</div>
 	<span
-		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-red-400 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
+		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
 		>About</span>
 </a>
 
@@ -150,7 +150,7 @@
 				fill="#FFF59D"
 				d="M58.77 78.83c0 2.3-.35 2.55-1.11 2.55s-.88-.74-.88-2.57s.13-2.46.94-2.46s1.05.18 1.05 2.48m1.28 9.63c0 2.2.04 3.5-1.02 3.5c-1.07 0-1.17-1.24-1.17-3.56c0-1.67 0-3.04 1.11-3.04c1.1-.01 1.08.89 1.08 3.1" /></svg>
 		<span
-			class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-red-400 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
+			class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
 			>Career</span>
 	</div>
 </a>
@@ -220,7 +220,7 @@
 			></svg>
 	</div>
 	<span
-		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-red-400 text-sm text-white/90 group-hover:-top-5 group-hover:flex">
+		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 text-sm text-white/90 group-hover:-top-5 group-hover:flex">
 		Projects
 	</span>
 </a>
@@ -302,7 +302,7 @@
 			></svg>
 	</div>
 	<span
-		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-red-400 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
+		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
 		>Contact</span>
 </a>
 
@@ -328,7 +328,7 @@
 			></svg>
 	</div>
 	<span
-		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-red-400 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
+		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
 		>LinkedIn</span>
 </a>
 
@@ -353,7 +353,7 @@
 		</svg>
 	</div>
 	<span
-		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-red-400 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
+		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
 		>GitHub</span>
 </a>
 
@@ -429,7 +429,7 @@
 				></g
 			></svg>
 		<span
-			class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-red-400 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
+			class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
 			>Blog</span>
 	</div>
 </a>
