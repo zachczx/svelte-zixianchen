@@ -33,11 +33,13 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import Globe from '$lib/magic-ui/Globe.svelte';
 	import AnimatedBeamMultipleInput from '$lib/magic-ui/AnimatedBeamMultipleInput.svelte';
+	import CareerPercentage from '$lib/CareerPercentage.svelte';
 
 	///////////////////////////////////
 
 	let animate: string = $state('');
 	let navCurrent: string = $state('header');
+	let currentPercentageBar: string = $state('');
 
 	onMount(() => {
 		let tank = document.getElementById('tank') as HTMLElement;
@@ -73,6 +75,28 @@
 		});
 		for (let i = 0; i < navItem.length; i++) {
 			observerNav.observe(navItem[i]);
+		}
+
+		/**
+		 * Observer for progress bar
+		 * Unfortunately, I tried setting individual intersection observers to the same $state rune, but those failed on refreshes.
+		 * Because only 1 progress bar would trigger. Observer fired, but only 1 component init.
+		 * As a next best option, 1 observer triggers all the components as a simpler implementation.
+		 */
+		let percentageBarsItems: NodeListOf<HTMLElement> = document.querySelectorAll('.percent') as NodeListOf<HTMLElement>;
+
+		let observerPercentageBars: IntersectionObserver = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					currentPercentageBar = entry.target.id;
+					console.log('entering: ', entry.target.id);
+				} else {
+					// console.log('exiting: ', entry.target.id);
+				}
+			});
+		});
+		for (let i = 0; i < percentageBarsItems.length; i++) {
+			observerPercentageBars.observe(percentageBarsItems[i]);
 		}
 
 		/**
@@ -541,10 +565,13 @@
 						<div class="absolute h-full w-full"></div>
 					</div>
 					<div
-						class="card relative col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE] xl:col-span-2">
+						id="percentMonthsTech"
+						class="percent card relative col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE] xl:col-span-2">
 						<div class="card-body z-20 grid grid-cols-1 content-start gap-x-8 space-y-4 xl:grid-cols-3">
-							<h3 class="col-span-1 xl:col-span-3">
-								Tech <span class="text-xl text-gray-500">({percentMonthsTech}%)</span>
+							<h3 class="col-span-1 flex items-center xl:col-span-3">
+								Tech
+								<!-- <span class="text-xl text-gray-500">({percentMonthsTech}%)</span> -->
+								<CareerPercentage percentage={percentMonthsTech} {currentPercentageBar} className="ms-8" />
 							</h3>
 							<div>
 								<h4>Service Delivery Tech Team Lead</h4>
@@ -564,7 +591,9 @@
 				<div
 					class="card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE] xl:col-span-1">
 					<div class="card-body space-y-4">
-						<h3>Comms <span class="text-xl text-gray-500">({percentMonthsComms}%)</span></h3>
+						<h3 id="percentMonthsComms" class="percent flex items-center">
+							Comms<CareerPercentage percentage={percentMonthsComms} {currentPercentageBar} className="ms-8" />
+						</h3>
 						<div>
 							<h4>Media Relations Officer</h4>
 							<p>Managed media and collaborated on unpaid features of MINDEF & SAF.</p>
@@ -578,9 +607,13 @@
 				</div>
 				<div class="col-span-2 grid gap-7 xl:col-span-1">
 					<!-- subgrid -->
-					<div class="card row-span-1 w-full rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE]">
+					<div
+						id="percentMonthsPolicy"
+						class="percent card row-span-1 w-full rounded-5xl bg-gradient-to-br from-[#FFF8F7] to-[#FFE2DE]">
 						<div class="card-body mb-4 grid content-center space-y-4">
-							<h3>Policy <span class="text-xl text-gray-500">({percentMonthsPolicy}%)<span></span></span></h3>
+							<h3 class="flex items-center">
+								Policy<CareerPercentage percentage={percentMonthsPolicy} {currentPercentageBar} className="ms-8" />
+							</h3>
 							<div>
 								<h4>NS Policy Officer</h4>
 								<p>

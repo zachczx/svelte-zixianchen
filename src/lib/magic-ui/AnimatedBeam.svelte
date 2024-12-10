@@ -12,11 +12,11 @@
 	export let reverse = false; // Include the reverse pro;
 	export let duration = Math.random() * 3 + 4;
 	export let delay = 0;
-	export let pathColor = 'gray';
-	export let pathWidth = 2;
+	export let pathColor = '#900000';
+	export let pathWidth = 4;
 	export let pathOpacity = 0.2;
 	export let gradientStartColor = '#ffaa40';
-	export let gradientStopColor = '#9c40ff';
+	export let gradientStopColor = '#EF4444';
 	export let startXOffset = 0;
 	export let startYOffset = 0;
 	export let endXOffset = 0;
