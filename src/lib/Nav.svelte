@@ -32,12 +32,12 @@
 			><a href="/">Zixian Chen</a></span>
 	</div>
 	<div
-		class="navMenu hidden h-16 w-fit min-w-[40rem] items-center justify-center justify-self-center rounded-2xl border border-b-gray-100 bg-black/70 shadow backdrop-blur-md transition-all duration-500 ease-out lg:relative lg:flex">
+		class="navMenu hidden h-16 w-fit min-w-[40rem] items-center justify-center justify-self-center rounded-2xl border border-b-gray-100 bg-black/70 shadow backdrop-blur-md transition-all duration-300 ease-out lg:relative lg:flex">
 		<!-- <a
 			aria-current={navCurrent === 'about' ? 'page' : undefined}
 			id="navAbout"
 			href="/#about"
-			class="btn btn-link text-xl font-bold text-gray-100 no-underline transition-all duration-500 ease-out hover:no-underline {navCurrent ===
+			class="btn btn-link text-xl font-bold text-gray-100 no-underline transition-all duration-300 ease-out hover:no-underline {navCurrent ===
 			'about'
 				? 'text-[#FF725E]'
 				: undefined}">About</a> -->
@@ -45,9 +45,9 @@
 			aria-current={navCurrent === 'about' ? 'page' : undefined}
 			id="navAbout"
 			href="/#about"
-			class="dock group btn btn-link font-bold text-white no-underline transition-all duration-500 ease-out hover:no-underline">
+			class="dock group btn btn-link font-bold text-white no-underline transition-all duration-300 ease-out hover:no-underline">
 			<div
-				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-300 text-red-950 transition-all duration-500 ease-out group-hover:bg-pink-700 group-hover:text-white">
+				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-400 text-red-950 transition-all duration-300 ease-out group-hover:bg-pink-700 group-hover:text-white">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="1em"
@@ -74,12 +74,12 @@
 			aria-current={navCurrent === 'career' ? 'page' : undefined}
 			id="navCareer"
 			href="/#career"
-			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-500 ease-out hover:no-underline {navCurrent ===
+			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-300 ease-out hover:no-underline {navCurrent ===
 			'career'
 				? 'text-[#FF725E]'
 				: undefined}">
 			<div
-				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-300 text-red-950 transition-all duration-500 ease-out group-hover:bg-pink-700 group-hover:text-white">
+				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-400 text-red-950 transition-all duration-300 ease-out group-hover:bg-pink-700 group-hover:text-white">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="1em"
@@ -107,9 +107,9 @@
 			aria-current={navCurrent === 'projects' || navCurrent === 'side-full' ? 'page' : undefined}
 			id="navSide"
 			href="/#projects"
-			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-500 ease-out hover:no-underline">
+			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-300 ease-out hover:no-underline">
 			<div
-				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-300 text-red-950 transition-all duration-500 ease-out group-hover:bg-pink-700 group-hover:text-white">
+				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-400 text-red-950 transition-all duration-300 ease-out group-hover:bg-pink-700 group-hover:text-white">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="1em"
@@ -152,9 +152,9 @@
 			aria-current={$page.url.pathname === '/contact' ? 'page' : undefined}
 			id="navContact"
 			href="/contact"
-			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-500 ease-out hover:no-underline">
+			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-300 ease-out hover:no-underline">
 			<div
-				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-300 text-red-950 transition-all duration-500 ease-out group-hover:bg-pink-700 group-hover:text-white">
+				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-400 text-red-950 transition-all duration-300 ease-out group-hover:bg-pink-700 group-hover:text-white">
 				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="hugeicons:mail-open" viewBox="0 0 24 24"
 					><g
 						fill="none"
@@ -177,9 +177,9 @@
 
 		<a
 			href="https://www.linkedin.com/in/zixianchen/"
-			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-500 ease-out hover:no-underline">
+			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-300 ease-out hover:no-underline">
 			<div
-				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-300 text-red-950 transition-all duration-500 ease-out group-hover:bg-pink-700 group-hover:text-white">
+				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-400 text-red-950 transition-all duration-300 ease-out group-hover:bg-pink-700 group-hover:text-white">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="1em"
@@ -200,9 +200,9 @@
 
 		<a
 			href="https://github.com/zachczx?tab=repositories"
-			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-500 ease-out hover:no-underline">
+			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-300 ease-out hover:no-underline">
 			<div
-				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-300 text-red-950 transition-all duration-500 ease-out group-hover:bg-pink-700 group-hover:text-white">
+				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-400 text-red-950 transition-all duration-300 ease-out group-hover:bg-pink-700 group-hover:text-white">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="1em"
@@ -227,9 +227,9 @@
 
 		<a
 			href="/blog"
-			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-500 ease-out hover:no-underline">
+			class="dock group btn btn-link relative font-bold text-white no-underline transition-all duration-300 ease-out hover:no-underline">
 			<div
-				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-300 text-red-950 transition-all duration-500 ease-out group-hover:bg-pink-700 group-hover:text-white">
+				class="relative flex items-center justify-center rounded-xl border border-white/70 bg-red-400 text-red-950 transition-all duration-300 ease-out group-hover:bg-pink-700 group-hover:text-white">
 				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="hugeicons:book-04" viewBox="0 0 24 24"
 					><g
 						fill="none"
@@ -293,7 +293,7 @@
 	nav {
 		--font-scaler: 0.3;
 		--dimensions-scaler: 0.3;
-		--margin-scaler: 0.4;
+		--margin-scaler: 0.3;
 	}
 
 	.dock {
