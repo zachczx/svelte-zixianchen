@@ -31,11 +31,13 @@
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import Globe from '$lib/magic-ui/Globe.svelte';
+	import AnimatedBeamMultipleInput from '$lib/magic-ui/AnimatedBeamMultipleInput.svelte';
 
 	///////////////////////////////////
 
 	let animate: string = $state('');
-	let navCurrent: string = $state('');
+	let navCurrent: string = $state('header');
 
 	onMount(() => {
 		let tank = document.getElementById('tank') as HTMLElement;
@@ -201,25 +203,6 @@
 				}
 			},
 		);
-
-		/**
-		 * For the coding bros typing svg animations
-		 */
-		// const svgTyping = document.getElementsByClassName('bubble');
-
-		// const svgTypingAnimation = gsap.timeline({ repeat: -1 });
-		// svgTypingAnimation.to(svgTyping, {
-		// 	stagger: { each: 0.2, from: 'random' },
-		// 	duration: 0.5,
-		// 	// ease: 'bounce.out',
-		// 	scale: 1.4,
-		// });
-		// svgTypingAnimation.to(svgTyping, {
-		// 	stagger: { each: 0.2, from: 'random' },
-		// 	duration: 0.9,
-		// 	// ease: 'bounce.out',
-		// 	scale: 1,
-		// });
 	});
 
 	/**
@@ -280,7 +263,7 @@
 <div class="grid min-h-dvh justify-items-center 2xl:overflow-x-clip">
 	<header
 		id="header"
-		class="hidden content-center justify-items-center xl:grid xl:min-h-dvh xl:max-w-[1500px] xl:grid-cols-5 xl:gap-x-10 xl:gap-y-10">
+		class="navItem hidden content-center justify-items-center xl:grid xl:min-h-dvh xl:max-w-[1500px] xl:grid-cols-5 xl:gap-x-10 xl:gap-y-10">
 		<div class="content-center justify-self-center xl:col-span-1">
 			<span
 				class="inline-block w-full bg-gradient-to-r from-gray-700 to-slate-700 bg-clip-text font-serif text-4xl leading-none tracking-tighter text-[#341319] text-transparent xl:text-start xl:text-[7rem]"
@@ -316,7 +299,8 @@
 	<enhanced:img src={selfSndgoPic} alt="" class="max-w-screen xl:hidden"></enhanced:img>
 	<main>
 		<section
-			class="max-w-dvw hidden min-h-[30rem] content-center gap-y-20 xl:grid xl:min-h-[60rem]"
+			id="preamble"
+			class="navItem max-w-dvw hidden min-h-[30rem] content-center gap-y-20 xl:grid xl:min-h-[60rem]"
 			style="background:url({bridge}); background-size: cover; background-position: center">
 			<h2
 				class="custom-reveal-text mb-4 w-full rounded-5xl text-center font-sans text-2xl leading-none tracking-tighter xl:text-4xl">
@@ -352,12 +336,9 @@
 				<div
 					class="navItem card col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200 xl:col-span-3"
 					id="about">
-					<div class="card-body relative grid h-fit grid-cols-2 justify-items-center p-8">
-						<div class="z-10 hidden max-h-56 xl:flex">
-							<enhanced:img src={winXp} alt="Windows XP ugh" class="-ms-20 mt-14 rounded-2xl"></enhanced:img>
-						</div>
-
-						<div class="z-10 col-span-2 space-y-4 self-center xl:col-span-1">
+					<div class="card-body relative grid h-fit justify-items-center space-y-4 p-8 xl:grid-cols-2">
+						<div class="flex w-full justify-center"><AnimatedBeamMultipleInput /></div>
+						<div class="z-10 space-y-4 self-center">
 							<h3>About Me</h3>
 							<p>
 								I'm into <b>web dev, computers, devices, sysadmin</b>.
@@ -365,10 +346,6 @@
 							<p>I'll die on the hills of Windows, Ubuntu, Android.</p>
 							<p>Never used a Mac.</p>
 						</div>
-						<enhanced:img
-							src={ubuntuCli}
-							alt="Ubuntu"
-							class="absolute -left-14 top-4 hidden -rotate-[0deg] rounded-2xl xl:flex"></enhanced:img>
 					</div>
 				</div>
 				<div
@@ -469,7 +446,7 @@
 					</div>
 				</div>
 				<div
-					class="card col-span-2 grid w-full grid-cols-2 overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200">
+					class="card col-span-2 grid w-full overflow-hidden rounded-5xl bg-gradient-to-br from-red-50 to-red-200 xl:grid-cols-2">
 					<div class="card-body space-y-4 self-center">
 						<h3>Interests</h3>
 						<p class="z-10">
@@ -486,7 +463,7 @@
 						</p>
 					</div>
 					<div class="self-center">
-						<enhanced:img src={programming} alt="" class="translate-x-16 scale-150"></enhanced:img>
+						<enhanced:img src={programming} alt="" class="translate-x-16 lg:scale-150"></enhanced:img>
 					</div>
 				</div>
 
@@ -516,18 +493,18 @@
 				<h2 class="pb-10">My side projects help me do my work better.</h2>
 				<div class="grid gap-4 lg:grid-cols-1 lg:gap-14">
 					<div class="space-y-6 rounded-6xl">
-						<h3>Opportunities, Gaps</h3>
+						<h3>See Opportunities, Gaps</h3>
 						<p>
 							I spot opportunities and gaps in systems, ideas and processes. I'm no genius - I just recall ideas from
 							product leaders and engineers.
 						</p>
 					</div>
 					<div class="space-y-6 rounded-6xl">
-						<h3>Know What It Takes</h3>
+						<h3>Estimate Better</h3>
 						<p>Because I can somewhat code, I know complexity, trade-offs, and "definition of done".</p>
 					</div>
 					<div class="space-y-6 rounded-6xl">
-						<h3>Cost Scrutiny</h3>
+						<h3>Scrutinize Costs</h3>
 						<p>
 							I hate wastage, bloated stuff, and getting ripped off. So much of these are hidden in dumb requirements
 							and hidden assumptions, written by people who either don't know or don't care.
@@ -778,6 +755,9 @@
 <span class="drive-right"></span>
 
 <style>
+	/* * {
+		border: 1px solid red;
+	} */
 	.fontinter {
 		font-family: 'Inter Variable', sans-serif;
 		font-weight: 700;
