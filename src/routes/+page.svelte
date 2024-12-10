@@ -560,7 +560,7 @@
 				<div class="col-span-2 grid gap-7">
 					<!-- subgrid -->
 					<div class="card relative col-span-2 row-span-1 w-full overflow-hidden rounded-5xl bg-base-100 xl:col-span-2">
-						<canvas class="block hidden md:grid" id="c"></canvas>
+						<canvas class="hidden md:grid" id="c"></canvas>
 						<div class="absolute h-full w-full"></div>
 					</div>
 					<div
