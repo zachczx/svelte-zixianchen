@@ -130,7 +130,7 @@
 	}
 
 	code > span.diff.add,
-	code > .diff.remove {
+	code > span.diff.remove {
 		width: 100%;
 		display: inline-block;
 		background-color: rgba(197, 214, 232, 0.16);
@@ -138,13 +138,29 @@
 		margin-bottom: -0.63rem;
 	}
 
+	pre.shiki.has-diff > code > span.line:not(.diff)::before {
+		content: ' ';
+		opacity: 0;
+		margin-right: 1em;
+	}
+
+	code > span.line.diff.add {
+		background-color: rgba(0, 235, 0, 0.26);
+	}
+
+	code > span.line.diff.remove {
+		background-color: rgba(229, 0, 0, 0.26);
+	}
+
 	.diff.add::before {
 		content: '+';
+		margin-right: 1em;
 		color: limegreen;
 	}
 
 	.diff.remove::before {
 		content: '-';
+		margin-right: 1em;
 		color: red;
 	}
 }
