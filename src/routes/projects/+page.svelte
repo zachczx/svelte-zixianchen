@@ -52,21 +52,55 @@
 
 	import Projects from '$lib/assets/allison-saeng-g45iYq7eQR4-unsplash.jpg?enhanced&w=1920px;1080px;768px;640px;400px';
 	import Junkyard from '$lib/assets/sohrab-zia-WXdMkkkZWg4-unsplash.jpg?enhanced&w=1920px;1080px;768px;640px;400px';
+
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+		const splash = document.getElementsByClassName('trigger-splash');
+		const particles = document.getElementsByClassName('trigger-particles');
+		const particlesContainer = document.getElementsByClassName('trigger-particles-container');
+		let tl = gsap.matchMedia();
+		tl.add('(min-width: 1028px)', () => {
+			for (let i = 0; i < splash.length; i++) {
+				gsap.to(splash[i], {
+					scrollTrigger: {
+						trigger: splash[i],
+						start: 'start start',
+						scrub: true,
+						markers: false,
+					},
+					y: 400,
+					filter: 'grayscale(50%)',
+				});
+			}
+
+			for (let i = 0; i < particles.length; i++) {
+				gsap.from(particles[i], {
+					scrollTrigger: {
+						trigger: particlesContainer[i],
+						start: 'start center',
+						// scrub: true,
+						markers: false,
+					},
+					autoAlpha: 0,
+				});
+			}
+		});
+	});
 </script>
 
-<div class="relative min-h-[30vh]">
+<div class="relative min-h-[30vh] overflow-hidden">
 	<div class="absolute left-1/2 top-10 z-[1] -translate-x-1/2 text-center text-black/90">
-		<h2 class="lg:pt-10">Projects</h2>
+		<h2 class="lg:pt-20 xl:pt-28 2xl:pt-40">Projects</h2>
 		<p class="mt-4 text-xl">Things I created to solve my problems.</p>
 	</div>
 	<enhanced:img
 		src={Projects}
 		alt="Projects"
-		class="lg:brightness-25 max-h-[30rem] w-full object-cover object-top opacity-[0.2] lg:max-h-[40rem] lg:opacity-100 xl:max-h-[80dvh]"
+		class="trigger-splash lg:brightness-25 max-h-[30rem] w-full object-cover object-top opacity-[0.2] lg:max-h-[40rem] xl:max-h-[80dvh] xl:opacity-100"
 		sizes="(min-width:1920px) 1920px, (min-width:1080px) 1080px, (min-width:768px) 768px, (min-width:640px) 640px, (min-width:400px) 400px" />
 </div>
 
-<div id="abbreviation" class="max-w-dvw relative grid py-10 lg:grid-cols-3 lg:py-20">
+<div id="abbreviation" class="max-w-dvw trigger-particles-container relative grid py-10 lg:grid-cols-3 lg:py-20">
 	<div class="z-[1] place-self-center">
 		<div class="flex justify-center">
 			<a href="https://abbreviation.zixian.dev"
@@ -128,8 +162,8 @@
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#0069ff] decoration-8 underline-offset-4">What I wanted</h3>
 				<p>
-					I wanted to build a search engine and database of abbreviations. There were already a couple of
-					implementations out there, but I wanted to build a better, faster, more modern one.
+					I wanted to build a lightweight search app for abbreviations. There were already a few JS side projects by
+					individual civil servants, but I wanted to make a faster one with Go.
 				</p>
 			</div>
 			<div
@@ -168,12 +202,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="hidden lg:flex">
+	<div class="trigger-particles hidden lg:flex">
 		<Particles className="absolute inset-0 opacity-[0.3]" refresh={true} color="#0069ff" quantity="70" size="5" />
 	</div>
 </div>
 
-<div id="appraize" class="max-w-dvw relative grid bg-[#491eff]/5 py-10 lg:grid-cols-3 lg:py-20">
+<div
+	id="appraize"
+	class="max-w-dvw trigger-particles-container relative grid bg-[#491eff]/5 py-10 lg:grid-cols-3 lg:py-20">
 	<div class="z-[1] place-self-center">
 		<a href="https://appraize.zixian.dev/"
 			><h3 class="text-center font-sans text-5xl font-black tracking-tighter text-[#491eff] lg:text-7xl">
@@ -216,7 +252,7 @@
 		host="Coolify, NodeJS, Nginx"
 		className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
-		<div class="z-[1] grid max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+		<div class="z-[1] grid max-w-[1400px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Problem</h3>
@@ -250,14 +286,22 @@
 		</div>
 	</div>
 	<div class="hidden lg:flex">
-		<Particles className="absolute inset-0 opacity-[0.3]" refresh={true} color="#491eff" quantity="25" size="15" />
+		<Particles
+			className="absolute inset-0 opacity-[0.3] trigger-particles"
+			refresh={true}
+			color="#491eff"
+			quantity="25"
+			size="15" />
 	</div>
 </div>
 
-<div id="apptitude" class="max-w-dvw relative grid bg-lime-400/5 py-10 lg:grid-cols-3 lg:py-20">
+<div
+	id="apptitude"
+	class="max-w-dvw trigger-particles-container relative grid bg-lime-400/5 py-10 lg:grid-cols-3 lg:py-20">
 	<div class="z-[1] w-full content-center justify-self-center px-20">
 		<div class="flex justify-center">
-			<a href="https://titude.app/"><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class=""></enhanced:img></a>
+			<a href="https://titude.app/" aria-label="Apptitude webapp"
+				><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class=""></enhanced:img></a>
 		</div>
 		<ExitLinks url="https://titude.app/" github="https://github.com/zachczx/apptitude" className="fill-lime-400" />
 		<div class="mx-10 mt-10 hidden flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
@@ -281,7 +325,7 @@
 	</div>
 	<StackUsed framework="Sveltekit" library="Gsap, Tailwind, Pagefind" host="Cloudflare" className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
-		<div class="z-[1] grid max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+		<div class="z-[1] grid max-w-[1400px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-400 decoration-8 underline-offset-4">Problem</h3>
@@ -315,11 +359,18 @@
 		</div>
 	</div>
 	<div class="hidden lg:flex">
-		<Particles className="absolute inset-0 opacity-[0.5]" refresh={true} color="#a3e635" quantity="20" size="2" />
+		<Particles
+			className="absolute inset-0 opacity-[0.5] trigger-particles"
+			refresh={true}
+			color="#a3e635"
+			quantity="20"
+			size="2" />
 	</div>
 </div>
 
-<div id="btonomics" class="max-w-dvw relative grid bg-[#38bdf8]/15 py-10 lg:grid-cols-3 lg:py-20">
+<div
+	id="btonomics"
+	class="max-w-dvw trigger-particles-container relative grid bg-[#38bdf8]/15 py-10 lg:grid-cols-3 lg:py-20">
 	<div class="z-[1] place-self-center">
 		<div class="flex justify-center">
 			<a href="https://btonomics.com"
@@ -345,7 +396,7 @@
 	</div>
 	<StackUsed framework="AstroJS" library="Tailwind, Pagefind" host="Cloudflare" className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
-		<div class="z-[1] grid max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+		<div class="z-[1] grid max-w-[1400px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Problem</h3>
@@ -377,7 +428,12 @@
 		</div>
 	</div>
 	<div class="hidden lg:flex">
-		<Particles className="absolute inset-0 opacity-[0.3]" refresh={true} color="#38bdf8" quantity="20" size="15" />
+		<Particles
+			className="absolute inset-0 opacity-[0.3] trigger-particles"
+			refresh={true}
+			color="#38bdf8"
+			quantity="20"
+			size="15" />
 	</div>
 </div>
 
@@ -418,7 +474,7 @@
 	</div>
 	<StackUsed framework="Sveltekit, Pocketbase" library="Tailwind" host="Coolify" className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
-		<div class="z-[1] grid max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+		<div class="z-[1] grid max-w-[1400px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-sky-500 decoration-8 underline-offset-4">Problem</h3>
@@ -444,7 +500,12 @@
 		</div>
 	</div>
 	<div class="hidden lg:flex">
-		<Particles className="absolute inset-0 opacity-[0.1]" refresh={true} color="#0ea5e9" quantity="30" size="10" />
+		<Particles
+			className="absolute inset-0 opacity-[0.1] trigger-particles"
+			refresh={true}
+			color="#0ea5e9"
+			quantity="30"
+			size="10" />
 	</div>
 </div>
 
@@ -483,7 +544,7 @@
 	</div>
 	<StackUsed framework="Go, Postgres" library="Templ, HTMX, Tailwind" host="Coolify" className="lg:hidden" />
 	<div class="z-[1] grid content-center justify-items-center px-4 lg:col-span-2">
-		<div class="grid max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+		<div class="grid max-w-[1400px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">Problem</h3>
@@ -512,7 +573,12 @@
 		</div>
 	</div>
 	<div class="hidden lg:flex">
-		<Particles className="absolute inset-0 opacity-[0.1]" refresh={true} color="#1b510f" quantity="30" size="10" />
+		<Particles
+			className="absolute inset-0 opacity-[0.1] trigger-particles"
+			refresh={true}
+			color="#1b510f"
+			quantity="30"
+			size="10" />
 	</div>
 </div>
 
@@ -524,16 +590,16 @@
 	<enhanced:img
 		src={Junkyard}
 		alt="Junkyard"
-		class="lg:brightness-25 max-h-[30rem] w-full object-cover object-center opacity-[0.2] lg:max-h-[40rem] lg:opacity-100 xl:max-h-[80dvh]"
+		class="trigger-splash lg:brightness-25 max-h-[30rem] w-full object-cover object-center opacity-[0.2] lg:max-h-[40rem] lg:opacity-100 xl:max-h-[80dvh]"
 		sizes="(min-width:1920px) 1920px, (min-width:1080px) 1080px, (min-width:768px) 768px, (min-width:640px) 640px, (min-width:400px) 400px" />
 </div>
 
 <div
 	id="btonomics-old"
-	class="max-w-dvw grid bg-yellow-500/20 py-10 saturate-50 hover:saturate-100 lg:grid-cols-3 lg:py-20">
+	class="max-w-dvw grid bg-yellow-200 py-10 saturate-50 hover:saturate-100 lg:grid-cols-3 lg:py-20">
 	<div class="z-[1] place-self-center px-20">
 		<div class="flex justify-center">
-			<a href="https://old.btonomics.com"
+			<a href="https://old.btonomics.com" aria-label="BTOnomics Old"
 				><enhanced:img src={oldBtonomicsLogo} alt="Btonomics Old Logo" class=""></enhanced:img></a>
 		</div>
 		<ExitLinks url="https://old.btonomics.com" className="fill-yellow-500" />
@@ -557,7 +623,7 @@
 	</div>
 	<StackUsed framework="Wordpress" library="Mysql" host="Nginx, Apache, Bunny CDN" className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
-		<div class="grid max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+		<div class="grid max-w-[1400px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-yellow-500 decoration-8 underline-offset-4">Problem</h3>
@@ -603,7 +669,7 @@
 	<div class="z-[1] place-self-center px-20">
 		<div class="avatar flex justify-center">
 			<div class="w-56 rounded-full">
-				<a href="https://eatyourmeds.zixian.dev/"
+				<a href="https://eatyourmeds.zixian.dev/" aria-label="Eat Your Meds webapp"
 					><enhanced:img src={eatYourMedsLogo} alt="Eat Your Meds!"></enhanced:img></a>
 			</div>
 		</div>
@@ -638,7 +704,7 @@
 	</div>
 	<StackUsed framework="Django" library="HTMX, Bootstrap, Postgresql" host="Nginx, Gunicorn" className="lg:hidden" />
 	<div class="grid content-center justify-items-center px-4 lg:col-span-2">
-		<div class="grid max-w-[1000px] content-start gap-10 lg:grid-cols-2">
+		<div class="grid max-w-[1400px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-lime-700 decoration-8 underline-offset-4">Problem</h3>
@@ -670,7 +736,8 @@
 <div id="rankamate" class="max-w-dvw grid bg-red-800/20 py-10 saturate-50 hover:saturate-100 lg:grid-cols-3 lg:py-20">
 	<div class="z-[1] w-full place-self-center px-20">
 		<div class="flex content-center items-center justify-center">
-			<a href="https://rankamate.zixian.dev/"><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img></a>
+			<a href="https://rankamate.zixian.dev/" aria-label="Rank-a-Mate webapp"
+				><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img></a>
 		</div>
 		<ExitLinks
 			url="https://rankamate.zixian.dev/"
