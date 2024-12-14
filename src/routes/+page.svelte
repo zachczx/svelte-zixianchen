@@ -727,7 +727,7 @@
 					<div class="lg:flex lg:items-center lg:justify-center">
 						<figure class="grid justify-items-center space-y-2">
 							<figcaption>
-								<a href="/projects/"
+								<a href="/projects/#grumplr"
 									><h3
 										class="content-center pb-1 text-center font-inter text-4xl font-normal text-[#1b510f] lg:flex lg:justify-center lg:text-6xl">
 										Grumplr

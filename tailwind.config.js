@@ -1,3 +1,6 @@
+import daisyui from 'daisyui';
+import themes from 'daisyui/src/theming/themes';
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -26,7 +29,7 @@ export default {
 		themes: [
 			{
 				lemonade: {
-					...require('daisyui/src/theming/themes')['lemonade'],
+					...themes.lemonade,
 					'base-100': '#fafafa',
 					'base-200': '#eefad8',
 					'base-300': '#e4f7c2',
@@ -38,5 +41,5 @@ export default {
 			'emerald',
 		],
 	},
-	plugins: [require('@tailwindcss/typography'), require('daisyui')],
+	plugins: [require('@tailwindcss/typography'), daisyui],
 };
