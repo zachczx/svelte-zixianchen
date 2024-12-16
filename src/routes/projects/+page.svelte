@@ -68,7 +68,7 @@
 						scrub: true,
 						markers: false,
 					},
-					y: 400,
+					y: 300,
 					filter: 'grayscale(50%)',
 				});
 			}
@@ -400,29 +400,42 @@
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Problem</h3>
-				<p>Wordpress got too bulky and tiresome to manage and host.</p>
+				<ul class="ms-6 list-outside list-disc space-y-2 marker:text-[#38bdf8]">
+					<li>I just lost interest in Wordpress and shared hosting.</li>
+					<li>PHP, plugins/themes, huge MySQL database felt too legacy.</li>
+					<li>
+						Wordpress still felt bloated on a VPS, compared to what I felt was achievable with e.g. Astro, Hugo, Gatsby,
+						Eleventy.
+					</li>
+				</ul>
 			</div>
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I wanted</h3>
-				<p>I moved BTOnomics to a more modern framework and tried AstroJS, which had been gaining a lot of praise.</p>
+				<ul class="ms-6 list-outside list-disc space-y-2 marker:text-[#38bdf8]">
+					<li>Rebuilt BTOnomics with AstroJS, because I saw all the praises and wanted to try it out.</li>
+					<li>
+						I'm happy with Astro. It's indeed good for content-first sites. It's fast. I also like native markdown
+						support, view transitions, shipping HTML/CSS first.
+					</li>
+				</ul>
 			</div>
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ms-6 list-outside list-disc space-y-2 marker:text-[#38bdf8]">
 					<li>Migrated to AstroJS as a static site.</li>
-					<li>I enjoyed using Astro. Native markdown support, view transitions, image tooling, fast.</li>
-					<li>There's always the option to reach into Svelte/React/Alpine if I wanted to.</li>
 					<li>Used ChatGPT to convert WordPress html/shortcode to markdown.</li>
+					<li>Recently did some rewriting to convert to Astro 5's Content Layer API.</li>
+					<li>In the process I added QOL stuff like tag filtering</li>
 				</ul>
 			</div>
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#38bdf8] decoration-8 underline-offset-4">Not yet done</h3>
 				<p>
-					Haven't recreated all the old functionalities from plugins, especially comments, but I figured I didn't need
-					it anyway.
+					Didn't recreate Wordpress' social features, especially comments. But I don't want/need it, neither does the
+					blog.
 				</p>
 			</div>
 		</div>
@@ -568,7 +581,10 @@
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">Not yet done</h3>
-				<p>Probably QOL stuff like markdown formatting, polls, admin moderation.</p>
+				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#1b510f]">
+					<li>Currently redoing auth to semi-DIY with Keycloak.</li>
+					<li>Probably QOL stuff like markdown formatting, polls, admin moderation.</li>
+				</ul>
 			</div>
 		</div>
 	</div>
