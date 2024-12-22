@@ -569,13 +569,16 @@
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">What I wanted</h3>
-				<p>The usual posting, commenting, upvoting, anonymous mode, tagging, user management.</p>
+				<p>
+					The usual bulletin board stuff like create posts, commenting, liking, upvoting, anonymous mode, tagging, user
+					management.
+				</p>
 			</div>
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">What I built</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#1b510f]">
-					<li>A small bullet board, with posting, commenting, upvoting, tagging, authentication, user management.</li>
+					<li>I built what I wrote planned, using stdlib as much as possible. Self-hosted auth.</li>
 				</ul>
 			</div>
 			<div
