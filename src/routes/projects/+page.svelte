@@ -570,8 +570,8 @@
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">What I wanted</h3>
 				<p>
-					The usual bulletin board stuff like create posts, commenting, liking, upvoting, anonymous mode, tagging, user
-					management.
+					The usual bulletin board stuff - create posts, live chat, commenting, liking, upvoting, attachments, anonymous
+					mode, tagging, user management, WYSIWYG editor.
 				</p>
 			</div>
 			<div
@@ -585,8 +585,7 @@
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">Not yet done</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#1b510f]">
-					<li>Currently redoing auth to semi-DIY with Keycloak.</li>
-					<li>Probably QOL stuff like markdown formatting, polls, admin moderation.</li>
+					<li>Probably good-to-haves like polls, admin actions/panel.</li>
 				</ul>
 			</div>
 		</div>
