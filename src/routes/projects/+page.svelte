@@ -572,7 +572,7 @@
 				<p>
 					Bulletin board stuff - posts (threaded, streaming chat, commenting, liking, upvoting, attachments, WYSIWYG
 					editor, tagging), user actions (authentication, authorisation, settings and customizations, anonymous mode),
-					misc (filtering, simple word matching, image conversion).
+					misc (filtering, simple word matching, image optimization, thumbnail generation).
 				</p>
 			</div>
 			<div
