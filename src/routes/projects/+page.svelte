@@ -570,8 +570,9 @@
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">What I wanted</h3>
 				<p>
-					The usual bulletin board stuff - create posts, live chat, commenting, liking, upvoting, attachments, anonymous
-					mode, tagging, user management, WYSIWYG editor.
+					Bulletin board stuff - posts (threaded, streaming chat, commenting, liking, upvoting, attachments, WYSIWYG
+					editor, tagging), user actions (authentication, authorisation, settings and customizations, anonymous mode),
+					misc (filtering, simple word matching, image conversion).
 				</p>
 			</div>
 			<div
