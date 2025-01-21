@@ -21,7 +21,11 @@ const mdsvexOptions = {
 					await codeToHtml(code, {
 						lang: 'text',
 						theme: 'github-dark-default',
-						transformers: [transformerNotationHighlight(), transformerNotationDiff(), transformerCompactLineOptions()],
+						transformers: [
+							transformerNotationHighlight({ matchAlgorithm: 'v3' }),
+							transformerNotationDiff({ matchAlgorithm: 'v3' }),
+							transformerCompactLineOptions(),
+						],
 					}),
 				);
 			} else {
@@ -29,7 +33,11 @@ const mdsvexOptions = {
 					await codeToHtml(code, {
 						lang: 'js',
 						theme: 'github-dark-default',
-						transformers: [transformerNotationHighlight(), transformerNotationDiff(), transformerCompactLineOptions()],
+						transformers: [
+							transformerNotationHighlight({ matchAlgorithm: 'v3' }),
+							transformerNotationDiff({ matchAlgorithm: 'v3' }),
+							transformerCompactLineOptions(),
+						],
 					}),
 				);
 			}

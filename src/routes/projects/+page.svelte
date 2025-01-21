@@ -570,9 +570,9 @@
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">What I wanted</h3>
 				<p>
-					Bulletin board stuff - posts (threaded, streaming chat, commenting, liking, upvoting, attachments, WYSIWYG
-					editor, tagging), user actions (authentication, authorisation, settings and customizations, anonymous mode),
-					misc (filtering, simple word matching, image optimization, thumbnail generation).
+					Bulletin board stuff - posts (commenting, replies, liking, upvoting, attachments, WYSIWYG editor, tagging),
+					user actions (authentication, authorisation, settings and customizations, anonymous mode), misc (filtering,
+					simple word matching, image optimization, thumbnail generation), live chat.
 				</p>
 			</div>
 			<div
@@ -586,7 +586,7 @@
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
 				<h3 class="mb-4 underline decoration-[#1b510f] decoration-8 underline-offset-4">Not yet done</h3>
 				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#1b510f]">
-					<li>Probably good-to-haves like polls, admin actions/panel.</li>
+					<li>Polls, moderation tools, admin interface.</li>
 				</ul>
 			</div>
 		</div>
