@@ -209,16 +209,16 @@
 
 <div
 	id="appraize"
-	class="max-w-dvw trigger-particles-container relative grid bg-[#491eff]/5 py-10 lg:grid-cols-3 lg:py-20">
+	class="max-w-dvw trigger-particles-container relative grid bg-[#A94A4A]/5 py-10 lg:grid-cols-3 lg:py-20">
 	<div class="z-[1] place-self-center">
 		<a href="https://appraize.zixian.dev/"
-			><h3 class="text-center font-sans text-5xl font-black tracking-tighter text-[#491eff] lg:text-7xl">
+			><h3 class="text-center font-sans text-5xl font-black tracking-tighter text-[#A94A4A] lg:text-7xl">
 				Appraize
 			</h3></a>
 		<ExitLinks
 			url="https://appraize.zixian.dev/"
 			github="https://github.com/zachczx/svelte-appraize"
-			className="fill-[#491eff]" />
+			className="fill-[#A94A4A]" />
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div
 				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
@@ -255,7 +255,7 @@
 		<div class="z-[1] grid max-w-[1400px] content-start gap-10 lg:grid-cols-2">
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
-				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Problem</h3>
+				<h3 class="mb-4 underline decoration-[#A94A4A] decoration-8 underline-offset-4">Problem</h3>
 				<p>
 					How might we speed up ranking sessions, which need manual selection to form a numbered list "1, 2, 3..." on
 					Excel. Every change to the list required manual reordering.
@@ -263,25 +263,25 @@
 			</div>
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
-				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">What I wanted</h3>
+				<h3 class="mb-4 underline decoration-[#A94A4A] decoration-8 underline-offset-4">What I wanted</h3>
 				<p>Speed up ranking sessions via drag & drop.</p>
 			</div>
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
-				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">What I built</h3>
-				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#491eff]">
-					<li>Drag & drop of officers and add. info</li>
-					<li>Sessions and mini dashboard each session</li>
-					<li>Backend DB (Drizzle + Postgres/Turso)</li>
-					<li>CSV bulk uploads</li>
-					<li>Filters and keyboard shortcuts</li>
-					<li>Form actions/validation</li>
+				<h3 class="mb-4 underline decoration-[#A94A4A] decoration-8 underline-offset-4">What I built</h3>
+				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#A94A4A]">
+					<li>Drag & drop of officers and additional info</li>
+					<li>Sessions, with dashboard, filters, & charts</li>
+					<li>CRUD - Create, Read, Update, Delete - sessions & entries</li>
+					<li>Permission setting to manage other users' access</li>
+					<li>QOL stuff - auto sort, auto save progress, CSV upload for bulk adding</li>
+					<li>Typical form actions, validation</li>
 				</ul>
 			</div>
 			<div
 				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
-				<h3 class="mb-4 underline decoration-[#491eff] decoration-8 underline-offset-4">Not yet done</h3>
-				<p>Haven't added authentication, which is probably needed for a private thing like ranking.</p>
+				<h3 class="mb-4 underline decoration-[#A94A4A] decoration-8 underline-offset-4">Not yet done</h3>
+				<p>Responsive design. It can't go below ~1200px width without looking awful.</p>
 			</div>
 		</div>
 	</div>
@@ -289,7 +289,7 @@
 		<Particles
 			className="absolute inset-0 opacity-[0.3] trigger-particles"
 			refresh={true}
-			color="#491eff"
+			color="#A94A4A"
 			quantity="25"
 			size="15" />
 	</div>
