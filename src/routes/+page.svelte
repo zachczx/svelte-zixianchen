@@ -686,7 +686,7 @@
 					<figure class="grid content-center space-y-2 self-center">
 						<figcaption class="text-center">
 							<a href="/projects/#appraize">
-								<h3 class="pb-2 font-sans text-4xl font-black text-[#491eff] lg:text-6xl">Appraize</h3>
+								<h3 class="pb-2 font-sans text-4xl font-black text-[#A94A4A] lg:text-6xl">Appraize</h3>
 								<div class="italic">Drop & drop ranking</div></a>
 						</figcaption>
 					</figure>
