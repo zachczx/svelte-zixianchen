@@ -4,19 +4,19 @@
 
 	import { onNavigate } from '$app/navigation';
 
-	onNavigate((navigation) => {
-		if (!document.startViewTransition) {
-			viewTransition = false;
-			return;
-		}
+	// onNavigate((navigation) => {
+	// 	if (!document.startViewTransition) {
+	// 		viewTransition = false;
+	// 		return;
+	// 	}
 
-		return new Promise((resolve) => {
-			document.startViewTransition(async () => {
-				resolve();
-				await navigation.complete;
-			});
-		});
-	});
+	// 	return new Promise((resolve) => {
+	// 		document.startViewTransition(async () => {
+	// 			resolve();
+	// 			await navigation.complete;
+	// 		});
+	// 	});
+	// });
 </script>
 
 <slot />
