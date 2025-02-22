@@ -736,6 +736,16 @@
 							</figcaption>
 						</figure>
 					</div>
+
+					<div class="lg:flex lg:items-center lg:justify-center">
+						<figure class="grid justify-items-center space-y-2">
+							<figcaption class="text-center">
+								<a href="/projects/#meetrics"
+									><h3 class="pb-1 font-sans text-4xl font-[800] text-[#F43098] lg:flex lg:text-6xl">Meetrics</h3>
+									<div class="text-center italic">Meeting cost calculator</div></a>
+							</figcaption>
+						</figure>
+					</div>
 				</div>
 
 				<div class="grid content-center justify-items-center gap-y-20 bg-gray-50 pb-20 lg:grid-cols-3">
