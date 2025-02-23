@@ -6,7 +6,7 @@
 </script>
 
 <nav
-	class="z-30 grid h-fit w-full grid-cols-2 justify-center px-4 transition-all duration-300 ease-out xl:fixed xl:top-2 xl:grid-cols-3">
+	class="z-[1] grid h-fit w-full grid-cols-2 justify-center px-4 transition-all duration-300 ease-out xl:fixed xl:top-2 xl:grid-cols-3">
 	<div class="navbar-start col-span-2 -mx-4 w-full xl:hidden">
 		<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-circle btn-ghost">
@@ -42,8 +42,8 @@
 	</div>
 
 	<div class="hidden items-center lg:opacity-0 xl:flex">
-		<span class="navLogo font-serif text-2xl font-extrabold text-base-content hover:drop-shadow"
-			><a href="/">Zixian Chen</a></span>
+		<!-- <span class="navLogo font-serif text-2xl font-extrabold text-base-content hover:drop-shadow"
+			><a href="/">Zixian Chen</a></span> -->
 	</div>
 	<div
 		class="hidden h-20 w-fit min-w-[40rem] items-center justify-center justify-self-center rounded-full border border-white/50 bg-black/70 shadow backdrop-blur-md transition-all duration-300 ease-out xl:relative xl:flex">
