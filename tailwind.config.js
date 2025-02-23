@@ -22,7 +22,7 @@ export default {
 		fontFamily: {
 			sans: ['"Open Sans Variable"', 'sans-serif'],
 			serif: ['"IBM Plex Serif"', 'Lora'],
-			inter: ['"Inter"'],
+			inter: ['"Inter Variable"'],
 		},
 	},
 	daisyui: {

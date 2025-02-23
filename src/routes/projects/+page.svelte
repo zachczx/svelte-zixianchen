@@ -34,6 +34,7 @@
 	import CloudflarePages from '$lib/logos/Cloudflare-pages.svg?dataurl';
 	import Pagefind from '$lib/logos/Pagefind.svg?dataurl';
 	import Pocketbase from '$lib/logos/pocketbase.svg?dataurl';
+	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
 
 	import ExitLinks from '$lib/ExitLinks.svelte';
 	import Golang from '$lib/logos/Golang.svg?dataurl';
@@ -48,7 +49,6 @@
 	import Rankamate from '$lib/waves/Rankamate.svelte';
 	import Cancelninja from '$lib/waves/Cancelninja.svelte';
 	import Stytch from '$lib/logos/Stytch.svelte';
-	import Particles from '$lib/magic-ui/Particles.svelte';
 
 	import Projects from '$lib/assets/allison-saeng-g45iYq7eQR4-unsplash.jpg?enhanced&w=1920px;1080px;768px;640px;400px';
 	import Junkyard from '$lib/assets/sohrab-zia-WXdMkkkZWg4-unsplash.jpg?enhanced&w=1920px;1080px;768px;640px;400px';
@@ -126,7 +126,7 @@
 					>n
 				</h3></a>
 		</div>
-		<ExitLinks url="https://abbreviation.zixian.dev" className="fill-[#0069ff] shadow-md" />
+		<!-- <ExitLinks url="https://abbreviation.zixian.dev" className="fill-[#0069ff] shadow-md" /> -->
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md">
 				<img src={Golang} class="h-10 scale-125" alt="Golang" />
@@ -202,9 +202,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="trigger-particles hidden lg:flex">
-		<Particles className="absolute inset-0 opacity-[0.3]" refresh={true} color="#0069ff" quantity="70" size="5" />
-	</div>
 </div>
 
 <div
@@ -215,10 +212,10 @@
 			><h3 class="text-center font-sans text-5xl font-black tracking-tighter text-[#A94A4A] lg:text-7xl">
 				Appraize
 			</h3></a>
-		<ExitLinks
+		<!-- <ExitLinks
 			url="https://appraize.zixian.dev/"
 			github="https://github.com/zachczx/svelte-appraize"
-			className="fill-[#A94A4A]" />
+			className="fill-[#A94A4A]" /> -->
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div
 				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
@@ -285,14 +282,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="hidden lg:flex">
-		<Particles
-			className="absolute inset-0 opacity-[0.3] trigger-particles"
-			refresh={true}
-			color="#A94A4A"
-			quantity="25"
-			size="15" />
-	</div>
 </div>
 
 <div
@@ -303,7 +292,7 @@
 			<a href="https://titude.app/" aria-label="Apptitude webapp"
 				><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class=""></enhanced:img></a>
 		</div>
-		<ExitLinks url="https://titude.app/" github="https://github.com/zachczx/apptitude" className="fill-lime-400" />
+		<!-- <ExitLinks url="https://titude.app/" github="https://github.com/zachczx/apptitude" className="fill-lime-400" /> -->
 		<div class="mx-10 mt-10 hidden flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div
 				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
@@ -358,14 +347,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="hidden lg:flex">
-		<Particles
-			className="absolute inset-0 opacity-[0.5] trigger-particles"
-			refresh={true}
-			color="#a3e635"
-			quantity="20"
-			size="2" />
-	</div>
 </div>
 
 <div
@@ -376,10 +357,10 @@
 			<a href="https://btonomics.com"
 				><h3 class="pb-4 pt-6 text-center font-serif text-5xl font-bold text-[#38bdf8] lg:text-7xl">BTOnomics</h3></a>
 		</div>
-		<ExitLinks
+		<!-- <ExitLinks
 			url="https://btonomics.com"
 			github="https://github.com/zachczx/astro-btonomics"
-			className="fill-[#38bdf8]" />
+			className="fill-[#38bdf8]" /> -->
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div
 				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
@@ -440,19 +421,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="hidden lg:flex">
-		<Particles
-			className="absolute inset-0 opacity-[0.3] trigger-particles"
-			refresh={true}
-			color="#38bdf8"
-			quantity="20"
-			size="15" />
-	</div>
 </div>
 
 <div id="cancelninja" class="scroll-container4 max-w-dvw relative grid bg-sky-500/5 py-10 lg:grid-cols-3 lg:py-20">
 	<div class="z-[1] place-self-center px-20 text-center">
-		<a href="/projects/#cancelninja" class="group inline-block">
+		<a href="https://cancelninja.com" class="group inline-block">
 			<h3 class="text-5xl font-extrabold tracking-tighter text-base-content lg:text-7xl">
 				Cancel Ninj<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -465,7 +438,7 @@
 						d="m395.13 313l89.869-100.857H388.08c-45.748 0-82.824-37.063-82.824-82.824l-.297-33.208l-100.857-77.147v96.917c0 45.751-37.06 82.824-82.822 82.824l-9.844.298L27.001 299.86h96.92c45.75 0 82.822 37.062 82.822 82.824l.298 20.484l100.854 89.868v-96.913c0-45.749 37.062-82.823 82.824-82.823zM256 306.669c-27.99 0-50.666-22.685-50.666-50.665c0-27.99 22.679-50.671 50.665-50.671c27.99 0 50.67 22.682 50.67 50.671c0 27.98-22.683 50.665-50.67 50.665z" /></svg>
 			</h3>
 		</a>
-		<ExitLinks url="https://cancelninja.com" className="fill-lime-700" />
+		<!-- <ExitLinks url="https://cancelninja.com" className="fill-lime-700" /> -->
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div
 				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
@@ -512,22 +485,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="hidden lg:flex">
-		<Particles
-			className="absolute inset-0 opacity-[0.1] trigger-particles"
-			refresh={true}
-			color="#0ea5e9"
-			quantity="30"
-			size="10" />
-	</div>
 </div>
 
 <div id="grumplr" class="scroll-container4 max-w-dvw relative grid bg-lime-200/30 py-10 lg:grid-cols-3 lg:py-20">
 	<div class="z-[1] place-self-center px-20 text-center">
-		<a href="/projects/#grumplr" class="group inline-block">
-			<h3 class="font-inter text-5xl font-normal tracking-tighter text-[#1b510f] lg:text-7xl">Grumplr</h3>
+		<a href="https://grumplr.com" class="group inline-block">
+			<h3 class="font-inter text-5xl font-bold tracking-tighter text-[#1b510f] lg:text-7xl">Grumplr</h3>
 		</a>
-		<ExitLinks url="https://grumplr.com" github="https://github.com/zachczx/gorant" className="fill-[#1b510f]" />
+		<!-- <ExitLinks url="https://grumplr.com" github="https://github.com/zachczx/gorant" className="fill-[#1b510f]" /> -->
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md">
 				<img src={Golang} class="h-10 scale-125" alt="Golang" />
@@ -591,13 +556,60 @@
 			</div>
 		</div>
 	</div>
-	<div class="hidden lg:flex">
-		<Particles
-			className="absolute inset-0 opacity-[0.1] trigger-particles"
-			refresh={true}
-			color="#1b510f"
-			quantity="30"
-			size="10" />
+</div>
+
+<div id="meetrics" class="max-w-dvw relative grid bg-[#F43098]/[0.01] py-10 lg:grid-cols-3 lg:py-20">
+	<div class="z-[1] place-self-center px-20 text-center">
+		<a href="https://meetrics.zixian.dev" class="group inline-block">
+			<img src={Meetrics} alt="Meetrics" class="h-16" />
+		</a>
+		<!-- <ExitLinks
+			url="https://meetrics.zixian.dev"
+			github="https://github.com/zachczx/meetrics"
+			className="fill-[#F43098]" /> -->
+		<div class="mx-10 mt-10 hidden flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
+			<div
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
+				<img src={Sveltekit} class="h-10" alt="Sveltekit" />
+			</div>
+			<div
+				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
+				<img src={TailwindSmall} class="h-10 grow" alt="Tailwind" />
+			</div>
+		</div>
+	</div>
+	<StackUsed framework="Sveltekit" library="Tailwind" host="Cloudflare" className="lg:hidden" />
+	<div class="z-[1] grid content-center justify-items-center px-4 lg:col-span-2">
+		<div class="grid max-w-[1400px] content-start gap-10 lg:grid-cols-2">
+			<div
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-[#F43098] decoration-8 underline-offset-4">Problem</h3>
+				<p>
+					Meetings can be redundant and too long, because people don't have a quantifiable figure for the meeting's
+					costs.
+				</p>
+				<p>Everyone would be careful with setting up meetings if they realized each one costs at least $1,000!</p>
+			</div>
+			<div
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-[#F43098] decoration-8 underline-offset-4">What I wanted</h3>
+				<p>A meeting cost calculator based on number of attendees and their seniority.</p>
+			</div>
+			<div
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-[#F43098] decoration-8 underline-offset-4">What I built</h3>
+				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#F43098]">
+					<li>Several input fields tied to reactive variables for easy calculation</li>
+				</ul>
+			</div>
+			<div
+				class="grid content-start space-y-2 lg:h-full lg:space-y-4 lg:rounded-6xl lg:p-10 lg:backdrop-blur-md xl:border xl:border-gray-200 xl:bg-white/70 xl:shadow-md">
+				<h3 class="mb-4 underline decoration-[#F43098] decoration-8 underline-offset-4">Not yet done</h3>
+				<ul class="ml-6 list-outside list-disc space-y-2 marker:text-[#F43098]">
+					<li>Integration with a HR system to fetch employee ranks, but it's overly complex and unrealistic.</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -621,7 +633,7 @@
 			<a href="https://old.btonomics.com" aria-label="BTOnomics Old"
 				><enhanced:img src={oldBtonomicsLogo} alt="Btonomics Old Logo" class=""></enhanced:img></a>
 		</div>
-		<ExitLinks url="https://old.btonomics.com" className="fill-yellow-500" />
+		<!-- <ExitLinks url="https://old.btonomics.com" className="fill-yellow-500" /> -->
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div
 				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
@@ -692,10 +704,10 @@
 					><enhanced:img src={eatYourMedsLogo} alt="Eat Your Meds!"></enhanced:img></a>
 			</div>
 		</div>
-		<ExitLinks
+		<!-- <ExitLinks
 			url="https://eatyourmeds.zixian.dev/"
 			github="https://github.com/zachczx/django-eatyourmeds"
-			className="fill-lime-700" />
+			className="fill-lime-700" /> -->
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div
 				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
@@ -758,10 +770,10 @@
 			<a href="https://rankamate.zixian.dev/" aria-label="Rank-a-Mate webapp"
 				><enhanced:img src={rankamateLogo} alt="Rank-a-Mate"></enhanced:img></a>
 		</div>
-		<ExitLinks
+		<!-- <ExitLinks
 			url="https://rankamate.zixian.dev/"
 			github="https://github.com/zachczx/django-rankamate"
-			className="fill-red-800" />
+			className="fill-red-800" /> -->
 		<div class="mx-10 mt-10 hidden max-w-[30rem] flex-wrap items-end justify-center space-x-4 space-y-4 lg:flex">
 			<div
 				class="z-[1] flex items-center justify-center rounded-3xl border border-white/50 bg-white/70 p-4 shadow-md backdrop-blur-md">
@@ -840,33 +852,4 @@
 </div>
 
 <style>
-	/* * {
-		border: red solid 1px;
-	} */
-
-	/* 	
-	##Device = Desktops
-	##Screen = 1281px to higher resolution desktops
-	https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488
-	 */
-	@media (min-width: 1281px) {
-		/* .background-apptitude {
-			background: radial-gradient(600px at 40% 30%, rgb(180, 227, 115, 1), #fafafa 40%, transparent),
-				radial-gradient(300px at 50% 70%, rgb(180, 227, 115, 0.99), #fafafa 80%, transparent),
-				radial-gradient(600px at 90% 70%, rgb(180, 227, 115, 0.7), #fafafa, transparent);
-		}
-		.background-appraize {
-			background: radial-gradient(500px at 30% 30%, rgba(73, 30, 255, 0.2), #fafafa, transparent),
-				radial-gradient(600px at 90% 50%, rgb(73, 30, 255, 0.6), #fafafa 40%, transparent);
-		} */
-		/* .background-rankamate {
-			background: radial-gradient(300px at 10% 20%, rgb(153, 27, 27, 0.2), #fafafa, transparent),
-				radial-gradient(800px at 70% 50%, rgb(153, 27, 27, 0.6), #fafafa, transparent),
-				radial-gradient(750px at 90% 30%, rgb(153, 27, 27, 0.1), #fafafa, transparent);
-		}
-		.background-eatyourmeds {
-			background: radial-gradient(500px at 40% 50%, rgba(77, 124, 15, 0.2), #fafafa, transparent),
-				radial-gradient(800px at 90% 70%, rgb(77, 124, 15, 0.05), #fafafa, transparent);
-		} */
-	}
 </style>

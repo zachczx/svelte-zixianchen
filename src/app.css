@@ -1,5 +1,5 @@
 @import '@fontsource-variable/open-sans';
-@import '@fontsource/inter/700.css';
+@import '@fontsource-variable/inter';
 @import '@fontsource/lora/700.css';
 
 @tailwind base;
@@ -7,10 +7,6 @@
 @tailwind utilities;
 
 @layer utilities {
-	@view-transition {
-		navigation: auto;
-	}
-
 	.neumorphism {
 		box-shadow:
 			12px 12px 12px rgba(0, 0, 0, 0.15),
@@ -58,6 +54,10 @@
 
 		/* Reserve space for scrollbar to prevent layout jumping */
 		scrollbar-gutter: stable;
+
+		@view-transition {
+			navigation: auto;
+		}
 	}
 
 	/* View transitions */
@@ -83,18 +83,6 @@
 		to {
 			transform: translateX(-30px);
 		}
-	}
-
-	:root::view-transition-old(root) {
-		animation:
-			90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
-			300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
-	}
-
-	:root::view-transition-new(root) {
-		animation:
-			210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
-			300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
 	}
 
 	h1 {

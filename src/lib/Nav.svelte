@@ -37,7 +37,7 @@
 					<a href="/blog">Blog</a>
 				</li></button>
 		</div>
-		<span class="navLogo font-serif text-2xl font-extrabold text-base-content hover:drop-shadow"
+		<span class="font-serif text-2xl font-extrabold text-base-content hover:drop-shadow"
 			><a href="/">Zixian Chen</a></span>
 	</div>
 
@@ -46,18 +46,8 @@
 			><a href="/">Zixian Chen</a></span>
 	</div>
 	<div
-		class="navMenu hidden h-20 w-fit min-w-[40rem] items-center justify-center justify-self-center rounded-full border border-white/50 bg-black/70 shadow backdrop-blur-md transition-all duration-300 ease-out xl:relative xl:flex">
+		class="hidden h-20 w-fit min-w-[40rem] items-center justify-center justify-self-center rounded-full border border-white/50 bg-black/70 shadow backdrop-blur-md transition-all duration-300 ease-out xl:relative xl:flex">
 		<NavDock {navCurrent} pathName={$page.url.pathname} />
 	</div>
 	<div class="hidden items-center justify-end space-x-6 xl:flex"></div>
 </nav>
-
-<style>
-	.navLogo {
-		view-transition-name: navLogo;
-	}
-
-	.navMenu {
-		view-transition-name: navMenu;
-	}
-</style>

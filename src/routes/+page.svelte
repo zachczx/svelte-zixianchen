@@ -28,6 +28,7 @@
 	import rankamateLogo from '$lib/assets/rankamate-logo.webp?enhanced&w=120';
 	import eatYourMedsLogo from '$lib/assets/eatyourmedslogo.webp?enhanced&w=250';
 	import btonomicsOldLogo from '$lib/assets/btonomics_logo-3-300x100.webp?enhanced&w=250';
+	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
 
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -741,7 +742,7 @@
 						<figure class="grid justify-items-center space-y-2">
 							<figcaption class="text-center">
 								<a href="/projects/#meetrics"
-									><h3 class="pb-1 font-sans text-4xl font-[800] text-[#F43098] lg:flex lg:text-6xl">Meetrics</h3>
+									><img src={Meetrics} alt="Meetrics" class="h-16" />
 									<div class="text-center italic">Meeting cost calculator</div></a>
 							</figcaption>
 						</figure>
