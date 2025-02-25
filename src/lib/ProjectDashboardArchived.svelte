@@ -28,7 +28,7 @@
 
 <figure class="grid content-center justify-items-center space-y-2 self-center">
 	<figcaption class="text-center">
-		<a href="/projects/btonomics-old" class="group grid justify-items-center"
+		<a href="/projects/btonomics-wordpress" class="group grid justify-items-center"
 			><enhanced:img
 				src={btonomicsOldLogo}
 				alt="BTOnomics on Wordpress"

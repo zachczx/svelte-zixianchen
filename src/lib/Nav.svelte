@@ -19,9 +19,6 @@
 					<a href="/#about">About</a>
 				</li>
 				<li class="w-full rounded-lg hover:bg-red-300 focus:bg-red-300 active:bg-red-300">
-					<a href="/#career">Career</a>
-				</li>
-				<li class="w-full rounded-lg hover:bg-red-300 focus:bg-red-300 active:bg-red-300">
 					<a href="/#projects">Projects</a>
 				</li>
 				<li class="w-full rounded-lg hover:bg-red-300 focus:bg-red-300 active:bg-red-300">

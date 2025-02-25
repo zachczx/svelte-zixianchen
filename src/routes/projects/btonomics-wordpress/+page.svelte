@@ -4,7 +4,7 @@
 	import oldBtonomicsLogo from '$lib/assets/btonomics_logo-3-300x100.webp?enhanced&w=300';
 </script>
 
-<ProjectEntry id="btonomics-old">
+<ProjectEntry id="btonomics-wordpress">
 	{#snippet title()}
 		<a href="https://old.btonomics.com" aria-label="BTOnomics Old"
 			><enhanced:img src={oldBtonomicsLogo} alt="Btonomics Old Logo" class=""></enhanced:img></a>
