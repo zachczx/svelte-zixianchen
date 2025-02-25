@@ -2,65 +2,82 @@
 	import { type Snippet } from 'svelte';
 	interface ProjectEntryProps {
 		id: string;
+		header: Snippet;
+		subtitle: string;
 		title: Snippet;
+		screenshots: Snippet;
 		stack?: Snippet;
 		problem?: Snippet;
 		want?: Snippet;
 		built?: Snippet;
 		undone?: Snippet;
-		imgPrimary?: string;
-		imgSecondary?: string;
-		children: Snippet;
+		more?: Snippet;
+		children?: Snippet;
 	}
 	let {
 		id = '',
+		subtitle = '',
+		header,
 		title,
+		screenshots,
 		stack,
 		problem,
 		want,
 		built,
 		undone,
-		imgPrimary,
-		imgSecondary,
+		more,
 		children,
 	}: ProjectEntryProps = $props();
 </script>
 
-<div {id} class="project grid content-center justify-items-center px-2 py-8 lg:min-h-[90vh] lg:py-20">
-	<div class="grid max-w-[1200px] gap-8">
-		<div class="flex justify-center">{@render title()}</div>
-
-		{#if stack}
-			<div class="flex w-full flex-wrap justify-center gap-4">
-				{@render stack()}
-			</div>
-		{/if}
-
-		<div class="grid grid-cols-2 gap-4">
-			{#if imgPrimary}<img src={imgPrimary} alt="App" class="inline-block" />{/if}
-			{#if imgSecondary}<img src={imgSecondary} alt="App" class="inline-block" />{/if}
+<div {id} class="project grid content-center justify-items-center px-2 py-8 lg:min-h-[90vh] lg:px-8 lg:py-32">
+	<div class="grid content-center justify-items-center text-center">
+		{@render title()}
+		<p class="text-base italic text-base-content/70">{subtitle}</p>
+	</div>
+	{#if header}
+		<div class="py-8">
+			{@render header()}
 		</div>
-
-		<div class="grid gap-8 lg:grid-cols-[auto_1fr] lg:gap-16 lg:text-lg xl:text-xl">
+	{/if}
+	<div class="grid max-w-[1000px] bg-base-100 pt-24">
+		<div class="grid gap-8 lg:grid-cols-[auto_1fr] lg:gap-x-16 lg:gap-y-24 lg:text-lg xl:text-xl">
 			{#if problem}
-				<h3 class="text-3xl text-base-content/70 lg:text-4xl">Problem</h3>
+				<h3 class="text-4xl font-bold text-base-content/70 lg:text-4xl">Problem</h3>
 				<div>
 					{@render problem()}
 				</div>
 			{/if}
 			{#if want}
-				<h3 class="text-3xl text-base-content/70 lg:text-4xl">What I wanted</h3>
+				<h3 class="text-4xl font-bold text-base-content/70 lg:text-4xl">Idea</h3>
 				<div>
 					{@render want()}
 				</div>
 			{/if}
+			{#if stack}
+				<h3 class="text-4xl font-bold text-base-content/70 lg:text-4xl">Stack</h3>
+				<div class="flex flex-wrap gap-4">
+					{@render stack()}
+				</div>
+			{/if}
+			{#if screenshots}
+				<h3 class="text-4xl font-bold text-base-content/70 lg:text-4xl">Look</h3>
+				<div>{@render screenshots()}</div>
+			{/if}
 			{#if built}
-				<h3 class="text-3xl text-base-content/70 lg:text-4xl">What I built</h3>
+				<h3 class="text-4xl font-bold text-base-content/70 lg:text-4xl">What I built</h3>
 				<div>{@render built()}</div>
 			{/if}
 			{#if undone}
-				<h3 class="text-3xl text-base-content/70 lg:text-4xl">Not yet done</h3>
+				<h3 class="text-4xl font-bold text-base-content/70 lg:text-4xl">Not yet done</h3>
 				<div>{@render undone()}</div>
+			{/if}
+			{#if more}
+				<h3 class="text-4xl font-bold text-base-content/70 lg:text-4xl">See</h3>
+				<div>{@render more()}</div>
+			{/if}
+			{#if children}
+				{@render children()}
 			{/if}
 		</div>
 	</div>

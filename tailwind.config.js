@@ -30,11 +30,16 @@ export default {
 			{
 				lemonade: {
 					...themes.lemonade,
+
+					primary: '#F93827',
+					secondary: '#F93827',
+					info: '#16C47F',
+					accent: '#FFD65A',
 					'base-100': '#fafafa',
 					'base-200': '#eefad8',
 					'base-300': '#e4f7c2',
 					warning: '#d0342c',
-					secondary: '#E8751A',
+
 					//https://www.colorhexa.com/f8fdef
 				},
 			},
