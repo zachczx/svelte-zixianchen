@@ -16,7 +16,7 @@
 	<figcaption class="text-center italic">Medicine dose tracker</figcaption>
 </figure>
 
-<figure class="grid content-center justify-items-center space-y-2 self-center">
+<figure class="content-center justify-items-center space-y-2 self-center lg:grid">
 	<figcaption class="text-center">
 		<a href="/projects/rankamate" class="group grid justify-items-center"
 			><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class=" saturate-[0.1] group-hover:saturate-100"
@@ -26,7 +26,7 @@
 	</figcaption>
 </figure>
 
-<figure class="grid content-center justify-items-center space-y-2 self-center">
+<figure class="content-center justify-items-center space-y-2 self-center lg:grid">
 	<figcaption class="text-center">
 		<a href="/projects/btonomics-wordpress" class="group grid justify-items-center"
 			><enhanced:img

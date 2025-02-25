@@ -1,13 +1,18 @@
 <script>
 	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=158';
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
+
+	let { mode = '' } = $props();
 </script>
 
 <div class="flex items-center">
 	<figure class="grid content-center justify-items-center space-y-2">
-		<figcaption class="text-center">
+		<figcaption>
 			<a href="/projects/abbreviation"
-				><h3 class="font-sans text-4xl font-extrabold text-[#0069ff] lg:flex">
+				><h3
+					class="font-sans text-4xl font-extrabold {mode === 'dark'
+						? 'text-[#0069ff] brightness-125'
+						: 'text-[#0069ff]'} lg:flex">
 					Abbreviati<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="1em"
@@ -16,8 +21,8 @@
 						viewBox="0 0 24 24"
 						><g fill="none"
 							><path
-								fill="#0069ff"
-								fill-opacity=".25"
+								fill={mode === 'dark' ? 'white' : '#0069ff'}
+								fill-opacity={mode === 'dark' ? '.7' : '.25'}
 								fill-rule="evenodd"
 								d="M12 19a7 7 0 1 0 0-14a7 7 0 0 0 0 14M10.087 7.38A5 5 0 0 1 12 7a.5.5 0 0 0 0-1a6 6 0 0 0-6 6a.5.5 0 0 0 1 0a5 5 0 0 1 3.087-4.62"
 								clip-rule="evenodd" /><path stroke="#0069ff" stroke-linecap="round" d="M20.5 20.5L17 17" /><circle
@@ -37,7 +42,9 @@
 <figure class="grid content-center space-y-2 self-center">
 	<figcaption>
 		<a href="/projects/appraize">
-			<h3 class="font-sans text-4xl font-black text-[#A94A4A]">Appraize</h3>
+			<h3 class="font-sans text-4xl font-black text-[#A94A4A] {mode === 'dark' ? 'brightness-125' : undefined}">
+				Appraize
+			</h3>
 			<div class="">Drop & drop ranking</div></a>
 	</figcaption>
 </figure>
@@ -54,14 +61,17 @@
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/btonomics"
-				><h3 class="pb-1 font-serif text-4xl font-bold text-[#38bdf8]">BTOnomics</h3>
+				><h3 class="pb-1 font-serif text-4xl font-bold text-[#38bdf8] {mode === 'dark' ? 'brightness-125' : undefined}">
+					BTOnomics
+				</h3>
 				<div>Home renovation blog for budget folks</div></a>
 		</figcaption>
 	</figure>
 </div>
 
 <a href="/projects/cancelninja" class="group grid content-center"
-	><h3 class="text-4xl font-extrabold tracking-tighter text-base-content">
+	><h3
+		class="text-4xl font-extrabold tracking-tighter {mode === 'dark' ? 'text-neutral-content' : 'text-base-content'}">
 		Cancel Ninj<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
@@ -79,7 +89,12 @@
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/grumplr"
-				><h3 class="content-center pb-1 font-inter text-4xl font-bold text-[#1b510f]">Grumplr</h3>
+				><h3
+					class="content-center pb-1 font-inter text-4xl font-bold {mode === 'dark'
+						? 'text-green-400'
+						: 'text-[#1b510f]'}">
+					Grumplr
+				</h3>
 				<div>Reddit-lite style bulletin board</div></a>
 		</figcaption>
 	</figure>

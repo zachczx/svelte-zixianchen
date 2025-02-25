@@ -29,6 +29,8 @@
 	import CareerPercentage from '$lib/CareerPercentage.svelte';
 	import ProjectsDashboard from '$lib/ProjectsDashboard.svelte';
 	import ProjectDashboardArchived from '$lib/ProjectDashboardArchived.svelte';
+	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
+	import Sunlight from '$lib/assets/pexels-evie-shaffer-1259279-3585648.webp';
 
 	///////////////////////////////////
 	let navCurrent: string = $state('header');
@@ -47,83 +49,6 @@
 		for (let i = 0; i < navItem.length; i++) {
 			observerNav.observe(navItem[i]);
 		}
-
-		// For GSAP
-
-		gsap.registerPlugin(ScrollTrigger);
-		const mm = gsap.matchMedia();
-		let elHeroScroll = document.getElementsByClassName('hero-scroll');
-		let elTaglineShift = document.getElementsByClassName('tagline-shift');
-		mm.add(
-			{ isLgBreakpoint: '(min-width: 1024px)', prefersReducedMotion: '(prefers-reduced-motion: no-preference)' },
-			(context) => {
-				let { isLgBreakpoint, prefersReducedMotion } = context.conditions;
-
-				if (isLgBreakpoint && prefersReducedMotion) {
-					const tl = gsap.timeline({
-						defaults: {
-							filter: 'grayscale(100%)',
-							ease: 'circ.out',
-							// stagger: { each: 0.1 },
-						},
-					});
-					for (let i = 0; i < elHeroScroll.length; i++) {
-						tl.to(elHeroScroll[i], {
-							y: -50,
-							scrollTrigger: {
-								trigger: elHeroScroll[i],
-								start: 'center 30%',
-								scrub: true,
-								pin: false,
-								end: '+=100',
-								markers: false,
-							},
-						});
-					}
-
-					tl.to('.hero-scroll-sn', {
-						y: -50,
-						scrollTrigger: {
-							trigger: '.hero-scroll-sn',
-							start: 'center 20%',
-							scrub: true,
-							pin: false,
-							end: '+=200',
-							markers: false,
-						},
-					});
-					for (let i = 0; i < elTaglineShift.length; i++) {
-						gsap.to(elTaglineShift[i], {
-							y: -120 * (i + 1),
-							textDecoration: 'solid underline red 10px',
-
-							autoAlpha: 1,
-							scrollTrigger: {
-								trigger: elTaglineShift[i],
-								start: 'bottom 80%',
-								scrub: true,
-								pin: false,
-								end: '+=100',
-								markers: false,
-							},
-						});
-					}
-					gsap.to('.tagline-no-shift', {
-						textDecoration: 'solid underline red 10px',
-
-						autoAlpha: 1,
-						scrollTrigger: {
-							trigger: '.tagline-no-shift',
-							start: 'bottom 80%',
-							scrub: true,
-							pin: false,
-							end: '+=100',
-							markers: false,
-						},
-					});
-				}
-			},
-		);
 	});
 </script>
 
@@ -170,61 +95,75 @@
 		</div>
 	</header>
 
-	<main class="grid justify-items-center">
-		<section id="about" class="navItem grid min-h-[50vh] w-full max-w-[1000px] gap-y-8 px-4 lg:grid-cols-3 lg:gap-y-24">
-			<h3 class="text-4xl font-bold">About Me</h3>
-			<div class="col-span-2 space-y-8 text-lg">
-				<p>
-					I've done <b>webdev</b> as a hobby on-off since 2000s — HTML Goodies, PHP4 days, Wordpress, Javascript, Python
-					frameworks.
-				</p>
-				<p>
-					I like <b>building PCs</b> - love being cheap, hate cable management.
-				</p>
-				<p>
-					I enjoy learning about <b>businesses</b>, <b>product ideas</b>, <b>entrepreneurship</b>. The good and bad.
-				</p>
-				<p>
-					I dabbled with digital photography & <b>Stable diffusion LORAs</b> (for free AI portraits).
-				</p>
-			</div>
-			<h3 class="text-4xl font-bold">Education</h3>
-			<div class="col-span-2 space-y-8 text-lg">
-				<p>
-					I was a <b>Political Science</b> major who did International Relations & Comparative Politics. Enjoyed researching
-					interests, incentives, money, civil wars.
-				</p>
-			</div>
+	<div class="grid w-full justify-items-center bg-[#0E0E0E] text-neutral-content lg:grid-cols-5">
+		<div class="grid justify-items-center pt-8 lg:col-span-3 lg:pt-28">
+			<h2 class="justify-self-start px-4 pb-24 text-6xl font-extrabold">Night</h2>
+			<section
+				id="about"
+				class="navItem grid min-h-[50vh] w-full max-w-[1000px] gap-y-8 px-4 lg:grid-cols-3 lg:gap-y-24">
+				<h3 class="text-4xl font-bold">About Me</h3>
+				<div class="col-span-2 space-y-8 text-lg">
+					<p>
+						I've done <b>webdev</b> as a hobby on-off since 2000s — HTML Goodies, PHP4 days, Wordpress, Javascript, Python
+						frameworks.
+					</p>
+					<p>
+						I like <b>building PCs</b> - love being cheap, hate cable management.
+					</p>
+					<p>
+						I enjoy learning about <b>businesses</b>, <b>product ideas</b>, <b>entrepreneurship</b>.
+					</p>
+					<p>
+						I dabble with photography, AI image gen via <b>Stable diffusion LORAs</b>.
+					</p>
+				</div>
+				<h3 class="text-4xl font-bold">Education</h3>
+				<div class="col-span-2 space-y-8 text-lg">
+					<p>
+						I was a <b>Political Science</b> major who did International Relations & Comparative Politics. Enjoyed researching
+						interests, incentives, money, civil wars.
+					</p>
+				</div>
 
-			<h3 class="text-4xl font-bold">Playlist</h3>
-			<ul class="list col-span-2 flex flex-wrap gap-4 text-lg lg:gap-x-8 lg:gap-y-4">
-				<li>All-In Podcast</li>
-				<li>Lenny's Podcast</li>
-				<li>ThePrimeagen</li>
-				<li>Theo - t3.gg</li>
-				<li>Fireship</li>
-				<li>SyntaxFM</li>
-				<li>YC Startup School</li>
-			</ul>
+				<h3 class="text-4xl font-bold">Playlist</h3>
+				<ul class="list col-span-2 flex flex-wrap gap-4 text-lg lg:gap-x-8 lg:gap-y-4">
+					<li>All-In Podcast</li>
+					<li>Lenny's Podcast</li>
+					<li>ThePrimeagen</li>
+					<li>Theo - t3.gg</li>
+					<li>Fireship</li>
+					<li>SyntaxFM</li>
+					<li>YC Startup School</li>
+				</ul>
 
-			<div></div>
-		</section>
+				<div></div>
+			</section>
 
-		<section id="projects" class="navItem grid w-full max-w-[1000px] gap-y-8 px-4 lg:grid-cols-3 lg:gap-y-24">
-			<h3 class="text-4xl font-bold">My projects</h3>
-			<div
-				class="grid justify-items-center gap-y-8 text-center lg:col-span-2 lg:grid-cols-2 lg:justify-items-start lg:text-start">
-				<ProjectsDashboard />
-			</div>
-			<h3 class="text-4xl font-bold">Archived</h3>
-			<div class="grid justify-items-center gap-y-8 lg:col-span-2 lg:grid-cols-2 lg:justify-items-start">
-				<ProjectDashboardArchived />
-			</div>
-		</section>
-
-		<section class="mt-8 grid w-full max-w-[1000px] content-start gap-y-8 px-4 lg:mt-24 lg:grid-cols-3 lg:gap-y-24">
-			<h2 class="text-4xl font-bold">Career</h2>
-			<div class="grid gap-y-4 lg:col-span-2 lg:grid-cols-4 lg:gap-y-8">
+			<section
+				id="projects"
+				class="navItem grid w-full max-w-[1000px] gap-y-8 px-4 pb-8 lg:grid-cols-3 lg:gap-y-24 lg:pb-28">
+				<h3 class="text-4xl font-bold">My projects</h3>
+				<div
+					class="grid justify-items-center gap-y-8 text-center lg:col-span-2 lg:grid-cols-2 lg:justify-items-start lg:text-start">
+					<ProjectsDashboard mode="dark" />
+				</div>
+			</section>
+		</div>
+		<div
+			class="hidden h-full w-full overflow-hidden bg-primary lg:col-span-2 lg:grid"
+			style="background-image:url({Moon}); background-size: cover; background-position: center;">
+		</div>
+	</div>
+	<div class="grid min-h-dvh w-full justify-items-center lg:grid-cols-5">
+		<div
+			class="hidden h-full w-full overflow-hidden lg:col-span-2 lg:grid"
+			style="background-image:url({Sunlight}); background-size: cover; background-position: bottom;">
+		</div>
+		<section
+			class="mt-8 grid w-full max-w-[1000px] grid-rows-[auto_1fr_auto] content-start gap-y-8 bg-base-100 lg:col-span-3 lg:mt-28 lg:grid-cols-3 lg:gap-y-24">
+			<h2 class="justify-self-start px-4 text-6xl font-extrabold lg:col-span-4">Day</h2>
+			<h2 class="content-start px-4 text-4xl font-bold">Jobs</h2>
+			<div class="grid content-start gap-y-4 px-4 lg:col-span-2 lg:grid-cols-4 lg:gap-y-8">
 				<div class="text-lg font-bold">2023</div>
 				<div class="lg:col-span-3">
 					<h4 class="font-medium">Service Delivery Tech Team Lead</h4>
@@ -264,11 +203,12 @@
 					</p>
 				</div>
 			</div>
+			<div class="lg:col-span-4">
+				<WebsiteFooter />
+			</div>
 		</section>
-	</main>
+	</div>
 </div>
-
-<WebsiteFooter />
 
 <style>
 	.list {
