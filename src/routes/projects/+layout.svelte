@@ -6,9 +6,9 @@
 </script>
 
 <Nav navCurrent="projects" />
-<div class="grid content-start lg:grid-cols-[auto_1fr]">
+<div class="grid content-start bg-base-200 lg:grid-cols-[auto_1fr]">
 	<aside
-		class="sticky left-0 top-0 z-[2] hidden h-full content-start border-2 border-red-300/10 bg-red-100 px-1 py-4 text-base-content/70 lg:grid">
+		class="sticky left-0 top-0 z-[2] hidden h-full content-start border-2 border-red-300/0 px-1 py-4 text-base-content/70 lg:grid">
 		<a href="/projects"
 			><h4 class="flex items-center gap-4 px-2 py-2 font-bold">
 				<svg
@@ -37,49 +37,49 @@
 		<ul class="ms-4 border-l-4 border-l-pink-600/30 ps-0.5 font-medium">
 			<a href="/projects/abbreviation"
 				><li
-					class="my-0.5 rounded-lg px-8 py-2 hover:bg-pink-600 hover:text-white/90 {data.slug === 'abbreviation'
+					class="my-0.5 rounded-lg px-8 py-2 hover:bg-red-950 hover:text-white/90 {data.slug === 'abbreviation'
 						? 'bg-pink-600 text-white/90'
 						: undefined}">
 					Abbreviation
 				</li></a>
 			<a href="/projects/appraize"
 				><li
-					class="my-0.5 rounded-lg px-8 py-2 hover:bg-pink-600 hover:text-white/90 {data.slug === 'appraize'
+					class="my-0.5 rounded-lg px-8 py-2 hover:bg-red-950 hover:text-white/90 {data.slug === 'appraize'
 						? 'bg-pink-600 text-white/90'
 						: undefined}">
 					Appraize
 				</li></a>
 			<a href="/projects/apptitude"
 				><li
-					class="my-0.5 rounded-lg px-8 py-2 hover:bg-pink-600 hover:text-white/90 {data.slug === 'apptitude'
+					class="my-0.5 rounded-lg px-8 py-2 hover:bg-red-950 hover:text-white/90 {data.slug === 'apptitude'
 						? 'bg-pink-600 text-white/90'
 						: undefined}">
 					Apptitude
 				</li></a>
 			<a href="/projects/btonomics"
 				><li
-					class="my-0.5 rounded-lg px-8 py-2 hover:bg-pink-600 hover:text-white/90 {data.slug === 'btonomics'
+					class="my-0.5 rounded-lg px-8 py-2 hover:bg-red-950 hover:text-white/90 {data.slug === 'btonomics'
 						? 'bg-pink-600 text-white/90'
 						: undefined}">
 					BTOnomics
 				</li></a>
 			<a href="/projects/cancelninja"
 				><li
-					class="my-0.5 rounded-lg px-8 py-2 hover:bg-pink-600 hover:text-white/90 {data.slug === 'cancelninja'
+					class="my-0.5 rounded-lg px-8 py-2 hover:bg-red-950 hover:text-white/90 {data.slug === 'cancelninja'
 						? 'bg-pink-600 text-white/90'
 						: undefined}">
 					Cancel Ninja
 				</li></a>
 			<a href="/projects/grumplr"
 				><li
-					class="my-0.5 rounded-lg px-8 py-2 hover:bg-pink-600 hover:text-white/90 {data.slug === 'grumplr'
+					class="my-0.5 rounded-lg px-8 py-2 hover:bg-red-950 hover:text-white/90 {data.slug === 'grumplr'
 						? 'bg-pink-600 text-white/90'
 						: undefined}">
 					Grumplr
 				</li></a>
 			<a href="/projects/meetrics"
 				><li
-					class="my-0.5 rounded-lg px-8 py-2 hover:bg-pink-600 hover:text-white/90 {data.slug === 'meetrics'
+					class="my-0.5 rounded-lg px-8 py-2 hover:bg-red-950 hover:text-white/90 {data.slug === 'meetrics'
 						? 'bg-pink-600 text-white/90'
 						: undefined}">
 					Meetrics
@@ -100,21 +100,21 @@
 		<ul class="ms-4 border-l-4 border-l-pink-600/30 ps-0.5 font-medium">
 			<a href="/projects/btonomics-wordpress"
 				><li
-					class="my-0.5 rounded-lg px-8 py-2 hover:bg-pink-600 hover:text-white/90 {data.slug === 'btonomics-wordpress'
+					class="my-0.5 rounded-lg px-8 py-2 hover:bg-red-950 hover:text-white/90 {data.slug === 'btonomics-wordpress'
 						? 'bg-pink-600 text-white/90'
 						: undefined}">
 					BTOnomics Wordpress
 				</li></a>
 			<a href="/projects/eatyourmeds"
 				><li
-					class="my-0.5 rounded-lg px-8 py-2 hover:bg-pink-600 hover:text-white/90 {data.slug === 'eatyourmeds'
+					class="my-0.5 rounded-lg px-8 py-2 hover:bg-red-950 hover:text-white/90 {data.slug === 'eatyourmeds'
 						? 'bg-pink-600 text-white/90'
 						: undefined}">
 					Eat Your Medicine!
 				</li></a>
 			<a href="/projects/rankamate"
 				><li
-					class="my-0.5 rounded-lg px-8 py-2 hover:bg-pink-600 hover:text-white/90 {data.slug === 'rankamate'
+					class="my-0.5 rounded-lg px-8 py-2 hover:bg-red-950 hover:text-white/90 {data.slug === 'rankamate'
 						? 'bg-pink-600 text-white/90'
 						: undefined}">
 					Rank-a-Mate

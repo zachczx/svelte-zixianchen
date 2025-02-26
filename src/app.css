@@ -25,7 +25,7 @@
 			-13px -13px 20px #ffffff;
 	}
 
-	.ball {
+	/*.ball {
 		position: relative;
 		border-radius: 50%;
 		background: radial-gradient(circle at 50% 120%, #f5b8bb, #fab3ba 10%, #980407 80%, #05223d 100%);
@@ -42,7 +42,7 @@
 		z-index: 1;
 	}
 
-	/*.ball > svg {
+	.ball > svg {
 		 z-index: 2; 
 	}*/
 }
@@ -57,31 +57,6 @@
 
 		@view-transition {
 			navigation: auto;
-		}
-	}
-
-	/* View transitions */
-	@keyframes fade-in {
-		from {
-			opacity: 0;
-		}
-	}
-
-	@keyframes fade-out {
-		to {
-			opacity: 0;
-		}
-	}
-
-	@keyframes slide-from-right {
-		from {
-			transform: translateX(30px);
-		}
-	}
-
-	@keyframes slide-to-left {
-		to {
-			transform: translateX(-30px);
 		}
 	}
 

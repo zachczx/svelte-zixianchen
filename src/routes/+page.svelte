@@ -31,6 +31,7 @@
 	import ProjectDashboardArchived from '$lib/ProjectDashboardArchived.svelte';
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
 	import Sunlight from '$lib/assets/pexels-evie-shaffer-1259279-3585648.webp';
+	import Computer from '$lib/assets/federica-galli-aiqKc07b5PA-unsplash.webp';
 
 	///////////////////////////////////
 	let navCurrent: string = $state('header');
@@ -97,12 +98,12 @@
 
 	<div class="grid w-full justify-items-center bg-[#0E0E0E] text-neutral-content lg:grid-cols-5">
 		<div class="grid justify-items-center pt-8 lg:col-span-3 lg:pt-28">
-			<h2 class="justify-self-start px-4 pb-24 text-6xl font-extrabold">Night</h2>
+			<h2 class="justify-self-start px-4 pb-24 text-9xl font-extrabold">Night</h2>
 			<section
 				id="about"
 				class="navItem grid min-h-[50vh] w-full max-w-[1000px] gap-y-8 px-4 lg:grid-cols-3 lg:gap-y-24">
 				<h3 class="text-4xl font-bold">About Me</h3>
-				<div class="col-span-2 space-y-8 text-lg">
+				<div class="col-span-2 space-y-8">
 					<p>
 						I've done <b>webdev</b> as a hobby on-off since 2000s — HTML Goodies, PHP4 days, Wordpress, Javascript, Python
 						frameworks.
@@ -118,15 +119,15 @@
 					</p>
 				</div>
 				<h3 class="text-4xl font-bold">Education</h3>
-				<div class="col-span-2 space-y-8 text-lg">
+				<div class="col-span-2 space-y-8">
 					<p>
-						I was a <b>Political Science</b> major who did International Relations & Comparative Politics. Enjoyed researching
-						interests, incentives, money, civil wars.
+						I did <b>Political Science</b>. International Relations, Comparative Politics. Enjoyed researching
+						incentives, interests, money, civil wars.
 					</p>
 				</div>
 
 				<h3 class="text-4xl font-bold">Playlist</h3>
-				<ul class="list col-span-2 flex flex-wrap gap-4 text-lg lg:gap-x-8 lg:gap-y-4">
+				<ul class="list col-span-2 flex flex-wrap gap-4 lg:gap-x-8 lg:gap-y-4">
 					<li>All-In Podcast</li>
 					<li>Lenny's Podcast</li>
 					<li>ThePrimeagen</li>
@@ -145,65 +146,65 @@
 				<h3 class="text-4xl font-bold">Side Projects</h3>
 				<div
 					class="grid justify-items-center gap-y-8 text-center lg:col-span-2 lg:grid-cols-2 lg:justify-items-start lg:text-start">
-					<ProjectsDashboard mode="dark" />
+					<ProjectsDashboard mode="dark" desaturate={true} />
 				</div>
 			</section>
 		</div>
 		<div
-			class="hidden h-full w-full overflow-hidden bg-primary lg:col-span-2 lg:grid"
+			class="hidden h-full w-full overflow-hidden bg-black lg:col-span-2 lg:grid"
 			style="background-image:url({Moon}); background-size: cover; background-position: center;">
 		</div>
 	</div>
-	<div class="grid min-h-dvh w-full justify-items-center lg:grid-cols-5">
+	<div class="grid min-h-dvh w-full justify-items-center bg-base-200 lg:grid-cols-5">
 		<div
-			class="hidden h-full w-full overflow-hidden lg:col-span-2 lg:grid"
-			style="background-image:url({Sunlight}); background-size: cover; background-position: bottom;">
+			class="hidden h-full w-full overflow-hidden saturate-[0.4] lg:col-span-2 lg:grid"
+			style="background-image:url({Computer}); background-size: cover; background-position: bottom;">
+			<div class="h-full w-full bg-gradient-to-r from-transparent from-90% to-base-200"></div>
 		</div>
 		<section
-			class="mt-8 grid w-full max-w-[1000px] grid-rows-[auto_1fr_auto] content-start gap-y-8 bg-base-100 lg:col-span-3 lg:mt-28 lg:grid-cols-3 lg:gap-y-24">
-			<h2 class="justify-self-start px-4 text-6xl font-extrabold lg:col-span-4">Day</h2>
-			<h2 class="content-start px-4 text-4xl font-bold">Jobs</h2>
-			<div class="grid content-start gap-y-4 px-4 lg:col-span-2 lg:grid-cols-4 lg:gap-y-8">
-				<div class="text-lg font-bold">2023</div>
-				<div class="lg:col-span-3">
+			class="mt-8 grid w-full max-w-[1000px] grid-rows-[auto_1fr_auto] content-start gap-y-8 bg-base-200 lg:col-span-3 lg:mt-28 lg:gap-y-24">
+			<h2 class="justify-self-start px-4 text-9xl font-extrabold">Day</h2>
+			<div class="grid content-start gap-y-4 px-4 lg:grid-cols-[auto_1fr] lg:gap-y-16">
+				<div class="pe-12 text-4xl font-bold">2023</div>
+				<div>
 					<h4 class="font-medium">Service Delivery Tech Team Lead</h4>
 					<p class="text-base-content/60">
-						Manage products, offer tech consultancy for citizen & employee service delivery.
+						Manage products, advise business owners for citizen & employee service delivery.
 					</p>
 				</div>
-				<div class="text-lg font-bold">2021</div>
-				<div class="lg:col-span-3">
+				<div class="pe-12 text-4xl font-bold">2021</div>
+				<div>
 					<h4 class="font-medium">Tech Infra Policy Team Lead</h4>
 					<p class="text-base-content/60">
 						Policies & funding for Govt cloud, on-prem hosting, SG Tech Stack, endpoint devices, dev toolchains.
 					</p>
 				</div>
-				<div class="text-lg font-bold">2018</div>
-				<div class="lg:col-span-3">
+				<div class="pe-12 text-4xl font-bold">2018</div>
+				<div>
 					<h4 class="font-medium">Comms Tech Team Lead</h4>
 					<p class="text-base-content/60">
 						Developed & bought media analytic products. Led investments in NLP & CV research.
 					</p>
 				</div>
-				<div class="text-lg font-bold">2017</div>
-				<div class="lg:col-span-3">
+				<div class="pe-12 text-4xl font-bold">2017</div>
+				<div>
 					<h4 class="font-medium">Comms Strategist</h4>
 					<p class="text-base-content/60">Did comms campaigns and strategies.</p>
 				</div>
-				<div class="text-lg font-bold">2015</div>
-				<div class="lg:col-span-3">
+				<div class="pe-12 text-4xl font-bold">2015</div>
+				<div>
 					<h4 class="font-medium">Media Relations Officer</h4>
 					<p class="text-base-content/60">Got earned media, did crisis comms, did public relations work.</p>
 				</div>
-				<div class="text-lg font-bold">2013</div>
-				<div class="lg:col-span-3">
+				<div class="pe-12 text-4xl font-bold">2013</div>
+				<div>
 					<h4 class="font-medium">NS Policy Officer</h4>
 					<p class="text-base-content/60">
 						Did NS policies for sportsmen, leave, citizenship, exit control. Worked in Committee to Strengthen NS.
 					</p>
 				</div>
 			</div>
-			<div class="lg:col-span-4">
+			<div>
 				<WebsiteFooter />
 			</div>
 		</section>
@@ -211,12 +212,9 @@
 </div>
 
 <style>
-	.list {
+	/* .list {
 		li::before {
 			content: '🔥';
-			/* padding-right: 0.4rem; */
-			padding-right: 0.25rem;
-			/* padding-left: 0.2rem; */
 		}
 		li:nth-child(2)::before {
 			content: '🚀';
@@ -235,6 +233,16 @@
 		}
 		li:nth-child(7)::before {
 			content: '🤖';
+		}
+	} */
+
+	.list {
+		li {
+			list-style-type: none;
+			/* margin-bottom: 1rem; */
+			padding-left: 1.75rem;
+			background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjNlbSIgaGVpZ2h0PSIxLjNlbSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTE1LjA3MyAyLjVjMS44MjQgMCAzLjI5MyAwIDQuNDUuMTU1YzEuMi4xNjIgMi4yMS41MDcgMy4wMTIgMS4zMWMuODAzLjgwMiAxLjE0OCAxLjgxMyAxLjMxIDMuMDEzQzI0IDguMTM0IDI0IDkuNjAzIDI0IDExLjQyN3YxLjE0NmMwIDEuODI0IDAgMy4yOTMtLjE1NSA0LjQ1Yy0uMTYyIDEuMi0uNTA3IDIuMjEtMS4zMSAzLjAxMmMtLjgwMi44MDMtMS44MTIgMS4xNDgtMy4wMTMgMS4zMWMtMS4xNTYuMTU1LTIuNjI1LjE1NS00LjQ0OS4xNTVIOC45MjdjLTEuODI0IDAtMy4yOTMgMC00LjQ1LS4xNTVjLTEuMi0uMTYyLTIuMjEtLjUwNy0zLjAxMy0xLjMxYy0uODAyLS44MDItMS4xNDctMS44MTItMS4zMDktMy4wMTNDMCAxNS44NjYgMCAxNC4zOTcgMCAxMi41NzN2LTEuMTQ2YzAtMS44MjQgMC0zLjI5My4xNTUtNC40NWMuMTYyLTEuMi41MDctMi4yMSAxLjMxLTMuMDEzYy44MDItLjgwMiAxLjgxMy0xLjE0NyAzLjAxMy0xLjMwOUM1LjYzNCAyLjUgNy4xMDMgMi41IDguOTI3IDIuNXptMS40MjYgOS41MDFMOS4zIDcuODMydjguMzM4eiIvPjwvc3ZnPg==)
+				no-repeat left center;
 		}
 	}
 </style>

@@ -45,12 +45,12 @@
 		<StackComponents names={['go', 'htmx', 'tailwind', 'sqlite', 'templ']} />
 	{/snippet}
 
-	{#snippet screenshots()}
+	<!-- {#snippet screenshots()}
 		<div class="grid grid-cols-2 gap-4">
 			<enhanced:img src={AbbreviationScreenShot1} alt="Abbreviation app" class="rounded-xl" />
 			<enhanced:img src={AbbreviationScreenShot2} alt="Abbreviation app" class="rounded-xl" />
 		</div>
-	{/snippet}
+	{/snippet} -->
 
 	{#snippet problem()}
 		<p class="mb-4">

@@ -2,10 +2,13 @@
 	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=158';
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
 
-	let { mode = '' } = $props();
+	let { mode = '', desaturate = false } = $props();
 </script>
 
-<div class="flex items-center">
+<div
+	class="flex items-center {desaturate
+		? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100'
+		: undefined}">
 	<figure class="grid content-center justify-items-center space-y-2">
 		<figcaption>
 			<a href="/projects/abbreviation"
@@ -33,23 +36,26 @@
 						></svg
 					>n
 				</h3>
-				<div class="">Abbreviation/acronym search</div>
+				<div>Abbreviation/acronym search</div>
 			</a>
 		</figcaption>
 	</figure>
 </div>
 
-<figure class="grid content-center space-y-2 self-center">
+<figure
+	class="grid content-center space-y-2 self-center {desaturate
+		? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100'
+		: undefined}">
 	<figcaption>
 		<a href="/projects/appraize">
 			<h3 class="font-sans text-4xl font-black text-[#A94A4A] {mode === 'dark' ? 'brightness-125' : undefined}">
 				Appraize
 			</h3>
-			<div class="">Drop & drop ranking</div></a>
+			<div>Drop & drop ranking</div></a>
 	</figcaption>
 </figure>
 
-<figure>
+<figure class={desaturate ? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100' : undefined}>
 	<figcaption>
 		<a href="/projects/apptitude"
 			><enhanced:img src={apptitudeLogo} alt="Apptitude Logo"></enhanced:img>
@@ -57,7 +63,7 @@
 	</figcaption>
 </figure>
 
-<div class="">
+<div class={desaturate ? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100' : undefined}>
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/btonomics"
@@ -85,7 +91,10 @@
 	<div>SaaS & Dark Pattern tracker</div>
 </a>
 
-<div class="flex items-center">
+<div
+	class="flex items-center {desaturate
+		? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100'
+		: undefined}">
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/grumplr"
@@ -100,7 +109,7 @@
 	</figure>
 </div>
 
-<div>
+<div class={desaturate ? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100' : undefined}>
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/meetrics"
