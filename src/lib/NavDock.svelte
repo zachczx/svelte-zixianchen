@@ -398,6 +398,7 @@
 	.dock {
 		font-size: calc(var(--font-scaler) * 6rem);
 		div {
+			filter: saturate(0.5);
 			height: calc(var(--dimensions-scaler) * 9rem);
 			width: calc(var(--dimensions-scaler) * 9rem);
 		}
@@ -406,6 +407,7 @@
 	.dock:hover {
 		font-size: calc(var(--font-scaler) * 9rem);
 		div {
+			filter: saturate(1);
 			height: calc(var(--dimensions-scaler) * 13rem);
 			width: calc(var(--dimensions-scaler) * 13rem);
 		}

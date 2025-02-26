@@ -59,7 +59,7 @@
 </svelte:head>
 
 <Nav {navCurrent} />
-<div class="grid min-h-dvh justify-items-center 2xl:overflow-x-clip">
+<div class="grid min-h-dvh justify-items-center bg-base-200 2xl:overflow-x-clip">
 	<header
 		id="header"
 		class="navItem hidden content-center justify-items-center xl:grid xl:min-h-dvh xl:max-w-[1500px] xl:grid-cols-5 xl:gap-x-10 xl:gap-y-10">
@@ -70,15 +70,16 @@
 			</span>
 		</div>
 		<div class="h-[10rem] w-full justify-self-end overflow-hidden rounded-br-full rounded-tl-full xl:col-span-4">
-			<img src={heroTopSmartNation} alt="" class="hero-scroll-sn -mt-[7.5rem] -translate-x-0" />
+			<img src={heroTopSmartNation} alt="" class="-mt-[7.5rem] -translate-x-0 saturate-[0.2]" />
 		</div>
 		<div
-			class="hidden h-[10rem] w-full justify-self-end overflow-hidden rounded-br-full rounded-tl-full xl:col-span-2 xl:grid">
-			<enhanced:img src={ryzen} alt="" class="hero-scroll -mt-[4rem]"></enhanced:img>
+			class="hidden h-[10rem] w-full justify-self-end overflow-hidden rounded-br-full rounded-tl-full bg-black/80 xl:col-span-2 xl:grid">
+			<!-- <enhanced:img src={ryzen} alt="" class="-mt-[4rem] saturate-[0.2]"></enhanced:img> -->
 		</div>
 
-		<div class=" x h-[10rem] w-full justify-self-end overflow-hidden rounded-bl-full rounded-tr-full xl:col-span-2">
-			<enhanced:img src={robotEyes} alt="" class="hero-scroll -mt-28 scale-[1]"></enhanced:img>
+		<div
+			class="h-[10rem] w-full justify-self-end overflow-hidden rounded-bl-full rounded-tr-full bg-black/80 xl:col-span-2">
+			<!-- <enhanced:img src={robotEyes} alt="" class="-mt-28 scale-[1] saturate-[0.2]"></enhanced:img> -->
 		</div>
 		<div class="content-center justify-self-center xl:col-span-1">
 			<span
@@ -92,7 +93,7 @@
 			</h1>
 		</div>
 		<div class="h-[15rem] w-[30rem] justify-self-center overflow-hidden rounded-full xl:col-span-2">
-			<enhanced:img src={selfSndgoPic} alt="" class="hero-scroll -translate-x-0 -translate-y-10"></enhanced:img>
+			<enhanced:img src={selfSndgoPic} alt="" class="-translate-x-0 -translate-y-10 saturate-[0.5]"></enhanced:img>
 		</div>
 	</header>
 
