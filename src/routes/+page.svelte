@@ -60,7 +60,22 @@
 
 <Nav {navCurrent} />
 <div class="grid min-h-dvh justify-items-center bg-base-200 2xl:overflow-x-clip">
-	<header
+	<div class="navItem relative hidden w-full content-center justify-items-center font-serif lg:grid lg:min-h-dvh">
+		<div class="grid w-full grid-cols-2 px-4">
+			<div class="z-[1] w-full text-[6rem] leading-none tracking-tighter text-white xl:text-start xl:text-[8rem]">
+				Hello
+			</div>
+			<div class="z-[1] w-full text-end font-serif text-[6rem] leading-none tracking-tighter xl:text-[8rem]">I'm</div>
+		</div>
+		<h1 class="z-[1] flex gap-8 text-start font-serif text-[6rem] xl:text-center xl:text-[8rem] 2xl:text-[15rem]">
+			<span class="text-base-200">Zix</span><span>ian</span>
+		</h1>
+		<div class="absolute left-0 top-0 grid h-full w-full grid-cols-2">
+			<div class="h-full w-full bg-black"></div>
+			<div class="h-full w-full bg-base-200"></div>
+		</div>
+	</div>
+	<!-- <header
 		id="header"
 		class="navItem hidden content-center justify-items-center xl:grid xl:min-h-dvh xl:max-w-[1500px] xl:grid-cols-5 xl:gap-x-10 xl:gap-y-10">
 		<div class="content-center justify-self-center xl:col-span-1">
@@ -74,12 +89,12 @@
 		</div>
 		<div
 			class="hidden h-[10rem] w-full justify-self-end overflow-hidden rounded-br-full rounded-tl-full bg-black/80 xl:col-span-2 xl:grid">
-			<!-- <enhanced:img src={ryzen} alt="" class="-mt-[4rem] saturate-[0.2]"></enhanced:img> -->
+			<enhanced:img src={ryzen} alt="" class="-mt-[4rem] saturate-[0.2]"></enhanced:img>
 		</div>
 
 		<div
 			class="h-[10rem] w-full justify-self-end overflow-hidden rounded-bl-full rounded-tr-full bg-black/80 xl:col-span-2">
-			<!-- <enhanced:img src={robotEyes} alt="" class="-mt-28 scale-[1] saturate-[0.2]"></enhanced:img> -->
+			<enhanced:img src={robotEyes} alt="" class="-mt-28 scale-[1] saturate-[0.2]"></enhanced:img>
 		</div>
 		<div class="content-center justify-self-center xl:col-span-1">
 			<span
@@ -95,7 +110,7 @@
 		<div class="h-[15rem] w-[30rem] justify-self-center overflow-hidden rounded-full xl:col-span-2">
 			<enhanced:img src={selfSndgoPic} alt="" class="-translate-x-0 -translate-y-10 saturate-[0.5]"></enhanced:img>
 		</div>
-	</header>
+	</header> -->
 
 	<div class="grid w-full justify-items-center bg-[#0E0E0E] text-neutral-content lg:grid-cols-5">
 		<div class="grid justify-items-center pt-8 lg:col-span-3 lg:pt-28">
