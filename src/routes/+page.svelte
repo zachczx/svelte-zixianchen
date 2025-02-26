@@ -142,7 +142,7 @@
 			<section
 				id="projects"
 				class="navItem grid w-full max-w-[1000px] gap-y-8 px-4 pb-8 lg:grid-cols-3 lg:gap-y-24 lg:pb-28">
-				<h3 class="text-4xl font-bold">My projects</h3>
+				<h3 class="text-4xl font-bold">Side Projects</h3>
 				<div
 					class="grid justify-items-center gap-y-8 text-center lg:col-span-2 lg:grid-cols-2 lg:justify-items-start lg:text-start">
 					<ProjectsDashboard mode="dark" />
