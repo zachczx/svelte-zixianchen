@@ -32,6 +32,7 @@
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
 	import Sunlight from '$lib/assets/pexels-evie-shaffer-1259279-3585648.webp';
 	import Computer from '$lib/assets/federica-galli-aiqKc07b5PA-unsplash.webp';
+	import ZXC from '$lib/assets/zixianchen.webp';
 
 	///////////////////////////////////
 	let navCurrent: string = $state('header');
@@ -60,7 +61,9 @@
 
 <Nav {navCurrent} />
 <div class="grid min-h-dvh justify-items-center bg-base-200 2xl:overflow-x-clip">
-	<div class="navItem relative hidden w-full content-center justify-items-center font-serif lg:grid lg:min-h-dvh">
+	<!-- <header
+		id="header"
+		class="navItem relative hidden w-full content-center justify-items-center font-serif lg:grid lg:min-h-dvh">
 		<div class="grid w-full grid-cols-2 px-4">
 			<div class="z-[1] w-full text-[6rem] leading-none tracking-tighter text-white xl:text-start xl:text-[8rem]">
 				Hello
@@ -74,43 +77,48 @@
 			<div class="h-full w-full bg-black"></div>
 			<div class="h-full w-full bg-base-200"></div>
 		</div>
-	</div>
-	<!-- <header
-		id="header"
-		class="navItem hidden content-center justify-items-center xl:grid xl:min-h-dvh xl:max-w-[1500px] xl:grid-cols-5 xl:gap-x-10 xl:gap-y-10">
-		<div class="content-center justify-self-center xl:col-span-1">
-			<span
-				class="inline-block w-full bg-gradient-to-r from-gray-700 to-slate-700 bg-clip-text font-serif text-4xl leading-none tracking-tighter text-[#341319] text-transparent xl:text-start xl:text-[7rem]"
-				>Hello
-			</span>
+	</header> -->
+	<!-- <header id="header" class="navItem hidden w-full content-center lg:grid lg:min-h-dvh lg:grid-cols-2">
+		<div class="grid h-full w-full content-center bg-black lg:min-h-dvh">
+			<div class="ps-8">
+				<div class="w-full text-[6rem] font-bold leading-none tracking-tighter text-base-200">Hello</div>
+				<h1
+					class="justify-self-end text-start font-sans text-[6rem] leading-none xl:text-center xl:text-[8rem] 2xl:text-[15rem]">
+					<span class="inline-block p-8 font-black text-base-200">ZIXIAN</span>
+					<span class="inline-block w-full -rotate-[25deg] text-[5rem] text-base-200">fmt.Println("Hello World!")</span>
+					<span class="inline-block p-8 font-black text-base-200">CHEN</span>
+				</h1>
+			</div>
 		</div>
-		<div class="h-[10rem] w-full justify-self-end overflow-hidden rounded-br-full rounded-tl-full xl:col-span-4">
-			<img src={heroTopSmartNation} alt="" class="-mt-[7.5rem] -translate-x-0 saturate-[0.2]" />
-		</div>
-		<div
-			class="hidden h-[10rem] w-full justify-self-end overflow-hidden rounded-br-full rounded-tl-full bg-black/80 xl:col-span-2 xl:grid">
-			<enhanced:img src={ryzen} alt="" class="-mt-[4rem] saturate-[0.2]"></enhanced:img>
-		</div>
-
-		<div
-			class="h-[10rem] w-full justify-self-end overflow-hidden rounded-bl-full rounded-tr-full bg-black/80 xl:col-span-2">
-			<enhanced:img src={robotEyes} alt="" class="-mt-28 scale-[1] saturate-[0.2]"></enhanced:img>
-		</div>
-		<div class="content-center justify-self-center xl:col-span-1">
-			<span
-				class="inline-block w-full bg-gradient-to-r from-gray-700 to-slate-700 bg-clip-text font-serif text-4xl leading-none tracking-tighter text-[#341319] text-transparent xl:text-start xl:text-[7rem]"
-				>I'm</span>
-		</div>
-		<div class="xl:col-span-3 xl:justify-self-end">
-			<h1
-				class="inline-block bg-gradient-to-r from-pink-600 via-orange-600 to-red-700 bg-clip-text text-start font-serif text-6xl text-transparent xl:text-center xl:text-[8rem] 2xl:text-[15rem]">
-				Zixian.
-			</h1>
-		</div>
-		<div class="h-[15rem] w-[30rem] justify-self-center overflow-hidden rounded-full xl:col-span-2">
-			<enhanced:img src={selfSndgoPic} alt="" class="-translate-x-0 -translate-y-10 saturate-[0.5]"></enhanced:img>
+		<div class="grid h-full w-full content-center bg-base-200 lg:min-h-dvh">
+			<div class="pe-8">
+			
+				<h1
+					class="justify-self-start text-start font-sans text-[6rem] leading-none xl:text-center xl:text-[8rem] 2xl:text-[15rem]">
+					<span class="inline-block bg-black p-8 font-black text-base-200">CHEN</span>
+				</h1>
+			</div>
 		</div>
 	</header> -->
+
+	<header id="header" class="navItem w-full place-items-center py-20 lg:grid lg:min-h-dvh lg:py-0">
+		<div class="flex w-full flex-wrap items-center justify-center gap-8 bg-base-200 lg:min-h-dvh">
+			<div>
+				<img src={ZXC} alt="" class="h-72 lg:h-[40rem]" />
+			</div>
+			<a href="/projects" class="group relative grid h-56 w-56 content-center text-2xl font-black">
+				<div class="z-[2] h-16 content-center rounded bg-[#0E0E0E] text-center text-base-200 group-hover:bg-primary">
+					I like to build
+				</div>
+				<div
+					class="absolute left-1/2 top-0 z-[1] h-full w-16 -translate-x-1/2 rounded bg-[#0E0E0E] group-hover:bg-primary">
+				</div>
+			</a>
+			<div class="h-16 w-56 content-center rounded bg-[#0E0E0E] text-center text-2xl font-black text-base-200">
+				I do different
+			</div>
+		</div>
+	</header>
 
 	<div class="grid w-full justify-items-center bg-[#0E0E0E] text-neutral-content lg:grid-cols-5">
 		<div class="grid justify-items-center pt-8 lg:col-span-3 lg:pt-28">

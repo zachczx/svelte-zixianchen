@@ -1,7 +1,9 @@
 <script lang="ts">
-	let { navCurrent, pathName } = $props();
-
-	import Briefcase from '$lib/assets/briefcase.webp?enhanced';
+	interface NavDock {
+		navCurrent: string;
+		pathName: string;
+	}
+	let { navCurrent, pathName }: NavDock = $props();
 </script>
 
 <a
