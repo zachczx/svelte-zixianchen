@@ -28,7 +28,7 @@
 			<li>Migrated to AstroJS as a static site.</li>
 			<li>Used ChatGPT to convert WordPress html/shortcode to markdown.</li>
 			<li>Recently did some rewriting to convert to Astro 5's Content Layer API.</li>
-			<li>In the process I added QOL stuff like tag filtering</li>
+			<li>Added QOL stuff like tag filtering and text search.</li>
 		</ul>
 	{/snippet}
 
