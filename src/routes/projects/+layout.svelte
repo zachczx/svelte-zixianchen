@@ -1,10 +1,11 @@
 <script lang="ts">
 	import Nav from '$lib/Nav.svelte';
+	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
 	let { data, children } = $props();
 </script>
 
 <Nav navCurrent="projects" />
-<div class="grid min-h-dvh content-start bg-base-200 pt-8 lg:grid-cols-[auto_1fr] lg:pt-36">
+<div class="grid min-h-dvh content-start bg-base-200 pt-8 lg:grid-cols-[auto_1fr] lg:grid-rows-[1fr_auto] lg:pt-36">
 	<aside class="z-[2] hidden content-start border-2 border-red-300/0 px-1 text-base-content/70 lg:grid">
 		<!-- <a href="/projects"
 			><h4 class="flex items-center gap-4 px-2 py-2 font-bold">
@@ -131,4 +132,5 @@
 	<section id="projects" class="lg:ps-1.5">
 		{@render children()}
 	</section>
+	<div class="lg:col-span-2"><WebsiteFooter /></div>
 </div>

@@ -106,7 +106,7 @@
 			<div>
 				<img src={ZXC} alt="" class="h-72 lg:h-[40rem]" />
 			</div>
-			<a href="/projects" class="group relative grid h-56 w-56 content-center font-black">
+			<!-- <a href="/projects" class="group relative grid h-56 w-56 content-center font-black">
 				<div class="z-[2] h-16 content-center rounded bg-[#0E0E0E] text-center text-base-200 group-hover:bg-primary">
 					I like to build.
 				</div>
@@ -116,7 +116,7 @@
 			</a>
 			<div class="h-16 w-56 content-center rounded bg-[#0E0E0E] text-center font-black text-base-200">
 				I like different.
-			</div>
+			</div> -->
 		</div>
 	</header>
 
