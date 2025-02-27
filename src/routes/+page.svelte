@@ -123,9 +123,9 @@
 	<div id="about" class="navItem grid min-h-dvh w-full justify-items-center bg-base-200">
 		<div class="grid justify-items-center pt-8 lg:pt-12">
 			<h2 class="hidden justify-self-start px-4 pb-24 text-9xl font-extrabold lg:grid">About Me</h2>
-			<div class="grid min-h-[50vh] w-full max-w-[1000px] gap-y-8 px-4 lg:grid-cols-3 lg:gap-y-24">
+			<div class="grid min-h-[50vh] w-full max-w-[1000px] gap-y-4 px-4 lg:grid-cols-3">
 				<h3 class="text-4xl font-bold">Interests</h3>
-				<div class="col-span-2 space-y-8">
+				<div class="col-span-2 mb-4 space-y-8">
 					<p>
 						I've done <b>webdev</b> as a hobby on-off since 2000s — HTML Goodies, PHP4 days, Wordpress, Javascript, Python
 						frameworks.
@@ -141,7 +141,7 @@
 					</p>
 				</div>
 				<h3 class="text-4xl font-bold">Education</h3>
-				<div class="col-span-2 content-center space-y-8">
+				<div class="col-span-2 mb-4 content-center space-y-8">
 					<p>
 						I did <b>Political Science</b>. Enjoyed researching incentives, interests, money, civil wars.
 					</p>
