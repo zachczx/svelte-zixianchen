@@ -10,7 +10,7 @@
 		</a>
 	{/snippet}
 	{#snippet stack()}
-		<StackComponents names={['go', 'htmx', 'templ', 'postgresql', 'stytch', 'tailwind']} />
+		<StackComponents names={['go', 'htmx', 'templ', 'postgresql', 'keycloak', 'tailwind']} />
 	{/snippet}
 
 	{#snippet problem()}

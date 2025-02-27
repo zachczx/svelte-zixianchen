@@ -30,7 +30,7 @@
 	}: ProjectEntryProps = $props();
 </script>
 
-<div {id} class="project grid content-center justify-items-center px-2 py-8 lg:min-h-[90vh] lg:px-8 lg:py-32">
+<div {id} class="project grid content-center justify-items-center px-2 lg:min-h-[90vh] lg:px-8 lg:pb-32">
 	<div class="grid content-center justify-items-center text-center">
 		{@render title()}
 		<p class="italic text-base-content/70">{subtitle}</p>
