@@ -39,6 +39,7 @@ export default {
 					'base-200': '#ECF0F2',
 					'base-300': '#e4f7c2',
 					warning: '#d0342c',
+					neutral: '#0E0E0E',
 
 					//https://www.colorhexa.com/f8fdef
 				},

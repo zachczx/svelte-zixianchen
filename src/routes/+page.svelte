@@ -106,27 +106,25 @@
 			<div>
 				<img src={ZXC} alt="" class="h-72 lg:h-[40rem]" />
 			</div>
-			<a href="/projects" class="group relative grid h-56 w-56 content-center text-2xl font-black">
+			<a href="/projects" class="group relative grid h-56 w-56 content-center font-black">
 				<div class="z-[2] h-16 content-center rounded bg-[#0E0E0E] text-center text-base-200 group-hover:bg-primary">
-					I like to build
+					I like to build.
 				</div>
 				<div
 					class="absolute left-1/2 top-0 z-[1] h-full w-16 -translate-x-1/2 rounded bg-[#0E0E0E] group-hover:bg-primary">
 				</div>
 			</a>
-			<div class="h-16 w-56 content-center rounded bg-[#0E0E0E] text-center text-2xl font-black text-base-200">
-				I do different
+			<div class="h-16 w-56 content-center rounded bg-[#0E0E0E] text-center font-black text-base-200">
+				I like different.
 			</div>
 		</div>
 	</header>
 
-	<div class="grid w-full justify-items-center bg-[#0E0E0E] text-neutral-content lg:grid-cols-5">
-		<div class="grid justify-items-center pt-8 lg:col-span-3 lg:pt-28">
-			<h2 class="justify-self-start px-4 pb-24 text-9xl font-extrabold">Night</h2>
-			<section
-				id="about"
-				class="navItem grid min-h-[50vh] w-full max-w-[1000px] gap-y-8 px-4 lg:grid-cols-3 lg:gap-y-24">
-				<h3 class="text-4xl font-bold">About Me</h3>
+	<div id="about" class="navItem grid min-h-dvh w-full justify-items-center bg-base-200">
+		<div class="grid justify-items-center pt-8 lg:pt-12">
+			<h2 class="hidden justify-self-start px-4 pb-24 text-9xl font-extrabold lg:grid">About Me</h2>
+			<div class="grid min-h-[50vh] w-full max-w-[1000px] gap-y-8 px-4 lg:grid-cols-3 lg:gap-y-24">
+				<h3 class="text-4xl font-bold">Interests</h3>
 				<div class="col-span-2 space-y-8">
 					<p>
 						I've done <b>webdev</b> as a hobby on-off since 2000s — HTML Goodies, PHP4 days, Wordpress, Javascript, Python
@@ -143,10 +141,9 @@
 					</p>
 				</div>
 				<h3 class="text-4xl font-bold">Education</h3>
-				<div class="col-span-2 space-y-8">
+				<div class="col-span-2 content-center space-y-8">
 					<p>
-						I did <b>Political Science</b>. International Relations, Comparative Politics. Enjoyed researching
-						incentives, interests, money, civil wars.
+						I did <b>Political Science</b>. Enjoyed researching incentives, interests, money, civil wars.
 					</p>
 				</div>
 
@@ -162,14 +159,19 @@
 				</ul>
 
 				<div></div>
-			</section>
+			</div>
+		</div>
+	</div>
 
+	<div class="grid w-full justify-items-center bg-[#0E0E0E] text-neutral-content lg:grid-cols-5">
+		<div class="grid w-full justify-items-center pt-8 lg:col-span-3 lg:pt-28">
 			<section
 				id="projects"
-				class="navItem grid w-full max-w-[1000px] gap-y-8 px-4 pb-8 lg:grid-cols-3 lg:gap-y-24 lg:pb-28">
+				class="navItem grid w-full max-w-[1000px] gap-y-8 px-4 pb-8 lg:grid-cols-3 lg:gap-y-24 lg:justify-self-end lg:pb-28">
+				<h2 class="justify-self-start text-9xl font-extrabold lg:col-span-3">Night</h2>
 				<h3 class="text-4xl font-bold">Side Projects</h3>
 				<div
-					class="grid justify-items-center gap-y-8 text-center lg:col-span-2 lg:grid-cols-2 lg:justify-items-start lg:text-start">
+					class="grid justify-items-center gap-y-8 text-center lg:col-span-2 lg:grid-cols-1 lg:justify-items-start lg:text-start">
 					<ProjectsDashboard mode="dark" desaturate={true} />
 				</div>
 			</section>
@@ -265,8 +267,13 @@
 			list-style-type: none;
 			/* margin-bottom: 1rem; */
 			padding-left: 1.75rem;
-			background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjNlbSIgaGVpZ2h0PSIxLjNlbSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTE1LjA3MyAyLjVjMS44MjQgMCAzLjI5MyAwIDQuNDUuMTU1YzEuMi4xNjIgMi4yMS41MDcgMy4wMTIgMS4zMWMuODAzLjgwMiAxLjE0OCAxLjgxMyAxLjMxIDMuMDEzQzI0IDguMTM0IDI0IDkuNjAzIDI0IDExLjQyN3YxLjE0NmMwIDEuODI0IDAgMy4yOTMtLjE1NSA0LjQ1Yy0uMTYyIDEuMi0uNTA3IDIuMjEtMS4zMSAzLjAxMmMtLjgwMi44MDMtMS44MTIgMS4xNDgtMy4wMTMgMS4zMWMtMS4xNTYuMTU1LTIuNjI1LjE1NS00LjQ0OS4xNTVIOC45MjdjLTEuODI0IDAtMy4yOTMgMC00LjQ1LS4xNTVjLTEuMi0uMTYyLTIuMjEtLjUwNy0zLjAxMy0xLjMxYy0uODAyLS44MDItMS4xNDctMS44MTItMS4zMDktMy4wMTNDMCAxNS44NjYgMCAxNC4zOTcgMCAxMi41NzN2LTEuMTQ2YzAtMS44MjQgMC0zLjI5My4xNTUtNC40NWMuMTYyLTEuMi41MDctMi4yMSAxLjMxLTMuMDEzYy44MDItLjgwMiAxLjgxMy0xLjE0NyAzLjAxMy0xLjMwOUM1LjYzNCAyLjUgNy4xMDMgMi41IDguOTI3IDIuNXptMS40MjYgOS41MDFMOS4zIDcuODMydjguMzM4eiIvPjwvc3ZnPg==)
+			/* ion:logo-youtube */
+			background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 512 512"><path fill="%230E0E0E" d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149C1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5c58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5c2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9M207 353.89v-196.5l145 98.2Z"/></svg>')
 				no-repeat left center;
+			&:hover {
+				background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 512 512"><path fill="%23FF0000" d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149C1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5c58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5c2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9M207 353.89v-196.5l145 98.2Z"/></svg>')
+					no-repeat left center;
+			}
 		}
 	}
 </style>
