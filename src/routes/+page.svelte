@@ -1,36 +1,19 @@
 <script lang="ts">
 	import TankSvg from '$lib/svg/TankSvg.svelte';
-	import versus from '$lib/assets/fightIronManCaptainAmerica.webp';
-	import selfSndgoPic from '$lib/assets/profile.webp?enhanced&w=800';
-	import spotify from '$lib/assets/spotify.webp?enhanced&w=400';
-	import server from '$lib/assets/server.webp';
-	import programming from '$lib/assets/programming.webp?enhanced&w=800';
-	import TextingBro from '$lib/svg/Texting-bro.svg?dataurl';
-	import lego from '$lib/assets/lego-2539844.webp';
-	import ResumeBro from '$lib/svg/Resume-bro.svg?dataurl';
-	import OnlineResume from '$lib/svg/Online-resume-rafiki.svg?dataurl';
+
 	import Nav from '$lib/Nav.svelte';
 	import { onMount } from 'svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
 	import Intermission from '$lib/Intermission.svelte';
 	import { addNeumorphismInset, removeNeumorphismInset } from '$lib/Neumorphism';
-	import robotEyes from '$lib/assets/robot-eyes.webp?enhanced&w=900';
-	import ryzen from '$lib/assets/ryzen.webp?enhanced&w=1000';
-	import heroTopSmartNation from '$lib/assets/hero-top-smart-nation.webp';
-	import building from '$lib/assets/joel-filipe-jU9VAZDGMzs-unsplash.webp';
-	import winXp from '$lib/assets/windowsxp.png?enhanced';
-	import ubuntuCli from '$lib/assets/ubuntu-cli.webp?enhanced&w=600';
-	import bridge from '$lib/assets/thomas-kelley-hgbdG_QHNcw-unsplash.webp';
 	import moneySvg from '$lib/svg/Manage money-cuate.svg?dataurl';
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-	import Globe from '$lib/magic-ui/Globe.svelte';
 	import AnimatedBeamMultipleInput from '$lib/magic-ui/AnimatedBeamMultipleInput.svelte';
 	import CareerPercentage from '$lib/CareerPercentage.svelte';
 	import ProjectsDashboard from '$lib/ProjectsDashboard.svelte';
 	import ProjectDashboardArchived from '$lib/ProjectDashboardArchived.svelte';
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
-	import Sunlight from '$lib/assets/pexels-evie-shaffer-1259279-3585648.webp';
 	import Computer from '$lib/assets/federica-galli-aiqKc07b5PA-unsplash.webp';
 	import ZXC from '$lib/assets/zixianchen.webp';
 
