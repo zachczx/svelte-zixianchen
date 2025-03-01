@@ -14,7 +14,7 @@
 	import SvgPostgresql from '$lib/logos/Postgresql.svg?dataurl';
 	import SvgTurso from '$lib/logos/Turso.svg?dataurl';
 	import SvgHtmx from '$lib/logos/htmx-small-logo.svg?dataurl';
-	import SvgDjango from '$lib/logos/Django.svg?dataurl';
+	import SvgDjango from '$lib/logos/django-small-logo.svg?dataurl';
 	import SvgBootstrap from '$lib/logos/Bootstrap.svg?dataurl';
 	import SvgGunicorn from '$lib/logos/Gunicorn.svg?dataurl';
 	import SvgWordpress from '$lib/logos/Wordpress.svg?dataurl';
@@ -80,7 +80,7 @@
 
 {#each names as name}
 	<div
-		class="flex items-center justify-center gap-4 rounded-lg border border-neutral/15 bg-white/70 px-4 py-2 shadow-md">
+		class="border-neutral/15 flex items-center justify-center gap-4 rounded-lg border bg-white/70 px-4 py-2 shadow-md">
 		{#if stacks[name].enhanced}
 			<enhanced:img
 				src={stacks[name].src}
