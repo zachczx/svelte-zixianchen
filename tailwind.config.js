@@ -1,6 +1,3 @@
-import daisyui from 'daisyui';
-import themes from 'daisyui/src/theming/themes';
-
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -25,27 +22,4 @@ export default {
 			inter: ['"Inter Variable"'],
 		},
 	},
-	daisyui: {
-		themes: [
-			{
-				lemonade: {
-					...themes.lemonade,
-
-					primary: '#F93827',
-					secondary: '#F93827',
-					info: '#16C47F',
-					accent: '#FFD65A',
-					'base-100': '#fafafa',
-					'base-200': '#ECF0F2',
-					'base-300': '#e4f7c2',
-					warning: '#d0342c',
-					neutral: '#0E0E0E',
-
-					//https://www.colorhexa.com/f8fdef
-				},
-			},
-			'emerald',
-		],
-	},
-	plugins: [require('@tailwindcss/typography'), daisyui],
 };
