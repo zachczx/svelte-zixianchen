@@ -7,10 +7,6 @@
 	import Intermission from '$lib/Intermission.svelte';
 	import { addNeumorphismInset, removeNeumorphismInset } from '$lib/Neumorphism';
 	import moneySvg from '$lib/svg/Manage money-cuate.svg?dataurl';
-	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-	import AnimatedBeamMultipleInput from '$lib/magic-ui/AnimatedBeamMultipleInput.svelte';
-	import CareerPercentage from '$lib/CareerPercentage.svelte';
 	import ProjectsDashboard from '$lib/ProjectsDashboard.svelte';
 	import ProjectDashboardArchived from '$lib/ProjectDashboardArchived.svelte';
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
