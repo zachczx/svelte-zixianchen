@@ -1,11 +1,12 @@
 <script>
+	import AlignCenterText from '$lib/AlignCenterText.svelte';
 	import ProjectEntry from '$lib/ProjectEntry.svelte';
 	import StackComponents from '$lib/StackComponents.svelte';
 </script>
 
 <ProjectEntry id="cancelninja">
 	{#snippet title()}
-		<h3 class="text-5xl font-extrabold tracking-tighter text-base-content lg:text-7xl">
+		<h3 class="text-base-content text-5xl font-extrabold tracking-tighter lg:text-7xl">
 			Cancel Ninj<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="1em"
@@ -22,11 +23,18 @@
 		<StackComponents names={['sveltekit', 'tailwind', 'pocketbase', 'coolify']} />
 	{/snippet}
 
-	{#snippet problem()}How might I stop getting tricked into paying for subscriptions I don't want.{/snippet}
+	{#snippet problem()}
+		<AlignCenterText>Counter dirty tricks that makes people keep subscriptions they don't want.</AlignCenterText>
+	{/snippet}
 
-	{#snippet want()}Subscription tracker that alerts me about known dark patterns and companies' dirty tricks.{/snippet}
+	{#snippet want()}<AlignCenterText
+			>Subscription tracker that alerts me about known dark patterns and companies' dirty tricks.</AlignCenterText>
+	{/snippet}
 
-	{#snippet built()}CRUD webapp, with authentication, user stuff, and calendar view.{/snippet}
+	{#snippet built()}<AlignCenterText>CRUD webapp, with authentication, user stuff, and calendar view.</AlignCenterText>
+	{/snippet}
 
-	{#snippet undone()}Probably OCR or natural language processing for greater automation.{/snippet}
+	{#snippet undone()}<AlignCenterText
+			>Probably OCR or natural language processing for greater automation.</AlignCenterText>
+	{/snippet}
 </ProjectEntry>

@@ -9,6 +9,7 @@
 	import AppraizeScreenshotSaved from '$lib/screenshots/appraize-saved.webp?enhanced';
 	import AppraizeScreenshotUpload from '$lib/screenshots/appraize-upload.webp?enhanced';
 	import AppraizeScreenshotWide from '$lib/screenshots/appraize-wide.webp?enhanced';
+	import AlignCenterText from '$lib/AlignCenterText.svelte';
 </script>
 
 <ProjectEntry id="appraize" subtitle="Drag & Drop Ranking">
@@ -40,7 +41,7 @@
 	{#snippet problem()}How might we speed up ranking sessions, which need manual selection to form a numbered list "1, 2,
 		3..." on Excel. Every change to the list required manual reordering.{/snippet}
 
-	{#snippet want()}<span class="inline-block pt-2">Speed up ranking sessions via drag & drop. </span>
+	{#snippet want()}<AlignCenterText>Speed up ranking sessions via drag & drop.</AlignCenterText>
 	{/snippet}
 
 	{#snippet built()}
@@ -53,5 +54,7 @@
 			<li>Typical form actions, validation</li>
 		</ul>
 	{/snippet}
-	{#snippet undone()}Responsive design. It can't go below ~1200px width without looking awful.{/snippet}
+	{#snippet undone()}
+		<AlignCenterText>Responsive design. It can't go below ~1200px width without looking awful.</AlignCenterText>
+	{/snippet}
 </ProjectEntry>

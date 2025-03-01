@@ -1,9 +1,21 @@
 <script>
 	import ProjectEntry from '$lib/ProjectEntry.svelte';
 	import StackComponents from '$lib/StackComponents.svelte';
+
+	import btonomicsScreenshotMain from '$lib/screenshots/btonomics-main.webp?enhanced';
+	import btonomicsScreenshotPost from '$lib/screenshots/btonomics-post.webp?enhanced';
+	import btonomicsScreenshotPost2 from '$lib/screenshots/btonomics-post2.webp?enhanced';
+	import btonomicsScreenshotPost3 from '$lib/screenshots/btonomics-post3.webp?enhanced';
+	import btonomicsScreenshotSearch from '$lib/screenshots/btonomics-search.webp?enhanced';
 </script>
 
-<ProjectEntry id="btonomics">
+<ProjectEntry id="btonomics" subtitle="Home renovation blog for budget folks">
+	{#snippet header()}
+		<div class="grid gap-4 xl:grid-cols-2">
+			<enhanced:img src={btonomicsScreenshotMain} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={btonomicsScreenshotPost} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
+		</div>
+	{/snippet}
 	{#snippet title()}
 		<a href="https://btonomics.com"
 			><h3 class="pb-4 text-center font-serif text-5xl font-bold text-[#38bdf8] lg:text-7xl">BTOnomics</h3></a
@@ -17,10 +29,23 @@
 		Eleventy.
 	{/snippet}
 
+	{#snippet screenshots()}
+		<div class="grid grid-cols-1 gap-4">
+			<enhanced:img src={btonomicsScreenshotMain} alt="Btonomics" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={btonomicsScreenshotPost2} alt="Btonomics" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={btonomicsScreenshotPost3} alt="Btonomics" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={btonomicsScreenshotSearch} alt="Btonomics" class="border-neutral/20 rounded-xl border" />
+		</div>
+	{/snippet}
+
 	{#snippet want()}
-		I wanted to rebuild BTOnomics with AstroJS. I saw all the praises and wanted to try it out. I'm happy with Astro.
-		It's indeed good for content-first sites. It's fast. I also like native markdown support, view transitions, shipping
-		HTML/CSS first.
+		<p class="mb-4">
+			I wanted to rebuild BTOnomics with AstroJS. I wanted to try a framework that's great for content-heavy sites.
+		</p>
+		<p>
+			I'm happy with Astro. It's indeed good for content-first sites. It's fast. I also like native markdown support,
+			view transitions, shipping HTML/CSS first.
+		</p>
 	{/snippet}
 
 	{#snippet built()}

@@ -6,13 +6,14 @@
 	import apptitudeScreenshotGuides from '$lib/screenshots/apptitude-guides.webp?enhanced';
 	import apptitudeScreenshotLearn from '$lib/screenshots/apptitude-learn.webp?enhanced';
 	import apptitudeScreenshotMain from '$lib/screenshots/apptitude-main.webp?enhanced';
+	import AlignCenterText from '$lib/AlignCenterText.svelte';
 </script>
 
-<ProjectEntry id="apptitude">
+<ProjectEntry id="apptitude" subtitle="Tech-related upskilling">
 	{#snippet header()}
 		<div class="grid gap-4 xl:grid-cols-2">
-			<enhanced:img src={apptitudeScreenshotMain} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={apptitudeScreenshotGuides} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={apptitudeScreenshotMain} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={apptitudeScreenshotGuides} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
 		</div>
 	{/snippet}
 	{#snippet title()}
@@ -23,9 +24,9 @@
 		<StackComponents names={['sveltekit', 'tailwind', 'greensock', 'pagefind']} />
 	{/snippet}
 
-	{#snippet problem()}<span class="inline-block pt-2"
-			>I needed an easy way for teammates to find and access resources to learn tech.</span
-		>{/snippet}
+	{#snippet problem()}
+		<AlignCenterText>I needed an easy way for teammates to find and access resources to learn tech.</AlignCenterText>
+	{/snippet}
 
 	{#snippet want()}Display lists of tech resources from Youtube, blogs, tutorials, courses, sorted by tech competency.{/snippet}
 
@@ -39,8 +40,8 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={apptitudeScreenshotLearn} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={apptitudeScreenshotWatch} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={apptitudeScreenshotLearn} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={apptitudeScreenshotWatch} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
 		</div>
 	{/snippet}
 	{#snippet undone()}
