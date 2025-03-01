@@ -1,5 +1,4 @@
 <script>
-	import Junkyard from '$lib/assets/sohrab-zia-WXdMkkkZWg4-unsplash.jpg?enhanced&w=1920px;1080px;768px;640px;400px';
 	import ProjectDashboardArchived from '$lib/ProjectDashboardArchived.svelte';
 	import ProjectsDashboard from '$lib/ProjectsDashboard.svelte';
 </script>

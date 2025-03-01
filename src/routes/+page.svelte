@@ -39,17 +39,17 @@
 </svelte:head>
 
 <Nav {navCurrent} />
-<div class="grid min-h-dvh justify-items-center bg-base-200 2xl:overflow-x-clip">
+<div class="bg-base-200 grid min-h-dvh justify-items-center 2xl:overflow-x-clip">
 	<!-- <header
 		id="header"
 		class="navItem relative hidden w-full content-center justify-items-center font-serif lg:grid lg:min-h-dvh">
 		<div class="grid w-full grid-cols-2 px-4">
-			<div class="z-[1] w-full text-[6rem] leading-none tracking-tighter text-white xl:text-start xl:text-[8rem]">
+			<div class="z-1 w-full text-[6rem] leading-none tracking-tighter text-white xl:text-start xl:text-[8rem]">
 				Hello
 			</div>
-			<div class="z-[1] w-full text-end font-serif text-[6rem] leading-none tracking-tighter xl:text-[8rem]">I'm</div>
+			<div class="z-1 w-full text-end font-serif text-[6rem] leading-none tracking-tighter xl:text-[8rem]">I'm</div>
 		</div>
-		<h1 class="z-[1] flex gap-8 text-start font-serif text-[6rem] xl:text-center xl:text-[8rem] 2xl:text-[15rem]">
+		<h1 class="z-1 flex gap-8 text-start font-serif text-[6rem] xl:text-center xl:text-[8rem] 2xl:text-[15rem]">
 			<span class="text-base-200">Zix</span><span>ian</span>
 		</h1>
 		<div class="absolute left-0 top-0 grid h-full w-full grid-cols-2">
@@ -81,29 +81,29 @@
 	</header> -->
 
 	<header id="header" class="navItem w-full place-items-center py-20 lg:grid lg:min-h-dvh lg:py-0">
-		<div class="flex w-full flex-wrap items-center justify-center gap-8 bg-base-200 lg:min-h-dvh">
+		<div class="bg-base-200 flex w-full flex-wrap items-center justify-center gap-8 lg:min-h-dvh">
 			<div>
 				<img src={ZXC} alt="" class="h-72 lg:h-[40rem]" />
 			</div>
 			<!-- <a href="/projects" class="group relative grid h-56 w-56 content-center font-black">
-				<div class="z-[2] h-16 content-center rounded bg-[#0E0E0E] text-center text-base-200 group-hover:bg-primary">
+				<div class="z-2 h-16 content-center rounded-sm bg-[#0E0E0E] text-center text-base-200 group-hover:bg-primary">
 					I like to build.
 				</div>
 				<div
-					class="absolute left-1/2 top-0 z-[1] h-full w-16 -translate-x-1/2 rounded bg-[#0E0E0E] group-hover:bg-primary">
+					class="absolute left-1/2 top-0 z-1 h-full w-16 -translate-x-1/2 rounded-sm bg-[#0E0E0E] group-hover:bg-primary">
 				</div>
 			</a>
-			<div class="h-16 w-56 content-center rounded bg-[#0E0E0E] text-center font-black text-base-200">
+			<div class="h-16 w-56 content-center rounded-sm bg-[#0E0E0E] text-center font-black text-base-200">
 				I like different.
 			</div> -->
 		</div>
 	</header>
 
-	<div id="about" class="navItem grid min-h-dvh w-full justify-items-center bg-base-200">
+	<div class="bg-base-200 grid min-h-dvh w-full justify-items-center">
 		<div class="grid justify-items-center pt-8 lg:pt-12">
 			<h2 class="hidden justify-self-start px-4 pb-24 text-9xl font-extrabold lg:grid">About Me</h2>
 			<div class="grid min-h-[50vh] w-full max-w-[1000px] gap-y-4 px-4 lg:grid-cols-3">
-				<h3 class="text-4xl font-bold">Interests</h3>
+				<h3 id="about" class="navItem text-4xl font-bold">Interests</h3>
 				<div class="col-span-2 mb-4 space-y-8">
 					<p>
 						I've done <b>webdev</b> as a hobby on-off since 2000s — HTML Goodies, PHP4 days, Wordpress, Javascript, Python
@@ -127,7 +127,7 @@
 				</div>
 
 				<h3 class="text-4xl font-bold">Playlist</h3>
-				<ul class="list col-span-2 flex flex-wrap content-start items-center gap-4 lg:gap-x-8 lg:gap-y-4">
+				<ul class="list col-span-2 flex-row flex-wrap content-start items-center gap-4 lg:gap-x-8 lg:gap-y-4">
 					<li>All-In Podcast</li>
 					<li>Lenny's Podcast</li>
 					<li>ThePrimeagen</li>
@@ -142,12 +142,11 @@
 		</div>
 	</div>
 
-	<div class="grid w-full justify-items-center bg-[#0E0E0E] text-neutral-content lg:grid-cols-5">
+	<div class="text-neutral-content grid w-full justify-items-center bg-[#0E0E0E] lg:grid-cols-5">
 		<div class="grid w-full justify-items-center pt-8 lg:col-span-3 lg:pt-28">
 			<section
-				id="projects"
-				class="navItem grid w-full max-w-[1000px] gap-y-8 px-4 pb-8 lg:grid-cols-3 lg:gap-y-24 lg:justify-self-end lg:pb-28">
-				<h2 class="justify-self-start text-9xl font-extrabold lg:col-span-3">Night</h2>
+				class="grid w-full max-w-[1000px] gap-y-8 px-4 pb-8 lg:grid-cols-3 lg:gap-y-24 lg:justify-self-end lg:pb-28">
+				<h2 id="projects" class="navItem justify-self-start text-9xl font-extrabold lg:col-span-3">Night</h2>
 				<h3 class="text-4xl font-bold">Side Projects</h3>
 				<div
 					class="grid justify-items-center gap-y-8 text-center lg:col-span-2 lg:grid-cols-1 lg:justify-items-start lg:text-start">
@@ -160,14 +159,14 @@
 			style="background-image:url({Moon}); background-size: cover; background-position: center;">
 		</div>
 	</div>
-	<div class="grid min-h-dvh w-full justify-items-center bg-base-200 lg:grid-cols-5">
+	<div class="bg-base-200 grid min-h-dvh w-full justify-items-center lg:grid-cols-5">
 		<div
 			class="hidden h-full w-full overflow-hidden saturate-[0.4] lg:col-span-2 lg:grid"
 			style="background-image:url({Computer}); background-size: cover; background-position: bottom;">
-			<div class="h-full w-full bg-gradient-to-r from-transparent from-90% to-base-200"></div>
+			<div class="to-base-200 h-full w-full bg-linear-to-r from-transparent from-90%"></div>
 		</div>
 		<section
-			class="mt-8 grid w-full max-w-[1000px] grid-rows-[auto_1fr_auto] content-start gap-y-8 bg-base-200 lg:col-span-3 lg:mt-28 lg:gap-y-24">
+			class="bg-base-200 mt-8 grid w-full max-w-[1000px] grid-rows-[auto_1fr_auto] content-start gap-y-8 lg:col-span-3 lg:mt-28 lg:gap-y-24">
 			<h2 class="justify-self-start px-4 text-9xl font-extrabold">Day</h2>
 			<div class="grid content-start gap-y-4 px-4 lg:grid-cols-[auto_1fr] lg:gap-y-16">
 				<div class="pe-12 text-4xl font-bold">2023</div>
@@ -244,7 +243,6 @@
 	.list {
 		li {
 			list-style-type: none;
-
 			padding-left: 1.75rem;
 			/* ion:logo-youtube */
 			background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 512 512"><path fill="%230E0E0E" d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149C1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5c58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5c2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9M207 353.89v-196.5l145 98.2Z"/></svg>')

@@ -1,6 +1,6 @@
 <script>
 	import Particles from '$lib/magic-ui/Particles.svelte';
-
+	let { children } = $props();
 	let ghostColor = $state('');
 	const ghostAddClassMainRight = ['translate-x-4', 'text-red-900'];
 	const ghostAddClassBlogLeft = ['-translate-x-4', 'text-orange-400'];
@@ -11,19 +11,31 @@
 </svelte:head>
 
 <div
-	class="bg-background relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-orange-50 md:shadow-xl">
-	<div
-		id="container"
-		class="z-10 grid min-h-dvh justify-center border-l-2 border-r-2 border-l-orange-400/20 border-r-orange-400/20 bg-base-100 p-6 xl:w-[1024px]">
+	class="bg-base-200 relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl">
+	<div id="container" class="bg-base-100 z-10 grid min-h-dvh justify-center p-6 xl:w-[1024px]">
 		<div class="lg:max-w-[1024px]">
-			<div class="text-center text-4xl lg:text-6xl xl:text-8xl">
-				<a
+			<div class="flex items-center justify-center gap-4 text-center text-4xl lg:text-6xl xl:gap-8 xl:text-8xl">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="1.3em"
+					height="1.3em"
+					class="hugeicons:code text-orange-400"
+					viewBox="0 0 24 24"
+					><path
+						fill="none"
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="1.5"
+						d="M8 12h.009m3.986 0h.01m3.986 0H16m2 9c1.232 0 2.231-1.151 2.231-2.571c0-2.248-.1-3.742 1.442-5.52c.436-.502.436-1.316 0-1.818c-1.542-1.777-1.442-3.272-1.442-5.52C20.231 4.151 19.232 3 18 3M6 21c-1.232 0-2.231-1.151-2.231-2.571c0-2.248.1-3.742-1.442-5.52c-.436-.502-.436-1.316 0-1.818C3.835 9.353 3.769 7.84 3.769 5.57C3.769 4.151 4.768 3 6 3"
+						color="currentColor" /></svg
+				><a
 					href="/blog/"
-					class="inline-block bg-gradient-to-r from-orange-400 via-pink-500 to-red-500 bg-clip-text pb-2 font-extrabold text-transparent xl:pb-4"
-					>// Zixian's blog</a>
+					class="inline-block bg-linear-to-r from-orange-400 via-pink-500 to-red-500 bg-clip-text pb-2 font-extrabold text-transparent xl:pb-4"
+					>Zixian's blog</a>
 			</div>
-			<div class="mb-6 grid content-center justify-center">
-				I write about little things in web dev that I learned or tried.
+			<div class="mb-6 grid content-center justify-center px-4 text-center">
+				I write about simple things I learned or tried.
 			</div>
 			<div class="mb-10 flex items-center justify-center text-center lg:mb-20">
 				<div class="border-2 border-orange-400">
@@ -80,41 +92,15 @@
 						}}>Main</a>
 				</div>
 			</div>
-			<slot />
+			{@render children()}
 		</div>
-		<div class="mt-auto pt-10 text-center text-xs md:text-sm">Copyright © 2024 Zixian Chen. All rights reserved.</div>
+		<div class="mt-auto pt-10 text-center text-xs md:text-sm">© Zixian Chen</div>
 	</div>
-	<Particles className="absolute inset-0" refresh={true} size="3" color="#fb923c" />
+	<!-- <Particles className="absolute inset-0" refresh={true} size="3" color="#fb923c" /> -->
 </div>
 
 <style>
 	* {
 		font-family: 'Plus Jakarta Sans Variable', sans-serif;
-	}
-
-	.animate-left {
-		animation: shift-left 0.2s linear 0.1s 1 forwards;
-		/* animation-name;
-			animation-duration;
-			animation-timing-function;
-			animation-delay;
-			animation-iteration-count;
-			animation-direction; */
-	}
-
-	@keyframes shift-left {
-		100% {
-			transform: translateX(-1rem);
-		}
-	}
-
-	.animate-right {
-		animation: shift-right 0.2s linear 0.1s 1 forwards;
-	}
-
-	@keyframes shift-right {
-		100% {
-			transform: translateX(1rem);
-		}
 	}
 </style>

@@ -12,8 +12,6 @@ export async function load() {
 		if (slug === 'using-brevo-pocketbase-send-emails') {
 			continue;
 		}
-
-		console.log(slug);
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<string, 'slug'>;
 			const post = { ...metadata, slug };

@@ -8,11 +8,16 @@
 
 <a
 	href="/#header"
-	class="dock group btn btn-link relative text-white no-underline transition-all duration-200 ease-out hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
 	<div
-		class="relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60
-        {navCurrent === 'header' || navCurrent === 'preamble' ? 'ring-4 ring-pink-200' : undefined}">
-		<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="noto:house" viewBox="0 0 128 128"
+		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60
+   ">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="1em"
+			height="1em"
+			class="noto:house grayscale-100 group-hover:grayscale-0"
+			viewBox="0 0 128 128"
 			><path fill="#AB5832" d="M19.16 48.94V28.58l-1.64.1V16.14l15.82-.1v12.35H31.7v11.96z" /><path
 				fill="#FFF3E1"
 				d="M64.11 23.33L18.67 68.99l.35 42.21l89.75-.85l.13-45z" /><path
@@ -42,21 +47,21 @@
 				d="M80.99 121.3v3.63l-36.08.24l.03-3.9zm-35.37-8.82l34.65.01v3.82H45.62z" /></svg>
 	</div>
 	<span
-		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
+		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
 		>Home</span>
 </a>
 
 <a
 	href="/#about"
-	class="dock group btn btn-link relative text-white no-underline transition-all duration-200 ease-out hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
 	<div
-		class="relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60
-        {navCurrent === 'about' ? 'ring-4 ring-pink-200' : undefined}">
+		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60
+       ">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
 			height="1em"
-			class="fluent-color:scan-person-16"
+			class="fluent-color:scan-person-16 grayscale-100 group-hover:grayscale-0"
 			viewBox="0 0 16 16"
 			><g fill="none"
 				><path
@@ -107,21 +112,21 @@
 			></svg>
 	</div>
 	<span
-		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
+		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
 		>About</span>
 </a>
 
 <a
 	href="/projects"
-	class="dock group btn btn-link relative text-white no-underline transition-all duration-200 ease-out hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
 	<div
-		class="relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60
-        {navCurrent === 'projects' ? 'ring-4 ring-pink-200' : undefined}">
+		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60
+  ">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
 			height="1em"
-			class="fluent-color:document-folder-16"
+			class="fluent-color:document-folder-16 grayscale-100 group-hover:grayscale-0"
 			viewBox="0 0 16 16"
 			><g fill="none"
 				><path
@@ -176,19 +181,24 @@
 			></svg>
 	</div>
 	<span
-		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 text-sm text-white/90 group-hover:-top-5 group-hover:flex">
+		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex">
 		Projects
 	</span>
 </a>
 
 <a
 	href="/contact"
-	class="dock group btn btn-link relative text-white no-underline transition-all duration-200 ease-out hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
 	<div
-		class="relative flex items-center justify-center rounded-full border border-white/20 bg-blue-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60
-        {pathName === '/contact' ? 'ring-4 ring-pink-200' : undefined}
+		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-blue-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60
+        {pathName === '/contact' ? 'ring-4 ring-white/70' : undefined}
         ">
-		<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="fluent-color:mail-24" viewBox="0 0 24 24"
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="1em"
+			height="1em"
+			class="fluent-color:mail-24 grayscale-100 group-hover:grayscale-0"
+			viewBox="0 0 24 24"
 			><g fill="none"
 				><path
 					fill="#367AF2"
@@ -258,20 +268,20 @@
 			></svg>
 	</div>
 	<span
-		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
+		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
 		>Contact</span>
 </a>
 
 <a
 	href="https://www.linkedin.com/in/zixianchen/"
-	class="dock group btn btn-link relative text-white no-underline transition-all duration-200 ease-out hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
 	<div
-		class="relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60">
+		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="0.9em"
 			height="0.9em"
-			class="skill-icons:linkedin"
+			class="skill-icons:linkedin grayscale-100 group-hover:grayscale-0"
 			viewBox="0 0 256 256"
 			><g fill="none"
 				><rect width="256" height="256" fill="#fff" rx="60" /><rect
@@ -284,24 +294,24 @@
 			></svg>
 	</div>
 	<span
-		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
+		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
 		>LinkedIn</span>
 </a>
 
 <a
 	href="https://github.com/zachczx?tab=repositories"
-	class="dock group btn btn-link relative text-white no-underline transition-all duration-200 ease-out hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
 	<div
-		class="relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60">
+		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60">
 		<svg
 			width="1em"
 			height="1em"
+			class="grayscale-100 group-hover:grayscale-0"
 			viewBox="0 0 98 96"
 			version="1.1"
 			xmlns="http://www.w3.org/2000/svg"
 			xmlns:xlink="http://www.w3.org/1999/xlink"
 			xml:space="preserve"
-			xmlns:serif="http://www.serif.com/"
 			style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
 			<path
 				d="M48.854,0C21.839,0 0,22 0,49.217C0,70.973 13.993,89.389 33.405,95.907C35.832,96.397 36.721,94.848 36.721,93.545C36.721,92.404 36.641,88.493 36.641,84.418C23.051,87.352 20.221,78.551 20.221,78.551C18.037,72.847 14.801,71.381 14.801,71.381C10.353,68.366 15.125,68.366 15.125,68.366C20.059,68.692 22.648,73.418 22.648,73.418C27.015,80.914 34.052,78.796 36.883,77.492C37.287,74.314 38.582,72.114 39.957,70.892C29.118,69.751 17.714,65.514 17.714,46.609C17.714,41.231 19.654,36.831 22.728,33.409C22.243,32.187 20.544,27.134 23.214,20.371C23.214,20.371 27.339,19.067 36.64,25.423C40.622,24.346 44.729,23.798 48.854,23.793C52.979,23.793 57.184,24.364 61.067,25.423C70.369,19.067 74.494,20.371 74.494,20.371C77.164,27.134 75.464,32.187 74.979,33.409C78.134,36.831 79.994,41.231 79.994,46.609C79.994,65.514 68.59,69.669 57.67,70.892C59.45,72.44 60.986,75.373 60.986,80.018C60.986,86.618 60.906,91.915 60.906,93.544C60.906,94.848 61.796,96.397 64.222,95.908C83.634,89.388 97.627,70.973 97.627,49.217C97.707,22 75.788,0 48.854,0Z"
@@ -309,16 +319,19 @@
 		</svg>
 	</div>
 	<span
-		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
+		class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
 		>GitHub</span>
 </a>
 
-<a
-	href="/blog"
-	class="dock group btn btn-link relative text-white no-underline transition-all duration-200 ease-out hover:no-underline">
+<a href="/blog" class="dock group relative bg-transparent transition-all duration-200 ease-out">
 	<div
-		class="relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60">
-		<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" class="fluent-color:library-16" viewBox="0 0 16 16"
+		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="1em"
+			height="1em"
+			class="fluent-color:library-16 grayscale-100 group-hover:grayscale-0"
+			viewBox="0 0 16 16"
 			><g fill="none"
 				><path
 					fill="url(#fluentColorLibrary160)"
@@ -385,7 +398,7 @@
 				></g
 			></svg>
 		<span
-			class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 text-sm text-white/90 group-hover:-top-5 group-hover:flex"
+			class="absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full bg-pink-700 py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
 			>Blog</span>
 	</div>
 </a>
@@ -393,8 +406,8 @@
 <style>
 	a {
 		--font-scaler: 0.3;
-		--dimensions-scaler: 0.3;
-		--margin-scaler: 0.1;
+		--dimensions-scaler: 0.35;
+		--margin-scaler: 0.2;
 	}
 
 	.dock {
@@ -403,6 +416,11 @@
 			filter: saturate(0.5);
 			height: calc(var(--dimensions-scaler) * 9rem);
 			width: calc(var(--dimensions-scaler) * 9rem);
+			flex-basis: auto;
+
+			&:hover {
+				opacity: 100%;
+			}
 		}
 	}
 
@@ -413,7 +431,7 @@
 			height: calc(var(--dimensions-scaler) * 13rem);
 			width: calc(var(--dimensions-scaler) * 13rem);
 		}
-		margin-bottom: calc(var(--margin-scaler) * -5.5rem);
+		margin-bottom: calc(var(--margin-scaler) * -6rem);
 	}
 
 	/* Adjacent to hover */

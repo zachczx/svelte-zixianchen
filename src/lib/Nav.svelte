@@ -6,7 +6,7 @@
 </script>
 
 <nav
-	class="z-[1] grid h-fit w-full grid-cols-2 justify-center px-4 transition-all duration-300 ease-out xl:fixed xl:top-2 xl:grid-cols-3">
+	class="z-1 grid h-fit w-full grid-cols-2 justify-center px-4 transition-all duration-300 ease-out xl:fixed xl:top-2 xl:grid-cols-3">
 	<div class="navbar-start col-span-2 -mx-4 w-full xl:hidden">
 		<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-circle btn-ghost">
@@ -14,7 +14,7 @@
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 				</svg>
 			</div>
-			<button tabindex="0" class="menu dropdown-content z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow">
+			<button tabindex="0" class="menu dropdown-content rounded-box bg-base-100 z-1 mt-3 w-52 p-2 shadow-sm">
 				<li class="w-full rounded-lg hover:bg-red-300 focus:bg-red-300 active:bg-red-300">
 					<a href="/#about">About</a>
 				</li>
@@ -34,16 +34,16 @@
 					<a href="/blog">Blog</a>
 				</li></button>
 		</div>
-		<span class="font-serif text-2xl font-extrabold text-base-content hover:drop-shadow"
+		<span class="text-base-content font-serif text-2xl font-extrabold hover:drop-shadow-sm"
 			><a href="/">Zixian Chen</a></span>
 	</div>
 
 	<div class="hidden items-center lg:opacity-0 xl:flex">
-		<!-- <span class="navLogo font-serif text-2xl font-extrabold text-base-content hover:drop-shadow"
+		<!-- <span class="navLogo font-serif text-2xl font-extrabold text-base-content hover:drop-shadow-sm"
 			><a href="/">Zixian Chen</a></span> -->
 	</div>
 	<div
-		class="hidden h-20 w-fit min-w-[30rem] items-center justify-center justify-self-center rounded-full border border-white/50 bg-black/70 shadow backdrop-blur-md transition-all duration-300 ease-out xl:relative xl:flex">
+		class="hidden h-20 w-fit min-w-[30rem] items-center justify-center justify-self-center rounded-full border border-white/50 bg-black/70 shadow-sm backdrop-blur-md transition-all duration-300 ease-out xl:relative xl:flex">
 		<NavDock {navCurrent} pathName={$page.url.pathname} />
 	</div>
 	<div class="hidden items-center justify-end space-x-6 xl:flex"></div>
