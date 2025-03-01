@@ -13,7 +13,7 @@
 			</a>
 		</div>
 	</div>
-	<figcaption class="text-center italic">Medicine dose tracker</figcaption>
+	<figcaption class="text-center">Medicine dose tracker</figcaption>
 </figure>
 
 <figure class="content-center justify-items-center space-y-2 self-center lg:grid">
@@ -21,7 +21,7 @@
 		<a href="/projects/rankamate" class="group grid justify-items-center"
 			><enhanced:img src={rankamateLogo} alt="Rank-a-Mate" class=" saturate-[0.1] group-hover:saturate-100"
 			></enhanced:img>
-			<div class="italic">Drag & drop ranking v0.1</div>
+			<div>Drag & drop ranking v0.1</div>
 		</a>
 	</figcaption>
 </figure>
@@ -33,7 +33,7 @@
 				src={btonomicsOldLogo}
 				alt="BTOnomics on Wordpress"
 				class="mb-2 saturate-[0.1] group-hover:saturate-100"></enhanced:img>
-			<div class="italic">BTOnomics on Wordpress</div>
+			<div>BTOnomics on Wordpress</div>
 		</a>
 	</figcaption>
 </figure>

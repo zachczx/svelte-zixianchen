@@ -5,9 +5,9 @@
 </script>
 
 <Nav navCurrent="projects" />
-<div class="grid min-h-dvh content-start bg-base-200 pt-8 lg:grid-cols-[auto_1fr] lg:grid-rows-[1fr_auto] lg:pt-36">
-	<aside class="z-2 hidden content-start border-2 border-red-300/0 px-1 text-base-content/70 lg:grid">
-		<!-- <a href="/projects"
+<div class="bg-base-200 grid min-h-dvh content-start pt-8 lg:grid-cols-[auto_1fr] lg:grid-rows-[1fr_auto] lg:pt-28">
+	<aside class="text-base-content/70 z-2 hidden content-start border-2 border-red-300/0 px-1 lg:grid">
+		<a href="/projects"
 			><h4 class="flex items-center gap-4 px-2 py-2 font-bold">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -19,8 +19,8 @@
 						fill="currentColor"
 						d="M15 20v-7h7v7zm-4-9V4h11v7zm-9 9v-7h11v7zm0-9V4h7v7zm11-2h7V6h-7zm-9 9h7v-3H4zm13 0h3v-3h-3zM4 9h3V6H4zm3 0" /></svg>
 				All Projects
-			</h4></a> -->
-		<h4 class="flex items-center gap-4 px-2 py-2 font-bold">
+			</h4></a>
+		<h4 class="mt-8 flex items-center gap-4 px-2 py-2 font-bold">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="1.3em"
@@ -35,57 +35,57 @@
 		<ul class="ms-4 border-l-4 border-l-transparent ps-0.5 font-medium">
 			<a href="/projects/abbreviation"
 				><li
-					class="my-0.5 rounded-lg px-6 py-2 hover:bg-pink-600 hover:text-white/90 active:bg-neutral/70 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
 					'abbreviation'
-						? 'bg-neutral text-white/90'
+						? 'bg-neutral/85 text-white/90'
 						: undefined}">
 					Abbreviation
 				</li></a>
 			<a href="/projects/appraize"
 				><li
-					class="my-0.5 rounded-lg px-6 py-2 hover:bg-pink-600 hover:text-white/90 active:bg-neutral/70 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
 					'appraize'
-						? 'bg-neutral text-white/90'
+						? 'bg-neutral/85 text-white/90'
 						: undefined}">
 					Appraize
 				</li></a>
 			<a href="/projects/apptitude"
 				><li
-					class="my-0.5 rounded-lg px-6 py-2 hover:bg-pink-600 hover:text-white/90 active:bg-neutral/70 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
 					'apptitude'
-						? 'bg-neutral text-white/90'
+						? 'bg-neutral/85 text-white/90'
 						: undefined}">
 					Apptitude
 				</li></a>
 			<a href="/projects/btonomics"
 				><li
-					class="my-0.5 rounded-lg px-6 py-2 hover:bg-pink-600 hover:text-white/90 active:bg-neutral/70 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
 					'btonomics'
-						? 'bg-neutral text-white/90'
+						? 'bg-neutral/85 text-white/90'
 						: undefined}">
 					BTOnomics
 				</li></a>
 			<a href="/projects/cancelninja"
 				><li
-					class="my-0.5 rounded-lg px-6 py-2 hover:bg-pink-600 hover:text-white/90 active:bg-neutral/70 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
 					'cancelninja'
-						? 'bg-neutral text-white/90'
+						? 'bg-neutral/85 text-white/90'
 						: undefined}">
 					Cancel Ninja
 				</li></a>
 			<a href="/projects/grumplr"
 				><li
-					class="my-0.5 rounded-lg px-6 py-2 hover:bg-pink-600 hover:text-white/90 active:bg-neutral/70 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
 					'grumplr'
-						? 'bg-neutral text-white/90'
+						? 'bg-neutral/85 text-white/90'
 						: undefined}">
 					Grumplr
 				</li></a>
 			<a href="/projects/meetrics"
 				><li
-					class="my-0.5 rounded-lg px-6 py-2 hover:bg-pink-600 hover:text-white/90 active:bg-neutral/70 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
 					'meetrics'
-						? 'bg-neutral text-white/90'
+						? 'bg-neutral/85 text-white/90'
 						: undefined}">
 					Meetrics
 				</li></a>
@@ -105,25 +105,25 @@
 		<ul class="ms-4 border-l-4 border-l-transparent ps-0.5 font-medium">
 			<a href="/projects/btonomics-wordpress"
 				><li
-					class="my-0.5 rounded-lg px-6 py-2 hover:bg-pink-600 hover:text-white/90 active:bg-neutral/70 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
 					'btonomics-wordpress'
-						? 'bg-neutral text-white/90'
+						? 'bg-neutral/85 text-white/90'
 						: undefined}">
 					BTOnomics Wordpress
 				</li></a>
 			<a href="/projects/eatyourmeds"
 				><li
-					class="my-0.5 rounded-lg px-6 py-2 hover:bg-pink-600 hover:text-white/90 active:bg-neutral/70 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
 					'eatyourmeds'
-						? 'bg-neutral text-white/90'
+						? 'bg-neutral/85 text-white/90'
 						: undefined}">
 					Eat Your Medicine!
 				</li></a>
 			<a href="/projects/rankamate"
 				><li
-					class="my-0.5 rounded-lg px-6 py-2 hover:bg-pink-600 hover:text-white/90 active:bg-neutral/70 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
 					'rankamate'
-						? 'bg-neutral text-white/90'
+						? 'bg-neutral/85 text-white/90'
 						: undefined}">
 					Rank-a-Mate
 				</li></a>

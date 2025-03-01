@@ -15,8 +15,8 @@
 	{#snippet header()}
 		<!-- <enhanced:img src={AbbreviationScreenShotHeader} alt="Abbreviation app" class="object-fit" /> -->
 		<div class="grid gap-4 xl:grid-cols-2">
-			<enhanced:img src={AppraizeScreenshotMain} alt="Appraize app" class="rounded-xl border border-neutral/20" />
-			<enhanced:img src={AppraizeScreenshotWide} alt="Appraize app" class="rounded-xl border border-neutral/20" />
+			<enhanced:img src={AppraizeScreenshotMain} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={AppraizeScreenshotWide} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
 		</div>
 	{/snippet}
 	{#snippet title()}
@@ -31,16 +31,17 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={AppraizeScreenshotSaved} alt="Appraize app" class="rounded-xl border border-neutral/20" />
-			<enhanced:img src={AppraizeScreenshotLock} alt="Appraize app" class="rounded-xl border border-neutral/20" />
-			<enhanced:img src={AppraizeScreenshotUpload} alt="Appraize app" class="rounded-xl border border-neutral/20" />
+			<enhanced:img src={AppraizeScreenshotSaved} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={AppraizeScreenshotLock} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={AppraizeScreenshotUpload} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
 		</div>
 	{/snippet}
 
 	{#snippet problem()}How might we speed up ranking sessions, which need manual selection to form a numbered list "1, 2,
 		3..." on Excel. Every change to the list required manual reordering.{/snippet}
 
-	{#snippet want()}Speed up ranking sessions via drag & drop.{/snippet}
+	{#snippet want()}<span class="inline-block pt-2">Speed up ranking sessions via drag & drop. </span>
+	{/snippet}
 
 	{#snippet built()}
 		<ul class="ms-6 list-outside list-disc space-y-2">

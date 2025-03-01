@@ -40,70 +40,21 @@
 
 <Nav {navCurrent} />
 <div class="bg-base-200 grid min-h-dvh justify-items-center 2xl:overflow-x-clip">
-	<!-- <header
-		id="header"
-		class="navItem relative hidden w-full content-center justify-items-center font-serif lg:grid lg:min-h-dvh">
-		<div class="grid w-full grid-cols-2 px-4">
-			<div class="z-1 w-full text-[6rem] leading-none tracking-tighter text-white xl:text-start xl:text-[8rem]">
-				Hello
-			</div>
-			<div class="z-1 w-full text-end font-serif text-[6rem] leading-none tracking-tighter xl:text-[8rem]">I'm</div>
-		</div>
-		<h1 class="z-1 flex gap-8 text-start font-serif text-[6rem] xl:text-center xl:text-[8rem] 2xl:text-[15rem]">
-			<span class="text-base-200">Zix</span><span>ian</span>
-		</h1>
-		<div class="absolute left-0 top-0 grid h-full w-full grid-cols-2">
-			<div class="h-full w-full bg-black"></div>
-			<div class="h-full w-full bg-base-200"></div>
-		</div>
-	</header> -->
-	<!-- <header id="header" class="navItem hidden w-full content-center lg:grid lg:min-h-dvh lg:grid-cols-2">
-		<div class="grid h-full w-full content-center bg-black lg:min-h-dvh">
-			<div class="ps-8">
-				<div class="w-full text-[6rem] font-bold leading-none tracking-tighter text-base-200">Hello</div>
-				<h1
-					class="justify-self-end text-start font-sans text-[6rem] leading-none xl:text-center xl:text-[8rem] 2xl:text-[15rem]">
-					<span class="inline-block p-8 font-black text-base-200">ZIXIAN</span>
-					<span class="inline-block w-full -rotate-[25deg] text-[5rem] text-base-200">fmt.Println("Hello World!")</span>
-					<span class="inline-block p-8 font-black text-base-200">CHEN</span>
-				</h1>
-			</div>
-		</div>
-		<div class="grid h-full w-full content-center bg-base-200 lg:min-h-dvh">
-			<div class="pe-8">
-			
-				<h1
-					class="justify-self-start text-start font-sans text-[6rem] leading-none xl:text-center xl:text-[8rem] 2xl:text-[15rem]">
-					<span class="inline-block bg-black p-8 font-black text-base-200">CHEN</span>
-				</h1>
-			</div>
-		</div>
-	</header> -->
-
 	<header id="header" class="navItem w-full place-items-center py-20 lg:grid lg:min-h-dvh lg:py-0">
 		<div class="bg-base-200 flex w-full flex-wrap items-center justify-center gap-8 lg:min-h-dvh">
 			<div>
 				<img src={ZXC} alt="" class="h-72 lg:h-[40rem]" />
 			</div>
-			<!-- <a href="/projects" class="group relative grid h-56 w-56 content-center font-black">
-				<div class="z-2 h-16 content-center rounded-sm bg-[#0E0E0E] text-center text-base-200 group-hover:bg-primary">
-					I like to build.
-				</div>
-				<div
-					class="absolute left-1/2 top-0 z-1 h-full w-16 -translate-x-1/2 rounded-sm bg-[#0E0E0E] group-hover:bg-primary">
-				</div>
-			</a>
-			<div class="h-16 w-56 content-center rounded-sm bg-[#0E0E0E] text-center font-black text-base-200">
-				I like different.
-			</div> -->
 		</div>
 	</header>
 
-	<div class="bg-base-200 grid min-h-dvh w-full justify-items-center">
+	<div class="bg-base-200 mt-24 grid min-h-dvh w-full justify-items-center">
 		<div class="grid justify-items-center pt-8 lg:pt-12">
-			<h2 class="hidden justify-self-start px-4 pb-24 text-9xl font-extrabold lg:grid">About Me</h2>
-			<div class="grid min-h-[50vh] w-full max-w-[1000px] gap-y-4 px-4 lg:grid-cols-3">
-				<h3 id="about" class="navItem text-4xl font-bold">Interests</h3>
+			<div class="grid min-h-[50vh] w-full max-w-[1000px] content-center gap-y-4 px-4 lg:grid-cols-3 lg:gap-y-24">
+				<h2 id="about" class="navItem hidden justify-self-start px-4 text-9xl font-extrabold lg:col-span-3 lg:grid">
+					About Me
+				</h2>
+				<h3 class="text-4xl font-bold">Interests</h3>
 				<div class="col-span-2 mb-4 space-y-8">
 					<p>
 						I've done <b>webdev</b> as a hobby on-off since 2000s — HTML Goodies, PHP4 days, Wordpress, Javascript, Python
@@ -121,11 +72,9 @@
 				</div>
 				<h3 class="text-4xl font-bold">Education</h3>
 				<div class="col-span-2 mb-4 content-start space-y-8">
-					<p>
-						I did <b>Political Science</b>. Enjoyed researching incentives, interests, money, civil wars.
-					</p>
+					<p>I did <b>Political Science</b>. Enjoyed researching incentives, money, civil wars.</p>
+					<p>I'm not a math or science person.</p>
 				</div>
-
 				<h3 class="text-4xl font-bold">Playlist</h3>
 				<ul class="list col-span-2 flex-row flex-wrap content-start items-center gap-4 lg:gap-x-8 lg:gap-y-4">
 					<li>All-In Podcast</li>

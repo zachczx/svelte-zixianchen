@@ -58,7 +58,7 @@
 <figure class={desaturate ? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100' : undefined}>
 	<figcaption>
 		<a href="/projects/apptitude"
-			><enhanced:img src={apptitudeLogo} alt="Apptitude Logo"></enhanced:img>
+			><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="brightness-[0.85] saturate-150"></enhanced:img>
 			<div>Tech-related upskilling</div></a>
 	</figcaption>
 </figure>
@@ -99,7 +99,7 @@
 		<figcaption>
 			<a href="/projects/grumplr"
 				><h3
-					class="content-center pb-1 font-inter text-4xl font-bold {mode === 'dark'
+					class="font-inter content-center pb-1 text-4xl font-bold {mode === 'dark'
 						? 'text-green-400'
 						: 'text-[#1b510f]'}">
 					Grumplr
