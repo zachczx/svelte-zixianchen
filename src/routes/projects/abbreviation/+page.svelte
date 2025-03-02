@@ -8,7 +8,7 @@
 	import AbbreviationScreenShot4 from '$lib/screenshots/abbreviation-4.webp?enhanced';
 </script>
 
-<ProjectEntry id="abbreviation" subtitle="Singapore Govt abbreviation/acronym search">
+<ProjectEntry id="abbreviation">
 	{#snippet header()}
 		<!-- <enhanced:img src={AbbreviationScreenShotHeader} alt="Abbreviation app" class="object-fit" /> -->
 		<div class="grid gap-4 xl:grid-cols-2">
@@ -17,28 +17,27 @@
 		</div>
 	{/snippet}
 	{#snippet title()}
-		<a href="https://abbreviation.zixian.dev" class="block"
-			><h3 class="text-center text-5xl font-bold tracking-tighter text-[#0069ff] lg:text-7xl">
-				Abbreviati<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="1em"
-					height="1em"
-					class="-mx-[0.2em] inline"
-					viewBox="0 0 24 24"
-					><g fill="none"
-						><path
-							fill="#0069ff"
-							fill-opacity=".25"
-							fill-rule="evenodd"
-							d="M12 19a7 7 0 1 0 0-14a7 7 0 0 0 0 14M10.087 7.38A5 5 0 0 1 12 7a.5.5 0 0 0 0-1a6 6 0 0 0-6 6a.5.5 0 0 0 1 0a5 5 0 0 1 3.087-4.62"
-							clip-rule="evenodd" /><path stroke="#0069ff" stroke-linecap="round" d="M20.5 20.5L17 17" /><circle
-							cx="11"
-							cy="11"
-							r="8.5"
-							stroke="#0069ff" /></g
-					></svg
-				>n
-			</h3></a>
+		<h3 class="text-center text-5xl font-bold tracking-tighter text-[#0069ff] lg:text-7xl">
+			Abbreviati<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="1em"
+				height="1em"
+				class="-mx-[0.2em] inline"
+				viewBox="0 0 24 24"
+				><g fill="none"
+					><path
+						fill="#0069ff"
+						fill-opacity=".25"
+						fill-rule="evenodd"
+						d="M12 19a7 7 0 1 0 0-14a7 7 0 0 0 0 14M10.087 7.38A5 5 0 0 1 12 7a.5.5 0 0 0 0-1a6 6 0 0 0-6 6a.5.5 0 0 0 1 0a5 5 0 0 1 3.087-4.62"
+						clip-rule="evenodd" /><path stroke="#0069ff" stroke-linecap="round" d="M20.5 20.5L17 17" /><circle
+						cx="11"
+						cy="11"
+						r="8.5"
+						stroke="#0069ff" /></g
+				></svg
+			>n
+		</h3>
 	{/snippet}
 
 	{#snippet stack()}

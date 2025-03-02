@@ -12,7 +12,7 @@
 	import AlignCenterText from '$lib/AlignCenterText.svelte';
 </script>
 
-<ProjectEntry id="appraize" subtitle="Drag & Drop Ranking">
+<ProjectEntry id="appraize">
 	{#snippet header()}
 		<!-- <enhanced:img src={AbbreviationScreenShotHeader} alt="Abbreviation app" class="object-fit" /> -->
 		<div class="grid gap-4 xl:grid-cols-2">

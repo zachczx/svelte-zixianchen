@@ -9,7 +9,7 @@
 	import AlignCenterText from '$lib/AlignCenterText.svelte';
 </script>
 
-<ProjectEntry id="apptitude" subtitle="Tech-related upskilling">
+<ProjectEntry id="apptitude">
 	{#snippet header()}
 		<div class="grid gap-4 xl:grid-cols-2">
 			<enhanced:img src={apptitudeScreenshotMain} alt="Apptitude" class="border-neutral/20 rounded-xl border" />

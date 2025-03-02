@@ -5,9 +5,7 @@
 
 <ProjectEntry id="grumplr">
 	{#snippet title()}
-		<a href="https://grumplr.com" class="group inline-block">
-			<h3 class="font-inter text-5xl font-bold tracking-tighter text-[#1b510f] lg:text-7xl">Grumplr</h3>
-		</a>
+		<h3 class="font-inter text-5xl font-bold tracking-tighter text-[#1b510f] lg:text-7xl">Grumplr</h3>
 	{/snippet}
 	{#snippet stack()}
 		<StackComponents names={['go', 'htmx', 'templ', 'postgresql', 'keycloak', 'tailwind']} />

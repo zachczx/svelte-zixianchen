@@ -1,4 +1,5 @@
 <script>
+	import AlignCenterText from '$lib/AlignCenterText.svelte';
 	import ProjectEntry from '$lib/ProjectEntry.svelte';
 	import StackComponents from '$lib/StackComponents.svelte';
 	import eatYourMedsLogo from '$lib/assets/eatyourmedslogo.webp?enhanced&w=250';
@@ -17,7 +18,9 @@
 		<StackComponents names={['django', 'htmx', 'nginx', 'gunicorn', 'bootstrap', 'postgresql']} />
 	{/snippet}
 
-	{#snippet problem()}I wanted an easier and faster way to plan medicine dose timings and get accurate info.{/snippet}
+	{#snippet problem()}<AlignCenterText
+			>I wanted an easier and faster way to plan medicine dose timings and get accurate info.</AlignCenterText
+		>{/snippet}
 
 	{#snippet want()}Make it less tedious for both of us parents to record/coord medicine stuff and sync with one another.{/snippet}
 
@@ -27,5 +30,7 @@
 			<li>Sprinkled HTMX and datepicker.js for user interactions.</li>
 			<li>Backend via Django</li>
 		</ul>{/snippet}
-	{#snippet undone()}Honestly, LLMs do it better (unless they refuse to do it, which Gemini did in the past).{/snippet}
+	{#snippet undone()}<AlignCenterText
+			>Honestly, LLMs do it better (unless they refuse to do it, which Gemini did in the past).</AlignCenterText>
+	{/snippet}
 </ProjectEntry>

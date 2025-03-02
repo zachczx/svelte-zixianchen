@@ -2,6 +2,12 @@
 	import AlignCenterText from '$lib/AlignCenterText.svelte';
 	import ProjectEntry from '$lib/ProjectEntry.svelte';
 	import StackComponents from '$lib/StackComponents.svelte';
+	import cancelNinjaScreenshotMain from '$lib/screenshots/cancelninja-main.webp?enhanced';
+	import cancelNinjaScreenshotAdd2 from '$lib/screenshots/cancelninja-add2.webp?enhanced';
+	import cancelNinjaScreenshotAdd3 from '$lib/screenshots/cancelninja-add3.webp?enhanced';
+	import cancelNinjaScreenshotCalendar from '$lib/screenshots/cancelninja-calendar.webp?enhanced';
+	import cancelNinjaScreenshotDashboard from '$lib/screenshots/cancelninja-dashboard.webp?enhanced';
+	import cancelNinjaScreenshotDoc from '$lib/screenshots/cancelninja-doc.webp?enhanced';
 </script>
 
 <ProjectEntry id="cancelninja">
@@ -19,8 +25,30 @@
 		</h3>
 	{/snippet}
 
+	{#snippet header()}
+		<div class="grid gap-4 xl:grid-cols-2">
+			<enhanced:img src={cancelNinjaScreenshotMain} alt="CancelNinja app" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={cancelNinjaScreenshotAdd2} alt="CancelNinja app" class="border-neutral/20 rounded-xl border" />
+		</div>
+	{/snippet}
+
 	{#snippet stack()}
 		<StackComponents names={['sveltekit', 'tailwind', 'pocketbase', 'coolify']} />
+	{/snippet}
+
+	{#snippet screenshots()}
+		<div class="grid grid-cols-1 gap-4">
+			<enhanced:img src={cancelNinjaScreenshotAdd3} alt="CancelNinja app" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img
+				src={cancelNinjaScreenshotCalendar}
+				alt="CancelNinja app"
+				class="border-neutral/20 rounded-xl border" />
+			<enhanced:img
+				src={cancelNinjaScreenshotDashboard}
+				alt="CancelNinja"
+				class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={cancelNinjaScreenshotDoc} alt="CancelNinja" class="border-neutral/20 rounded-xl border" />
+		</div>
 	{/snippet}
 
 	{#snippet problem()}
@@ -36,5 +64,27 @@
 
 	{#snippet undone()}<AlignCenterText
 			>Probably OCR or natural language processing for greater automation.</AlignCenterText>
+	{/snippet}
+
+	{#snippet takeaway()}
+		<p></p>
+		<p></p>
+		<p></p>
+
+		<ul class="ms-6 list-outside list-disc space-y-2">
+			<li>It wasn't a big enough problem tbh. I didn't lose enough money to make this worth using much.</li>
+			<li>
+				This needs integration into the SaaS products, else the additional effort is only worth it if you save a lot of
+				money
+			</li>
+			<li>
+				It was fun to build a calendar from scratch, I enjoyed the result of not using external libraries for
+				everything.
+			</li>
+			<li>
+				I enjoyed the simplicity of having everything backend from Pocketbase, but I absolutely dislike bcrypt's delay
+				and just overall sluggish feel as a user.
+			</li>
+		</ul>
 	{/snippet}
 </ProjectEntry>

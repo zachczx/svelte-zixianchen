@@ -9,7 +9,7 @@
 	import btonomicsScreenshotSearch from '$lib/screenshots/btonomics-search.webp?enhanced';
 </script>
 
-<ProjectEntry id="btonomics" subtitle="Home renovation blog for budget folks">
+<ProjectEntry id="btonomics">
 	{#snippet header()}
 		<div class="grid gap-4 xl:grid-cols-2">
 			<enhanced:img src={btonomicsScreenshotMain} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
