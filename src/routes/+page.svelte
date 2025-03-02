@@ -72,7 +72,7 @@
 				</div>
 				<h3 class="text-4xl font-bold">Education</h3>
 				<div class="col-span-2 mb-4 content-start space-y-8">
-					<p>I did <b>Political Science</b>. Enjoyed researching incentives, money, civil wars.</p>
+					<p>I did Political Science. Enjoyed researching incentives, money, civil wars.</p>
 					<p>I'm not a math or science person.</p>
 				</div>
 				<h3 class="text-4xl font-bold">Playlist</h3>

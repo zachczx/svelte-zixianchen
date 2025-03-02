@@ -2,6 +2,9 @@
 	import ProjectEntry from '$lib/ProjectEntry.svelte';
 	import StackComponents from '$lib/StackComponents.svelte';
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
+
+	import meetricsScreenshotMain from '$lib/screenshots/meetrics-main.webp?enhanced';
+	import meetricsScreenshotAdd2 from '$lib/screenshots/meetrics-filled.webp?enhanced';
 </script>
 
 <ProjectEntry id="meetrics">
@@ -10,6 +13,13 @@
 			<img src={Meetrics} alt="Meetrics" class="h-16" />
 		</a>
 	{/snippet}
+	{#snippet header()}
+		<div class="grid gap-4 xl:grid-cols-2">
+			<enhanced:img src={meetricsScreenshotMain} alt="Meetrics app" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={meetricsScreenshotAdd2} alt="Meetrics app" class="border-neutral/20 rounded-xl border" />
+		</div>
+	{/snippet}
+
 	{#snippet stack()}
 		<StackComponents names={['sveltekit', 'tailwind']} />
 	{/snippet}
