@@ -11,7 +11,7 @@
 	import ProjectDashboardArchived from '$lib/ProjectDashboardArchived.svelte';
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
 	import Computer from '$lib/assets/federica-galli-aiqKc07b5PA-unsplash.webp';
-	import ZXC from '$lib/assets/zixianchen.webp';
+	import ZXC from '$lib/assets/zixianchen-alt.webp';
 
 	///////////////////////////////////
 	let navCurrent: string = $state('header');
