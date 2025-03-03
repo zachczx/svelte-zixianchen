@@ -57,18 +57,17 @@
 				<h3 class="text-4xl font-bold">Interests</h3>
 				<div class="col-span-2 mb-4 space-y-8">
 					<p>
-						I've done <b>webdev</b> as a hobby on-off since 2000s — HTML Goodies, PHP4 days, Wordpress, Javascript, Python
-						frameworks.
+						I've done <strong>webdev</strong> as a hobby on-off since 2000s — HTML Goodies, PHP4 days, Wordpress, Javascript,
+						Python frameworks.
 					</p>
 					<p>
-						I like <b>building PCs</b> - love being cheap, hate cable management.
+						I like <strong>building PCs</strong> - love being cheap, hate cable management.
 					</p>
 					<p>
-						I enjoy learning about <b>businesses</b>, <b>product ideas</b>, <b>entrepreneurship</b>.
+						I enjoy learning about <strong>businesses</strong>, <strong>product ideas</strong>,
+						<strong>entrepreneurship</strong>.
 					</p>
-					<p>
-						I dabble with photography, AI image gen via <b>Stable diffusion LORAs</b>.
-					</p>
+					<p>I dabble with Photoshop, Davinci Resolve, SDXL LORAs.</p>
 				</div>
 				<h3 class="text-4xl font-bold">Education</h3>
 				<div class="col-span-2 mb-4 content-start space-y-8">
