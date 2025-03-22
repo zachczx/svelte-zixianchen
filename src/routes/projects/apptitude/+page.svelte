@@ -4,7 +4,8 @@
 	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=450';
 	import apptitudeScreenshotWatch from '$lib/screenshots/apptitude-watch.webp?enhanced';
 	import apptitudeScreenshotGuides from '$lib/screenshots/apptitude-guides.webp?enhanced';
-	import apptitudeScreenshotLearn from '$lib/screenshots/apptitude-learn.webp?enhanced';
+	import apptitudeScreenshotMain2 from '$lib/screenshots/apptitude-main-2.webp?enhanced';
+	import apptitudeScreenshotMain3 from '$lib/screenshots/apptitude-main-3.webp?enhanced';
 	import apptitudeScreenshotMain from '$lib/screenshots/apptitude-main.webp?enhanced';
 	import AlignCenterText from '$lib/AlignCenterText.svelte';
 </script>
@@ -38,8 +39,10 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={apptitudeScreenshotLearn} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={apptitudeScreenshotMain2} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={apptitudeScreenshotMain3} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
 			<enhanced:img src={apptitudeScreenshotWatch} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={apptitudeScreenshotGuides} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
 		</div>
 	{/snippet}
 	{#snippet undone()}
