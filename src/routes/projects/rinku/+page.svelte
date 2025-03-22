@@ -15,9 +15,17 @@
 	{/snippet}
 	{#snippet header()}
 		<div class="grid gap-4 xl:grid-cols-2">
-			<img src={rinkuScreenshotLanding} alt="Rinku app" class="border-neutral/20 rounded-xl border" />
 			<div class="border-neutral/20 overflow-hidden rounded-xl border">
-				<img src={rinkuScreenshotShortener} alt="Rinku app" class="scale-200" />
+				<img
+					src={rinkuScreenshotLanding}
+					alt="Rinku app"
+					class="transition-all delay-75 duration-300 ease-out hover:scale-200" />
+			</div>
+			<div class="border-neutral/20 overflow-hidden rounded-xl border">
+				<img
+					src={rinkuScreenshotShortener}
+					alt="Rinku app"
+					class="transition-all delay-75 duration-300 ease-out hover:scale-200" />
 			</div>
 		</div>
 	{/snippet}
