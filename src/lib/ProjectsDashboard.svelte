@@ -120,11 +120,19 @@
 	</figure>
 </div>
 
-<div class={desaturate ? 'brightness-[300%] saturate-0 hover:brightness-100 hover:saturate-100' : undefined}>
+<div class={desaturate ? 'group saturate-0 hover:brightness-100 hover:saturate-100' : undefined}>
 	<figure class="grid space-y-2">
 		<figcaption>
-			<a href="/projects/rinku"
-				><img src={Rinku} alt="Rinku" class="mb-2 h-9 hover:saturate-100" />
+			<a href="/projects/rinku">
+				{#if desaturate}
+					<!-- this is to brighten the svg, if not contrast is very poor -->
+					<img
+						src={Rinku}
+						alt="Rinku"
+						class="mb-2 h-9 brightness-[300%] hue-rotate-230 group-hover:hue-rotate-0 group-hover:saturate-100" />
+				{:else}
+					<img src={Rinku} alt="Rinku" class="mb-2 h-9 hover:saturate-100" />
+				{/if}
 				<!-- h-9 and mb-2 because the svg has no margins  -->
 				<div>URL shortener</div></a>
 		</figcaption>
