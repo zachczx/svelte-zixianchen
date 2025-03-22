@@ -3,8 +3,9 @@
 	import StackComponents from '$lib/StackComponents.svelte';
 	import Rinku from '$lib/logos/rinku-logo.svg?dataurl';
 
-	import meetricsScreenshotMain from '$lib/screenshots/meetrics-main.webp?enhanced';
-	import meetricsScreenshotAdd2 from '$lib/screenshots/meetrics-filled.webp?enhanced';
+	import rinkuScreenshotLanding from '$lib/screenshots/rinku-landing.webp';
+	import rinkuScreenshotAdmin from '$lib/screenshots/rinku-admin.webp';
+	import rinkuScreenshotShortener from '$lib/screenshots/rinku-shortener.webp';
 	import AlignCenterText from '$lib/AlignCenterText.svelte';
 </script>
 
@@ -13,10 +14,12 @@
 		<img src={Rinku} alt="Rinku" class="my-4 h-16" />
 	{/snippet}
 	{#snippet header()}
-		<!-- <div class="grid gap-4 xl:grid-cols-2">
-			<enhanced:img src={meetricsScreenshotMain} alt="Meetrics app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={meetricsScreenshotAdd2} alt="Meetrics app" class="border-neutral/20 rounded-xl border" />
-		</div> -->
+		<div class="grid gap-4 xl:grid-cols-2">
+			<img src={rinkuScreenshotLanding} alt="Rinku app" class="border-neutral/20 rounded-xl border" />
+			<div class="border-neutral/20 overflow-hidden rounded-xl border">
+				<img src={rinkuScreenshotShortener} alt="Rinku app" class="scale-200" />
+			</div>
+		</div>
 	{/snippet}
 
 	{#snippet stack()}
@@ -41,6 +44,7 @@
 			<li>URl shortener</li>
 			<li>Admin panel</li>
 		</ul>
+		<img src={rinkuScreenshotAdmin} alt="Rinku app" class="border-neutral/20 mt-4 rounded-xl border" />
 	{/snippet}
 	{#snippet undone()}
 		<AlignCenterText>Load balancing? Idk.</AlignCenterText>
