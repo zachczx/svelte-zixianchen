@@ -42,6 +42,11 @@ export const descriptions: ProjectDescriptions = {
 		tldr: 'Meetrics is a straightforward calculator I created to expose the hidden costs of meetings, helping teams recognize and reduce meeting waste.',
 		url: 'https://meetrics.zixian.dev/',
 	},
+	rinku: {
+		subtitle: 'URL shortener',
+		tldr: 'I have many URLs that are long, especially for blog slugs. I have many domain names, some of which are short. I built a URL shortener with an admin panel to add urls and do basic analytics.',
+		url: 'https://zczx.org',
+	},
 	'btonomics-wordpress': {
 		subtitle: 'Home renovation blog for budget folks',
 		tldr: 'I started a Wordpress blog for budget home renovation.',

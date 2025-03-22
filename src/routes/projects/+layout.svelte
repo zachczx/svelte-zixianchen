@@ -89,6 +89,14 @@
 						: undefined}">
 					Meetrics
 				</li></a>
+			<a href="/projects/rinku"
+				><li
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
+					'rinku'
+						? 'bg-neutral/85 text-white/90'
+						: undefined}">
+					Rinku
+				</li></a>
 		</ul>
 		<h4 class="mt-8 flex items-center gap-4 px-2 py-2 font-bold">
 			<svg

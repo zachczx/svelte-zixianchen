@@ -1,6 +1,7 @@
 <script>
 	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=158';
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
+	import Rinku from '$lib/logos/rinku-logo.svg?dataurl';
 
 	let { mode = '', desaturate = false } = $props();
 </script>
@@ -115,6 +116,17 @@
 			<a href="/projects/meetrics"
 				><img src={Meetrics} alt="Meetrics" class="w-48" />
 				<div>Meeting cost calculator</div></a>
+		</figcaption>
+	</figure>
+</div>
+
+<div class={desaturate ? 'brightness-[300%] saturate-0 hover:brightness-100 hover:saturate-100' : undefined}>
+	<figure class="grid space-y-2">
+		<figcaption>
+			<a href="/projects/rinku"
+				><img src={Rinku} alt="Rinku" class="mb-2 h-9 hover:saturate-100" />
+				<!-- h-9 and mb-2 because the svg has no margins  -->
+				<div>URL shortener</div></a>
 		</figcaption>
 	</figure>
 </div>

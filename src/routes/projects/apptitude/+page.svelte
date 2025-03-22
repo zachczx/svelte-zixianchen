@@ -17,9 +17,7 @@
 		</div>
 	{/snippet}
 	{#snippet title()}
-		<a href="https://titude.app/" aria-label="Apptitude webapp"
-			><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="brightness-[0.85] saturate-150"></enhanced:img></a
-		>{/snippet}
+		<enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="brightness-[0.85] saturate-150" />{/snippet}
 	{#snippet stack()}
 		<StackComponents names={['sveltekit', 'tailwind', 'greensock', 'pagefind']} />
 	{/snippet}
