@@ -49,7 +49,7 @@
 
 	{#snippet built()}
 		<ul class="ms-6 list-outside list-disc space-y-2">
-			<li>URl shortener</li>
+			<li>URL shortener</li>
 			<li>Admin panel</li>
 		</ul>
 		<img src={rinkuScreenshotAdmin} alt="Rinku app" class="border-neutral/20 mt-4 rounded-xl border" />
