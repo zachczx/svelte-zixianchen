@@ -58,7 +58,7 @@
 </script>
 
 <svelte:head>
-	<title>Send Zixian a message</title>
+	<title>Zixian Chen - Message Me</title>
 	<meta name="description" content="Send Zixian a message." />
 </svelte:head>
 
