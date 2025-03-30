@@ -104,7 +104,7 @@
   If we ever want to remove these styles, we need to add an explicit border
   color utility to any element that depends on these defaults.
 */
-@layer base {
+/* @layer base {
 	*,
 	::after,
 	::before,
@@ -112,7 +112,7 @@
 	::file-selector-button {
 		border-color: var(--color-gray-200, currentColor);
 	}
-}
+} */
 
 @layer base {
 	/* Underlines and overlines drawn across text (over y, q, etc) */
@@ -139,14 +139,14 @@
 		overflow-x: auto;
 	}
 
-	/* code > span {
-		margin-top: -0.5rem;
-	} */
-
 	code > .highlighted {
 		width: 100%;
 		display: inline-block;
 		background-color: rgba(197, 214, 232, 0.16);
+	}
+
+	.diff {
+		display: inline-block !important;
 	}
 
 	code > span.diff.add,
