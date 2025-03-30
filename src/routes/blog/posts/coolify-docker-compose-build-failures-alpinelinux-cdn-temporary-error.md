@@ -48,10 +48,10 @@ Ugh.
 **Your docker-compose needs to explicitly state the network is host.** [Source](https://stackoverflow.com/questions/74288981/docker-build-error-https-dl-cdn-alpinelinux-org-alpine-v3-14-community-tempo):
 
 ```dockerfile
-    build:
-      context: .
-      dockerfile: Dockerfile
-      network: host
+build:
+  context: .
+  dockerfile: Dockerfile
+  network: host // [!code ++]
 ```
 
 It's not the standard, but OCI users seem to need this for the build phase:
