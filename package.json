@@ -18,7 +18,7 @@
 	"devDependencies": {
 		"@shikijs/transformers": "^3.3.0",
 		"@sveltejs/adapter-auto": "^6.0.0",
-		"@sveltejs/adapter-cloudflare": "^6.0.1",
+		"@sveltejs/adapter-cloudflare": "^7.0.1",
 		"@sveltejs/kit": "^2.20.7",
 		"@sveltejs/vite-plugin-svelte": "5.0.3",
 		"@tailwindcss/postcss": "^4.1.4",
@@ -58,6 +58,7 @@
 		"shiki": "^3.3.0",
 		"svelte": "5.28.2",
 		"svelte-motion": "^0.12.2",
-		"tailwind-merge": "^3.2.0"
+		"tailwind-merge": "^3.2.0",
+		"wrangler": "^4.14.0"
 	}
 }
