@@ -2,6 +2,7 @@
 	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=158';
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
 	import Rinku from '$lib/logos/rinku-logo.svg?dataurl';
+	import Wronged from '$lib/logos/wronged-logo.svg?dataurl';
 
 	let { mode = '', desaturate = false } = $props();
 </script>
@@ -135,6 +136,22 @@
 				{/if}
 				<!-- h-9 and mb-2 because the svg has no margins  -->
 				<div>URL shortener</div></a>
+		</figcaption>
+	</figure>
+</div>
+
+<div class={desaturate ? 'group saturate-0 hover:brightness-100 hover:saturate-100' : undefined}>
+	<figure class="grid space-y-2">
+		<figcaption>
+			<a href="/projects/wronged">
+				{#if desaturate}
+					<!-- this is to brighten the svg, if not contrast is very poor -->
+					<img src={Wronged} alt="Wronged" class="mb-2 h-10 invert" />
+				{:else}
+					<img src={Wronged} alt="Wronged" class="mb-2 h-10 hover:saturate-100" />
+				{/if}
+				<!-- h-9 and mb-2 because the svg has no margins  -->
+				<div>Chatbot</div></a>
 		</figcaption>
 	</figure>
 </div>
