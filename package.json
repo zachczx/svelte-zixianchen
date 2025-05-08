@@ -18,7 +18,7 @@
 	"devDependencies": {
 		"@shikijs/transformers": "^3.4.0",
 		"@sveltejs/adapter-auto": "^6.0.0",
-		"@sveltejs/adapter-cloudflare": "^7.0.2",
+		"@sveltejs/adapter-cloudflare": "^7.0.3",
 		"@sveltejs/kit": "^2.20.8",
 		"@sveltejs/vite-plugin-svelte": "5.0.3",
 		"@tailwindcss/postcss": "^4.1.5",
@@ -50,7 +50,7 @@
 		"@fontsource/lora": "^5.2.5",
 		"@poppanator/sveltekit-svg": "5.0.1",
 		"@sveltejs/adapter-static": "^3.0.8",
-		"@sveltejs/enhanced-img": "^0.5.0",
+		"@sveltejs/enhanced-img": "^0.5.1",
 		"@tailwindcss/vite": "^4.1.5",
 		"clsx": "^2.1.1",
 		"cobe": "^0.6.3",
