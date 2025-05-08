@@ -14,7 +14,7 @@
 
 <ProjectEntry id="wronged">
 	{#snippet title()}
-		<img src={Wronged} alt="Wronged" class=" h-16" />
+		<img src={Wronged} alt="Wronged" class="h-20" />
 	{/snippet}
 	{#snippet header()}
 		<div class="grid gap-4 xl:grid-cols-2">

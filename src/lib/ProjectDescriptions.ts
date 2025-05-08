@@ -48,7 +48,7 @@ export const descriptions: ProjectDescriptions = {
 		url: 'https://zczx.org',
 	},
 	wronged: {
-		subtitle: 'Chatbot',
+		subtitle: 'Products, Problems, UX Chatbot',
 		tldr: 'A chatbot that helps users with product management, UX, staff work.',
 		url: 'https://getwronged.com',
 	},

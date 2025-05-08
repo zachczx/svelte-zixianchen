@@ -143,15 +143,21 @@
 <div class={desaturate ? 'group saturate-0 hover:brightness-100 hover:saturate-100' : undefined}>
 	<figure class="grid space-y-2">
 		<figcaption>
-			<a href="/projects/wronged">
+			<a href="/projects/wronged" class="grid">
 				{#if desaturate}
 					<!-- this is to brighten the svg, if not contrast is very poor -->
-					<img src={Wronged} alt="Wronged" class="mb-2 h-10 invert" />
+					<img src={Wronged} alt="Wronged" class="flip-img mb-2 h-10 invert" />
 				{:else}
-					<img src={Wronged} alt="Wronged" class="mb-2 h-10 hover:saturate-100" />
+					<img src={Wronged} alt="Wronged" class="mb-2 h-10 justify-self-center hover:saturate-100" />
 				{/if}
 				<!-- h-9 and mb-2 because the svg has no margins  -->
-				<div>Chatbot</div></a>
+				<div>Products, Problems, UX Chatbot</div></a>
 		</figcaption>
 	</figure>
 </div>
+
+<style>
+	.flip-img {
+		filter: invert(0.5) sepia(1) saturate(5) hue-rotate(303deg);
+	}
+</style>

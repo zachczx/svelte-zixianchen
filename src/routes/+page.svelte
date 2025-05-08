@@ -57,14 +57,14 @@
 				<h3 class="text-4xl font-bold">Interests</h3>
 				<div class="col-span-2 mb-4 space-y-8">
 					<p>
-						I've done <strong>webdev</strong> as a hobby on-off since 2000s — HTML Goodies, PHP4 days, Wordpress, Javascript,
-						Python frameworks.
+						I started <strong>webdev</strong> as a hobby in the early 2000s. Spanned eras across Frontpage, nested tables,
+						HTML Goodies, PHP, Wordpress, and more recently Go, Javascript, Python stuff.
 					</p>
 					<p>
 						I like <strong>building PCs</strong> - love being cheap, hate cable management.
 					</p>
 					<p>
-						I enjoy learning about <strong>businesses</strong>, <strong>product ideas</strong>,
+						I enjoy learning about <strong>businesses</strong>, <strong>product ideas</strong>, <strong>design</strong>,
 						<strong>entrepreneurship</strong>.
 					</p>
 					<p>I dabble with Photoshop, Davinci Resolve, SDXL LORAs.</p>
@@ -72,7 +72,6 @@
 				<h3 class="text-4xl font-bold">Education</h3>
 				<div class="col-span-2 mb-4 content-start space-y-8">
 					<p>I did Political Science. Enjoyed researching incentives, money, civil wars.</p>
-					<p>I'm not a math or science person.</p>
 				</div>
 				<h3 class="text-4xl font-bold">Playlist</h3>
 				<ul class="list col-span-2 flex-row flex-wrap content-start items-center gap-4 lg:gap-x-8 lg:gap-y-4">
