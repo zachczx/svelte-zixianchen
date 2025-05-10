@@ -1,5 +1,5 @@
 <script>
-	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=158';
+	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=162';
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
 	import Rinku from '$lib/logos/rinku-logo.svg?dataurl';
 	import Wronged from '$lib/logos/wronged-logo.svg?dataurl';
@@ -8,7 +8,7 @@
 </script>
 
 <div
-	class="flex items-center {desaturate
+	class="flex w-full items-center {desaturate
 		? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100'
 		: undefined}">
 	<figure class="grid content-center justify-items-center space-y-2">
@@ -57,7 +57,10 @@
 	</figcaption>
 </figure>
 
-<figure class={desaturate ? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100' : undefined}>
+<figure
+	class="grid content-center {desaturate
+		? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100'
+		: undefined}">
 	<figcaption>
 		<a href="/projects/apptitude"
 			><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="brightness-[0.85] saturate-150"></enhanced:img>
@@ -65,7 +68,10 @@
 	</figcaption>
 </figure>
 
-<div class={desaturate ? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100' : undefined}>
+<div
+	class="grid content-center {desaturate
+		? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100'
+		: undefined}">
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/btonomics"
@@ -111,17 +117,20 @@
 	</figure>
 </div>
 
-<div class={desaturate ? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100' : undefined}>
+<div
+	class="grid content-center {desaturate
+		? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100'
+		: undefined}">
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/meetrics"
-				><img src={Meetrics} alt="Meetrics" class="w-48" />
+				><img src={Meetrics} alt="Meetrics" class="w-44" />
 				<div>Meeting cost calculator</div></a>
 		</figcaption>
 	</figure>
 </div>
 
-<div class={desaturate ? 'group saturate-0 hover:brightness-100 hover:saturate-100' : undefined}>
+<div class="grid content-center {desaturate ? 'group saturate-0 hover:brightness-100 hover:saturate-100' : undefined}">
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/rinku">
@@ -132,7 +141,7 @@
 						alt="Rinku"
 						class="mb-2 h-9 brightness-[300%] hue-rotate-230 group-hover:hue-rotate-0 group-hover:saturate-100" />
 				{:else}
-					<img src={Rinku} alt="Rinku" class="mb-2 h-9 hover:saturate-100" />
+					<img src={Rinku} alt="Rinku" class="mb-2 h-8.5 hover:saturate-100" />
 				{/if}
 				<!-- h-9 and mb-2 because the svg has no margins  -->
 				<div>URL shortener</div></a>
@@ -140,7 +149,7 @@
 	</figure>
 </div>
 
-<div class={desaturate ? 'group saturate-0 hover:brightness-100 hover:saturate-100' : undefined}>
+<div class="grid content-center {desaturate ? 'group saturate-0 hover:brightness-100 hover:saturate-100' : undefined}">
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/wronged" class="grid">
