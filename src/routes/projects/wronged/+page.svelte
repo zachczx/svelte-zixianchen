@@ -4,11 +4,11 @@
 	import Wronged from '$lib/logos/wronged-logo.svg?dataurl';
 
 	import wrongedScreenshotMain from '$lib/screenshots/wronged-main.webp';
-	import wrongedScreenshotMain2 from '$lib/screenshots/wronged-main2.webp';
+	import wrongedScreenshotMain2 from '$lib/screenshots/wronged-main2.webp?enhanced';
 	import wrongedScreenshotChat from '$lib/screenshots/wronged-chat.webp';
-	import wrongedScreenshotChat2 from '$lib/screenshots/wronged-chat2.webp';
-	import wrongedScreenshotChat3 from '$lib/screenshots/wronged-chat3.webp';
-	import wrongedScreenshotManage from '$lib/screenshots/wronged-manage.webp';
+	import wrongedScreenshotChat2 from '$lib/screenshots/wronged-chat2.webp?enhanced';
+	import wrongedScreenshotChat3 from '$lib/screenshots/wronged-chat3.webp?enhanced';
+	import wrongedScreenshotManage from '$lib/screenshots/wronged-manage.webp?enhanced';
 	import AlignCenterText from '$lib/AlignCenterText.svelte';
 </script>
 
@@ -53,10 +53,10 @@
 			<li>Chatbot UI</li>
 			<li>A simple client for LLM prompting & streaming SSE responses</li>
 		</ul>
-		<img src={wrongedScreenshotMain2} alt="Rinku app" class="border-neutral/20 mt-4 rounded-xl border" />
-		<img src={wrongedScreenshotChat2} alt="Rinku app" class="border-neutral/20 mt-4 rounded-xl border" />
-		<img src={wrongedScreenshotChat3} alt="Rinku app" class="border-neutral/20 mt-4 rounded-xl border" />
-		<img src={wrongedScreenshotManage} alt="Rinku app" class="border-neutral/20 mt-4 rounded-xl border" />
+		<enhanced:img src={wrongedScreenshotMain2} alt="Wronged chat" class="border-neutral/20 mt-4 rounded-xl border" />
+		<enhanced:img src={wrongedScreenshotChat2} alt="Wronged chat" class="border-neutral/20 mt-4 rounded-xl border" />
+		<enhanced:img src={wrongedScreenshotChat3} alt="Wronged chat" class="border-neutral/20 mt-4 rounded-xl border" />
+		<enhanced:img src={wrongedScreenshotManage} alt="Wronged chat" class="border-neutral/20 mt-4 rounded-xl border" />
 	{/snippet}
 	{#snippet undone()}
 		<AlignCenterText>Figuring out a better product design than having multiple, specialized chatbots.</AlignCenterText>
