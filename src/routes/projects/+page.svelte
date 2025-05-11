@@ -14,11 +14,32 @@
 	import Calculator from '$lib/assets/charlesdeluvio-GlavtG-umzE-unsplash.webp';
 	import Bot from '$lib/assets/p1omnigames02_cute_robot_cartoon-inspired_round_face_friendly_e_2958fa92-efd2-41a0-b179-f04c25daea92.webp';
 	import Chat from '$lib/assets/volodymyr-hryshchenko-V5vqWC9gyEU-unsplash.webp';
+	import { gsap } from 'gsap';
 
 	let { mode = '', desaturate = false } = $props();
 
 	let showArchived = $state(false);
 	let hideBg = $state(false);
+
+	$effect(() => {
+		let mm = gsap.matchMedia();
+
+		// add a media query. When it matches, the associated function will run
+		mm.add('(min-width: 1024px)', () => {
+			// this setup code only runs when viewport is at least 800px wide
+			gsap.from('.panel', {
+				opacity: 0.05,
+				duration: 0.3,
+				stagger: {
+					// wrap advanced options in an object
+					each: 0.1,
+					from: 'edges',
+					grid: 'auto',
+					ease: 'circ.out',
+				},
+			});
+		});
+	});
 </script>
 
 <svelte:head>
@@ -31,7 +52,7 @@
 <main class="calc-height grid h-full content-stretch justify-items-center pb-20 text-center lg:grid-cols-3 lg:gap-4">
 	<a
 		href="/projects/abbreviation"
-		class="bg-primary/10 group flex w-full items-center justify-center"
+		class="panel bg-primary/10 group flex w-full items-center justify-center"
 		style="background:url({Scrabble}); background-size: cover; background-position: center center;">
 		<figure
 			class="{hideBg
@@ -66,7 +87,7 @@
 
 	<a
 		href="/projects/appraize"
-		class="group grid h-full w-full content-stretch space-y-2 self-center"
+		class="panel group grid h-full w-full content-stretch space-y-2 self-center"
 		style="background:url({Rank}); background-size: cover; background-position: center center;">
 		<figure>
 			<figcaption
@@ -83,7 +104,7 @@
 
 	<a
 		href="/projects/apptitude"
-		class="group grid h-full w-full content-stretch space-y-2 self-center"
+		class="panel group grid h-full w-full content-stretch space-y-2 self-center"
 		style="background:url({Blackboard}); background-size: cover; background-position: center center;">
 		<figure>
 			<figcaption
@@ -96,7 +117,7 @@
 		</figure>
 	</a>
 
-	<a a href="/projects/btonomics" class="grid w-full content-stretch">
+	<a a href="/projects/btonomics" class="panel grid w-full content-stretch">
 		<figure
 			class="group grid h-full w-full space-y-2 self-center"
 			style="background:url({Home}); background-size: cover; background-position: center center;">
@@ -117,7 +138,7 @@
 
 	<a
 		href="/projects/cancelninja"
-		class="group grid w-full content-stretch"
+		class="panel group grid w-full content-stretch"
 		style="background:url({Shuriken}); background-size: cover; background-position: center 80% ;">
 		<div
 			class="{hideBg
@@ -138,7 +159,7 @@
 		</div>
 	</a>
 
-	<a href="/projects/grumplr" class="grid w-full content-stretch">
+	<a href="/projects/grumplr" class="panel grid w-full content-stretch">
 		<figure
 			class="group grid h-full w-full space-y-2 self-center"
 			style="background:url({Chat}); background-size: cover; background-position: center center;">
@@ -152,7 +173,7 @@
 		</figure>
 	</a>
 
-	<a href="/projects/meetrics" class="grid w-full content-stretch">
+	<a href="/projects/meetrics" class="panel grid w-full content-stretch">
 		<figure
 			class="group grid h-full w-full space-y-2 self-center"
 			style="background:url({Calculator}); background-size: cover; background-position: center 20%;">
@@ -168,7 +189,7 @@
 
 	<a
 		href="/projects/rinku"
-		class="group grid w-full content-stretch"
+		class="panel group grid w-full content-stretch"
 		style="background:url({Clips}); background-size: cover; background-position: center center;">
 		<figure class="group grid justify-items-center space-y-2">
 			<figcaption
@@ -184,7 +205,7 @@
 
 	<a
 		href="/projects/wronged"
-		class="group grid w-full content-stretch"
+		class="panel group grid w-full content-stretch"
 		style="background:url({Bot}); background-size: cover; background-position: center 40%;">
 		<figure class="group grid justify-items-center space-y-2">
 			<figcaption
