@@ -7,10 +7,7 @@
 	let { mode = '', desaturate = false } = $props();
 </script>
 
-<div
-	class="flex w-full items-center {desaturate
-		? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100'
-		: undefined}">
+<div class="proj flex w-full items-center brightness-200 saturate-0 hover:brightness-100 hover:saturate-100">
 	<figure class="grid content-center justify-items-center space-y-2">
 		<figcaption>
 			<a href="/projects/abbreviation"
@@ -45,9 +42,7 @@
 </div>
 
 <figure
-	class="grid content-center space-y-2 self-center {desaturate
-		? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100'
-		: undefined}">
+	class="proj grid content-center space-y-2 self-center brightness-200 saturate-0 hover:brightness-100 hover:saturate-100">
 	<figcaption>
 		<a href="/projects/appraize">
 			<h3 class="font-sans text-4xl font-black text-[#A94A4A] {mode === 'dark' ? 'brightness-125' : undefined}">
@@ -57,10 +52,7 @@
 	</figcaption>
 </figure>
 
-<figure
-	class="grid content-center {desaturate
-		? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100'
-		: undefined}">
+<figure class="proj grid content-center brightness-200 saturate-0 hover:brightness-100 hover:saturate-100">
 	<figcaption>
 		<a href="/projects/apptitude"
 			><enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="brightness-[0.85] saturate-150"></enhanced:img>
@@ -69,9 +61,8 @@
 </figure>
 
 <div
-	class="grid content-center {desaturate
-		? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100'
-		: undefined}">
+	class="proj grid content-center brightness-200 saturate-0 hover:brightness-100 hover:saturate-100
+	">
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/btonomics"
@@ -83,7 +74,7 @@
 	</figure>
 </div>
 
-<a href="/projects/cancelninja" class="group grid content-center"
+<a href="/projects/cancelninja" class="proj group grid content-center"
 	><h3
 		class="text-4xl font-extrabold tracking-tighter {mode === 'dark' ? 'text-neutral-content' : 'text-base-content'}">
 		Cancel Ninj<svg
@@ -99,10 +90,7 @@
 	<div>SaaS & Dark Pattern tracker</div>
 </a>
 
-<div
-	class="flex items-center {desaturate
-		? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100'
-		: undefined}">
+<div class="proj flex items-center brightness-200 saturate-0 hover:brightness-100 hover:saturate-100">
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/grumplr"
@@ -117,10 +105,7 @@
 	</figure>
 </div>
 
-<div
-	class="grid content-center {desaturate
-		? 'brightness-200 saturate-0 hover:brightness-100 hover:saturate-100'
-		: undefined}">
+<div class="proj grid content-center brightness-200 saturate-0 hover:brightness-100 hover:saturate-100">
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/meetrics"
@@ -130,7 +115,7 @@
 	</figure>
 </div>
 
-<div class="grid content-center {desaturate ? 'group saturate-0 hover:brightness-100 hover:saturate-100' : undefined}">
+<div class="proj group grid content-center saturate-0 hover:brightness-100 hover:saturate-100">
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/rinku">
@@ -149,7 +134,7 @@
 	</figure>
 </div>
 
-<div class="grid content-center {desaturate ? 'group saturate-0 hover:brightness-100 hover:saturate-100' : undefined}">
+<div class="proj group grid content-center saturate-0 hover:brightness-100 hover:saturate-100">
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/wronged" class="grid">

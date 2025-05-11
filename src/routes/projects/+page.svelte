@@ -18,27 +18,34 @@
 
 	let { mode = '', desaturate = false } = $props();
 
-	let showArchived = $state(false);
 	let hideBg = $state(false);
 
 	$effect(() => {
 		let mm = gsap.matchMedia();
 
-		// add a media query. When it matches, the associated function will run
-		mm.add('(min-width: 1024px)', () => {
-			// this setup code only runs when viewport is at least 800px wide
-			gsap.from('.panel', {
-				opacity: 0.05,
-				duration: 0.3,
-				stagger: {
-					// wrap advanced options in an object
-					each: 0.1,
-					from: 'edges',
-					grid: 'auto',
-					ease: 'circ.out',
-				},
-			});
-		});
+		mm.add(
+			{
+				// set up any number of arbitrarily-named conditions. The function below will be called when ANY of them match.
+				isLarge: `(min-width: 1024px)`,
+				reduceMotion: '(prefers-reduced-motion: reduce)',
+			},
+			(context) => {
+				let { isLarge, reduceMotion } = context.conditions;
+
+				if (isLarge) {
+					gsap.from('.panel', {
+						opacity: 0.05,
+						duration: reduceMotion ? 0 : 0.3,
+						stagger: {
+							each: 0.1,
+							from: 'edges',
+							grid: 'auto',
+							ease: 'circ.out',
+						},
+					});
+				}
+			},
+		);
 	});
 </script>
 
