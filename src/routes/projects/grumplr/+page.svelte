@@ -16,8 +16,18 @@
 
 	{#snippet header()}
 		<div class="grid gap-4 xl:grid-cols-2">
-			<enhanced:img src={grumplrScreenshotMain} alt="Grumplr app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={grumplrScreenshotPost} alt="Grumplr app" class="border-neutral/20 rounded-xl border" />
+			<div class="border-neutral/20 overflow-hidden rounded-xl border">
+				<enhanced:img
+					src={grumplrScreenshotMain}
+					alt="Grumplr app"
+					class="border-neutral/20 rounded-xl border transition-all delay-75 duration-300 ease-out hover:scale-125" />
+			</div>
+			<div class="border-neutral/20 overflow-hidden rounded-xl border">
+				<enhanced:img
+					src={grumplrScreenshotPost}
+					alt="Grumplr app"
+					class="border-neutral/20 rounded-xl border transition-all delay-75 duration-300 ease-out hover:scale-125" />
+			</div>
 		</div>
 	{/snippet}
 

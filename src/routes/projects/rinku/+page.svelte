@@ -4,7 +4,7 @@
 	import Rinku from '$lib/logos/rinku-logo.svg?dataurl';
 
 	import rinkuScreenshotLanding from '$lib/screenshots/rinku-landing.webp';
-	import rinkuScreenshotAdmin from '$lib/screenshots/rinku-admin.webp';
+	import rinkuScreenshotAdmin from '$lib/screenshots/rinku-admin.webp?enhanced';
 	import rinkuScreenshotShortener from '$lib/screenshots/rinku-shortener.webp';
 	import AlignCenterText from '$lib/AlignCenterText.svelte';
 </script>
@@ -52,7 +52,7 @@
 			<li>URL shortener</li>
 			<li>Admin panel</li>
 		</ul>
-		<img src={rinkuScreenshotAdmin} alt="Rinku app" class="border-neutral/20 mt-4 rounded-xl border" />
+		<enhanced:img src={rinkuScreenshotAdmin} alt="Rinku app" class="border-neutral/20 mt-4 rounded-xl border" />
 	{/snippet}
 	{#snippet undone()}
 		<AlignCenterText>Load balancing? Idk.</AlignCenterText>

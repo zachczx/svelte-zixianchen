@@ -16,8 +16,18 @@
 	{#snippet header()}
 		<!-- <enhanced:img src={AbbreviationScreenShotHeader} alt="Abbreviation app" class="object-fit" /> -->
 		<div class="grid gap-4 xl:grid-cols-2">
-			<enhanced:img src={AppraizeScreenshotMain} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={AppraizeScreenshotWide} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
+			<div class="border-neutral/20 overflow-hidden rounded-xl border">
+				<enhanced:img
+					src={AppraizeScreenshotMain}
+					alt="Appraize app"
+					class="border-neutral/20 rounded-xl border transition-all delay-75 duration-300 ease-out hover:scale-125" />
+			</div>
+			<div class="border-neutral/20 overflow-hidden rounded-xl border">
+				<enhanced:img
+					src={AppraizeScreenshotWide}
+					alt="Appraize app"
+					class="border-neutral/20 rounded-xl border transition-all delay-75 duration-300 ease-out hover:scale-125" />
+			</div>
 		</div>
 	{/snippet}
 	{#snippet title()}

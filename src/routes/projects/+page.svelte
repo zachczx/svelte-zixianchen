@@ -13,7 +13,9 @@
 	import Bulletin from '$lib/assets/zoshua-colah-X5-CZC5gegw-unsplash.webp';
 	import Clips from '$lib/assets/tamanna-rumee-vn4dC0yFtg8-unsplash.webp';
 	import Calculator from '$lib/assets/charlesdeluvio-GlavtG-umzE-unsplash.webp';
-	import Bot from '$lib/assets/salvador-rios-5kapL4Ygs4E-unsplash.webp';
+	import Bot from '$lib/assets/p1omnigames02_cute_robot_cartoon-inspired_round_face_friendly_e_2958fa92-efd2-41a0-b179-f04c25daea92.webp';
+	import AI from '$lib/assets/growtika-nGoCBxiaRO0-unsplash.webp';
+	import Chat from '$lib/assets/volodymyr-hryshchenko-V5vqWC9gyEU-unsplash.webp';
 
 	let { mode = '', desaturate = false } = $props();
 
@@ -141,7 +143,7 @@
 	<a href="/projects/grumplr" class="grid w-full content-stretch">
 		<figure
 			class="group grid h-full w-full space-y-2 self-center"
-			style="background:url({Bulletin}); background-size: cover; background-position: center center;">
+			style="background:url({Chat}); background-size: cover; background-position: center center;">
 			<figcaption
 				class="{hideBg
 					? 'bg-base-200/95 opacity-100'
@@ -185,7 +187,7 @@
 	<a
 		href="/projects/wronged"
 		class="group grid w-full content-stretch"
-		style="background:url({Bot}); background-size: cover; background-position: center 30%;">
+		style="background:url({Bot}); background-size: cover; background-position: center 40%;">
 		<figure class="group grid justify-items-center space-y-2">
 			<figcaption
 				class="{hideBg
