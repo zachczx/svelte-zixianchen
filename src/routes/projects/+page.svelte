@@ -13,7 +13,6 @@
 	import Clips from '$lib/assets/tamanna-rumee-vn4dC0yFtg8-unsplash.webp';
 	import Calculator from '$lib/assets/charlesdeluvio-GlavtG-umzE-unsplash.webp';
 	import Bot from '$lib/assets/p1omnigames02_cute_robot_cartoon-inspired_round_face_friendly_e_2958fa92-efd2-41a0-b179-f04c25daea92.webp';
-	import AI from '$lib/assets/growtika-nGoCBxiaRO0-unsplash.webp';
 	import Chat from '$lib/assets/volodymyr-hryshchenko-V5vqWC9gyEU-unsplash.webp';
 
 	let { mode = '', desaturate = false } = $props();
