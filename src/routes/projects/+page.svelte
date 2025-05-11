@@ -10,7 +10,6 @@
 	import Blackboard from '$lib/assets/thomas-t-OPpCbAAKWv8-unsplash.webp';
 	import Home from '$lib/assets/20180317_141704.webp';
 	import Shuriken from '$lib/assets/shuriken.webp';
-	import Bulletin from '$lib/assets/zoshua-colah-X5-CZC5gegw-unsplash.webp';
 	import Clips from '$lib/assets/tamanna-rumee-vn4dC0yFtg8-unsplash.webp';
 	import Calculator from '$lib/assets/charlesdeluvio-GlavtG-umzE-unsplash.webp';
 	import Bot from '$lib/assets/p1omnigames02_cute_robot_cartoon-inspired_round_face_friendly_e_2958fa92-efd2-41a0-b179-f04c25daea92.webp';
