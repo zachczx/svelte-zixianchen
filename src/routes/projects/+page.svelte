@@ -35,12 +35,12 @@
 				if (isLarge) {
 					gsap.from('.panel', {
 						opacity: 0.05,
-						duration: reduceMotion ? 0 : 0.3,
+						scale: 0.9,
+						duration: reduceMotion ? 0 : 0.2,
 						stagger: {
 							each: 0.1,
-							from: 'edges',
+							from: 'random',
 							grid: 'auto',
-							ease: 'circ.out',
 						},
 					});
 				}
