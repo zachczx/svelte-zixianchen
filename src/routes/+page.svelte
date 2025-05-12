@@ -35,7 +35,7 @@
 			observerNav.observe(navItem[i]);
 		}
 
-		gsap.registerPlugin(ScrollTrigger);
+		/* gsap.registerPlugin(ScrollTrigger);
 		let mm = gsap.matchMedia();
 		mm.add(
 			{
@@ -118,7 +118,7 @@
 					});
 				}
 			},
-		);
+		); */
 	});
 </script>
 
