@@ -12,9 +12,13 @@
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
 	import Computer from '$lib/assets/federica-galli-aiqKc07b5PA-unsplash.webp';
 	import ZXC from '$lib/assets/zixianchen-alt.webp';
+	import { gsap } from 'gsap';
+
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 	///////////////////////////////////
 	let navCurrent: string = $state('header');
+
 	onMount(() => {
 		let navItem: NodeListOf<HTMLElement> = document.querySelectorAll('.navItem') as NodeListOf<HTMLElement>;
 
@@ -30,6 +34,91 @@
 		for (let i = 0; i < navItem.length; i++) {
 			observerNav.observe(navItem[i]);
 		}
+
+		gsap.registerPlugin(ScrollTrigger);
+		let mm = gsap.matchMedia();
+		mm.add(
+			{
+				// set up any number of arbitrarily-named conditions. The function below will be called when ANY of them match.
+				isLarge: `(min-width: 1024px)`,
+				reduceMotion: '(prefers-reduced-motion: reduce)',
+			},
+			(context) => {
+				let { isLarge, reduceMotion } = context.conditions;
+
+				if (isLarge) {
+					let tl = gsap.timeline({
+						scrollTrigger: {
+							trigger: '#projects',
+							pin: false, // pin the trigger element while active
+							start: 'center 80%', // when the top of the trigger hits the top of the viewport
+							// end: '+=500', // end after scrolling 500px beyond the start
+							scrub: false, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+						},
+					});
+
+					tl.from('.proj', {
+						x: 100,
+						duration: 0.3,
+						opacity: 0,
+						stagger: {
+							each: 0.1,
+							from: 0,
+							grid: 'auto',
+						},
+					});
+
+					gsap.from('#moon', {
+						scrollTrigger: {
+							trigger: '#moon',
+							pin: false, // pin the trigger element while active
+							start: 'center bottom', // when the top of the trigger hits the top of the viewport
+							end: 'center 40%', // end after scrolling 500px beyond the start
+							scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+						},
+						duration: 0.5,
+						// x: 50,
+						autoAlpha: 0.1,
+						// rotation: 270,
+					});
+
+					let tl2 = gsap.timeline({
+						scrollTrigger: {
+							trigger: '#jobs',
+							pin: false, // pin the trigger element while active
+							start: 'center 80%', // when the top of the trigger hits the top of the viewport
+							// end: '+=500', // end after scrolling 500px beyond the start
+							scrub: false, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+						},
+					});
+					tl2.from('.job', {
+						x: -100,
+						duration: 0.3,
+						opacity: 0,
+						stagger: {
+							each: 0.1,
+							from: 0,
+							grid: 'auto',
+						},
+					});
+
+					gsap.from('#com', {
+						scrollTrigger: {
+							trigger: '#com',
+							pin: false, // pin the trigger element while active
+							start: 'center bottom', // when the top of the trigger hits the top of the viewport
+							end: 'center 40%', // end after scrolling 500px beyond the start
+							scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
+						},
+
+						duration: 0.5,
+						// x: 50,
+						autoAlpha: 0.1,
+						// rotation: 270,
+					});
+				}
+			},
+		);
 	});
 </script>
 
@@ -48,10 +137,12 @@
 		</div>
 	</header>
 
-	<div class="bg-base-200 mt-24 grid min-h-dvh w-full justify-items-center">
-		<div class="grid justify-items-center pt-8 lg:pt-12">
+	<div class="bg-base-200 mt-20 grid min-h-dvh w-full justify-items-center">
+		<div class="grid justify-items-center">
 			<div class="grid min-h-[50vh] w-full max-w-[1000px] content-center gap-y-4 px-4 lg:grid-cols-3 lg:gap-y-24">
-				<h2 id="about" class="navItem hidden justify-self-start px-4 text-9xl font-extrabold lg:col-span-3 lg:grid">
+				<h2
+					id="about"
+					class="navItem hidden justify-self-start px-4 pt-12 text-9xl font-extrabold lg:col-span-3 lg:grid lg:pt-20">
 					About Me
 				</h2>
 				<h3 class="text-4xl font-bold">Interests</h3>
@@ -69,9 +160,9 @@
 					</p>
 					<p>I dabble with Photoshop, Davinci Resolve, SDXL LORAs.</p>
 				</div>
-				<h3 class="text-4xl font-bold">Education</h3>
-				<div class="col-span-2 mb-4 content-start space-y-8">
-					<p>I did Political Science. Enjoyed researching incentives, money, civil wars.</p>
+				<h3 class="text-4xl font-bold">Studied</h3>
+				<div class="col-span-2 mb-4 h-full content-center space-y-8">
+					<p>Political Science. Enjoyed researching incentives, money, civil wars.</p>
 				</div>
 				<h3 class="text-4xl font-bold">Playlist</h3>
 				<ul class="list col-span-2 flex-row flex-wrap content-start items-center gap-4 lg:gap-x-8 lg:gap-y-4">
@@ -102,53 +193,55 @@
 			</section>
 		</div>
 		<div
+			id="moon"
 			class="hidden h-full w-full overflow-hidden bg-black lg:col-span-2 lg:grid"
 			style="background-image:url({Moon}); background-size: cover; background-position: center;">
 		</div>
 	</div>
 	<div class="bg-base-200 grid min-h-dvh w-full justify-items-center lg:grid-cols-5">
 		<div
+			id="com"
 			class="hidden h-full w-full overflow-hidden saturate-[0.4] lg:col-span-2 lg:grid"
 			style="background-image:url({Computer}); background-size: cover; background-position: bottom;">
 			<div class="to-base-200 h-full w-full bg-linear-to-r from-transparent from-90%"></div>
 		</div>
 		<section
-			class="bg-base-200 mt-8 grid w-full max-w-[1000px] grid-rows-[auto_1fr_auto] content-start gap-y-8 lg:col-span-3 lg:mt-28 lg:gap-y-24">
-			<h2 class="justify-self-start px-4 text-9xl font-extrabold">Day</h2>
+			class="bg-base-200 grid w-full max-w-[1000px] grid-rows-[auto_1fr_auto] content-start gap-y-8 lg:col-span-3 lg:gap-y-24">
+			<h2 id="jobs" class="justify-self-start px-4 pt-8 text-9xl font-extrabold lg:pt-28">Day</h2>
 			<div class="grid content-start gap-y-4 px-4 lg:grid-cols-[auto_1fr] lg:gap-y-16">
 				<div class="pe-12 text-4xl font-bold">2023</div>
-				<div>
+				<div class="job">
 					<h4 class="font-medium">Service Delivery Tech Team Lead</h4>
 					<p class="text-base-content/60">
 						Manage products, advise business owners for citizen & employee service delivery.
 					</p>
 				</div>
 				<div class="pe-12 text-4xl font-bold">2021</div>
-				<div>
+				<div class="job">
 					<h4 class="font-medium">Tech Infra Policy Team Lead</h4>
 					<p class="text-base-content/60">
 						Policies & funding for Govt cloud, on-prem hosting, SG Tech Stack, endpoint devices, dev toolchains.
 					</p>
 				</div>
 				<div class="pe-12 text-4xl font-bold">2018</div>
-				<div>
+				<div class="job">
 					<h4 class="font-medium">Comms Tech Team Lead</h4>
 					<p class="text-base-content/60">
 						Developed & bought media analytic products. Led investments in NLP & CV research.
 					</p>
 				</div>
 				<div class="pe-12 text-4xl font-bold">2017</div>
-				<div>
+				<div class="job">
 					<h4 class="font-medium">Comms Strategist</h4>
 					<p class="text-base-content/60">Did comms campaigns and strategies.</p>
 				</div>
 				<div class="pe-12 text-4xl font-bold">2015</div>
-				<div>
+				<div class="job">
 					<h4 class="font-medium">Media Relations Officer</h4>
 					<p class="text-base-content/60">Got earned media, did crisis comms, did public relations work.</p>
 				</div>
 				<div class="pe-12 text-4xl font-bold">2013</div>
-				<div>
+				<div class="job">
 					<h4 class="font-medium">NS Policy Officer</h4>
 					<p class="text-base-content/60">
 						Did NS policies for sportsmen, leave, citizenship, exit control. Worked in Committee to Strengthen NS.
