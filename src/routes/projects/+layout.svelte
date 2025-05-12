@@ -6,7 +6,7 @@
 
 <Nav navCurrent="projects" />
 <div class="bg-base-200 grid min-h-dvh content-start pt-8 lg:grid-cols-[auto_1fr] lg:grid-rows-[1fr_auto] lg:pt-28">
-	<aside class="text-base-content/70 z-2 hidden content-start border-2 border-red-300/0 px-1 lg:grid">
+	<aside class="text-base-content/70 z-2 row-span-2 hidden content-start border-2 border-red-300/0 px-1 lg:grid">
 		<a href="/projects"
 			><h4 class="flex items-center gap-4 px-2 py-2 font-bold">
 				<svg
@@ -148,5 +148,5 @@
 	<section id="projects" class="lg:ps-1.5">
 		{@render children()}
 	</section>
-	<div class="lg:col-span-2"><WebsiteFooter /></div>
+	<div class="bg-base-200 lg:col-span-1"><WebsiteFooter /></div>
 </div>
