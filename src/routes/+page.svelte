@@ -11,6 +11,7 @@
 	import ProjectDashboardArchived from '$lib/ProjectDashboardArchived.svelte';
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
 	import Computer from '$lib/assets/federica-galli-aiqKc07b5PA-unsplash.webp';
+	import Waterfall from '$lib/assets/aditya-chinchure-LtHTe32r_nA-unsplash.webp';
 	import ZXC from '$lib/assets/zixianchen-alt.webp';
 	import { gsap } from 'gsap';
 
@@ -137,7 +138,13 @@
 		</div>
 	</header>
 
-	<div class="bg-base-200 mt-20 grid min-h-dvh w-full justify-items-center">
+	<div
+		class="bg-base-200 mt-20 grid min-h-dvh w-full justify-items-center"
+		style="background:url({Waterfall});
+				background-size: cover;
+				background-position: top;
+				background-color: rgba(255,255,255,0.9);
+				background-blend-mode: lighten;">
 		<div class="grid justify-items-center">
 			<div class="grid min-h-[50vh] w-full max-w-[1000px] content-center gap-y-4 px-4 lg:grid-cols-3 lg:gap-y-24">
 				<h2
@@ -180,24 +187,6 @@
 		</div>
 	</div>
 
-	<div class="text-neutral-content grid w-full justify-items-center bg-[#0E0E0E] lg:grid-cols-5">
-		<div class="grid w-full justify-items-center pt-8 lg:col-span-3 lg:pt-28">
-			<section
-				class="grid w-full max-w-[1000px] gap-y-8 px-4 pb-8 lg:grid-cols-3 lg:gap-y-24 lg:justify-self-end lg:pb-28">
-				<h2 id="projects" class="navItem justify-self-start text-9xl font-extrabold lg:col-span-3">Night</h2>
-				<h3 class="text-4xl font-bold">Side Projects</h3>
-				<div
-					class="grid justify-items-center gap-y-8 text-center lg:col-span-2 lg:grid-cols-1 lg:justify-items-start lg:text-start">
-					<ProjectsDashboard mode="dark" desaturate={true} />
-				</div>
-			</section>
-		</div>
-		<div
-			id="moon"
-			class="hidden h-full w-full overflow-hidden bg-black lg:col-span-2 lg:grid"
-			style="background-image:url({Moon}); background-size: cover; background-position: center;">
-		</div>
-	</div>
 	<div class="bg-base-200 grid min-h-dvh w-full justify-items-center lg:grid-cols-5">
 		<div
 			id="com"
@@ -248,10 +237,30 @@
 					</p>
 				</div>
 			</div>
+
 			<div>
 				<WebsiteFooter />
 			</div>
 		</section>
+	</div>
+
+	<div class="text-neutral-content grid w-full justify-items-center bg-[#0E0E0E] lg:grid-cols-5">
+		<div class="grid w-full justify-items-center pt-8 lg:col-span-3 lg:pt-28">
+			<section
+				class="grid w-full max-w-[1000px] gap-y-8 px-4 pb-8 lg:grid-cols-3 lg:gap-y-24 lg:justify-self-end lg:pb-28">
+				<h2 id="projects" class="navItem justify-self-start text-9xl font-extrabold lg:col-span-3">Night</h2>
+				<h3 class="text-4xl font-bold">Side Projects</h3>
+				<div
+					class="grid justify-items-center gap-y-8 text-center lg:col-span-2 lg:grid-cols-1 lg:justify-items-start lg:text-start">
+					<ProjectsDashboard mode="dark" desaturate={true} />
+				</div>
+			</section>
+		</div>
+		<div
+			id="moon"
+			class="hidden h-full w-full overflow-hidden bg-black lg:col-span-2 lg:grid"
+			style="background-image:url({Moon}); background-size: cover; background-position: center;">
+		</div>
 	</div>
 </div>
 
