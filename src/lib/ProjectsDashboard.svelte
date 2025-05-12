@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=162';
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
 	import Rinku from '$lib/logos/rinku-logo.svg?dataurl';

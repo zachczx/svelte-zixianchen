@@ -1,14 +1,11 @@
 <script lang="ts">
-	import TankSvg from '$lib/svg/TankSvg.svelte';
-
 	import Nav from '$lib/Nav.svelte';
 	import { onMount } from 'svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
-	import Intermission from '$lib/Intermission.svelte';
 	import { addNeumorphismInset, removeNeumorphismInset } from '$lib/Neumorphism';
 	import moneySvg from '$lib/svg/Manage money-cuate.svg?dataurl';
 	import ProjectsDashboard from '$lib/ProjectsDashboard.svelte';
-	import ProjectDashboardArchived from '$lib/ProjectDashboardArchived.svelte';
+	// import ProjectDashboardArchived from '$lib/ProjectDashboardArchived.svelte';
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
 	import Computer from '$lib/assets/federica-galli-aiqKc07b5PA-unsplash.webp';
 	import Waterfall from '$lib/assets/aditya-chinchure-LtHTe32r_nA-unsplash.webp';
