@@ -54,8 +54,8 @@
 	<meta name="description" content="Zixian's projects." />
 </svelte:head>
 
-<main class="bg-base-200 grid h-full grid-rows-[auto_1fr] justify-items-center text-center">
-	<label class="flex cursor-pointer items-center gap-2 justify-self-end pe-4 pt-2 pb-2 text-sm font-medium"
+<main class="bg-base-200 grid h-full max-w-[1200px] grid-rows-[auto_1fr] justify-self-center text-center">
+	<label class="flex cursor-pointer items-center gap-2 justify-self-end pt-2 pb-2 text-sm font-medium"
 		>Show Background <svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1.5em"
@@ -65,7 +65,10 @@
 			><path
 				fill="currentColor"
 				d="m16.1 13.3l-1.45-1.45q.225-1.175-.675-2.2t-2.325-.8L10.2 7.4q.425-.2.863-.3T12 7q1.875 0 3.188 1.313T16.5 11.5q0 .5-.1.938t-.3.862m3.2 3.15l-1.45-1.4q.95-.725 1.688-1.587T20.8 11.5q-1.25-2.525-3.588-4.012T12 6q-.725 0-1.425.1T9.2 6.4L7.65 4.85q1.025-.425 2.1-.638T12 4q3.775 0 6.725 2.087T23 11.5q-.575 1.475-1.513 2.738T19.3 16.45m.5 6.15l-4.2-4.15q-.875.275-1.762.413T12 19q-3.775 0-6.725-2.087T1 11.5q.525-1.325 1.325-2.463T4.15 7L1.4 4.2l1.4-1.4l18.4 18.4zM5.55 8.4q-.725.65-1.325 1.425T3.2 11.5q1.25 2.525 3.588 4.013T12 17q.5 0 .975-.062t.975-.138l-.9-.95q-.275.075-.525.113T12 16q-1.875 0-3.188-1.312T7.5 11.5q0-.275.038-.525t.112-.525zm4.2 4.2" /></svg
-		><input type="checkbox" class="toggle toggle-success toggle-sm checked:bg-lime-100" bind:checked={showBg} /></label>
+		><input
+			type="checkbox"
+			class="toggle toggle-sm text-base-100 checked:border-success checked:bg-success checked:text-base-100 border-gray-400 bg-gray-400"
+			bind:checked={showBg} /></label>
 	<div class="grid h-full min-h-dvh content-stretch justify-items-center pb-20 lg:grid-cols-3 lg:gap-4">
 		<a
 			href="/projects/abbreviation"
