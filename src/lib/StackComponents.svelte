@@ -28,6 +28,7 @@
 	import SvgMeetrics from '$lib/logos/meetrics.svg?dataurl';
 	import SvgGolang from '$lib/logos/Golang.svg?dataurl';
 	import SvgSqlite from '$lib/logos/sqlite-small-logo.svg?dataurl';
+	import SvgBetterAuth from '$lib/logos/betterauth.svg?dataurl';
 
 	import SvgTempl from '$lib/logos/templ-small-logo.svg?dataurl';
 	import SvgStytch from '$lib/logos/Stytch.svg?dataurl';
@@ -54,6 +55,7 @@
 	const stacks: StacksList = {
 		go: { name: 'Go', src: SvgGolang, class: 'h-5' },
 		astro: { name: 'AstroJS', src: SvgAstro, class: 'h-5' },
+		betterAuth: { name: 'Better Auth', src: SvgBetterAuth, class: 'h-5' },
 		htmx: { name: 'Htmx', src: SvgHtmx, class: 'h-4' },
 		tailwind: { name: 'Tailwind', src: SvgTailwindSmall, class: 'h-4' },
 		sqlite: { name: 'Sqlite', src: SvgSqlite, class: 'h-5' },

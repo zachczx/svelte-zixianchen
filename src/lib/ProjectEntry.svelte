@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { type Snippet } from 'svelte';
-	import { descriptions, type ProjectDescriptions } from './ProjectDescriptions';
+	import { descriptions } from './ProjectDescriptions';
+	import AlignCenterText from './AlignCenterText.svelte';
 	interface ProjectEntryProps {
 		id: string;
 		header: Snippet;
@@ -62,7 +63,11 @@
 			{#if tldr}
 				<h3 class="text-4xl font-bold">TL;DR</h3>
 				<div>
-					{tldr}
+					{#if tldr.length < 90}
+						<AlignCenterText><p class="text-base-content/70 italic">{tldr}</p></AlignCenterText>
+					{:else}
+						<p class="text-base-content/70 italic">{tldr}</p>
+					{/if}
 				</div>
 			{/if}
 			{#if problem}

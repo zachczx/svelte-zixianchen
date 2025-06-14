@@ -3,17 +3,19 @@
 	import ProjectsDashboard from '$lib/ProjectsDashboard.svelte';
 	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=162';
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
+	import Towelie from '$lib/logos/towelie-logo.svg?dataurl';
 	import Rinku from '$lib/logos/rinku-logo.svg?dataurl';
 	import Wronged from '$lib/logos/wronged-logo.svg?dataurl';
 	import Scrabble from '$lib/assets/james-t-zevadYfX56Q-unsplash.webp';
 	import Rank from '$lib/assets/sigmund-R401qwThw7w-unsplash.webp';
 	import Blackboard from '$lib/assets/thomas-t-OPpCbAAKWv8-unsplash.webp';
 	import Home from '$lib/assets/20180317_141704.webp';
-	import Shuriken from '$lib/assets/shuriken.webp';
+	import Piggy from '$lib/assets/piggy2.webp';
 	import Clips from '$lib/assets/tamanna-rumee-vn4dC0yFtg8-unsplash.webp';
 	import Calculator from '$lib/assets/charlesdeluvio-GlavtG-umzE-unsplash.webp';
 	import Bot from '$lib/assets/p1omnigames02_cute_robot_cartoon-inspired_round_face_friendly_e_2958fa92-efd2-41a0-b179-f04c25daea92.webp';
 	import Chat from '$lib/assets/volodymyr-hryshchenko-V5vqWC9gyEU-unsplash.webp';
+	import Towels from '$lib/assets/the-blowup-4dUC7Fine5g-unsplash.webp';
 	import { gsap } from 'gsap';
 
 	let { mode = '', desaturate = false } = $props();
@@ -161,7 +163,7 @@
 		<a
 			href="/projects/cancelninja"
 			class="panel group grid w-full content-stretch"
-			style="background:url({Shuriken}); background-size: cover; background-position: center 80% ;">
+			style="background:url({Piggy}); background-size: cover; background-position: center 50% ;">
 			<div
 				class="{showBg
 					? 'group-hover:bg-base-200/95 opacity-0 group-hover:opacity-100'
@@ -221,6 +223,23 @@
 					<img src={Rinku} alt="Rinku" class="mb-2 h-8.5 hover:saturate-100" />
 					<!-- h-9 and mb-2 because the svg has no margins  -->
 					<div>URL shortener</div>
+				</figcaption>
+			</figure>
+		</a>
+
+		<a
+			href="/projects/towelie"
+			class="panel group grid w-full content-stretch"
+			style="background:url({Towels}); background-size: cover; background-position: center 30%;">
+			<figure class="group grid justify-items-center space-y-2">
+				<figcaption
+					class="{showBg
+						? 'group-hover:bg-base-200/95 opacity-0 group-hover:opacity-100'
+						: 'bg-base-200/95 opacity-100'} grid h-full w-full content-center justify-items-center">
+					<img src={Towelie} alt="Towelie" class="mb-2 h-10 justify-self-center hover:saturate-100" />
+
+					<!-- h-9 and mb-2 because the svg has no margins  -->
+					<div>CRUD app for my towels</div>
 				</figcaption>
 			</figure>
 		</a>

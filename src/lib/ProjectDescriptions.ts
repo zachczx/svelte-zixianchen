@@ -47,6 +47,11 @@ export const descriptions: ProjectDescriptions = {
 		tldr: 'I have many URLs that are long, especially for blog slugs. I have many domain names, some of which are short. I built a URL shortener with an admin panel to add urls and do basic analytics.',
 		url: 'https://zczx.org',
 	},
+	towelie: {
+		subtitle: 'Towel washing tracker',
+		tldr: 'Track when I last washed my towel.',
+		url: 'https://towelie.zixian.dev',
+	},
 	wronged: {
 		subtitle: 'Products, Problems, UX Chatbot',
 		tldr: 'A chatbot that helps users with product management, UX, staff work.',

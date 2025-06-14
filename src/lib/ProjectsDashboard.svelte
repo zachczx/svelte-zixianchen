@@ -3,6 +3,7 @@
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
 	import Rinku from '$lib/logos/rinku-logo.svg?dataurl';
 	import Wronged from '$lib/logos/wronged-logo.svg?dataurl';
+	import Towelie from '$lib/logos/towelie-logo.svg?dataurl';
 
 	let { mode = '', desaturate = false } = $props();
 </script>
@@ -130,6 +131,22 @@
 				{/if}
 				<!-- h-9 and mb-2 because the svg has no margins  -->
 				<div>URL shortener</div></a>
+		</figcaption>
+	</figure>
+</div>
+
+<div class="proj group grid content-center saturate-0 hover:brightness-100 hover:saturate-100">
+	<figure class="grid space-y-2">
+		<figcaption>
+			<a href="/projects/towelie" class="grid">
+				{#if desaturate}
+					<!-- this is to brighten the svg, if not contrast is very poor -->
+					<img src={Towelie} alt="Wronged" class="mb-2 h-10 hue-rotate-160 invert saturate-200" />
+				{:else}
+					<img src={Towelie} alt="Wronged" class="mb-2 h-10 justify-self-center hover:saturate-100" />
+				{/if}
+				<!-- h-9 and mb-2 because the svg has no margins  -->
+				<div>Basic CRUD app</div></a>
 		</figcaption>
 	</figure>
 </div>

@@ -97,6 +97,14 @@
 						: undefined}">
 					Rinku
 				</li></a>
+			<a href="/projects/towelie"
+				><li
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
+					'towelie'
+						? 'bg-neutral/85 text-white/90'
+						: undefined}">
+					Towelie
+				</li></a>
 			<a href="/projects/wronged"
 				><li
 					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
