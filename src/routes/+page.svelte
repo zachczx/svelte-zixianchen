@@ -234,10 +234,6 @@
 					</p>
 				</div>
 			</div>
-
-			<div>
-				<WebsiteFooter />
-			</div>
 		</section>
 	</div>
 
@@ -257,6 +253,9 @@
 			id="moon"
 			class="hidden h-full w-full overflow-hidden bg-black lg:col-span-2 lg:grid"
 			style="background-image:url({Moon}); background-size: cover; background-position: center;">
+		</div>
+		<div class="lg:col-span-5">
+			<WebsiteFooter />
 		</div>
 	</div>
 </div>
