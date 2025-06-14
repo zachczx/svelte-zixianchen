@@ -245,7 +245,7 @@
 				<h3 class="text-4xl font-bold">Side Projects</h3>
 				<div
 					class="grid justify-items-center gap-y-8 text-center lg:col-span-2 lg:grid-cols-1 lg:justify-items-start lg:text-start">
-					<ProjectsDashboard mode="dark" desaturate={true} />
+					<ProjectsDashboard />
 				</div>
 			</section>
 		</div>

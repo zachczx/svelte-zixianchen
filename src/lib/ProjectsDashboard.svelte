@@ -1,21 +1,16 @@
 <script lang="ts">
-	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=162';
+	import apptitudeLogo from '$lib/assets/green-logo.webp?w=162&enhanced';
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
 	import Rinku from '$lib/logos/rinku-logo.svg?dataurl';
 	import Wronged from '$lib/logos/wronged-logo.svg?dataurl';
 	import Towelie from '$lib/logos/towelie-logo.svg?dataurl';
-
-	let { mode = '', desaturate = false } = $props();
 </script>
 
 <div class="proj flex w-full items-center brightness-200 saturate-0 hover:brightness-100 hover:saturate-100">
 	<figure class="grid content-center justify-items-center space-y-2">
 		<figcaption>
 			<a href="/projects/abbreviation"
-				><h3
-					class="font-sans text-4xl font-extrabold {mode === 'dark'
-						? 'text-[#0069ff] brightness-125'
-						: 'text-[#0069ff]'} lg:flex">
+				><h3 class="font-sans text-4xl font-extrabold text-[#0069ff] brightness-125 lg:flex">
 					Abbreviati<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="1em"
@@ -24,8 +19,8 @@
 						viewBox="0 0 24 24"
 						><g fill="none"
 							><path
-								fill={mode === 'dark' ? 'white' : '#0069ff'}
-								fill-opacity={mode === 'dark' ? '.7' : '.25'}
+								fill="white"
+								fill-opacity=".7"
 								fill-rule="evenodd"
 								d="M12 19a7 7 0 1 0 0-14a7 7 0 0 0 0 14M10.087 7.38A5 5 0 0 1 12 7a.5.5 0 0 0 0-1a6 6 0 0 0-6 6a.5.5 0 0 0 1 0a5 5 0 0 1 3.087-4.62"
 								clip-rule="evenodd" /><path stroke="#0069ff" stroke-linecap="round" d="M20.5 20.5L17 17" /><circle
@@ -46,9 +41,7 @@
 	class="proj grid content-center space-y-2 self-center brightness-200 saturate-0 hover:brightness-100 hover:saturate-100">
 	<figcaption>
 		<a href="/projects/appraize">
-			<h3 class="font-sans text-4xl font-black text-[#A94A4A] {mode === 'dark' ? 'brightness-125' : undefined}">
-				Appraize
-			</h3>
+			<h3 class="font-sans text-4xl font-black text-[#A94A4A] brightness-125">Appraize</h3>
 			<div>Drop & drop ranking</div></a>
 	</figcaption>
 </figure>
@@ -67,17 +60,14 @@
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/btonomics"
-				><h3 class="pb-1 font-serif text-4xl font-bold text-[#38bdf8] {mode === 'dark' ? 'brightness-125' : undefined}">
-					BTOnomics
-				</h3>
+				><h3 class="pb-1 font-serif text-4xl font-bold text-[#38bdf8] brightness-125">BTOnomics</h3>
 				<div>Home renovation blog for budget folks</div></a>
 		</figcaption>
 	</figure>
 </div>
 
 <a href="/projects/cancelninja" class="proj group grid content-center"
-	><h3
-		class="text-4xl font-extrabold tracking-tighter {mode === 'dark' ? 'text-neutral-content' : 'text-base-content'}">
+	><h3 class="text-neutral-content text-4xl font-extrabold tracking-tighter">
 		Cancel Ninj<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
@@ -95,12 +85,7 @@
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/grumplr"
-				><h3
-					class="font-inter content-center pb-1 text-4xl font-bold {mode === 'dark'
-						? 'text-green-400'
-						: 'text-[#1b510f]'}">
-					Grumplr
-				</h3>
+				><h3 class="font-inter content-center pb-1 text-4xl font-bold text-green-400">Grumplr</h3>
 				<div>Reddit-lite style bulletin board</div></a>
 		</figcaption>
 	</figure>
@@ -120,15 +105,12 @@
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/rinku">
-				{#if desaturate}
-					<!-- this is to brighten the svg, if not contrast is very poor -->
-					<img
-						src={Rinku}
-						alt="Rinku"
-						class="mb-2 h-9 brightness-[300%] hue-rotate-230 group-hover:hue-rotate-0 group-hover:saturate-100" />
-				{:else}
-					<img src={Rinku} alt="Rinku" class="mb-2 h-8.5 hover:saturate-100" />
-				{/if}
+				<!-- this is to brighten the svg, if not contrast is very poor -->
+				<img
+					src={Rinku}
+					alt="Rinku"
+					class="mb-2 h-9 brightness-[300%] hue-rotate-230 group-hover:hue-rotate-0 group-hover:saturate-100" />
+
 				<!-- h-9 and mb-2 because the svg has no margins  -->
 				<div>URL shortener</div></a>
 		</figcaption>
@@ -139,12 +121,9 @@
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/towelie" class="grid">
-				{#if desaturate}
-					<!-- this is to brighten the svg, if not contrast is very poor -->
-					<img src={Towelie} alt="Wronged" class="mb-2 h-10 hue-rotate-160 invert saturate-200" />
-				{:else}
-					<img src={Towelie} alt="Wronged" class="mb-2 h-10 justify-self-center hover:saturate-100" />
-				{/if}
+				<!-- this is to brighten the svg, if not contrast is very poor -->
+				<img src={Towelie} alt="Wronged" class="mb-2 h-10 hue-rotate-160 invert saturate-200" />
+
 				<!-- h-9 and mb-2 because the svg has no margins  -->
 				<div>Basic CRUD app</div></a>
 		</figcaption>
@@ -155,12 +134,9 @@
 	<figure class="grid space-y-2">
 		<figcaption>
 			<a href="/projects/wronged" class="grid">
-				{#if desaturate}
-					<!-- this is to brighten the svg, if not contrast is very poor -->
-					<img src={Wronged} alt="Wronged" class="flip-img mb-2 h-10 invert" />
-				{:else}
-					<img src={Wronged} alt="Wronged" class="mb-2 h-10 justify-self-center hover:saturate-100" />
-				{/if}
+				<!-- this is to brighten the svg, if not contrast is very poor -->
+				<img src={Wronged} alt="Wronged" class="flip-img mb-2 h-10 invert" />
+
 				<!-- h-9 and mb-2 because the svg has no margins  -->
 				<div>Products, Problems, UX Chatbot</div></a>
 		</figcaption>
