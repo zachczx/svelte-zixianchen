@@ -135,13 +135,7 @@
 		</div>
 	</header>
 
-	<div
-		class="bg-base-200 mt-20 grid min-h-dvh w-full justify-items-center"
-		style="background:url({Waterfall});
-				background-size: cover;
-				background-position: top;
-				background-color: rgba(255,255,255,0.9);
-				background-blend-mode: lighten;">
+	<div class="mt-20 grid min-h-dvh w-full justify-items-center bg-gray-400/5">
 		<div class="grid justify-items-center">
 			<div class="grid min-h-[50vh] w-full max-w-[1000px] content-center gap-y-4 px-4 lg:grid-cols-3 lg:gap-y-24">
 				<h2
