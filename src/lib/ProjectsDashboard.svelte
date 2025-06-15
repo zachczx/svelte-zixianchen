@@ -125,7 +125,7 @@
 				<img src={Towelie} alt="Wronged" class="mb-2 h-10 hue-rotate-160 invert saturate-200" />
 
 				<!-- h-9 and mb-2 because the svg has no margins  -->
-				<div>Basic CRUD app</div></a>
+				<div>CRUD app for my towels</div></a>
 		</figcaption>
 	</figure>
 </div>
