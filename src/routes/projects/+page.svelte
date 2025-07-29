@@ -58,7 +58,7 @@
 
 <main class="bg-base-200 grid h-full max-w-[1200px] grid-rows-[auto_1fr] justify-self-center text-center">
 	<label class="flex cursor-pointer items-center gap-2 justify-self-end pt-2 pb-2 text-sm font-medium"
-		>Show Background <svg
+		>Background <svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1.5em"
 			height="1.5em"
