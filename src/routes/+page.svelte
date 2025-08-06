@@ -32,91 +32,6 @@
 		for (let i = 0; i < navItem.length; i++) {
 			observerNav.observe(navItem[i]);
 		}
-
-		/* gsap.registerPlugin(ScrollTrigger);
-		let mm = gsap.matchMedia();
-		mm.add(
-			{
-				// set up any number of arbitrarily-named conditions. The function below will be called when ANY of them match.
-				isLarge: `(min-width: 1024px)`,
-				reduceMotion: '(prefers-reduced-motion: reduce)',
-			},
-			(context) => {
-				let { isLarge, reduceMotion } = context.conditions;
-
-				if (isLarge) {
-					let tl = gsap.timeline({
-						scrollTrigger: {
-							trigger: '#projects',
-							pin: false, // pin the trigger element while active
-							start: 'center 80%', // when the top of the trigger hits the top of the viewport
-							// end: '+=500', // end after scrolling 500px beyond the start
-							scrub: false, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-						},
-					});
-
-					tl.from('.proj', {
-						x: 100,
-						duration: 0.3,
-						opacity: 0,
-						stagger: {
-							each: 0.1,
-							from: 0,
-							grid: 'auto',
-						},
-					});
-
-					gsap.from('#moon', {
-						scrollTrigger: {
-							trigger: '#moon',
-							pin: false, // pin the trigger element while active
-							start: 'center bottom', // when the top of the trigger hits the top of the viewport
-							end: 'center 40%', // end after scrolling 500px beyond the start
-							scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-						},
-						duration: 0.5,
-						// x: 50,
-						autoAlpha: 0.1,
-						// rotation: 270,
-					});
-
-					let tl2 = gsap.timeline({
-						scrollTrigger: {
-							trigger: '#jobs',
-							pin: false, // pin the trigger element while active
-							start: 'center 80%', // when the top of the trigger hits the top of the viewport
-							// end: '+=500', // end after scrolling 500px beyond the start
-							scrub: false, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-						},
-					});
-					tl2.from('.job', {
-						x: -100,
-						duration: 0.3,
-						opacity: 0,
-						stagger: {
-							each: 0.1,
-							from: 0,
-							grid: 'auto',
-						},
-					});
-
-					gsap.from('#com', {
-						scrollTrigger: {
-							trigger: '#com',
-							pin: false, // pin the trigger element while active
-							start: 'center bottom', // when the top of the trigger hits the top of the viewport
-							end: 'center 40%', // end after scrolling 500px beyond the start
-							scrub: true, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-						},
-
-						duration: 0.5,
-						// x: 50,
-						autoAlpha: 0.1,
-						// rotation: 270,
-					});
-				}
-			},
-		); */
 	});
 </script>
 
@@ -146,29 +61,30 @@
 				<h3 class="text-4xl font-bold">Interests</h3>
 				<div class="col-span-2 mb-4 space-y-8">
 					<p>
-						I started <strong>webdev</strong> as a hobby in the early 2000s. Spanned eras across Frontpage, nested tables,
-						HTML Goodies, PHP, Wordpress, and more recently Go, Javascript, Python stuff.
+						I started <strong>webdev</strong> in 2000. Started with Frontpage, XHTML, nested tables, PHP, Wordpress.
 					</p>
+					<p>I'm now mostly working with Go, Javascript, Python. Also getting into some Rust atm.</p>
 					<p>
-						I like <strong>building PCs</strong> - love being cheap, hate cable management.
+						I like <strong>building PCs</strong>. Love being cheap. Hate cable management.
 					</p>
 					<p>
 						I enjoy learning about <strong>businesses</strong>, <strong>product ideas</strong>, <strong>design</strong>,
 						<strong>entrepreneurship</strong>.
 					</p>
-					<p>I dabble with Photoshop, Davinci Resolve, SDXL LORAs.</p>
+					<p>I dabble with digital creation, editing. Photoshop, Affinity, Davinci Resolve, SDXL LORAs.</p>
 				</div>
-				<h3 class="text-4xl font-bold">Studied</h3>
+				<!-- <h3 class="text-4xl font-bold">Studied</h3>
 				<div class="col-span-2 mb-4 h-full content-center space-y-8">
 					<p>Political Science. Enjoyed researching incentives, money, civil wars.</p>
-				</div>
-				<h3 class="text-4xl font-bold">Playlist</h3>
+				</div> -->
+				<h3 class="text-4xl font-bold">I Subscribed</h3>
 				<ul class="list col-span-2 flex-row flex-wrap content-start items-center gap-4 lg:gap-x-8 lg:gap-y-4">
 					<li>All-In Podcast</li>
 					<li>Lenny's Podcast</li>
 					<li>ThePrimeagen</li>
 					<li>Theo - t3.gg</li>
-					<li>Fireship</li>
+					<li>Dreamsofcode</li>
+					<li>ByteByteGo</li>
 					<li>SyntaxFM</li>
 					<li>YC Startup School</li>
 				</ul>
@@ -193,7 +109,7 @@
 				<div class="job">
 					<h4 class="font-medium">Service Delivery Tech Team Lead</h4>
 					<p class="text-base-content/60">
-						Manage products, advise business owners for citizen & employee service delivery.
+						Build, run stuff for citizens + employees services. Also dismantle what doesn't work.
 					</p>
 				</div>
 				<div class="pe-12 text-4xl font-bold">2021</div>
@@ -218,13 +134,13 @@
 				<div class="pe-12 text-4xl font-bold">2015</div>
 				<div class="job">
 					<h4 class="font-medium">Media Relations Officer</h4>
-					<p class="text-base-content/60">Got earned media, did crisis comms, did public relations work.</p>
+					<p class="text-base-content/60">Did public relations work. Got earned media. Did crisis comms.</p>
 				</div>
 				<div class="pe-12 text-4xl font-bold">2013</div>
 				<div class="job">
 					<h4 class="font-medium">NS Policy Officer</h4>
 					<p class="text-base-content/60">
-						Did NS policies for sportsmen, leave, citizenship, exit control. Worked in Committee to Strengthen NS.
+						Did NS policies for sportsmen, leave, citizenship, exit control. Helped Committee to Strengthen NS.
 					</p>
 				</div>
 			</div>
