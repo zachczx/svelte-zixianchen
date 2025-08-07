@@ -37,7 +37,7 @@
 		"svelte-check": "^4.3.1",
 		"tailwindcss": "^4.1.11",
 		"typescript": "^5.9.2",
-		"vite": "^7.0.6"
+		"vite": "^7.1.0"
 	},
 	"type": "module",
 	"dependencies": {
@@ -59,6 +59,6 @@
 		"svelte": "5.37.3",
 		"svelte-motion": "^0.12.2",
 		"tailwind-merge": "^3.3.1",
-		"wrangler": "^4.28.0"
+		"wrangler": "^4.28.1"
 	}
 }
