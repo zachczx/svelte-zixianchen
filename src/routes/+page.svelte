@@ -63,7 +63,7 @@
 					<p>
 						I started <strong>webdev</strong> in 2000. Started with Frontpage, XHTML, nested tables, PHP, Wordpress.
 					</p>
-					<p>I'm now mostly working with Go, Javascript, Python. Also getting into some Rust atm.</p>
+					<p>I'm now mostly working with Go, Javascript, Python. Also getting into some Zig atm.</p>
 					<p>
 						I like <strong>building PCs</strong>. Love being cheap. Hate cable management.
 					</p>
