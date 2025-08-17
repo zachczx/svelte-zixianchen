@@ -55,7 +55,7 @@ export const descriptions: ProjectDescriptions = {
 	towelie: {
 		subtitle: 'Towel washing tracker',
 		tldr: 'Track when I last washed my towel.',
-		url: 'https://towelie.zixian.dev',
+		url: 'https://towelie.cczzxx.com',
 	},
 	wronged: {
 		subtitle: 'Products, Problems, UX Chatbot',
