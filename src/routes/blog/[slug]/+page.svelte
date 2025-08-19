@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	let { data } = $props();
 	import changeDateFormat from '$lib/BlogDate';
 	let content = $state(data.content);

@@ -1,6 +1,4 @@
-import type { PageServerLoad } from './$types';
-
-export async function load() {
+export const load = async () => {
 	let posts: string[] = [];
 	const paths = import.meta.glob('./posts/*.md', { eager: true });
 
@@ -21,4 +19,4 @@ export async function load() {
 
 	posts = posts.sort((first, second) => new Date(second.date).getTime() - new Date(first.date).getTime());
 	return { posts };
-}
+};

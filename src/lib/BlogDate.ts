@@ -2,7 +2,7 @@
  * @function changeDateFormat - change dates from dd-mm-yyy to dd mmm yyy
  * @param {Date} date - from .md file in date format
  */
-export default function changeDateFormat(date) {
+export default function changeDateFormat(date: string): string {
 	let objectDate = new Date(date);
 
 	let day = objectDate.getDate();
