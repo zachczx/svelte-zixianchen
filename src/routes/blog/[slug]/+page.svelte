@@ -1,6 +1,7 @@
 <script lang="ts">
 	let { data } = $props();
-	import changeDateFormat from '$lib/BlogDate';
+	import dayjs from 'dayjs';
+
 	let content = $state(data.content);
 </script>
 
@@ -12,9 +13,9 @@
 </svelte:head>
 <h1 class="px-3 py-1 text-2xl font-medium sm:px-6 xl:px-14 xl:text-5xl">{data.metadata.title}</h1>
 <div class="text-medium text-base-content/60 px-3 sm:px-6 xl:px-14">
-	{changeDateFormat(data.metadata.date)}
+	{dayjs(data.metadata.date).format('D MMM YYYY')}
 	{#if data.metadata.date_updated}
-		<span class="ms-2">(Updated: {changeDateFormat(data.metadata.date_updated)})</span>
+		<span class="ms-2">(Updated: {dayjs(data.metadata.date_updated).format('D MMM YYYY')})</span>
 	{/if}
 </div>
 <article
@@ -24,7 +25,7 @@
 		<Component />
 	{/if}
 </article>
-<div class="flex items-center gap-4 px-3 pt-10 text-gray-600 sm:px-6 lg:pt-20 xl:px-14">
+<div class="text-base-content/50 flex items-center gap-4 px-3 pt-10 sm:px-6 lg:pt-20 xl:px-14">
 	<div>Tags:</div>
 	<div class="flex items-center gap-2">
 		{#each data.metadata.tags as tag}<span class="border-neutral/40 border px-2 py-0.5">{tag}</span>{/each}

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Particles from '$lib/magic-ui/Particles.svelte';
 	import type { Snippet } from 'svelte';
 	let { children }: { children: Snippet } = $props();
 	let ghostColor = $state('');
@@ -11,8 +10,7 @@
 	<meta name="keywords" content="Zixian, blog" />
 </svelte:head>
 
-<div
-	class="bg-base-200 relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl">
+<div class="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl">
 	<div id="container" class="bg-base-100 z-10 grid min-h-dvh justify-center p-6 xl:w-[1024px]">
 		<div class="lg:max-w-[1024px]">
 			<div class="text-base-content/60 mb-12 flex items-center justify-center gap-12">
@@ -49,7 +47,7 @@
 					class="inline-block bg-linear-to-r from-orange-400 via-pink-500 to-red-500 bg-clip-text pb-2 font-extrabold text-transparent xl:pb-4"
 					>Zixian's blog</a>
 			</div>
-			<div class="mb-12 grid content-center justify-center px-4 text-center">
+			<div class="text-base-content/50 mb-12 grid content-center justify-center px-4 text-center italic">
 				I write about simple things I learned or tried.
 			</div>
 
@@ -57,7 +55,6 @@
 		</div>
 		<div class="mt-auto pt-10 text-center text-xs md:text-sm">© Zixian Chen</div>
 	</div>
-	<!-- <Particles className="absolute inset-0" refresh={true} size="3" color="#fb923c" /> -->
 </div>
 
 <style>

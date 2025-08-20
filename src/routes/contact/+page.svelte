@@ -1,10 +1,9 @@
-<script>
+<script lang="ts">
 	import Nav from '$lib/Nav.svelte';
-	import MailSentRafiki from '$lib/svg/Mail-sent-rafiki.svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
 	let navCurrent = '';
 	let formStatus = $state('Submit');
-	let formEl;
+	let formEl = $state() as HTMLFormElement;
 
 	/**
 	 * Email check vars
@@ -13,24 +12,21 @@
 	let disabledSubmitButton = $state(false);
 	const emailRegex = /^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}$/;
 
-	/**
-	 * Small func to wrap around handler in lieu of |preventDefault in svelte 4
-	 * @param fn - event handler
-	 */
-	function preventDefault(fn) {
-		return function (event) {
+	function preventDefault(fn: (event: SubmitEvent) => void) {
+		return function (event: SubmitEvent) {
 			event.preventDefault();
-			fn.call(this, event);
+			fn(event);
 		};
 	}
 
 	/**
 	 * Web4Forms submission
-	 * @param {object} data - form data
 	 */
-	const handleSubmit = async (data) => {
+	const handleSubmit = async (event: SubmitEvent) => {
 		formStatus = 'Submitting';
-		const formData = new FormData(data.currentTarget);
+		const form = event.currentTarget as HTMLFormElement;
+		const formData = new FormData(form);
+
 		const object = Object.fromEntries(formData);
 		const json = JSON.stringify(object);
 
@@ -66,7 +62,6 @@
 	<Nav {navCurrent} />
 	<div class="flex max-w-(--breakpoint-2xl) items-center">
 		<section class="space-y-4 px-3 pb-2 xl:grid xl:min-w-[40rem]">
-			<!-- <div class="flex justify-center"><MailSentRafiki class="w-96" /></div> -->
 			<div class="rounded-3xl p-4 xl:min-w-[35rem]">
 				<h1 class="mb-12 text-4xl font-bold lg:text-6xl">Tell Me Something</h1>
 				<form bind:this={formEl} onsubmit={preventDefault(handleSubmit)} class="grid w-full gap-y-4">
@@ -94,7 +89,14 @@
 							class="grow"
 							placeholder="Email"
 							bind:value={email}
-							onkeydown={(evt) => {
+							onkeydown={() => {
+								if (emailRegex.test(email) === false) {
+									disabledSubmitButton = true;
+								} else {
+									disabledSubmitButton = false;
+								}
+							}}
+							onkeyup={() => {
 								if (emailRegex.test(email) === false) {
 									disabledSubmitButton = true;
 								} else {

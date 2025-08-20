@@ -5,7 +5,7 @@
 </script>
 
 <Nav navCurrent="projects" />
-<div class="bg-base-200 grid min-h-dvh content-start pt-8 lg:grid-cols-[auto_1fr] lg:grid-rows-[1fr_auto] lg:pt-28">
+<div class="bg-base-200 grid min-h-dvh content-start p-4 lg:grid-cols-[auto_1fr] lg:grid-rows-[1fr_auto]">
 	<aside class="text-base-content/70 z-2 row-span-2 hidden content-start border-2 border-red-300/0 px-1 lg:grid">
 		<a href="/projects"
 			><h4 class="flex items-center gap-4 px-2 py-2 font-bold">
@@ -32,10 +32,10 @@
 					d="M12 22q-2.05 0-3.875-.788t-3.187-2.15t-2.15-3.187T2 12q0-2.075.788-3.887t2.15-3.175t3.187-2.15T12 2q.425 0 .713.288T13 3t-.288.713T12 4Q8.675 4 6.337 6.338T4 12t2.338 5.663T12 20t5.663-2.337T20 12q0-.425.288-.712T21 11t.713.288T22 12q0 2.05-.788 3.875t-2.15 3.188t-3.175 2.15T12 22" /></svg
 			>Ongoing
 		</h4>
-		<ul class="ms-4 border-l-4 border-l-transparent ps-0.5 font-medium">
+		<ul class="border-l-4 border-l-transparent ps-0.5 font-medium">
 			<a href="/projects/abbreviation"
 				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
 					'abbreviation'
 						? 'bg-neutral/85 text-white/90'
 						: undefined}">
@@ -43,7 +43,7 @@
 				</li></a>
 			<a href="/projects/appraize"
 				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
 					'appraize'
 						? 'bg-neutral/85 text-white/90'
 						: undefined}">
@@ -51,7 +51,7 @@
 				</li></a>
 			<a href="/projects/apptitude"
 				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
 					'apptitude'
 						? 'bg-neutral/85 text-white/90'
 						: undefined}">
@@ -59,7 +59,7 @@
 				</li></a>
 			<a href="/projects/btonomics"
 				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
 					'btonomics'
 						? 'bg-neutral/85 text-white/90'
 						: undefined}">
@@ -67,7 +67,7 @@
 				</li></a>
 			<a href="/projects/cancelninja"
 				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
 					'cancelninja'
 						? 'bg-neutral/85 text-white/90'
 						: undefined}">
@@ -75,7 +75,7 @@
 				</li></a>
 			<a href="/projects/grumplr"
 				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
 					'grumplr'
 						? 'bg-neutral/85 text-white/90'
 						: undefined}">
@@ -83,7 +83,7 @@
 				</li></a>
 			<a href="/projects/meetrics"
 				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
 					'meetrics'
 						? 'bg-neutral/85 text-white/90'
 						: undefined}">
@@ -91,7 +91,7 @@
 				</li></a>
 			<a href="/projects/rinku"
 				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
 					'rinku'
 						? 'bg-neutral/85 text-white/90'
 						: undefined}">
@@ -99,7 +99,7 @@
 				</li></a>
 			<a href="/projects/roamichi"
 				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
 					'roamichi'
 						? 'bg-neutral/85 text-white/90'
 						: undefined}">
@@ -107,7 +107,7 @@
 				</li></a>
 			<a href="/projects/towelie"
 				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
 					'towelie'
 						? 'bg-neutral/85 text-white/90'
 						: undefined}">
@@ -115,7 +115,7 @@
 				</li></a>
 			<a href="/projects/wronged"
 				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
 					'wronged'
 						? 'bg-neutral/85 text-white/90'
 						: undefined}">

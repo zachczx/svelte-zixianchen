@@ -6,7 +6,7 @@
 </script>
 
 <nav
-	class="z-1 grid h-fit w-full grid-cols-2 justify-center px-4 transition-all duration-300 ease-out xl:fixed xl:top-2 xl:grid-cols-3">
+	class="z-1 grid h-fit w-full grid-cols-2 justify-center px-4 transition-all duration-300 ease-out xl:fixed xl:bottom-2 xl:grid-cols-3">
 	<div class="navbar-start col-span-2 -mx-4 w-full xl:hidden">
 		<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-circle btn-ghost">
@@ -43,7 +43,7 @@
 			><a href="/">Zixian Chen</a></span> -->
 	</div>
 	<div
-		class="hidden h-20 w-fit min-w-[30rem] items-center justify-center justify-self-center rounded-full border border-white/50 bg-black/70 shadow-sm backdrop-blur-md transition-all duration-300 ease-out xl:relative xl:flex">
+		class="hidden h-20 w-fit min-w-[30rem] items-center justify-center justify-self-center rounded-full border border-white/50 bg-black/70 px-2 shadow-sm backdrop-blur-md transition-all duration-300 ease-out xl:relative xl:flex">
 		<NavDock {navCurrent} pathName={$page.url.pathname} />
 	</div>
 	<div class="hidden items-center justify-end space-x-6 xl:flex"></div>

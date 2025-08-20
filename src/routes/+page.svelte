@@ -2,17 +2,11 @@
 	import Nav from '$lib/Nav.svelte';
 	import { onMount } from 'svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
-	import { addNeumorphismInset, removeNeumorphismInset } from '$lib/Neumorphism';
-	import moneySvg from '$lib/svg/Manage money-cuate.svg?dataurl';
 	import ProjectsDashboard from '$lib/ProjectsDashboard.svelte';
 	// import ProjectDashboardArchived from '$lib/ProjectDashboardArchived.svelte';
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
 	import Computer from '$lib/assets/federica-galli-aiqKc07b5PA-unsplash.webp';
-	import Waterfall from '$lib/assets/aditya-chinchure-LtHTe32r_nA-unsplash.webp';
 	import ZXC from '$lib/assets/zixianchen-alt.webp';
-	import { gsap } from 'gsap';
-
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 	///////////////////////////////////
 	let navCurrent: string = $state('header');
@@ -77,7 +71,7 @@
 				<div class="col-span-2 mb-4 h-full content-center space-y-8">
 					<p>Political Science. Enjoyed researching incentives, money, civil wars.</p>
 				</div> -->
-				<h3 class="text-4xl font-bold">I Subscribed</h3>
+				<h3 class="text-4xl font-bold">Listening</h3>
 				<ul class="list col-span-2 flex-row flex-wrap content-start items-center gap-4 lg:gap-x-8 lg:gap-y-4">
 					<li>All-In Podcast</li>
 					<li>Lenny's Podcast</li>

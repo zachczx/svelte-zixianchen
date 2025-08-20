@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { addNeumorphismInset, removeNeumorphismInset } from '$lib/Neumorphism';
-
 	export let url: string = '';
 	export let github: string = '';
 	export let className: string = '';

@@ -61,52 +61,40 @@
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
 			height="1em"
-			class="fluent-color:scan-person-16 grayscale-100 group-hover:grayscale-0"
+			class="fluent-color:person-16 grayscale-100 group-hover:grayscale-0"
 			viewBox="0 0 16 16"
 			><g fill="none"
 				><path
-					fill="url(#fluentColorScanPerson160)"
-					d="M3 12.5A1.5 1.5 0 0 1 4.5 11h7a1.5 1.5 0 0 1 1.5 1.5V14H3z" /><path
-					fill="url(#fluentColorScanPerson161)"
-					d="M3 12.5A1.5 1.5 0 0 1 4.5 11h7a1.5 1.5 0 0 1 1.5 1.5V14H3z" /><path
-					fill="url(#fluentColorScanPerson162)"
-					d="M10.75 6.75a2.75 2.75 0 1 0-5.5 0a2.75 2.75 0 0 0 5.5 0" /><path
-					fill="url(#fluentColorScanPerson163)"
-					fill-rule="evenodd"
-					d="M3.5 3a.5.5 0 0 0-.5.5V5a1 1 0 0 1-2 0V3.5A2.5 2.5 0 0 1 3.5 1H5a1 1 0 0 1 0 2zM10 2a1 1 0 0 1 1-1h1.5A2.5 2.5 0 0 1 15 3.5V5a1 1 0 1 1-2 0V3.5a.5.5 0 0 0-.5-.5H11a1 1 0 0 1-1-1m-8 8a1 1 0 0 1 1 1v1.5a.5.5 0 0 0 .5.5H5a1 1 0 1 1 0 2H3.5A2.5 2.5 0 0 1 1 12.5V11a1 1 0 0 1 1-1m12 0a1 1 0 0 1 1 1v1.5a2.5 2.5 0 0 1-2.5 2.5H11a1 1 0 1 1 0-2h1.5a.5.5 0 0 0 .5-.5V11a1 1 0 0 1 1-1"
-					clip-rule="evenodd" /><defs
+					fill="url(#fluentColorPerson160)"
+					d="M11.5 8A1.5 1.5 0 0 1 13 9.5v.5c0 1.971-1.86 4-5 4s-5-2.029-5-4v-.5A1.5 1.5 0 0 1 4.5 8z" /><path
+					fill="url(#fluentColorPerson161)"
+					d="M11.5 8A1.5 1.5 0 0 1 13 9.5v.5c0 1.971-1.86 4-5 4s-5-2.029-5-4v-.5A1.5 1.5 0 0 1 4.5 8z" /><path
+					fill="url(#fluentColorPerson162)"
+					d="M8 1.5A2.75 2.75 0 1 1 8 7a2.75 2.75 0 0 1 0-5.5" /><defs
 					><linearGradient
-						id="fluentColorScanPerson160"
+						id="fluentColorPerson160"
 						x1="5.378"
-						x2="5.995"
-						y1="11.399"
-						y2="14.682"
+						x2="7.616"
+						y1="8.798"
+						y2="14.754"
 						gradientUnits="userSpaceOnUse"
 						><stop offset=".125" stop-color="#9C6CFE" /><stop offset="1" stop-color="#7A41DC" /></linearGradient
 					><linearGradient
-						id="fluentColorScanPerson161"
+						id="fluentColorPerson161"
 						x1="8"
-						x2="8.851"
-						y1="10.643"
-						y2="15.941"
+						x2="11.164"
+						y1="7.286"
+						y2="17.139"
 						gradientUnits="userSpaceOnUse"
 						><stop stop-color="#885EDB" stop-opacity="0" /><stop offset="1" stop-color="#E362F8" /></linearGradient
 					><linearGradient
-						id="fluentColorScanPerson162"
+						id="fluentColorPerson162"
 						x1="6.558"
 						x2="9.361"
-						y1="4.731"
-						y2="9.207"
+						y1="2.231"
+						y2="6.707"
 						gradientUnits="userSpaceOnUse"
 						><stop offset=".125" stop-color="#9C6CFE" /><stop offset="1" stop-color="#7A41DC" /></linearGradient
-					><linearGradient
-						id="fluentColorScanPerson163"
-						x1=".447"
-						x2="11.425"
-						y1="-.172"
-						y2="17.561"
-						gradientUnits="userSpaceOnUse"
-						><stop offset=".015" stop-color="#3DCBFF" /><stop offset="1" stop-color="#0094F0" /></linearGradient
 					></defs
 				></g
 			></svg>
@@ -126,56 +114,32 @@
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
 			height="1em"
-			class="fluent-color:document-folder-16 grayscale-100 group-hover:grayscale-0"
+			class="fluent-color:apps-16 grayscale-100 group-hover:grayscale-0"
 			viewBox="0 0 16 16"
 			><g fill="none"
 				><path
-					fill="url(#fluentColorDocumentFolder160)"
-					d="M5 5.5A1.5 1.5 0 0 1 6.5 4h5A1.5 1.5 0 0 1 13 5.5v5a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 5 10.5z" /><path
-					fill="url(#fluentColorDocumentFolder161)"
-					d="M5 5.5A1.5 1.5 0 0 1 6.5 4h5A1.5 1.5 0 0 1 13 5.5v5a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 5 10.5z" /><path
-					fill="url(#fluentColorDocumentFolder163)"
-					d="M3 3.5A1.5 1.5 0 0 1 4.5 2h5A1.5 1.5 0 0 1 11 3.5v7A1.5 1.5 0 0 1 9.5 12h-5A1.5 1.5 0 0 1 3 10.5z" /><path
-					fill="url(#fluentColorDocumentFolder162)"
-					d="M3.5 5A1.5 1.5 0 0 0 2 6.5V12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-.5a1.5 1.5 0 0 0-1.5-1.5h-1.586a.5.5 0 0 1-.353-.146L6.146 5.439A1.5 1.5 0 0 0 5.086 5z" /><defs
+					fill="url(#fluentColorApps160)"
+					d="M2 4.5A1.5 1.5 0 0 1 3.5 3h3A1.5 1.5 0 0 1 8 4.5V8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" /><path
+					fill="url(#fluentColorApps161)"
+					d="M11.5 8A1.5 1.5 0 0 1 13 9.5v3a1.5 1.5 0 0 1-1.5 1.5H8a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" /><path
+					fill="url(#fluentColorApps162)"
+					d="M8 13a1 1 0 0 1-1 1H3.5A1.5 1.5 0 0 1 2 12.5V9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z" /><path
+					fill="url(#fluentColorApps163)"
+					d="M9.69 2.442a1.5 1.5 0 0 1 2.122 0l1.752 1.752a1.5 1.5 0 0 1 0 2.121l-1.75 1.75a1.5 1.5 0 0 1-2.12 0L7.942 6.311a1.5 1.5 0 0 1 0-2.121z" /><defs
+					><linearGradient id="fluentColorApps160" x1="2" x2="8" y1="3" y2="9" gradientUnits="userSpaceOnUse"
+						><stop stop-color="#B9C0C7" /><stop offset="1" stop-color="#889096" /></linearGradient
+					><linearGradient id="fluentColorApps161" x1="13" x2="7.429" y1="13.571" y2="8" gradientUnits="userSpaceOnUse"
+						><stop stop-color="#63686E" /><stop offset="1" stop-color="#889096" /></linearGradient
+					><linearGradient id="fluentColorApps162" x1="2" x2="8" y1="8" y2="11.857" gradientUnits="userSpaceOnUse"
+						><stop stop-color="#55595E" /><stop offset="1" stop-color="#383B3D" /></linearGradient
 					><linearGradient
-						id="fluentColorDocumentFolder160"
-						x1="14.2"
-						x2="15.247"
-						y1="13.539"
-						y2="5.069"
+						id="fluentColorApps163"
+						x1="12.898"
+						x2="9.178"
+						y1="7.06"
+						y2="2.471"
 						gradientUnits="userSpaceOnUse"
-						><stop stop-color="#BB45EA" /><stop offset="1" stop-color="#9C6CFE" /></linearGradient
-					><linearGradient
-						id="fluentColorDocumentFolder161"
-						x1="13"
-						x2="11"
-						y1="6.769"
-						y2="6.769"
-						gradientUnits="userSpaceOnUse"
-						><stop offset=".338" stop-color="#5750E2" stop-opacity="0" /><stop
-							offset="1"
-							stop-color="#5750E2" /></linearGradient
-					><linearGradient
-						id="fluentColorDocumentFolder162"
-						x1="4.571"
-						x2="4.571"
-						y1="5"
-						y2="17.273"
-						gradientUnits="userSpaceOnUse"
-						><stop offset=".241" stop-color="#FFD638" /><stop offset=".637" stop-color="#FAB500" /><stop
-							offset=".985"
-							stop-color="#CA6407" /></linearGradient
-					><radialGradient
-						id="fluentColorDocumentFolder163"
-						cx="0"
-						cy="0"
-						r="1"
-						gradientTransform="matrix(5.2 -7.66667 11.90405 8.07405 5.4 10)"
-						gradientUnits="userSpaceOnUse"
-						><stop offset=".228" stop-color="#2764E7" /><stop offset=".685" stop-color="#5CD1FF" /><stop
-							offset="1"
-							stop-color="#6CE0FF" /></radialGradient
+						><stop stop-color="#2764E7" /><stop offset="1" stop-color="#36DFF1" /></linearGradient
 					></defs
 				></g
 			></svg>
@@ -185,6 +149,74 @@
 		Projects
 	</span>
 </a>
+
+<a href="/blog" class="dock group relative bg-transparent transition-all duration-200 ease-out">
+	<div
+		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="1em"
+			height="1em"
+			class="fluent-color:document-text-16 grayscale-100 group-hover:grayscale-0"
+			viewBox="0 0 16 16"
+			><g fill="none"
+				><path
+					fill="url(#fluentColorDocumentText160)"
+					d="M8.004 1L9.5 4.5L13 6l-.008 7.5a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 13.5v-11A1.5 1.5 0 0 1 4.5 1z" /><path
+					fill="url(#fluentColorDocumentText163)"
+					fill-opacity=".5"
+					d="M8.004 1L9.5 4.5L13 6l-.008 7.5a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 13.5v-11A1.5 1.5 0 0 1 4.5 1z" /><path
+					fill="url(#fluentColorDocumentText161)"
+					d="M8 4.5V1l5 5H9.5A1.5 1.5 0 0 1 8 4.5" /><path
+					fill="url(#fluentColorDocumentText162)"
+					fill-opacity=".9"
+					d="M5.5 8a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 10.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m.5 1.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z" /><defs
+					><linearGradient
+						id="fluentColorDocumentText160"
+						x1="9.994"
+						x2="11.264"
+						y1="1"
+						y2="12.781"
+						gradientUnits="userSpaceOnUse"
+						><stop stop-color="#6CE0FF" /><stop offset="1" stop-color="#4894FE" /></linearGradient
+					><linearGradient
+						id="fluentColorDocumentText161"
+						x1="10.492"
+						x2="9.242"
+						y1="3.083"
+						y2="5.167"
+						gradientUnits="userSpaceOnUse"
+						><stop stop-color="#9FF0F9" /><stop offset="1" stop-color="#B3E0FF" /></linearGradient
+					><linearGradient
+						id="fluentColorDocumentText162"
+						x1="11"
+						x2="5.553"
+						y1="15"
+						y2="5.677"
+						gradientUnits="userSpaceOnUse"
+						><stop stop-color="#9DEAFF" /><stop offset="1" stop-color="#fff" /></linearGradient
+					><radialGradient
+						id="fluentColorDocumentText163"
+						cx="0"
+						cy="0"
+						r="1"
+						gradientTransform="rotate(130.372 6.372 3.818)scale(8.35524 4.87457)"
+						gradientUnits="userSpaceOnUse"
+						><stop offset=".362" stop-color="#4A43CB" /><stop
+							offset="1"
+							stop-color="#4A43CB"
+							stop-opacity="0" /></radialGradient
+					></defs
+				></g
+			></svg>
+
+		<span
+			class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
+			>Blog</span>
+	</div>
+</a>
+
+<div class="mx-4 h-10/12 w-0.5 bg-white/30"></div>
 
 <a
 	href="/contact"
@@ -323,86 +355,6 @@
 		>GitHub</span>
 </a>
 
-<a href="/blog" class="dock group relative bg-transparent transition-all duration-200 ease-out">
-	<div
-		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60">
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			width="1em"
-			height="1em"
-			class="fluent-color:library-16 grayscale-100 group-hover:grayscale-0"
-			viewBox="0 0 16 16"
-			><g fill="none"
-				><path
-					fill="url(#fluentColorLibrary160)"
-					d="M1 3.25C1 2.56 1.56 2 2.249 2h.5c.69 0 1.249.56 1.249 1.25v9.495c0 .69-.56 1.25-1.25 1.25H2.25A1.25 1.25 0 0 1 1 12.744z" /><path
-					fill="url(#fluentColorLibrary161)"
-					d="M4.997 3.25c0-.69.559-1.25 1.249-1.25h.5c.689 0 1.248.56 1.248 1.25v9.495c0 .69-.56 1.25-1.249 1.25h-.5a1.25 1.25 0 0 1-1.248-1.25z" /><path
-					fill="url(#fluentColorLibrary162)"
-					d="M11.972 4.777a1.25 1.25 0 0 0-1.571-.713l-.582.204a1.25 1.25 0 0 0-.746 1.645l2.937 7.304c.249.62.94.933 1.571.713l.582-.204a1.25 1.25 0 0 0 .746-1.646z" /><path
-					fill="url(#fluentColorLibrary163)"
-					d="M1 4h3v2H1z" /><path
-					fill="url(#fluentColorLibrary164)"
-					d="M12.31 5.619L9.425 6.787l.742 1.846l2.889-1.165z" /><path
-					fill="url(#fluentColorLibrary165)"
-					d="M8 4H5v2h3z" /><defs
-					><linearGradient
-						id="fluentColorLibrary160"
-						x1="4.468"
-						x2="5.643"
-						y1="3.994"
-						y2="17.419"
-						gradientUnits="userSpaceOnUse"
-						><stop stop-color="#43E5CA" /><stop offset="1" stop-color="#2764E7" /></linearGradient
-					><linearGradient
-						id="fluentColorLibrary161"
-						x1="4.468"
-						x2="5.643"
-						y1="3.994"
-						y2="17.419"
-						gradientUnits="userSpaceOnUse"
-						><stop stop-color="#43E5CA" /><stop offset="1" stop-color="#2764E7" /></linearGradient
-					><linearGradient
-						id="fluentColorLibrary162"
-						x1="4.468"
-						x2="5.643"
-						y1="3.994"
-						y2="17.419"
-						gradientUnits="userSpaceOnUse"
-						><stop stop-color="#43E5CA" /><stop offset="1" stop-color="#2764E7" /></linearGradient
-					><linearGradient
-						id="fluentColorLibrary163"
-						x1="5"
-						x2="8.891"
-						y1=".178"
-						y2="1.057"
-						gradientUnits="userSpaceOnUse"
-						><stop stop-color="#9FF0F9" /><stop offset="1" stop-color="#6CE0FF" /></linearGradient
-					><linearGradient
-						id="fluentColorLibrary164"
-						x1="5"
-						x2="8.891"
-						y1=".178"
-						y2="1.057"
-						gradientUnits="userSpaceOnUse"
-						><stop stop-color="#9FF0F9" /><stop offset="1" stop-color="#6CE0FF" /></linearGradient
-					><linearGradient
-						id="fluentColorLibrary165"
-						x1="5"
-						x2="8.891"
-						y1=".178"
-						y2="1.057"
-						gradientUnits="userSpaceOnUse"
-						><stop stop-color="#9FF0F9" /><stop offset="1" stop-color="#6CE0FF" /></linearGradient
-					></defs
-				></g
-			></svg>
-		<span
-			class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
-			>Blog</span>
-	</div>
-</a>
-
 <style>
 	a {
 		--font-scaler: 0.3;
@@ -431,7 +383,7 @@
 			height: calc(var(--dimensions-scaler) * 13rem);
 			width: calc(var(--dimensions-scaler) * 13rem);
 		}
-		margin-bottom: calc(var(--margin-scaler) * -6rem);
+		margin-top: calc(var(--margin-scaler) * -6rem);
 	}
 
 	/* Adjacent to hover */
@@ -443,30 +395,28 @@
 			height: calc(var(--dimensions-scaler) * 11rem);
 			width: calc(var(--dimensions-scaler) * 11rem);
 		}
-		margin-bottom: calc(var(--margin-scaler) * -3.5rem);
+		margin-top: calc(var(--margin-scaler) * -3.5rem);
 	}
 
 	/* Next next - beside adjacent */
 	.dock:hover + .dock + .dock,
 	.dock:has(+ .dock + .dock:hover) {
 		font-size: calc(var(--font-scaler) * 7rem);
-		/* background-color: green; */
 		div {
 			height: calc(var(--dimensions-scaler) * 10rem);
 			width: calc(var(--dimensions-scaler) * 10rem);
 		}
-		margin-bottom: calc(var(--margin-scaler) * -2rem);
+		margin-top: calc(var(--margin-scaler) * -2rem);
 	}
 
 	/* Next next next */
 	.dock:hover + .dock + .dock + .dock,
 	.dock:has(+ .dock + .dock + .dock:hover) {
 		font-size: calc(var(--font-scaler) * 6rem);
-		/* background-color: purple; */
 		div {
 			height: calc(var(--dimensions-scaler) * 9rem);
 			width: calc(var(--dimensions-scaler) * 9rem);
 		}
-		margin-bottom: calc(var(--margin-scaler) * -1rem);
+		margin-top: calc(var(--margin-scaler) * -1rem);
 	}
 </style>
