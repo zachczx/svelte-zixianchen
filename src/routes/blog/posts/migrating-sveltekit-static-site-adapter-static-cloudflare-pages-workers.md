@@ -43,6 +43,8 @@ After some digging, it turns out all I needed is to:
 
 4. In the settings you'll see that things like "Variables cannot be added to a Worker that only has static assets". (They recently changed their UI. Previously the project name would have a pill tag beside saying "Static")
 
+5. A reminder though, check your builds. For some reason Cloudflare Pages allowed me to do some dynamic routes and import that adapter-static didn't. So I had to switch to vite's import.meta.glob for posts and [exporting an entries func](https://svelte.dev/docs/kit/page-options#entries) to make it work.
+
 All good! Everything's deployed as static assets. When I first tried it using adapter-cloudflare I still ended up invoking page functions for some reason.
 
 Overall, it was an easy config change. I still very much prefer the Pages UI and settings, which are much more straightforward. Cloudflare Workers' graphs, charts, dashboard are very cluttered imo and not enjoyable to work with.

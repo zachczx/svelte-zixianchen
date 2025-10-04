@@ -22,12 +22,10 @@ export const load: PageLoad = async ({ params }) => {
 export const entries: EntryGenerator = () => {
 	const posts = import.meta.glob('../posts/*.md', { eager: true });
 
-	return Object.keys(posts).map((path) => {
-		const split = path.split('/');
-		const last = split.pop();
-		if (!last) return;
-		const slug = last.replace('.md', '');
-
-		return { slug };
-	});
+	return Object.keys(posts)
+		.map((path) => {
+			const slug = path.split('/').pop()?.replace('.md', '');
+			return slug ? { slug } : undefined;
+		})
+		.filter((item): item is { slug: string } => item !== undefined);
 };
