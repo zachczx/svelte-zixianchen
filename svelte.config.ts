@@ -47,7 +47,7 @@ const mdsvexOptions = {
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', '.md'],
-	adapter: adapter(),
+	adapter: adapter({ pages: 'build' }),
 	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
 };
 
