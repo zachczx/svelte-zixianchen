@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import type { PageLoad } from './$types';
+import type { EntryGenerator, PageLoad } from './$types';
 import type { Component } from 'svelte';
 
 interface MdsvexModule {
@@ -17,4 +17,17 @@ export const load: PageLoad = async ({ params }) => {
 	const post = posts[postPath];
 
 	return { content: post.default, metadata: post.metadata };
+};
+
+export const entries: EntryGenerator = () => {
+	const posts = import.meta.glob('../posts/*.md', { eager: true });
+
+	return Object.keys(posts).map((path) => {
+		const split = path.split('/');
+		const last = split.pop();
+		if (!last) return;
+		const slug = last.replace('.md', '');
+
+		return { slug };
+	});
 };
