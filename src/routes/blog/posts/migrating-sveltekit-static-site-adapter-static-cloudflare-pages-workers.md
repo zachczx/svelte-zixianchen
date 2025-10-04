@@ -9,7 +9,7 @@ tags:
   - Workers
   - Pages
 published: true
-slug: migrating-sveltekit-static-site-adapter-static-cloudflare-pages-workers
+slug: 'migrating-sveltekit-static-site-adapter-static-cloudflare-pages-workers'
 ---
 
 I'm a longtime fan of Cloudflare Pages. It's free, it's fast, and it's easy to get started. In the last year or so I've been reading about Cloudflare Workers, and recently I saw Cloudflare [recommending everyone to start with Workers for new projects](https://developers.cloudflare.com/workers/static-assets/migration-guides/migrate-from-pages/).
@@ -35,9 +35,11 @@ After some digging, it turns out all I needed is to:
 
 3. I use pnpm, so
 
-- Build command:pnpm build
-- Deploy command:pnpx wrangler deploy
-- Root directory:/
+```
+- Build command: pnpm build
+- Deploy command: pnpx wrangler deploy
+- Root directory: /
+```
 
 4. In the settings you'll see that things like "Variables cannot be added to a Worker that only has static assets". (They recently changed their UI. Previously the project name would have a pill tag beside saying "Static")
 
