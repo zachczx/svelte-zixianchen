@@ -1,5 +1,5 @@
 ---
-title: 'Google Photos 20K Limit Workaround'
+title: 'Google Photos 20K Photos Album Limit Workaround'
 description: 'A workaround for auto-adding Google Photos albums to continue where the last one left off.'
 date: '2025-10-17'
 date_updated: ''
@@ -7,7 +7,7 @@ tags:
   - Google
   - Photos
 published: true
-slug: google-photos-20k-album-limit-workaround
+slug: google-photos-20k-photos-album-limit-workaround
 ---
 
 # Working Around Google Photos' 20,000 Photo Album Limit
