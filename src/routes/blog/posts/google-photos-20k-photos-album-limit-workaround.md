@@ -20,7 +20,9 @@ Creating a new album only captures photos from that point forward—missing ever
 
 ## The Workaround
 
-There's a workaround I've been using. Using the Google Photos web app:
+This workaround is useful if you want to create a new album and auto add photos that carry on from the previous album.
+
+Using the Google Photos web app:
 
 1. Create a new album
 2. Click the 3 dots menu on the top right corner > Options > Automatically add photos (For some reason it doesnt work if you clicked "Select people & pets" from the main empty album screen)
