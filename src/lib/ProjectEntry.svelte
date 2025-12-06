@@ -31,21 +31,9 @@
 		children,
 	}: ProjectEntryProps = $props();
 
-	let subtitle = $state('');
-	let tldr = $state('');
-	let url = $state('');
-
-	if (id) {
-		for (const project in descriptions) {
-			if (project === id) {
-				subtitle = descriptions[project].subtitle;
-				url = descriptions[project].url;
-				if (descriptions[project].tldr) {
-					tldr = descriptions[project].tldr;
-				}
-			}
-		}
-	}
+	let subtitle = $derived(descriptions[id]?.subtitle ?? '');
+	let tldr = $derived(descriptions[id]?.tldr ?? '');
+	let url = $derived(descriptions[id]?.url ?? '');
 </script>
 
 <div {id} class="project grid content-center justify-items-center px-2 lg:min-h-[90vh] lg:px-8 lg:pb-32">
