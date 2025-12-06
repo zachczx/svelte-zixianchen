@@ -11,7 +11,7 @@
 <main class="grid gap-y-8">
 	{#each data.posts as post}
 		<div class=" items-end px-4 lg:px-6">
-			<h2 class="text-2xl font-bold text-orange-600 underline hover:text-orange-400">
+			<h2 class="text-2xl font-bold hover:text-orange-700">
 				<a href="/blog/{post.slug}">{post.title}</a>
 			</h2>
 			<div class="text-base-content/50">{dayjs(post.date).format('D MMM YYYY')}</div>
@@ -24,3 +24,11 @@
 		</div>
 	{/each}
 </main>
+
+<style>
+	a {
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		text-decoration-thickness: 1px;
+	}
+</style>
