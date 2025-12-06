@@ -2,7 +2,7 @@
 	let { data } = $props();
 	import dayjs from 'dayjs';
 
-	let content = $state(data.content);
+	let content = $derived(data.content);
 </script>
 
 <svelte:head>
@@ -17,6 +17,7 @@
 	{#if data.metadata.date_updated}
 		<span class="ms-2">(Updated: {dayjs(data.metadata.date_updated).format('D MMM YYYY')})</span>
 	{/if}
+	<span class="ms-3">• {data.readingTime} min read</span>
 </div>
 <article
 	class="prose prose-a:font-semibold prose-a:text-orange-600 prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:text-orange-400 prose-blockquote:my-8 prose-blockquote:ms-8 prose-code:font-['Fira_Code_Variable'] prose-pre:p-0 mt-6 w-screen px-3 sm:px-6 md:max-w-none lg:mt-10 lg:max-w-[1024px] xl:w-[1024px] xl:px-14">

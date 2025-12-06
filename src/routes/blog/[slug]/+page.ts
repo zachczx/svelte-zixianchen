@@ -7,16 +7,33 @@ interface MdsvexModule {
 	metadata: BlogPostMetadata;
 }
 
+function calculateReadingTime(content: string): number {
+	const wordsPerMinute = 200;
+	// Remove frontmatter
+	const cleanContent = content.replace(/^---[\s\S]*?---/, '');
+	// Basic word count splitting by whitespace
+	const words = cleanContent.trim().split(/\s+/).length;
+	return Math.ceil(words / wordsPerMinute);
+}
+
 export const load: PageLoad = async ({ params }) => {
 	const slug = params.slug;
 
 	const posts = import.meta.glob<MdsvexModule>('../posts/*.md', { eager: true });
+	const postsRaw = import.meta.glob<string>('../posts/*.md', {
+		eager: true,
+		query: '?raw',
+		import: 'default',
+	});
+
 	const postPath = `../posts/${slug}.md`;
 	if (!(postPath in posts)) error(404, 'post not found!');
 
 	const post = posts[postPath];
+	const rawContent = postsRaw[postPath];
+	const readingTime = calculateReadingTime(rawContent);
 
-	return { content: post.default, metadata: post.metadata };
+	return { content: post.default, metadata: post.metadata, readingTime };
 };
 
 export const entries: EntryGenerator = () => {
