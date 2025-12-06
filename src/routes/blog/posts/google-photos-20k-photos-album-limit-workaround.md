@@ -10,7 +10,7 @@ published: true
 slug: google-photos-20k-photos-album-limit-workaround
 ---
 
-## Working Around Google Photos' 20,000 Photo Album Limit
+## The Problem
 
 Google Photos caps albums at 20,000 photos. For someone with a large photo library who shares albums with family, this is a problem.
 
