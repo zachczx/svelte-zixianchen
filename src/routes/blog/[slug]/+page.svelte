@@ -12,12 +12,14 @@
 	{/if}
 </svelte:head>
 <h1 class="px-3 py-1 text-2xl font-medium sm:px-6 xl:px-14 xl:text-5xl">{data.metadata.title}</h1>
-<div class="text-medium text-base-content/60 px-3 sm:px-6 xl:px-14">
-	{dayjs(data.metadata.date).format('D MMM YYYY')}
+<div class="text-medium text-base-content/60 flex items-center gap-4 px-3 sm:px-6 xl:px-14">
+	<span>{dayjs(data.metadata.date).format('D MMM YYYY')}</span>
+	•
 	{#if data.metadata.date_updated}
-		<span class="ms-2">(Updated: {dayjs(data.metadata.date_updated).format('D MMM YYYY')})</span>
+		<span class="ms-2">(Updated: {dayjs(data.metadata.date_updated).format('D MMM YYYY')})</span>•
 	{/if}
-	<span class="ms-3">• {data.readingTime} min read</span>
+
+	<p>{data.readingTime} min read</p>
 </div>
 <article
 	class="prose prose-a:font-semibold prose-a:text-orange-600 prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:text-orange-400 prose-blockquote:my-8 prose-blockquote:ms-8 prose-code:font-['Fira_Code_Variable'] prose-pre:p-0 mt-6 w-screen px-3 sm:px-6 md:max-w-none lg:mt-10 lg:max-w-[1024px] xl:w-[1024px] xl:px-14">
