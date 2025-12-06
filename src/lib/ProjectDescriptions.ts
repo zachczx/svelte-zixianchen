@@ -52,10 +52,10 @@ export const descriptions: ProjectDescriptions = {
 		tldr: 'I wanted to manage everything about my holiday.',
 		url: 'https://roamichi.com',
 	},
-	towelie: {
-		subtitle: 'Towel washing tracker',
+	cubby: {
+		subtitle: 'Track the little things.',
 		tldr: 'Track when I last washed my towel.',
-		url: 'https://towelie.cczzxx.com',
+		url: 'https://cubby.dev',
 	},
 	wronged: {
 		subtitle: 'Products, Problems, UX Chatbot',

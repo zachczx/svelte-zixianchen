@@ -7,7 +7,7 @@
 <Nav navCurrent="projects" />
 <div class="bg-base-200 grid min-h-dvh content-start p-4 lg:grid-cols-[auto_1fr] lg:grid-rows-[1fr_auto]">
 	<aside class="text-base-content/70 z-2 row-span-2 hidden content-start border-2 border-red-300/0 px-1 lg:grid">
-		<a href="/projects"
+		<a href="/#projects"
 			><h4 class="flex items-center gap-4 px-2 py-2 font-bold">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -105,13 +105,13 @@
 						: undefined}">
 					Roamichi
 				</li></a>
-			<a href="/projects/towelie"
+			<a href="/projects/cubby"
 				><li
 					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
-					'towelie'
+					'cubby'
 						? 'bg-neutral/85 text-white/90'
 						: undefined}">
-					Towelie
+					Cubby
 				</li></a>
 			<a href="/projects/wronged"
 				><li

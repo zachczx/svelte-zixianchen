@@ -2,7 +2,6 @@
 	import Nav from '$lib/Nav.svelte';
 	import { onMount } from 'svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
-	import ProjectsDashboard from '$lib/ProjectsDashboard.svelte';
 	// import ProjectDashboardArchived from '$lib/ProjectDashboardArchived.svelte';
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
 	import Computer from '$lib/assets/federica-galli-aiqKc07b5PA-unsplash.webp';

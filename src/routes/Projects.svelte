@@ -1,6 +1,4 @@
 <script lang="ts">
-	import ProjectDashboardArchived from '$lib/ProjectDashboardArchived.svelte';
-	import ProjectsDashboard from '$lib/ProjectsDashboard.svelte';
 	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=162';
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
 	import Towelie from '$lib/logos/towelie-logo.svg?dataurl';
@@ -16,6 +14,8 @@
 	import Bot from '$lib/assets/p1omnigames02_cute_robot_cartoon-inspired_round_face_friendly_e_2958fa92-efd2-41a0-b179-f04c25daea92.webp';
 	import Chat from '$lib/assets/volodymyr-hryshchenko-V5vqWC9gyEU-unsplash.webp';
 	import Towels from '$lib/assets/the-blowup-4dUC7Fine5g-unsplash.webp';
+	import WashingMachine from '$lib/assets/washing-machine.webp';
+	import CubbyLogo from '$lib/assets/cubby-logo.webp';
 	import { gsap } from 'gsap';
 
 	let { mode = '', desaturate = false } = $props();
@@ -139,7 +139,7 @@
 			</figure>
 		</a>
 
-		<a a href="/projects/btonomics" class="panel grid w-full content-stretch">
+		<a href="/projects/btonomics" class="panel grid w-full content-stretch">
 			<figure
 				class="group grid h-full w-full space-y-2 self-center"
 				style="background:url({Home}); background-size: cover; background-position: center center;">
@@ -228,15 +228,15 @@
 		</a>
 
 		<a
-			href="/projects/towelie"
+			href="/projects/cubby"
 			class="panel group grid w-full content-stretch"
-			style="background:url({Towels}); background-size: cover; background-position: center 30%;">
+			style="background:url({WashingMachine}); background-size: cover; background-position: center 30%;">
 			<figure class="group grid justify-items-center space-y-2">
 				<figcaption
 					class="{showBg
 						? 'group-hover:bg-base-200/95 opacity-0 group-hover:opacity-100'
 						: 'bg-base-200/95 opacity-100'} grid h-full w-full content-center justify-items-center">
-					<img src={Towelie} alt="Towelie" class="mb-2 h-10 justify-self-center hover:saturate-100" />
+					<img src={CubbyLogo} alt="Cubby" class="mb-2 h-28 justify-self-center hover:saturate-100" />
 
 					<!-- h-9 and mb-2 because the svg has no margins  -->
 					<div>CRUD app for my towels</div>
