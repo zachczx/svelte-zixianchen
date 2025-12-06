@@ -10,8 +10,10 @@
 	href="/#header"
 	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
 	<div
-		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60
-   ">
+		class={[
+			'group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60',
+			navCurrent === 'header' && 'ring-accent ring-4',
+		]}>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
@@ -55,8 +57,10 @@
 	href="/#about"
 	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
 	<div
-		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60
-       ">
+		class={[
+			'group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60',
+			navCurrent === 'about' && 'ring-accent ring-4',
+		]}>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
@@ -108,8 +112,10 @@
 	href="/projects"
 	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
 	<div
-		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60
-  ">
+		class={[
+			'group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60',
+			navCurrent === 'projects' && 'ring-accent ring-4',
+		]}>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
@@ -222,9 +228,10 @@
 	href="/contact"
 	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
 	<div
-		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-blue-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60
-        {pathName === '/contact' ? 'ring-4 ring-white/70' : undefined}
-        ">
+		class={[
+			'group relative flex items-center justify-center rounded-full border border-white/20 bg-blue-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60',
+			pathName === '/contact' && 'ring-accent ring-4',
+		]}>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
