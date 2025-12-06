@@ -7,12 +7,15 @@ import {
 	transformerNotationHighlight,
 	transformerCompactLineOptions,
 } from '@shikijs/transformers';
+import type { Config } from '@sveltejs/kit';
+import type { PreprocessorGroup } from 'svelte/compiler';
+import type { MdsvexOptions } from 'mdsvex';
 
-const mdsvexOptions = {
+const mdsvexOptions: MdsvexOptions = {
 	extensions: ['.md'],
 	smartypants: true,
 	highlight: {
-		highlighter: async (code, lang) => {
+		highlighter: async (code: string, lang: string | null | undefined): Promise<string> => {
 			let html;
 			if (lang === 'text') {
 				html = escapeSvelte(
@@ -44,8 +47,7 @@ const mdsvexOptions = {
 	},
 };
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
+const config: Config = {
 	extensions: ['.svelte', '.md'],
 	kit: {
 		adapter: adapter({
@@ -56,7 +58,7 @@ const config = {
 			strict: true,
 		}),
 	},
-	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
+	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)] as PreprocessorGroup[],
 };
 
 export default config;
