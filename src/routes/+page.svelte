@@ -7,6 +7,7 @@
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
 	import Computer from '$lib/assets/federica-galli-aiqKc07b5PA-unsplash.webp';
 	import ZXC from '$lib/assets/zixianchen-alt.webp';
+	import Projects from './Projects.svelte';
 
 	///////////////////////////////////
 	let navCurrent: string = $state('header');
@@ -141,15 +142,17 @@
 		</section>
 	</div>
 
-	<div class="text-neutral-content grid w-full justify-items-center bg-[#0E0E0E] lg:grid-cols-5">
+	<div class="text-neutral-content grid w-full content-start justify-items-center bg-[#0E0E0E] lg:grid-cols-5">
 		<div class="grid w-full justify-items-center pt-8 lg:col-span-3 lg:pt-28">
 			<section
-				class="grid w-full max-w-[1000px] gap-y-8 px-4 pb-8 lg:grid-cols-3 lg:gap-y-24 lg:justify-self-end lg:pb-28">
-				<h2 id="projects" class="navItem justify-self-start text-9xl font-extrabold lg:col-span-3">Night</h2>
-				<h3 class="text-4xl font-bold">Side Projects</h3>
+				class="grid w-full max-w-[1000px] justify-items-start px-4 pb-8 lg:grid-cols-3 lg:justify-self-end lg:pb-28">
+				<h2 id="projects" class="navItem justify-self-start pb-8 text-9xl font-extrabold lg:col-span-3 lg:pb-24">
+					Night
+				</h2>
+
 				<div
-					class="grid justify-items-center gap-y-8 text-center lg:col-span-2 lg:grid-cols-1 lg:justify-items-start lg:text-start">
-					<ProjectsDashboard />
+					class="grid w-full content-start justify-items-center gap-y-8 text-center lg:col-span-3 lg:grid-cols-1 lg:justify-items-start lg:text-start">
+					<Projects />
 				</div>
 			</section>
 		</div>
