@@ -53,7 +53,7 @@
 </a>
 
 <a
-	href="/projects"
+	href="/#projects"
 	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-linear hover:no-underline">
 	<div
 		class={[
