@@ -53,7 +53,7 @@
 
 <main class="grid w-full justify-self-center text-center">
 	<div class="mb-0 flex w-full items-end gap-2">
-		<h3 class="grow text-start text-4xl font-bold">Side Projects</h3>
+		<h3 class="mb-2 grow text-start text-4xl font-bold">Side Projects</h3>
 		<label class="flex cursor-pointer items-end gap-2 pt-2 pb-2 text-sm font-medium">
 			<!-- Background -->
 			<svg
