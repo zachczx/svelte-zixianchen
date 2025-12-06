@@ -8,216 +8,86 @@
 
 <a
 	href="/#header"
-	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-linear hover:no-underline">
 	<div
 		class={[
-			'group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60',
-			navCurrent === 'header' && 'ring-accent ring-4',
+			'group relative flex items-center justify-center rounded-none border border-white/20 transition-all duration-200 ease-linear group-hover:shadow-lg group-hover:shadow-black/60',
+			navCurrent === 'header' ? 'bg-accent' : 'bg-gray-50',
 		]}>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
 			height="1em"
-			class="noto:house grayscale-100 group-hover:grayscale-0"
-			viewBox="0 0 128 128"
-			><path fill="#AB5832" d="M19.16 48.94V28.58l-1.64.1V16.14l15.82-.1v12.35H31.7v11.96z" /><path
-				fill="#FFF3E1"
-				d="M64.11 23.33L18.67 68.99l.35 42.21l89.75-.85l.13-45z" /><path
-				fill="#5F4E47"
-				d="m16.97 103.79l3.14-1.73V67.98l-2.92 1.95c-.01 0 .32 33.86-.22 33.86m90.23-33.97v32.03l3.14 1.73V71.01z" /><path
-				fill="#BCAA93"
-				d="M64.42 28.21L17.18 72.42V61.27l47.29-44.79l45.87 47.5v9.41z" /><path
-				fill="#AB5832"
-				d="m12.55 59.36l-2.77 5.11l7.43-.11s46.35-45.08 47.35-45.12c1.21-.05 45.76 45.91 45.76 45.91l6.59-.1l-49.44-53.26l-7.26-.48z" /><path
-				fill="#ED6C31"
-				d="M4 63.19c-.78.95-.01 1.45.62 1.45s7.89-.21 7.89-.21l50.04-48.69s1.15-1.18 1.97-1.14c.89.04 2.04 1.17 2.04 1.17l50.28 49.29s5.73.02 6.64-.21c.99-.24.49-1.18-.73-2.49c-.9-.97-51.73-51.25-52.57-52.12c-2.5-2.58-3.72-4.08-6.08-3.98c-2.37.1-3.77 1.85-6.14 4.03c-.7.66-53.63 52.5-53.96 52.9" /><path
-				fill="#A6CFD5"
-				d="M93.5 80.83h10.25V72.3a2.87 2.87 0 0 0-2.87-2.87H93.5zm-3.08 0v-11.4h-8a2.87 2.87 0 0 0-2.87 2.87v8.54h10.87zm0 3.24H79.55v8a2.87 2.87 0 0 0 2.87 2.87h8zm3.08 0v10.87h7.38a2.87 2.87 0 0 0 2.87-2.87v-8zm-56.75-3.24H47V72.3a2.87 2.87 0 0 0-2.87-2.87h-7.38zm-3.09 0v-11.4h-8a2.87 2.87 0 0 0-2.87 2.87v8.54h10.87zm0 3.24H22.8v8a2.87 2.87 0 0 0 2.87 2.87h8V84.07zm3.09 0v10.87h7.38A2.87 2.87 0 0 0 47 92.07v-8z" /><path
-				fill="#D27857"
-				d="M50.34 106.73s-.15-24.74 0-30.99c.15-6.24 6.01-11.64 12.8-11.41c8.4.29 12.72 5.01 13.03 11.1s.31 31.68.31 31.68z" /><path
-				fill="#AB5932"
-				d="M53.47 108.07s-.12-26.36 0-31.24c.15-6.05 4.71-9.23 10.01-8.93c6.17.35 9.22 3.63 9.46 8.4c.24 4.76.24 31.79.24 31.79z" /><path
-				fill="#D27857"
-				d="M69.99 86.58c-.02-4.34-.06-8.17-.12-9.34c-.16-3.15-2.4-5.6-6.75-5.75c-3.51-.12-6.4 2.62-6.48 5.85c-.03 1.19-.02 4.93 0 9.19zm-13.32 4.87c.04 5.81.09 11.16.09 11.16l13.27.04s0-5.33-.02-11.14z" /><path
-				fill="#FFBA02"
-				d="M70.03 88.81c-.05 1.41.52 2.55 2.19 2.55s2.28-.78 2.4-2.29c.1-1.35-.83-2.55-2.4-2.45c-1.56.11-2.15 1.2-2.19 2.19" /><path
-				fill="#728037"
-				d="M79.61 116.31s10.88.11 18.74-.12s13.55.12 14.72-1.06c1.17-1.17 1.15-11.14-4.3-13.84c-5.01-2.48-8.25.04-9.97.21c-2.27.23-5.08-1.18-7.14-1.22c-8.51-.18-11.49 6.51-11.49 6.51zm-65.08-.82c.91.85 7.86.88 16.25.82s15.14.02 15.14.02l1.4-8.47l-1.7-1.41s.19-4.24-5.16-5.69c-3.7-1-6.92.65-10.03.7c-3.11.06-5.98-1.35-9.44-.53c-3.22.76-5.73 2.86-6.75 7.1c-.71 2.94-.53 6.69.29 7.46" /><path
-				fill="#B0B0B0"
-				d="m44.92 125.17l.07-8.85h.65l-.01-9.86h34.73l-.12 9.86H81v8.62c-.01-.01-36.08.28-36.08.23" /><path
-				fill="#9B9B9B"
-				d="M80.99 121.3v3.63l-36.08.24l.03-3.9zm-35.37-8.82l34.65.01v3.82H45.62z" /></svg>
+			viewBox="0 0 24 24"
+			class={['material-symbols:other-houses grayscale-100', navCurrent === 'header' ? 'opacity-100' : 'opacity-75']}
+			><path
+				fill="currentColor"
+				d="M4 21v-9.375L2.2 13L1 11.4L12 3l11 8.4l-1.2 1.575l-1.8-1.35V21zm4-6q-.425 0-.712-.288T7 14t.288-.712T8 13t.713.288T9 14t-.288.713T8 15m4 0q-.425 0-.712-.288T11 14t.288-.712T12 13t.713.288T13 14t-.288.713T12 15m4 0q-.425 0-.712-.288T15 14t.288-.712T16 13t.713.288T17 14t-.288.713T16 15" /></svg>
 	</div>
 	<span
-		class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
+		class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-xs py-0.5 font-mono text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
 		>Home</span>
 </a>
 
 <a
 	href="/#about"
-	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-linear hover:no-underline">
 	<div
 		class={[
-			'group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60',
-			navCurrent === 'about' && 'ring-accent ring-4',
+			'group relative flex items-center justify-center rounded-none border border-white/20 transition-all duration-200 ease-linear group-hover:shadow-lg group-hover:shadow-black/60',
+			navCurrent === 'about' ? 'bg-accent' : 'bg-gray-50',
 		]}>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
 			height="1em"
-			class="fluent-color:person-16 grayscale-100 group-hover:grayscale-0"
-			viewBox="0 0 16 16"
-			><g fill="none"
-				><path
-					fill="url(#fluentColorPerson160)"
-					d="M11.5 8A1.5 1.5 0 0 1 13 9.5v.5c0 1.971-1.86 4-5 4s-5-2.029-5-4v-.5A1.5 1.5 0 0 1 4.5 8z" /><path
-					fill="url(#fluentColorPerson161)"
-					d="M11.5 8A1.5 1.5 0 0 1 13 9.5v.5c0 1.971-1.86 4-5 4s-5-2.029-5-4v-.5A1.5 1.5 0 0 1 4.5 8z" /><path
-					fill="url(#fluentColorPerson162)"
-					d="M8 1.5A2.75 2.75 0 1 1 8 7a2.75 2.75 0 0 1 0-5.5" /><defs
-					><linearGradient
-						id="fluentColorPerson160"
-						x1="5.378"
-						x2="7.616"
-						y1="8.798"
-						y2="14.754"
-						gradientUnits="userSpaceOnUse"
-						><stop offset=".125" stop-color="#9C6CFE" /><stop offset="1" stop-color="#7A41DC" /></linearGradient
-					><linearGradient
-						id="fluentColorPerson161"
-						x1="8"
-						x2="11.164"
-						y1="7.286"
-						y2="17.139"
-						gradientUnits="userSpaceOnUse"
-						><stop stop-color="#885EDB" stop-opacity="0" /><stop offset="1" stop-color="#E362F8" /></linearGradient
-					><linearGradient
-						id="fluentColorPerson162"
-						x1="6.558"
-						x2="9.361"
-						y1="2.231"
-						y2="6.707"
-						gradientUnits="userSpaceOnUse"
-						><stop offset=".125" stop-color="#9C6CFE" /><stop offset="1" stop-color="#7A41DC" /></linearGradient
-					></defs
-				></g
-			></svg>
+			viewBox="0 0 24 24"
+			class={['material-symbols:account-box grayscale-100', navCurrent === 'about' ? 'opacity-100' : 'opacity-75']}
+			><path
+				fill="currentColor"
+				d="M12 13q1.45 0 2.475-1.025T15.5 9.5t-1.025-2.475T12 6T9.525 7.025T8.5 9.5t1.025 2.475T12 13m-7 8q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14v-1.15q-1.35-1.325-3.137-2.087T12 15t-3.863.763T5 17.85z" /></svg>
 	</div>
 	<span
-		class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
+		class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-xs py-0.5 font-mono text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
 		>About</span>
 </a>
 
 <a
 	href="/projects"
-	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-linear hover:no-underline">
 	<div
 		class={[
-			'group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60',
-			navCurrent === 'projects' && 'ring-accent ring-4',
+			'group relative flex items-center justify-center rounded-none border border-white/20 transition-all duration-200 ease-linear group-hover:shadow-lg group-hover:shadow-black/60',
+			navCurrent === 'projects' ? 'bg-accent' : 'bg-gray-50',
 		]}>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
 			height="1em"
-			class="fluent-color:apps-16 grayscale-100 group-hover:grayscale-0"
-			viewBox="0 0 16 16"
-			><g fill="none"
-				><path
-					fill="url(#fluentColorApps160)"
-					d="M2 4.5A1.5 1.5 0 0 1 3.5 3h3A1.5 1.5 0 0 1 8 4.5V8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" /><path
-					fill="url(#fluentColorApps161)"
-					d="M11.5 8A1.5 1.5 0 0 1 13 9.5v3a1.5 1.5 0 0 1-1.5 1.5H8a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" /><path
-					fill="url(#fluentColorApps162)"
-					d="M8 13a1 1 0 0 1-1 1H3.5A1.5 1.5 0 0 1 2 12.5V9a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z" /><path
-					fill="url(#fluentColorApps163)"
-					d="M9.69 2.442a1.5 1.5 0 0 1 2.122 0l1.752 1.752a1.5 1.5 0 0 1 0 2.121l-1.75 1.75a1.5 1.5 0 0 1-2.12 0L7.942 6.311a1.5 1.5 0 0 1 0-2.121z" /><defs
-					><linearGradient id="fluentColorApps160" x1="2" x2="8" y1="3" y2="9" gradientUnits="userSpaceOnUse"
-						><stop stop-color="#B9C0C7" /><stop offset="1" stop-color="#889096" /></linearGradient
-					><linearGradient id="fluentColorApps161" x1="13" x2="7.429" y1="13.571" y2="8" gradientUnits="userSpaceOnUse"
-						><stop stop-color="#63686E" /><stop offset="1" stop-color="#889096" /></linearGradient
-					><linearGradient id="fluentColorApps162" x1="2" x2="8" y1="8" y2="11.857" gradientUnits="userSpaceOnUse"
-						><stop stop-color="#55595E" /><stop offset="1" stop-color="#383B3D" /></linearGradient
-					><linearGradient
-						id="fluentColorApps163"
-						x1="12.898"
-						x2="9.178"
-						y1="7.06"
-						y2="2.471"
-						gradientUnits="userSpaceOnUse"
-						><stop stop-color="#2764E7" /><stop offset="1" stop-color="#36DFF1" /></linearGradient
-					></defs
-				></g
-			></svg>
+			viewBox="0 0 24 24"
+			class={['material-symbols:grid-view grayscale-100', navCurrent === 'projects' ? 'opacity-100' : 'opacity-75']}
+			><path fill="currentColor" d="M3 11V3h8v8zm0 10v-8h8v8zm10-10V3h8v8zm0 10v-8h8v8z" /></svg>
 	</div>
 	<span
-		class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex">
+		class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-xs py-0.5 font-mono text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex">
 		Projects
 	</span>
 </a>
 
 <a href="/blog" class="dock group relative bg-transparent transition-all duration-200 ease-out">
 	<div
-		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60">
+		class="group relative flex items-center justify-center rounded-none border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-linear group-hover:shadow-lg group-hover:shadow-black/60">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
 			height="1em"
-			class="fluent-color:document-text-16 grayscale-100 group-hover:grayscale-0"
-			viewBox="0 0 16 16"
-			><g fill="none"
-				><path
-					fill="url(#fluentColorDocumentText160)"
-					d="M8.004 1L9.5 4.5L13 6l-.008 7.5a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 13.5v-11A1.5 1.5 0 0 1 4.5 1z" /><path
-					fill="url(#fluentColorDocumentText163)"
-					fill-opacity=".5"
-					d="M8.004 1L9.5 4.5L13 6l-.008 7.5a1.5 1.5 0 0 1-1.5 1.5H4.5A1.5 1.5 0 0 1 3 13.5v-11A1.5 1.5 0 0 1 4.5 1z" /><path
-					fill="url(#fluentColorDocumentText161)"
-					d="M8 4.5V1l5 5H9.5A1.5 1.5 0 0 1 8 4.5" /><path
-					fill="url(#fluentColorDocumentText162)"
-					fill-opacity=".9"
-					d="M5.5 8a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 10.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m.5 1.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z" /><defs
-					><linearGradient
-						id="fluentColorDocumentText160"
-						x1="9.994"
-						x2="11.264"
-						y1="1"
-						y2="12.781"
-						gradientUnits="userSpaceOnUse"
-						><stop stop-color="#6CE0FF" /><stop offset="1" stop-color="#4894FE" /></linearGradient
-					><linearGradient
-						id="fluentColorDocumentText161"
-						x1="10.492"
-						x2="9.242"
-						y1="3.083"
-						y2="5.167"
-						gradientUnits="userSpaceOnUse"
-						><stop stop-color="#9FF0F9" /><stop offset="1" stop-color="#B3E0FF" /></linearGradient
-					><linearGradient
-						id="fluentColorDocumentText162"
-						x1="11"
-						x2="5.553"
-						y1="15"
-						y2="5.677"
-						gradientUnits="userSpaceOnUse"
-						><stop stop-color="#9DEAFF" /><stop offset="1" stop-color="#fff" /></linearGradient
-					><radialGradient
-						id="fluentColorDocumentText163"
-						cx="0"
-						cy="0"
-						r="1"
-						gradientTransform="rotate(130.372 6.372 3.818)scale(8.35524 4.87457)"
-						gradientUnits="userSpaceOnUse"
-						><stop offset=".362" stop-color="#4A43CB" /><stop
-							offset="1"
-							stop-color="#4A43CB"
-							stop-opacity="0" /></radialGradient
-					></defs
-				></g
-			></svg>
-
+			viewBox="0 0 24 24"
+			class={['material-symbols:article grayscale-100', navCurrent === 'blog' ? 'opacity-100' : 'opacity-75']}
+			><path
+				fill="currentColor"
+				d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm2-4h7v-2H7zm0-4h10v-2H7zm0-4h10V7H7z" /></svg>
 		<span
-			class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
+			class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-xs py-0.5 font-mono text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
 			>Blog</span>
 	</div>
 </a>
@@ -226,126 +96,56 @@
 
 <a
 	href="/contact"
-	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-linear hover:no-underline">
 	<div
 		class={[
-			'group relative flex items-center justify-center rounded-full border border-white/20 bg-blue-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60',
-			pathName === '/contact' && 'ring-accent ring-4',
+			'group relative flex items-center justify-center rounded-none border border-white/20 transition-all duration-200 ease-linear group-hover:shadow-lg group-hover:shadow-black/60',
+			pathName === '/contact' ? 'bg-accent' : 'bg-gray-50',
 		]}>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
 			height="1em"
-			class="fluent-color:mail-24 grayscale-100 group-hover:grayscale-0"
 			viewBox="0 0 24 24"
-			><g fill="none"
-				><path
-					fill="#367AF2"
-					d="M22 7.5v9.25a3.25 3.25 0 0 1-3.065 3.245L18.75 20H5.25a3.25 3.25 0 0 1-3.245-3.066L2 16.75V7.5l9.652 5.056a.75.75 0 0 0 .696 0z" /><path
-					fill="url(#fluentColorMail240)"
-					d="M22 7.5v9.25a3.25 3.25 0 0 1-3.065 3.245L18.75 20H5.25a3.25 3.25 0 0 1-3.245-3.066L2 16.75V7.5l9.652 5.056a.75.75 0 0 0 .696 0z" /><path
-					fill="url(#fluentColorMail241)"
-					d="M22 7.5v9.25a3.25 3.25 0 0 1-3.065 3.245L18.75 20H5.25a3.25 3.25 0 0 1-3.245-3.066L2 16.75V7.5l9.652 5.056a.75.75 0 0 0 .696 0z" /><path
-					fill="url(#fluentColorMail242)"
-					fill-opacity=".75"
-					d="M22 7.5v9.25a3.25 3.25 0 0 1-3.065 3.245L18.75 20H5.25a3.25 3.25 0 0 1-3.245-3.066L2 16.75V7.5l9.652 5.056a.75.75 0 0 0 .696 0z" /><path
-					fill="url(#fluentColorMail243)"
-					fill-opacity=".7"
-					d="M22 7.5v9.25a3.25 3.25 0 0 1-3.065 3.245L18.75 20H5.25a3.25 3.25 0 0 1-3.245-3.066L2 16.75V7.5l9.652 5.056a.75.75 0 0 0 .696 0z" /><path
-					fill="url(#fluentColorMail244)"
-					d="m2 7.86l9.652 5.056a.75.75 0 0 0 .696 0L22 7.86v-.61A3.25 3.25 0 0 0 18.75 4H5.25A3.25 3.25 0 0 0 2 7.25z" /><defs
-					><linearGradient
-						id="fluentColorMail240"
-						x1="14.539"
-						x2="20.005"
-						y1="9.95"
-						y2="20.515"
-						gradientUnits="userSpaceOnUse"
-						><stop offset=".199" stop-color="#0094F0" stop-opacity="0" /><stop
-							offset=".431"
-							stop-color="#0094F0" /></linearGradient
-					><linearGradient
-						id="fluentColorMail241"
-						x1="9.143"
-						x2="3.828"
-						y1="8.816"
-						y2="20.865"
-						gradientUnits="userSpaceOnUse"
-						><stop offset=".191" stop-color="#0094F0" stop-opacity="0" /><stop
-							offset=".431"
-							stop-color="#0094F0" /></linearGradient
-					><linearGradient
-						id="fluentColorMail242"
-						x1="17.273"
-						x2="18.143"
-						y1="14.957"
-						y2="21.151"
-						gradientUnits="userSpaceOnUse"
-						><stop stop-color="#2764E7" stop-opacity="0" /><stop offset="1" stop-color="#2764E7" /></linearGradient
-					><linearGradient
-						id="fluentColorMail243"
-						x1="15.095"
-						x2="16.681"
-						y1="9.035"
-						y2="21.643"
-						gradientUnits="userSpaceOnUse"
-						><stop offset=".533" stop-color="#FF6CE8" stop-opacity="0" /><stop
-							offset="1"
-							stop-color="#FF6CE8" /></linearGradient
-					><linearGradient
-						id="fluentColorMail244"
-						x1="7.942"
-						x2="13.98"
-						y1="1.151"
-						y2="17.089"
-						gradientUnits="userSpaceOnUse"
-						><stop stop-color="#6CE0FF" /><stop offset=".462" stop-color="#29C3FF" /><stop
-							offset="1"
-							stop-color="#4894FE" /></linearGradient
-					></defs
-				></g
-			></svg>
+			class={['material-symbols:mail grayscale-100', pathName === '/contact' ? 'opacity-100' : 'opacity-75']}
+			><path
+				fill="currentColor"
+				d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7l8-5V6l-8 5l-8-5v2z" /></svg>
 	</div>
 	<span
-		class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
+		class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-xs py-0.5 font-mono text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
 		>Contact</span>
 </a>
 
 <a
 	href="https://www.linkedin.com/in/zixianchen/"
-	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-linear hover:no-underline">
 	<div
-		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60">
+		class="group relative flex items-center justify-center rounded-none border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-linear group-hover:shadow-lg group-hover:shadow-black/60">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="0.9em"
 			height="0.9em"
-			class="skill-icons:linkedin grayscale-100 group-hover:grayscale-0"
-			viewBox="0 0 256 256"
-			><g fill="none"
-				><rect width="256" height="256" fill="#fff" rx="60" /><rect
-					width="256"
-					height="256"
-					fill="#0A66C2"
-					rx="60" /><path
-					fill="#fff"
-					d="M184.715 217.685h29.27a4 4 0 0 0 4-3.999l.015-61.842c0-32.323-6.965-57.168-44.738-57.168c-14.359-.534-27.9 6.868-35.207 19.228a.32.32 0 0 1-.595-.161V101.66a4 4 0 0 0-4-4h-27.777a4 4 0 0 0-4 4v112.02a4 4 0 0 0 4 4h29.268a4 4 0 0 0 4-4v-55.373c0-15.657 2.97-30.82 22.381-30.82c19.135 0 19.383 17.916 19.383 31.834v54.364a4 4 0 0 0 4 4M38 59.628c0 11.864 9.767 21.626 21.632 21.626c11.862-.001 21.623-9.769 21.623-21.631C81.253 47.761 71.491 38 59.628 38C47.762 38 38 47.763 38 59.627m6.959 158.058h29.307a4 4 0 0 0 4-4V101.66a4 4 0 0 0-4-4H44.959a4 4 0 0 0-4 4v112.025a4 4 0 0 0 4 4" /></g
-			></svg>
+			viewBox="0 0 20 20"
+			class={['uiw:linkedin grayscale-100', navCurrent === 'linkedin' ? 'opacity-100' : 'opacity-75']}
+			><path
+				fill="currentColor"
+				d="M17.04 17.043h-2.962v-4.64c0-1.107-.023-2.531-1.544-2.531c-1.544 0-1.78 1.204-1.78 2.449v4.722H7.793V7.5h2.844v1.3h.039c.397-.75 1.364-1.54 2.808-1.54c3.001 0 3.556 1.974 3.556 4.545zM4.447 6.194c-.954 0-1.72-.771-1.72-1.72s.767-1.72 1.72-1.72a1.72 1.72 0 0 1 0 3.44m1.484 10.85h-2.97V7.5h2.97zM18.522 0H1.476C.66 0 0 .645 0 1.44v17.12C0 19.355.66 20 1.476 20h17.042c.815 0 1.482-.644 1.482-1.44V1.44C20 .646 19.333 0 18.518 0z" /></svg>
 	</div>
 	<span
-		class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
+		class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-xs py-0.5 font-mono text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
 		>LinkedIn</span>
 </a>
 
 <a
 	href="https://github.com/zachczx?tab=repositories"
-	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-out hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-linear hover:no-underline">
 	<div
-		class="group relative flex items-center justify-center rounded-full border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-out group-hover:shadow-lg group-hover:shadow-black/60">
+		class="group relative flex items-center justify-center rounded-none border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-linear group-hover:shadow-lg group-hover:shadow-black/60">
 		<svg
 			width="1em"
 			height="1em"
-			class="grayscale-100 group-hover:grayscale-0"
+			class={['grayscale-100', navCurrent === 'github' ? 'opacity-100' : 'opacity-75']}
 			viewBox="0 0 98 96"
 			version="1.1"
 			xmlns="http://www.w3.org/2000/svg"
@@ -358,7 +158,7 @@
 		</svg>
 	</div>
 	<span
-		class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-full py-0.5 text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
+		class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-xs py-0.5 font-mono text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
 		>GitHub</span>
 </a>
 
@@ -372,7 +172,7 @@
 	.dock {
 		font-size: calc(var(--font-scaler) * 6rem);
 		div {
-			filter: saturate(0.5);
+			/* filter: saturate(0.5); */
 			height: calc(var(--dimensions-scaler) * 9rem);
 			width: calc(var(--dimensions-scaler) * 9rem);
 			flex-basis: auto;
