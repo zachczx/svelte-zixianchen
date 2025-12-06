@@ -11,7 +11,7 @@
 		<meta name="description" content={data.metadata.description} />
 	{/if}
 </svelte:head>
-<h1 class="px-3 py-1 text-2xl font-medium sm:px-6 xl:px-14 xl:text-5xl">{data.metadata.title}</h1>
+<h1 class="px-3 py-1 text-2xl font-black sm:px-6 xl:px-14 xl:text-5xl">{data.metadata.title}</h1>
 <div class="text-medium text-base-content/60 flex items-center gap-4 px-3 sm:px-6 xl:px-14">
 	<span>{dayjs(data.metadata.date).format('D MMM YYYY')}</span>
 	•
@@ -22,7 +22,7 @@
 	<p>{data.readingTime} min read</p>
 </div>
 <article
-	class="prose prose-a:font-semibold prose-a:text-orange-600 prose-a:decoration-2 prose-a:underline-offset-2 hover:prose-a:text-orange-400 prose-blockquote:my-8 prose-blockquote:ms-8 prose-code:font-['Fira_Code_Variable'] prose-pre:p-0 mt-6 w-screen px-3 sm:px-6 md:max-w-none lg:mt-10 lg:max-w-5xl xl:w-5xl xl:px-14">
+	class="prose prose-a:font-semibold prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:text-orange-700 prose-blockquote:my-8 prose-blockquote:ms-8 prose-code:font-['Fira_Code_Variable'] prose-pre:p-0 mt-6 w-screen px-3 sm:px-6 md:max-w-none lg:mt-10 lg:max-w-5xl xl:w-5xl xl:px-14">
 	{#if content}
 		{@const Component = content}
 		<Component />
