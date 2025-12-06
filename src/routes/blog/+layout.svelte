@@ -15,7 +15,7 @@
 	<div id="container" class="z-10 grid min-h-dvh justify-center py-6 xl:w-5xl">
 		<div class="lg:max-w-5xl">
 			<a href="/" class="flex justify-center pt-8 pb-12">
-				<img src={ZXC} alt="" class="h-24 justify-self-center lg:h-36" />
+				<img src={ZXC} alt="" class="h-24 justify-self-center lg:h-36" style="view-transition-name: logo" />
 			</a>
 			<!-- 
 			<div class="text-base-content/60 mb-12 flex items-center justify-center gap-12">

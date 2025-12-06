@@ -39,7 +39,7 @@
 	<header id="header" class="navItem w-full place-items-center py-20 lg:grid lg:min-h-dvh lg:py-0">
 		<div class="bg-base-200 flex w-full flex-wrap items-center justify-center gap-8 lg:min-h-dvh">
 			<div>
-				<img src={ZXC} alt="" class="h-72 lg:h-[40rem]" />
+				<img src={ZXC} alt="" class="h-72 lg:h-160" style="view-transition-name: logo" />
 			</div>
 		</div>
 	</header>

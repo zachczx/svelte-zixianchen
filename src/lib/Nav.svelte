@@ -43,6 +43,7 @@
 			><a href="/">Zixian Chen</a></span> -->
 	</div>
 	<div
+		style="view-transition-name: navdock;"
 		class="hidden h-20 w-fit min-w-120 items-center justify-center justify-self-center rounded border border-gray-400 bg-gray-900 px-2 shadow-sm backdrop-blur-md transition-all duration-300 ease-out xl:relative xl:flex">
 		<NavDock {navCurrent} pathName={$page.url.pathname} />
 	</div>
