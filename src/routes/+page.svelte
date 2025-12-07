@@ -225,10 +225,10 @@
 <style>
 	.list {
 		li::after {
-			content: '/';
-			margin-inline-start: 0.5rem;
-			margin-inline-end: 0.5rem;
-			opacity: 50%;
+			content: '▶';
+			margin-inline-start: 0.75rem;
+			margin-inline-end: 0.75rem;
+			opacity: 30%;
 		}
 		/*li {
 			 list-style-type: none;
