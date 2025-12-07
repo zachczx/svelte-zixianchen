@@ -6,8 +6,8 @@
 	import SvgTailwindSmall from '$lib/logos/tailwindcss-small.svg?dataurl';
 	import SvgCloudflare from '$lib/logos/Cloudflare.svg?dataurl';
 	import SvgDrizzle from '$lib/logos/Drizzle.svg?dataurl';
-	import SvgDrizzlePng from '$lib/logos/Drizzle.png?enhanced&w=40';
-	import SvgSortable from '$lib/logos/Sortablejs.png?enhanced&w=40';
+	import SvgDrizzlePng from '$lib/logos/Drizzle.png?w=40&enhanced';
+	import SvgSortable from '$lib/logos/Sortablejs.png?w=40&enhanced';
 	import SvgNginx from '$lib/logos/nginx-small-logo.svg?dataurl';
 	import SvgCoolify from '$lib/logos/Coolify.svg?dataurl';
 	import SvgNodejs from '$lib/logos/Nodejs.svg?dataurl';
