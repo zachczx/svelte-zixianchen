@@ -34,17 +34,21 @@
 	{/snippet}
 
 	{#snippet problem()}
-		<AlignCenterText>I needed an easy way for teammates to find and access resources to learn tech.</AlignCenterText>
+		<AlignCenterText>
+			Teammates didn't know where to start learning tech. Or wasted time searching. No single place (e.g. YouTube,
+			blogs, courses) to find all the materials. And couldn't browse by skill level or topic.
+		</AlignCenterText>
 	{/snippet}
 
-	{#snippet want()}Display lists of tech resources from Youtube, blogs, tutorials, courses, sorted by tech competency.{/snippet}
-
 	{#snippet built()}
-		<ul class="ms-6 list-outside list-disc space-y-2">
-			<li>Static Website</li>
-			<li>Used JS objects to store/read info</li>
-			<li>Skipped CMS, DB, markdown files - it felt good!</li>
-		</ul>
+		<p class="mb-4">
+			Curated directory of tech learning resources, organized by competency level (Learn How / Think Why) and audience
+			(Doers / Leaders). Static site with client-side search.
+		</p>
+		<p>
+			Deliberately skipped CMS, database, and markdown files. Data lives in JS objects—simpler to update, no build step
+			complexity for what's essentially a curated list.
+		</p>
 	{/snippet}
 
 	{#snippet screenshots()}
@@ -54,11 +58,5 @@
 			<enhanced:img src={apptitudeScreenshotWatch} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
 			<enhanced:img src={apptitudeScreenshotGuides} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
 		</div>
-	{/snippet}
-	{#snippet undone()}
-		<ul class="ms-6 list-outside list-disc space-y-2">
-			<li>Adding and making learning plans the front and center to learning</li>
-			<li>Tailoring suggested resources based on said learning plan.</li>
-		</ul>
 	{/snippet}
 </ProjectEntry>

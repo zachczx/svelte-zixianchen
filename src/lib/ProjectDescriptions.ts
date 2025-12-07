@@ -19,7 +19,7 @@ export const descriptions: ProjectDescriptions = {
 	},
 	apptitude: {
 		subtitle: 'Tech-related upskilling',
-		tldr: 'My team was wasting time searching for tech learning materials. To fix this, I wrote a website that lets people discover new online resources and gain tech knowledge from different mediums.',
+		// tldr: 'My team was wasting time searching for tech learning materials. To fix this, I wrote a website that lets people discover new online resources and gain tech knowledge from different mediums.',
 		url: 'https://titude.app/',
 	},
 	btonomics: {
