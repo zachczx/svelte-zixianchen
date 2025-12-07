@@ -70,6 +70,10 @@
 					{@render want()}
 				</div>
 			{/if}
+			{#if built}
+				<h3 class="text-4xl font-bold">What I built</h3>
+				<div>{@render built()}</div>
+			{/if}
 			{#if stack}
 				<h3 class="text-4xl font-bold">Stack</h3>
 				<div class="flex flex-wrap gap-4">
@@ -79,10 +83,6 @@
 			{#if screenshots}
 				<h3 class="text-4xl font-bold">Look</h3>
 				<div>{@render screenshots()}</div>
-			{/if}
-			{#if built}
-				<h3 class="text-4xl font-bold">What I built</h3>
-				<div>{@render built()}</div>
 			{/if}
 			<!-- {#if undone}
 				<h3 class="text-4xl font-bold">Next steps</h3>
