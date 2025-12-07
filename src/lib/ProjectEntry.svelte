@@ -84,18 +84,18 @@
 				<h3 class="text-4xl font-bold">What I built</h3>
 				<div>{@render built()}</div>
 			{/if}
-			{#if undone}
+			<!-- {#if undone}
 				<h3 class="text-4xl font-bold">Next steps</h3>
 				<div>{@render undone()}</div>
-			{/if}
+			{/if} -->
 			{#if more}
 				<h3 class="text-4xl font-bold">See</h3>
 				<div>{@render more()}</div>
 			{/if}
-			{#if takeaway}
+			<!-- {#if takeaway}
 				<h3 class="text-4xl font-bold">Takeaway</h3>
 				<div>{@render takeaway()}</div>
-			{/if}
+			{/if} -->
 			{#if children}
 				{@render children()}
 			{/if}
