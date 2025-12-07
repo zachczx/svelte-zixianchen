@@ -11,22 +11,6 @@
 </script>
 
 <ProjectEntry id="apptitude">
-	{#snippet header()}
-		<div class="grid gap-4 xl:grid-cols-2">
-			<div class="border-neutral/20 overflow-hidden rounded-xl border">
-				<enhanced:img
-					src={apptitudeScreenshotMain}
-					alt="Apptitude"
-					class="border-neutral/20 rounded-xl border transition-all delay-75 duration-300 ease-out hover:scale-125" />
-			</div>
-			<div class="border-neutral/20 overflow-hidden rounded-xl border">
-				<enhanced:img
-					src={apptitudeScreenshotGuides}
-					alt="Apptitude"
-					class="border-neutral/20 rounded-xl border transition-all delay-75 duration-300 ease-out hover:scale-125" />
-			</div>
-		</div>
-	{/snippet}
 	{#snippet title()}
 		<enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="brightness-[0.85] saturate-150" />{/snippet}
 	{#snippet stack()}
@@ -53,6 +37,7 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
+			<enhanced:img src={apptitudeScreenshotMain} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
 			<enhanced:img src={apptitudeScreenshotMain2} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
 			<enhanced:img src={apptitudeScreenshotMain3} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
 			<enhanced:img src={apptitudeScreenshotWatch} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
