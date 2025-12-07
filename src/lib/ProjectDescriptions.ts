@@ -24,7 +24,7 @@ export const descriptions: ProjectDescriptions = {
 	},
 	btonomics: {
 		subtitle: 'Home renovation blog for budget folks',
-		tldr: "Wordpress was overkill for my blog. I rebuilt it with AstroJS to create a static site that's faster for readers and simpler for me to update.",
+		// tldr: "Wordpress was overkill for my blog. I rebuilt it with AstroJS to create a static site that's faster for readers and simpler for me to update.",
 		url: 'https://btonomics.com',
 	},
 	cancelninja: {
