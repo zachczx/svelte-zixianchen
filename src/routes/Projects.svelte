@@ -41,7 +41,7 @@
 				bind:checked={showBg} />
 		</label>
 	</div>
-	<div id="project-grid" class="grid w-full justify-items-center lg:grid-cols-2 lg:gap-4 xl:grid-cols-3">
+	<div id="project-grid" class="grid w-full justify-items-center gap-4 lg:grid-cols-2 xl:grid-cols-3">
 		<a
 			href="/projects/abbreviation"
 			class="bg-primary/10 group flex w-full items-center justify-center overflow-hidden rounded-md"

@@ -27,6 +27,39 @@
 			observerNav.observe(navItem[i]);
 		}
 	});
+
+	const jobs = [
+		{
+			year: '2023',
+			title: 'Service Delivery Tech Team Lead',
+			desc: "Build, run stuff for citizens + employees services. Also dismantle what doesn't work.",
+		},
+		{
+			year: '2021',
+			title: 'Tech Infra Policy Team Lead',
+			desc: 'Policies & funding for Govt cloud, on-prem hosting, SG Tech Stack, endpoint devices, dev toolchains.',
+		},
+		{
+			year: '2018',
+			title: 'Comms Tech Team Lead',
+			desc: 'Developed & bought media analytic products. Led investments in NLP & CV research.',
+		},
+		{
+			year: '2017',
+			title: 'Comms Strategist',
+			desc: 'Did comms campaigns and strategies.',
+		},
+		{
+			year: '2015',
+			title: 'Media Relations Officer',
+			desc: 'Did public relations work. Got earned media. Did crisis comms.',
+		},
+		{
+			year: '2013',
+			title: 'NS Policy Officer',
+			desc: 'Did NS policies for sportsmen, leave, citizenship, exit control.',
+		},
+	];
 </script>
 
 <svelte:head>
@@ -44,9 +77,10 @@
 		</div>
 	</header>
 
-	<div class="mt-20 grid min-h-dvh w-full justify-items-center bg-gray-400/5">
+	<div class="mt-20 grid w-full justify-items-center bg-gray-400/5 lg:min-h-dvh">
 		<div class="grid justify-items-center">
-			<div class="grid min-h-[50vh] w-full max-w-[1000px] content-center gap-y-4 px-4 lg:grid-cols-3 lg:gap-y-24">
+			<div
+				class="grid w-full max-w-[1000px] content-start gap-y-4 px-4 py-12 lg:min-h-[50vh] lg:grid-cols-3 lg:content-center lg:gap-y-24">
 				<h2
 					id="about"
 					class="navItem hidden justify-self-start px-4 pt-12 text-9xl font-extrabold lg:col-span-3 lg:grid lg:pt-20">
@@ -67,12 +101,9 @@
 					</p>
 					<p>I dabble with digital creation, editing. Photoshop, Affinity, Davinci Resolve, SDXL LORAs.</p>
 				</div>
-				<!-- <h3 class="text-4xl font-bold">Studied</h3>
-				<div class="col-span-2 mb-4 h-full content-center space-y-8">
-					<p>Political Science. Enjoyed researching incentives, money, civil wars.</p>
-				</div> -->
-				<h3 class="text-4xl font-bold">Listening</h3>
-				<ul class="list col-span-2 flex-row flex-wrap content-start items-center gap-4 lg:gap-x-8 lg:gap-y-4">
+
+				<h3 class="mt-12 text-4xl font-bold lg:mt-0">Listening</h3>
+				<ul class="list col-span-2 flex-row flex-wrap content-start items-center text-[16px] lg:gap-y-2">
 					<li>All-In Podcast</li>
 					<li>Lenny's Podcast</li>
 					<li>ThePrimeagen</li>
@@ -91,52 +122,25 @@
 	<div class="bg-base-200 grid min-h-dvh w-full justify-items-center lg:grid-cols-5">
 		<div
 			id="com"
-			class="hidden h-full w-full overflow-hidden saturate-[0.4] lg:col-span-2 lg:grid"
+			class="hidden h-full w-full overflow-hidden py-4 saturate-[0.4] lg:col-span-2 lg:grid"
 			style="background-image:url({Computer}); background-size: cover; background-position: bottom;">
 			<div class="to-base-200 h-full w-full bg-linear-to-r from-transparent from-90%"></div>
 		</div>
 		<section
 			class="bg-base-200 grid w-full max-w-[1000px] grid-rows-[auto_1fr_auto] content-start gap-y-8 lg:col-span-3 lg:gap-y-24">
-			<h2 id="jobs" class="justify-self-start px-4 pt-8 text-9xl font-extrabold lg:pt-28">Day</h2>
-			<div class="grid content-start gap-y-4 px-4 lg:grid-cols-[auto_1fr] lg:gap-y-16">
-				<div class="pe-12 text-4xl font-bold">2023</div>
-				<div class="job">
-					<h4 class="font-medium">Service Delivery Tech Team Lead</h4>
-					<p class="text-base-content/60">
-						Build, run stuff for citizens + employees services. Also dismantle what doesn't work.
-					</p>
-				</div>
-				<div class="pe-12 text-4xl font-bold">2021</div>
-				<div class="job">
-					<h4 class="font-medium">Tech Infra Policy Team Lead</h4>
-					<p class="text-base-content/60">
-						Policies & funding for Govt cloud, on-prem hosting, SG Tech Stack, endpoint devices, dev toolchains.
-					</p>
-				</div>
-				<div class="pe-12 text-4xl font-bold">2018</div>
-				<div class="job">
-					<h4 class="font-medium">Comms Tech Team Lead</h4>
-					<p class="text-base-content/60">
-						Developed & bought media analytic products. Led investments in NLP & CV research.
-					</p>
-				</div>
-				<div class="pe-12 text-4xl font-bold">2017</div>
-				<div class="job">
-					<h4 class="font-medium">Comms Strategist</h4>
-					<p class="text-base-content/60">Did comms campaigns and strategies.</p>
-				</div>
-				<div class="pe-12 text-4xl font-bold">2015</div>
-				<div class="job">
-					<h4 class="font-medium">Media Relations Officer</h4>
-					<p class="text-base-content/60">Did public relations work. Got earned media. Did crisis comms.</p>
-				</div>
-				<div class="pe-12 text-4xl font-bold">2013</div>
-				<div class="job">
-					<h4 class="font-medium">NS Policy Officer</h4>
-					<p class="text-base-content/60">
-						Did NS policies for sportsmen, leave, citizenship, exit control. Helped Committee to Strengthen NS.
-					</p>
-				</div>
+			<h2 id="jobs" class="justify-self-start px-4 text-9xl font-extrabold lg:pt-28">Day</h2>
+			<div class="grid content-start gap-y-4 px-4 lg:gap-y-16">
+				{#each jobs as job}
+					<div class="grid lg:grid-cols-[auto_1fr]">
+						<div class="text-base-content/70 items-baseline pe-12 pt-1.5 font-mono">{job.year}</div>
+						<div class="job">
+							<h4 class="text-2xl font-bold">{job.title}</h4>
+							<p class="text-base-content/70 leading-relaxed">
+								{job.desc}
+							</p>
+						</div>
+					</div>
+				{/each}
 			</div>
 		</section>
 	</div>
@@ -167,41 +171,23 @@
 </div>
 
 <style>
-	/* .list {
-		li::before {
-			content: '🔥';
-		}
-		li:nth-child(2)::before {
-			content: '🚀';
-		}
-		li:nth-child(3)::before {
-			content: '✨';
-		}
-		li:nth-child(4)::before {
-			content: '🎃';
-		}
-		li:nth-child(5)::before {
-			content: '👑';
-		}
-		li:nth-child(6)::before {
-			content: '🌞';
-		}
-		li:nth-child(7)::before {
-			content: '🤖';
-		}
-	} */
-
 	.list {
-		li {
-			list-style-type: none;
-			padding-left: 1.75rem;
-			/* ion:logo-youtube */
-			background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 512 512"><path fill="%230E0E0E" d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149C1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5c58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5c2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9M207 353.89v-196.5l145 98.2Z"/></svg>')
+		li::after {
+			content: '/';
+			margin-inline-start: 0.5rem;
+			margin-inline-end: 0.5rem;
+			opacity: 50%;
+		}
+		/*li {
+			 list-style-type: none;
+			padding-left: 1.75rem; */
+		/* ion:logo-youtube */
+		/* background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 512 512"><path fill="%230E0E0E" d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149C1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5c58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5c2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9M207 353.89v-196.5l145 98.2Z"/></svg>')
 				no-repeat left center;
 			&:hover {
 				background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 512 512"><path fill="%23FF0000" d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149C1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5c58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5c2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9M207 353.89v-196.5l145 98.2Z"/></svg>')
 					no-repeat left center;
-			}
-		}
+			} 
+		}*/
 	}
 </style>
