@@ -1,5 +1,5 @@
 <script lang="ts">
-	import apptitudeLogo from '$lib/assets/green-logo.webp?w=162&enhanced';
+	import apptitudeLogo from '$lib/assets/green-logo.webp?w=182&enhanced';
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
 	import Towelie from '$lib/logos/towelie-logo.svg?dataurl';
 	import Rinku from '$lib/logos/rinku-logo.svg?dataurl';
@@ -72,7 +72,7 @@
 							></svg
 						>n
 					</h3>
-					<div>Abbreviation/acronym search</div>
+					<div class="text-base-content">Abbreviation/acronym search</div>
 				</figcaption>
 			</figure>
 		</a>
@@ -88,7 +88,7 @@
 						: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
 					<div class="grid h-full">
 						<h3 class="font-sans text-4xl font-black text-[#A94A4A]">Appraize</h3>
-						<div>Drop & drop ranking</div>
+						<div class="text-base-content">Drop & drop ranking</div>
 					</div>
 				</figcaption>
 			</figure>
@@ -104,7 +104,7 @@
 						? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
 						: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
 					<enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="brightness-[0.70] saturate-150"></enhanced:img>
-					<div>Tech-related upskilling</div>
+					<div class="text-base-content">Tech-related upskilling</div>
 				</figcaption>
 			</figure>
 		</a>
@@ -124,7 +124,7 @@
 								: undefined}">
 							BTOnomics
 						</h3>
-						<div>Home renovation blog for budget folks</div>
+						<div class="text-base-content">Home renovation blog for budget folks</div>
 					</div>
 				</figcaption>
 			</figure>
@@ -143,13 +143,13 @@
 						xmlns="http://www.w3.org/2000/svg"
 						width="1em"
 						height="1em"
-						class="-ms-1 inline rotate-45 group-hover:text-[#3b82f6]"
+						class="-ms-1 inline rotate-45"
 						viewBox="0 0 512 512"
 						><path
 							fill="currentColor"
 							d="m395.13 313l89.869-100.857H388.08c-45.748 0-82.824-37.063-82.824-82.824l-.297-33.208l-100.857-77.147v96.917c0 45.751-37.06 82.824-82.822 82.824l-9.844.298L27.001 299.86h96.92c45.75 0 82.822 37.062 82.822 82.824l.298 20.484l100.854 89.868v-96.913c0-45.749 37.062-82.823 82.824-82.823zM256 306.669c-27.99 0-50.666-22.685-50.666-50.665c0-27.99 22.679-50.671 50.665-50.671c27.99 0 50.67 22.682 50.67 50.671c0 27.98-22.683 50.665-50.67 50.665z" /></svg>
 				</h3>
-				<div>SaaS & Dark Pattern tracker</div>
+				<div class="text-base-content">SaaS & Dark Pattern tracker</div>
 			</div>
 		</a>
 
@@ -162,7 +162,7 @@
 						? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
 						: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
 					<h3 class="font-inter content-center pb-1 text-4xl font-bold text-[#1b510f]">Grumplr</h3>
-					<div>Reddit-lite style bulletin board</div>
+					<div class="text-base-content">Reddit-lite style bulletin board</div>
 				</figcaption>
 			</figure>
 		</a>
@@ -176,7 +176,7 @@
 						? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
 						: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
 					<img src={Meetrics} alt="Meetrics" class="w-44" />
-					<div>Meeting cost calculator</div>
+					<div class="text-base-content">Meeting cost calculator</div>
 				</figcaption>
 			</figure>
 		</a>
@@ -192,7 +192,7 @@
 						: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
 					<img src={Rinku} alt="Rinku" class="mb-2 h-8.5 hover:saturate-100" />
 					<!-- h-9 and mb-2 because the svg has no margins  -->
-					<div>URL shortener</div>
+					<div class="text-base-content">URL shortener</div>
 				</figcaption>
 			</figure>
 		</a>
@@ -209,7 +209,7 @@
 					<img src={CubbyLogo} alt="Cubby" class="mb-2 h-28 justify-self-center hover:saturate-100" />
 
 					<!-- h-9 and mb-2 because the svg has no margins  -->
-					<div>CRUD app for my towels</div>
+					<div class="text-base-content">CRUD app for my towels</div>
 				</figcaption>
 			</figure>
 		</a>
@@ -226,7 +226,7 @@
 					<img src={Wronged} alt="Wronged" class="mb-2 h-10 justify-self-center hover:saturate-100" />
 
 					<!-- h-9 and mb-2 because the svg has no margins  -->
-					<div>Products, Problems, UX Chatbot</div>
+					<div class="text-base-content">Products, Problems, UX Chatbot</div>
 				</figcaption>
 			</figure>
 		</a>
