@@ -1,5 +1,5 @@
 <script lang="ts">
-	import apptitudeLogo from '$lib/assets/green-logo.webp?enhanced&w=162';
+	import apptitudeLogo from '$lib/assets/green-logo.webp?w=162&enhanced';
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
 	import Towelie from '$lib/logos/towelie-logo.svg?dataurl';
 	import Rinku from '$lib/logos/rinku-logo.svg?dataurl';
@@ -13,42 +13,12 @@
 	import Calculator from '$lib/assets/charlesdeluvio-GlavtG-umzE-unsplash.webp';
 	import Bot from '$lib/assets/p1omnigames02_cute_robot_cartoon-inspired_round_face_friendly_e_2958fa92-efd2-41a0-b179-f04c25daea92.webp';
 	import Chat from '$lib/assets/volodymyr-hryshchenko-V5vqWC9gyEU-unsplash.webp';
-	import Towels from '$lib/assets/the-blowup-4dUC7Fine5g-unsplash.webp';
 	import WashingMachine from '$lib/assets/washing-machine.webp';
 	import CubbyLogo from '$lib/assets/cubby-logo.webp';
-	import { gsap } from 'gsap';
 
-	let { mode = '', desaturate = false } = $props();
+	let { mode = '' } = $props();
 
 	let showBg = $state(true);
-
-	$effect(() => {
-		let mm = gsap.matchMedia();
-		const breakPoint = 1024;
-		mm.add(
-			{
-				// set up any number of arbitrarily-named conditions. The function below will be called when ANY of them match.
-				isLarge: `(min-width: ${breakPoint}px)`,
-				reduceMotion: '(prefers-reduced-motion: reduce)',
-			},
-			(context) => {
-				let { isLarge, reduceMotion } = context.conditions as { isLarge: boolean; reduceMotion: boolean };
-
-				if (isLarge) {
-					gsap.from('.panel', {
-						opacity: 0.05,
-						scale: 0.9,
-						duration: reduceMotion ? 0 : 0.2,
-						stagger: {
-							each: 0.1,
-							from: 'random',
-							grid: 'auto',
-						},
-					});
-				}
-			},
-		);
-	});
 </script>
 
 <main class="grid w-full justify-self-center text-center">
@@ -74,7 +44,7 @@
 	<div id="project-grid" class="grid w-full justify-items-center lg:grid-cols-2 lg:gap-4 xl:grid-cols-3">
 		<a
 			href="/projects/abbreviation"
-			class="panel bg-primary/10 group flex w-full items-center justify-center"
+			class="bg-primary/10 group flex w-full items-center justify-center overflow-hidden rounded-md"
 			style="background:url({Scrabble}); background-size: cover; background-position: center center;">
 			<figure
 				class="{showBg
@@ -109,7 +79,7 @@
 
 		<a
 			href="/projects/appraize"
-			class="panel group grid h-full w-full content-stretch space-y-2 self-center"
+			class="group grid h-full w-full content-stretch space-y-2 self-center overflow-hidden rounded-md"
 			style="background:url({Rank}); background-size: cover; background-position: center center;">
 			<figure>
 				<figcaption
@@ -126,7 +96,7 @@
 
 		<a
 			href="/projects/apptitude"
-			class="panel group grid h-full w-full content-stretch space-y-2 self-center"
+			class="group grid h-full w-full content-stretch space-y-2 self-center overflow-hidden rounded-md"
 			style="background:url({Blackboard}); background-size: cover; background-position: center center;">
 			<figure>
 				<figcaption
@@ -139,7 +109,7 @@
 			</figure>
 		</a>
 
-		<a href="/projects/btonomics" class="panel grid w-full content-stretch">
+		<a href="/projects/btonomics" class="grid w-full content-stretch overflow-hidden rounded-md">
 			<figure
 				class="group grid h-full w-full space-y-2 self-center"
 				style="background:url({Home}); background-size: cover; background-position: center center;">
@@ -162,8 +132,8 @@
 
 		<a
 			href="/projects/cancelninja"
-			class="panel group grid w-full content-stretch"
-			style="background:url({Piggy}); background-size: cover; background-position: center 50% ;">
+			class="group grid w-full content-stretch overflow-hidden rounded-md"
+			style="background:url({Piggy}); background-size: cover; background-position: center 50%;">
 			<div
 				class="{showBg
 					? 'group-hover:bg-base-200/95 opacity-0 group-hover:opacity-100'
@@ -183,9 +153,9 @@
 			</div>
 		</a>
 
-		<a href="/projects/grumplr" class="panel grid w-full content-stretch">
+		<a href="/projects/grumplr">
 			<figure
-				class="group grid h-full w-full space-y-2 self-center"
+				class="group grid h-full w-full space-y-2 self-center overflow-hidden rounded-md"
 				style="background:url({Chat}); background-size: cover; background-position: center center;">
 				<figcaption
 					class="{showBg
@@ -197,9 +167,9 @@
 			</figure>
 		</a>
 
-		<a href="/projects/meetrics" class="panel grid w-full content-stretch">
+		<a href="/projects/meetrics" class="grid w-full content-stretch">
 			<figure
-				class="group grid h-full w-full space-y-2 self-center"
+				class="group grid h-full w-full space-y-2 self-center overflow-hidden rounded-md"
 				style="background:url({Calculator}); background-size: cover; background-position: center 20%;">
 				<figcaption
 					class="{showBg
@@ -213,7 +183,7 @@
 
 		<a
 			href="/projects/rinku"
-			class="panel group grid w-full content-stretch"
+			class="group grid w-full content-stretch overflow-hidden rounded-md"
 			style="background:url({Clips}); background-size: cover; background-position: center center;">
 			<figure class="group grid justify-items-center space-y-2">
 				<figcaption
@@ -229,7 +199,7 @@
 
 		<a
 			href="/projects/cubby"
-			class="panel group grid w-full content-stretch"
+			class="group grid w-full content-stretch overflow-hidden rounded-md"
 			style="background:url({WashingMachine}); background-size: cover; background-position: center 30%;">
 			<figure class="group grid justify-items-center space-y-2">
 				<figcaption
@@ -246,7 +216,7 @@
 
 		<a
 			href="/projects/wronged"
-			class="panel group grid w-full content-stretch"
+			class="group grid w-full content-stretch overflow-hidden rounded-md"
 			style="background:url({Bot}); background-size: cover; background-position: center 40%;">
 			<figure class="group grid justify-items-center space-y-2">
 				<figcaption
