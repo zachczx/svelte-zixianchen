@@ -119,9 +119,10 @@
 	<div class="mt-20 grid w-full justify-items-center bg-gray-400/5 lg:min-h-dvh">
 		<div class="grid justify-items-center">
 			<div
-				class="grid w-full max-w-[1000px] content-start gap-y-4 px-4 py-12 lg:min-h-[50vh] lg:grid-cols-3 lg:content-center lg:gap-y-24">
+				id="about"
+				class="grid w-full max-w-[1000px] content-start gap-y-4 px-4 py-16 lg:min-h-[50vh] lg:grid-cols-3 lg:content-center lg:gap-y-24">
 				<!-- <h2
-					id="about"
+					
 					class="navItem hidden justify-self-start px-4 pt-12 text-9xl font-extrabold lg:col-span-3 lg:grid lg:pt-20">
 					About Me
 				</h2> -->
@@ -137,8 +138,9 @@
 						I'm now mostly working with <span class="text-base-content/85 font-mono text-[1.05em] font-medium"
 							>Go, Javascript, Python</span
 						>. Also getting into some
-						<span class="text-base-content/85 font-mono text-[1.05em] font-medium">Rust and Zig</span> atm.
+						<span class="text-base-content/85 font-mono text-[1.05em] font-medium">Zig</span> atm.
 					</p>
+					<p>I've been building home admin and travel planner mobile apps.</p>
 					<p>
 						I like <strong>building PCs</strong>. Love being cheap. Hate cable management.
 					</p>
@@ -153,20 +155,6 @@
 						>.
 					</p>
 				</div>
-
-				<h3 class="mt-12 text-4xl font-bold lg:mt-0">Listening</h3>
-				<ul class="list col-span-2 flex-row flex-wrap content-start items-center text-[16px] lg:gap-y-2">
-					<li>All-In Podcast</li>
-					<li>Lenny's Podcast</li>
-					<li>ThePrimeagen</li>
-					<li>Theo - t3.gg</li>
-					<li>Dreamsofcode</li>
-					<li>ByteByteGo</li>
-					<li>SyntaxFM</li>
-					<li>YC Startup School</li>
-				</ul>
-
-				<div></div>
 			</div>
 		</div>
 	</div>
