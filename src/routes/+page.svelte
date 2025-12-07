@@ -120,17 +120,25 @@
 		<div class="grid justify-items-center">
 			<div
 				class="grid w-full max-w-[1000px] content-start gap-y-4 px-4 py-12 lg:min-h-[50vh] lg:grid-cols-3 lg:content-center lg:gap-y-24">
-				<h2
+				<!-- <h2
 					id="about"
 					class="navItem hidden justify-self-start px-4 pt-12 text-9xl font-extrabold lg:col-span-3 lg:grid lg:pt-20">
 					About Me
-				</h2>
+				</h2> -->
 				<h3 class="text-4xl font-bold">Interests</h3>
 				<div class="col-span-2 mb-4 space-y-8">
 					<p>
-						I started <strong>webdev</strong> in 2000. Started with Frontpage, XHTML, nested tables, PHP, Wordpress.
+						I started <strong>webdev</strong> in 2000. Started with
+						<span class="text-base-content/85 font-mono text-[1.05em] font-medium"
+							>Frontpage, XHTML, nested tables, PHP, Wordpress</span
+						>.
 					</p>
-					<p>I'm now mostly working with Go, Javascript, Python. Also getting into some Rust and Zig atm.</p>
+					<p>
+						I'm now mostly working with <span class="text-base-content/85 font-mono text-[1.05em] font-medium"
+							>Go, Javascript, Python</span
+						>. Also getting into some
+						<span class="text-base-content/85 font-mono text-[1.05em] font-medium">Rust and Zig</span> atm.
+					</p>
 					<p>
 						I like <strong>building PCs</strong>. Love being cheap. Hate cable management.
 					</p>
@@ -138,7 +146,12 @@
 						I enjoy learning about <strong>businesses</strong>, <strong>product ideas</strong>, <strong>design</strong>,
 						<strong>entrepreneurship</strong>.
 					</p>
-					<p>I dabble with digital creation, editing. Photoshop, Affinity, Davinci Resolve, SDXL LORAs.</p>
+					<p>
+						I dabble with digital creation, editing. <span
+							class="text-base-content/85 font-mono text-[1.05em] font-medium"
+							>Photoshop, Affinity, Davinci Resolve, SDXL LORAs</span
+						>.
+					</p>
 				</div>
 
 				<h3 class="mt-12 text-4xl font-bold lg:mt-0">Listening</h3>
