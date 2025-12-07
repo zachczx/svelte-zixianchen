@@ -85,7 +85,7 @@
 				<div>{@render built()}</div>
 			{/if}
 			{#if undone}
-				<h3 class="text-4xl font-bold">Not yet done</h3>
+				<h3 class="text-4xl font-bold">Next steps</h3>
 				<div>{@render undone()}</div>
 			{/if}
 			{#if more}
