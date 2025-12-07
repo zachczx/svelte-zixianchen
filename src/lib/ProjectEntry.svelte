@@ -36,7 +36,7 @@
 	let url = $derived(descriptions[id]?.url ?? '');
 </script>
 
-<div {id} class="project grid content-center justify-items-center px-2 lg:min-h-[90vh] lg:px-8 lg:pb-32">
+<div {id} class="project grid content-center justify-items-center px-2 pt-4 lg:min-h-[90vh] lg:px-8 lg:pt-8 lg:pb-32">
 	<div class="grid content-center justify-items-center text-center">
 		<a href={url}>{@render title()}</a>
 		<p class="text-base-content/70 italic">{subtitle}</p>
