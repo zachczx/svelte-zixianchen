@@ -37,7 +37,7 @@
 					d="m16.1 13.3l-1.45-1.45q.225-1.175-.675-2.2t-2.325-.8L10.2 7.4q.425-.2.863-.3T12 7q1.875 0 3.188 1.313T16.5 11.5q0 .5-.1.938t-.3.862m3.2 3.15l-1.45-1.4q.95-.725 1.688-1.587T20.8 11.5q-1.25-2.525-3.588-4.012T12 6q-.725 0-1.425.1T9.2 6.4L7.65 4.85q1.025-.425 2.1-.638T12 4q3.775 0 6.725 2.087T23 11.5q-.575 1.475-1.513 2.738T19.3 16.45m.5 6.15l-4.2-4.15q-.875.275-1.762.413T12 19q-3.775 0-6.725-2.087T1 11.5q.525-1.325 1.325-2.463T4.15 7L1.4 4.2l1.4-1.4l18.4 18.4zM5.55 8.4q-.725.65-1.325 1.425T3.2 11.5q1.25 2.525 3.588 4.013T12 17q.5 0 .975-.062t.975-.138l-.9-.95q-.275.075-.525.113T12 16q-1.875 0-3.188-1.312T7.5 11.5q0-.275.038-.525t.112-.525zm4.2 4.2" /></svg>
 			<input
 				type="checkbox"
-				class="toggle toggle-sm text-base-100 checked:text-base-100 checked:border-primary checked:bg-primary border-gray-400 bg-gray-400"
+				class="toggle toggle-sm text-base-100 border-gray-400 bg-gray-600 checked:border-white checked:bg-white checked:text-gray-500"
 				bind:checked={showBg} />
 		</label>
 	</div>
@@ -48,8 +48,8 @@
 			style="background:url({Scrabble}); background-size: cover; background-position: center center;">
 			<figure
 				class="{showBg
-					? 'group-hover:bg-base-200/95 opacity-0 group-hover:opacity-100'
-					: 'bg-base-200/95 opacity-100'} grid h-full w-full content-center justify-items-center">
+					? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
+					: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
 				<figcaption>
 					<h3 class="font-sans text-4xl font-extrabold text-[#0069ff] lg:flex">
 						Abbreviati<svg
@@ -84,8 +84,8 @@
 			<figure>
 				<figcaption
 					class="{showBg
-						? 'group-hover:bg-base-200/95 opacity-0 group-hover:opacity-100'
-						: 'bg-base-200/95 opacity-100'} grid h-full w-full content-center justify-items-center">
+						? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
+						: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
 					<div class="grid h-full">
 						<h3 class="font-sans text-4xl font-black text-[#A94A4A]">Appraize</h3>
 						<div>Drop & drop ranking</div>
@@ -101,9 +101,9 @@
 			<figure>
 				<figcaption
 					class="{showBg
-						? 'group-hover:bg-base-200/95 opacity-0 group-hover:opacity-100'
-						: 'bg-base-200/95 opacity-100'} grid h-full w-full content-center justify-items-center">
-					<enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="brightness-[0.85] saturate-150"></enhanced:img>
+						? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
+						: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
+					<enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="brightness-[0.70] saturate-150"></enhanced:img>
 					<div>Tech-related upskilling</div>
 				</figcaption>
 			</figure>
@@ -115,8 +115,8 @@
 				style="background:url({Home}); background-size: cover; background-position: center center;">
 				<figcaption
 					class="{showBg
-						? 'group-hover:bg-base-200/95 opacity-0 group-hover:opacity-100'
-						: 'bg-base-200/95 opacity-100'} grid h-full w-full content-center justify-items-center">
+						? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
+						: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
 					<div class="grid h-full">
 						<h3
 							class="pb-1 font-serif text-2xl font-bold text-[#38bdf8] lg:text-4xl {mode === 'dark'
@@ -136,8 +136,8 @@
 			style="background:url({Piggy}); background-size: cover; background-position: center 50%;">
 			<div
 				class="{showBg
-					? 'group-hover:bg-base-200/95 opacity-0 group-hover:opacity-100'
-					: 'bg-base-200/95 opacity-100'} grid h-full w-full content-center justify-items-center">
+					? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
+					: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
 				<h3 class="text-4xl font-extrabold tracking-tighter text-[#3b82f6]">
 					Cancel Ninj<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -159,8 +159,8 @@
 				style="background:url({Chat}); background-size: cover; background-position: center center;">
 				<figcaption
 					class="{showBg
-						? 'group-hover:bg-base-200/95 opacity-0 group-hover:opacity-100'
-						: 'bg-base-200/95 opacity-100'} grid h-full w-full content-center justify-items-center">
+						? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
+						: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
 					<h3 class="font-inter content-center pb-1 text-4xl font-bold text-[#1b510f]">Grumplr</h3>
 					<div>Reddit-lite style bulletin board</div>
 				</figcaption>
@@ -173,8 +173,8 @@
 				style="background:url({Calculator}); background-size: cover; background-position: center 20%;">
 				<figcaption
 					class="{showBg
-						? 'group-hover:bg-base-200/95 opacity-0 group-hover:opacity-100'
-						: 'bg-base-200/95 opacity-100'} grid h-full w-full content-center justify-items-center">
+						? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
+						: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
 					<img src={Meetrics} alt="Meetrics" class="w-44" />
 					<div>Meeting cost calculator</div>
 				</figcaption>
@@ -188,8 +188,8 @@
 			<figure class="group grid justify-items-center space-y-2">
 				<figcaption
 					class="{showBg
-						? 'group-hover:bg-base-200/95 opacity-0 group-hover:opacity-100'
-						: 'bg-base-200/95 opacity-100'} grid h-full w-full content-center justify-items-center">
+						? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
+						: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
 					<img src={Rinku} alt="Rinku" class="mb-2 h-8.5 hover:saturate-100" />
 					<!-- h-9 and mb-2 because the svg has no margins  -->
 					<div>URL shortener</div>
@@ -204,8 +204,8 @@
 			<figure class="group grid justify-items-center space-y-2">
 				<figcaption
 					class="{showBg
-						? 'group-hover:bg-base-200/95 opacity-0 group-hover:opacity-100'
-						: 'bg-base-200/95 opacity-100'} grid h-full w-full content-center justify-items-center">
+						? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
+						: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
 					<img src={CubbyLogo} alt="Cubby" class="mb-2 h-28 justify-self-center hover:saturate-100" />
 
 					<!-- h-9 and mb-2 because the svg has no margins  -->
@@ -221,8 +221,8 @@
 			<figure class="group grid justify-items-center space-y-2">
 				<figcaption
 					class="{showBg
-						? 'group-hover:bg-base-200/95 opacity-0 group-hover:opacity-100'
-						: 'bg-base-200/95 opacity-100'} grid h-full w-full content-center justify-items-center">
+						? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
+						: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
 					<img src={Wronged} alt="Wronged" class="mb-2 h-10 justify-self-center hover:saturate-100" />
 
 					<!-- h-9 and mb-2 because the svg has no margins  -->
