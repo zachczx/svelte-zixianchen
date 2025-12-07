@@ -10,20 +10,9 @@
 	import CubbyLogo from '$lib/assets/cubby-logo.webp';
 </script>
 
-<ProjectEntry id="towelie">
+<ProjectEntry id="cubby">
 	{#snippet title()}
 		<img src={CubbyLogo} alt="Cubby" class="my-4 h-30" />
-	{/snippet}
-
-	{#snippet header()}
-		<div class="grid gap-4 xl:grid-cols-2">
-			<div class="overflow-hidden rounded-xl">
-				<enhanced:img src={dashboard} alt="Cubby Dashboard" class="border-neutral/20 rounded-xl border" />
-			</div>
-			<div class="overflow-hidden rounded-xl">
-				<enhanced:img src={tracker} alt="Cubby tracker" class="border-neutral/20 rounded-xl border" />
-			</div>
-		</div>
 	{/snippet}
 
 	{#snippet stack()}
@@ -41,22 +30,16 @@
 	{/snippet}
 
 	{#snippet problem()}
-		<AlignCenterText>I wanted to track when I last washed my towels, sprayed kid's nose, bathed doggo.</AlignCenterText>
+		<AlignCenterText
+			>Calendar apps assume regular schedules. I needed to track a variety of irregular home tasks, and then see when
+			I'm overdue</AlignCenterText>
 	{/snippet}
 
-	{#snippet want()}<AlignCenterText
-			>CRUD webapp to let me track all my home admin schedules. Towels, nasal sprays, bedsheets, vitamin gummies, doggo
-			baths, Nexgard.</AlignCenterText>
+	{#snippet built()}
+		<AlignCenterText
+			>A PWA with gap detection, calendar view, frequency tracking. Backend with PocketBase.</AlignCenterText>
 	{/snippet}
 
-	{#snippet built()}<AlignCenterText
-			>Progressive web app + CapacitorJS Android app, with pocketbase backend.</AlignCenterText>
-	{/snippet}
-
-	{#snippet undone()}<AlignCenterText>Streaks. Push notifications.</AlignCenterText>
-	{/snippet}
-
-	{#snippet takeaway()}
-		<p>Push notifications are not easy for pocketbase.</p>
+	{#snippet undone()}<AlignCenterText>Considering: streak visualizations, push notifications.</AlignCenterText>
 	{/snippet}
 </ProjectEntry>

@@ -1,7 +1,7 @@
 interface ProjectDescriptions {
 	[index: string]: {
 		subtitle: string;
-		tldr: string;
+		tldr?: string;
 		url: string;
 	};
 }
@@ -54,7 +54,7 @@ export const descriptions: ProjectDescriptions = {
 	},
 	cubby: {
 		subtitle: 'Track the little things.',
-		tldr: 'Track when I last washed my towel.',
+		// tldr: 'Track when I last washed my towel.',
 		url: 'https://cubby.dev',
 	},
 	wronged: {
