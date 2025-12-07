@@ -24,15 +24,15 @@
 
 	$effect(() => {
 		let mm = gsap.matchMedia();
-
+		const breakPoint = 1024;
 		mm.add(
 			{
 				// set up any number of arbitrarily-named conditions. The function below will be called when ANY of them match.
-				isLarge: `(min-width: 1024px)`,
+				isLarge: `(min-width: ${breakPoint}px)`,
 				reduceMotion: '(prefers-reduced-motion: reduce)',
 			},
 			(context) => {
-				let { isLarge, reduceMotion } = context.conditions;
+				let { isLarge, reduceMotion } = context.conditions as { isLarge: boolean; reduceMotion: boolean };
 
 				if (isLarge) {
 					gsap.from('.panel', {
