@@ -14,7 +14,7 @@ export const descriptions: ProjectDescriptions = {
 	},
 	appraize: {
 		subtitle: 'Drag & Drop Ranking',
-		tldr: 'Ranking things in Excel used to take too long because you had to type numbers and reorder everything by hand. I made a web app where you can just drag and drop things to rank them way faster than using Excel.',
+		// tldr: 'Ranking things in Excel used to take too long because you had to type numbers and reorder everything by hand. I made a web app where you can just drag and drop things to rank them way faster than using Excel.',
 		url: 'https://appraize.zixian.dev/',
 	},
 	apptitude: {

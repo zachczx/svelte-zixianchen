@@ -13,23 +13,6 @@
 </script>
 
 <ProjectEntry id="appraize">
-	{#snippet header()}
-		<!-- <enhanced:img src={AbbreviationScreenShotHeader} alt="Abbreviation app" class="object-fit" /> -->
-		<div class="grid gap-4 xl:grid-cols-2">
-			<div class="border-neutral/20 overflow-hidden rounded-xl border">
-				<enhanced:img
-					src={AppraizeScreenshotMain}
-					alt="Appraize app"
-					class="border-neutral/20 rounded-xl border transition-all delay-75 duration-300 ease-out hover:scale-125" />
-			</div>
-			<div class="border-neutral/20 overflow-hidden rounded-xl border">
-				<enhanced:img
-					src={AppraizeScreenshotWide}
-					alt="Appraize app"
-					class="border-neutral/20 rounded-xl border transition-all delay-75 duration-300 ease-out hover:scale-125" />
-			</div>
-		</div>
-	{/snippet}
 	{#snippet title()}
 		<a href="https://appraize.zixian.dev/"
 			><h3 class="mb-1 text-center font-sans text-5xl font-black tracking-tighter text-[#A94A4A] lg:text-7xl">
@@ -42,29 +25,20 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
+			<enhanced:img src={AppraizeScreenshotMain} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={AppraizeScreenshotWide} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
 			<enhanced:img src={AppraizeScreenshotSaved} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
 			<enhanced:img src={AppraizeScreenshotLock} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
 			<enhanced:img src={AppraizeScreenshotUpload} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
 		</div>
 	{/snippet}
 
-	{#snippet problem()}How might we speed up ranking sessions, which need manual selection to form a numbered list "1, 2,
-		3..." on Excel. Every change to the list required manual reordering.{/snippet}
-
-	{#snippet want()}<AlignCenterText>Speed up ranking sessions via drag & drop.</AlignCenterText>
+	{#snippet problem()}
+		HR ranking sessions in Excel were slow. Every change required manual reordering of numbered lists.
 	{/snippet}
 
 	{#snippet built()}
-		<ul class="ms-6 list-outside list-disc space-y-2">
-			<li>Drag & drop of officers and additional info</li>
-			<li>Sessions, with dashboard, filters, & charts</li>
-			<li>CRUD - Create, Read, Update, Delete - sessions & entries</li>
-			<li>Permission setting to manage other users' access</li>
-			<li>QOL stuff - auto sort, auto save progress, CSV upload for bulk adding</li>
-			<li>Typical form actions, validation</li>
-		</ul>
-	{/snippet}
-	{#snippet undone()}
-		<AlignCenterText>Responsive design. It can't go below ~1200px width without looking awful.</AlignCenterText>
+		Drag-and-drop ranking tool with session management, CSV bulk import, auto-save, and permission controls. Replaced
+		the Excel workflow entirely.
 	{/snippet}
 </ProjectEntry>
