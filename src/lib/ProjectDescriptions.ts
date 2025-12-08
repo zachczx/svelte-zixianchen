@@ -9,7 +9,7 @@ interface ProjectDescriptions {
 export const descriptions: ProjectDescriptions = {
 	abbreviation: {
 		subtitle: 'Singapore Govt abbreviation/acronym search',
-		tldr: "New workers don't know all the short words used at work.  I made a simple web app to help them quickly find out what those short words mean.",
+		// tldr: "New workers don't know all the short words used at work.  I made a simple web app to help them quickly find out what those short words mean.",
 		url: 'https://abbreviation.zixian.dev',
 	},
 	appraize: {
