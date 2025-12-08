@@ -8,10 +8,10 @@
 
 <a
 	href="/#header"
-	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-linear hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-100 ease-linear hover:no-underline">
 	<div
 		class={[
-			'group relative flex items-center justify-center rounded-none border border-white/20 transition-all duration-200 ease-linear group-hover:shadow-lg group-hover:shadow-black/60',
+			'group relative flex items-center justify-center rounded-none border border-white/20 transition-all duration-100 ease-linear group-hover:shadow-lg group-hover:shadow-black/60',
 			navCurrent === 'header' ? 'bg-accent' : 'bg-gray-50',
 		]}>
 		<svg
@@ -31,10 +31,10 @@
 
 <a
 	href="/#about"
-	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-linear hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-100 ease-linear hover:no-underline">
 	<div
 		class={[
-			'group relative flex items-center justify-center rounded-none border border-white/20 transition-all duration-200 ease-linear group-hover:shadow-lg group-hover:shadow-black/60',
+			'group relative flex items-center justify-center rounded-none border border-white/20 transition-all duration-100 ease-linear group-hover:shadow-lg group-hover:shadow-black/60',
 			navCurrent === 'about' ? 'bg-accent' : 'bg-gray-50',
 		]}>
 		<svg
@@ -54,10 +54,10 @@
 
 <a
 	href="/#projects"
-	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-linear hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-100 ease-linear hover:no-underline">
 	<div
 		class={[
-			'group relative flex items-center justify-center rounded-none border border-white/20 transition-all duration-200 ease-linear group-hover:shadow-lg group-hover:shadow-black/60',
+			'group relative flex items-center justify-center rounded-none border border-white/20 transition-all duration-100 ease-linear group-hover:shadow-lg group-hover:shadow-black/60',
 			navCurrent === 'projects' ? 'bg-accent' : 'bg-gray-50',
 		]}>
 		<svg
@@ -74,9 +74,9 @@
 	</span>
 </a>
 
-<a href="/blog" class="dock group relative bg-transparent transition-all duration-200 ease-out">
+<a href="/blog" class="dock group relative bg-transparent transition-all duration-100 ease-out">
 	<div
-		class="group relative flex items-center justify-center rounded-none border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-linear group-hover:shadow-lg group-hover:shadow-black/60">
+		class="group relative flex items-center justify-center rounded-none border border-white/20 bg-gray-50 text-red-950 transition-all duration-100 ease-linear group-hover:shadow-lg group-hover:shadow-black/60">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="1em"
@@ -96,10 +96,10 @@
 
 <a
 	href="/contact"
-	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-linear hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-100 ease-linear hover:no-underline">
 	<div
 		class={[
-			'group relative flex items-center justify-center rounded-none border border-white/20 transition-all duration-200 ease-linear group-hover:shadow-lg group-hover:shadow-black/60',
+			'group relative flex items-center justify-center rounded-none border border-white/20 transition-all duration-100 ease-linear group-hover:shadow-lg group-hover:shadow-black/60',
 			pathName === '/contact' ? 'bg-accent' : 'bg-gray-50',
 		]}>
 		<svg
@@ -119,9 +119,9 @@
 
 <a
 	href="https://www.linkedin.com/in/zixianchen/"
-	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-linear hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-100 ease-linear hover:no-underline">
 	<div
-		class="group relative flex items-center justify-center rounded-none border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-linear group-hover:shadow-lg group-hover:shadow-black/60">
+		class="group relative flex items-center justify-center rounded-none border border-white/20 bg-gray-50 text-red-950 transition-all duration-100 ease-linear group-hover:shadow-lg group-hover:shadow-black/60">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="0.9em"
@@ -139,9 +139,9 @@
 
 <a
 	href="https://github.com/zachczx?tab=repositories"
-	class="dock group relative bg-transparent no-underline transition-all duration-200 ease-linear hover:no-underline">
+	class="dock group relative bg-transparent no-underline transition-all duration-100 ease-linear hover:no-underline">
 	<div
-		class="group relative flex items-center justify-center rounded-none border border-white/20 bg-gray-50 text-red-950 transition-all duration-200 ease-linear group-hover:shadow-lg group-hover:shadow-black/60">
+		class="group relative flex items-center justify-center rounded-none border border-white/20 bg-gray-50 text-red-950 transition-all duration-100 ease-linear group-hover:shadow-lg group-hover:shadow-black/60">
 		<svg
 			width="1em"
 			height="1em"
