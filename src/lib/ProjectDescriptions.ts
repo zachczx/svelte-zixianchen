@@ -34,7 +34,7 @@ export const descriptions: ProjectDescriptions = {
 	},
 	grumplr: {
 		subtitle: 'Reddit-lite style bulletin board',
-		tldr: 'I like old school bulletin boards, so I tried building my own.',
+		// tldr: 'I like old school bulletin boards, so I tried building my own.',
 		url: 'https://grumplr.com',
 	},
 	meetrics: {
