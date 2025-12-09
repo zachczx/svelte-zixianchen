@@ -38,7 +38,12 @@
 	{/snippet}
 
 	{#snippet built()}
-		Drag-and-drop ranking tool with session management, CSV bulk import, auto-save, and permission controls. Replaced
-		the Excel workflow entirely.
+		<p class="mb-4">
+			Drag-and-drop ranking tool with session management, CSV bulk import, auto-save, and permission controls. Replaced
+			the Excel workflow entirely.
+		</p>
+		<p>
+			First built as Rank-a-Mate with Django/HTMX. Rebuilt to add better permissions, auto-save, and bulk operations.
+		</p>
 	{/snippet}
 </ProjectEntry>
