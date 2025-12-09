@@ -44,7 +44,7 @@ export const descriptions: ProjectDescriptions = {
 	},
 	rinku: {
 		subtitle: 'URL shortener',
-		tldr: 'I have many URLs that are long, especially for blog slugs. I have many domain names, some of which are short. I built a URL shortener with an admin panel to add urls and do basic analytics.',
+		// tldr: 'I have many URLs that are long, especially for blog slugs. I have many domain names, some of which are short. I built a URL shortener with an admin panel to add urls and do basic analytics.',
 		url: 'https://zczx.org',
 	},
 	roamichi: {

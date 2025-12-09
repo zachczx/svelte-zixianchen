@@ -13,48 +13,26 @@
 	{#snippet title()}
 		<img src={Rinku} alt="Rinku" class="my-4 h-16" />
 	{/snippet}
-	{#snippet header()}
-		<div class="grid gap-4 xl:grid-cols-2">
-			<div class="border-neutral/20 overflow-hidden rounded-xl border">
-				<img
-					src={rinkuScreenshotLanding}
-					alt="Rinku app"
-					class="transition-all delay-75 duration-300 ease-out hover:scale-200" />
-			</div>
-			<div class="border-neutral/20 overflow-hidden rounded-xl border">
-				<img
-					src={rinkuScreenshotShortener}
-					alt="Rinku app"
-					class="transition-all delay-75 duration-300 ease-out hover:scale-200" />
-			</div>
-		</div>
-	{/snippet}
 
 	{#snippet stack()}
 		<StackComponents names={['go', 'templ', 'tailwind']} />
 	{/snippet}
 
+	{#snippet screenshots()}
+		<div class="grid grid-cols-1 gap-4">
+			<enhanced:img src={rinkuScreenshotLanding} alt="Rinku" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={rinkuScreenshotShortener} alt="Rinku" class="border-neutral/20 rounded-xl border" />
+		</div>
+	{/snippet}
+
 	{#snippet problem()}
 		<p>
-			Some of my links are too long to remember easily. I didn't want to use a SaaS url shortener as their links often
-			look like spam.
+			SaaS URL shorteners create spammy-looking links. Wanted a simple shortener using my own domain for more trusted,
+			branded links.
 		</p>
 	{/snippet}
 
-	{#snippet want()}
-		<AlignCenterText
-			>A URL shortener that's fast, no frills, and can use one of the shorter domain names I own.
-		</AlignCenterText>
-	{/snippet}
-
 	{#snippet built()}
-		<ul class="ms-6 list-outside list-disc space-y-2">
-			<li>URL shortener</li>
-			<li>Admin panel</li>
-		</ul>
-		<enhanced:img src={rinkuScreenshotAdmin} alt="Rinku app" class="border-neutral/20 mt-4 rounded-xl border" />
-	{/snippet}
-	{#snippet undone()}
-		<AlignCenterText>Load balancing? Idk.</AlignCenterText>
+		<p>URL shortener with admin panel. Uses custom domain to avoid the spam-link look of bit.ly, tinyurl, etc.</p>
 	{/snippet}
 </ProjectEntry>
