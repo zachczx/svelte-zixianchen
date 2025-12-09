@@ -73,6 +73,14 @@
 						: undefined}">
 					Cancel Ninja
 				</li></a>
+			<a href="/projects/cubby"
+				><li
+					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
+					'cubby'
+						? 'bg-neutral/85 text-white/90'
+						: undefined}">
+					Cubby
+				</li></a>
 			<a href="/projects/grumplr"
 				><li
 					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
@@ -105,14 +113,6 @@
 						: undefined}">
 					Roamichi
 				</li></a>
-			<a href="/projects/cubby"
-				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
-					'cubby'
-						? 'bg-neutral/85 text-white/90'
-						: undefined}">
-					Cubby
-				</li></a>
 			<a href="/projects/wronged"
 				><li
 					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
@@ -135,14 +135,6 @@
 			>Archived
 		</h4>
 		<ul class="ms-4 border-l-4 border-l-transparent ps-0.5 font-medium">
-			<a href="/projects/btonomics-wordpress"
-				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
-					'btonomics-wordpress'
-						? 'bg-neutral/85 text-white/90'
-						: undefined}">
-					BTOnomics Wordpress
-				</li></a>
 			<a href="/projects/eatyourmeds"
 				><li
 					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
@@ -150,14 +142,6 @@
 						? 'bg-neutral/85 text-white/90'
 						: undefined}">
 					Eat Your Medicine!
-				</li></a>
-			<a href="/projects/rankamate"
-				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
-					'rankamate'
-						? 'bg-neutral/85 text-white/90'
-						: undefined}">
-					Rank-a-Mate
 				</li></a>
 		</ul>
 	</aside>
