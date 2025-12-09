@@ -18,19 +18,22 @@
 		<StackComponents names={['django', 'htmx', 'nginx', 'gunicorn', 'bootstrap', 'postgresql']} />
 	{/snippet}
 
-	{#snippet problem()}<AlignCenterText
-			>I wanted an easier and faster way to plan medicine dose timings and get accurate info.</AlignCenterText
-		>{/snippet}
-
-	{#snippet want()}Make it less tedious for both of us parents to record/coord medicine stuff and sync with one another.{/snippet}
+	{#snippet problem()}
+		<AlignCenterText>
+			Coordinating medicine dosing schedules between parents - tracking timings, calculating doses, keeping records in
+			sync.
+		</AlignCenterText>
+	{/snippet}
 
 	{#snippet built()}
-		<ul class="ms-6 list-outside list-disc space-y-2">
-			<li>Basic CRUD webapp with user authentication.</li>
-			<li>Sprinkled HTMX and datepicker.js for user interactions.</li>
-			<li>Backend via Django</li>
-		</ul>{/snippet}
-	{#snippet undone()}<AlignCenterText
-			>Honestly, LLMs do it better (unless they refuse to do it, which Gemini did in the past).</AlignCenterText>
+		<p class="mb-4">
+			Django webapp for tracking medication schedules with user auth and coordination between parents. HTMX for
+			interactions, date pickers for scheduling.
+		</p>
+
+		<p>
+			Ultimately realized LLMs handle this better - can calculate doses, suggest schedules, and adapt to changes
+			conversationally without needing a custom app.
+		</p>
 	{/snippet}
 </ProjectEntry>
