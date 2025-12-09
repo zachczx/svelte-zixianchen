@@ -49,7 +49,7 @@ export const descriptions: ProjectDescriptions = {
 	},
 	roamichi: {
 		subtitle: 'Holiday management system',
-		tldr: 'I wanted to manage everything about my holiday.',
+		// tldr: 'I wanted to manage everything about my holiday.',
 		url: 'https://roamichi.com',
 	},
 	cubby: {

@@ -20,7 +20,7 @@
 	{/snippet}
 
 	{#snippet screenshots()}
-		<div class="grid grid-cols-3 gap-4">
+		<div class="grid gap-4 lg:grid-cols-2">
 			<enhanced:img src={dashboard} alt="Cubby app" class="border-neutral/20 rounded-xl border" />
 			<enhanced:img src={tracker} alt="Cubby" class="border-neutral/20 rounded-xl border" />
 			<enhanced:img src={stats} alt="Cubby" class="border-neutral/20 rounded-xl border" />
