@@ -3,11 +3,12 @@
 	import ProjectEntry from '$lib/ProjectEntry.svelte';
 	import StackComponents from '$lib/StackComponents.svelte';
 	import cancelNinjaScreenshotMain from '$lib/screenshots/cancelninja-main.webp?enhanced';
-	import cancelNinjaScreenshotAdd2 from '$lib/screenshots/cancelninja-add2.webp?enhanced';
-	import cancelNinjaScreenshotAdd3 from '$lib/screenshots/cancelninja-add3.webp?enhanced';
-	import cancelNinjaScreenshotCalendar from '$lib/screenshots/cancelninja-calendar.webp?enhanced';
 	import cancelNinjaScreenshotDashboard from '$lib/screenshots/cancelninja-dashboard.webp?enhanced';
-	import cancelNinjaScreenshotDoc from '$lib/screenshots/cancelninja-doc.webp?enhanced';
+	import cancelNinjaScreenshotDashboard2 from '$lib/screenshots/cancelninja-dashboard2.webp?enhanced';
+	import cancelNinjaScreenshotAdd from '$lib/screenshots/cancelninja-add.webp?enhanced';
+	import cancelNinjaScreenshotCalendar from '$lib/screenshots/cancelninja-calendar.webp?enhanced';
+	import cancelNinjaScreenshotExplore from '$lib/screenshots/cancelninja-explore.webp?enhanced';
+	import cancelNinjaScreenshotExplore2 from '$lib/screenshots/cancelninja-explore2.webp?enhanced';
 </script>
 
 <ProjectEntry id="cancelninja">
@@ -32,30 +33,36 @@
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
 			<enhanced:img src={cancelNinjaScreenshotMain} alt="CancelNinja app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={cancelNinjaScreenshotAdd2} alt="CancelNinja app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={cancelNinjaScreenshotAdd3} alt="CancelNinja app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img
-				src={cancelNinjaScreenshotCalendar}
-				alt="CancelNinja app"
-				class="border-neutral/20 rounded-xl border" />
 			<enhanced:img
 				src={cancelNinjaScreenshotDashboard}
 				alt="CancelNinja"
 				class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={cancelNinjaScreenshotDoc} alt="CancelNinja" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img
+				src={cancelNinjaScreenshotDashboard2}
+				alt="CancelNinja"
+				class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={cancelNinjaScreenshotAdd} alt="CancelNinja" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img
+				src={cancelNinjaScreenshotCalendar}
+				alt="CancelNinja app"
+				class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={cancelNinjaScreenshotExplore} alt="CancelNinja" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={cancelNinjaScreenshotExplore2} alt="CancelNinja" class="border-neutral/20 rounded-xl border" />
 		</div>
 	{/snippet}
 
 	{#snippet problem()}
 		<AlignCenterText
 			>Subscription services use dark patterns to keep people paying for things they don't use. Cancellation flows are
-			deliberately confusing.</AlignCenterText>
+			deliberately confusing.
+		</AlignCenterText>
 	{/snippet}
 
 	{#snippet built()}
 		<AlignCenterText>
 			<p class="mb-4">
 				Subscription tracker with calendar view and alerts. Built custom calendar component instead of using libraries.
+				Neobrutal UI as a design experiment.
 			</p>
 			<p>
 				Realized after building that the problem wasn't painful enough - unless you're losing significant money monthly,
