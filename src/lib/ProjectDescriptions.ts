@@ -39,7 +39,7 @@ export const descriptions: ProjectDescriptions = {
 	},
 	meetrics: {
 		subtitle: 'Meeting cost calculator',
-		tldr: 'Meetrics is a straightforward calculator I created to expose the hidden costs of meetings, helping teams recognize and reduce meeting waste.',
+		// tldr: 'Meetrics is a straightforward calculator I created to expose the hidden costs of meetings, helping teams recognize and reduce meeting waste.',
 		url: 'https://meetrics.zixian.dev/',
 	},
 	rinku: {
