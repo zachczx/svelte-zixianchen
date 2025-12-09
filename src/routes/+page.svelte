@@ -116,10 +116,9 @@
 		</div>
 	</header>
 
-	<div class="mt-20 grid w-full justify-items-center bg-gray-400/5 lg:min-h-dvh">
+	<div id="about" class="navItem mt-20 grid w-full justify-items-center bg-gray-400/5 lg:min-h-dvh">
 		<div class="grid justify-items-center">
 			<div
-				id="about"
 				class="grid w-full max-w-[1000px] content-start gap-y-4 px-4 py-16 lg:min-h-[50vh] lg:grid-cols-3 lg:content-center lg:gap-y-24">
 				<!-- <h2
 					
