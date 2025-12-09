@@ -32,8 +32,8 @@
 
 	{#snippet built()}
 		<p class="mb-4">
-			Static site with AstroJS. Full-text search, tag filtering. ChatGPT converted WordPress shortcodes to markdown.
-			Recently migrated to Astro 5's Content Layer API.
+			Started as WordPress blog in 2018, rebuilt with AstroJS as static site for performance. Full-text search, tag
+			filtering. ChatGPT converted WordPress shortcodes to markdown. Recently migrated to Astro 5's Content Layer API.
 		</p>
 		<p>
 			Deliberately skipped WordPress's social features like comments, user accounts. The blog doesn't need engagement
