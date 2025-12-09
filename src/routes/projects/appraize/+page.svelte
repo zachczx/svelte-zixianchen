@@ -15,7 +15,7 @@
 <ProjectEntry id="appraize">
 	{#snippet title()}
 		<a href="https://appraize.zixian.dev/"
-			><h3 class="mb-1 text-center font-sans text-5xl font-black tracking-tighter text-[#A94A4A] lg:text-7xl">
+			><h3 class="mb-2 text-center font-sans text-5xl font-black tracking-tighter text-[#A94A4A] lg:text-7xl">
 				Appraize
 			</h3></a>
 	{/snippet}
