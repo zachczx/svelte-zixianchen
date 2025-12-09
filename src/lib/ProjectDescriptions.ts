@@ -59,7 +59,7 @@ export const descriptions: ProjectDescriptions = {
 	},
 	wronged: {
 		subtitle: 'Products, Problems, UX Chatbot',
-		tldr: 'A chatbot that helps users with product management, UX, staff work.',
+		// tldr: 'A chatbot that helps users with product management, UX, staff work.',
 		url: 'https://getwronged.com',
 	},
 	'btonomics-wordpress': {

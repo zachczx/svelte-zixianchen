@@ -16,49 +16,35 @@
 	{#snippet title()}
 		<img src={Wronged} alt="Wronged" class="h-20" />
 	{/snippet}
-	{#snippet header()}
-		<div class="grid gap-4 xl:grid-cols-2">
-			<div class="border-neutral/20 overflow-hidden rounded-xl border">
-				<img
-					src={wrongedScreenshotMain}
-					alt="Rinku app"
-					class="transition-all delay-150 duration-300 ease-out hover:scale-125" />
-			</div>
-			<div class="border-neutral/20 overflow-hidden rounded-xl border">
-				<img
-					src={wrongedScreenshotChat}
-					alt="Rinku app"
-					class="transition-all delay-150 duration-300 ease-out hover:scale-125" />
-			</div>
-		</div>
-	{/snippet}
 
 	{#snippet stack()}
 		<StackComponents names={['go', 'templ', 'tailwind', 'stytch']} />
 	{/snippet}
 
 	{#snippet problem()}
-		<p>
-			Some people I worked with seemed like they would benefit from having AI help them with refining their problem
-			statements or go through UX strategies.
-		</p>
+		Colleagues struggled with refining problem statements and working through UX strategies. Needed a lower-friction way
+		to help them think through product decisions.
 	{/snippet}
 
-	{#snippet want()}
-		<AlignCenterText>A chatbot that helps users with product management, UX, staff work.</AlignCenterText>
+	{#snippet screenshots()}
+		<div class="grid grid-cols-1 gap-4">
+			<enhanced:img src={wrongedScreenshotMain} alt="Wronged" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={wrongedScreenshotChat} alt="Wronged" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={wrongedScreenshotMain2} alt="Wronged" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={wrongedScreenshotChat2} alt="Wronged" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={wrongedScreenshotChat3} alt="Wronged" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={wrongedScreenshotManage} alt="Wronged" class="border-neutral/20 mt-4 rounded-xl border" />
+		</div>
 	{/snippet}
 
 	{#snippet built()}
-		<ul class="ms-6 list-outside list-disc space-y-2">
-			<li>Chatbot UI</li>
-			<li>A simple client for LLM prompting & streaming SSE responses</li>
-		</ul>
-		<enhanced:img src={wrongedScreenshotMain2} alt="Wronged chat" class="border-neutral/20 mt-4 rounded-xl border" />
-		<enhanced:img src={wrongedScreenshotChat2} alt="Wronged chat" class="border-neutral/20 mt-4 rounded-xl border" />
-		<enhanced:img src={wrongedScreenshotChat3} alt="Wronged chat" class="border-neutral/20 mt-4 rounded-xl border" />
-		<enhanced:img src={wrongedScreenshotManage} alt="Wronged chat" class="border-neutral/20 mt-4 rounded-xl border" />
-	{/snippet}
-	{#snippet undone()}
-		<AlignCenterText>Figuring out a better product design than having multiple, specialized chatbots.</AlignCenterText>
+		<p class="mb-4">
+			Domain-specific chatbots (product management, UX strategy, problem statements, "ask the boss" persona) using
+			OpenRouter APIs. Wrote detailed system prompts to shape each chatbot's reasoning approach and output style.
+		</p>
+		<p>
+			Built own Go client for API integration instead of using wrapper libraries. Used HTMX for dynamic chat
+			updates—server-side rendering with targeted DOM swaps instead of client-side JavaScript frameworks.
+		</p>
 	{/snippet}
 </ProjectEntry>
