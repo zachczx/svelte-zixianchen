@@ -5,7 +5,7 @@
 	// import ProjectDashboardArchived from '$lib/ProjectDashboardArchived.svelte';
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
 	import Computer from '$lib/assets/federica-galli-aiqKc07b5PA-unsplash.webp';
-	import ZXC from '$lib/assets/zixianchen-alt.webp';
+	import ZXC from '$lib/assets/zixianchen-logo.webp?w=700&enhanced';
 	import Projects from './Projects.svelte';
 
 	///////////////////////////////////
@@ -72,7 +72,7 @@
 	<header id="header" class="navItem w-full place-items-center py-20 lg:grid lg:min-h-dvh lg:py-0">
 		<div class="bg-base-200 flex w-full flex-wrap items-center justify-center gap-8 lg:min-h-dvh">
 			<div>
-				<img src={ZXC} alt="" class="h-72 lg:h-160" style="view-transition-name: logo" />
+				<enhanced:img src={ZXC} alt="" class="h-72 lg:h-160" style="view-transition-name: logo" />
 			</div>
 		</div>
 		<div class="flex w-full items-center justify-center gap-16 max-lg:pt-12 xl:hidden">
