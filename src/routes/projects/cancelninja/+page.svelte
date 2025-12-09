@@ -25,29 +25,14 @@
 		</h3>
 	{/snippet}
 
-	{#snippet header()}
-		<div class="grid gap-4 xl:grid-cols-2">
-			<div class="border-neutral/20 overflow-hidden rounded-xl border">
-				<enhanced:img
-					src={cancelNinjaScreenshotMain}
-					alt="CancelNinja app"
-					class="border-neutral/20 rounded-xl border transition-all delay-75 duration-300 ease-out hover:scale-125" />
-			</div>
-			<div class="border-neutral/20 overflow-hidden rounded-xl border">
-				<enhanced:img
-					src={cancelNinjaScreenshotAdd2}
-					alt="CancelNinja app"
-					class="border-neutral/20 rounded-xl border transition-all delay-75 duration-300 ease-out hover:scale-125" />
-			</div>
-		</div>
-	{/snippet}
-
 	{#snippet stack()}
 		<StackComponents names={['sveltekit', 'tailwind', 'pocketbase', 'coolify']} />
 	{/snippet}
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
+			<enhanced:img src={cancelNinjaScreenshotMain} alt="CancelNinja app" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={cancelNinjaScreenshotAdd2} alt="CancelNinja app" class="border-neutral/20 rounded-xl border" />
 			<enhanced:img src={cancelNinjaScreenshotAdd3} alt="CancelNinja app" class="border-neutral/20 rounded-xl border" />
 			<enhanced:img
 				src={cancelNinjaScreenshotCalendar}
@@ -62,39 +47,21 @@
 	{/snippet}
 
 	{#snippet problem()}
-		<AlignCenterText>Counter dirty tricks that makes people keep subscriptions they don't want.</AlignCenterText>
+		<AlignCenterText
+			>Subscription services use dark patterns to keep people paying for things they don't use. Cancellation flows are
+			deliberately confusing.</AlignCenterText>
 	{/snippet}
 
-	{#snippet want()}<AlignCenterText
-			>Subscription tracker that alerts me about known dark patterns and companies' dirty tricks.</AlignCenterText>
-	{/snippet}
-
-	{#snippet built()}<AlignCenterText>CRUD webapp, with authentication, user stuff, and calendar view.</AlignCenterText>
-	{/snippet}
-
-	{#snippet undone()}<AlignCenterText
-			>Probably OCR or natural language processing for greater automation.</AlignCenterText>
-	{/snippet}
-
-	{#snippet takeaway()}
-		<p></p>
-		<p></p>
-		<p></p>
-
-		<ul class="ms-6 list-outside list-disc space-y-2">
-			<li>It wasn't a big enough problem tbh. I didn't lose enough money to make this worth using much.</li>
-			<li>
-				This needs integration into the SaaS products, else the additional effort is only worth it if you save a lot of
-				money
-			</li>
-			<li>
-				It was fun to build a calendar from scratch, I enjoyed the result of not using external libraries for
-				everything.
-			</li>
-			<li>
-				I enjoyed the simplicity of having everything backend from Pocketbase, but I absolutely dislike bcrypt's delay
-				and just overall sluggish feel as a user.
-			</li>
-		</ul>
+	{#snippet built()}
+		<AlignCenterText>
+			<p class="mb-4">
+				Subscription tracker with calendar view and alerts. Built custom calendar component instead of using libraries.
+			</p>
+			<p>
+				Realized after building that the problem wasn't painful enough - unless you're losing significant money monthly,
+				the tracking overhead isn't worth it. Would need direct integration with SaaS products to reduce friction, but
+				that defeats the "counter dark patterns" purpose.
+			</p>
+		</AlignCenterText>
 	{/snippet}
 </ProjectEntry>

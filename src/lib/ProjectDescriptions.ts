@@ -29,7 +29,7 @@ export const descriptions: ProjectDescriptions = {
 	},
 	cancelninja: {
 		subtitle: 'SaaS & Dark Pattern tracker',
-		tldr: "Companies trick people into keeping subscriptions they don't want. I made a web app to track my subscriptions and warn me about these sneaky tricks.",
+		// tldr: "Companies trick people into keeping subscriptions they don't want. I made a web app to track my subscriptions and warn me about these sneaky tricks.",
 		url: 'https://cancelninja.com',
 	},
 	grumplr: {
