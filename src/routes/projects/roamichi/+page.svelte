@@ -13,7 +13,7 @@
 	import roamichiScreenshotExplore3 from '$lib/screenshots/roamichi-explore3.webp?w=400&enhanced';
 	import roamichiScreenshotFlight from '$lib/screenshots/roamichi-flight.webp?w=400&enhanced';
 	import roamichiScreenshotFlight2 from '$lib/screenshots/roamichi-flight2.webp?w=400&enhanced';
-	import roamichiScreenshotMain from '$lib/screenshots/roamichi-Main.webp?w=400&enhanced';
+	import roamichiScreenshotMain from '$lib/screenshots/roamichi-main.webp?w=400&enhanced';
 	import roamichiScreenshotPack from '$lib/screenshots/roamichi-pack.webp?w=400&enhanced';
 	import roamichiScreenshotTrip from '$lib/screenshots/roamichi-trip.webp?w=400&enhanced';
 	import roamichiScreenshotTrip2 from '$lib/screenshots/roamichi-trip2.webp?w=400&enhanced';
