@@ -117,10 +117,18 @@
 	}
 
 	code {
-		display: block;
 		margin-top: 1em;
 		margin-bottom: 1em;
 		overflow-x: auto;
+
+		&:has(> span) {
+			display: block;
+		}
+
+		&:not(:has(> span)) {
+			color: darkslategray !important;
+			background-color: rgba(197, 214, 232, 0.4) !important;
+		}
 	}
 
 	code > .highlighted {
