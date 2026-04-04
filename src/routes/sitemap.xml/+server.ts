@@ -28,11 +28,8 @@ export const GET: RequestHandler = async () => {
 		const posts: PostArray = import.meta.glob('../blog/posts/*.md', { eager: true });
 		const keys: string[] = Object.keys(posts);
 		for (let i = 0; i < Object.keys(posts).length; i++) {
-			console.log(posts[keys[i]].metadata.tags);
 			blogSlugs.push(posts[keys[i] as keyof typeof posts].metadata.slug);
 			blogTags.push(posts[keys[i] as keyof typeof posts].metadata.tags);
-
-			console.log(blogTags);
 		}
 	} catch (err) {
 		throw error(500, 'Could not load data for param values.');
