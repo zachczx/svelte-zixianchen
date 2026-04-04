@@ -1,7 +1,12 @@
 <script lang="ts">
 	import Nav from '$lib/Nav.svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
+	import { descriptions } from '$lib/ProjectDescriptions';
+
 	let { data, children } = $props();
+
+	const ongoing = Object.entries(descriptions).filter(([, p]) => !p.archived);
+	const archived = Object.entries(descriptions).filter(([, p]) => p.archived);
 </script>
 
 <Nav navCurrent="projects" />
@@ -33,94 +38,16 @@
 			>Ongoing
 		</h4>
 		<ul class="border-l-4 border-l-transparent ps-0.5 font-medium">
-			<a href="/projects/abbreviation"
-				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
-					'abbreviation'
-						? 'bg-neutral/85 text-white/90'
-						: undefined}">
-					Abbreviation
-				</li></a>
-			<a href="/projects/appraize"
-				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
-					'appraize'
-						? 'bg-neutral/85 text-white/90'
-						: undefined}">
-					Appraize
-				</li></a>
-			<a href="/projects/apptitude"
-				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
-					'apptitude'
-						? 'bg-neutral/85 text-white/90'
-						: undefined}">
-					Apptitude
-				</li></a>
-			<a href="/projects/btonomics"
-				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
-					'btonomics'
-						? 'bg-neutral/85 text-white/90'
-						: undefined}">
-					BTOnomics
-				</li></a>
-			<a href="/projects/cancelninja"
-				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
-					'cancelninja'
-						? 'bg-neutral/85 text-white/90'
-						: undefined}">
-					Cancel Ninja
-				</li></a>
-			<a href="/projects/cubby"
-				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
-					'cubby'
-						? 'bg-neutral/85 text-white/90'
-						: undefined}">
-					Cubby
-				</li></a>
-			<a href="/projects/grumplr"
-				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
-					'grumplr'
-						? 'bg-neutral/85 text-white/90'
-						: undefined}">
-					Grumplr
-				</li></a>
-			<a href="/projects/meetrics"
-				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
-					'meetrics'
-						? 'bg-neutral/85 text-white/90'
-						: undefined}">
-					Meetrics
-				</li></a>
-			<a href="/projects/rinku"
-				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
-					'rinku'
-						? 'bg-neutral/85 text-white/90'
-						: undefined}">
-					Rinku
-				</li></a>
-			<a href="/projects/roamichi"
-				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
-					'roamichi'
-						? 'bg-neutral/85 text-white/90'
-						: undefined}">
-					Roamichi
-				</li></a>
-			<a href="/projects/wronged"
-				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
-					'wronged'
-						? 'bg-neutral/85 text-white/90'
-						: undefined}">
-					Wronged
-				</li></a>
+			{#each ongoing as [slug, project]}
+				<a href="/projects/{slug}"
+					><li
+						class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg py-2 ps-10 pe-6 hover:text-white/90 {data.slug ===
+						slug
+							? 'bg-neutral/85 text-white/90'
+							: undefined}">
+						{project.name}
+					</li></a>
+			{/each}
 		</ul>
 		<h4 class="mt-8 flex items-center gap-4 px-2 py-2 font-bold">
 			<svg
@@ -135,14 +62,16 @@
 			>Archived
 		</h4>
 		<ul class="ms-4 border-l-4 border-l-transparent ps-0.5 font-medium">
-			<a href="/projects/eatyourmeds"
-				><li
-					class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
-					'eatyourmeds'
-						? 'bg-neutral/85 text-white/90'
-						: undefined}">
-					Eat Your Medicine!
-				</li></a>
+			{#each archived as [slug, project]}
+				<a href="/projects/{slug}"
+					><li
+						class="active:bg-neutral/80 hover:bg-neutral/70 my-0.5 rounded-lg px-6 py-2 hover:text-white/90 {data.slug ===
+						slug
+							? 'bg-neutral/85 text-white/90'
+							: undefined}">
+						{project.name}
+					</li></a>
+			{/each}
 		</ul>
 	</aside>
 	<section id="projects" class="lg:ps-1.5">
