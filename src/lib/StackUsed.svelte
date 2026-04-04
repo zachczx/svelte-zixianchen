@@ -1,14 +1,12 @@
 <script lang="ts">
-	/** @type {string} */
-	export let framework: string = '';
+	interface StackUsedProps {
+		framework?: string;
+		library: string;
+		host: string;
+		className: string;
+	}
 
-	/** @type {string} */
-	export let library: string;
-
-	/** @type {string} */
-	export let host: string;
-
-	export let className: string;
+	let { framework = '', library, host, className }: StackUsedProps = $props();
 </script>
 
 <div class="grid content-around gap-y-2 rounded-2xl px-4 py-8 text-base {className}">

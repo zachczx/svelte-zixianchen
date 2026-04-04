@@ -1,8 +1,8 @@
 <script lang="ts">
-	export let navCurrent: string;
-
 	import { page } from '$app/stores';
 	import NavDock from '$lib/NavDock.svelte';
+
+	let { navCurrent }: { navCurrent: string } = $props();
 </script>
 
 <nav class="z-1 grid h-fit w-full justify-center px-4 transition-all duration-300 ease-out xl:fixed xl:bottom-2">
