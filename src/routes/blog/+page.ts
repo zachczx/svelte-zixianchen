@@ -13,6 +13,8 @@ export const load: PageLoad = async () => {
 		}
 	}
 
-	posts = posts.sort((first, second) => new Date(second.date).getTime() - new Date(first.date).getTime());
+	posts = posts
+		.filter((post) => post.published)
+		.sort((first, second) => new Date(second.date).getTime() - new Date(first.date).getTime());
 	return { posts };
 };
