@@ -5,31 +5,17 @@ import * as sitemap from 'super-sitemap';
 
 export const prerender = true; // optional
 
-interface PostArray {
-	[index: string]: {
-		metadata: {
-			title: string;
-			description?: string;
-			date: Date;
-			date_updated?: Date;
-			tags: string;
-			published: boolean;
-			slug: string;
-		};
-		default: string[];
-	};
+interface PostModule {
+	metadata: BlogPostMetadata;
+	default: string[];
 }
 
 export const GET: RequestHandler = async () => {
-	// Get data for parameterized routes however you need to; this is only an example.
 	let blogSlugs: string[] = [];
-	let blogTags: string[] = [];
 	try {
-		const posts: PostArray = import.meta.glob('../blog/posts/*.md', { eager: true });
-		const keys: string[] = Object.keys(posts);
-		for (let i = 0; i < Object.keys(posts).length; i++) {
-			blogSlugs.push(posts[keys[i] as keyof typeof posts].metadata.slug);
-			blogTags.push(posts[keys[i] as keyof typeof posts].metadata.tags);
+		const posts: Record<string, PostModule> = import.meta.glob('../blog/posts/*.md', { eager: true });
+		for (const path in posts) {
+			blogSlugs.push(posts[path].metadata.slug);
 		}
 	} catch (err) {
 		throw error(500, 'Could not load data for param values.');
