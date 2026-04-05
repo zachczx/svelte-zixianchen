@@ -2,13 +2,11 @@
 	import Nav from '$lib/Nav.svelte';
 	import { onMount } from 'svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
-	// import ProjectDashboardArchived from '$lib/ProjectDashboardArchived.svelte';
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
 	import Computer from '$lib/assets/federica-galli-aiqKc07b5PA-unsplash.webp';
 	import ZXC from '$lib/assets/zixianchen-logo.webp?w=700&enhanced';
 	import Projects from './Projects.svelte';
 
-	///////////////////////////////////
 	let navCurrent: string = $state('header');
 
 	onMount(() => {
@@ -119,12 +117,7 @@
 	<div id="about" class="navItem mt-20 grid w-full justify-items-center bg-gray-400/5 lg:min-h-dvh">
 		<div class="grid justify-items-center">
 			<div
-				class="grid w-full max-w-[1000px] content-start gap-y-4 px-4 py-16 lg:min-h-[50vh] lg:grid-cols-3 lg:content-center lg:gap-y-24">
-				<!-- <h2
-					
-					class="navItem hidden justify-self-start px-4 pt-12 text-9xl font-extrabold lg:col-span-3 lg:grid lg:pt-20">
-					About Me
-				</h2> -->
+				class="grid w-full max-w-250 content-start gap-y-4 px-4 py-16 lg:min-h-[50vh] lg:grid-cols-3 lg:content-center lg:gap-y-24">
 				<h3 class="text-4xl font-bold">Interests</h3>
 				<div class="col-span-2 mb-4 space-y-8">
 					<p>
@@ -166,15 +159,20 @@
 			<div class="to-base-200 h-full w-full bg-linear-to-r from-transparent from-90%"></div>
 		</div>
 		<section
-			class="bg-base-200 grid w-full max-w-[1000px] grid-rows-[auto_1fr_auto] content-start gap-y-8 lg:col-span-3 lg:gap-y-24">
+			class="bg-base-200 grid w-full max-w-250 grid-rows-[auto_1fr_auto] content-start gap-y-8 lg:col-span-3 lg:gap-y-24">
 			<h2 id="jobs" class="justify-self-start px-4 text-9xl font-extrabold lg:pt-28">Day</h2>
 			<div class="grid content-start gap-y-4 px-4 lg:gap-y-16">
 				{#each jobs as job}
-					<div class="grid lg:grid-cols-[auto_1fr]">
+					<div class="job-row grid lg:grid-cols-[auto_1fr]">
 						<div class="text-base-content/70 items-baseline pe-12 pt-1.5 font-mono max-lg:pt-8">{job.year}</div>
-						<div class="job">
-							<h4 class="text-2xl font-bold">{job.title}</h4>
-							<p class="text-base-content/70 leading-relaxed">
+						<div>
+							<h4 class="job-title relative w-fit text-2xl font-bold">
+								<span
+									class="job-arrow absolute top-1/2 -left-5 -translate-y-1/2 font-mono text-[0.7em] font-normal opacity-0"
+									>❯</span
+								>{job.title}
+							</h4>
+							<p class="job-desc text-base-content/70 leading-relaxed transition-colors duration-200">
 								{job.desc}
 							</p>
 						</div>
@@ -186,8 +184,7 @@
 
 	<div class="text-neutral-content grid w-full content-start justify-items-center bg-[#0E0E0E] lg:grid-cols-5">
 		<div class="grid w-full justify-items-center pt-8 lg:col-span-3 lg:pt-28">
-			<section
-				class="grid w-full max-w-[1000px] justify-items-start px-4 pb-8 lg:grid-cols-3 lg:justify-self-end lg:pb-28">
+			<section class="grid w-full max-w-250 justify-items-start px-4 pb-8 lg:grid-cols-3 lg:justify-self-end lg:pb-28">
 				<h2 id="projects" class="navItem justify-self-start pb-8 text-9xl font-extrabold lg:col-span-3 lg:pb-24">
 					Night
 				</h2>
@@ -210,23 +207,27 @@
 </div>
 
 <style>
-	.list {
-		li::after {
-			content: '▶';
-			margin-inline-start: 0.75rem;
-			margin-inline-end: 0.75rem;
-			opacity: 30%;
-		}
-		/*li {
-			 list-style-type: none;
-			padding-left: 1.75rem; */
-		/* ion:logo-youtube */
-		/* background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 512 512"><path fill="%230E0E0E" d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149C1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5c58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5c2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9M207 353.89v-196.5l145 98.2Z"/></svg>')
-				no-repeat left center;
-			&:hover {
-				background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 512 512"><path fill="%23FF0000" d="M508.64 148.79c0-45-33.1-81.2-74-81.2C379.24 65 322.74 64 265 64h-18c-57.6 0-114.2 1-169.6 3.6C36.6 67.6 3.5 104 3.5 149C1 184.59-.06 220.19 0 255.79q-.15 53.4 3.4 106.9c0 45 33.1 81.5 73.9 81.5c58.2 2.7 117.9 3.9 178.6 3.8q91.2.3 178.6-3.8c40.9 0 74-36.5 74-81.5c2.4-35.7 3.5-71.3 3.4-107q.34-53.4-3.26-106.9M207 353.89v-196.5l145 98.2Z"/></svg>')
-					no-repeat left center;
-			} 
-		}*/
+	.job-row:hover .job-arrow {
+		opacity: 1;
+	}
+
+	.job-row:hover .job-desc {
+		color: var(--color-base-content);
+	}
+
+	.job-row:hover .job-title {
+		background-size: 100% 100%;
+	}
+
+	.job-arrow {
+		transition: opacity 0.2s ease;
+	}
+
+	.job-title {
+		background-image: linear-gradient(var(--color-accent), var(--color-accent));
+		background-size: 0% 100%;
+		background-repeat: no-repeat;
+		background-position: left;
+		transition: background-size 0.25s ease;
 	}
 </style>
