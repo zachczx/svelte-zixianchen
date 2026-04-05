@@ -121,30 +121,19 @@
 				<h3 class="text-4xl font-bold">Interests</h3>
 				<div class="col-span-2 mb-4 space-y-8">
 					<p>
-						I started <strong>webdev</strong> in 2000. Started with
-						<span class="text-base-content/85 font-mono text-[1.05em] font-medium"
-							>Frontpage, XHTML, nested tables, PHP, Wordpress</span
-						>.
+						I've been tinkering on the web since 2000. It started with Frontpage, XHTML, and PHP. My stack now looks
+						more like <span class="text-base-content/85 font-mono text-[1.05em] font-medium">Go, TypeScript,</span> and
+						a bit of <span class="text-base-content/85 font-mono text-[1.05em] font-medium">Zig</span>.
 					</p>
 					<p>
-						I'm now mostly working with <span class="text-base-content/85 font-mono text-[1.05em] font-medium"
-							>Go, Javascript, Python</span
-						>. Also getting into some
-						<span class="text-base-content/85 font-mono text-[1.05em] font-medium">Zig</span> atm.
+						Lately making a deliberate effort to write organic, free-range code. Incredibly tempting to do it
+						automagically with Claude Code and OpenCode, but it doesn't feel the same.
 					</p>
-					<p>I've been building home admin and travel planner mobile apps.</p>
+					<p>Most of that energy goes into building my travel planner and my home admin app.</p>
 					<p>
-						I like <strong>building PCs</strong>. Love being cheap. Hate cable management.
-					</p>
-					<p>
-						I enjoy learning about <strong>businesses</strong>, <strong>product ideas</strong>, <strong>design</strong>,
+						Off screen, I like <strong>building PCs</strong> (love bargains but hate cable management), and I spend a
+						lot of time learning about <strong>product design</strong>, <strong>business</strong>, and
 						<strong>entrepreneurship</strong>.
-					</p>
-					<p>
-						I dabble with digital creation, editing. <span
-							class="text-base-content/85 font-mono text-[1.05em] font-medium"
-							>Photoshop, Affinity, Davinci Resolve, SDXL LORAs</span
-						>.
 					</p>
 				</div>
 			</div>
