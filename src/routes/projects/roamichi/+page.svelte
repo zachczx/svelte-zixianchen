@@ -17,7 +17,6 @@
 	import roamichiScreenshotPack from '$lib/screenshots/roamichi-pack.webp?w=400&enhanced';
 	import roamichiScreenshotTrip from '$lib/screenshots/roamichi-trip.webp?w=400&enhanced';
 	import roamichiScreenshotTrip2 from '$lib/screenshots/roamichi-trip2.webp?w=400&enhanced';
-	import AlignCenterText from '$lib/AlignCenterText.svelte';
 
 	const ss = [
 		roamichiScreenshotMain,

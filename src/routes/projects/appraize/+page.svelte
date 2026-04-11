@@ -9,7 +9,6 @@
 	import AppraizeScreenshotSaved from '$lib/screenshots/appraize-saved.webp?enhanced';
 	import AppraizeScreenshotUpload from '$lib/screenshots/appraize-upload.webp?enhanced';
 	import AppraizeScreenshotWide from '$lib/screenshots/appraize-wide.webp?enhanced';
-	import AlignCenterText from '$lib/AlignCenterText.svelte';
 </script>
 
 <ProjectEntry id="appraize">
