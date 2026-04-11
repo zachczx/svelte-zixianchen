@@ -16,6 +16,9 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
+		"@iconify-json/material-symbols": "^1.2.66",
+		"@iconify-json/octicon": "^1.2.22",
+		"@iconify-json/uiw": "^1.2.4",
 		"@shikijs/transformers": "^4.0.2",
 		"@sveltejs/adapter-auto": "^7.0.1",
 		"@sveltejs/adapter-static": "^3.0.10",
@@ -38,6 +41,7 @@
 		"svelte-check": "^4.4.6",
 		"tailwindcss": "^4.2.2",
 		"typescript": "^6.0.2",
+		"unplugin-icons": "^23.0.1",
 		"vite": "^8.0.8"
 	},
 	"type": "module",

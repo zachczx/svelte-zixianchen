@@ -4,12 +4,14 @@ import svg from '@poppanator/sveltekit-svg';
 import { defineConfig } from 'vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import tailwindcss from '@tailwindcss/vite';
+import Icons from 'unplugin-icons/vite';
 
 export default defineConfig({
 	plugins: [
 		enhancedImages(),
 		sveltekit(),
 		tailwindcss(),
+		Icons({ compiler: 'svelte' }),
 		svg({
 			includePaths: ['./static/'],
 			svgoOptions: {
