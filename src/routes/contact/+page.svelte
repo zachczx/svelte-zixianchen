@@ -9,8 +9,8 @@
 	 * Email check vars
 	 */
 	let email = $state('');
-	let disabledSubmitButton = $state(false);
 	const emailRegex = /^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}$/;
+	let disabledSubmitButton = $derived(email !== '' && !emailRegex.test(email));
 
 	function preventDefault(fn: (event: SubmitEvent) => void) {
 		return function (event: SubmitEvent) {
@@ -89,20 +89,6 @@
 							class="grow"
 							placeholder="Email"
 							bind:value={email}
-							onkeydown={() => {
-								if (emailRegex.test(email) === false) {
-									disabledSubmitButton = true;
-								} else {
-									disabledSubmitButton = false;
-								}
-							}}
-							onkeyup={() => {
-								if (emailRegex.test(email) === false) {
-									disabledSubmitButton = true;
-								} else {
-									disabledSubmitButton = false;
-								}
-							}}
 							required />
 					</label>
 					<textarea
