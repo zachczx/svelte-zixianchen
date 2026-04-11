@@ -10,20 +10,13 @@
 	let navCurrent: string = $state('header');
 
 	onMount(() => {
-		let navItem: NodeListOf<HTMLElement> = document.querySelectorAll('.navItem') as NodeListOf<HTMLElement>;
-
-		let observerNav: IntersectionObserver = new IntersectionObserver((entries) => {
+		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					navCurrent = entry.target.id;
-				} else {
-					//console.log('exiting', entry.target.id);
-				}
+				if (entry.isIntersecting) navCurrent = entry.target.id;
 			});
 		});
-		for (let i = 0; i < navItem.length; i++) {
-			observerNav.observe(navItem[i]);
-		}
+		document.querySelectorAll<HTMLElement>('.navItem').forEach((el) => observer.observe(el));
+		return () => observer.disconnect();
 	});
 
 	const jobs = [
