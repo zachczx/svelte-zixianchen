@@ -23,11 +23,6 @@
 		<a href={url}>{@render title()}</a>
 		<p class="text-base-content/70 italic">{subtitle}</p>
 	</div>
-	{#if header}
-		<div class="py-8">
-			{@render header()}
-		</div>
-	{/if}
 	<div class="bg-base-200 grid max-w-[1000px] pt-24">
 		<div class="grid gap-8 lg:grid-cols-[auto_1fr] lg:gap-x-16 lg:gap-y-24">
 			{#if tldr}
@@ -46,12 +41,6 @@
 					{@render problem()}
 				</div>
 			{/if}
-			{#if want}
-				<h3 class="text-4xl font-bold">Idea</h3>
-				<div>
-					{@render want()}
-				</div>
-			{/if}
 			{#if built}
 				<h3 class="text-4xl font-bold">What I built</h3>
 				<div>{@render built()}</div>
@@ -66,20 +55,9 @@
 				<h3 class="text-4xl font-bold">Look</h3>
 				<div>{@render screenshots()}</div>
 			{/if}
-			<!-- {#if undone}
-				<h3 class="text-4xl font-bold">Next steps</h3>
-				<div>{@render undone()}</div>
-			{/if} -->
 			{#if more}
 				<h3 class="text-4xl font-bold">See</h3>
 				<div>{@render more()}</div>
-			{/if}
-			<!-- {#if takeaway}
-				<h3 class="text-4xl font-bold">Takeaway</h3>
-				<div>{@render takeaway()}</div>
-			{/if} -->
-			{#if children}
-				{@render children()}
 			{/if}
 		</div>
 	</div>
