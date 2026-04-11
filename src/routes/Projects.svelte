@@ -227,13 +227,6 @@
 </main>
 
 <style>
-	.calc-height {
-		min-height: calc(100vh - 64rem);
-	}
-	.flip-img {
-		filter: invert(0.5) sepia(1) saturate(5) hue-rotate(303deg);
-	}
-
 	#project-grid > a {
 		aspect-ratio: 1;
 		width: 100%;
