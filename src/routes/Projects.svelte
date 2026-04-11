@@ -16,8 +16,6 @@
 	import WashingMachine from '$lib/assets/washing-machine.webp';
 	import CubbyLogo from '$lib/assets/cubby-logo.webp';
 
-	let { mode = '' } = $props();
-
 	let showBg = $state(true);
 </script>
 
@@ -60,8 +58,8 @@
 							viewBox="0 0 24 24"
 							><g fill="none"
 								><path
-									fill={mode === 'dark' ? 'white' : '#0069ff'}
-									fill-opacity={mode === 'dark' ? '.7' : '.25'}
+									fill="#0069ff"
+									fill-opacity=".25"
 									fill-rule="evenodd"
 									d="M12 19a7 7 0 1 0 0-14a7 7 0 0 0 0 14M10.087 7.38A5 5 0 0 1 12 7a.5.5 0 0 0 0-1a6 6 0 0 0-6 6a.5.5 0 0 0 1 0a5 5 0 0 1 3.087-4.62"
 									clip-rule="evenodd" /><path stroke="#0069ff" stroke-linecap="round" d="M20.5 20.5L17 17" /><circle
@@ -118,12 +116,7 @@
 						? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
 						: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
 					<div class="grid h-full">
-						<h3
-							class="pb-1 font-serif text-2xl font-bold text-[#38bdf8] lg:text-4xl {mode === 'dark'
-								? 'brightness-125'
-								: undefined}">
-							BTOnomics
-						</h3>
+						<h3 class="pb-1 font-serif text-2xl font-bold text-[#38bdf8] lg:text-4xl">BTOnomics</h3>
 						<div class="text-base-content">Home renovation blog for budget folks</div>
 					</div>
 				</figcaption>
