@@ -4,32 +4,14 @@
 	import AlignCenterText from './AlignCenterText.svelte';
 	interface ProjectEntryProps {
 		id: string;
-		header: Snippet;
 		title: Snippet;
 		screenshots: Snippet;
 		stack?: Snippet;
 		problem?: Snippet;
-		want?: Snippet;
 		built?: Snippet;
-		undone?: Snippet;
 		more?: Snippet;
-		takeaway?: Snippet;
-		children?: Snippet;
 	}
-	let {
-		id = '',
-		header,
-		title,
-		screenshots,
-		stack,
-		problem,
-		want,
-		built,
-		undone,
-		more,
-		takeaway,
-		children,
-	}: ProjectEntryProps = $props();
+	let { id = '', title, screenshots, stack, problem, built, more }: ProjectEntryProps = $props();
 
 	let subtitle = $derived(descriptions[id]?.subtitle ?? '');
 	let tldr = $derived(descriptions[id]?.tldr ?? '');

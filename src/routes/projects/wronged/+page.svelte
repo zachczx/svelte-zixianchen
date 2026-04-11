@@ -9,7 +9,6 @@
 	import wrongedScreenshotChat2 from '$lib/screenshots/wronged-chat2.webp?enhanced';
 	import wrongedScreenshotChat3 from '$lib/screenshots/wronged-chat3.webp?enhanced';
 	import wrongedScreenshotManage from '$lib/screenshots/wronged-manage.webp?enhanced';
-	import AlignCenterText from '$lib/AlignCenterText.svelte';
 </script>
 
 <ProjectEntry id="wronged">

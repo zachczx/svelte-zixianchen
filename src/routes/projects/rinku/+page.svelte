@@ -6,7 +6,6 @@
 	import rinkuScreenshotLanding from '$lib/screenshots/rinku-landing.webp';
 	import rinkuScreenshotAdmin from '$lib/screenshots/rinku-admin.webp?enhanced';
 	import rinkuScreenshotShortener from '$lib/screenshots/rinku-shortener.webp';
-	import AlignCenterText from '$lib/AlignCenterText.svelte';
 </script>
 
 <ProjectEntry id="rinku">

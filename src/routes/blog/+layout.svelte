@@ -3,9 +3,6 @@
 	import ZXC from '$lib/assets/zixianchen-logo.webp?w=200&enhanced';
 
 	let { children }: { children: Snippet } = $props();
-	let ghostColor = $state('');
-	const ghostAddClassMainRight = ['translate-x-4', 'text-red-900'];
-	const ghostAddClassBlogLeft = ['-translate-x-4', 'text-orange-400'];
 </script>
 
 <svelte:head>
