@@ -39,7 +39,4 @@
 		<AlignCenterText
 			>A PWA with gap detection, calendar view, frequency tracking. Backend with PocketBase.</AlignCenterText>
 	{/snippet}
-
-	{#snippet undone()}<AlignCenterText>Considering: streak visualizations, push notifications.</AlignCenterText>
-	{/snippet}
 </ProjectEntry>
