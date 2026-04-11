@@ -74,7 +74,9 @@
 	</span>
 </a>
 
-<a href="/blog" class="dock group relative bg-transparent transition-all duration-100 ease-out">
+<a
+	href="/blog"
+	class="dock group relative bg-transparent no-underline transition-all duration-100 ease-linear hover:no-underline">
 	<div
 		class="group relative flex items-center justify-center rounded-none border border-white/20 bg-gray-50 text-red-950 transition-all duration-100 ease-linear group-hover:shadow-lg group-hover:shadow-black/60">
 		<svg
@@ -86,10 +88,10 @@
 			><path
 				fill="currentColor"
 				d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm2-4h7v-2H7zm0-4h10v-2H7zm0-4h10V7H7z" /></svg>
-		<span
-			class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-xs py-0.5 font-mono text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
-			>Blog</span>
 	</div>
+	<span
+		class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-xs py-0.5 font-mono text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex"
+		>Blog</span>
 </a>
 
 <div class="mx-4 h-10/12 w-0.5 bg-white/30"></div>
