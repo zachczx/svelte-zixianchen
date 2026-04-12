@@ -27,11 +27,11 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={wrongedScreenshotMain} alt="Wronged" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={wrongedScreenshotChat} alt="Wronged" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={wrongedScreenshotMain2} alt="Wronged" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={wrongedScreenshotChat2} alt="Wronged" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={wrongedScreenshotChat3} alt="Wronged" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={wrongedScreenshotMain} alt="Wronged" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={wrongedScreenshotChat} alt="Wronged" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={wrongedScreenshotMain2} alt="Wronged" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={wrongedScreenshotChat2} alt="Wronged" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={wrongedScreenshotChat3} alt="Wronged" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 			<enhanced:img src={wrongedScreenshotManage} alt="Wronged" class="border-neutral/20 mt-4 rounded-xl border" />
 		</div>
 	{/snippet}

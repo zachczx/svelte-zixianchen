@@ -52,7 +52,7 @@
 	{#snippet screenshots()}
 		<div class="grid gap-4 lg:grid-cols-2">
 			{#each ss as ss}
-				<enhanced:img src={ss} alt="Roamichi app" class="border-neutral/20 rounded-xl border" />
+				<enhanced:img src={ss} alt="Roamichi app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 			{/each}
 		</div>
 	{/snippet}

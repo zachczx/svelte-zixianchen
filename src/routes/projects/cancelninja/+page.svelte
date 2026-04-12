@@ -32,22 +32,22 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={cancelNinjaScreenshotMain} alt="CancelNinja app" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={cancelNinjaScreenshotMain} alt="CancelNinja app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 			<enhanced:img
 				src={cancelNinjaScreenshotDashboard}
 				alt="CancelNinja"
-				class="border-neutral/20 rounded-xl border" />
+				class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 			<enhanced:img
 				src={cancelNinjaScreenshotDashboard2}
 				alt="CancelNinja"
-				class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={cancelNinjaScreenshotAdd} alt="CancelNinja" class="border-neutral/20 rounded-xl border" />
+				class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={cancelNinjaScreenshotAdd} alt="CancelNinja" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 			<enhanced:img
 				src={cancelNinjaScreenshotCalendar}
 				alt="CancelNinja app"
-				class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={cancelNinjaScreenshotExplore} alt="CancelNinja" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={cancelNinjaScreenshotExplore2} alt="CancelNinja" class="border-neutral/20 rounded-xl border" />
+				class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={cancelNinjaScreenshotExplore} alt="CancelNinja" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={cancelNinjaScreenshotExplore2} alt="CancelNinja" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 		</div>
 	{/snippet}
 

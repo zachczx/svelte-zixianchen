@@ -24,14 +24,20 @@
 
 	{#snippet screenshots()}
 		<div class="grid gap-4 lg:grid-cols-2">
-			<enhanced:img src={dashboard} alt="Cubby dashboard" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={tasks} alt="Cubby tasks" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={tracker} alt="Cubby tracker stats" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={market} alt="Cubby market prices" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={marketPrices} alt="Cubby price history" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={gym} alt="Cubby gym workouts" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={gymWorkout} alt="Cubby workout detail" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={stopwatch} alt="Cubby multi timer" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={dashboard} alt="Cubby dashboard" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={tasks} alt="Cubby tasks" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={tracker} alt="Cubby tracker stats" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={market} alt="Cubby market prices" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img
+				src={marketPrices}
+				alt="Cubby price history"
+				class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={gym} alt="Cubby gym workouts" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img
+				src={gymWorkout}
+				alt="Cubby workout detail"
+				class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={stopwatch} alt="Cubby multi timer" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 		</div>
 	{/snippet}
 

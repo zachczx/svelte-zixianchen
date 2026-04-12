@@ -25,12 +25,12 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={grumplrScreenshotMain} alt="Grumplr app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={grumplrScreenshotPost} alt="Grumplr app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={grumplrScreenshotMainFiltered} alt="Grumplr app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={grumplrScreenshotLivePost} alt="Grumplr app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={grumplrScreenshotTagLag} alt="Grumplr app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={grumplrScreenshotProfile} alt="Grumplr app" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={grumplrScreenshotMain} alt="Grumplr app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={grumplrScreenshotPost} alt="Grumplr app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={grumplrScreenshotMainFiltered} alt="Grumplr app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={grumplrScreenshotLivePost} alt="Grumplr app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={grumplrScreenshotTagLag} alt="Grumplr app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={grumplrScreenshotProfile} alt="Grumplr app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 		</div>
 	{/snippet}
 

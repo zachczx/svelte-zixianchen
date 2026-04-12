@@ -23,10 +23,10 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={btonomicsScreenshotMain} alt="Btonomics" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={btonomicsScreenshotPost} alt="Btonomics" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={btonomicsScreenshotPost2} alt="Btonomics" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={btonomicsScreenshotSearch} alt="Btonomics" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={btonomicsScreenshotMain} alt="Btonomics" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={btonomicsScreenshotPost} alt="Btonomics" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={btonomicsScreenshotPost2} alt="Btonomics" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={btonomicsScreenshotSearch} alt="Btonomics" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 		</div>
 	{/snippet}
 
