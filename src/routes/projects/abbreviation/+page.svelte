@@ -60,6 +60,3 @@
 		<p>Includes admin tools to identify and merge duplicate entries.</p>
 	{/snippet}
 </ProjectEntry>
-
-<style>
-</style>
