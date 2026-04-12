@@ -4,56 +4,60 @@
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
 	import Computer from '$lib/assets/federica-galli-aiqKc07b5PA-unsplash.webp';
-	import ZXC from '$lib/assets/zixianchen-logo.webp?w=700&enhanced';
 	import Projects from './Projects.svelte';
 	import LinkedInIcon from '~icons/uiw/linkedin';
 	import GitHubIcon from '~icons/octicon/mark-github-16';
 	import ArticleIcon from '~icons/material-symbols/article';
+	import { codeSnippets } from './code-snippets';
+	import { jobs } from './jobs';
 
 	let navCurrent: string = $state('header');
 
+	function shuffle(arr: string[]) {
+		const a = [...arr];
+		for (let i = a.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[a[i], a[j]] = [a[j], a[i]];
+		}
+		return a;
+	}
+
+	const snippets = codeSnippets.filter((s) => s !== '');
+
+	function makeText() {
+		return shuffle(snippets).join(' ');
+	}
+
+	let display = $state(makeText());
+	let cursorPos = $state(0);
+
 	onMount(() => {
+		let old = display;
+		let next = makeText();
+		let pos = 0;
+
+		const interval = setInterval(() => {
+			pos += 1;
+			if (pos >= old.length) {
+				old = next;
+				next = makeText();
+				pos = 0;
+			}
+			display = next.slice(0, pos) + old.slice(pos);
+			cursorPos = pos;
+		}, 70);
+
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) navCurrent = entry.target.id;
 			});
 		});
 		document.querySelectorAll<HTMLElement>('.navItem').forEach((el) => observer.observe(el));
-		return () => observer.disconnect();
+		return () => {
+			clearInterval(interval);
+			observer.disconnect();
+		};
 	});
-
-	const jobs = [
-		{
-			year: '2023',
-			title: 'Service Delivery Tech Team Lead',
-			desc: "Build, run stuff for citizens + employees services. Also dismantle what doesn't work.",
-		},
-		{
-			year: '2021',
-			title: 'Tech Infra Policy Team Lead',
-			desc: 'Policies & funding for Govt cloud, on-prem hosting, SG Tech Stack, endpoint devices, dev toolchains.',
-		},
-		{
-			year: '2018',
-			title: 'Comms Tech Team Lead',
-			desc: 'Developed & bought media analytic products. Led investments in NLP & CV research.',
-		},
-		{
-			year: '2017',
-			title: 'Comms Strategist',
-			desc: 'Did comms campaigns and strategies.',
-		},
-		{
-			year: '2015',
-			title: 'Media Relations Officer',
-			desc: 'Did public relations work. Got earned media. Did crisis comms.',
-		},
-		{
-			year: '2013',
-			title: 'NS Policy Officer',
-			desc: 'Did NS policies for sportsmen, leave, citizenship, exit control.',
-		},
-	];
 </script>
 
 <svelte:head>
@@ -65,8 +69,15 @@
 <div class="bg-base-200 grid min-h-dvh justify-items-center 2xl:overflow-x-clip">
 	<header id="header" class="navItem w-full place-items-center py-20 lg:grid lg:min-h-dvh lg:py-0">
 		<div class="bg-base-200 flex w-full flex-wrap items-center justify-center gap-8 lg:min-h-dvh">
-			<div>
-				<enhanced:img src={ZXC} alt="" class="h-72 lg:h-160" style="view-transition-name: logo" />
+			<div class="grid justify-items-center" style="view-transition-name: logo">
+				<div class="text-[3.3rem] leading-none font-black tracking-tight lg:text-[7.1rem]">ZIXIAN</div>
+				<div
+					class="code-z relative my-1 h-44 w-44 overflow-hidden bg-slate-900 lg:my-2 lg:h-96 lg:w-96"
+					aria-hidden="true">
+					<div class="code-fill font-mono">
+						{display.slice(0, cursorPos)}<span class="code-cursor"></span>{display.slice(cursorPos)}
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="flex w-full items-center justify-center gap-16 max-lg:pt-12 xl:hidden">
@@ -164,6 +175,10 @@
 </div>
 
 <style>
+	.code-z {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 25% 80%, 100% 80%, 100% 100%, 0% 100%, 0% 80%, 75% 20%, 0% 20%);
+	}
+
 	.job-row:hover .job-arrow {
 		opacity: 1;
 	}
@@ -186,5 +201,26 @@
 		background-repeat: no-repeat;
 		background-position: left;
 		transition: background-size 0.25s ease;
+	}
+
+	.code-fill {
+		/* font-family: monospace; */
+		font-size: 0.7em;
+		line-height: 1.3;
+		word-break: break-all;
+		width: 100%;
+		height: 100%;
+		color: var(--color-primary-content);
+	}
+
+	.code-cursor {
+		border-left: 4px solid yellow;
+		animation: blink 0.7s step-end infinite;
+	}
+
+	@keyframes blink {
+		50% {
+			opacity: 0;
+		}
 	}
 </style>
