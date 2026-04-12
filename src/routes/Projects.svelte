@@ -128,7 +128,7 @@
 		{@render card('/projects/grumplr', Chat, 'center center', grumplrTitle, 'Reddit-lite style bulletin board')}
 		{@render card('/projects/meetrics', Calculator, 'center 20%', meetricsTitle, 'Meeting cost calculator')}
 		{@render card('/projects/rinku', Clips, 'center center', rinkuTitle, 'URL shortener')}
-		{@render card('/projects/cubby', WashingMachine, 'center 30%', cubbyTitle, 'CRUD app for my towels')}
+		{@render card('/projects/cubby', WashingMachine, 'center 30%', cubbyTitle, 'Home admin & activity tracker')}
 		{@render card('/projects/wronged', Bot, 'center 40%', wrongedTitle, 'Products, Problems, UX Chatbot')}
 	</div>
 </main>

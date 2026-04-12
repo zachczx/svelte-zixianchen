@@ -56,7 +56,7 @@ export const descriptions: ProjectDescriptions = {
 	},
 	cubby: {
 		name: 'Cubby',
-		subtitle: 'Track the little things.',
+		subtitle: 'Home admin & activity tracker',
 		url: 'https://cubby.dev',
 	},
 	wronged: {
