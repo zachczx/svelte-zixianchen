@@ -1,16 +1,16 @@
 <script>
 	import ProjectEntry from '$lib/ProjectEntry.svelte';
 	import StackComponents from '$lib/StackComponents.svelte';
-	import btonomicsScreenshotMain from '$lib/screenshots/btonomics-main.webp?enhanced';
-	import btonomicsScreenshotPost from '$lib/screenshots/btonomics-post.webp?enhanced';
-	import btonomicsScreenshotPost2 from '$lib/screenshots/btonomics-post2.webp?enhanced';
-	import btonomicsScreenshotSearch from '$lib/screenshots/btonomics-search.webp?enhanced';
+	import btonomicsMain from '$lib/screenshots/btonomics/main.png?enhanced';
+	import btonomicsPost from '$lib/screenshots/btonomics/post.png?enhanced';
+	import btonomicsSearch from '$lib/screenshots/btonomics/search.png?enhanced';
+	import btonomicsTopics from '$lib/screenshots/btonomics/topics.png?enhanced';
 </script>
 
 <ProjectEntry id="btonomics">
 	{#snippet title()}
 		<a href="https://btonomics.com"
-			><h3 class="pb-4 text-center font-serif text-5xl font-bold text-[#38bdf8] lg:text-7xl">BTOnomics</h3></a
+			><h3 class="pb-4 text-center font-serif text-5xl font-bold text-[#6b7e56] lg:text-7xl">BTOnomics</h3></a
 		>{/snippet}
 	{#snippet stack()}
 		<StackComponents names={['astro', 'pagefind']} />
@@ -23,10 +23,19 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={btonomicsScreenshotMain} alt="Btonomics" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
-			<enhanced:img src={btonomicsScreenshotPost} alt="Btonomics" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
-			<enhanced:img src={btonomicsScreenshotPost2} alt="Btonomics" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
-			<enhanced:img src={btonomicsScreenshotSearch} alt="Btonomics" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img
+				src={btonomicsMain}
+				alt="BTOnomics landing"
+				class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img
+				src={btonomicsTopics}
+				alt="BTOnomics topics"
+				class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={btonomicsPost} alt="BTOnomics post" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img
+				src={btonomicsSearch}
+				alt="BTOnomics search"
+				class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 		</div>
 	{/snippet}
 

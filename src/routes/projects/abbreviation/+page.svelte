@@ -1,9 +1,8 @@
 <script>
 	import ProjectEntry from '$lib/ProjectEntry.svelte';
 	import StackComponents from '$lib/StackComponents.svelte';
-	import AbbreviationMain from '$lib/screenshots/abbreviation-main.webp?enhanced';
-	import AbbreviationAll from '$lib/screenshots/abbreviation-all.webp?enhanced';
-	import AbbreviationSearch from '$lib/screenshots/abbreviation-search.webp?enhanced';
+	import AbbreviationMain from '$lib/screenshots/abbreviation/main-cropped.webp?enhanced';
+	import AbbreviationList from '$lib/screenshots/abbreviation/list.png?enhanced';
 </script>
 
 <ProjectEntry id="abbreviation">
@@ -37,9 +36,8 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={AbbreviationMain} alt="Abbreviation app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
-			<enhanced:img src={AbbreviationAll} alt="Abbreviation app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
-			<enhanced:img src={AbbreviationSearch} alt="Abbreviation app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={AbbreviationMain} alt="Abbreviation landing" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={AbbreviationList} alt="Abbreviation list" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 		</div>
 	{/snippet}
 
