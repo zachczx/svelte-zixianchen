@@ -18,7 +18,7 @@
 		</div>
 	{/snippet}
 	{#snippet stack()}
-		<StackComponents names={['sveltekit', 'tailwind']} />
+		<StackComponents names={['sveltekit']} />
 	{/snippet}
 
 	{#snippet problem()}

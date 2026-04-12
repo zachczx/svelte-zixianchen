@@ -27,7 +27,7 @@
 	{/snippet}
 
 	{#snippet stack()}
-		<StackComponents names={['sveltekit', 'tailwind', 'pocketbase', 'coolify']} />
+		<StackComponents names={['sveltekit', 'pocketbase', 'coolify']} />
 	{/snippet}
 
 	{#snippet screenshots()}

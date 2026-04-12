@@ -14,7 +14,7 @@
 	{#snippet title()}
 		<enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="brightness-[0.85] saturate-150" />{/snippet}
 	{#snippet stack()}
-		<StackComponents names={['sveltekit', 'tailwind', 'greensock', 'pagefind']} />
+		<StackComponents names={['sveltekit', 'greensock', 'pagefind']} />
 	{/snippet}
 
 	{#snippet problem()}

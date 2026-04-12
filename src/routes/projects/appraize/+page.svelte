@@ -19,7 +19,7 @@
 			</h3></a>
 	{/snippet}
 	{#snippet stack()}
-		<StackComponents names={['sveltekit', 'sortable', 'drizzle', 'tailwind', 'coolify', 'postgresql']} />
+		<StackComponents names={['sveltekit', 'sortable', 'drizzle', 'coolify', 'postgresql']} />
 	{/snippet}
 
 	{#snippet screenshots()}

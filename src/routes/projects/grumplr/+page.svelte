@@ -15,7 +15,7 @@
 	{/snippet}
 
 	{#snippet stack()}
-		<StackComponents names={['go', 'htmx', 'templ', 'postgresql', 'keycloak', 'tailwind']} />
+		<StackComponents names={['go', 'htmx', 'templ', 'postgresql', 'keycloak']} />
 	{/snippet}
 
 	{#snippet problem()}

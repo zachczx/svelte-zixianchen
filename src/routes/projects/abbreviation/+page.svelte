@@ -32,7 +32,7 @@
 	{/snippet}
 
 	{#snippet stack()}
-		<StackComponents names={['go', 'htmx', 'tailwind', 'sqlite', 'templ']} />
+		<StackComponents names={['go', 'htmx', 'sqlite', 'templ']} />
 	{/snippet}
 
 	{#snippet screenshots()}
