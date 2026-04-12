@@ -16,7 +16,7 @@
 	{/snippet}
 
 	{#snippet stack()}
-		<StackComponents names={['sveltekit', 'tailwind', 'pocketbase', 'coolify']} />
+		<StackComponents names={['go', 'sveltekit', 'tailwind', 'postgresql']} />
 	{/snippet}
 
 	{#snippet screenshots()}
@@ -31,12 +31,15 @@
 
 	{#snippet problem()}
 		<AlignCenterText
-			>Calendar apps assume regular schedules. I needed to track a variety of irregular home tasks, and then see when
-			I'm overdue</AlignCenterText>
+			>Started because I couldn't remember when I last changed the towels. Then I wanted to track cleaning sprays, then
+			other irregular home tasks. Then gym workouts crept in, then grocery prices. It kept growing because I kept
+			finding things I wanted to track.</AlignCenterText>
 	{/snippet}
 
 	{#snippet built()}
 		<AlignCenterText
-			>A PWA with gap detection, calendar view, frequency tracking. Backend with PocketBase.</AlignCenterText>
+			>A cross-platform app (web + Android via Capacitor) that grew from a simple task tracker into a home admin tool.
+			Now has overdue detection, gym routines with stats, receipt scanning for price tracking, shopping lists, and
+			family sharing. Go API with PostgreSQL.</AlignCenterText>
 	{/snippet}
 </ProjectEntry>
