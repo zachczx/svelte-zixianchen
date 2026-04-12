@@ -2,11 +2,14 @@
 	import AlignCenterText from '$lib/AlignCenterText.svelte';
 	import ProjectEntry from '$lib/ProjectEntry.svelte';
 	import StackComponents from '$lib/StackComponents.svelte';
-	import dashboard from '$lib/screenshots/cubby-dashboard.png?enhanced&w=400';
-	import tracker from '$lib/screenshots/cubby-tracker.png?enhanced&w=400';
-	import stopwatch from '$lib/screenshots/cubby-stopwatch.png?enhanced&w=400';
-	import stats from '$lib/screenshots/cubby-stats.png?enhanced&w=400';
-	import calendar from '$lib/screenshots/cubby-calendar.png?enhanced&w=400';
+	import dashboard from '$lib/screenshots/cubby/dashboard.png?enhanced&w=400';
+	import tasks from '$lib/screenshots/cubby/tasks.png?enhanced&w=400';
+	import tracker from '$lib/screenshots/cubby/tracker.png?enhanced&w=400';
+	import market from '$lib/screenshots/cubby/market.png?enhanced&w=400';
+	import marketPrices from '$lib/screenshots/cubby/market-prices.png?enhanced&w=400';
+	import gym from '$lib/screenshots/cubby/gym.png?enhanced&w=400';
+	import gymWorkout from '$lib/screenshots/cubby/gym-workout.png?enhanced&w=400';
+	import stopwatch from '$lib/screenshots/cubby/stopwatch2.png?enhanced&w=400';
 	import CubbyLogo from '$lib/assets/cubby-logo.webp';
 </script>
 
@@ -21,11 +24,14 @@
 
 	{#snippet screenshots()}
 		<div class="grid gap-4 lg:grid-cols-2">
-			<enhanced:img src={dashboard} alt="Cubby app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={tracker} alt="Cubby" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={stats} alt="Cubby" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={calendar} alt="Cubby" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={stopwatch} alt="Cubby" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={dashboard} alt="Cubby dashboard" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={tasks} alt="Cubby tasks" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={tracker} alt="Cubby tracker stats" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={market} alt="Cubby market prices" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={marketPrices} alt="Cubby price history" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={gym} alt="Cubby gym workouts" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={gymWorkout} alt="Cubby workout detail" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={stopwatch} alt="Cubby multi timer" class="border-neutral/20 rounded-xl border" />
 		</div>
 	{/snippet}
 
