@@ -15,12 +15,6 @@
 			<a href="/" class="flex justify-center pt-8 pb-12" aria-label="logo">
 				<enhanced:img src={ZXC} alt="" class="justify-self-center" style="view-transition-name: logo" />
 			</a>
-			<!-- 
-			<div class="text-base-content/60 mb-12 flex items-center justify-center gap-12">
-				<a href="/" class="font-bold hover:text-orange-400"> Home</a>
-				<a href="/blog" class="font-bold hover:text-orange-400">Blog</a>
-			</div> -->
-
 			{@render children()}
 		</div>
 		<div class="mt-auto pt-10 text-center text-xs md:text-sm">© Zixian Chen</div>

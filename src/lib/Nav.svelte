@@ -11,5 +11,4 @@
 		class="hidden h-20 w-fit min-w-120 items-center justify-center justify-self-center rounded border border-gray-400 bg-gray-900 px-2 shadow-sm backdrop-blur-md transition-all duration-300 ease-out xl:relative xl:flex">
 		<NavDock {navCurrent} pathName={page.url.pathname} />
 	</div>
-	<div class="hidden items-center justify-end space-x-6 xl:flex"></div>
 </nav>
