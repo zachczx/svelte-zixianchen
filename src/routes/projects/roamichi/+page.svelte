@@ -46,7 +46,7 @@
 	{/snippet}
 
 	{#snippet stack()}
-		<StackComponents names={['go', 'sveltekit', 'tailwind', 'postgresql']} />
+		<StackComponents names={['go', 'sveltekit', 'postgresql']} />
 	{/snippet}
 
 	{#snippet screenshots()}

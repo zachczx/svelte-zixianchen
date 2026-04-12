@@ -17,7 +17,7 @@
 	{/snippet}
 
 	{#snippet stack()}
-		<StackComponents names={['go', 'templ', 'tailwind', 'stytch']} />
+		<StackComponents names={['go', 'templ', 'stytch']} />
 	{/snippet}
 
 	{#snippet problem()}

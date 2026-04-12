@@ -13,7 +13,7 @@
 			><h3 class="pb-4 text-center font-serif text-5xl font-bold text-[#38bdf8] lg:text-7xl">BTOnomics</h3></a
 		>{/snippet}
 	{#snippet stack()}
-		<StackComponents names={['astro', 'tailwind', 'pagefind']} />
+		<StackComponents names={['astro', 'pagefind']} />
 	{/snippet}
 
 	{#snippet problem()}
