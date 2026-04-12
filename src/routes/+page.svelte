@@ -101,8 +101,8 @@
 				<div class="col-span-2 mb-4 space-y-8">
 					<p>
 						I've been tinkering on the web since 2000. It started with Frontpage, XHTML, and PHP. My stack now looks
-						more like <span class="text-base-content/85 font-mono text-[1.05em] font-medium">Go, TypeScript,</span> and
-						a bit of <span class="text-base-content/85 font-mono text-[1.05em] font-medium">Zig</span>.
+						more like <span class="text-base-content/85 font-mono text-[1.05em] font-black">Go, TypeScript,</span> and a
+						bit of <span class="text-base-content/85 font-mono text-[1.05em] font-black">Zig</span>.
 					</p>
 					<p>
 						Lately making a deliberate effort to write organic, free-range code. Incredibly tempting to do it

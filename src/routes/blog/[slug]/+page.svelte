@@ -30,12 +30,11 @@
 		<p>{data.readingTime} min read</p>
 	</div>
 	<div class="flex items-center gap-0.5">
-		<MaterialSymbolsSubdirectoryArrowRightRounded class="size-[0.9em]" /><span
-			>{data.metadata.tags.join(', ')}</span>
+		<MaterialSymbolsSubdirectoryArrowRightRounded class="size-[0.9em]" /><span>{data.metadata.tags.join(', ')}</span>
 	</div>
 </div>
 <article
-	class="prose prose-a:font-semibold prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:text-orange-700 prose-blockquote:my-8 prose-blockquote:ms-8 prose-code:font-['Fira_Code_Variable'] prose-pre:p-0 mt-6 w-screen px-3 sm:px-6 md:max-w-none lg:mt-10 lg:max-w-5xl xl:w-5xl xl:px-14">
+	class="prose prose-a:font-semibold prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:text-orange-700 prose-blockquote:my-8 prose-blockquote:ms-8 prose-code:font-mono prose-pre:p-0 mt-6 w-screen px-3 sm:px-6 md:max-w-none lg:mt-10 lg:max-w-5xl xl:w-5xl xl:px-14">
 	{#if content}
 		{@const Component = content}
 		<Component />
