@@ -2,7 +2,7 @@
 	import Nav from '$lib/Nav.svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
 	import { descriptions } from '$lib/ProjectDescriptions';
-	import DashboardIcon from '~icons/material-symbols/dashboard-2-outline';
+	import HomeIcon from '~icons/material-symbols/home-outline';
 	import ProgressIcon from '~icons/material-symbols/progress-activity';
 	import ArchiveIcon from '~icons/material-symbols/archive-outline';
 
@@ -17,8 +17,8 @@
 	<aside class="text-base-content/70 z-2 row-span-2 hidden content-start border-2 border-red-300/0 px-1 lg:grid">
 		<a href="/#projects"
 			><h4 class="flex items-center gap-4 px-2 py-2 font-bold">
-				<DashboardIcon class="size-[1.3em]" />
-				All Projects
+				<HomeIcon class="size-[1.3em]" />
+				Home
 			</h4></a>
 		<h4 class="mt-8 flex items-center gap-4 px-2 py-2 font-bold">
 			<ProgressIcon class="size-[1.3em]" />Ongoing
