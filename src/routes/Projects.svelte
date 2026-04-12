@@ -4,7 +4,7 @@
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
 	import Rinku from '$lib/logos/rinku-logo.svg?dataurl';
 	import Wronged from '$lib/logos/wronged-logo.svg?dataurl';
-	import Scrabble from '$lib/assets/james-t-zevadYfX56Q-unsplash.webp';
+	import AbbreviationMain from '$lib/screenshots/abbreviation-main.webp';
 	import Rank from '$lib/assets/sigmund-R401qwThw7w-unsplash.webp';
 	import Blackboard from '$lib/assets/thomas-t-OPpCbAAKWv8-unsplash.webp';
 	import Home from '$lib/assets/20180317_141704.webp';
@@ -15,6 +15,9 @@
 	import Chat from '$lib/assets/volodymyr-hryshchenko-V5vqWC9gyEU-unsplash.webp';
 	import WashingMachine from '$lib/assets/washing-machine.webp';
 	import CubbyLogo from '$lib/assets/cubby-logo.webp';
+	import RoamichiLogo from '$lib/logos/roamichi-logo.svg?dataurl';
+	import RoamichiMain from '$lib/screenshots/roamichi-main.webp';
+	import CubbyDashboard from '$lib/screenshots/cubby/dashboard.png';
 	import VisibilityIcon from '~icons/material-symbols/visibility-outline';
 	import VisibilityOffIcon from '~icons/material-symbols/visibility-off-outline';
 
@@ -87,6 +90,13 @@
 	<img src={CubbyLogo} alt="Cubby" class="mb-2 h-28 justify-self-center hover:saturate-100" />
 {/snippet}
 
+{#snippet roamichiTitle()}
+	<div class="flex items-center gap-4">
+		<img src={RoamichiLogo} alt="Roamichi" class="h-10" />
+		<h3 class="font-inter text-4xl font-extrabold text-[#31452e]">Roamichi</h3>
+	</div>
+{/snippet}
+
 {#snippet wrongedTitle()}
 	<img src={Wronged} alt="Wronged" class="mb-2 h-10 justify-self-center hover:saturate-100" />
 {/snippet}
@@ -120,16 +130,13 @@
 		</button>
 	</div>
 	<div id="project-grid" class="grid w-full justify-items-center gap-4 lg:grid-cols-2 xl:grid-cols-3">
-		{@render card('/projects/abbreviation', Scrabble, 'center center', abbreviationTitle, 'Abbreviation/acronym search')}
-		{@render card('/projects/appraize', Rank, 'center center', appraizeTitle, 'Drop & drop ranking')}
+		{@render card('/projects/cubby', CubbyDashboard, 'center top', cubbyTitle, 'Home admin & activity tracker')}
+		{@render card('/projects/roamichi', RoamichiMain, 'center center', roamichiTitle, 'Trip management & travel planner')}
+		{@render card('/projects/abbreviation', AbbreviationMain, 'center center', abbreviationTitle, 'Abbreviation/acronym search')}
 		{@render card('/projects/apptitude', Blackboard, 'center center', apptitudeTitle, 'Tech-related upskilling')}
-		{@render card('/projects/btonomics', Home, 'center center', btonomicsTitle, 'Home renovation blog for budget folks')}
-		{@render card('/projects/cancelninja', Piggy, 'center 50%', cancelninjaTitle, 'SaaS & Dark Pattern tracker')}
-		{@render card('/projects/grumplr', Chat, 'center center', grumplrTitle, 'Reddit-lite style bulletin board')}
-		{@render card('/projects/meetrics', Calculator, 'center 20%', meetricsTitle, 'Meeting cost calculator')}
-		{@render card('/projects/rinku', Clips, 'center center', rinkuTitle, 'URL shortener')}
-		{@render card('/projects/cubby', WashingMachine, 'center 30%', cubbyTitle, 'Home admin & activity tracker')}
 		{@render card('/projects/wronged', Bot, 'center 40%', wrongedTitle, 'Products, Problems, UX Chatbot')}
+		{@render card('/projects/btonomics', Home, 'center center', btonomicsTitle, 'Home renovation blog for budget folks')}
+
 	</div>
 </main>
 
@@ -137,5 +144,12 @@
 	#project-grid > a {
 		aspect-ratio: 1;
 		width: 100%;
+	}
+
+	@media (min-width: 1024px) {
+		#project-grid > a:first-child {
+			grid-row: span 2;
+			aspect-ratio: auto;
+		}
 	}
 </style>
