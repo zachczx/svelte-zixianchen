@@ -37,9 +37,9 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={AbbreviationMain} alt="Abbreviation app" class="rounded-xl" />
-			<enhanced:img src={AbbreviationAll} alt="Abbreviation app" class="rounded-xl" />
-			<enhanced:img src={AbbreviationSearch} alt="Abbreviation app" class="rounded-xl" />
+			<enhanced:img src={AbbreviationMain} alt="Abbreviation app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={AbbreviationAll} alt="Abbreviation app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={AbbreviationSearch} alt="Abbreviation app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 		</div>
 	{/snippet}
 

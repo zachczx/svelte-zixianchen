@@ -13,8 +13,8 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={meetricsScreenshotMain} alt="Meetrics" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={meetricsScreenshotAdd2} alt="Meetrics" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={meetricsScreenshotMain} alt="Meetrics" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={meetricsScreenshotAdd2} alt="Meetrics" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 		</div>
 	{/snippet}
 	{#snippet stack()}

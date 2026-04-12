@@ -37,11 +37,11 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={apptitudeScreenshotMain} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={apptitudeScreenshotMain2} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={apptitudeScreenshotMain3} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={apptitudeScreenshotWatch} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={apptitudeScreenshotGuides} alt="Apptitude" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={apptitudeScreenshotMain} alt="Apptitude" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={apptitudeScreenshotMain2} alt="Apptitude" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={apptitudeScreenshotMain3} alt="Apptitude" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={apptitudeScreenshotWatch} alt="Apptitude" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={apptitudeScreenshotGuides} alt="Apptitude" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 		</div>
 	{/snippet}
 </ProjectEntry>

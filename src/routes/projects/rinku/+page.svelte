@@ -19,8 +19,8 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={rinkuScreenshotLanding} alt="Rinku" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={rinkuScreenshotShortener} alt="Rinku" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={rinkuScreenshotLanding} alt="Rinku" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={rinkuScreenshotShortener} alt="Rinku" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 		</div>
 	{/snippet}
 

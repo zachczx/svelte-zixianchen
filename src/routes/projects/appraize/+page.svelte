@@ -24,11 +24,11 @@
 
 	{#snippet screenshots()}
 		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={AppraizeScreenshotMain} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={AppraizeScreenshotWide} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={AppraizeScreenshotSaved} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={AppraizeScreenshotLock} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
-			<enhanced:img src={AppraizeScreenshotUpload} alt="Appraize app" class="border-neutral/20 rounded-xl border" />
+			<enhanced:img src={AppraizeScreenshotMain} alt="Appraize app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={AppraizeScreenshotWide} alt="Appraize app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={AppraizeScreenshotSaved} alt="Appraize app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={AppraizeScreenshotLock} alt="Appraize app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+			<enhanced:img src={AppraizeScreenshotUpload} alt="Appraize app" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
 		</div>
 	{/snippet}
 
