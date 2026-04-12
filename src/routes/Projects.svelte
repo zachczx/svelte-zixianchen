@@ -4,7 +4,7 @@
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
 	import Rinku from '$lib/logos/rinku-logo.svg?dataurl';
 	import Wronged from '$lib/logos/wronged-logo.svg?dataurl';
-	import AbbreviationMain from '$lib/screenshots/abbreviation-main.webp';
+	import AbbreviationMain from '$lib/screenshots/abbreviation/main-cropped.webp';
 	import Rank from '$lib/assets/sigmund-R401qwThw7w-unsplash.webp';
 	import Blackboard from '$lib/assets/thomas-t-OPpCbAAKWv8-unsplash.webp';
 	import Home from '$lib/assets/20180317_141704.webp';
@@ -57,7 +57,7 @@
 {/snippet}
 
 {#snippet btonomicsTitle()}
-	<h3 class="pb-1 font-serif text-2xl font-bold text-[#38bdf8] lg:text-4xl">BTOnomics</h3>
+	<h3 class="pb-1 font-serif text-2xl font-bold text-[#6b7e56] lg:text-4xl">BTOnomics</h3>
 {/snippet}
 
 {#snippet cancelninjaTitle()}
