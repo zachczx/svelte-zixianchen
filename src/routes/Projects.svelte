@@ -11,7 +11,7 @@
 	import Piggy from '$lib/assets/piggy2.webp';
 	import Clips from '$lib/assets/tamanna-rumee-vn4dC0yFtg8-unsplash.webp';
 	import Calculator from '$lib/assets/charlesdeluvio-GlavtG-umzE-unsplash.webp';
-	import Bot from '$lib/assets/p1omnigames02_cute_robot_cartoon-inspired_round_face_friendly_e_2958fa92-efd2-41a0-b179-f04c25daea92.webp';
+	import WrongedMain from '$lib/screenshots/wronged-main.webp';
 	import Chat from '$lib/assets/volodymyr-hryshchenko-V5vqWC9gyEU-unsplash.webp';
 	import WashingMachine from '$lib/assets/washing-machine.webp';
 	import CubbyLogo from '$lib/assets/cubby-logo.webp';
@@ -131,12 +131,29 @@
 	</div>
 	<div id="project-grid" class="grid w-full justify-items-center gap-4 lg:grid-cols-2 xl:grid-cols-3">
 		{@render card('/projects/cubby', CubbyDashboard, 'center top', cubbyTitle, 'Home admin & activity tracker')}
-		{@render card('/projects/roamichi', RoamichiMain, 'center center', roamichiTitle, 'Trip management & travel planner')}
-		{@render card('/projects/abbreviation', AbbreviationMain, 'center center', abbreviationTitle, 'Abbreviation/acronym search')}
+		{@render card(
+			'/projects/roamichi',
+			RoamichiMain,
+			'center center',
+			roamichiTitle,
+			'Trip management & travel planner',
+		)}
+		{@render card(
+			'/projects/abbreviation',
+			AbbreviationMain,
+			'center center',
+			abbreviationTitle,
+			'Abbreviation/acronym search',
+		)}
 		{@render card('/projects/apptitude', ApptitudeMain, 'center center', apptitudeTitle, 'Tech-related upskilling')}
-		{@render card('/projects/wronged', Bot, 'center 40%', wrongedTitle, 'Products, Problems, UX Chatbot')}
-		{@render card('/projects/btonomics', Home, 'center center', btonomicsTitle, 'Home renovation blog for budget folks')}
-
+		{@render card('/projects/wronged', WrongedMain, 'left center', wrongedTitle, 'Products, Problems, UX Chatbot')}
+		{@render card(
+			'/projects/btonomics',
+			Home,
+			'center center',
+			btonomicsTitle,
+			'Home renovation blog for budget folks',
+		)}
 	</div>
 </main>
 
