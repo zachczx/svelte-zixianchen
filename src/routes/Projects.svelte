@@ -96,11 +96,11 @@
 		{href}
 		class="group grid w-full content-stretch overflow-hidden rounded-md"
 		style="background:url({bg}); background-size: cover; background-position: {pos};">
-		<figure class="grid h-full w-full content-center justify-items-center">
-			<figcaption
-				class="{showBg
-					? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
-					: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
+		<figure
+			class="{showBg
+				? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
+				: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
+			<figcaption>
 				{@render title()}
 				<div class="text-base-content">{caption}</div>
 			</figcaption>
@@ -111,17 +111,13 @@
 <main class="grid w-full justify-self-center text-center">
 	<div class="mb-0 flex w-full items-end gap-2">
 		<h3 class="mb-2 grow text-start text-4xl font-bold">Side Projects</h3>
-		<label class="flex cursor-pointer items-end gap-2 pt-2 pb-2 text-sm font-medium">
+		<button onclick={() => (showBg = !showBg)} class="cursor-pointer pb-2" aria-label="Toggle background images">
 			{#if showBg}
 				<VisibilityIcon class="size-[1.5em]" />
 			{:else}
 				<VisibilityOffIcon class="size-[1.5em]" />
 			{/if}
-			<input
-				type="checkbox"
-				class="toggle toggle-sm text-base-100 border-gray-400 bg-gray-600 checked:border-white checked:bg-white checked:text-gray-500"
-				bind:checked={showBg} />
-		</label>
+		</button>
 	</div>
 	<div id="project-grid" class="grid w-full justify-items-center gap-4 lg:grid-cols-2 xl:grid-cols-3">
 		{@render card('/projects/abbreviation', Scrabble, 'center center', abbreviationTitle, 'Abbreviation/acronym search')}
