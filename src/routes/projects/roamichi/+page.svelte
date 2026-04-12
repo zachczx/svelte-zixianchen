@@ -46,7 +46,7 @@
 	{/snippet}
 
 	{#snippet stack()}
-		<StackComponents names={['sveltekit', 'drizzle', 'tailwind', 'coolify', 'postgresql']} />
+		<StackComponents names={['go', 'sveltekit', 'tailwind', 'postgresql']} />
 	{/snippet}
 
 	{#snippet screenshots()}
@@ -66,14 +66,15 @@
 
 	{#snippet built()}
 		<p class="mb-4">
-			Trip management app that tracks flights, hotels, weather, and destinations. Uses LLMs to parse itineraries and
+			Trip management app that tracks flights, hotels, activities, and destinations. Uses LLMs to parse itineraries and
 			receipts, so a user uploads a confirmation email and it auto-fills flight times, booking references, hotel
-			addresses.
+			addresses. Also has currency conversion and country info (health advisories, power outlets, culture tips,
+			local greetings).
 		</p>
 
 		<p>
 			Built custom location service that consolidates geo data from multiple sources (cities, countries, coordinates,
-			population). Go backend following idiomatic project structure. PWA with Android app via CapacitorJS.
+			population). Go API with PostgreSQL. PWA with Android app via CapacitorJS.
 		</p>
 	{/snippet}
 </ProjectEntry>
