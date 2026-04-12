@@ -1,7 +1,8 @@
 <script lang="ts">
-	let { data } = $props();
+	import MaterialSymbolsSubdirectoryArrowRightRounded from '~icons/material-symbols/subdirectory-arrow-right-rounded';
 	import dayjs from 'dayjs';
 
+	let { data } = $props();
 	let content = $derived(data.content);
 </script>
 
@@ -12,14 +13,26 @@
 	{/if}
 </svelte:head>
 <h1 class="px-3 py-1 text-2xl font-black sm:px-6 xl:px-14 xl:text-5xl">{data.metadata.title}</h1>
-<div class="text-medium text-base-content/60 flex items-center gap-4 px-3 sm:px-6 xl:px-14">
-	<span>{dayjs(data.metadata.date).format('D MMM YYYY')}</span>
-	•
+<div
+	class="text-base-content/62 flex items-center gap-6 px-3 font-mono text-sm font-medium tracking-tight sm:px-6 xl:px-14">
+	<div class="flex items-center gap-0.5">
+		<MaterialSymbolsSubdirectoryArrowRightRounded class="size-[0.9em]" /><span
+			>{dayjs(data.metadata.date).format('D MMM YYYY')}</span>
+	</div>
 	{#if data.metadata.date_updated}
-		<span class="ms-2">(Updated: {dayjs(data.metadata.date_updated).format('D MMM YYYY')})</span>•
+		<div class="flex items-center gap-0.5">
+			<MaterialSymbolsSubdirectoryArrowRightRounded class="size-[0.9em]" /><span
+				>Updated {dayjs(data.metadata.date_updated).format('D MMM YYYY')}</span>
+		</div>
 	{/if}
-
-	<p>{data.readingTime} min read</p>
+	<div class="flex items-center gap-0.5">
+		<MaterialSymbolsSubdirectoryArrowRightRounded class="size-[0.9em]" />
+		<p>{data.readingTime} min read</p>
+	</div>
+	<div class="flex items-center gap-0.5">
+		<MaterialSymbolsSubdirectoryArrowRightRounded class="size-[0.9em]" /><span
+			>{data.metadata.tags.join(', ')}</span>
+	</div>
 </div>
 <article
 	class="prose prose-a:font-semibold prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:text-orange-700 prose-blockquote:my-8 prose-blockquote:ms-8 prose-code:font-['Fira_Code_Variable'] prose-pre:p-0 mt-6 w-screen px-3 sm:px-6 md:max-w-none lg:mt-10 lg:max-w-5xl xl:w-5xl xl:px-14">
@@ -28,12 +41,6 @@
 		<Component />
 	{/if}
 </article>
-<div class="text-base-content/50 flex items-center gap-4 px-3 pt-10 sm:px-6 lg:pt-20 xl:px-14">
-	<div>Tags:</div>
-	<div class="flex items-center gap-2">
-		{#each data.metadata.tags as tag}<span class="border-neutral/40 border px-2 py-0.5">{tag}</span>{/each}
-	</div>
-</div>
 
 <!-- Prevents vite from removing it when tree shaking -->
 <span class="line highlighted add remove diff hidden"></span>
