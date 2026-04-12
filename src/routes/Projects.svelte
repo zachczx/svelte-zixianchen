@@ -1,12 +1,12 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import apptitudeLogo from '$lib/assets/green-logo.webp?w=182&enhanced';
+	import apptitudeLogo from '$lib/assets/apptitude-logo.webp?w=182&enhanced';
 	import Meetrics from '$lib/logos/meetrics.svg?dataurl';
 	import Rinku from '$lib/logos/rinku-logo.svg?dataurl';
 	import Wronged from '$lib/logos/wronged-logo.svg?dataurl';
 	import AbbreviationMain from '$lib/screenshots/abbreviation/main-cropped.webp';
 	import Rank from '$lib/assets/sigmund-R401qwThw7w-unsplash.webp';
-	import Blackboard from '$lib/assets/thomas-t-OPpCbAAKWv8-unsplash.webp';
+	import ApptitudeMain from '$lib/screenshots/apptitude/main.png';
 	import Home from '$lib/assets/20180317_141704.webp';
 	import Piggy from '$lib/assets/piggy2.webp';
 	import Clips from '$lib/assets/tamanna-rumee-vn4dC0yFtg8-unsplash.webp';
@@ -53,7 +53,7 @@
 {/snippet}
 
 {#snippet apptitudeTitle()}
-	<enhanced:img src={apptitudeLogo} alt="Apptitude Logo" class="brightness-[0.70] saturate-150"></enhanced:img>
+	<enhanced:img src={apptitudeLogo} alt="Apptitude Logo"></enhanced:img>
 {/snippet}
 
 {#snippet btonomicsTitle()}
@@ -133,7 +133,7 @@
 		{@render card('/projects/cubby', CubbyDashboard, 'center top', cubbyTitle, 'Home admin & activity tracker')}
 		{@render card('/projects/roamichi', RoamichiMain, 'center center', roamichiTitle, 'Trip management & travel planner')}
 		{@render card('/projects/abbreviation', AbbreviationMain, 'center center', abbreviationTitle, 'Abbreviation/acronym search')}
-		{@render card('/projects/apptitude', Blackboard, 'center center', apptitudeTitle, 'Tech-related upskilling')}
+		{@render card('/projects/apptitude', ApptitudeMain, 'center center', apptitudeTitle, 'Tech-related upskilling')}
 		{@render card('/projects/wronged', Bot, 'center 40%', wrongedTitle, 'Products, Problems, UX Chatbot')}
 		{@render card('/projects/btonomics', Home, 'center center', btonomicsTitle, 'Home renovation blog for budget folks')}
 
