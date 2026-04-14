@@ -14,22 +14,22 @@
 </svelte:head>
 <h1 class="px-3 py-1 text-2xl font-black sm:px-6 xl:px-14 xl:text-5xl">{data.metadata.title}</h1>
 <div
-	class="text-base-content/62 flex items-center gap-6 px-3 font-mono text-sm font-medium tracking-tight sm:px-6 xl:px-14">
-	<div class="flex items-center gap-0.5">
+	class="text-base-content/62 grid gap-1 px-3 font-mono text-sm font-medium tracking-tight sm:px-6 lg:flex lg:items-center lg:gap-6 xl:px-14">
+	<div class="flex items-baseline gap-0.5 lg:items-center">
 		<MaterialSymbolsSubdirectoryArrowRightRounded class="size-[0.9em]" /><span
 			>{dayjs(data.metadata.date).format('D MMM YYYY')}</span>
 	</div>
 	{#if data.metadata.date_updated}
-		<div class="flex items-center gap-0.5">
+		<div class="flex items-baseline gap-0.5 lg:items-center">
 			<MaterialSymbolsSubdirectoryArrowRightRounded class="size-[0.9em]" /><span
 				>Updated {dayjs(data.metadata.date_updated).format('D MMM YYYY')}</span>
 		</div>
 	{/if}
-	<div class="flex items-center gap-0.5">
+	<div class="flex items-baseline gap-0.5 lg:items-center">
 		<MaterialSymbolsSubdirectoryArrowRightRounded class="size-[0.9em]" />
 		<p>{data.readingTime} min read</p>
 	</div>
-	<div class="flex items-center gap-0.5">
+	<div class="flex items-baseline gap-0.5 lg:items-center">
 		<MaterialSymbolsSubdirectoryArrowRightRounded class="size-[0.9em]" /><span>{data.metadata.tags.join(', ')}</span>
 	</div>
 </div>
