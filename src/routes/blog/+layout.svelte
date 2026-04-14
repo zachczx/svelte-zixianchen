@@ -1,8 +1,10 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import ZXC from '$lib/assets/zixianchen-logo.webp?w=200&enhanced';
+	import { codeSnippets } from '../code-snippets';
 
 	let { children }: { children: Snippet } = $props();
+
+	const codeText = codeSnippets.filter((s) => s !== '').join(' ');
 </script>
 
 <svelte:head>
@@ -13,10 +15,30 @@
 	<div id="container" class="z-10 grid min-h-dvh justify-center py-6 xl:w-5xl">
 		<div class="lg:max-w-5xl">
 			<a href="/" class="flex justify-center pt-8 pb-12" aria-label="logo">
-				<enhanced:img src={ZXC} alt="" class="justify-self-center" style="view-transition-name: logo" />
+				<div
+					class="code-z h-24 w-24 overflow-hidden bg-slate-900 lg:size-48"
+					style="view-transition-name: logo"
+					aria-hidden="true">
+					<div class="code-fill font-mono">{codeText}</div>
+				</div>
 			</a>
 			{@render children()}
 		</div>
 		<div class="mt-auto pt-10 text-center text-xs md:text-sm">© Zixian Chen</div>
 	</div>
 </div>
+
+<style>
+	.code-z {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 25% 80%, 100% 80%, 100% 100%, 0% 100%, 0% 80%, 75% 20%, 0% 20%);
+	}
+
+	.code-fill {
+		font-size: 0.4em;
+		line-height: 1.3;
+		word-break: break-all;
+		width: 100%;
+		height: 100%;
+		color: var(--color-primary-content);
+	}
+</style>
