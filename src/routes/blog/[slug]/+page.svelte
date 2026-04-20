@@ -1,5 +1,5 @@
 <script lang="ts">
-	import MaterialSymbolsSubdirectoryArrowRightRounded from '~icons/material-symbols/subdirectory-arrow-right-rounded';
+	import TagIcon from '~icons/material-symbols/sell-outline';
 	import dayjs from 'dayjs';
 
 	let { data } = $props();
@@ -13,24 +13,21 @@
 	{/if}
 </svelte:head>
 <h1 class="px-3 py-1 font-fraunces text-2xl font-extrabold sm:px-6 sm:text-3xl lg:text-4xl xl:px-14 xl:text-5xl xl:font-black">{data.metadata.title}</h1>
-<div
-	class="text-base-content/62 grid gap-1 px-3 font-mono text-sm font-medium tracking-tight sm:px-6 lg:flex lg:items-center lg:gap-6 xl:px-14">
-	<div class="flex items-baseline gap-0.5 lg:items-center">
-		<MaterialSymbolsSubdirectoryArrowRightRounded class="size-[0.9em]" /><span
-			>{dayjs(data.metadata.date).format('D MMM YYYY')}</span>
+<div class="text-base-content/50 px-3 font-mono text-sm tracking-tight sm:px-6 xl:px-14">
+	<div class="flex flex-wrap items-baseline gap-x-1.5">
+		<span class="uppercase">{dayjs(data.metadata.date).format('D MMM YYYY')}</span>
+		{#if data.metadata.date_updated}
+			<span class="uppercase">[++ {dayjs(data.metadata.date_updated).format('D MMM YYYY')}]</span>
+		{/if}
+		<span class="text-base-content/30">/</span>
+		<span>{data.readingTime} min read</span>
 	</div>
-	{#if data.metadata.date_updated}
-		<div class="flex items-baseline gap-0.5 lg:items-center">
-			<MaterialSymbolsSubdirectoryArrowRightRounded class="size-[0.9em]" /><span
-				>Updated {dayjs(data.metadata.date_updated).format('D MMM YYYY')}</span>
-		</div>
-	{/if}
-	<div class="flex items-baseline gap-0.5 lg:items-center">
-		<MaterialSymbolsSubdirectoryArrowRightRounded class="size-[0.9em]" />
-		<p>{data.readingTime} min read</p>
-	</div>
-	<div class="flex items-baseline gap-0.5 lg:items-center">
-		<MaterialSymbolsSubdirectoryArrowRightRounded class="size-[0.9em]" /><span>{data.metadata.tags.join(', ')}</span>
+	<div class="mt-1 flex flex-wrap items-center gap-x-1.5">
+		<TagIcon class="size-[1em]" />
+		{#each data.metadata.tags as tag, i}
+			{#if i > 0}<span class="text-base-content/30">/</span>{/if}
+			<span>{tag}</span>
+		{/each}
 	</div>
 </div>
 <article
@@ -40,6 +37,7 @@
 		<Component />
 	{/if}
 </article>
+<div class="text-base-content/30 mt-10 px-3 text-center font-mono text-xs tracking-widest sm:px-6 xl:px-14">— END OF POST —</div>
 
 <!-- Prevents vite from removing it when tree shaking -->
 <span class="line highlighted add remove diff hidden"></span>
