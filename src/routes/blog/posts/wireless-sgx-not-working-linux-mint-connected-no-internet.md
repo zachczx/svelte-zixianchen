@@ -1,8 +1,8 @@
 ---
 title: 'Debugging Wireless@SGx on Linux Mint With Claude'
-description: 'Wireless@SGx authenticated fine on Linux Mint but TCP was silently blocked. After hours of wrong DNS fixes, cloning a working device MAC solved it.'
+description: 'Wireless@SGx authenticated fine on Linux Mint but TCP was silently blocked. After hours of wrong DNS fixes, setting NetworkManager to use a stable random MAC instead of the hardware address solved it.'
 date: '2026-04-14'
-date_updated: ''
+date_updated: '2026-04-20'
 tags:
   - Linux
   - Mint
@@ -16,24 +16,60 @@ slug: 'wireless-sgx-not-working-linux-mint-connected-no-internet'
 
 I spent quite a bit of time trying to get Wireless@SGx working on my Linux Mint 22.2 laptop. Connecting should've taken a few minutes, but it turned into a multi-hour debugging session with Claude Opus open in one terminal and increasingly desperate commands in another.
 
-The actual fix ended up being two lines, and everything I tried before that was wrong.
+The whole fix is two nmcli commands and a reconnect.
 
 I'm writing this down mostly because when I was searching for help, hardly anything showed up for Linux-related content, and the few pages were either [problem-free](https://harishpillay.com/2025/01/20/wirelesssgx-for-linux-2025-update/) or old stuff, when we still had to [use scripts](https://github.com/zerotypic/wasg-register). So hopefully this saves you the afternoon I lost.
+
+## The Problem
+
+My laptop authenticated to Wireless@SGx, got a DHCP lease, and could even ping the internet. But every TCP connection was silently dropped, so browsers, curl, and DNS queries all timed out. My phone on the same network worked fine.
+
+## TLDR
+
+Linux Mint's NetworkManager uses your real hardware MAC on enterprise WiFi, while Windows and Android randomize by default. SGx's backend had never seen the hardware MAC go through a first-connection promotion flow, so it silently blocked TCP. The fix is one command:
+
+```bash
+nmcli con mod "Wireless@SGx" wifi.cloned-mac-address stable
+nmcli con down "Wireless@SGx" && nmcli con up "Wireless@SGx"
+```
+
+# The Longer Form
 
 ## The Setup
 
 - **OS:** Linux Mint 22.2 Cinnamon
 - **WirelessSGx Provider:** Singtel & M1
 
-Quick context if you're not from Singapore: Wireless@SGx is the current iteration of Singapore's free public WiFi. It uses WPA2 Enterprise with PEAP/MSCHAPv2, so once you register on [IMDA's portal](https://eservice.imda.gov.sg/wirelessSGx) (which is quite buggy with adblocks, so remember to disable it) you get seamless auto-connect at every hotspot.
+Quick context if you're not from Singapore: Wireless@SGx is the current iteration of Singapore's free public WiFi. It uses WPA2 Enterprise with PEAP/MSCHAPv2, so once you register on [IMDA's portal](https://eservice.imda.gov.sg/wirelessSGx) you get seamless auto-connect at every hotspot.
 
 On my Android phone it's quite seamless when you connect via SIM, not so much for my laptop. [IMDA's guides](https://www.imda.gov.sg/how-we-can-help/wireless-at-sg/chrome-setup-guide) were pretty much useless.
 
 ## What Made This So Confusing
 
-The maddening part was that everything _looked_ like it was working.
+The maddening part was that everything looked like it was working.
 
-I registered on [IMDA's portal](https://eservice.imda.gov.sg/wirelessSGx) (which is quite buggy with adblocks, so remember to disable it), put in my SGx credentials, set the provider domain, and NetworkManager showed a green checkmark. `wpa_cli status` showed a perfectly healthy session: WPA2-Enterprise completed, 802.1X port authorized, EAP succeeded, TLS negotiated, MSCHAPv2 phase 2 done. I'm no networking expert, just a sysadmin wannabe, and this looked like I was online.
+I registered on [IMDA's portal](https://eservice.imda.gov.sg/wirelessSGx), put in my SGx credentials, set the provider domain, and NetworkManager showed a green checkmark. `wpa_cli status` showed a perfectly healthy session: WPA2-Enterprise completed, 802.1X port authorized, EAP succeeded, TLS negotiated, MSCHAPv2 phase 2 done. I'm no networking expert, just a sysadmin wannabe, and this looked like I was online:
+
+```
+bssid=e8:10:98:93:dc:c2
+freq=2412
+ssid=Wireless@SGx
+id=0
+mode=station
+wifi_generation=6
+pairwise_cipher=CCMP
+group_cipher=CCMP
+key_mgmt=WPA2/IEEE 802.1X/EAP
+wpa_state=COMPLETED
+ip_address=10.130.12.34
+Supplicant PAE state=AUTHENTICATED
+suppPortStatus=Authorized
+EAP state=SUCCESS
+selectedMethod=25 (EAP-PEAP)
+eap_tls_version=TLSv1.2
+EAP TLS cipher=AES256-GCM-SHA384
+EAP-PEAPv0 Phase2 method=MSCHAPV2
+```
 
 DHCP worked too. I had a lease, a default gateway, and very strangely `ping 1.1.1.1` came back at ~10ms with zero packet loss:
 
@@ -83,11 +119,20 @@ Here's the rough progression:
 
 - **Test whether TCP actually works.** Testing raw TCP should've been our first step, and Claude suggested it after the dnscrypt-proxy confusion. It reframed the entire problem. `curl --max-time 5 http://1.1.1.1`, plain HTTP to a raw IP with no DNS involved, timed out. Same with HTTPS, same with `nc` to any port on any host. Meanwhile ping still worked perfectly. Every single TCP connection from my laptop was being silently dropped. I'd spent hours trying to fix DNS when the problem was that TCP itself was broken across the board.
 
-- **Rule out local causes.** Claude had me check firewall (`ufw status`: inactive), iptables (policy ACCEPT, no rules), nftables (empty ruleset). Everything on my end was wide open. Also confirmed the laptop was using its real hardware MAC with randomization off.
+- **Rule out local causes.** Claude had me check firewall (`ufw status`: inactive), iptables (policy ACCEPT, no rules), nftables (empty ruleset). Everything on my end was wide open. Also confirmed the laptop was using its real hardware MAC with randomization off. The 802.1X config looked standard:
+
+  ```
+  802-1x.eap:                  peap
+  802-1x.identity:             essa-MPXR0Gc7339@m1net.com.sg
+  802-1x.anonymous-identity:   --
+  802-1x.ca-cert:              --
+  802-1x.domain-suffix-match:  rinoa.m1net.com.sg
+  802-1x.phase2-auth:          mschapv2
+  ```
 
 - **tcpdump.** Watched the wire while running curl. SYN packets left my laptop cleanly but the return was complete silence. The network was just swallowing my TCP packets.
 
-- **TCP Fast Open.** Claude spotted `tfo cookiereq` in the tcpdump output, which is a Linux kernel optimization that some old network equipment chokes on. It's enabled by default on Linux but _not_ on Android, so it would perfectly explain why the phone worked and the laptop didn't. Claude suggested disabling it, but I never got to test it because the actual fix came from a different suggestion in that same message.
+- **TCP Fast Open.** Claude spotted `tfo cookiereq` in the tcpdump output, which is a Linux kernel optimization that some old network equipment chokes on. It's enabled by default on Linux but _not_ on Android, so it would perfectly explain why the phone worked and the laptop didn't. Claude suggested disabling it, but it was later ruled out entirely. After the dual-boot discovery (more on that below), I cloned my Windows installation's randomized MAC onto Linux, and it worked! This was the same Linux TCP stack with TFO enabled and on a different MAC. If TFO were the culprit, switching MACs wouldn't have changed anything.
 
 ## The Fix: Clone My Phone's MAC
 
@@ -104,22 +149,46 @@ nmcli con down "Wireless@SGx" && nmcli con up "Wireless@SGx"
 
 Everything worked instantly. TCP connections went through, DNS resolved, browsers loaded pages, `nmcli networking connectivity check` returned `full`. All with zero other changes from default. All the DoT, DoH, dnscrypt-proxy, custom DNS I'd spent hours on was completely unnecessary.
 
-The `nmcli con mod` change is persistent, saved to the connection file and applied automatically every time you connect.
+The `nmcli con mod` change is persistent, saved to the connection file and applied automatically every time you connect. This worked, but it meant I couldn't use both devices on SGx at the same time, and I still didn't really understand why. Then I remembered my laptop dual-boots.
+
+## The Dual-Boot Clue
+
+My laptop runs Windows and Linux Mint on the same hardware, so my wife can still use Windows and I'll use Linux. After the phone MAC clone worked, I logged in to Windows on the same machine and realized it was connecting alright to Wireless@SGx. I initially assumed that the hardware MAC was already "promoted" via Windows and Linux should therefore inherit that state. But Claude asked me to try cloning the Windows MAC onto Linux, and that worked too.
+
+That meant Windows wasn't using the hardware MAC either. Windows 10/11 randomizes WiFi MAC addresses per-network by default. Android randomizes per-SSID by default. Neither had ever connected to SGx using my actual hardware MAC `e4:c7:67:4c:89:fc`. Linux Mint's NetworkManager was the only OS using the bare hardware address. The hardware MAC had simply never been through any first-connection promotion flow on SGx's backend. To SGx, it was an unknown device.
+
+## The Real Fix
+
+Once I understood the problem was "Linux is the only OS using the real MAC," the fix was obvious: tell Linux to do what Windows and Android already do. NetworkManager supports a `stable` mode for MAC cloning that generates a deterministic random MAC based on the SSID and machine ID. It's consistent across reconnects (so SGx sees the same device every time) but different from the hardware address:
+
+```bash
+nmcli con mod "Wireless@SGx" wifi.cloned-mac-address stable
+nmcli con down "Wireless@SGx" && nmcli con up "Wireless@SGx"
+```
+
+This worked immediately. On Linux Mint I just needed to set
+
+```
+Network Connections > [Select Network] > Wifi > Cloned Mac Address > Stable
+```
+
+No need to clone another device's MAC (although that was ez), I can also use both devices at once.
+
+`stable` generates the MAC from a hash of the connection ID, SSID, and `/etc/machine-id`. It's unique per machine per network, survives reboots, and won't change unless you delete and recreate the connection profile.
 
 ## A Few Things to Know
 
-- **Don't use both devices on SGx at the same time.** Same MAC on the same L2 network causes ARP conflicts. Use one or the other. Your phone can be on mobile data while the laptop is on SGx.
+- **Why this only happens on Linux.** NetworkManager's default MAC randomization behavior randomizes for open and PSK networks but uses the real hardware MAC for 802.1X/Enterprise connections. The assumption is that some enterprise deployments rely on MAC-based access control. Windows and Android randomize regardless of network type, which is why they work on SGx out of the box and Linux doesn't.
 - **PEAP re-auth isn't affected.** RADIUS uses your credentials, not the MAC, so authentication keeps working fine.
-- **If Android rotates the MAC**, you'll need to update the cloned value. In practice it's stable unless you "forget" and re-add the network.
-- **If you want to try your real MAC later:**
+- **If you're curious whether your real MAC works now:**
   ```bash
   nmcli con mod "Wireless@SGx" wifi.cloned-mac-address ""
   ```
-  It's possible the restricted state eventually clears on its own, worth retrying every few weeks.
+  Worth trying every few weeks. The restricted state might clear on its own eventually.
 
 ## Claude Was Genuinely Useful Here
 
-I want to be honest about what happened, because the reality is Claude did most of the thinking. To be honest, I'm quite sure Gemini Pro 3.1 wouldn't have made it even halfway before it declared the problem unsolvable.
+I want to be honest about what happened, because the reality is Claude did most of the thinking. I doubt most AI assistants would have stuck with this through twelve wrong turns without giving up or looping.
 
 The other thing is that Claude follows your framing wherever you take it. I was locked into "this is a DNS problem" for hours because `ping 1.1.1.1` worked and `ping google.com` didn't. Every test I asked for was a DNS test. Claude went along with it and helped me try increasingly elaborate DNS workarounds without ever saying "hey, have you actually checked that TCP works at all?" It eventually got there, but only after I'd installed packages, modified system config, and spent a good hour going deeper into the wrong direction. An experienced sysadmin would've stopped me way earlier.
 
@@ -133,9 +202,10 @@ And if you're ever debugging "connects but no internet," here's the order that C
 4. **`curl --max-time 5 http://1.1.1.1`: does TCP work?** (this is the one I skipped)
 5. `nslookup google.com 1.1.1.1`: does DNS work?
 6. `curl http://google.com`: does the whole stack work?
+7. `tcpdump -i <iface> -n 'host 1.1.1.1'`: if any of the above fail in a confusing way, watch the wire. If you see SYNs leaving with nothing coming back, the problem is upstream of your machine and no local config change will fix it.
 
 Step 4 is the one that would've reframed the whole problem in the first 10 minutes. If TCP itself is broken, no amount of DNS workarounds will help, and that's exactly what I wasted my afternoon learning the hard way.
 
 ## Closing
 
-Wireless@SGx works fine on Linux once you're on a MAC that the network considers promoted. If you're getting the exact symptoms I had (authenticates, gets DHCP, ICMP works, TCP doesn't), skip the DNS rabbit hole and clone a known-working device's MAC. The whole fix is two `nmcli` commands and a reconnect.
+Wireless@SGx works fine on Linux once you stop using the bare hardware MAC. If you're getting the exact symptoms I had (authenticates, gets DHCP, ICMP works, TCP doesn't), skip the DNS rabbit hole and set `wifi.cloned-mac-address stable`. The whole fix is two nmcli commands and a reconnect.
