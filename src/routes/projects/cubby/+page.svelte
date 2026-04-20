@@ -2,19 +2,19 @@
 	import AlignCenterText from '$lib/AlignCenterText.svelte';
 	import ProjectEntry from '$lib/ProjectEntry.svelte';
 	import StackComponents from '$lib/StackComponents.svelte';
-	import dashboard from '$lib/screenshots/cubby/v2/dashboard.png?enhanced&w=400';
-	import calendar from '$lib/screenshots/cubby/v2/calendar.png?enhanced&w=400';
-	import tracker from '$lib/screenshots/cubby/v2/tracker.png?enhanced&w=400';
-	import trackerStats from '$lib/screenshots/cubby/v2/tracker2.png?enhanced&w=400';
-	import quota from '$lib/screenshots/cubby/v2/quota.png?enhanced&w=400';
-	import recap from '$lib/screenshots/cubby/v2/recap.png?enhanced&w=400';
-	import market from '$lib/screenshots/cubby/v2/market.png?enhanced&w=400';
-	import marketPrices from '$lib/screenshots/cubby/v2/market-prices.png?enhanced&w=400';
-	import gym from '$lib/screenshots/cubby/v2/gym.png?enhanced&w=400';
-	import gymExercises from '$lib/screenshots/cubby/v2/gym-exercises.png?enhanced&w=400';
-	import gymWorkout from '$lib/screenshots/cubby/v2/gym-workout.png?enhanced&w=400';
-	import stopwatch from '$lib/screenshots/cubby/v2/stopwatch.png?enhanced&w=400';
-	import stopwatch2 from '$lib/screenshots/cubby/v2/stopwatch2.png?enhanced&w=400';
+	import dashboard from '$lib/screenshots/cubby/dashboard.png?enhanced&w=400';
+	import calendar from '$lib/screenshots/cubby/calendar.png?enhanced&w=400';
+	import tracker from '$lib/screenshots/cubby/tracker.png?enhanced&w=400';
+	import trackerStats from '$lib/screenshots/cubby/tracker2.png?enhanced&w=400';
+	import quota from '$lib/screenshots/cubby/quota.png?enhanced&w=400';
+	import recap from '$lib/screenshots/cubby/recap.png?enhanced&w=400';
+	import market from '$lib/screenshots/cubby/market.png?enhanced&w=400';
+	import marketPrices from '$lib/screenshots/cubby/market-prices.png?enhanced&w=400';
+	import gym from '$lib/screenshots/cubby/gym.png?enhanced&w=400';
+	import gymExercises from '$lib/screenshots/cubby/gym-exercises.png?enhanced&w=400';
+	import gymWorkout from '$lib/screenshots/cubby/gym-workout.png?enhanced&w=400';
+	import stopwatch from '$lib/screenshots/cubby/stopwatch.png?enhanced&w=400';
+	import stopwatch2 from '$lib/screenshots/cubby/stopwatch2.png?enhanced&w=400';
 	import CubbyLogo from '$lib/assets/cubby-logo.webp';
 </script>
 
