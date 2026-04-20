@@ -23,7 +23,7 @@ const mdsvexOptions: MdsvexOptions = {
 				html = escapeSvelte(
 					await codeToHtml(code, {
 						lang: 'text',
-						theme: 'github-dark-default',
+						theme: 'rose-pine-moon',
 						transformers: [
 							transformerNotationHighlight({ matchAlgorithm: 'v3' }),
 							transformerNotationDiff({ matchAlgorithm: 'v3' }),
@@ -35,7 +35,7 @@ const mdsvexOptions: MdsvexOptions = {
 				html = escapeSvelte(
 					await codeToHtml(code, {
 						lang: 'js',
-						theme: 'github-dark-default',
+						theme: 'rose-pine-moon',
 						transformers: [
 							transformerNotationHighlight({ matchAlgorithm: 'v3' }),
 							transformerNotationDiff({ matchAlgorithm: 'v3' }),
