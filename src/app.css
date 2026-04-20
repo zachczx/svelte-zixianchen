@@ -126,8 +126,8 @@
 		}
 
 		&:not(:has(> span)) {
-			color: darkslategray !important;
-			background-color: rgba(197, 214, 232, 0.4) !important;
+			color: #3d1510 !important;
+			background-color: rgba(249, 56, 39, 0.08) !important;
 		}
 	}
 
