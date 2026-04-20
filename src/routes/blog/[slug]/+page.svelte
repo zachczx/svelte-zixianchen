@@ -30,6 +30,18 @@
 		{/each}
 	</div>
 </div>
+{#if data.headings.length > 0}
+	<nav class="text-base-content/50 mt-6 border-y border-base-content/10 px-3 py-4 font-mono text-sm tracking-tight sm:px-6 xl:px-14">
+		<div class="text-base-content/80 mb-2 text-xs font-bold uppercase tracking-widest">Contents</div>
+		<ol class="grid gap-1">
+			{#each data.headings as heading, i}
+				<li class={heading.level === 3 ? 'ml-4' : ''}>
+					<a href="#{heading.slug}" class="group hover:text-base-content inline-flex items-baseline gap-1 transition-colors"><span class="w-3 shrink-0 text-center text-[0.7em] opacity-0 transition-opacity group-hover:opacity-100">❯</span>{heading.text}</a>
+				</li>
+			{/each}
+		</ol>
+	</nav>
+{/if}
 <article
 	class="prose font-fraunces prose-a:font-semibold prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:text-orange-700 prose-blockquote:my-8 prose-blockquote:ms-8 prose-h2:text-2xl prose-h2:font-bold prose-p:leading-relaxed prose-li:leading-relaxed prose-p:my-6 prose-code:font-mono prose-pre:px-0 prose-pre:py-3 mt-6 w-screen px-3 sm:px-6 lg:mt-10 lg:max-w-5xl xl:w-5xl xl:px-14">
 	{#if content}

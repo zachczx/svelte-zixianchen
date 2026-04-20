@@ -7,6 +7,23 @@ interface MdsvexModule {
 	metadata: BlogPostMetadata;
 }
 
+function extractHeadings(content: string): { text: string; slug: string; level: number }[] {
+	const cleanContent = content.replace(/^---[\s\S]*?---/, '');
+	const headingRegex = /^(#{2,3})\s+(.+)$/gm;
+	const headings: { text: string; slug: string; level: number }[] = [];
+	let match;
+	while ((match = headingRegex.exec(cleanContent)) !== null) {
+		const level = match[1].length;
+		const text = match[2].replace(/[`*_~\[\]]/g, '').trim();
+		const slug = text
+			.toLowerCase()
+			.replace(/[^\w\s-]/g, '')
+			.replace(/\s+/g, '-');
+		headings.push({ text, slug, level });
+	}
+	return headings;
+}
+
 function calculateReadingTime(content: string): number {
 	const wordsPerMinute = 200;
 	// Remove frontmatter
@@ -32,8 +49,9 @@ export const load: PageLoad = async ({ params }) => {
 	const post = posts[postPath];
 	const rawContent = postsRaw[postPath];
 	const readingTime = calculateReadingTime(rawContent);
+	const headings = extractHeadings(rawContent);
 
-	return { content: post.default, metadata: post.metadata, readingTime };
+	return { content: post.default, metadata: post.metadata, readingTime, headings };
 };
 
 export const entries: EntryGenerator = () => {
