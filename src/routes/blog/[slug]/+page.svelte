@@ -12,7 +12,7 @@
 		<meta name="description" content={data.metadata.description} />
 	{/if}
 </svelte:head>
-<h1 class="px-3 py-1 text-2xl font-black sm:px-6 xl:px-14 xl:text-5xl">{data.metadata.title}</h1>
+<h1 class="px-3 py-1 font-fraunces text-2xl font-extrabold sm:px-6 sm:text-3xl lg:text-4xl xl:px-14 xl:text-5xl xl:font-black">{data.metadata.title}</h1>
 <div
 	class="text-base-content/62 grid gap-1 px-3 font-mono text-sm font-medium tracking-tight sm:px-6 lg:flex lg:items-center lg:gap-6 xl:px-14">
 	<div class="flex items-baseline gap-0.5 lg:items-center">
@@ -34,7 +34,7 @@
 	</div>
 </div>
 <article
-	class="prose prose-a:font-semibold prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:text-orange-700 prose-blockquote:my-8 prose-blockquote:ms-8 prose-code:font-mono prose-pre:p-0 mt-6 w-screen px-3 sm:px-6 md:max-w-none lg:mt-10 lg:max-w-5xl xl:w-5xl xl:px-14">
+	class="prose font-fraunces prose-a:font-semibold prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:text-orange-700 prose-blockquote:my-8 prose-blockquote:ms-8 prose-h2:text-2xl prose-h2:font-bold prose-p:leading-relaxed prose-li:leading-relaxed prose-p:my-6 prose-code:font-mono prose-pre:px-0 prose-pre:py-3 mt-6 w-screen px-3 sm:px-6 lg:mt-10 lg:max-w-5xl xl:w-5xl xl:px-14">
 	{#if content}
 		{@const Component = content}
 		<Component />
@@ -44,3 +44,20 @@
 <!-- Prevents vite from removing it when tree shaking -->
 <span class="line highlighted add remove diff hidden"></span>
 <!-- Prevents vite from removing it when tree shaking -->
+
+<style>
+	article {
+		counter-reset: para;
+	}
+
+	article > :global(p) {
+		counter-increment: para;
+	}
+
+	article > :global(p)::before {
+		content: counter(para) '.\00a0\00a0';
+		font-family: var(--font-mono);
+		font-size: 0.85em;
+		opacity: 0.75;
+	}
+</style>
