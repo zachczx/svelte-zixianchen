@@ -12,6 +12,7 @@
 		<meta name="description" content={data.metadata.description} />
 	{/if}
 </svelte:head>
+<div class="px-3 pb-3 sm:px-6 xl:px-14"><a href="/blog" class="text-base-content/50 hover:text-base-content font-mono text-sm tracking-tight transition-colors">[back to main]</a></div>
 <h1 class="px-3 py-1 font-fraunces text-2xl font-extrabold sm:px-6 sm:text-3xl lg:text-4xl xl:px-14 xl:text-5xl xl:font-black">{data.metadata.title}</h1>
 <div class="text-base-content/50 px-3 font-mono text-sm tracking-tight sm:px-6 xl:px-14">
 	<div class="flex flex-wrap items-baseline gap-x-1.5">
