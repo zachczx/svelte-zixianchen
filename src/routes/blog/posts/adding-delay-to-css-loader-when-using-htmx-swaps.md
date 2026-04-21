@@ -3,6 +3,7 @@ title: 'Adding Delay to a CSS Loader When Using HTMX Swaps'
 description: "I wanted to solve white flashes flickering when using HTMX's hx-indicator."
 date: '2024-08-10'
 date_updated: '2024-08-11'
+category: 'Tech'
 tags:
   - HTMX
   - UX

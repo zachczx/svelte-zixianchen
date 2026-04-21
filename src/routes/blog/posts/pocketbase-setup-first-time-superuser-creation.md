@@ -3,6 +3,7 @@ title: 'Pocketbase Setup: First Time Superuser Creation'
 description: 'Kept forgetting how to do it.'
 date: '2025-06-15'
 date_updated: ''
+category: 'Tech'
 tags:
   - Coolify
   - Pocketbase

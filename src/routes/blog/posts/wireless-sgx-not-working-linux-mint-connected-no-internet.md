@@ -3,6 +3,7 @@ title: 'Debugging Wireless@SGx on Linux Mint With Claude'
 description: 'Wireless@SGx authenticated fine on Linux Mint but TCP was silently blocked. After hours of wrong DNS fixes, setting NetworkManager to use a stable random MAC instead of the hardware address solved it.'
 date: '2026-04-14'
 date_updated: '2026-04-20'
+category: 'Tech'
 tags:
   - Linux
   - Mint

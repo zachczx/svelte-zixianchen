@@ -3,6 +3,7 @@ title: 'Troubleshooting Astro 5 Upgrade: $$Picture Error'
 description: 'Upgraded to Astro 5 and it gave me issues with the Picture component.'
 date: '2024-12-13'
 date_updated: ''
+category: 'Tech'
 tags:
   - Astro
   - $$Picture

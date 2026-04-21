@@ -3,6 +3,7 @@ title: 'Migrating Sveltekit Static Site (adapter-static) from Cloudflare Pages t
 description: 'Going from Cloudflare Pages to Workers'
 date: '2025-9-29'
 date_updated: ''
+category: 'Tech'
 tags:
   - Cloudflare
   - Sveltekit
