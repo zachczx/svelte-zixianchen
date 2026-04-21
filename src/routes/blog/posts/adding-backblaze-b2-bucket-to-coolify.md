@@ -3,6 +3,7 @@ title: 'Adding Backblaze B2 Bucket to Coolify'
 description: "Config to add a Backblaze B2 bucket to Coolify's S3 storages for backup."
 date: '2024-09-24'
 date_updated: ''
+category: 'Tech'
 tags:
   - Coolify
   - Backblaze

@@ -3,6 +3,7 @@ title: 'Using Postgres on Coolify and Internal Database URL'
 description: 'I wrote how to do Postgres on Coolify, using the internal database URL.'
 date: '2024-06-29'
 date_updated: ''
+category: 'Tech'
 tags:
   - Coolify
   - Postgres
