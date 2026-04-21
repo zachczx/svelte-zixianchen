@@ -71,4 +71,15 @@
 		font-size: 0.85em;
 		opacity: 0.75;
 	}
+
+	article :global(ul),
+	article :global(ol) {
+		padding-left: 3em;
+	}
+
+	article :global(li)::marker {
+		font-family: var(--font-mono);
+		font-size: 0.85em;
+		opacity: 0.75;
+	}
 </style>
