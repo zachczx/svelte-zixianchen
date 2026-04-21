@@ -17,17 +17,18 @@ I've talked about most of this with people individually over the years, but beca
 
 ## How do I assess people?
 
-There's no easy answer, but here's what I've gathered so far.
+There's no easy answer, but here's what I've gathered so far. This isn't an exhaustive list, and it'll probably evolve over time, but these are the things I find myself coming back to.
 
 - **Impact.** Good, big things happen around you in a way that's measurable and hard to miss. The surface area of what you've affected is clearly huge, and outcomes jump out without anyone needing to squint.
 - **Sharpness in thinking.** People who can grasp something quickly, think through multiple possibilities at once, weigh risks and long-term implications, and zoom in and out between the details and the big picture without losing the thread. Logical, pragmatic, fast.
-- **Drive and execution.** Whatever lands on your plate, you do it well and things run smoothly. You push through difficulty even when it's hard and boring and nobody's watching.
 - **Competency and technical mastery.** You know your stuff, and I can trust your judgement, which means I worry about one less thing. I want to know what people outside our org are doing, how we compare, what you've been learning lately, and honestly whether you enjoy this stuff enough to tinker with it outside office hours, because all of that tells me something real about where you are.
+- **Breadth.** People who can connect dots across issues, see links that others don't, and adapt solutions from one domain to a completely different one.
+- **Drive and execution.** Whatever lands on your plate, you do it well and things run smoothly. You push through difficulty even when it's hard and boring and nobody's watching.
 - **Working with people.** I prioritize people who can build bridges while still keeping healthy tension in the room, because too little and we all just get scared of pushing back or saying something uncomfortable, and too much and nobody trusts each other anymore.
 - **Innovation.** Thinking outside the box, making use of scarce resources, pushing the boundaries of what's possible, and then actually challenging old policies or ways of thinking. Pushing culture forward is much harder than just delivering on a work stream or two.
-- **Breadth.** People who can connect dots across issues, see links that others don't, and adapt solutions from one domain to a completely different one.
 - **Management.** For managers, there's the additional layer of management itself, which is its own skillset entirely. Are deliverables on track, can you manage morale, make sure people show up and contribute, handle the admin, vet work, staff your bosses appropriately, manage expectations upward and unhappiness in every direction?
 - **Leadership.** Separate from management. Can you inspire people, foster a real culture, create a psychologically safe environment, develop your people into better versions of themselves than when they walked through the door? Can you model good values in a way that actually influences the people around you, like genuinely caring about value for the citizen or taxpayer even on a tiny project worth a few thousand dollars?
+- **Heart.** This one sounds cheesy, but it's the most important to me. Do you do what you do for the goodness of the public, for the citizen, for the country? It's usually intrinsic, and if that fundamental motivation is wrong, then everything else becomes very difficult to sustain in this line of work.
 
 ## All work is equal, but some work is more equal
 
