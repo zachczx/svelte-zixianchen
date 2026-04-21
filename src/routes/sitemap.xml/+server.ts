@@ -15,7 +15,9 @@ export const GET: RequestHandler = async () => {
 	try {
 		const posts: Record<string, PostModule> = import.meta.glob('../blog/posts/*.md', { eager: true });
 		for (const path in posts) {
-			blogSlugs.push(posts[path].metadata.slug);
+			if (posts[path].metadata.published) {
+				blogSlugs.push(posts[path].metadata.slug);
+			}
 		}
 	} catch (err) {
 		throw error(500, 'Could not load data for param values.');
