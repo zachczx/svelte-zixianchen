@@ -17,7 +17,9 @@ export const descriptions: ProjectDescriptions = {
 	appraize: {
 		name: 'Appraize',
 		subtitle: 'Drag & Drop Ranking',
+		tldr: 'Drag-and-drop ranking tool with session management, CSV bulk import, and auto-save. Replaced an Excel-based HR ranking workflow.',
 		url: 'https://appraize.zixian.dev/',
+		archived: true,
 	},
 	apptitude: {
 		name: 'Apptitude',
@@ -32,37 +34,49 @@ export const descriptions: ProjectDescriptions = {
 	cancelninja: {
 		name: 'Cancel Ninja',
 		subtitle: 'SaaS & Dark Pattern tracker',
+		tldr: 'Subscription tracker with calendar view and alerts, built to expose dark pattern cancellation flows. Subscription tracking absorbed into Cubby.',
 		url: 'https://cancelninja.com',
+		archived: true,
 	},
 	grumplr: {
 		name: 'Grumplr',
 		subtitle: 'Reddit-lite style bulletin board',
+		tldr: 'Bulletin board with threaded discussions, live chat via SSE, Keycloak auth, and full-text search. Built to learn Go web fundamentals with hand-written SQL.',
 		url: 'https://grumplr.com',
+		archived: true,
 	},
 	meetrics: {
 		name: 'Meetrics',
 		subtitle: 'Meeting cost calculator',
+		tldr: 'Live meeting cost calculator based on attendee count and seniority levels.',
 		url: 'https://meetrics.zixian.dev/',
+		archived: true,
 	},
 	rinku: {
 		name: 'Rinku',
 		subtitle: 'URL shortener',
+		tldr: 'URL shortener with admin panel using a custom domain to avoid the spam-link look of bit.ly and tinyurl.',
 		url: 'https://zczx.org',
-	},
-	roamichi: {
-		name: 'Roamichi',
-		subtitle: 'Holiday management system',
-		url: 'https://roamichi.com',
+		archived: true,
 	},
 	cubby: {
 		name: 'Cubby',
-		subtitle: 'Home admin & activity tracker',
+		subtitle: 'Personal life admin & travel planner',
 		url: 'https://cubby.dev',
 	},
 	wronged: {
 		name: 'Wronged',
 		subtitle: 'Products, Problems, UX Chatbot',
+		tldr: 'Domain-specific chatbots for product management, UX strategy, and problem statements using OpenRouter APIs with custom system prompts.',
 		url: 'https://getwronged.com',
+		archived: true,
+	},
+	roamichi: {
+		name: 'Roamichi',
+		subtitle: 'Trip management & travel planner',
+		tldr: 'Trip management app with LLM-powered itinerary parsing, flight and hotel tracking, and a country info service. Absorbed into Cubby.',
+		url: 'https://roamichi.com',
+		archived: true,
 	},
 	'btonomics-wordpress': {
 		name: 'BTOnomics (Wordpress)',

@@ -1,14 +1,10 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import apptitudeLogo from '$lib/assets/apptitude-logo.webp?w=182&enhanced';
-	import Wronged from '$lib/logos/wronged-logo.svg?dataurl';
 	import AbbreviationMain from '$lib/screenshots/abbreviation/main-cropped.webp';
 	import ApptitudeMain from '$lib/screenshots/apptitude/main.png';
 	import Home from '$lib/assets/20180317_141704.webp';
-	import WrongedMain from '$lib/screenshots/wronged-main.webp';
 	import CubbyLogo from '$lib/assets/cubby-logo.webp';
-	import RoamichiLogo from '$lib/logos/roamichi-logo.svg?dataurl';
-	import RoamichiMain from '$lib/screenshots/roamichi-main.webp';
 	import CubbyDashboard from '$lib/screenshots/cubby/dashboard.png';
 	import VisibilityIcon from '~icons/material-symbols/visibility-outline';
 	import VisibilityOffIcon from '~icons/material-symbols/visibility-off-outline';
@@ -52,17 +48,6 @@
 	<img src={CubbyLogo} alt="Cubby" class="mb-2 h-28 justify-self-center hover:saturate-100" />
 {/snippet}
 
-{#snippet roamichiTitle()}
-	<div class="flex items-center gap-4">
-		<img src={RoamichiLogo} alt="Roamichi" class="h-10" />
-		<h3 class="font-inter text-4xl font-extrabold text-[#31452e]">Roamichi</h3>
-	</div>
-{/snippet}
-
-{#snippet wrongedTitle()}
-	<img src={Wronged} alt="Wronged" class="mb-2 h-10 justify-self-center hover:saturate-100" />
-{/snippet}
-
 {#snippet card(href: string, bg: string, pos: string, title: Snippet, caption: string)}
 	<a
 		{href}
@@ -92,14 +77,7 @@
 		</button>
 	</div>
 	<div id="project-grid" class="grid w-full justify-items-center gap-4 lg:grid-cols-2 xl:grid-cols-3">
-		{@render card('/projects/cubby', CubbyDashboard, 'center top', cubbyTitle, 'Home admin & activity tracker')}
-		{@render card(
-			'/projects/roamichi',
-			RoamichiMain,
-			'center center',
-			roamichiTitle,
-			'Trip management & travel planner',
-		)}
+		{@render card('/projects/cubby', CubbyDashboard, 'center top', cubbyTitle, 'Personal life admin & travel planner')}
 		{@render card(
 			'/projects/abbreviation',
 			AbbreviationMain,
@@ -108,7 +86,6 @@
 			'Abbreviation/acronym search',
 		)}
 		{@render card('/projects/apptitude', ApptitudeMain, 'center center', apptitudeTitle, 'Tech-related upskilling')}
-		{@render card('/projects/wronged', WrongedMain, 'left center', wrongedTitle, 'Products, Problems, UX Chatbot')}
 		{@render card(
 			'/projects/btonomics',
 			Home,
