@@ -44,7 +44,8 @@
 	</nav>
 {/if}
 <article
-	class="prose max-w-none font-fraunces prose-a:font-semibold prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:text-orange-700 prose-blockquote:my-8 prose-blockquote:ms-8 prose-h2:text-2xl prose-h2:font-bold prose-p:leading-relaxed prose-li:leading-relaxed prose-p:my-6 prose-code:font-mono prose-pre:px-0 prose-pre:py-3 mt-6 w-full px-3 sm:px-6 lg:mt-10 xl:px-14">
+	class="prose max-w-none font-fraunces prose-a:font-semibold prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:text-orange-700 prose-blockquote:my-8 prose-blockquote:ms-8 prose-h2:text-2xl prose-h2:font-bold prose-p:leading-relaxed prose-li:leading-relaxed prose-p:my-6 prose-code:font-mono prose-pre:px-0 prose-pre:py-3 mt-6 w-full px-3 sm:px-6 lg:mt-10 xl:px-14"
+	class:numbered-paras={data.metadata.category === 'Work'}>
 	{#if content}
 		{@const Component = content}
 		<Component />
@@ -57,15 +58,15 @@
 <!-- Prevents vite from removing it when tree shaking -->
 
 <style>
-	article {
+	article.numbered-paras {
 		counter-reset: para;
 	}
 
-	article > :global(p) {
+	article.numbered-paras > :global(p) {
 		counter-increment: para;
 	}
 
-	article > :global(p)::before {
+	article.numbered-paras > :global(p)::before {
 		content: counter(para) '.\00a0\00a0';
 		font-family: var(--font-mono);
 		font-size: 0.85em;
