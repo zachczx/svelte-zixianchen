@@ -8,6 +8,7 @@ Rules and patterns for writing in Zixian's voice. These apply to blog posts, ess
 2. **No staccato.** Don't stack short punchy sentences back to back. A short sentence lands because the ones around it are longer.
 3. **No "it's not X, it's Y" constructions.** Don't frame things as negation-then-correction. Say what something is, not what it isn't.
 4. **Write in the positive.** State what things are, what happened, what works. Avoid defining by absence or negation.
+5. **No gerund stacking.** Don't pile up -ing words in a single clause. "Highlighting how this underscores the importance of fostering" is the worst case. Restructure so each verb has a subject and does one thing.
 
 ## Rhythm
 
