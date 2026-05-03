@@ -11,15 +11,13 @@ published: false
 slug: 'how-ai-changed-the-way-i-write'
 ---
 
-I write a fair amount and I care about the quality of writing. At work, where we write papers, submissions, I put a lot of thought into writing simply, concisely, and persuasively. Sometimes it's my own words, sometimes it's editing prose that others submit to me. Outside work, I wrote tons of social science papers, and nowadays I mostly write blog posts of me thinking out loud.
+I write a fair amount and I care about the quality of writing. At work, where we write papers, submissions, I put a lot of thought into writing simply, concisely, and persuasively. Outside work, I wrote tons of social science papers, and nowadays I mostly write blog posts of me thinking out loud.
 
-Regardless, I both enjoy good writing and cringe at bad ones.
-
-Over the past year or so, something shifted in how I write, and I didn't notice it happening until it had already happened. This is me trying to work through what changed.
+Over the past year or so, something shifted in how I write. I didn't notice it happening until it had already happened. This is me trying to work through what changed.
 
 ## Everything is pivotal
 
-I find AI writing exhausting to read, with the reason usually because it treats everything like its life and death, Armageddon style. A tutorial about tweaking Claude Code, about B2B sales insights on LinkedIn gets the same weight as an essay about the meaning of life. Every paragraph reaches for significance, every transition connects to something larger, and the cumulative effect is like being lectured by someone who genuinely believes every sentence they've ever produced is the most important one.
+I find AI writing exhausting to read because it treats everything as life and death, Armageddon style. A tutorial about tweaking Claude Code, about B2B sales insights on LinkedIn gets the same weight as an essay about the meaning of life. Every paragraph reaches for significance, every transition connects to something larger, and the cumulative effect is like being lectured by someone who genuinely believes every sentence they've ever produced is the most important one.
 
 The vocabulary gives it away first. "Pivotal", "groundbreaking", "transformative", "robust", "seamless", "foster", "delve". These words eppear so often in AI output that they've become huge signs to the reader that an LLM wrote this, or at least that the writer didn't care enough to remove them. There are people maintaining actual banned word lists now, which is funny but also a bit sad.
 
@@ -43,9 +41,11 @@ So I've shifted to commas. More connectors like "and", "so", "then", "because", 
 
 ## You don't notice until you do
 
-The change happened gradually. I didn't sit down one day and decide to rewrite my style guide. I just started making small adjustments, swapping a dash for a comma here, adding a connecting phrase there, smoothing out a fragment into a clause. Each individual change was minor, and none of them felt like a concession at the time.
+The change happened gradually. I shifted my style guide gradually through small adjustments, swapping a dash for a comma here, adding a connecting phrase there, smoothing out a fragment into a clause. Each individual change was minor, and none of them felt like a concession at the time.
 
-Then at some point I noticed what I'd been doing, and once I noticed I couldn't unsee it. It's the same phenomenon as the GitHub Copilot pause in IDEs, that half-second hesitation where you stop typing and wait for the suggestion to appear before you continue. Every developer who uses Copilot does it, but most of them don't register it until someone points it out. Once you see it, you see it in every pair session, every screen share, every time someone's cursor lingers a beat too long after a line break. You can't go back to not seeing it.
+Then at some point I noticed what I'd been doing, and once I noticed I couldn't unsee it. It's the exact same phenomenon as the GitHub Copilot pause in IDEs. Every developer who uses it has that half-second hesitation where they stop typing and wait for the suggestion to appear.
+
+Most people don't register it until someone points it out. But once you see it, you catch it in every pair session, every screen share, every time someone's cursor lingers a beat too long after a line break.
 
 This is the same thing but for prose. I now catch myself checking whether a sentence sounds like something Claude would produce, and that filter runs before almost every sentence I write, automatically, whether I want it to or not. That filter didn't exist two years ago.
 
@@ -67,7 +67,7 @@ The AI register is the absence of a voice, dressed up as competence. The people 
 
 There's one style of clear, structured writing that AI almost never defaults to, and it's the academic argumentative approach. "I argue that..." followed by "First, ... Second, ... Third, ..." with a clear thesis and ordered supporting points. That tradition of prose has centuries behind it, and it actually works well for exactly the kind of structured thinking that AI is supposedly good at.
 
-But AI doesn't write that way. It reaches for journalistic polish, for marketing cadence, for the kind of inspirational closing that belongs in a TED talk. It writes to impress rather than to argue, and the result is prose that sounds confident without actually committing to a position.
+But AI doesn't write that way. It reaches for journalistic polish, for marketing cadence, for the kind of inspirational closing that belongs in a TED talk. It writes strictly to impress, producing prose that sounds confident while actively avoiding any actual commitment to a position.
 
 I think this probably reflects what the training data looks like. There's a lot more journalism, marketing copy, and blog content on the internet than there is academic argumentation, so the model weights skew toward the registers that are most represented. However, I'm speculating here, and I don't actually know enough about how training works to say this with any confidence. What I do know is that the argumentative style, the one where you state a claim and then defend it with ordered evidence, seems to have been largely passed over, and that feels like a loss.
 
@@ -77,7 +77,7 @@ Some guides I've read suggest feeding Claude your writing samples and letting it
 
 What I do instead is work through the thinking first. I'll go back and forth with Claude Code on ideas, structure, key messages, examples, and clarifying questions until I'm happy with the direction. That phase is genuinely collaborative, because the AI is good at surfacing angles I hadn't considered and pushing me to be specific about what I actually mean.
 
-Then Claude generates a draft based on everything we've discussed. And then I go through it sentence by sentence, rewriting, cutting, rearranging, and replacing anything that sounds like it came from a model rather than from me. The generated draft is a starting point, not a finished product, and most sentences don't survive contact with my editing pass intact.
+Then Claude generates a draft based on everything we've discussed. And then I go through it sentence by sentence, rewriting, cutting, rearranging, and replacing anything that sounds like it came from a model rather than from me. The generated draft serves only as a raw foundation, and most sentences don't survive contact with my editing pass.
 
 The distinction matters to me because by the time I'm done, the writing is mine. The ideas were shaped collaboratively, but the actual prose went through my hands, which means the voice stays consistent and I don't have to wonder whether a paragraph sounds off because I missed an AI-ism during a quick skim.
 
@@ -85,6 +85,6 @@ The distinction matters to me because by the time I'm done, the writing is mine.
 
 I don't have a clean ending for this, so I'll just say where I'm at.
 
-I've given up parts of my writing style that I genuinely liked because they now read as tells for something I didn't write. That feels like a small but real loss. I'm writing defensively against a tool I also depend on, which is a strange position to be in. And I can see a growing number of people moving in the opposite direction, embracing the AI register as their own, which makes things harder to navigate because human writing and AI writing are converging from both ends.
+I've given up parts of my writing style that I genuinely liked because they now read as tells for something I didn't write. That feels like a small but real loss. I'm writing defensively against a tool I also depend on, which is a strange position to be in. And I can see a growing number of people moving in the opposite direction, embracing the AI register as their own, which complicates things because human writing and AI writing are converging from both ends.
 
 I'm still adjusting and I don't know yet where this settles. I just wanted to write it down while the shift is still fresh enough that I can remember what it felt like before.
