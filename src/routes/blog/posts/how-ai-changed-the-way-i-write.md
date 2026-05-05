@@ -1,25 +1,25 @@
 ---
 title: 'How AI Changed the Way I Write'
 description: "On soulless AI prose, the writing habits I've had to abandon, and the weird mental shift of writing defensively against your own tools."
-date: '2026-05-07'
+date: '2026-05-06'
 date_updated: ''
 category: 'Tech'
 tags:
   - AI
   - Writing
-published: false
+published: true
 slug: 'how-ai-changed-the-way-i-write'
 ---
 
 I write a fair amount and I care about the quality of writing. At work, where we write papers, submissions, I put a lot of thought into writing simply, concisely, and persuasively. Outside work, I wrote tons of social science papers, and nowadays I mostly write blog posts of me thinking out loud.
 
-Over the past year or so, something shifted in how I write. I didn't notice it happening until it had already happened. This is me trying to work through what changed.
+Over the past year or so, something shifted in how I write. The change went unnoticed. This is me trying to work through what changed.
 
 ## Everything is pivotal
 
 I find AI writing exhausting to read because it treats everything as life and death, Armageddon style. A tutorial about tweaking Claude Code, about B2B sales insights on LinkedIn gets the same weight as an essay about the meaning of life. Every paragraph reaches for significance, every transition connects to something larger, and the cumulative effect is like being lectured by someone who genuinely believes every sentence they've ever produced is the most important one.
 
-The vocabulary gives it away first. "Pivotal", "groundbreaking", "transformative", "robust", "seamless", "foster", "delve". These words eppear so often in AI output that they've become huge signs to the reader that an LLM wrote this, or at least that the writer didn't care enough to remove them. There are people maintaining actual banned word lists now, which is funny but also a bit sad.
+The vocabulary gives it away first. "Pivotal", "groundbreaking", "transformative", "robust", "seamless", "foster", "delve". These words appear so often in AI output that they've become huge signs to the reader that an LLM wrote this, or at least that the writer didn't care enough to remove them. There are people maintaining actual banned word lists now, which is funny but also a bit sad.
 
 But the bigger issue is the tone itself. AI prose inflates everything. It can't just describe what happened, it has to frame what happened as part of a bigger story, as a moment of transformation. That register works maybe ten percent of the time. The rest of the time it reads like a press release for something nobody asked about.
 
@@ -41,7 +41,7 @@ So I've shifted to commas. More connectors like "and", "so", "then", "because", 
 
 ## You don't notice until you do
 
-The change happened gradually. I shifted my style guide gradually through small adjustments, swapping a dash for a comma here, adding a connecting phrase there, smoothing out a fragment into a clause. Each individual change was minor, and none of them felt like a concession at the time.
+I shifted my style guide gradually through small adjustments, swapping a dash for a comma here, adding a connecting phrase there, smoothing out a fragment into a clause. Each individual change was minor and they all felt like natural choices at the time.
 
 Then at some point I noticed what I'd been doing, and once I noticed I couldn't unsee it. It's the exact same phenomenon as the GitHub Copilot pause in IDEs. Every developer who uses it has that half-second hesitation where they stop typing and wait for the suggestion to appear.
 
@@ -59,7 +59,7 @@ The specific moves look like this: more commas where dashes or periods used to g
 
 There's a flip side to all of this that bothers me more, which is people deliberately writing like AI because they think it sounds professional.
 
-You see it in LinkedIn posts, in company memos, in internal strategy documents. The language is polished, the structure is clean, there are clear headers and bullet points and bold keywords, and the whole thing reads like someone prompted Claude and then copy-pasted the output without changing a word. Maybe they did, maybe they didn't. The point is that the AI register has become aspirational for some people, a way of signalling that you're forward-thinking, in trend, and comfortable with the tools.
+You see it in the likes of LinkedIn posts and internal strategy documents. The language is polished, the structure is clean, there are clear headers and bullet points and bold keywords, and the whole thing reads like someone prompted Claude and then copy-pasted the output without changing a word. Maybe they did, maybe they didn't. The point is that the AI register has become aspirational for some people, a way of signalling that you're forward-thinking, in trend, and comfortable with the tools.
 
 The AI register is the absence of a voice, dressed up as competence. The people who adopt it are trading whatever personality their writing had for a kind of corporate smoothness that communicates nothing beyond "I, too, have access to a chatbot." Meh.
 
@@ -77,13 +77,13 @@ Some guides I've read suggest feeding Claude your writing samples and letting it
 
 What I do instead is work through the thinking first. I'll go back and forth with Claude Code on ideas, structure, key messages, examples, and clarifying questions until I'm happy with the direction. That phase is genuinely collaborative, because the AI is good at surfacing angles I hadn't considered and pushing me to be specific about what I actually mean.
 
-Then Claude generates a draft based on everything we've discussed. And then I go through it sentence by sentence, rewriting, cutting, rearranging, and replacing anything that sounds like it came from a model rather than from me. The generated draft serves only as a raw foundation, and most sentences don't survive contact with my editing pass.
+Then Claude generates a draft based on everything we've discussed. And then I go through it sentence by sentence, to rewrite, cut, rearrange, and replace anything that sounds like it came from a model rather than from me. The generated draft serves only as a raw foundation, and most sentences don't survive contact with my editing pass.
 
 The distinction matters to me because by the time I'm done, the writing is mine. The ideas were shaped collaboratively, but the actual prose went through my hands, which means the voice stays consistent and I don't have to wonder whether a paragraph sounds off because I missed an AI-ism during a quick skim.
 
 ## Where this leaves me
 
-I don't have a clean ending for this, so I'll just say where I'm at.
+Since I lack a clean ending for this, I'll just say where I'm at.
 
 I've given up parts of my writing style that I genuinely liked because they now read as tells for something I didn't write. That feels like a small but real loss. I'm writing defensively against a tool I also depend on, which is a strange position to be in. And I can see a growing number of people moving in the opposite direction, embracing the AI register as their own, which complicates things because human writing and AI writing are converging from both ends.
 
