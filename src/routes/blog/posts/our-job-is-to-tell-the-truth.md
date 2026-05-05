@@ -1,7 +1,7 @@
 ---
 title: 'Our Job is to Tell the Truth'
 description: 'On healthy tension with management, vendors, ops, and policy people, and why the people who care enough to keep pushing are the ones this organisation needs most.'
-date: '2026-05-03'
+date: '2026-05-06'
 date_updated: ''
 category: 'Work'
 tags:
@@ -11,21 +11,15 @@ published: false
 slug: 'our-job-is-to-tell-the-truth'
 ---
 
-This is the third essay in what has become an accidental series. The first was about how I assess people. The second was about how I think about your career. This one is about the relationships outside our team, with management, vendors, ops, and policy people, and how I think we should navigate them.
-
-None of what follows should come as a surprise to anyone who has worked with me. I say this stuff out loud, in meetings, in corridors, in one-on-ones. Writing it down isn't a change in position. It's a more complete version of conversations we've already had, in a form that doesn't depend on me being in the room.
-
-I'm writing it because I think it matters to say explicitly what our mission is and why the tensions we operate in are not problems to be managed away but features of doing the job properly. Healthy tension is the point.
-
 ## The $300k website
 
 A business owner was running several government websites on a vendor contract worth around $300k a year. I'd managed Isomer platform policy in a previous role, so when I heard about this I recognised the pattern immediately and inserted myself into the conversation, uninvited, because I knew where it was heading.
 
-Isomer is a static site generator, and everyone knows it is simpler, cheaper, and more secure than a bespoke vendor arrangement for websites that don't need much more than well-organised content. The case for migrating was straightforward. The response was not.
+Isomer is a static site generator, and everyone knows it is cheaper and more secure than a bespoke vendor arrangement for websites that don't need much more than well-organised content. Not to mention it's also super simple to use. The case for migrating was straightforward. The response was not.
 
 The objections arrived one after another, and each one deserved a closer look. Their branding and design couldn't be replicated on Isomer, except their existing design was outdated and inaccessible, full of CSS animations that rendered poorly on low-end devices, and hadn't been meaningfully touched in years. They had already commissioned a UX study with a vendor and would consider migration once that concluded, which conveniently pushed the conversation about a year down the road. Their internal approval workflows needed preserving, which on examination was really about preserving familiarity rather than any genuine process requirement. The security concern about collaborators editing each other's sites dissolved once you understood that repo-level access controls made this more governable than most environments, particularly in a bureaucratic organisation where accountability structures are clear. And then there was the interactive ship tour, something the team had built and were clearly proud of, with no usage data to support it, serving an audience that would find a YouTube video faster and more useful.
 
-The thread running through all of it was that this wasn't their money. At the scale of budgets they were used to working with, $300k registered as a rounding error, and the inconvenience of switching carried more weight than the savings, which would flow elsewhere anyway. None of the objections were really about Isomer. They were about why this conversation should happen later, or never, or with someone else.
+The thread running through all of it was that this wasn't their money. At the scale of budgets they were used to working with, $300k registered as a rounding error, and the inconvenience of switching carried more weight than the savings, which would flow elsewhere anyway. The objections just masked a desire to push the conversation out a year.
 
 We pushed and were largely ignored, but we eventually made sure the right senior people had the full picture. That created pressure we couldn't generate on my own and they eventually migrated. They are now among the strongest advocates for the platform.
 
@@ -47,15 +41,15 @@ What makes this harder is that tech itself can create the appearance of good dec
 
 This is often uncomfortable and thankless. But it is what makes us genuinely useful.
 
-The money flowing through these decisions isn't the organisation's, but the public's. That's a different kind of obligation that doesn't expire when you leave the job!
+The money flowing through these decisions belongs to the public. That's a different kind of obligation that doesn't expire when you leave the job!
 
 ## The management tension: deference without knowledge is dangerous
 
 The instinct in most organisations is to defer to management. They are senior, they are busy, they have seen more than we have, and disagreeing with them carries career risk. All of that is true and none of it is a good reason to tell them what they want to hear instead of what they need to know.
 
-Management wants to make decisions and that is exactly their job. But when the information flowing up to them has been filtered, softened, or shaped to avoid discomfort, the decisions that come back down are built on foundations we helped weaken. We don't get to complain about bad direction if we contributed to the conditions that produced it.
+Management wants to make decisions and that is exactly their job. But when the information flowing up to them has been filtered or softened to avoid discomfort, the decisions that come back down are built on foundations we helped weaken. We don't get to complain about bad direction if we contributed to the conditions that produced it.
 
-The specific failure mode I see most often is omission and framing. Leaving out the part that complicates the narrative, presenting a risk as smaller than it is because the room feels like it wants to move forward, agreeing in the meeting and dissenting in the corridor afterward. All of these feel like social smoothness in the moment and they are governance failures in aggregate.
+The specific failure mode I see most often is omission and framing. People leave out the part that complicates the narrative, present a risk as smaller than it is just to keep the room moving, or agree in the meeting only to dissent in the corridor afterward. All of these feel like social smoothness in the moment and they are governance failures in aggregate.
 
 There is also a particular trap that tech teams fall into with management, which is allowing management's enthusiasm for something to substitute for proper evaluation. A senior leader hears about a new technology, gets excited, and suddenly the team is contorting itself to make the use case work rather than asking honestly whether it should. I have been in those rooms. The excitement is real and the pressure is real and the right response is still to say what you actually think.
 
@@ -111,19 +105,19 @@ Everything in this post could be read as a case for being difficult, for pushing
 
 Healthy tension is the willingness to say what you actually think, to the right people, at the right time, with enough care for the relationship to say it well rather than just say it loudly.
 
-In my view, one way to say it well rather than loudly is to frame the truth as "coming soon" rather than critique, though I can't say for sure it works. I usually bring what we saw at SNDGO and where things were kinda heading towards, not as a criticism of what was being done but as a warning about what was coming. Winter was coming... The person receiving that message perhaps isn't being told they're wrong. Instead, they're being given information by someone who has seen more of the landscape, and maybe they have somewhere to go with it. Hopefully the framing makes it easier to act on.
+In my view, one way to say it well rather than loudly is to frame the truth as "coming soon" rather than critique, though I can't say for sure it works. I usually bring what we saw at SNDGO and where things were kinda heading towards, not as a criticism of what was being done but as a warning about what was coming. Winter was coming... The person receiving that message is simply getting early intel from someone with more context. Hopefully the framing makes it easier to act on.
 
-The goal in every one of these relationships is trust, the kind that comes from giving management the real picture, holding vendors to consistent standards, grounding your pushback with ops in their actual problems, and surfacing policy gaps without making them personal.
+The goal in every one of these relationships is trust, the kind of trust that builds when you give management the real picture, hold vendors to consistent standards, ground your pushback with ops in their actual problems, and surface policy gaps without making them personal.
 
 Trust survives disagreement. Some of the most trusted people I have worked with were the ones most willing to tell me I was wrong.
 
 ## On being the people who say the uncomfortable thing
 
-We are a small team without the most prominent portfolio or the authority to always enforce what we think is right. What we have is knowledge, credibility, and the willingness to say uncomfortable things to people who would prefer not to hear them. That is enough to matter, if we choose to use it.
+We are a small team without the most prominent portfolio or the authority to always enforce what we think is right. What we have is knowledge and credibility, along with a willingness to say the uncomfortable things to people who would prefer not to hear them. That is enough to matter, if we choose to use it.
 
-I started this essay with a story about a $300k website because it captures something I want us to carry. I had no authority over that business owner. I inserted myself uninvited. I was ignored for longer than I should have been. And the outcome was better because someone was willing to be inconvenient about public money being spent badly. That is the job, in miniature.
+I started this essay with a story about a $300k website because it captures something I want us to carry. I had no authority over that business owner, but I inserted myself uninvited anyway, and then I was ignored for longer than I should have been. The outcome was better because someone was willing to be inconvenient about public money being spent badly. That is the job in a nutshell.
 
-The relationships we navigate are the work. Getting those relationships right, which means honest and productive rather than smooth and deferential, is what makes everything else possible.
+Relationships are the work. Getting those relationships right, which means honest and productive rather than smooth and deferential, is what makes everything else possible.
 
 Acquiescence is frictionless, maybe even comfortable given where we work at. In a risk-averse organisation that selects for stability, the path of least resistance is always going to be to say "ok la whatever" and move on.
 
@@ -132,7 +126,3 @@ The worth of a leader, including me, is the willingness to absorb political capi
 Sometimes the right answer is to stop pushing a specific fight, work within the constraint, defer it to a subsequent team or a later leadership moment, and move on. The obligation is to push while you can, make sure the problem is visible to the right people, leaving behind a foundation that the next try can build on.
 
 This is also where trust becomes a resource rather than an abstraction. A lot of what we push on sits in uncertain territory where the evidence is ambiguous, reasonable people disagree, and the outcome depends on who has the final call. Trust with leadership, built from being consistently right about the things you pushed on, is what tips those calls in your direction, and it is not separate from the work of speaking up. It is what makes any push more likely to land.
-
-The answer is to keep pushing. If the people who believe in doing the right thing stop generating pressure because the system resists them, the system wins by default. It doesn't need to actively defeat good ideas. It just needs everyone to get tired.
-
-So regardless of whether the blocker above you moves, keep pushing. Find the layer that will absorb it. Build the credibility that makes your push harder to ignore. This system grinds to a halt the moment the people who care stop caring enough to act.
