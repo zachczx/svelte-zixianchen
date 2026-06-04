@@ -13,7 +13,7 @@
 
 <div class="bg-base-200 relative flex w-full flex-col items-center justify-center overflow-hidden">
 	<div id="container" class="z-10 grid min-h-dvh w-full max-w-3xl justify-center py-6">
-		<div class="w-full">
+		<div class="w-full min-w-0">
 			<a href="/" class="flex justify-center pt-8 pb-12 hover:opacity-80 transition-opacity" aria-label="logo">
 				<div
 					class="code-z size-16 lg:size-20 overflow-hidden bg-slate-900"
