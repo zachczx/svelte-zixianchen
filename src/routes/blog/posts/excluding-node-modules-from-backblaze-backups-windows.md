@@ -23,23 +23,37 @@ I work mainly on my Windows desktop, mostly not WSL, which is why every path use
 
 ## The rules that worked
 
-This is the set I ended up with:
+I ended up with two versions of this, a conservative one I started with and a broader one I'm on now. Both share the same base. These four match the folder name on any drive with `skipFirstCharThenStartsWith="*"`, which is what I want since my projects are scattered across drives.
 
 ```xml
 <excludefname_rule plat="win" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith="*" contains_1="\.git\" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
 <excludefname_rule plat="win" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith="*" contains_1="\.svelte-kit\" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
-
 <excludefname_rule plat="win" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith="*" contains_1="\node_modules\" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
-
-<excludefname_rule plat="win" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith="*" contains_1="\go-build\" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
-<excludefname_rule plat="win" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith="*" contains_1="\gopls\" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
-<excludefname_rule plat="win" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith="*" contains_1="\go\pkg\mod\" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
-
 <excludefname_rule plat="win" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith="*" contains_1="\.pnpm-store\" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
-
 ```
 
-All of these go into:
+### Conservative: name each cache
+
+This was my first working set. On top of the base I named each build cache I knew about, one rule per folder. The Go module cache sits under my user profile, so it keeps the `:\Users\` anchor.
+
+```xml
+<excludefname_rule plat="win" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith="*" contains_1="\go-build\" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
+<excludefname_rule plat="win" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith="*" contains_1="\gopls\" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
+<excludefname_rule plat="win" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith=":\Users\" contains_1="\go\pkg\mod\" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
+```
+
+### Broader: exclude AppData\Local
+
+The version I'm on now. Instead of naming every cache under AppData\Local, I exclude the whole folder and list the few things I want to keep in `doesNotContain`, pipe separated. That catches go-build and gopls without me having to know their names. The Go module cache still needs its own rule since it lives under the profile but outside AppData.
+
+```xml
+<excludefname_rule plat="win" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith=":\Users\" contains_1="\AppData\Local\" contains_2="*" doesNotContain="Bookmarks|WindowsTerminal|MicrosoftStickyNotes|KeePass" endsWith="*" hasFileExtension="*" />
+<excludefname_rule plat="win" osVers="*" ruleIsOptional="t" skipFirstCharThenStartsWith=":\Users\" contains_1="\go\pkg\mod\" contains_2="*" doesNotContain="*" endsWith="*" hasFileExtension="*" />
+```
+
+For me the carve-outs are browser bookmarks, Windows Terminal, sticky notes, and KeePass. Everything else under AppData\Local is cache I can rebuild. The trade-off is that this rule is broad, so the `doesNotContain` list is the only thing standing between me and dropping something I wanted. I went this way because I was tired of finding new cache folders one at a time.
+
+Whichever set you pick, the rules go into:
 
 ```text
 C:\ProgramData\Backblaze\bzdata\bzexcluderules_editable.xml
