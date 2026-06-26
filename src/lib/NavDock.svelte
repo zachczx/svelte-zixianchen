@@ -22,16 +22,19 @@
 				label: string;
 				icon: Component;
 				iconClass?: string;
-				active:
-					| { type: 'hash'; key: string }
-					| { type: 'path'; key: string }
-					| { type: 'none' };
+				active: { type: 'hash'; key: string } | { type: 'path'; key: string } | { type: 'none' };
 		  };
 
 	const items: NavItem[] = [
 		{ kind: 'anchor', href: '/#header', label: 'Home', icon: HouseIcon, active: { type: 'hash', key: 'header' } },
 		{ kind: 'anchor', href: '/#about', label: 'About', icon: AccountIcon, active: { type: 'hash', key: 'about' } },
-		{ kind: 'anchor', href: '/#projects', label: 'Projects', icon: GridIcon, active: { type: 'hash', key: 'projects' } },
+		{
+			kind: 'anchor',
+			href: '/#projects',
+			label: 'Projects',
+			icon: GridIcon,
+			active: { type: 'hash', key: 'projects' },
+		},
 		{ kind: 'anchor', href: '/blog', label: 'Blog', icon: ArticleIcon, active: { type: 'none' } },
 		{ kind: 'divider' },
 		{ kind: 'anchor', href: '/contact', label: 'Contact', icon: MailIcon, active: { type: 'path', key: '/contact' } },

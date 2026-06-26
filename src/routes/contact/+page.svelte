@@ -79,13 +79,7 @@
 							? 'input-warning'
 							: ''} flex items-center gap-2">
 						<EnvelopeIcon class="h-4 w-4 opacity-70" />
-						<input
-							type="email"
-							name="email"
-							class="grow"
-							placeholder="Email"
-							bind:value={email}
-							required />
+						<input type="email" name="email" class="grow" placeholder="Email" bind:value={email} required />
 					</label>
 					<textarea
 						name="message"

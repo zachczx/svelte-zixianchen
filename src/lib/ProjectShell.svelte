@@ -1,0 +1,104 @@
+<script lang="ts">
+	import type { Snippet } from 'svelte';
+
+	interface StackRow {
+		role: string;
+		tools: string;
+	}
+	interface Props {
+		name: string;
+		accent?: string;
+		accentInk?: string;
+		eyebrow?: string;
+		headline: string;
+		sub?: string;
+		url?: string;
+		stack?: StackRow[];
+		removed?: string;
+		wordmark?: Snippet;
+		hero?: Snippet;
+		children: Snippet;
+	}
+	let {
+		name,
+		accent = '#f93827',
+		accentInk = accent,
+		eyebrow = '',
+		headline,
+		sub = '',
+		url = '',
+		stack = [],
+		removed = '',
+		wordmark,
+		hero,
+		children,
+	}: Props = $props();
+</script>
+
+<div class="text-base-content bg-base-200 font-inter" style="--accent: {accent}; --accent-ink: {accentInk}">
+	<!-- top bar -->
+	<div class="border-neutral/15 bg-base-100 sticky top-0 z-10 border-b">
+		<div class="text-base-content/50 mx-auto flex max-w-5xl items-center justify-between px-5 py-2.5 text-xs">
+			<a href="/#projects" class="hover:text-base-content flex items-center gap-1.5">
+				<span aria-hidden="true">&larr;</span> Projects
+			</a>
+			<span>{name}</span>
+		</div>
+	</div>
+
+	<!-- hero -->
+	<header class="mx-auto max-w-5xl px-5 pt-14 pb-12 lg:pt-20">
+		<div class="max-w-3xl">
+			{#if wordmark}{@render wordmark()}{/if}
+			{#if eyebrow}
+				<p class="mt-8 text-xs tracking-wide" style="color: var(--accent-ink)">{eyebrow}</p>
+			{/if}
+			<h1
+				class="font-inter mt-4 text-4xl leading-[1.05] font-black tracking-tight text-balance sm:text-5xl lg:text-6xl">
+				{headline}
+			</h1>
+			{#if sub}
+				<p class="text-base-content/80 mt-6 text-lg leading-relaxed">{sub}</p>
+			{/if}
+			{#if url}
+				<a
+					href={url}
+					target="_blank"
+					rel="noopener"
+					class="mt-7 inline-flex items-center gap-1.5 text-sm font-semibold"
+					style="color: var(--accent-ink)">
+					Visit site <span aria-hidden="true">&nearr;</span>
+				</a>
+			{/if}
+		</div>
+	</header>
+
+	{#if hero}
+		<div class="mx-auto max-w-5xl px-5 pb-4">{@render hero()}</div>
+	{/if}
+
+	<!-- body -->
+	<main class="mx-auto max-w-5xl px-5">{@render children()}</main>
+
+	<!-- colophon -->
+	<section class="border-neutral/15 bg-base-100 mt-20 border-t">
+		<div class="mx-auto max-w-5xl px-5 py-12">
+			{#if stack.length}
+				<p class="text-base-content/55 text-xs tracking-wide">Built with</p>
+				<dl class="mt-4 max-w-md">
+					{#each stack as row (row.role)}
+						<div class="border-neutral/10 grid grid-cols-[8rem_1fr] gap-4 border-b py-2 last:border-b-0">
+							<dt class="text-base-content/55 text-[0.7rem] font-semibold tracking-wider uppercase">
+								{row.role}
+							</dt>
+							<dd class="text-base-content/85 text-sm">{row.tools}</dd>
+						</div>
+					{/each}
+				</dl>
+			{/if}
+			{#if removed}
+				<p class="text-base-content/55 mt-4 max-w-md text-sm leading-relaxed">{removed}</p>
+			{/if}
+		</div>
+	</section>
+</div>

@@ -1,99 +1,75 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
-	import apptitudeLogo from '$lib/assets/apptitude-logo.webp?w=182&enhanced';
+	import { descriptions } from '$lib/ProjectDescriptions';
 	import AbbreviationMain from '$lib/screenshots/abbreviation/main-cropped.webp';
 	import ApptitudeMain from '$lib/screenshots/apptitude/main.png';
-	import Home from '$lib/assets/20180317_141704.webp';
-	import CubbyLogo from '$lib/assets/cubby-logo.webp';
-	import CubbyDashboard from '$lib/screenshots/cubby/dashboard.png';
-	import VisibilityIcon from '~icons/material-symbols/visibility-outline';
-	import VisibilityOffIcon from '~icons/material-symbols/visibility-off-outline';
+	import BtonomicsMain from '$lib/screenshots/btonomics/main.png';
+	import CubbyDashboard from '$lib/screenshots/cubby/dashboard.webp';
 
-	let showBg = $state(true);
+	// Retired builds, ordered so the ones that fed today's projects read first.
+	const archiveOrder = [
+		'cancelninja',
+		'roamichi',
+		'eatyourmeds',
+		'rankamate',
+		'btonomics-wordpress',
+		'appraize',
+		'grumplr',
+		'meetrics',
+		'rinku',
+		'wronged',
+	];
+	const archive = archiveOrder.map((slug) => ({ slug, ...descriptions[slug] }));
 </script>
 
-{#snippet abbreviationTitle()}
-	<h3 class="font-sans text-4xl font-extrabold text-[#0069ff] lg:flex">
-		Abbreviati<svg
-			xmlns="http://www.w3.org/2000/svg"
-			width="1em"
-			height="1em"
-			class="-mx-[0.2em] inline"
-			viewBox="0 0 24 24"
-			><g fill="none"
-				><path
-					fill="#0069ff"
-					fill-opacity=".25"
-					fill-rule="evenodd"
-					d="M12 19a7 7 0 1 0 0-14a7 7 0 0 0 0 14M10.087 7.38A5 5 0 0 1 12 7a.5.5 0 0 0 0-1a6 6 0 0 0-6 6a.5.5 0 0 0 1 0a5 5 0 0 1 3.087-4.62"
-					clip-rule="evenodd" /><path stroke="#0069ff" stroke-linecap="round" d="M20.5 20.5L17 17" /><circle
-					cx="11"
-					cy="11"
-					r="8.5"
-					stroke="#0069ff" /></g
-			></svg
-		>n
-	</h3>
-{/snippet}
-
-{#snippet apptitudeTitle()}
-	<enhanced:img src={apptitudeLogo} alt="Apptitude Logo"></enhanced:img>
-{/snippet}
-
-{#snippet btonomicsTitle()}
-	<h3 class="pb-1 font-serif text-2xl font-bold text-[#6b7e56] lg:text-4xl">BTOnomics</h3>
-{/snippet}
-
-{#snippet cubbyTitle()}
-	<img src={CubbyLogo} alt="Cubby" class="mb-2 h-28 justify-self-center hover:saturate-100" />
-{/snippet}
-
-{#snippet card(href: string, bg: string, pos: string, title: Snippet, caption: string)}
+{#snippet card(href: string, bg: string, pos: string, name: string, caption: string)}
 	<a
 		{href}
-		class="group grid w-full content-stretch overflow-hidden rounded-md"
+		aria-label={name}
+		title={caption}
+		class="group block w-full overflow-hidden border border-white/10 transition-colors hover:border-white/30"
 		style="background:url({bg}); background-size: cover; background-position: {pos};">
-		<figure
-			class="{showBg
-				? 'group-hover:bg-base-200/90 opacity-0 group-hover:opacity-100'
-				: 'bg-base-200/90 opacity-100'} grid h-full w-full content-center justify-items-center">
-			<figcaption>
-				{@render title()}
-				<div class="text-base-content">{caption}</div>
-			</figcaption>
-		</figure>
 	</a>
 {/snippet}
 
 <main class="grid w-full justify-self-center text-center">
-	<div class="mb-0 flex w-full items-end gap-2">
-		<h3 class="mb-2 grow text-start text-4xl font-bold">Side Projects</h3>
-		<button onclick={() => (showBg = !showBg)} class="cursor-pointer pb-2" aria-label="Toggle background images">
-			{#if showBg}
-				<VisibilityIcon class="size-[1.5em]" />
-			{:else}
-				<VisibilityOffIcon class="size-[1.5em]" />
-			{/if}
-		</button>
-	</div>
+	<h3 class="mb-2 text-start text-4xl font-bold">Projects</h3>
 	<div id="project-grid" class="grid w-full justify-items-center gap-4 lg:grid-cols-2 xl:grid-cols-3">
-		{@render card('/projects/cubby', CubbyDashboard, 'center top', cubbyTitle, 'Personal life admin & travel planner')}
+		{@render card('/projects/cubby', CubbyDashboard, 'center top', 'Cubby', 'A personal ERP the household runs on')}
 		{@render card(
 			'/projects/abbreviation',
 			AbbreviationMain,
 			'center center',
-			abbreviationTitle,
-			'Abbreviation/acronym search',
+			'Abbreviation',
+			'Singapore Govt acronym search',
 		)}
-		{@render card('/projects/apptitude', ApptitudeMain, 'center center', apptitudeTitle, 'Tech-related upskilling')}
+		{@render card('/projects/apptitude', ApptitudeMain, 'center center', 'Apptitude', 'Building technical intuition')}
 		{@render card(
 			'/projects/btonomics',
-			Home,
-			'center center',
-			btonomicsTitle,
-			'Home renovation blog for budget folks',
+			BtonomicsMain,
+			'center top',
+			'BTOnomics',
+			'Honest lessons from an HDB renovation',
 		)}
 	</div>
+
+	<section class="mt-20 w-full text-start lg:mt-28">
+		<h3 class="text-4xl font-bold">Graveyard</h3>
+		<p class="text-neutral-content/65 mt-3 max-w-xl">Older builds, mostly retired or folded into the ones above.</p>
+		<dl class="mt-8 border-t border-white/15">
+			{#each archive as a (a.slug)}
+				<div class="grid gap-x-6 gap-y-1 border-b border-white/15 py-4 sm:grid-cols-[11rem_1fr_auto] sm:items-baseline">
+					<dt class="font-semibold">{a.name}</dt>
+					<dd>
+						<span class="text-neutral-content/70">{a.subtitle}</span>
+						{#if a.stack}
+							<span class="text-neutral-content/45 mt-0.5 block font-mono text-xs">{a.stack}</span>
+						{/if}
+					</dd>
+					<dd class="text-neutral-content/65 font-mono text-xs sm:text-right">{a.lineage ?? ''}</dd>
+				</div>
+			{/each}
+		</dl>
+	</section>
 </main>
 
 <style>

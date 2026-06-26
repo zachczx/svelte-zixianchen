@@ -12,8 +12,16 @@
 		<meta name="description" content={data.metadata.description} />
 	{/if}
 </svelte:head>
-<div class="px-3 pb-3 sm:px-6 xl:px-14"><a href="/blog" class="text-base-content/50 hover:text-base-content font-mono text-sm tracking-tight transition-colors">[back to main]</a></div>
-<h1 class="px-3 py-1 font-fraunces text-2xl font-extrabold sm:px-6 sm:text-3xl lg:text-4xl xl:px-14 xl:text-5xl xl:font-black">{data.metadata.title}</h1>
+<div class="px-3 pb-3 sm:px-6 xl:px-14">
+	<a
+		href="/blog"
+		class="text-base-content/50 hover:text-base-content font-mono text-sm tracking-tight transition-colors"
+		>[back to main]</a>
+</div>
+<h1
+	class="px-3 py-1 font-fraunces text-2xl font-extrabold sm:px-6 sm:text-3xl lg:text-4xl xl:px-14 xl:text-5xl xl:font-black">
+	{data.metadata.title}
+</h1>
 <div class="text-base-content/50 px-3 font-mono text-sm tracking-tight sm:px-6 xl:px-14">
 	<div class="flex flex-wrap items-baseline gap-x-1.5">
 		<span class="uppercase">{dayjs(data.metadata.date).format('D MMM YYYY')}</span>
@@ -32,12 +40,18 @@
 	</div>
 </div>
 {#if data.headings.length > 0}
-	<nav class="text-base-content/50 mt-6 border-y border-base-content/10 px-3 py-4 font-mono text-sm tracking-tight sm:px-6 xl:px-14">
+	<nav
+		class="text-base-content/50 mt-6 border-y border-base-content/10 px-3 py-4 font-mono text-sm tracking-tight sm:px-6 xl:px-14">
 		<div class="text-base-content/80 mb-2 text-xs font-bold uppercase tracking-widest">Contents</div>
 		<ol class="grid gap-1">
 			{#each data.headings as heading, i}
 				<li class={heading.level === 3 ? 'ml-4' : ''}>
-					<a href="#{heading.slug}" class="group hover:text-base-content inline-flex items-baseline gap-1 transition-colors"><span class="w-3 shrink-0 text-center text-[0.7em] opacity-0 transition-opacity group-hover:opacity-100">❯</span>{heading.text}</a>
+					<a
+						href="#{heading.slug}"
+						class="group hover:text-base-content inline-flex items-baseline gap-1 transition-colors"
+						><span class="w-3 shrink-0 text-center text-[0.7em] opacity-0 transition-opacity group-hover:opacity-100"
+							>❯</span
+						>{heading.text}</a>
 				</li>
 			{/each}
 		</ol>
@@ -51,10 +65,13 @@
 		<Component />
 	{/if}
 </article>
-<div class="text-base-content/30 mt-10 px-3 text-center font-mono text-xs tracking-widest sm:px-6 xl:px-14">— END OF POST —</div>
+<div class="text-base-content/30 mt-10 px-3 text-center font-mono text-xs tracking-widest sm:px-6 xl:px-14">
+	— END OF POST —
+</div>
 
 <!-- Prevents vite from removing it when tree shaking -->
 <span class="line highlighted add remove diff hidden"></span>
+
 <!-- Prevents vite from removing it when tree shaking -->
 
 <style>

@@ -1,18 +1,30 @@
 <script>
-	import ProjectEntry from '$lib/ProjectEntry.svelte';
-	import StackComponents from '$lib/StackComponents.svelte';
-	import AbbreviationMain from '$lib/screenshots/abbreviation/main-cropped.webp?enhanced';
-	import AbbreviationList from '$lib/screenshots/abbreviation/list.png?enhanced';
+	import ProjectShell from '$lib/ProjectShell.svelte';
+	import AbbreviationMain from '$lib/screenshots/abbreviation/main-cropped.webp?enhanced&w=1100&quality=90';
+	import AbbreviationList from '$lib/screenshots/abbreviation/list.png?enhanced&w=1000&quality=90';
+
+	const stack = [
+		{ role: 'Frontend', tools: 'htmx, Templ' },
+		{ role: 'Backend', tools: 'Go, SQLite' },
+	];
 </script>
 
-<ProjectEntry id="abbreviation">
-	{#snippet title()}
-		<h3 class="text-center text-5xl font-bold tracking-tighter text-[#0069ff] lg:text-7xl">
+<ProjectShell
+	name="Abbreviation"
+	accent="#0069ff"
+	accentInk="#0052CC"
+	eyebrow="Singapore Government acronym search"
+	headline="The acronym search that forgives your typos."
+	sub="Thousands of Singapore Government abbreviations in one fast lookup, with fuzzy and phonetic matching so a rough guess still lands on the right entry."
+	url="https://abbreviation.zixian.dev"
+	{stack}>
+	{#snippet wordmark()}
+		<h2 class="font-inter text-4xl font-extrabold tracking-tighter text-[#0069ff] lg:text-5xl">
 			Abbreviati<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="1em"
 				height="1em"
-				class="-mx-[0.2em] inline"
+				class="mx-[-0.2em] inline"
 				viewBox="0 0 24 24"
 				><g fill="none"
 					><path
@@ -27,34 +39,46 @@
 						stroke="#0069ff" /></g
 				></svg
 			>n
-		</h3>
+		</h2>
 	{/snippet}
 
-	{#snippet stack()}
-		<StackComponents names={['go', 'htmx', 'sqlite', 'templ']} />
-	{/snippet}
-
-	{#snippet screenshots()}
-		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={AbbreviationMain} alt="Abbreviation landing" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
-			<enhanced:img src={AbbreviationList} alt="Abbreviation list" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+	{#snippet hero()}
+		<div class="border-neutral/20 aspect-2/1 overflow-hidden border-2 shadow-sm">
+			<enhanced:img
+				src={AbbreviationMain}
+				alt="Abbreviation landing, a search box over Singapore Government acronyms"
+				class="h-full w-full object-cover object-center" />
 		</div>
 	{/snippet}
 
-	{#snippet problem()}
-		New employees waste time looking up acronyms. Existing PDFs are scattered across the intranet and hard to search.
-	{/snippet}
+	<section class="border-neutral/10 border-t py-12">
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">Problem</p>
+		<p class="font-inter mt-3 max-w-3xl text-2xl leading-snug font-bold">
+			New officers lose real time hunting acronyms, and the reference PDFs are scattered across the intranet and barely
+			searchable.
+		</p>
+	</section>
 
-	{#snippet built()}
-		<p class="mb-4">
-			Fast search app for organizational abbreviations using full-text search with fuzzy matching (Jaro-Winkler and
-			Metaphone). Explored multiple algorithms (Levenshtein, Soundex, Aho-Corasick) to optimize for typos and phonetic
-			similarity.
-		</p>
-		<p class="mb-4">
-			Tested Valkey for caching expensive queries but found SQLite faster for this scale. Looked into Minhash and Bloom
-			filters for potential scaling, though the current dataset doesn't need them yet.
-		</p>
-		<p>Includes admin tools to identify and merge duplicate entries.</p>
-	{/snippet}
-</ProjectEntry>
+	<section class="border-neutral/10 border-t py-12">
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">How it works</p>
+		<div class="text-base-content/85 mt-4 grid max-w-2xl gap-4 leading-relaxed">
+			<p>
+				Full-text search with fuzzy matching, Jaro-Winkler for typos and Metaphone for phonetic near-misses. I worked
+				through Levenshtein, Soundex, and Aho-Corasick before settling on the pair that handled real searches best.
+			</p>
+			<p>
+				I tested Valkey for caching the expensive queries, but SQLite turned out faster at this scale, so it stayed. I
+				also looked at MinHash and Bloom filters for scaling, though the dataset doesn't need it yet.
+			</p>
+			<p>Admin tools find and merge the duplicate entries that creep in over time.</p>
+		</div>
+	</section>
+
+	<section class="border-neutral/10 border-t py-12">
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">A look inside</p>
+		<enhanced:img
+			src={AbbreviationList}
+			alt="Abbreviation results list showing Singapore Government acronyms"
+			class="border-neutral/20 mt-5 block w-full max-w-3xl border-2 shadow-sm" />
+	</section>
+</ProjectShell>
