@@ -28,4 +28,8 @@ export default defineConfig({
 			filename: 'stats.html',
 		}),
 	],
+	server: {
+		port: 6173,
+		strictPort: false,
+	},
 });

@@ -1,49 +1,63 @@
 <script>
-	import ProjectEntry from '$lib/ProjectEntry.svelte';
-	import StackComponents from '$lib/StackComponents.svelte';
-	import apptitudeLogo from '$lib/assets/apptitude-logo.webp?enhanced&w=450';
-	import apptitudeMain from '$lib/screenshots/apptitude/main.png?enhanced';
-	import apptitudeLearn from '$lib/screenshots/apptitude/learn.png?enhanced';
-	import apptitudeLearnResources from '$lib/screenshots/apptitude/learn-resources.png?enhanced';
-	import apptitudePlaybook from '$lib/screenshots/apptitude/playbook.png?enhanced';
-	import apptitudeAlarms from '$lib/screenshots/apptitude/alarms.png?enhanced';
-	import apptitudeDealbreakers from '$lib/screenshots/apptitude/dealbreakers.png?enhanced';
-	import AlignCenterText from '$lib/AlignCenterText.svelte';
+	import ProjectShell from '$lib/ProjectShell.svelte';
+	import apptitudeLogo from '$lib/assets/apptitude-logo.webp?enhanced&w=320';
+	import apptitudeMain from '$lib/screenshots/apptitude/main.png?enhanced&w=1100&quality=90';
+	import apptitudeLearn from '$lib/screenshots/apptitude/learn.png?enhanced&w=1000&quality=90';
+
+	const stack = [
+		{ role: 'Frontend', tools: 'SvelteKit' },
+		{ role: 'Backend', tools: 'Pocketbase' },
+		{ role: 'Search', tools: 'Pagefind' },
+	];
 </script>
 
-<ProjectEntry id="apptitude">
-	{#snippet title()}
-		<enhanced:img src={apptitudeLogo} alt="Apptitude Logo" />{/snippet}
-	{#snippet stack()}
-		<StackComponents names={['sveltekit', 'pagefind']} />
+<ProjectShell
+	name="Apptitude"
+	accent="#EA580C"
+	accentInk="#C2410C"
+	eyebrow="Tech knowledge for decision-makers"
+	headline="Building technical intuition, minus the jargon."
+	sub="A personal collection of mental models and notes on software in Government, written for the people who decide on tech but don't write the code. Plain-English concepts, plus opinionated playbooks for scoping and strategy."
+	url="https://titude.app/"
+	{stack}>
+	{#snippet wordmark()}
+		<enhanced:img src={apptitudeLogo} alt="Apptitude" class="h-9 w-auto" />
 	{/snippet}
 
-	{#snippet problem()}
-		<AlignCenterText>
-			Teammates didn't know where to start learning tech. Or wasted time searching. No single place (e.g. YouTube,
-			blogs, courses) to find all the materials. And couldn't browse by skill level or topic.
-		</AlignCenterText>
+	{#snippet hero()}
+		<enhanced:img
+			src={apptitudeMain}
+			alt="Apptitude landing, Building technical intuition"
+			class="border-neutral/20 block w-full border-2 shadow-sm" />
 	{/snippet}
 
-	{#snippet built()}
-		<p class="mb-4">
-			Curated directory of tech learning resources, organized by competency level (Learn How / Think Why) and audience
-			(Doers / Leaders). Static site with client-side search.
+	<section class="border-neutral/10 border-t py-12">
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">Problem</p>
+		<p class="font-inter mt-3 max-w-3xl text-2xl leading-snug font-bold">
+			Teammates never knew where to start learning tech, and the good material was scattered across YouTube, blogs, and
+			courses with no way to browse by level or topic.
 		</p>
-		<p>
-			Deliberately skipped CMS, database, and markdown files. Data lives in JS objects—simpler to update, no build step
-			complexity for what's essentially a curated list.
-		</p>
-	{/snippet}
+	</section>
 
-	{#snippet screenshots()}
-		<div class="grid grid-cols-1 gap-4">
-			<enhanced:img src={apptitudeMain} alt="Apptitude landing" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
-			<enhanced:img src={apptitudeLearn} alt="Apptitude docs" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
-			<enhanced:img src={apptitudeLearnResources} alt="Apptitude resources" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
-			<enhanced:img src={apptitudePlaybook} alt="Apptitude playbook" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
-			<enhanced:img src={apptitudeAlarms} alt="Apptitude alarm bells" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
-			<enhanced:img src={apptitudeDealbreakers} alt="Apptitude dealbreakers" class="border-neutral/20 rounded-xl border-2 shadow-xl" />
+	<section class="border-neutral/10 border-t py-12">
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">How it works</p>
+		<div class="text-base-content/85 mt-4 grid max-w-2xl gap-4 leading-relaxed">
+			<p>
+				A curated directory organised by competency, Learn How and Think Why, and by audience, Doers and Leaders, with
+				client-side search so anything is a few keystrokes away.
+			</p>
+			<p>
+				I deliberately skipped a CMS, a database, and Markdown files. The data lives in plain JS objects, which is
+				simpler to update and has no build-step overhead for what is really a curated list.
+			</p>
 		</div>
-	{/snippet}
-</ProjectEntry>
+	</section>
+
+	<section class="border-neutral/10 border-t py-12">
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">A look inside</p>
+		<enhanced:img
+			src={apptitudeLearn}
+			alt="Apptitude knowledge base, concepts explained in plain English"
+			class="border-neutral/20 mt-5 block w-full border-2 shadow-sm" />
+	</section>
+</ProjectShell>

@@ -328,7 +328,7 @@ export const codeSnippets = [
 	'',
 	'func GetSummary(db *sqlx.DB, userID uuid.UUID) (WorkoutSummary, error) {',
 	'    workoutsQ := `SELECT COUNT(*) FROM gym_workouts',
-	'        WHERE user_id = $1 AND start_time >= date_trunc(\'month\', NOW())`',
+	"        WHERE user_id = $1 AND start_time >= date_trunc('month', NOW())`",
 	'    db.Get(&summary.TotalWorkoutsThisMonth, workoutsQ, userID)',
 	'    volumeQ := `SELECT COALESCE(SUM(gs.weight_kg * gs.reps), 0), COUNT(*)',
 	'        FROM gym_sets gs JOIN gym_workouts gw ON gs.workout_id = gw.id',

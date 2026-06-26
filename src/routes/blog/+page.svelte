@@ -12,9 +12,12 @@
 	{#each data.posts as post, i}
 		<div class="border-base-content/10 px-4 py-6 lg:px-6 {i > 0 ? 'border-t' : ''}">
 			<h2 class="font-fraunces text-2xl font-bold hover:text-orange-700">
-				<a href="/blog/{post.slug}"><span class="text-base-content/75 font-mono text-[0.85em]">{i + 1}.</span> {post.title}</a>
+				<a href="/blog/{post.slug}"
+					><span class="text-base-content/75 font-mono text-[0.85em]">{i + 1}.</span> {post.title}</a>
 			</h2>
-			<div class="text-base-content/50 mt-1 font-mono text-sm tracking-tight uppercase">{dayjs(post.date).format('D MMM YYYY')}</div>
+			<div class="text-base-content/50 mt-1 font-mono text-sm tracking-tight uppercase">
+				{dayjs(post.date).format('D MMM YYYY')}
+			</div>
 			<div class="mt-1 flex flex-wrap gap-x-1.5 font-mono text-sm tracking-tight text-base-content/50">
 				{#each post.tags as tag, j}
 					{#if j > 0}<span class="text-base-content/30">/</span>{/if}
@@ -24,7 +27,9 @@
 		</div>
 	{/each}
 </main>
-<div class="text-base-content/30 mt-10 px-3 text-center font-mono text-xs tracking-widest sm:px-6 xl:px-14">— END OF LIST —</div>
+<div class="text-base-content/30 mt-10 px-3 text-center font-mono text-xs tracking-widest sm:px-6 xl:px-14">
+	— END OF LIST —
+</div>
 
 <style>
 	a {

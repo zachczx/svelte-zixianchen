@@ -6,12 +6,28 @@
 		id: string;
 		title: Snippet;
 		screenshots: Snippet;
+		screenshotsHeading?: string;
 		stack?: Snippet;
+		stats?: Snippet;
+		story?: Snippet;
 		problem?: Snippet;
 		built?: Snippet;
+		architecture?: Snippet;
 		more?: Snippet;
 	}
-	let { id = '', title, screenshots, stack, problem, built, more }: ProjectEntryProps = $props();
+	let {
+		id = '',
+		title,
+		screenshots,
+		screenshotsHeading = 'Look',
+		stack,
+		stats,
+		story,
+		problem,
+		built,
+		architecture,
+		more,
+	}: ProjectEntryProps = $props();
 
 	let subtitle = $derived(descriptions[id]?.subtitle ?? '');
 	let tldr = $derived(descriptions[id]?.tldr ?? '');
@@ -35,6 +51,13 @@
 					{/if}
 				</div>
 			{/if}
+			{#if story}
+				<div class="lg:col-span-2">{@render story()}</div>
+			{/if}
+			{#if stats}
+				<h3 class="text-4xl font-bold">By the numbers</h3>
+				<div>{@render stats()}</div>
+			{/if}
 			{#if problem}
 				<h3 class="text-4xl font-bold">Problem</h3>
 				<div>
@@ -45,6 +68,10 @@
 				<h3 class="text-4xl font-bold">What I built</h3>
 				<div>{@render built()}</div>
 			{/if}
+			{#if architecture}
+				<h3 class="text-4xl font-bold">Architecture</h3>
+				<div>{@render architecture()}</div>
+			{/if}
 			{#if stack}
 				<h3 class="text-4xl font-bold">Stack</h3>
 				<div class="flex flex-wrap gap-4">
@@ -52,7 +79,7 @@
 				</div>
 			{/if}
 			{#if screenshots}
-				<h3 class="text-4xl font-bold">Look</h3>
+				<h3 class="text-4xl font-bold">{screenshotsHeading}</h3>
 				<div>{@render screenshots()}</div>
 			{/if}
 			{#if more}
