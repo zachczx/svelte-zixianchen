@@ -4,6 +4,8 @@
 	import ApptitudeMain from '$lib/screenshots/apptitude/main.png';
 	import BtonomicsMain from '$lib/screenshots/btonomics/main.png';
 	import CubbyDashboard from '$lib/screenshots/cubby/dashboard.webp';
+	import CubbyGym from '$lib/screenshots/cubby/gym-workout.webp';
+	import CubbyCoffee from '$lib/screenshots/cubby/coffee.webp';
 
 	// Retired builds, ordered so the ones that fed today's projects read first.
 	const archiveOrder = [
@@ -19,37 +21,72 @@
 		'wronged',
 	];
 	const archive = archiveOrder.map((slug) => ({ slug, ...descriptions[slug] }));
+
+	// Featured builds get a full row each: screenshot on one side, the pitch on the other.
+	// stack mirrors each project page's own stack list, kept short.
+	const featured = [
+		{
+			slug: 'cubby',
+			kind: 'mobile',
+			pos: 'top',
+			stack: 'Go · SvelteKit · Postgres',
+			shots: [CubbyDashboard, CubbyGym, CubbyCoffee],
+		},
+		{ slug: 'abbreviation', img: AbbreviationMain, kind: 'web', pos: 'center', stack: 'Go · htmx · SQLite' },
+		{ slug: 'apptitude', img: ApptitudeMain, kind: 'web', pos: 'top', stack: 'SvelteKit · Pocketbase · Pagefind' },
+		{ slug: 'btonomics', img: BtonomicsMain, kind: 'web', pos: 'top', stack: 'Astro · Pagefind' },
+	];
 </script>
 
-{#snippet card(href: string, bg: string, pos: string, name: string, caption: string)}
-	<a
-		{href}
-		aria-label={name}
-		title={caption}
-		class="group block w-full overflow-hidden border border-white/10 transition-colors hover:border-white/30"
-		style="background:url({bg}); background-size: cover; background-position: {pos};">
+{#snippet card(
+	p: { slug: string; img?: string; shots?: string[]; kind: string; pos: string; stack: string },
+	i: number,
+)}
+	{@const meta = descriptions[p.slug]}
+	{@const domain = meta.url.replace(/^https?:\/\//, '').replace(/\/+$/, '')}
+	<a href="/projects/{p.slug}" class="group grid items-stretch gap-7 text-start lg:grid-cols-2 lg:gap-14">
+		<div>
+			{#if p.kind === 'mobile'}
+				<!-- phone specimen: a trio of screens -->
+				<div
+					class="flex items-end justify-center gap-2 transition-transform duration-500 ease-out group-hover:scale-[1.02]">
+					{#each p.shots ?? [] as shot, n (n)}
+						<img
+							src={shot}
+							alt="{meta.name} screenshot {n + 1}"
+							loading="lazy"
+							class="w-[30%] border border-white/10 object-cover" />
+					{/each}
+				</div>
+			{:else}
+				<!-- web specimen: hairline-framed screenshot -->
+				<div class="overflow-hidden border border-white/10 transition-colors group-hover:border-white/25">
+					<img
+						src={p.img}
+						alt="{meta.name} screenshot"
+						loading="lazy"
+						class="aspect-video w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+						style="object-position: {p.pos};" />
+				</div>
+			{/if}
+		</div>
+		<div class="flex flex-col">
+			<div class="flex items-baseline gap-4">
+				<span class="text-neutral-content/55 text-sm">{String(i + 1).padStart(2, '0')}</span>
+				<h4 class="text-3xl font-bold tracking-tight lg:text-4xl">{meta.name}</h4>
+			</div>
+			<p class="text-neutral-content/75 mt-3 max-w-md leading-relaxed">{meta.subtitle}</p>
+			<p class="text-neutral-content/45 mt-2 text-xs">{p.stack}</p>
+			<p class="text-neutral-content/50 mt-auto pt-4 text-xs">{domain}</p>
+		</div>
 	</a>
 {/snippet}
 
-<main class="grid w-full justify-self-center text-center">
-	<h3 class="mb-2 text-start text-4xl font-bold">Projects</h3>
-	<div id="project-grid" class="grid w-full justify-items-center gap-4 lg:grid-cols-2 xl:grid-cols-3">
-		{@render card('/projects/cubby', CubbyDashboard, 'center top', 'Cubby', 'A personal ERP the household runs on')}
-		{@render card(
-			'/projects/abbreviation',
-			AbbreviationMain,
-			'center center',
-			'Abbreviation',
-			'Singapore Govt acronym search',
-		)}
-		{@render card('/projects/apptitude', ApptitudeMain, 'center center', 'Apptitude', 'Building technical intuition')}
-		{@render card(
-			'/projects/btonomics',
-			BtonomicsMain,
-			'center top',
-			'BTOnomics',
-			'Honest lessons from an HDB renovation',
-		)}
+<section aria-label="Projects" class="grid w-full justify-self-center text-center">
+	<div id="project-list" class="grid w-full gap-y-20 text-start lg:gap-y-28">
+		{#each featured as p, i (p.slug)}
+			{@render card(p, i)}
+		{/each}
 	</div>
 
 	<section class="mt-20 w-full text-start lg:mt-28">
@@ -62,26 +99,12 @@
 					<dd>
 						<span class="text-neutral-content/70">{a.subtitle}</span>
 						{#if a.stack}
-							<span class="text-neutral-content/45 mt-0.5 block font-mono text-xs">{a.stack}</span>
+							<span class="text-neutral-content/45 mt-0.5 block text-xs">{a.stack}</span>
 						{/if}
 					</dd>
-					<dd class="text-neutral-content/65 font-mono text-xs sm:text-right">{a.lineage ?? ''}</dd>
+					<dd class="text-neutral-content/65 text-xs sm:text-right">{a.lineage ?? ''}</dd>
 				</div>
 			{/each}
 		</dl>
 	</section>
-</main>
-
-<style>
-	#project-grid > a {
-		aspect-ratio: 1;
-		width: 100%;
-	}
-
-	@media (min-width: 1024px) {
-		#project-grid > a:first-child {
-			grid-row: span 2;
-			aspect-ratio: auto;
-		}
-	}
-</style>
+</section>
