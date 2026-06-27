@@ -1,5 +1,6 @@
 ﻿<script>
 	import dashboard from '$lib/screenshots/cubby/dashboard.webp';
+	import shelf from '$lib/screenshots/cubby/shelf.webp';
 	import tasks from '$lib/screenshots/cubby/tasks.webp';
 	import limits from '$lib/screenshots/cubby/limits.webp';
 	import market from '$lib/screenshots/cubby/market.webp';
@@ -256,17 +257,30 @@
 
 	<!-- home screen overview -->
 	<div class="mx-auto max-w-5xl px-5 pb-10">
-		<figure class="mx-auto w-full max-w-[320px]">
-			<img
-				src={dashboard}
-				alt="Cubby home screen"
-				loading="lazy"
-				decoding="async"
-				class="border-neutral/20 block w-full border-2 shadow-sm" />
-			<figcaption class="text-base-content/55 mt-3 text-center text-sm leading-relaxed">
-				The home screen: a pinned daily set, plus whatever needs attention now.
-			</figcaption>
-		</figure>
+		<div class="mx-auto flex max-w-2xl flex-col items-start justify-center gap-10 sm:flex-row">
+			<figure class="mx-auto w-full max-w-[300px]">
+				<img
+					src={dashboard}
+					alt="Cubby home screen"
+					loading="lazy"
+					decoding="async"
+					class="border-neutral/20 block w-full border-2 shadow-sm" />
+				<figcaption class="text-base-content/55 mt-3 text-center text-sm leading-relaxed">
+					The home screen up top: a pinned daily set, plus whatever needs attention now.
+				</figcaption>
+			</figure>
+			<figure class="mx-auto w-full max-w-[300px]">
+				<img
+					src={shelf}
+					alt="Cubby home screen scrolled down"
+					loading="lazy"
+					decoding="async"
+					class="border-neutral/20 block w-full border-2 shadow-sm" />
+				<figcaption class="text-base-content/55 mt-3 text-center text-sm leading-relaxed">
+					One scroll down, the rest of the house, every tracker as a tile.
+				</figcaption>
+			</figure>
+		</div>
 	</div>
 
 	<!-- contents -->
