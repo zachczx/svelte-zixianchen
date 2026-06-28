@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
+	import Nav from '$lib/Nav.svelte';
 	import { codeSnippets } from '../code-snippets';
 
 	let { children }: { children: Snippet } = $props();
@@ -27,6 +28,9 @@
 		<div class="mt-auto pt-10 text-center text-xs md:text-sm">© Zixian Chen</div>
 	</div>
 </div>
+
+<!-- Playful pole: the colorful magnifying dock, floating over the quiet page on wide screens. -->
+<Nav navCurrent="" />
 
 <style>
 	.code-z {
