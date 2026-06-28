@@ -22,7 +22,7 @@
 				label: string;
 				icon: Component;
 				iconClass?: string;
-				active: { type: 'hash'; key: string } | { type: 'path'; key: string } | { type: 'none' };
+				active: { type: 'hash'; key: string } | { type: 'path'; key: string } | { type: 'prefix'; key: string } | { type: 'none' };
 		  };
 
 	const items: NavItem[] = [
@@ -35,7 +35,7 @@
 			icon: GridIcon,
 			active: { type: 'hash', key: 'projects' },
 		},
-		{ kind: 'anchor', href: '/blog', label: 'Blog', icon: ArticleIcon, active: { type: 'none' } },
+		{ kind: 'anchor', href: '/blog', label: 'Blog', icon: ArticleIcon, active: { type: 'prefix', key: '/blog' } },
 		{ kind: 'divider' },
 		{ kind: 'anchor', href: '/contact', label: 'Contact', icon: MailIcon, active: { type: 'path', key: '/contact' } },
 		{
@@ -58,6 +58,7 @@
 	function isActive(item: Extract<NavItem, { kind: 'anchor' }>): boolean {
 		if (item.active.type === 'hash') return navCurrent === item.active.key;
 		if (item.active.type === 'path') return pathName === item.active.key;
+		if (item.active.type === 'prefix') return pathName.startsWith(item.active.key);
 		return false;
 	}
 </script>
@@ -70,18 +71,20 @@
 		{@const active = isActive(item)}
 		<a
 			href={item.href}
-			class="dock group relative bg-transparent no-underline transition-all duration-100 ease-linear hover:no-underline">
+			aria-label={item.label}
+			aria-current={active ? 'page' : undefined}
+			class="dock group/dock relative bg-transparent no-underline transition-all duration-100 ease-linear hover:no-underline">
 			<div
 				class={[
-					'group relative flex items-center justify-center rounded-none border border-white/20 transition-all duration-100 ease-linear group-hover:shadow-lg group-hover:shadow-black/60',
+					'relative flex items-center justify-center rounded-none border border-white/20 transition-all duration-100 ease-linear group-hover/dock:shadow-lg group-hover/dock:shadow-black/60',
 					active ? 'bg-accent' : 'bg-gray-50',
 				]}>
-				<Icon class={['grayscale-100', active ? 'opacity-100' : 'opacity-75', item.iconClass]} />
+				<Icon aria-hidden="true" class={['grayscale-100', active ? 'opacity-100' : 'opacity-75', item.iconClass]} />
+				<span
+					class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center overflow-hidden rounded-xs py-0.5 font-mono text-xs font-bold whitespace-nowrap text-white/90 group-hover/dock:-top-5 group-hover/dock:flex group-focus-visible/dock:-top-5 group-focus-visible/dock:flex">
+					{item.label}
+				</span>
 			</div>
-			<span
-				class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center rounded-xs py-0.5 font-mono text-sm font-bold text-white/90 group-hover:-top-5 group-hover:flex">
-				{item.label}
-			</span>
 		</a>
 	{/if}
 {/each}
