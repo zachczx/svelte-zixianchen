@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
-	import Computer from '$lib/assets/federica-galli-aiqKc07b5PA-unsplash.webp';
+	import Computer from '$lib/assets/jl-cabrera-tcH6W-49jTU-unsplash.webp?enhanced';
 	import Projects from './Projects.svelte';
 	import LinkedInIcon from '~icons/uiw/linkedin';
 	import GitHubIcon from '~icons/octicon/mark-github-16';
@@ -135,11 +135,12 @@
 	</section>
 
 	<div class="bg-base-200 grid min-h-dvh w-full justify-items-center lg:grid-cols-5">
-		<div
-			id="com"
-			class="hidden h-full w-full overflow-hidden py-4 saturate-[0.4] lg:col-span-2 lg:grid"
-			style="background-image:url({Computer}); background-size: cover; background-position: bottom;">
-			<div class="to-base-200 h-full w-full bg-linear-to-r from-transparent from-90%"></div>
+		<div id="com" class="hidden h-full w-full overflow-hidden pe-12 lg:col-span-2 lg:grid">
+			<enhanced:img
+				src={Computer}
+				alt=""
+				loading="lazy"
+				class="h-full w-full max-w-175 object-contain object-bottom-left" />
 		</div>
 		<section
 			class="bg-base-200 grid w-full max-w-250 grid-rows-[auto_1fr_auto] content-start gap-y-8 lg:col-span-3 lg:gap-y-24">
