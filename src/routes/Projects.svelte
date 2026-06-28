@@ -2,7 +2,7 @@
 	import { descriptions } from '$lib/ProjectDescriptions';
 	import AbbreviationMain from '$lib/screenshots/abbreviation/main-cropped.webp?enhanced';
 	import ApptitudeMain from '$lib/screenshots/apptitude/main.png?enhanced';
-	import BtonomicsMain from '$lib/screenshots/btonomics/main.png?enhanced';
+	import BtonomicsMain from '$lib/screenshots/btonomics/main.webp?enhanced';
 	import CubbyDashboard from '$lib/screenshots/cubby/dashboard.webp?enhanced';
 	import CubbyGym from '$lib/screenshots/cubby/gym-workout.webp?enhanced';
 	import CubbyCoffee from '$lib/screenshots/cubby/coffee.webp?enhanced';
