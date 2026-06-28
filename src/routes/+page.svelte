@@ -93,16 +93,16 @@
 		</div>
 	</header>
 
-	<div id="about" class="navItem mt-20 grid w-full justify-items-center bg-gray-400/5 lg:min-h-dvh">
+	<div id="about" class="navItem mt-8 grid w-full justify-items-center bg-gray-400/5 lg:mt-20 lg:min-h-dvh">
 		<div class="grid justify-items-center">
 			<div
-				class="grid w-full max-w-250 content-start gap-y-4 px-4 py-16 lg:min-h-[50vh] lg:grid-cols-3 lg:content-center lg:gap-y-24">
+				class="grid w-full max-w-250 content-start gap-y-6 px-4 py-16 lg:min-h-[50vh] lg:grid-cols-3 lg:content-center lg:gap-y-24">
 				<h3 class="text-4xl font-bold">Interests</h3>
-				<div class="col-span-2 mb-4 space-y-8">
+				<div class="col-span-2 mb-4 space-y-8 text-sm lg:text-base">
 					<p>
 						I've been tinkering on the web since 2000. It started with Frontpage, XHTML, and PHP. My stack now looks
-						more like <span class="text-base-content/85 font-mono text-[1.05em] font-black">Go, TypeScript,</span> and a
-						bit of <span class="text-base-content/85 font-mono text-[1.05em] font-black">Zig</span>.
+						more like <span class="text-base-content/85 text-[1.05em] font-black">Go, TypeScript,</span> and a
+						bit of <span class="text-base-content/85 text-[1.05em] font-black">Zig</span>.
 					</p>
 					<p>
 						Lately making a deliberate effort to write organic, free-range code. Incredibly tempting to do it
@@ -128,19 +128,21 @@
 		</div>
 		<section
 			class="bg-base-200 grid w-full max-w-250 grid-rows-[auto_1fr_auto] content-start gap-y-8 lg:col-span-3 lg:gap-y-24">
-			<h2 id="jobs" class="justify-self-start px-4 text-9xl font-extrabold lg:pt-28">Day</h2>
-			<div class="grid content-start gap-y-4 px-4 lg:gap-y-16">
+			<h2 id="jobs" class="justify-self-start px-4 text-5xl font-extrabold sm:text-6xl lg:pt-28 lg:text-9xl">Day</h2>
+			<div class="grid content-start gap-y-10 px-4 lg:gap-y-16">
 				{#each jobs as job}
-					<div class="job-row grid lg:grid-cols-[auto_1fr]">
-						<div class="text-base-content/70 items-baseline pe-12 pt-1.5 font-mono max-lg:pt-8">{job.year}</div>
+					<div class="job-row grid gap-y-1 lg:grid-cols-[auto_1fr]">
+						<div class="text-base-content/70 items-baseline text-sm lg:pe-12 lg:pt-1.5 lg:text-base">
+							{job.year}
+						</div>
 						<div>
-							<h4 class="job-title relative w-fit text-2xl font-bold">
+							<h4 class="job-title relative w-fit text-lg font-bold lg:text-2xl">
 								<span
-									class="job-arrow absolute top-1/2 -left-5 -translate-y-1/2 font-mono text-[0.7em] font-normal opacity-0"
+									class="job-arrow absolute top-1/2 -left-5 -translate-y-1/2 text-[0.7em] font-normal opacity-0"
 									>❯</span
 								>{job.title}
 							</h4>
-							<p class="job-desc text-base-content/70 leading-relaxed transition-colors duration-200">
+							<p class="job-desc text-base-content/70 text-sm leading-relaxed transition-colors duration-200 lg:text-base">
 								{job.desc}
 							</p>
 						</div>
@@ -153,7 +155,9 @@
 	<div class="text-neutral-content grid w-full content-start justify-items-center bg-[#0E0E0E] lg:grid-cols-5">
 		<div class="grid w-full justify-items-center pt-8 lg:col-span-3 lg:pt-28">
 			<section class="grid w-full max-w-250 justify-items-start px-4 pb-8 lg:grid-cols-3 lg:justify-self-end lg:pb-28">
-				<h2 id="projects" class="navItem justify-self-start pb-8 text-9xl font-extrabold lg:col-span-3 lg:pb-24">
+				<h2
+					id="projects"
+					class="navItem justify-self-start pb-8 text-5xl font-extrabold sm:text-6xl lg:col-span-3 lg:pb-24 lg:text-9xl">
 					Night
 				</h2>
 

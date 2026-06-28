@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { descriptions } from '$lib/ProjectDescriptions';
-	import AbbreviationMain from '$lib/screenshots/abbreviation/main-cropped.webp';
-	import ApptitudeMain from '$lib/screenshots/apptitude/main.png';
-	import BtonomicsMain from '$lib/screenshots/btonomics/main.png';
-	import CubbyDashboard from '$lib/screenshots/cubby/dashboard.webp';
-	import CubbyGym from '$lib/screenshots/cubby/gym-workout.webp';
-	import CubbyCoffee from '$lib/screenshots/cubby/coffee.webp';
+	import AbbreviationMain from '$lib/screenshots/abbreviation/main-cropped.webp?enhanced';
+	import ApptitudeMain from '$lib/screenshots/apptitude/main.png?enhanced';
+	import BtonomicsMain from '$lib/screenshots/btonomics/main.png?enhanced';
+	import CubbyDashboard from '$lib/screenshots/cubby/dashboard.webp?enhanced';
+	import CubbyGym from '$lib/screenshots/cubby/gym-workout.webp?enhanced';
+	import CubbyCoffee from '$lib/screenshots/cubby/coffee.webp?enhanced';
 
 	// Retired builds, ordered so the ones that fed today's projects read first.
 	const archiveOrder = [
@@ -51,17 +51,19 @@
 				<div
 					class="flex items-end justify-center gap-2 transition-transform duration-500 ease-out group-hover:scale-[1.02]">
 					{#each p.shots ?? [] as shot, n (n)}
-						<img
-							src={shot}
-							alt="{meta.name} screenshot {n + 1}"
-							loading="lazy"
-							class="w-[30%] border border-white/10 object-cover" />
+						<div class="w-[30%] border border-white/10">
+							<enhanced:img
+								src={shot}
+								alt="{meta.name} screenshot {n + 1}"
+								loading="lazy"
+								class="block h-auto w-full object-cover" />
+						</div>
 					{/each}
 				</div>
 			{:else}
 				<!-- web specimen: hairline-framed screenshot -->
 				<div class="overflow-hidden border border-white/10 transition-colors group-hover:border-white/25">
-					<img
+					<enhanced:img
 						src={p.img}
 						alt="{meta.name} screenshot"
 						loading="lazy"
@@ -73,9 +75,9 @@
 		<div class="flex flex-col">
 			<div class="flex items-baseline gap-4">
 				<span class="text-neutral-content/55 text-sm">{String(i + 1).padStart(2, '0')}</span>
-				<h4 class="text-3xl font-bold tracking-tight lg:text-4xl">{meta.name}</h4>
+				<h4 class="text-2xl font-bold tracking-tight lg:text-4xl">{meta.name}</h4>
 			</div>
-			<p class="text-neutral-content/75 mt-3 max-w-md leading-relaxed">{meta.subtitle}</p>
+			<p class="text-neutral-content/75 mt-3 max-w-md text-sm leading-relaxed lg:text-base">{meta.subtitle}</p>
 			<p class="text-neutral-content/45 mt-2 text-xs">{p.stack}</p>
 			<p class="text-neutral-content/50 mt-auto pt-4 text-xs">{domain}</p>
 		</div>
@@ -91,13 +93,15 @@
 
 	<section class="mt-20 w-full text-start lg:mt-28">
 		<h3 class="text-4xl font-bold">Graveyard</h3>
-		<p class="text-neutral-content/65 mt-3 max-w-xl">Older builds, mostly retired or folded into the ones above.</p>
+		<p class="text-neutral-content/65 mt-3 max-w-xl text-sm lg:text-base">
+			Older builds, mostly retired or folded into the ones above.
+		</p>
 		<dl class="mt-8 border-t border-white/15">
 			{#each archive as a (a.slug)}
 				<div class="grid gap-x-6 gap-y-1 border-b border-white/15 py-4 sm:grid-cols-[11rem_1fr_auto] sm:items-baseline">
-					<dt class="font-semibold">{a.name}</dt>
+					<dt class="text-sm font-semibold lg:text-base">{a.name}</dt>
 					<dd>
-						<span class="text-neutral-content/70">{a.subtitle}</span>
+						<span class="text-neutral-content/70 text-sm lg:text-base">{a.subtitle}</span>
 						{#if a.stack}
 							<span class="text-neutral-content/45 mt-0.5 block text-xs">{a.stack}</span>
 						{/if}
