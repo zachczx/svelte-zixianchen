@@ -1,7 +1,7 @@
 <script>
 	import ProjectShell from '$lib/ProjectShell.svelte';
-	import btonomicsMain from '$lib/screenshots/btonomics/main.png?enhanced&w=1100&quality=90';
-	import btonomicsTopics from '$lib/screenshots/btonomics/topics.png?enhanced&w=1000&quality=90';
+	import btonomicsMain from '$lib/screenshots/btonomics/main.webp?enhanced&w=1100&quality=90';
+	import btonomicsTopics from '$lib/screenshots/btonomics/topics.webp?enhanced&w=1000&quality=90';
 
 	const stack = [
 		{ role: 'Frontend', tools: 'Astro' },
