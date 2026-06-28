@@ -67,7 +67,7 @@
 
 <Nav {navCurrent} />
 <div class="bg-base-200 grid min-h-dvh justify-items-center 2xl:overflow-x-clip">
-	<header id="header" class="navItem w-full place-items-center py-20 lg:grid lg:min-h-dvh lg:py-0">
+	<header id="header" class="navItem relative w-full place-items-center py-20 lg:grid lg:min-h-dvh lg:py-0">
 		<div class="bg-base-200 flex w-full flex-wrap items-center justify-center gap-8 lg:min-h-dvh">
 			<div class="grid justify-items-center" style="view-transition-name: logo">
 				<div class="text-[3.3rem] leading-none font-black tracking-tight lg:text-[7.1rem]">ZIXIAN</div>
@@ -91,33 +91,48 @@
 				<ArticleIcon class="size-9" />
 			</a>
 		</div>
+		<a
+			href="#about"
+			aria-label="Scroll to interests"
+			class="text-base-content/35 hover:text-base-content/70 absolute inset-x-0 bottom-32 mx-auto hidden w-fit transition-colors xl:block">
+			<span class="inline-block rotate-90 text-2xl">❯</span>
+		</a>
 	</header>
 
-	<div id="about" class="navItem mt-8 grid w-full justify-items-center bg-gray-400/5 lg:mt-20 lg:min-h-dvh">
-		<div class="grid justify-items-center">
-			<div
-				class="grid w-full max-w-250 content-start gap-y-6 px-4 py-16 lg:min-h-[50vh] lg:grid-cols-3 lg:content-center lg:gap-y-24">
-				<h3 class="text-4xl font-bold">Interests</h3>
-				<div class="col-span-2 mb-4 space-y-8 text-sm lg:text-base">
-					<p>
-						I've been tinkering on the web since 2000. It started with Frontpage, XHTML, and PHP. My stack now looks
-						more like <span class="text-base-content/85 text-[1.05em] font-black">Go, TypeScript,</span> and a
-						bit of <span class="text-base-content/85 text-[1.05em] font-black">Zig</span>.
-					</p>
-					<p>
-						Lately making a deliberate effort to write organic, free-range code. Incredibly tempting to do it
-						automagically with Claude Code and OpenCode, but it doesn't feel the same.
-					</p>
-					<p>Most of that energy goes into building my travel planner and my home admin app.</p>
-					<p>
-						Off screen, I like <strong>building PCs</strong> (love bargains but hate cable management), and I spend a
-						lot of time learning about <strong>product design</strong>, <strong>business</strong>, and
-						<strong>entrepreneurship</strong>.
-					</p>
-				</div>
+	<section id="about" class="navItem grid w-full justify-items-center bg-base-200 px-4 py-20 lg:py-32">
+		<div class="w-full max-w-3xl border border-base-content/15 bg-base-100">
+			<div class="flex items-baseline justify-between border-b border-base-content/15 px-6 py-5 sm:px-8">
+				<h3 class="text-2xl font-bold tracking-tight lg:text-3xl">Interests</h3>
+				<span class="text-[0.7rem] uppercase tracking-[0.25em] text-base-content/40">Profile</span>
 			</div>
+			<dl class="divide-y divide-base-content/10 px-6 sm:px-8">
+				<div class="grid gap-x-8 gap-y-1.5 py-5 sm:grid-cols-[7rem_1fr]">
+					<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Stack</dt>
+					<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">Go, TypeScript, and a bit of Zig.</dd>
+				</div>
+				<div class="grid gap-x-8 gap-y-1.5 py-5 sm:grid-cols-[7rem_1fr]">
+					<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Since</dt>
+					<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">
+						2000 on/off. Back in the Frontpage, XHTML, PHP days.
+					</dd>
+				</div>
+				<div class="grid gap-x-8 gap-y-1.5 py-5 sm:grid-cols-[7rem_1fr]">
+					<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Now</dt>
+					<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">
+						Building a home admin app. Trying to write organic, free-range code by hand. It's tempting to let Claude
+						Code and OpenCode do it automatically but it doesn't feel the same.
+					</dd>
+				</div>
+				<div class="grid gap-x-8 gap-y-1.5 py-5 sm:grid-cols-[7rem_1fr]">
+					<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Offline</dt>
+					<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">
+						Building PCs (love bargains, hate cable management). Learning about product design, business, and
+						entrepreneurship.
+					</dd>
+				</div>
+			</dl>
 		</div>
-	</div>
+	</section>
 
 	<div class="bg-base-200 grid min-h-dvh w-full justify-items-center lg:grid-cols-5">
 		<div
@@ -137,12 +152,12 @@
 						</div>
 						<div>
 							<h4 class="job-title relative w-fit text-lg font-bold lg:text-2xl">
-								<span
-									class="job-arrow absolute top-1/2 -left-5 -translate-y-1/2 text-[0.7em] font-normal opacity-0"
+								<span class="job-arrow absolute top-1/2 -left-5 -translate-y-1/2 text-[0.7em] font-normal opacity-0"
 									>❯</span
 								>{job.title}
 							</h4>
-							<p class="job-desc text-base-content/70 text-sm leading-relaxed transition-colors duration-200 lg:text-base">
+							<p
+								class="job-desc text-base-content/70 text-sm leading-relaxed transition-colors duration-200 lg:text-base">
 								{job.desc}
 							</p>
 						</div>
