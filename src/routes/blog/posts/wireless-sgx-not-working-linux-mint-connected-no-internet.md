@@ -27,7 +27,7 @@ My laptop authenticated to Wireless@SGx, got a DHCP lease, and could even ping t
 
 ## TLDR
 
-Linux Mint's NetworkManager uses your real hardware MAC on enterprise WiFi, while Windows and Android randomize by default. SGx's backend had never seen the hardware MAC go through a first-connection promotion flow, so it silently blocked TCP. The fix is one command:
+Linux Mint's NetworkManager uses your real hardware MAC on enterprise wifi, while Windows and Android randomize by default. SGx's backend had never seen the hardware MAC go through a first-connection promotion flow, so it silently blocked TCP. The fix is one command:
 
 ```bash
 nmcli con mod "Wireless@SGx" wifi.cloned-mac-address stable
@@ -41,7 +41,7 @@ nmcli con down "Wireless@SGx" && nmcli con up "Wireless@SGx"
 - **OS:** Linux Mint 22.2 Cinnamon
 - **WirelessSGx Provider:** Singtel & M1
 
-Quick context if you're not from Singapore: Wireless@SGx is the current iteration of Singapore's free public WiFi. It uses WPA2 Enterprise with PEAP/MSCHAPv2, so once you register on [IMDA's portal](https://eservice.imda.gov.sg/wirelessSGx) you get seamless auto-connect at every hotspot.
+Quick context if you're not from Singapore: Wireless@SGx is the current iteration of Singapore's free public wifi. It uses WPA2 Enterprise with PEAP/MSCHAPv2, so once you register on [IMDA's portal](https://eservice.imda.gov.sg/wirelessSGx) you get seamless auto-connect at every hotspot.
 
 On my Android phone it's quite seamless when you connect via SIM, not so much for my laptop. [IMDA's guides](https://www.imda.gov.sg/how-we-can-help/wireless-at-sg/chrome-setup-guide) were pretty much useless.
 
@@ -137,7 +137,7 @@ Here's the rough progression:
 
 ## The Fix: Clone My Phone's MAC
 
-In the same message where Claude suggested the TFO thing, it also suggested cloning my phone's WiFi MAC address onto the laptop. Claude's hypothesis was that SGx's backend might maintain some per-MAC state that determines whether you get full internet access or get walled off, and my phone, which went through the proper first-connection flow months ago (the cert/profile thing), was in a "promoted" state that my laptop never reached.
+In the same message where Claude suggested the TFO thing, it also suggested cloning my phone's wifi MAC address onto the laptop. Claude's hypothesis was that SGx's backend might maintain some per-MAC state that determines whether you get full internet access or get walled off, and my phone, which went through the proper first-connection flow months ago (the cert/profile thing), was in a "promoted" state that my laptop never reached.
 
 I still have no real idea what exactly SGx does on its end, and the mechanism is just Claude's best guess. All I can tell you is that it worked.
 
@@ -156,7 +156,7 @@ The `nmcli con mod` change is persistent, saved to the connection file and appli
 
 My laptop runs Windows and Linux Mint on the same hardware, so my wife can still use Windows and I'll use Linux. After the phone MAC clone worked, I logged in to Windows on the same machine and realized it was connecting alright to Wireless@SGx. I initially assumed that the hardware MAC was already "promoted" via Windows and Linux should therefore inherit that state. But Claude asked me to try cloning the Windows MAC onto Linux, and that worked too.
 
-That meant Windows wasn't using the hardware MAC either. Windows 10/11 randomizes WiFi MAC addresses per-network by default. Android randomizes per-SSID by default. Neither had ever connected to SGx using my actual hardware MAC `e4:c7:67:4c:89:fc`. Linux Mint's NetworkManager was the only OS using the bare hardware address. The hardware MAC had simply never been through any first-connection promotion flow on SGx's backend. To SGx, it was an unknown device.
+That meant Windows wasn't using the hardware MAC either. Windows 10/11 randomizes wifi MAC addresses per-network by default. Android randomizes per-SSID by default. Neither had ever connected to SGx using my actual hardware MAC `e4:c7:67:4c:89:fc`. Linux Mint's NetworkManager was the only OS using the bare hardware address. The hardware MAC had simply never been through any first-connection promotion flow on SGx's backend. To SGx, it was an unknown device.
 
 ## The Real Fix
 
