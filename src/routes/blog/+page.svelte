@@ -11,7 +11,7 @@
 <main class="grid">
 	{#each data.posts as post, i}
 		<div class="border-base-content/10 px-4 py-6 lg:px-6 {i > 0 ? 'border-t' : ''}">
-			<h2 class="font-fraunces text-2xl font-bold hover:text-orange-700">
+			<h2 class="text-2xl font-bold hover:text-orange-700">
 				<a href="/blog/{post.slug}"
 					><span class="text-base-content/75 font-mono text-[0.85em]">{i + 1}.</span> {post.title}</a>
 			</h2>

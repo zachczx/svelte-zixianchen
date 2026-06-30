@@ -35,7 +35,7 @@
 	}: Props = $props();
 </script>
 
-<div class="text-base-content bg-base-200 font-inter" style="--accent: {accent}; --accent-ink: {accentInk}">
+<div class="text-base-content bg-base-200" style="--accent: {accent}; --accent-ink: {accentInk}">
 	<!-- top bar -->
 	<div class="border-neutral/15 bg-base-100 sticky top-0 z-10 border-b">
 		<div class="text-base-content/50 mx-auto flex max-w-5xl items-center justify-between px-5 py-2.5 text-xs">
@@ -54,7 +54,7 @@
 				<p class="mt-8 text-xs tracking-wide" style="color: var(--accent-ink)">{eyebrow}</p>
 			{/if}
 			<h1
-				class="font-inter mt-4 text-4xl leading-[1.05] font-black tracking-tight text-balance sm:text-5xl lg:text-6xl">
+				class="mt-4 text-4xl leading-[1.05] font-black tracking-tight text-balance sm:text-5xl lg:text-6xl">
 				{headline}
 			</h1>
 			{#if sub}

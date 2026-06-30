@@ -19,7 +19,7 @@
 	url="https://abbreviation.zixian.dev"
 	{stack}>
 	{#snippet wordmark()}
-		<h2 class="font-inter text-4xl font-extrabold tracking-tighter text-[#0069ff] lg:text-5xl">
+		<h2 class="text-4xl font-extrabold tracking-tighter text-[#0069ff] lg:text-5xl">
 			Abbreviati<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="1em"
@@ -53,7 +53,7 @@
 
 	<section class="border-neutral/10 border-t py-12">
 		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">Problem</p>
-		<p class="font-inter mt-3 max-w-3xl text-2xl leading-snug font-bold">
+		<p class="mt-3 max-w-3xl text-2xl leading-snug font-bold">
 			New officers lose real time hunting acronyms, and the reference PDFs are scattered across the intranet and barely
 			searchable.
 		</p>

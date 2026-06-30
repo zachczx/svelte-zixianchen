@@ -33,7 +33,7 @@
 
 	<section class="border-neutral/10 border-t py-12">
 		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">Problem</p>
-		<p class="font-inter mt-3 max-w-3xl text-2xl leading-snug font-bold">
+		<p class="mt-3 max-w-3xl text-2xl leading-snug font-bold">
 			Teammates never knew where to start learning tech, and the good material was scattered across YouTube, blogs, and
 			courses with no way to browse by level or topic.
 		</p>
