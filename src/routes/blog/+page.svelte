@@ -11,8 +11,10 @@
 <main class="grid">
 	{#each data.posts as post, i}
 		<div class="border-base-content/10 px-4 py-6 lg:px-6 {i > 0 ? 'border-t' : ''}">
-			<h2 class="text-2xl font-bold hover:text-orange-700">
-				<a href="/blog/{post.slug}"
+			<h2 class="text-2xl font-bold">
+				<a
+					href="/blog/{post.slug}"
+					class="decoration-accent decoration-2 underline-offset-4 transition-colors hover:underline"
 					><span class="text-base-content/75 font-mono text-[0.85em]">{i + 1}.</span> {post.title}</a>
 			</h2>
 			<div class="text-base-content/50 mt-1 font-mono text-sm tracking-tight uppercase">
@@ -30,9 +32,3 @@
 <div class="text-base-content/30 mt-10 px-3 text-center font-mono text-xs tracking-widest sm:px-6 xl:px-14">
 	— END OF LIST —
 </div>
-
-<style>
-	a {
-		text-decoration: none;
-	}
-</style>

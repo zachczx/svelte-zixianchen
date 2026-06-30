@@ -18,8 +18,7 @@
 		class="text-base-content/50 hover:text-base-content font-mono text-sm tracking-tight transition-colors"
 		>[back to main]</a>
 </div>
-<h1
-	class="px-3 py-1 text-2xl font-extrabold sm:px-6 sm:text-3xl lg:text-4xl xl:px-14 xl:text-5xl xl:font-black">
+<h1 class="px-3 py-1 text-2xl font-extrabold sm:px-6 sm:text-3xl lg:text-4xl xl:px-14 xl:text-5xl xl:font-black">
 	{data.metadata.title}
 </h1>
 <div class="text-base-content/50 px-3 font-mono text-sm tracking-tight sm:px-6 xl:px-14">
@@ -58,7 +57,7 @@
 	</nav>
 {/if}
 <article
-	class="prose max-w-none prose-a:font-semibold prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:text-orange-700 prose-blockquote:my-8 prose-blockquote:ms-8 prose-h2:text-2xl prose-h2:font-bold prose-p:leading-relaxed prose-li:leading-relaxed prose-p:my-6 prose-code:font-mono prose-pre:px-0 prose-pre:py-3 mt-6 w-full px-3 sm:px-6 lg:mt-10 xl:px-14"
+	class="prose prose-invert max-w-none prose-a:font-semibold prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:text-accent prose-blockquote:my-8 prose-blockquote:ms-8 prose-h2:text-2xl prose-h2:font-bold prose-p:leading-relaxed prose-li:leading-relaxed prose-p:my-6 prose-code:font-mono prose-pre:px-0 prose-pre:py-3 mt-6 w-full px-3 sm:px-6 lg:mt-10 xl:px-14"
 	class:numbered-paras={data.metadata.category === 'Work'}>
 	{#if content}
 		{@const Component = content}
