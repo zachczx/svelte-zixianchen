@@ -19,7 +19,7 @@
 	url="https://btonomics.com"
 	{stack}>
 	{#snippet wordmark()}
-		<h2 class="font-inter text-4xl font-bold text-[#6b7e56] lg:text-5xl">BTOnomics</h2>
+		<h2 class="text-4xl font-bold text-[#6b7e56] lg:text-5xl">BTOnomics</h2>
 	{/snippet}
 
 	{#snippet hero()}
@@ -31,7 +31,7 @@
 
 	<section class="border-neutral/10 border-t py-12">
 		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">Problem</p>
-		<p class="font-inter mt-3 max-w-3xl text-2xl leading-snug font-bold">
+		<p class="mt-3 max-w-3xl text-2xl leading-snug font-bold">
 			WordPress felt bloated for what is really a blog, it outgrew shared hosting, and the PHP, MySQL, and plugin stack
 			was more overhead than the writing needed.
 		</p>

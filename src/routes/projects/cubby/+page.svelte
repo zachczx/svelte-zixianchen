@@ -230,7 +230,7 @@
 	</figure>
 {/snippet}
 
-<div class="text-base-content bg-base-200 font-inter">
+<div class="text-base-content bg-base-200">
 	<!-- top bar -->
 	<div class="border-neutral/15 bg-base-100 sticky top-0 z-10 border-b">
 		<div class="text-base-content/50 mx-auto flex max-w-5xl items-center justify-between px-5 py-2.5 text-xs">
@@ -246,7 +246,7 @@
 		<img src={CubbyLogo} alt="Cubby" class="h-12" />
 		<p class="text-[#C42A1C] mt-8 text-xs tracking-wide">A personal ERP for the household</p>
 		<h1
-			class="font-inter mt-4 max-w-4xl text-4xl leading-[1.05] font-black tracking-tight text-balance sm:text-6xl lg:text-7xl">
+			class="mt-4 max-w-4xl text-4xl leading-[1.05] font-black tracking-tight text-balance sm:text-6xl lg:text-7xl">
 			It started with my towels and ended up managing our home.
 		</h1>
 		<p class="text-base-content/80 mt-6 max-w-2xl text-lg leading-relaxed">
@@ -314,7 +314,7 @@
 						<article
 							class="border-neutral/10 grid gap-8 border-b py-10 last:border-b-0 sm:grid-cols-[1fr_auto] sm:gap-12">
 							<div>
-								<h3 class="font-inter text-2xl leading-snug font-bold lg:text-3xl">{item.headline}</h3>
+								<h3 class="text-2xl leading-snug font-bold lg:text-3xl">{item.headline}</h3>
 								<div class="mt-5 grid gap-6">
 									<div>
 										<p class="text-base-content/50 text-[0.65rem] font-semibold tracking-wider uppercase">Problem</p>
@@ -341,7 +341,7 @@
 		<div class="mx-auto max-w-5xl px-5 py-16">
 			<p class="text-base-content/55 text-xs tracking-wide">Design notes</p>
 			<p
-				class="border-primary/50 text-base-content/85 font-inter mt-5 max-w-3xl border-l-4 pl-5 text-xl leading-relaxed italic">
+				class="border-primary/50 text-base-content/85 mt-5 max-w-3xl border-l-4 pl-5 text-xl leading-relaxed italic">
 				I built everything I wanted, and I never once worried about whether it was needed, because every piece started
 				from something already going wrong in my own life, so I was always the person it was for.
 			</p>
@@ -374,7 +374,7 @@
 		<div class="grid items-start gap-10 sm:grid-cols-[auto_1fr] sm:gap-12">
 			{@render specimen(journalRecap, 'Cubby journal recap', 'max-w-[230px]')}
 			<div class="sm:pt-2">
-				<h2 class="font-inter text-2xl font-bold lg:text-3xl">Everything tracked, rolled up</h2>
+				<h2 class="text-2xl font-bold lg:text-3xl">Everything tracked, rolled up</h2>
 				<p class="text-base-content/85 mt-4 max-w-md leading-relaxed">
 					A weekly and monthly recap that pulls from everything tracked, so the whole house has one place to look back
 					on.
@@ -386,7 +386,7 @@
 	<!-- closing + colophon -->
 	<section class="border-neutral/15 bg-base-100 border-t">
 		<div class="mx-auto max-w-5xl px-5 py-12">
-			<p class="text-base-content/85 font-inter max-w-2xl text-lg leading-relaxed italic">
+			<p class="text-base-content/85 max-w-2xl text-lg leading-relaxed italic">
 				None of it was planned as a product, it just kept answering the next real problem, and the family ended up
 				living in it too.
 			</p>
