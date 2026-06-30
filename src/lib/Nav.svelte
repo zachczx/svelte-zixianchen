@@ -4,19 +4,24 @@
 
 	let { navCurrent }: { navCurrent: string } = $props();
 
-	type ActiveRule = { type: 'hash'; key: string } | { type: 'path'; key: string } | { type: 'prefix'; key: string };
+	type ActiveRule =
+		| { type: 'hash'; key: string }
+		| { type: 'path'; key: string }
+		| { type: 'prefix'; key: string }
+		| { type: 'prefixOrHash'; key: string; hash: string };
 
 	const links: { href: string; label: string; active: ActiveRule }[] = [
 		{ href: '/', label: 'Home', active: { type: 'hash', key: 'header' } },
 		{ href: '/#about', label: 'About', active: { type: 'hash', key: 'about' } },
 		{ href: '/#projects', label: 'Projects', active: { type: 'hash', key: 'projects' } },
-		{ href: '/blog', label: 'Blog', active: { type: 'prefix', key: '/blog' } },
+		{ href: '/blog', label: 'Blog', active: { type: 'prefixOrHash', key: '/blog', hash: 'musings' } },
 		{ href: '/contact', label: 'Contact', active: { type: 'path', key: '/contact' } },
 	];
 
 	function isActive(rule: ActiveRule): boolean {
 		if (rule.type === 'hash') return navCurrent === rule.key;
 		if (rule.type === 'path') return page.url.pathname === rule.key;
+		if (rule.type === 'prefixOrHash') return page.url.pathname.startsWith(rule.key) || navCurrent === rule.hash;
 		return page.url.pathname.startsWith(rule.key);
 	}
 </script>

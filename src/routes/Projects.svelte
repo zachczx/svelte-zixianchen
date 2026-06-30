@@ -75,7 +75,10 @@
 		<div class="flex flex-col">
 			<div class="flex items-baseline gap-4">
 				<span class="text-neutral-content/55 text-sm">{String(i + 1).padStart(2, '0')}</span>
-				<h4 class="text-2xl font-bold tracking-tight lg:text-4xl">{meta.name}</h4>
+				<h4
+					class="decoration-accent decoration-4 underline-offset-4 text-2xl font-bold tracking-tight transition-colors group-hover:underline lg:text-4xl">
+					{meta.name}
+				</h4>
 			</div>
 			<p class="text-neutral-content/75 mt-3 max-w-md text-sm leading-relaxed lg:text-base">{meta.subtitle}</p>
 			<p class="text-neutral-content/45 mt-2 text-xs">{p.stack}</p>
