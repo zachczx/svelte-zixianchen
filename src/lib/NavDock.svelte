@@ -22,7 +22,12 @@
 				label: string;
 				icon: Component;
 				iconClass?: string;
-				active: { type: 'hash'; key: string } | { type: 'path'; key: string } | { type: 'prefix'; key: string } | { type: 'none' };
+				active:
+					| { type: 'hash'; key: string }
+					| { type: 'path'; key: string }
+					| { type: 'prefix'; key: string }
+					| { type: 'prefixOrHash'; key: string; hash: string }
+					| { type: 'none' };
 		  };
 
 	const items: NavItem[] = [
@@ -35,7 +40,13 @@
 			icon: GridIcon,
 			active: { type: 'hash', key: 'projects' },
 		},
-		{ kind: 'anchor', href: '/blog', label: 'Blog', icon: ArticleIcon, active: { type: 'prefix', key: '/blog' } },
+		{
+			kind: 'anchor',
+			href: '/blog',
+			label: 'Blog',
+			icon: ArticleIcon,
+			active: { type: 'prefixOrHash', key: '/blog', hash: 'musings' },
+		},
 		{ kind: 'divider' },
 		{ kind: 'anchor', href: '/contact', label: 'Contact', icon: MailIcon, active: { type: 'path', key: '/contact' } },
 		{
@@ -59,6 +70,8 @@
 		if (item.active.type === 'hash') return navCurrent === item.active.key;
 		if (item.active.type === 'path') return pathName === item.active.key;
 		if (item.active.type === 'prefix') return pathName.startsWith(item.active.key);
+		if (item.active.type === 'prefixOrHash')
+			return pathName.startsWith(item.active.key) || navCurrent === item.active.hash;
 		return false;
 	}
 </script>

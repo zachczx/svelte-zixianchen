@@ -10,7 +10,9 @@
 	import ArticleIcon from '~icons/material-symbols/article';
 	import { codeSnippets } from './code-snippets';
 	import { jobs } from './jobs';
+	import dayjs from 'dayjs';
 
+	let { data } = $props();
 	let navCurrent: string = $state('header');
 
 	function shuffle(arr: string[]) {
@@ -188,6 +190,39 @@
 			class="hidden h-full w-full overflow-hidden bg-black lg:col-span-2 lg:grid"
 			style="background-image:url({Moon}); background-size: cover; background-position: center;">
 		</div>
+		<section id="musings" class="navItem grid w-full justify-items-center px-4 py-20 lg:col-span-5 lg:py-32">
+			<div class="w-full max-w-3xl border border-white/15 bg-white/5">
+				<div class="border-b border-white/15 px-6 py-5 sm:px-8">
+					<h3 class="text-2xl font-bold tracking-tight lg:text-3xl">Musings</h3>
+				</div>
+				<div class="divide-y divide-white/10 px-6 sm:px-8">
+					{#each data.posts as post}
+						<a href="/blog/{post.slug}" class="group grid gap-x-8 gap-y-1.5 py-5 sm:grid-cols-[7rem_1fr]">
+							<span class="text-neutral-content/45 font-mono text-xs tracking-[0.18em] uppercase sm:pt-1.5">
+								{dayjs(post.date).format('D MMM YYYY')}
+							</span>
+							<span class="block">
+								<span
+									class="block leading-snug font-bold decoration-accent decoration-2 underline-offset-4 transition-colors group-hover:underline lg:text-lg">
+									{post.title}
+								</span>
+								<span class="text-neutral-content/45 mt-1.5 flex flex-wrap gap-x-1.5 font-mono text-xs tracking-tight">
+									{#each post.tags as tag, j}
+										{#if j > 0}<span class="text-neutral-content/25">/</span>{/if}
+										<span>{tag}</span>
+									{/each}
+								</span>
+							</span>
+						</a>
+					{/each}
+					<a
+						href="/blog"
+						class="text-neutral-content/60 hover:text-neutral-content flex justify-end py-5 font-mono text-sm tracking-tight transition-colors">
+						All musings ❯
+					</a>
+				</div>
+			</div>
+		</section>
 		<div class="lg:col-span-5">
 			<WebsiteFooter />
 		</div>
