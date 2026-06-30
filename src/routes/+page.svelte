@@ -4,6 +4,7 @@
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
 	import Computer from '$lib/assets/jl-cabrera-tcH6W-49jTU-unsplash.webp?enhanced';
+	import CrayonPortrait from '$lib/assets/crayon-drawing.webp?enhanced';
 	import Projects from './Projects.svelte';
 	import LinkedInIcon from '~icons/uiw/linkedin';
 	import GitHubIcon from '~icons/octicon/mark-github-16';
@@ -107,32 +108,40 @@
 				<h3 class="text-2xl font-bold tracking-tight lg:text-3xl">Interests</h3>
 				<span class="text-[0.7rem] uppercase tracking-[0.25em] text-base-content/40">Profile</span>
 			</div>
-			<dl class="divide-y divide-base-content/10 px-6 sm:px-8">
-				<div class="grid gap-x-8 gap-y-1.5 py-5 sm:grid-cols-[7rem_1fr]">
-					<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Stack</dt>
-					<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">Go, TypeScript, and a bit of Zig.</dd>
+			<div class="sm:flex">
+				<div class="border-b border-base-content/10 px-4 py-4">
+					<enhanced:img
+						src={CrayonPortrait}
+						alt="Crayon portrait of Zixian"
+						class="border-base-content/15 w-32 border sm:w-96" />
 				</div>
-				<div class="grid gap-x-8 gap-y-1.5 py-5 sm:grid-cols-[7rem_1fr]">
-					<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Since</dt>
-					<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">
-						2000 on/off. Back in the Frontpage, XHTML, PHP days.
-					</dd>
-				</div>
-				<div class="grid gap-x-8 gap-y-1.5 py-5 sm:grid-cols-[7rem_1fr]">
-					<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Now</dt>
-					<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">
-						Building a home admin app. Trying to write organic, free-range code by hand. It's tempting to let Claude
-						Code and OpenCode do it automatically but it doesn't feel the same.
-					</dd>
-				</div>
-				<div class="grid gap-x-8 gap-y-1.5 py-5 sm:grid-cols-[7rem_1fr]">
-					<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Offline</dt>
-					<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">
-						Building PCs (love bargains, hate cable management). Learning about product design, business, and
-						entrepreneurship.
-					</dd>
-				</div>
-			</dl>
+				<dl class="divide-y divide-base-content/10 px-4">
+					<div class="grid gap-x-8 gap-y-1.5 py-4">
+						<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Stack</dt>
+						<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">Go, TypeScript, and a bit of Zig.</dd>
+					</div>
+					<div class="grid gap-x-8 gap-y-1.5 py-4">
+						<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Since</dt>
+						<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">
+							2000 on/off. Back in the Frontpage, XHTML, PHP days.
+						</dd>
+					</div>
+					<div class="grid gap-x-8 gap-y-1.5 py-4">
+						<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Now</dt>
+						<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">
+							Building a home admin app. Trying to write organic, free-range code by hand. It's tempting to let Claude
+							Code and OpenCode do it automatically but it doesn't feel the same.
+						</dd>
+					</div>
+					<div class="grid gap-x-8 gap-y-1.5 py-4">
+						<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Offline</dt>
+						<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">
+							Building PCs (love bargains, hate cable management). Learning about product design, business, and
+							entrepreneurship.
+						</dd>
+					</div>
+				</dl>
+			</div>
 		</div>
 	</section>
 

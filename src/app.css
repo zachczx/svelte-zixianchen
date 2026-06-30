@@ -18,6 +18,24 @@
 	--color-success: rgba(34, 187, 51);
 }
 
+@plugin 'daisyui/theme' {
+	name: 'dark';
+	default: false;
+	prefersdark: false;
+	color-scheme: dark;
+	--color-primary: #f93827;
+	--color-secondary: #f93827;
+	--color-info: #16c47f;
+	--color-accent: #ffd65a;
+	--color-base-100: #1b1b1f;
+	--color-base-200: #141417;
+	--color-base-300: #0e0e0e;
+	--color-base-content: #e8e8ea;
+	--color-warning: #d0342c;
+	--color-neutral: #0e0e0e;
+	--color-success: rgba(34, 187, 51);
+}
+
 /* figtree-latin-wght-normal */
 @font-face {
 	font-family: 'Figtree Variable';
@@ -88,6 +106,11 @@
 			color: #3d1510 !important;
 			background-color: rgba(249, 56, 39, 0.08) !important;
 		}
+	}
+
+	[data-theme='dark'] code:not(:has(> span)) {
+		color: #ff8f6b !important;
+		background-color: rgba(249, 56, 39, 0.16) !important;
 	}
 
 	/* Force a classic, always-visible horizontal scrollbar on code blocks so it
