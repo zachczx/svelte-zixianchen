@@ -14,7 +14,7 @@ function extractHeadings(content: string): { text: string; slug: string; level: 
 	let match;
 	while ((match = headingRegex.exec(cleanContent)) !== null) {
 		const level = match[1].length;
-		const text = match[2].replace(/[`*_~\[\]]/g, '').trim();
+		const text = match[2].replace(/[`*_~[\]]/g, '').trim();
 		const slug = text
 			.toLowerCase()
 			.replace(/[^\w\s-]/g, '')
@@ -47,6 +47,8 @@ export const load: PageLoad = async ({ params }) => {
 	if (!(postPath in posts)) error(404, 'post not found!');
 
 	const post = posts[postPath];
+	if (!post.metadata.published) error(404, 'post not found!');
+
 	const rawContent = postsRaw[postPath];
 	const readingTime = calculateReadingTime(rawContent);
 	const headings = extractHeadings(rawContent);
@@ -55,9 +57,10 @@ export const load: PageLoad = async ({ params }) => {
 };
 
 export const entries: EntryGenerator = () => {
-	const posts = import.meta.glob('../posts/*.md', { eager: true });
+	const posts = import.meta.glob<MdsvexModule>('../posts/*.md', { eager: true });
 
 	return Object.keys(posts)
+		.filter((path) => posts[path].metadata.published)
 		.map((path) => {
 			const slug = path.split('/').pop()?.replace('.md', '');
 			return slug ? { slug } : undefined;

@@ -11,15 +11,15 @@ interface PostModule {
 }
 
 export const GET: RequestHandler = async () => {
-	let blogSlugs: string[] = [];
+	const blogSlugs: string[] = [];
 	try {
 		const posts: Record<string, PostModule> = import.meta.glob('../blog/posts/*.md', { eager: true });
 		for (const path in posts) {
-			if (posts[path].metadata.published) {
+			if (posts[path].metadata.published && posts[path].metadata.listed !== false) {
 				blogSlugs.push(posts[path].metadata.slug);
 			}
 		}
-	} catch (err) {
+	} catch {
 		throw error(500, 'Could not load data for param values.');
 	}
 
