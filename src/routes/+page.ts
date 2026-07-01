@@ -12,7 +12,7 @@ export const load: PageLoad = async () => {
 	}
 
 	posts = posts
-		.filter((post) => post.published)
+		.filter((post) => post.published && post.listed !== false)
 		.sort((first, second) => new Date(second.date).getTime() - new Date(first.date).getTime())
 		.slice(0, 3);
 

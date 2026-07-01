@@ -6,5 +6,6 @@ interface BlogPostMetadata {
 	category?: string;
 	tags: string[];
 	published: boolean;
+	listed?: boolean;
 	slug: string;
 }

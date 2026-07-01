@@ -7,7 +7,8 @@ category: 'Work'
 tags:
   - Work
   - Leadership
-published: false
+published: true
+listed: false
 slug: 'how-i-think-about-your-career'
 ---
 
