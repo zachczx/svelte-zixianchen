@@ -43,7 +43,7 @@
 		class="text-base-content/50 mt-6 border-y border-base-content/10 px-3 py-4 font-mono text-sm tracking-tight sm:px-6 xl:px-14">
 		<div class="text-base-content/80 mb-2 text-xs font-bold uppercase tracking-widest">Contents</div>
 		<ol class="grid gap-1">
-			{#each data.headings as heading, i}
+			{#each data.headings as heading}
 				<li class={heading.level === 3 ? 'ml-4' : ''}>
 					<a
 						href="#{heading.slug}"
