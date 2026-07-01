@@ -53,8 +53,7 @@
 			{#if eyebrow}
 				<p class="mt-8 text-xs tracking-wide" style="color: var(--accent-ink)">{eyebrow}</p>
 			{/if}
-			<h1
-				class="mt-4 text-4xl leading-[1.05] font-black tracking-tight text-balance sm:text-5xl lg:text-6xl">
+			<h1 class="mt-4 text-4xl leading-[1.05] font-black tracking-tight text-balance sm:text-5xl lg:text-6xl">
 				{headline}
 			</h1>
 			{#if sub}

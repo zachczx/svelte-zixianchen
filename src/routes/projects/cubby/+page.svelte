@@ -245,8 +245,7 @@
 	<header class="mx-auto max-w-5xl px-5 pt-16 pb-12 lg:pt-24 lg:pb-14">
 		<img src={CubbyLogo} alt="Cubby" class="h-12" />
 		<p class="text-[#C42A1C] mt-8 text-xs tracking-wide">A personal ERP for the household</p>
-		<h1
-			class="mt-4 max-w-4xl text-4xl leading-[1.05] font-black tracking-tight text-balance sm:text-6xl lg:text-7xl">
+		<h1 class="mt-4 max-w-4xl text-4xl leading-[1.05] font-black tracking-tight text-balance sm:text-6xl lg:text-7xl">
 			It started with my towels and ended up managing our home.
 		</h1>
 		<p class="text-base-content/80 mt-6 max-w-2xl text-lg leading-relaxed">
@@ -340,8 +339,7 @@
 	<section id="notes" class="border-neutral/15 bg-base-100 mt-20 scroll-mt-20 border-t">
 		<div class="mx-auto max-w-5xl px-5 py-16">
 			<p class="text-base-content/55 text-xs tracking-wide">Design notes</p>
-			<p
-				class="border-primary/50 text-base-content/85 mt-5 max-w-3xl border-l-4 pl-5 text-xl leading-relaxed italic">
+			<p class="border-primary/50 text-base-content/85 mt-5 max-w-3xl border-l-4 pl-5 text-xl leading-relaxed italic">
 				I built everything I wanted, and I never once worried about whether it was needed, because every piece started
 				from something already going wrong in my own life, so I was always the person it was for.
 			</p>
