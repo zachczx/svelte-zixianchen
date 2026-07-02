@@ -64,8 +64,8 @@
 					href={url}
 					target="_blank"
 					rel="noopener"
-					class="mt-7 inline-flex items-center gap-1.5 text-sm font-semibold"
-					style="color: var(--accent-ink)">
+					class="mt-7 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold transition-colors hover:bg-base-100 focus-visible:outline-2 focus-visible:outline-offset-2"
+					style="color: var(--accent-ink); border-color: color-mix(in srgb, var(--accent-ink) 45%, transparent); outline-color: var(--accent-ink)">
 					Visit site <span aria-hidden="true">&nearr;</span>
 				</a>
 			{/if}

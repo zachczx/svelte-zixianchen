@@ -1,4 +1,4 @@
-﻿<script>
+<script>
 	import dashboard from '$lib/screenshots/cubby/dashboard.webp';
 	import shelf from '$lib/screenshots/cubby/shelf.webp';
 	import tasks from '$lib/screenshots/cubby/tasks.webp';
@@ -252,6 +252,13 @@
 			Dozens of small daily frictions, each turned into its own tracker, then folded into one app that a household of
 			four and a dog now runs on.
 		</p>
+		<a
+			href="https://cubby.dev"
+			target="_blank"
+			rel="noopener"
+			class="mt-7 inline-flex items-center gap-2 border border-[#C42A1C]/45 px-4 py-2 text-sm font-semibold text-[#C42A1C] transition-colors hover:bg-base-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C42A1C]">
+			Visit site <span aria-hidden="true">&nearr;</span>
+		</a>
 	</header>
 
 	<!-- home screen overview -->

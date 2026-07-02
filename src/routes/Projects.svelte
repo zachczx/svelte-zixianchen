@@ -22,29 +22,81 @@
 	];
 	const archive = archiveOrder.map((slug) => ({ slug, ...descriptions[slug] }));
 
+	type ProjectFact = {
+		label: string;
+		value: string;
+	};
+
+	type FeaturedProject = {
+		slug: string;
+		img?: string;
+		shots?: string[];
+		kind: string;
+		pos: string;
+		stack: string;
+		facts: ProjectFact[];
+	};
+
 	// Featured builds get a full row each: screenshot on one side, the pitch on the other.
 	// stack mirrors each project page's own stack list, kept short.
-	const featured = [
+	const featured: FeaturedProject[] = [
 		{
 			slug: 'cubby',
 			kind: 'mobile',
 			pos: 'top',
 			stack: 'Go · SvelteKit · Postgres',
 			shots: [CubbyDashboard, CubbyGym, CubbyCoffee],
+			facts: [
+				{ label: 'Status', value: 'Active household app' },
+				{ label: 'Problem', value: 'Daily routines scattered across memory, chat, and calendars' },
+				{ label: 'Outcome', value: 'One dashboard for tasks, limits, bills, health, travel, and home logs' },
+			],
 		},
-		{ slug: 'abbreviation', img: AbbreviationMain, kind: 'web', pos: 'center', stack: 'Go · htmx · SQLite' },
-		{ slug: 'apptitude', img: ApptitudeMain, kind: 'web', pos: 'top', stack: 'SvelteKit · Pocketbase · Pagefind' },
-		{ slug: 'btonomics', img: BtonomicsMain, kind: 'web', pos: 'top', stack: 'Astro · Pagefind' },
+		{
+			slug: 'abbreviation',
+			img: AbbreviationMain,
+			kind: 'web',
+			pos: 'center',
+			stack: 'Go · htmx · SQLite',
+			facts: [
+				{ label: 'Status', value: 'Live search tool' },
+				{ label: 'Problem', value: 'Singapore Government acronyms are hard to find and easy to mistype' },
+				{ label: 'Outcome', value: 'Fast fuzzy and phonetic lookup for rough searches' },
+			],
+		},
+		{
+			slug: 'apptitude',
+			img: ApptitudeMain,
+			kind: 'web',
+			pos: 'top',
+			stack: 'SvelteKit · Pocketbase · Pagefind',
+			facts: [
+				{ label: 'Status', value: 'Live knowledge base' },
+				{ label: 'Problem', value: 'Tech learning resources scattered by topic, level, and audience' },
+				{ label: 'Outcome', value: 'Curated paths for doers, leaders, concepts, and playbooks' },
+			],
+		},
+		{
+			slug: 'btonomics',
+			img: BtonomicsMain,
+			kind: 'web',
+			pos: 'top',
+			stack: 'Astro · Pagefind',
+			facts: [
+				{ label: 'Status', value: 'Static blog rebuild' },
+				{ label: 'Problem', value: 'WordPress overhead for a focused renovation archive' },
+				{ label: 'Outcome', value: 'Fast searchable HDB renovation notes by topic' },
+			],
+		},
 	];
 </script>
 
-{#snippet card(
-	p: { slug: string; img?: string; shots?: string[]; kind: string; pos: string; stack: string },
-	i: number,
-)}
+{#snippet card(p: FeaturedProject, i: number)}
 	{@const meta = descriptions[p.slug]}
 	{@const domain = meta.url.replace(/^https?:\/\//, '').replace(/\/+$/, '')}
-	<a href="/projects/{p.slug}" class="group grid items-stretch gap-7 text-start lg:grid-cols-2 lg:gap-14">
+	<a
+		href="/projects/{p.slug}"
+		class="group focus-visible:outline-accent grid items-stretch gap-7 text-start focus-visible:outline-2 focus-visible:outline-offset-6 lg:grid-cols-2 lg:gap-14">
 		<div>
 			{#if p.kind === 'mobile'}
 				<!-- phone specimen: a trio of screens -->
@@ -82,7 +134,20 @@
 			</div>
 			<p class="text-neutral-content/75 mt-3 max-w-md text-sm leading-relaxed lg:text-base">{meta.subtitle}</p>
 			<p class="text-neutral-content/45 mt-2 text-xs">{p.stack}</p>
-			<p class="text-neutral-content/50 mt-auto pt-4 text-xs">{domain}</p>
+			<dl class="mt-5 grid gap-2 border-y border-white/10 py-4">
+				{#each p.facts as fact (fact.label)}
+					<div class="grid gap-x-4 gap-y-0.5 sm:grid-cols-[5rem_1fr]">
+						<dt class="text-neutral-content/40 font-mono text-[0.65rem] tracking-[0.16em] uppercase">
+							{fact.label}
+						</dt>
+						<dd class="text-neutral-content/72 text-sm leading-relaxed">{fact.value}</dd>
+					</div>
+				{/each}
+			</dl>
+			<div class="text-neutral-content/60 mt-auto flex items-center justify-between gap-4 pt-4 text-xs">
+				<span>{domain}</span>
+				<span class="text-neutral-content/75 font-mono">Read case study ❯</span>
+			</div>
 		</div>
 	</a>
 {/snippet}

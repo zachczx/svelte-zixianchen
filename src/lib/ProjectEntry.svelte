@@ -36,8 +36,17 @@
 
 <div {id} class="project grid content-center justify-items-center px-2 pt-4 lg:min-h-[90vh] lg:px-8 lg:pt-8 lg:pb-32">
 	<div class="grid content-center justify-items-center text-center">
-		<a href={url}>{@render title()}</a>
+		{@render title()}
 		<p class="text-base-content/70 italic">{subtitle}</p>
+		{#if url}
+			<a
+				href={url}
+				target="_blank"
+				rel="noopener"
+				class="border-primary/45 text-primary mt-4 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold">
+				Visit site <span aria-hidden="true">&nearr;</span>
+			</a>
+		{/if}
 	</div>
 	<div class="bg-base-200 grid max-w-[1000px] pt-24">
 		<div class="grid gap-8 lg:grid-cols-[auto_1fr] lg:gap-x-16 lg:gap-y-24">
