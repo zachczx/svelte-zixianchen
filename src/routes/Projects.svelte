@@ -97,7 +97,7 @@
 	<section class="mt-20 w-full text-start lg:mt-28">
 		<h3 class="text-4xl font-bold">Graveyard</h3>
 		<p class="text-neutral-content/65 mt-3 max-w-xl text-sm lg:text-base">
-			Older builds, mostly retired or folded into the ones above.
+			Retired projects, prototypes, and older builds that fed into current ones.
 		</p>
 		<dl class="mt-8 border-t border-white/15">
 			{#each archive as a (a.slug)}

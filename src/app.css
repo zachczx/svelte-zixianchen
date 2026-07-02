@@ -82,9 +82,15 @@
 
 		/* Reserve space for scrollbar to prevent layout jumping */
 		scrollbar-gutter: stable;
+	}
 
-		@view-transition {
-			navigation: auto;
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			animation: none !important;
+			scroll-behavior: auto !important;
+			transition: none !important;
 		}
 	}
 

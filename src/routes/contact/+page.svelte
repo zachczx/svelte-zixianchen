@@ -6,15 +6,16 @@
 	import CheckIcon from '~icons/tabler/check';
 	import ExclamationCircleIcon from '~icons/tabler/exclamation-circle';
 	let navCurrent = '';
-	let formStatus = $state('Submit');
-	let formEl = $state() as HTMLFormElement;
+	type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
+	type Web3FormsResponse = {
+		success?: boolean;
+		message?: string;
+	};
 
-	/**
-	 * Email check vars
-	 */
-	let email = $state('');
-	const emailRegex = /^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}$/;
-	let disabledSubmitButton = $derived(email !== '' && !emailRegex.test(email));
+	let formStatus = $state<FormStatus>('idle');
+	let formMessage = $state('');
+	let formEl = $state() as HTMLFormElement;
+	let isSubmitting = $derived(formStatus === 'submitting');
 
 	function preventDefault(fn: (event: SubmitEvent) => void) {
 		return function (event: SubmitEvent) {
@@ -27,32 +28,47 @@
 	 * Web4Forms submission
 	 */
 	const handleSubmit = async (event: SubmitEvent) => {
-		formStatus = 'Submitting';
 		const form = event.currentTarget as HTMLFormElement;
-		const formData = new FormData(form);
 
-		const object = Object.fromEntries(formData);
-		const json = JSON.stringify(object);
+		if (!form.checkValidity()) {
+			form.reportValidity();
+			return;
+		}
 
-		const response = await fetch('https://api.web3forms.com/submit', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-				Accept: 'application/json',
-			},
-			body: json,
-		});
-		const result = await response.json();
+		formStatus = 'submitting';
+		formMessage = '';
 
-		if (result.success) {
-			//console.log(result);
+		try {
+			const formData = new FormData(form);
+			const object = Object.fromEntries(formData);
+			const json = JSON.stringify(object);
+
+			const response = await fetch('https://api.web3forms.com/submit', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					Accept: 'application/json',
+				},
+				body: json,
+			});
+			const result = (await response.json()) as Web3FormsResponse;
+
+			if (!response.ok || !result.success) {
+				throw new Error(result.message ?? 'Message could not be sent.');
+			}
+
 			formEl.reset();
+			formStatus = 'success';
+			formMessage = 'Message sent successfully.';
 			setTimeout(() => {
-				formStatus = 'Success';
-			}, 1000);
-			setTimeout(() => {
-				formStatus = 'Submit';
-			}, 3000);
+				if (formStatus === 'success') {
+					formStatus = 'idle';
+					formMessage = '';
+				}
+			}, 4000);
+		} catch {
+			formStatus = 'error';
+			formMessage = 'Something went wrong. Please try again or email me directly.';
 		}
 	};
 </script>
@@ -68,39 +84,48 @@
 		<section class="space-y-4 px-3 pb-2 xl:grid xl:min-w-[40rem]">
 			<div class="rounded-3xl p-4 xl:min-w-[35rem]">
 				<h1 class="mb-12 text-4xl font-bold lg:text-6xl">Tell Me Something</h1>
+				<p class="text-base-content/65 -mt-8 mb-10 max-w-xl leading-relaxed">Send a note, question, or project lead.</p>
 				<form bind:this={formEl} onsubmit={preventDefault(handleSubmit)} class="grid w-full gap-y-4">
 					<input type="hidden" name="access_key" value="f29b8ecc-f01d-45b0-bb55-72005ec3975a" />
 					<label class="input input-lg input-bordered flex w-full items-center gap-2">
 						<UserIcon class="h-4 w-4 opacity-70" />
-						<input type="text" class="grow" name="name" placeholder="Name" required />
+						<input type="text" class="grow" name="name" placeholder="Name" aria-label="Name" required />
 					</label>
-					<label
-						class="input input-lg input-bordered w-full {disabledSubmitButton
-							? 'input-warning'
-							: ''} flex items-center gap-2">
+					<label class="input input-lg input-bordered flex w-full items-center gap-2">
 						<EnvelopeIcon class="h-4 w-4 opacity-70" />
-						<input type="email" name="email" class="grow" placeholder="Email" bind:value={email} required />
+						<input type="email" name="email" class="grow" placeholder="Email" aria-label="Email" required />
 					</label>
 					<textarea
 						name="message"
 						placeholder="Message"
+						aria-label="Message"
 						class="textarea textarea-bordered textarea-lg w-full"
 						required
 						rows="5"></textarea>
 					<div class="w-full">
-						<button class="btn btn-neutral btn-lg text-base-100 w-full text-lg" disabled={disabledSubmitButton}
-							>{#if formStatus === 'Submitting'}
+						<button
+							class="btn btn-neutral btn-lg text-base-100 w-full text-lg"
+							disabled={isSubmitting}
+							aria-busy={isSubmitting}
+							>{#if isSubmitting}
 								<span class="loading loading-dots loading-md text-base-100"></span>
+								Sending...
 							{:else}
-								Submit
+								Send message
 							{/if}
 						</button>
-						<div class="ms-4 text-lime-500 {formStatus === 'Success' ? 'inline' : 'hidden'}">
-							<CheckIcon class="me-1 mb-1 inline" />Message sent successfully.
-						</div>
-						<div class="text-warning ms-4 {disabledSubmitButton ? 'inline' : 'hidden'}">
-							<ExclamationCircleIcon class="me-1 mb-1 inline" />Please enter a valid email address.
-						</div>
+						{#if formMessage}
+							<p
+								aria-live="polite"
+								class={['ms-1 mt-3 text-sm', formStatus === 'success' ? 'text-lime-600' : 'text-warning']}>
+								{#if formStatus === 'success'}
+									<CheckIcon class="me-1 mb-1 inline" />
+								{:else}
+									<ExclamationCircleIcon class="me-1 mb-1 inline" />
+								{/if}
+								{formMessage}
+							</p>
+						{/if}
 					</div>
 				</form>
 			</div>

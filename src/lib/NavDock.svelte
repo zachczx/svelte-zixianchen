@@ -123,47 +123,49 @@
 		}
 	}
 
-	.dock:hover {
-		font-size: calc(var(--font-scaler) * 9rem);
-		div {
-			filter: saturate(1);
-			height: calc(var(--dimensions-scaler) * 13rem);
-			width: calc(var(--dimensions-scaler) * 13rem);
+	@media (prefers-reduced-motion: no-preference) {
+		.dock:hover {
+			font-size: calc(var(--font-scaler) * 9rem);
+			div {
+				filter: saturate(1);
+				height: calc(var(--dimensions-scaler) * 13rem);
+				width: calc(var(--dimensions-scaler) * 13rem);
+			}
+			margin-top: calc(var(--margin-scaler) * -6rem);
 		}
-		margin-top: calc(var(--margin-scaler) * -6rem);
-	}
 
-	/* Adjacent to hover */
-	.dock:hover + .dock,
-	.dock:has(+ .dock:hover) {
-		font-size: calc(var(--font-scaler) * 8rem);
-		/* background-color: fuchsia; */
-		div {
-			height: calc(var(--dimensions-scaler) * 11rem);
-			width: calc(var(--dimensions-scaler) * 11rem);
+		/* Adjacent to hover */
+		.dock:hover + .dock,
+		.dock:has(+ .dock:hover) {
+			font-size: calc(var(--font-scaler) * 8rem);
+			/* background-color: fuchsia; */
+			div {
+				height: calc(var(--dimensions-scaler) * 11rem);
+				width: calc(var(--dimensions-scaler) * 11rem);
+			}
+			margin-top: calc(var(--margin-scaler) * -3.5rem);
 		}
-		margin-top: calc(var(--margin-scaler) * -3.5rem);
-	}
 
-	/* Next next - beside adjacent */
-	.dock:hover + .dock + .dock,
-	.dock:has(+ .dock + .dock:hover) {
-		font-size: calc(var(--font-scaler) * 7rem);
-		div {
-			height: calc(var(--dimensions-scaler) * 10rem);
-			width: calc(var(--dimensions-scaler) * 10rem);
+		/* Next next - beside adjacent */
+		.dock:hover + .dock + .dock,
+		.dock:has(+ .dock + .dock:hover) {
+			font-size: calc(var(--font-scaler) * 7rem);
+			div {
+				height: calc(var(--dimensions-scaler) * 10rem);
+				width: calc(var(--dimensions-scaler) * 10rem);
+			}
+			margin-top: calc(var(--margin-scaler) * -2rem);
 		}
-		margin-top: calc(var(--margin-scaler) * -2rem);
-	}
 
-	/* Next next next */
-	.dock:hover + .dock + .dock + .dock,
-	.dock:has(+ .dock + .dock + .dock:hover) {
-		font-size: calc(var(--font-scaler) * 6rem);
-		div {
-			height: calc(var(--dimensions-scaler) * 9rem);
-			width: calc(var(--dimensions-scaler) * 9rem);
+		/* Next next next */
+		.dock:hover + .dock + .dock + .dock,
+		.dock:has(+ .dock + .dock + .dock:hover) {
+			font-size: calc(var(--font-scaler) * 6rem);
+			div {
+				height: calc(var(--dimensions-scaler) * 9rem);
+				width: calc(var(--dimensions-scaler) * 9rem);
+			}
+			margin-top: calc(var(--margin-scaler) * -1rem);
 		}
-		margin-top: calc(var(--margin-scaler) * -1rem);
 	}
 </style>

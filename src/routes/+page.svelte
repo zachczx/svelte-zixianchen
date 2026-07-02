@@ -35,20 +35,28 @@
 	let cursorPos = $state(0);
 
 	onMount(() => {
-		let old = display;
-		let next = makeText();
-		let pos = 0;
+		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		let interval: ReturnType<typeof setInterval> | undefined;
 
-		const interval = setInterval(() => {
-			pos += 1;
-			if (pos >= old.length) {
-				old = next;
-				next = makeText();
-				pos = 0;
-			}
-			display = next.slice(0, pos) + old.slice(pos);
-			cursorPos = pos;
-		}, 70);
+		if (prefersReducedMotion) {
+			display = snippets.join(' ');
+			cursorPos = 0;
+		} else {
+			let old = display;
+			let next = makeText();
+			let pos = 0;
+
+			interval = setInterval(() => {
+				pos += 1;
+				if (pos >= old.length) {
+					old = next;
+					next = makeText();
+					pos = 0;
+				}
+				display = next.slice(0, pos) + old.slice(pos);
+				cursorPos = pos;
+			}, 70);
+		}
 
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
@@ -57,7 +65,7 @@
 		});
 		document.querySelectorAll<HTMLElement>('.navItem').forEach((el) => observer.observe(el));
 		return () => {
-			clearInterval(interval);
+			if (interval) clearInterval(interval);
 			observer.disconnect();
 		};
 	});
@@ -155,7 +163,13 @@
 		</div>
 		<section
 			class="bg-base-200 grid w-full max-w-250 grid-rows-[auto_1fr_auto] content-start gap-y-8 lg:col-span-3 lg:gap-y-24">
-			<h2 id="jobs" class="justify-self-start px-4 text-5xl font-extrabold sm:text-6xl lg:pt-28 lg:text-9xl">Day</h2>
+			<div class="justify-self-start px-4 lg:pt-28">
+				<p class="text-base-content/45 font-mono text-xs tracking-[0.2em] uppercase">Work history</p>
+				<h2 id="jobs" class="text-5xl font-extrabold sm:text-6xl lg:text-9xl">Day</h2>
+				<p class="text-base-content/65 mt-3 max-w-xl text-sm leading-relaxed lg:text-base">
+					Public sector tech, policy, comms, and service delivery roles.
+				</p>
+			</div>
 			<div class="grid content-start gap-y-10 px-4 lg:gap-y-16">
 				{#each jobs as job}
 					<div class="job-row grid gap-y-1 lg:grid-cols-[auto_1fr]">
@@ -182,11 +196,13 @@
 	<div class="text-neutral-content grid w-full content-start justify-items-center bg-[#0E0E0E] lg:grid-cols-5">
 		<div class="grid w-full justify-items-center pt-8 lg:col-span-3 lg:pt-28">
 			<section class="grid w-full max-w-250 justify-items-start px-4 pb-8 lg:grid-cols-3 lg:justify-self-end lg:pb-28">
-				<h2
-					id="projects"
-					class="navItem justify-self-start pb-8 text-5xl font-extrabold sm:text-6xl lg:col-span-3 lg:pb-24 lg:text-9xl">
-					Night
-				</h2>
+				<div class="justify-self-start pb-8 lg:col-span-3 lg:pb-24">
+					<p class="text-neutral-content/45 font-mono text-xs tracking-[0.2em] uppercase">Side projects</p>
+					<h2 id="projects" class="navItem text-5xl font-extrabold sm:text-6xl lg:text-9xl">Night</h2>
+					<p class="text-neutral-content/65 mt-3 max-w-xl text-sm leading-relaxed lg:text-base">
+						Personal tools, experiments, and small products built outside the day job.
+					</p>
+				</div>
 
 				<div
 					class="grid w-full content-start justify-items-center gap-y-8 text-center lg:col-span-3 lg:grid-cols-1 lg:justify-items-start lg:text-start">
@@ -203,6 +219,7 @@
 			<div class="w-full max-w-3xl border border-white/15 bg-white/5">
 				<div class="border-b border-white/15 px-6 py-5 sm:px-8">
 					<h3 class="text-2xl font-bold tracking-tight lg:text-3xl">Musings</h3>
+					<p class="text-neutral-content/55 mt-2 text-sm leading-relaxed lg:text-base">Recent writing from the blog.</p>
 				</div>
 				<div class="divide-y divide-white/10 px-6 sm:px-8">
 					{#each data.posts as post}
@@ -280,6 +297,13 @@
 	.code-cursor {
 		border-left: 4px solid yellow;
 		animation: blink 0.7s step-end infinite;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.code-cursor {
+			display: none;
+			animation: none;
+		}
 	}
 
 	@keyframes blink {
