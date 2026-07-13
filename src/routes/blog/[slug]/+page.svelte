@@ -57,7 +57,7 @@
 	</nav>
 {/if}
 <article
-	class="prose prose-invert max-w-none prose-a:font-semibold prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:text-accent prose-blockquote:my-8 prose-blockquote:ms-8 prose-h2:text-2xl prose-h2:font-bold prose-p:leading-relaxed prose-li:leading-relaxed prose-p:my-6 prose-code:font-mono prose-pre:px-0 prose-pre:py-3 mt-6 w-full px-3 sm:px-6 lg:mt-10 xl:px-14"
+	class="blog-prose prose max-w-none prose-a:font-semibold prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:text-accent prose-blockquote:my-8 prose-blockquote:ms-8 prose-h2:text-2xl prose-h2:font-bold prose-p:leading-relaxed prose-li:leading-relaxed prose-p:my-6 prose-code:font-mono prose-pre:px-0 prose-pre:py-3 mt-6 w-full px-3 sm:px-6 lg:mt-10 xl:px-14"
 	class:numbered-paras={data.metadata.category === 'Work'}>
 	{#if content}
 		{@const Component = content}
