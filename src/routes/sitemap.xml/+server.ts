@@ -27,6 +27,7 @@ export const GET: RequestHandler = async () => {
 		origin: 'https://zixianchen.com',
 		excludeRoutePatterns: [
 			'^/dashboard.*', // i.e. routes starting with `/dashboard`
+			'^/blog/unlisted$',
 			'.*\\[page=integer\\].*', // i.e. routes containing `[page=integer]`–e.g. `/blog/2`
 			'.*\\(authenticated\\).*', // i.e. routes within a group
 		],

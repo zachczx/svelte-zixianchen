@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /blog/unlisted
 
 Sitemap: https://zixianchen.com/sitemap.xml
