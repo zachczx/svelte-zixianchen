@@ -5,9 +5,9 @@
 	import apptitudeLearn from '$lib/screenshots/apptitude/learn.png?enhanced&w=1000&quality=90';
 
 	const stack = [
-		{ role: 'Frontend', tools: 'SvelteKit' },
-		{ role: 'Backend', tools: 'Pocketbase' },
-		{ role: 'Search', tools: 'Pagefind' },
+		{ role: 'App', tools: 'SvelteKit · Svelte 5' },
+		{ role: 'Data', tools: 'Postgres · Kysely' },
+		{ role: 'Search', tools: 'Meilisearch' },
 	];
 </script>
 
@@ -15,9 +15,9 @@
 	name="Apptitude"
 	accent="#EA580C"
 	accentInk="#C2410C"
-	eyebrow="Tech knowledge for decision-makers"
-	headline="Building technical intuition, minus the jargon."
-	sub="A personal collection of mental models and notes on software in Government, written for the people who decide on tech but don't write the code. Plain-English concepts, plus opinionated playbooks for scoping and strategy."
+	eyebrow="For officers making technology decisions"
+	headline="Tech savvy, not tech heavy."
+	sub="Practical decision support and plain-English technology education for officers and leaders who govern, fund, or inherit digital systems. Apptitude helps them pressure-test a proposal, find the evidence that matters, and learn enough to ask sharper questions."
 	url="https://titude.app/"
 	{stack}>
 	{#snippet wordmark()}
@@ -34,21 +34,21 @@
 	<section class="border-neutral/10 border-t py-12">
 		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">Problem</p>
 		<p class="mt-3 max-w-3xl text-2xl leading-snug font-bold">
-			Teammates never knew where to start learning tech, and the good material was scattered across YouTube, blogs, and
-			courses with no way to browse by level or topic.
+			Officers and leaders are accountable for decisions about systems, vendors, and public money, but the material
+			available to them is often either too technical, too generic, or framed by the people selling the solution.
 		</p>
 	</section>
 
 	<section class="border-neutral/10 border-t py-12">
-		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">How it works</p>
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">What I built</p>
 		<div class="text-base-content/85 mt-4 grid max-w-2xl gap-4 leading-relaxed">
 			<p>
-				A curated directory organised by competency, Learn How and Think Why, and by audience, Doers and Leaders, with
-				client-side search so anything is a few keystrokes away.
+				Apptitude starts with the situation an officer is facing. Guided Consults turn proposals, renewals, troubled
+				projects, and AI claims into concrete evidence requests, pause conditions, and next steps.
 			</p>
 			<p>
-				I deliberately skipped a CMS, a database, and Markdown files. The data lives in plain JS objects, which is
-				simpler to update and has no build-step overhead for what is really a curated list.
+				Learn modules build the technical intuition behind those decisions in plain English. Accounts keep progress,
+				bookmarks, and personal notes together, while full-text search makes the growing library easy to navigate.
 			</p>
 		</div>
 	</section>
