@@ -244,7 +244,7 @@
 	<!-- hero -->
 	<header class="mx-auto max-w-5xl px-5 pt-16 pb-12 lg:pt-24 lg:pb-14">
 		<img src={CubbyLogo} alt="Cubby" class="h-12" />
-		<p class="text-[#C42A1C] mt-8 text-xs tracking-wide">A personal ERP for the household</p>
+		<p class="mt-8 text-xs tracking-wide text-[#C42A1C]">A personal ERP for the household</p>
 		<h1 class="mt-4 max-w-4xl text-4xl leading-[1.05] font-black tracking-tight text-balance sm:text-6xl lg:text-7xl">
 			It started with my towels and ended up managing our home.
 		</h1>
@@ -256,7 +256,7 @@
 			href="https://cubby.dev"
 			target="_blank"
 			rel="noopener"
-			class="mt-7 inline-flex items-center gap-2 border border-[#C42A1C]/45 px-4 py-2 text-sm font-semibold text-[#C42A1C] transition-colors hover:bg-base-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C42A1C]">
+			class="hover:bg-base-100 mt-7 inline-flex items-center gap-2 border border-[#C42A1C]/45 px-4 py-2 text-sm font-semibold text-[#C42A1C] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C42A1C]">
 			Visit site <span aria-hidden="true">&nearr;</span>
 		</a>
 	</header>
@@ -291,7 +291,7 @@
 
 	<!-- contents -->
 	<nav class="mx-auto max-w-5xl px-5 pb-14" aria-label="Sections">
-		<p class="text-[#C42A1C] text-xs tracking-wide">Contents</p>
+		<p class="text-xs tracking-wide text-[#C42A1C]">Contents</p>
 		<ul class="mt-4 grid gap-x-10 sm:grid-cols-2">
 			{#each contents as c (c.id)}
 				<li>
@@ -358,7 +358,7 @@
 			<div class="mt-8 grid gap-4 md:grid-cols-3">
 				{#each decisions as d (d.title)}
 					<div class="border-neutral/20 border p-5">
-						<div class="text-[#C42A1C] text-[0.7rem] font-semibold tracking-wider uppercase">{d.kicker}</div>
+						<div class="text-[0.7rem] font-semibold tracking-wider text-[#C42A1C] uppercase">{d.kicker}</div>
 						<p class="mt-2 font-semibold">{d.title}</p>
 						<ul class="mt-3 grid gap-1.5">
 							{#each d.points as point (point)}

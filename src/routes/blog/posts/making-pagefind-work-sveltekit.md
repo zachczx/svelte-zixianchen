@@ -97,7 +97,7 @@ This is how I eventually got it to work.
     export default config;
     ```
 
-7.  Next we need to process the URLs of the search results. Pagefind adds a .html to the results and that caused 404 errors for me. So let's go back to +page.svelte to add this [(credit to the plugin author's suggestion to me)]():
+7.  Next we need to process the URLs of the search results. Pagefind adds a .html to the results and that caused 404 errors for me. So let's go back to +page.svelte to add this [(credit to the plugin author's suggestion to me)](<>):
 
     ```js
     // src/routes/search/+page.svelte

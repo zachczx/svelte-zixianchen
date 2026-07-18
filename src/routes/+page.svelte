@@ -110,40 +110,40 @@
 		</a>
 	</header>
 
-	<section id="about" class="navItem grid w-full justify-items-center bg-base-200 px-4 py-20 lg:py-32">
-		<div class="w-full max-w-3xl border border-base-content/15 bg-base-100">
-			<div class="flex items-baseline justify-between border-b border-base-content/15 px-6 py-5 sm:px-8">
+	<section id="about" class="navItem bg-base-200 grid w-full justify-items-center px-4 py-20 lg:py-32">
+		<div class="border-base-content/15 bg-base-100 w-full max-w-3xl border">
+			<div class="border-base-content/15 flex items-baseline justify-between border-b px-6 py-5 sm:px-8">
 				<h3 class="text-2xl font-bold tracking-tight lg:text-3xl">Interests</h3>
-				<span class="text-[0.7rem] uppercase tracking-[0.25em] text-base-content/40">Profile</span>
+				<span class="text-base-content/40 text-[0.7rem] tracking-[0.25em] uppercase">Profile</span>
 			</div>
 			<div class="sm:flex">
-				<div class="border-b border-base-content/10 px-4 py-4">
+				<div class="border-base-content/10 border-b px-4 py-4">
 					<enhanced:img
 						src={CrayonPortrait}
 						alt="Crayon portrait of Zixian"
 						class="border-base-content/15 w-32 border sm:w-96" />
 				</div>
-				<dl class="divide-y divide-base-content/10 px-4">
+				<dl class="divide-base-content/10 divide-y px-4">
 					<div class="grid gap-x-8 gap-y-1.5 py-4">
-						<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Stack</dt>
-						<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">Go, TypeScript, and a bit of Zig.</dd>
+						<dt class="text-base-content/45 text-xs tracking-[0.18em] uppercase sm:pt-1">Stack</dt>
+						<dd class="text-base-content/80 text-sm leading-relaxed lg:text-base">Go, TypeScript, and a bit of Zig.</dd>
 					</div>
 					<div class="grid gap-x-8 gap-y-1.5 py-4">
-						<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Since</dt>
-						<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">
+						<dt class="text-base-content/45 text-xs tracking-[0.18em] uppercase sm:pt-1">Since</dt>
+						<dd class="text-base-content/80 text-sm leading-relaxed lg:text-base">
 							2000 on/off. Back in the Frontpage, XHTML, PHP days.
 						</dd>
 					</div>
 					<div class="grid gap-x-8 gap-y-1.5 py-4">
-						<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Now</dt>
-						<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">
+						<dt class="text-base-content/45 text-xs tracking-[0.18em] uppercase sm:pt-1">Now</dt>
+						<dd class="text-base-content/80 text-sm leading-relaxed lg:text-base">
 							Building a home admin app. Trying to write organic, free-range code by hand. It's tempting to let Claude
 							Code and OpenCode do it automatically but it doesn't feel the same.
 						</dd>
 					</div>
 					<div class="grid gap-x-8 gap-y-1.5 py-4">
-						<dt class="text-xs uppercase tracking-[0.18em] text-base-content/45 sm:pt-1">Offline</dt>
-						<dd class="text-sm leading-relaxed text-base-content/80 lg:text-base">
+						<dt class="text-base-content/45 text-xs tracking-[0.18em] uppercase sm:pt-1">Offline</dt>
+						<dd class="text-base-content/80 text-sm leading-relaxed lg:text-base">
 							Building PCs (love bargains, hate cable management). Learning about product design, business, and
 							entrepreneurship.
 						</dd>
@@ -229,7 +229,7 @@
 							</span>
 							<span class="block">
 								<span
-									class="block leading-snug font-bold decoration-accent decoration-2 underline-offset-4 transition-colors group-hover:underline lg:text-lg">
+									class="decoration-accent block leading-snug font-bold decoration-2 underline-offset-4 transition-colors group-hover:underline lg:text-lg">
 									{post.title}
 								</span>
 								<span class="text-neutral-content/45 mt-1.5 flex flex-wrap gap-x-1.5 font-mono text-xs tracking-tight">

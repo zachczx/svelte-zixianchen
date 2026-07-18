@@ -11,7 +11,7 @@
 
 <header class="border-base-content/10 border-b px-4 pt-2 pb-8 lg:px-6">
 	<div class="text-base-content/45 font-mono text-sm">{data.posts.length} listed posts</div>
-	<h1 class="mt-3 text-3xl font-black text-base-content sm:text-4xl">Notes, fixes, and stray thoughts</h1>
+	<h1 class="text-base-content mt-3 text-3xl font-black sm:text-4xl">Notes, fixes, and stray thoughts</h1>
 	<p class="text-base-content/65 mt-3 max-w-2xl text-base leading-relaxed">
 		Web development, infra, AI, writing, and odd problems worth writing down.
 	</p>

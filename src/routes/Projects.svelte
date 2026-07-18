@@ -128,7 +128,7 @@
 			<div class="flex items-baseline gap-4">
 				<span class="text-neutral-content/55 text-sm">{String(i + 1).padStart(2, '0')}</span>
 				<h4
-					class="decoration-accent decoration-4 underline-offset-4 text-2xl font-bold tracking-tight transition-colors group-hover:underline lg:text-4xl">
+					class="decoration-accent text-2xl font-bold tracking-tight decoration-4 underline-offset-4 transition-colors group-hover:underline lg:text-4xl">
 					{meta.name}
 				</h4>
 			</div>

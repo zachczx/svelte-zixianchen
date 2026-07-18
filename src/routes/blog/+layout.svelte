@@ -28,7 +28,7 @@
 
 <div
 	data-theme={theme}
-	class="blog-shell bg-base-200 relative flex w-full flex-col items-center justify-center overflow-hidden text-base-content transition-colors">
+	class="blog-shell bg-base-200 text-base-content relative flex w-full flex-col items-center justify-center overflow-hidden transition-colors">
 	<div id="container" class="z-10 grid min-h-dvh w-full max-w-3xl justify-center py-6">
 		<div class="w-full min-w-0">
 			<button
@@ -43,9 +43,9 @@
 					<DarkModeIcon class="size-5" aria-hidden="true" />
 				{/if}
 			</button>
-			<a href="/" class="flex justify-center pt-8 pb-12 hover:opacity-80 transition-opacity" aria-label="logo">
+			<a href="/" class="flex justify-center pt-8 pb-12 transition-opacity hover:opacity-80" aria-label="logo">
 				<div
-					class="code-z size-16 lg:size-20 overflow-hidden bg-slate-900"
+					class="code-z size-16 overflow-hidden bg-slate-900 lg:size-20"
 					style="view-transition-name: logo"
 					aria-hidden="true">
 					<div class="code-fill font-mono">{codeText}</div>
