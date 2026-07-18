@@ -1,7 +1,7 @@
 // /src/routes/sitemap.xml/+server.ts
 import type { RequestHandler } from '@sveltejs/kit';
 import { error } from '@sveltejs/kit';
-import * as sitemap from 'super-sitemap';
+import * as sitemap from 'super-sitemap/sveltekit';
 
 export const prerender = true; // optional
 
@@ -25,12 +25,7 @@ export const GET: RequestHandler = async () => {
 
 	return await sitemap.response({
 		origin: 'https://zixianchen.com',
-		excludeRoutePatterns: [
-			'^/dashboard.*', // i.e. routes starting with `/dashboard`
-			'^/blog/unlisted$',
-			'.*\\[page=integer\\].*', // i.e. routes containing `[page=integer]`–e.g. `/blog/2`
-			'.*\\(authenticated\\).*', // i.e. routes within a group
-		],
+		excludeRoutePatterns: [/^\/blog\/unlisted$/],
 		paramValues: {
 			'/blog/[slug]': blogSlugs, // e.g. ['hello-world', 'another-post']
 		},

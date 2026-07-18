@@ -127,8 +127,8 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1(rolldown@1.1.5)
       super-sitemap:
-        specifier: ^1.0.12
-        version: 1.0.12(svelte@5.56.4(@typescript-eslint/types@8.63.0))
+        specifier: ^2.0.5
+        version: 2.0.5
       svelte-check:
         specifier: ^4.7.2
         version: 4.7.2(picomatch@4.0.5)(svelte@5.56.4(@typescript-eslint/types@8.63.0))(typescript@6.0.3)
@@ -2054,10 +2054,8 @@ packages:
     resolution: {integrity: sha512-yDPMNjp4WyfYBkHnjIRLfca1i6KMyGCtsVgoKe/z1+6vukgaENdgGBZt+ZmKPc4gavvEZ5OgHfHdrazhgNyG7w==}
     engines: {node: '>=12'}
 
-  super-sitemap@1.0.12:
-    resolution: {integrity: sha512-C3gfAS1RZxL5bbZGtgnIOitMhfqAt8RmhW8AWTia6c8n9RW3Zx7f/SxVeFWZD0I1nUAx2pkxuWazVtev0Nmb5w==}
-    peerDependencies:
-      svelte: '>=4.0.0 <6.0.0'
+  super-sitemap@2.0.5:
+    resolution: {integrity: sha512-nac5LEVTh81d1Rp57wmoEAXX7M/CTgtl51hWtN5junpKqzNpRvunAARv9kG4I3Tafru2Sc0Penc23SH9CTSOmA==}
 
   supports-color@10.2.2:
     resolution: {integrity: sha512-SS+jx45GF1QjgEXQx4NJZV9ImqmO2NPz5FNsIHrsDjh2YsHnawpan7SNQ1o8NuhrbHZy9AZhIoCUiCeaW/C80g==}
@@ -4006,10 +4004,7 @@ snapshots:
     dependencies:
       ansi-regex: 6.2.2
 
-  super-sitemap@1.0.12(svelte@5.56.4(@typescript-eslint/types@8.63.0)):
-    dependencies:
-      svelte: 5.56.4(@typescript-eslint/types@8.63.0)
-
+  super-sitemap@2.0.5: {}
   supports-color@10.2.2: {}
 
   svelte-check@4.7.2(picomatch@4.0.5)(svelte@5.56.4(@typescript-eslint/types@8.63.0))(typescript@6.0.3):
