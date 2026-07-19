@@ -5,7 +5,6 @@ date: '2026-07-19'
 date_updated: ''
 category: 'Work'
 tags:
-  - Work
   - Staff work
 published: true
 listed: true

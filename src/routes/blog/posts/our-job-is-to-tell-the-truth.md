@@ -5,8 +5,7 @@ date: '2026-05-06'
 date_updated: ''
 category: 'Work'
 tags:
-  - Work
-  - Leadership
+  - Digitalization
 published: true
 listed: false
 slug: 'our-job-is-to-tell-the-truth'

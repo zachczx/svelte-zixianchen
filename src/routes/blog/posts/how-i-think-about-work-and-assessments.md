@@ -5,8 +5,7 @@ date: '2026-04-21'
 date_updated: ''
 category: 'Work'
 tags:
-  - Work
-  - Leadership
+  - Career
 published: true
 listed: false
 slug: 'how-i-think-about-work-and-assessments'

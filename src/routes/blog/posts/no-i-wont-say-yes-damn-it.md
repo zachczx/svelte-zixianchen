@@ -5,8 +5,8 @@ date: '2026-07-13'
 date_updated: ''
 category: 'Work'
 tags:
-  - Work
-  - Leadership
+  - Digitalization
+  - Communication
 published: true
 listed: false
 slug: 'no-i-wont-say-yes-damn-it'
