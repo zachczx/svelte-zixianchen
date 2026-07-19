@@ -3,7 +3,7 @@ title: 'Coolify Docker-Compose Build Failures - AlpineLinux CDN Temporary Error'
 description: 'Docker-compose deployment kept failing for a Golang app.'
 date: '2025-03-29'
 date_updated: ''
-category: 'Tech'
+category: 'Systems'
 tags:
   - Coolify
   - Oracle

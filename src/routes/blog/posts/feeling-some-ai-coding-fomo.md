@@ -3,7 +3,7 @@ title: 'Feeling Some AI Coding FOMO'
 description: "Just writing down how I've been feeling about AI coding tools lately."
 date: '2026-04-11'
 date_updated: ''
-category: 'Tech'
+category: 'Life'
 tags:
   - AI
   - FOMO

@@ -3,7 +3,7 @@ title: 'Making Pagefind Work on Sveltekit'
 description: "I got Pagefind to work on Sveltekit, couldn't find relevant guides, so I wrote this."
 date: '2024-06-27'
 date_updated: '2024-07-10'
-category: 'Tech'
+category: 'Dev'
 tags:
   - SvelteKit
   - SvelteJS

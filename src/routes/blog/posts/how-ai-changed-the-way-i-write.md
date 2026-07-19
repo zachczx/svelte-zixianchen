@@ -3,7 +3,7 @@ title: 'How AI Changed the Way I Write'
 description: "On soulless AI prose, the writing habits I've had to abandon, and the weird mental shift of writing defensively against your own tools."
 date: '2026-05-06'
 date_updated: ''
-category: 'Tech'
+category: 'Life'
 tags:
   - AI
   - Writing

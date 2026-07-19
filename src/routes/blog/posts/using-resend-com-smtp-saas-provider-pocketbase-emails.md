@@ -3,7 +3,7 @@ title: 'Using Resend.com as the SMTP SaaS provider for PocketBase Emails'
 description: 'I use Resend.com, which is an SMTP SaaS provider, for PocketBase emails.'
 date: '2024-10-13'
 date_updated: ''
-category: 'Tech'
+category: 'Dev'
 tags:
   - Resend
   - SMTP

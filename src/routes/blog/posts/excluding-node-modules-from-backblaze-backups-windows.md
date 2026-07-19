@@ -3,7 +3,7 @@ title: 'Excluding node_modules From Backblaze Backups on Windows'
 description: 'I had been excluding node_modules and other dev folders from Backblaze on Windows all wrong, with forward slashes and a rule anchored to the user folder that never matched my projects. Here is the working set of exclusion rules I settled on for my SvelteKit, Node, and Go projects.'
 date: '2026-06-04'
 date_updated: ''
-category: 'Tech'
+category: 'Systems'
 tags:
   - Backblaze
   - backup

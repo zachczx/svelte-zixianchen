@@ -3,7 +3,7 @@ title: 'Coolify Postgres 18 Data Disappearing on Restart? Check PGDATA'
 description: 'Postgres 18 Alpine changed the default PGDATA path, silently breaking Coolify storage mounts that worked fine on Postgres 16.'
 date: '2026-03-11'
 date_updated: ''
-category: 'Tech'
+category: 'Systems'
 tags:
   - Coolify
   - Postgres

@@ -3,7 +3,7 @@ title: 'Coolify: Connecting Docker Compose App to Postgres DB'
 description: "For the longest time I just couldn't connect to my Postgres DB on Coolify if I deployed on Docker Compose."
 date: '2024-11-16'
 date_updated: ''
-category: 'Tech'
+category: 'Systems'
 tags:
   - Docker
   - Postgres

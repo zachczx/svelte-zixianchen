@@ -22,9 +22,9 @@ I am still amazed by how often this happens:
 
 - In meetings chaired by very senior leaders, people who know little about the subject agree wholeheartedly, then change their tune depending on where the conversation lands.
 - People in high-level forums swallow their disagreements and say yes whenever they are asked whether something can or should be done.
-- Someone says, "<senior person> wants it, so don’t ask so much. Just do it."
+- Someone says, "&lt;senior person&gt; wants it, so don’t ask so much. Just do it."
 - Leaders say they are uncomfortable proposing something that goes against what a bigger boss said previously.
-- A throwaway comment made by <senior person> years ago gets repeated as if it were policy or sacrosanct truth.
+- A throwaway comment made by &lt;senior person&gt; years ago gets repeated as if it were policy or sacrosanct truth.
 
 The common thread is that authority replaces judgement. People stop asking whether the direction still makes sense and start working out how to comply.
 
