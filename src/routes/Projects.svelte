@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { descriptions } from '$lib/ProjectDescriptions';
-	import AbbreviationMain from '$lib/screenshots/abbreviation/main-cropped.webp?enhanced';
+	import AbbreviationHome from '$lib/screenshots/abbreviation/home.png?enhanced';
 	import ApptitudeMain from '$lib/screenshots/apptitude/main.png?enhanced';
 	import BtonomicsMain from '$lib/screenshots/btonomics/main.webp?enhanced';
 	import CubbyDashboard from '$lib/screenshots/cubby/dashboard.webp?enhanced';
@@ -54,14 +54,21 @@
 		},
 		{
 			slug: 'abbreviation',
-			img: AbbreviationMain,
+			img: AbbreviationHome,
 			kind: 'web',
 			pos: 'center',
-			stack: 'Go · htmx · SQLite',
+			stack: 'Go · htmx · embedded JSON',
 			facts: [
-				{ label: 'Status', value: 'Live search tool' },
-				{ label: 'Problem', value: 'Singapore Government acronyms are hard to find and easy to mistype' },
-				{ label: 'Outcome', value: 'Fast fuzzy and phonetic lookup for rough searches' },
+				{ label: 'Status', value: 'Live terminology reference' },
+				{
+					label: 'Problem',
+					value:
+						'New officers encounter abbreviations and service names before they have the context to understand them',
+				},
+				{
+					label: 'Outcome',
+					value: '3,100+ terms with contextual search and several ways to explore the glossary',
+				},
 			],
 		},
 		{
