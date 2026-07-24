@@ -6,7 +6,7 @@ date_updated: ''
 category: 'Work'
 tags:
   - Staff work
-published: false
+published: true
 listed: true
 slug: 'staff-work-small-stuff-is-still-part-of-staff-work'
 ---
