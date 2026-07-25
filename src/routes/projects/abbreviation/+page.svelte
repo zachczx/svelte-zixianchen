@@ -6,7 +6,7 @@
 	import AbbreviationExploreHistory from '$lib/screenshots/abbreviation/explore2.png?enhanced&w=1600';
 
 	const stack = [
-		{ role: 'Frontend', tools: 'htmx, Templ' },
+		{ role: 'Frontend', tools: 'HTMX, Templ' },
 		{ role: 'Backend', tools: 'Go, embedded JSON' },
 		{ role: 'Analytics', tools: 'PostgreSQL' },
 	];
