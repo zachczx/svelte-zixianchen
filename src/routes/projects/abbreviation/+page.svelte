@@ -18,7 +18,7 @@
 	accentInk="#1e293b"
 	eyebrow="Singapore Government terminology"
 	headline="The glossary I wish I had when I started work."
-	sub="It began as a list of acronyms and gradually grew into a searchable reference for 3,100+ abbreviations, service names and other terms used across the Singapore Government."
+	sub="It began as a list of acronyms and gradually grew into a searchable reference for 3,500+ abbreviations, service names and other terms used across the Singapore Government."
 	url="https://abbreviation.zixian.dev"
 	{stack}>
 	{#snippet wordmark()}

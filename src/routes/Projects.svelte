@@ -68,7 +68,7 @@
 				},
 				{
 					label: 'Outcome',
-					value: '3,100+ terms with contextual search and several ways to explore the glossary',
+					value: '3,500+ terms with contextual search and several ways to explore the glossary',
 				},
 			],
 		},
