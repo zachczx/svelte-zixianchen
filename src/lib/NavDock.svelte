@@ -1,12 +1,12 @@
 <script lang="ts">
 	import type { Component } from 'svelte';
-	import HouseIcon from '~icons/material-symbols/other-houses';
-	import AccountIcon from '~icons/material-symbols/account-box';
-	import GridIcon from '~icons/material-symbols/grid-view';
-	import ArticleIcon from '~icons/material-symbols/article';
-	import MailIcon from '~icons/material-symbols/mail';
-	import LinkedInIcon from '~icons/uiw/linkedin';
-	import GitHubIcon from '~icons/octicon/mark-github-16';
+	import HouseIcon from '~icons/lucide/house';
+	import AccountIcon from '~icons/lucide/circle-user-round';
+	import GridIcon from '~icons/lucide/panels-top-left';
+	import ArticleIcon from '~icons/lucide/notebook-text';
+	import MailIcon from '~icons/lucide/send';
+	import LinkedInIcon from '~icons/lucide/linkedin';
+	import GitHubIcon from '~icons/lucide/github';
 
 	interface NavDockProps {
 		navCurrent: string;
@@ -21,7 +21,6 @@
 				href: string;
 				label: string;
 				icon: Component;
-				iconClass?: string;
 				active:
 					| { type: 'hash'; key: string }
 					| { type: 'path'; key: string }
@@ -54,7 +53,6 @@
 			href: 'https://www.linkedin.com/in/zixianchen/',
 			label: 'LinkedIn',
 			icon: LinkedInIcon,
-			iconClass: 'size-[0.9em]',
 			active: { type: 'none' },
 		},
 		{
@@ -86,13 +84,15 @@
 			href={item.href}
 			aria-label={item.label}
 			aria-current={active ? 'page' : undefined}
-			class="dock group/dock relative bg-transparent no-underline transition-all duration-100 ease-linear hover:no-underline">
+			class="dock group/dock focus-visible:outline-accent relative bg-transparent no-underline transition-all duration-100 ease-linear hover:no-underline focus-visible:outline-2 focus-visible:outline-offset-4">
 			<div
 				class={[
-					'relative flex items-center justify-center rounded-none border border-white/20 transition-all duration-100 ease-linear group-hover/dock:shadow-lg group-hover/dock:shadow-black/60',
-					active ? 'bg-accent' : 'bg-gray-50',
+					'relative flex items-center justify-center rounded-sm border transition-all duration-100 ease-linear',
+					active
+						? 'border-accent bg-accent text-neutral'
+						: 'border-white/15 bg-white/10 text-white/80 group-hover/dock:border-white/30 group-hover/dock:bg-white/15 group-hover/dock:text-white',
 				]}>
-				<Icon aria-hidden="true" class={['grayscale-100', active ? 'opacity-100' : 'opacity-75', item.iconClass]} />
+				<Icon aria-hidden="true" />
 				<span
 					class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center overflow-hidden rounded-xs py-0.5 font-mono text-xs font-bold whitespace-nowrap text-white/90 group-hover/dock:-top-5 group-hover/dock:flex group-focus-visible/dock:-top-5 group-focus-visible/dock:flex">
 					{item.label}
@@ -121,6 +121,10 @@
 				opacity: 100%;
 			}
 		}
+	}
+
+	:global(.dock svg) {
+		stroke-width: 1.9;
 	}
 
 	@media (prefers-reduced-motion: no-preference) {

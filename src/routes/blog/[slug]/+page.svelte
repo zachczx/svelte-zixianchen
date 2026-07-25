@@ -1,5 +1,6 @@
 <script lang="ts">
-	import TagIcon from '~icons/material-symbols/sell-outline';
+	import TagIcon from '~icons/lucide/tag';
+	import ChevronRightIcon from '~icons/lucide/chevron-right';
 	import dayjs from 'dayjs';
 
 	let { data } = $props();
@@ -48,9 +49,9 @@
 					<a
 						href="#{heading.slug}"
 						class="group hover:text-base-content inline-flex items-baseline gap-1 transition-colors"
-						><span class="w-3 shrink-0 text-center text-[0.7em] opacity-0 transition-opacity group-hover:opacity-100"
-							>❯</span
-						>{heading.text}</a>
+						><ChevronRightIcon
+							aria-hidden="true"
+							class="size-3 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />{heading.text}</a>
 				</li>
 			{/each}
 		</ol>

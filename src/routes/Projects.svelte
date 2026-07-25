@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ChevronRightIcon from '~icons/lucide/chevron-right';
 	import { descriptions } from '$lib/ProjectDescriptions';
 	import AbbreviationHome from '$lib/screenshots/abbreviation/home.png?enhanced';
 	import ApptitudeMain from '$lib/screenshots/apptitude/main.png?enhanced';
@@ -153,7 +154,10 @@
 			</dl>
 			<div class="text-neutral-content/60 mt-auto flex items-center justify-between gap-4 pt-4 text-xs">
 				<span>{domain}</span>
-				<span class="text-neutral-content/75 font-mono">Read case study ❯</span>
+				<span class="text-neutral-content/75 flex items-center gap-1 font-mono">
+					Read case study
+					<ChevronRightIcon aria-hidden="true" class="size-3.5" />
+				</span>
 			</div>
 		</div>
 	</a>

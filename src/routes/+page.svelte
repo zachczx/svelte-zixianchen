@@ -6,9 +6,11 @@
 	import Computer from '$lib/assets/jl-cabrera-tcH6W-49jTU-unsplash.webp?enhanced';
 	import CrayonPortrait from '$lib/assets/crayon-drawing.webp?enhanced';
 	import Projects from './Projects.svelte';
-	import LinkedInIcon from '~icons/uiw/linkedin';
-	import GitHubIcon from '~icons/octicon/mark-github-16';
-	import ArticleIcon from '~icons/material-symbols/article';
+	import LinkedInIcon from '~icons/lucide/linkedin';
+	import GitHubIcon from '~icons/lucide/github';
+	import ArticleIcon from '~icons/lucide/file-text';
+	import ChevronDownIcon from '~icons/lucide/chevron-down';
+	import ChevronRightIcon from '~icons/lucide/chevron-right';
 	import { codeSnippets } from './code-snippets';
 	import { jobs } from './jobs';
 	import dayjs from 'dayjs';
@@ -93,20 +95,20 @@
 		</div>
 		<div class="flex w-full items-center justify-center gap-16 max-lg:pt-12 xl:hidden">
 			<a href="https://www.linkedin.com/in/zixianchen/" aria-label="LinkedIn" class="active:text-gray-500">
-				<LinkedInIcon class="size-8" />
+				<LinkedInIcon aria-hidden="true" class="size-8" />
 			</a>
 			<a href="https://github.com/zachczx?tab=repositories" aria-label="Github" class="active:text-gray-500">
-				<GitHubIcon class="size-8" />
+				<GitHubIcon aria-hidden="true" class="size-8" />
 			</a>
 			<a href="/blog" aria-label="blog" class="active:text-gray-500">
-				<ArticleIcon class="size-9" />
+				<ArticleIcon aria-hidden="true" class="size-9" />
 			</a>
 		</div>
 		<a
 			href="#about"
 			aria-label="Scroll to interests"
 			class="text-base-content/35 hover:text-base-content/70 absolute inset-x-0 bottom-32 mx-auto hidden w-fit transition-colors xl:block">
-			<span class="inline-block rotate-90 text-2xl">❯</span>
+			<ChevronDownIcon aria-hidden="true" class="size-7" />
 		</a>
 	</header>
 
@@ -178,9 +180,10 @@
 						</div>
 						<div>
 							<h4 class="job-title relative w-fit text-lg font-bold lg:text-2xl">
-								<span class="job-arrow absolute top-1/2 -left-5 -translate-y-1/2 text-[0.7em] font-normal opacity-0"
-									>❯</span
-								>{job.title}
+								<ChevronRightIcon
+									aria-hidden="true"
+									class="job-arrow absolute top-1/2 -left-5 size-[0.7em] -translate-y-1/2 opacity-0" />
+								{job.title}
 							</h4>
 							<p
 								class="job-desc text-base-content/70 text-sm leading-relaxed transition-colors duration-200 lg:text-base">
@@ -243,8 +246,9 @@
 					{/each}
 					<a
 						href="/blog"
-						class="text-neutral-content/60 hover:text-neutral-content flex justify-end py-5 font-mono text-sm tracking-tight transition-colors">
-						All musings ❯
+						class="text-neutral-content/60 hover:text-neutral-content flex items-center justify-end gap-1 py-5 font-mono text-sm tracking-tight transition-colors">
+						All musings
+						<ChevronRightIcon aria-hidden="true" class="size-3.5" />
 					</a>
 				</div>
 			</div>
@@ -260,7 +264,7 @@
 		clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 25% 80%, 100% 80%, 100% 100%, 0% 100%, 0% 80%, 75% 20%, 0% 20%);
 	}
 
-	.job-row:hover .job-arrow {
+	.job-row:hover :global(.job-arrow) {
 		opacity: 1;
 	}
 
@@ -272,7 +276,7 @@
 		background-size: 100% 100%;
 	}
 
-	.job-arrow {
+	:global(.job-arrow) {
 		transition: opacity 0.2s ease;
 	}
 

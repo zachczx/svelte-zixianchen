@@ -1,10 +1,10 @@
 <script lang="ts">
 	import Nav from '$lib/Nav.svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
-	import UserIcon from '~icons/heroicons/user-16-solid';
-	import EnvelopeIcon from '~icons/heroicons/envelope-16-solid';
-	import CheckIcon from '~icons/tabler/check';
-	import ExclamationCircleIcon from '~icons/tabler/exclamation-circle';
+	import UserIcon from '~icons/lucide/user';
+	import EnvelopeIcon from '~icons/lucide/mail';
+	import CheckIcon from '~icons/lucide/check';
+	import ExclamationCircleIcon from '~icons/lucide/circle-alert';
 	let navCurrent = '';
 	type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 	type Web3FormsResponse = {
@@ -88,11 +88,11 @@
 				<form bind:this={formEl} onsubmit={preventDefault(handleSubmit)} class="grid w-full gap-y-4">
 					<input type="hidden" name="access_key" value="f29b8ecc-f01d-45b0-bb55-72005ec3975a" />
 					<label class="input input-lg input-bordered flex w-full items-center gap-2">
-						<UserIcon class="h-4 w-4 opacity-70" />
+						<UserIcon aria-hidden="true" class="h-4 w-4 opacity-70" />
 						<input type="text" class="grow" name="name" placeholder="Name" aria-label="Name" required />
 					</label>
 					<label class="input input-lg input-bordered flex w-full items-center gap-2">
-						<EnvelopeIcon class="h-4 w-4 opacity-70" />
+						<EnvelopeIcon aria-hidden="true" class="h-4 w-4 opacity-70" />
 						<input type="email" name="email" class="grow" placeholder="Email" aria-label="Email" required />
 					</label>
 					<textarea
@@ -119,9 +119,9 @@
 								aria-live="polite"
 								class={['ms-1 mt-3 text-sm', formStatus === 'success' ? 'text-lime-600' : 'text-warning']}>
 								{#if formStatus === 'success'}
-									<CheckIcon class="me-1 mb-1 inline" />
+									<CheckIcon aria-hidden="true" class="me-1 mb-1 inline" />
 								{:else}
-									<ExclamationCircleIcon class="me-1 mb-1 inline" />
+									<ExclamationCircleIcon aria-hidden="true" class="me-1 mb-1 inline" />
 								{/if}
 								{formMessage}
 							</p>

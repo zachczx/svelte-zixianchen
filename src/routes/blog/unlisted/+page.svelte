@@ -1,5 +1,6 @@
 <script lang="ts">
 	import dayjs from 'dayjs';
+	import ArrowLeftIcon from '~icons/lucide/arrow-left';
 
 	let { data } = $props();
 </script>
@@ -13,8 +14,9 @@
 <header class="border-base-content/10 border-b px-4 pt-2 pb-8 lg:px-6">
 	<a
 		href="/blog"
-		class="text-base-content/50 hover:text-base-content mb-5 inline-block font-mono text-sm transition-colors">
-		← All listed posts
+		class="text-base-content/50 hover:text-base-content mb-5 inline-flex items-center gap-1.5 font-mono text-sm transition-colors">
+		<ArrowLeftIcon aria-hidden="true" class="size-3.5" />
+		All listed posts
 	</a>
 	<div class="text-base-content/45 font-mono text-sm">{data.posts.length} unlisted posts</div>
 	<h1 class="text-base-content mt-3 text-3xl font-black sm:text-4xl">Unlisted writing</h1>

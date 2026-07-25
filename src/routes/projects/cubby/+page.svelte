@@ -17,7 +17,7 @@
 	import enrichment from '$lib/screenshots/cubby/enrichment.webp';
 	import screentimer from '$lib/screenshots/cubby/screentimer.webp';
 	import CubbyLogo from '$lib/assets/cubby-logo.webp';
-	import BackIcon from '~icons/material-symbols/arrow-back-rounded';
+	import BackIcon from '~icons/lucide/arrow-left';
 
 	// Features are grouped the way the app groups them. Each group is a section, each feature a row.
 	const groups = [

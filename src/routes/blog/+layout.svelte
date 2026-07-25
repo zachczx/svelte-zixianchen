@@ -2,8 +2,8 @@
 	import { onMount } from 'svelte';
 	import type { Snippet } from 'svelte';
 	import Nav from '$lib/Nav.svelte';
-	import DarkModeIcon from '~icons/material-symbols/dark-mode-outline';
-	import LightModeIcon from '~icons/material-symbols/light-mode-outline';
+	import DarkModeIcon from '~icons/lucide/moon';
+	import LightModeIcon from '~icons/lucide/sun';
 	import { codeSnippets } from '../code-snippets';
 
 	let { children }: { children: Snippet } = $props();
