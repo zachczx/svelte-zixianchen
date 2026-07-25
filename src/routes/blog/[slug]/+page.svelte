@@ -38,6 +38,18 @@
 			<span>{tag}</span>
 		{/each}
 	</div>
+	{#if data.series}
+		<div class="mt-2 flex flex-wrap items-baseline gap-x-1.5">
+			<span>Series:</span>
+			<a
+				href="#series-navigation"
+				class="text-base-content/80 decoration-accent hover:text-base-content font-semibold underline decoration-2 underline-offset-3 transition-colors">
+				{data.series.title}
+			</a>
+			<span class="text-base-content/30">/</span>
+			<span>Part {data.series.position} of {data.series.total}</span>
+		</div>
+	{/if}
 </div>
 {#if data.headings.length > 0}
 	<nav
@@ -68,6 +80,61 @@
 <div class="text-base-content/30 mt-10 px-3 text-center font-mono text-xs tracking-widest sm:px-6 xl:px-14">
 	— END OF POST —
 </div>
+{#if data.series}
+	<nav
+		id="series-navigation"
+		aria-label="{data.series.title} series"
+		class="border-base-content/10 mt-8 border-y px-3 py-6 sm:px-6 xl:px-14">
+		<div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+			<h2 class="text-xl font-bold">{data.series.title}</h2>
+			<span class="text-base-content/50 font-mono text-sm">
+				Part {data.series.position} of {data.series.total}
+			</span>
+		</div>
+		<ol class="mt-4 grid gap-2">
+			{#each data.series.posts as seriesPost}
+				<li class="grid grid-cols-[2rem_1fr] items-baseline gap-2">
+					<span class="text-base-content/40 text-right font-mono text-sm">{seriesPost.position}.</span>
+					{#if seriesPost.current}
+						<span class="font-semibold" aria-current="page">
+							{data.metadata.title}
+							<span class="text-base-content/45 ml-1 font-mono text-xs font-normal">You are here</span>
+						</span>
+					{:else if seriesPost.published}
+						<a
+							href="/blog/{seriesPost.slug}"
+							class="decoration-accent hover:text-accent font-semibold underline decoration-1 underline-offset-3 transition-colors">
+							{seriesPost.title}
+						</a>
+					{:else}
+						<span class="text-base-content/45 font-mono text-sm">Coming soon</span>
+					{/if}
+				</li>
+			{/each}
+		</ol>
+		{#if data.series.previous || data.series.next}
+			<div
+				class="border-base-content/10 mt-5 flex flex-wrap items-center justify-between gap-3 border-t pt-4 font-mono text-sm">
+				{#if data.series.previous}
+					<a
+						href="/blog/{data.series.previous.slug}"
+						class="hover:text-accent focus-visible:outline-accent font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
+						← Part {data.series.previous.position}
+					</a>
+				{:else}
+					<span></span>
+				{/if}
+				{#if data.series.next}
+					<a
+						href="/blog/{data.series.next.slug}"
+						class="hover:text-accent focus-visible:outline-accent font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
+						Continue to Part {data.series.next.position} →
+					</a>
+				{/if}
+			</div>
+		{/if}
+	</nav>
+{/if}
 
 <!-- Prevents vite from removing it when tree shaking -->
 <span class="line highlighted add remove diff hidden"></span>

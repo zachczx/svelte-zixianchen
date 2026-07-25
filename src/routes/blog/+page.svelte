@@ -1,5 +1,6 @@
 <script lang="ts">
 	import dayjs from 'dayjs';
+	import { getBlogSeriesPosition } from '$lib/blogSeries';
 
 	let { data } = $props();
 
@@ -60,6 +61,7 @@
 
 <main class="grid">
 	{#each filteredPosts as post, i}
+		{@const series = getBlogSeriesPosition(post.slug)}
 		<a
 			href="/blog/{post.slug}"
 			class="group border-base-content/10 hover:bg-base-content/[0.03] focus-visible:outline-accent block px-4 py-6 transition-colors focus-visible:outline-2 focus-visible:outline-offset-[-2px] lg:px-6"
@@ -77,6 +79,10 @@
 				<div class="text-base-content/50 flex flex-wrap items-center gap-x-1.5 font-mono text-sm">
 					{#if post.category}
 						<span>{post.category}</span>
+						<span class="text-base-content/30">/</span>
+					{/if}
+					{#if series}
+						<span>{series.title} · {series.position}/{series.total}</span>
 						<span class="text-base-content/30">/</span>
 					{/if}
 					<span class="uppercase">{dayjs(post.date).format('D MMM YYYY')}</span>
