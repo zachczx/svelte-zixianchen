@@ -26,7 +26,7 @@ export const descriptions: ProjectDescriptions = {
 	},
 	apptitude: {
 		name: 'Apptitude',
-		subtitle: 'Tech-related upskilling',
+		subtitle: 'Structured technology learning and decision support',
 		url: 'https://titude.app/',
 	},
 	btonomics: {

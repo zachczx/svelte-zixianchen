@@ -2,7 +2,7 @@
 	import ChevronRightIcon from '~icons/lucide/chevron-right';
 	import { descriptions } from '$lib/ProjectDescriptions';
 	import AbbreviationHome from '$lib/screenshots/abbreviation/home.png?enhanced';
-	import ApptitudeMain from '$lib/screenshots/apptitude/main.png?enhanced';
+	import ApptitudeMain from '$lib/screenshots/apptitude/main.webp?enhanced';
 	import BtonomicsMain from '$lib/screenshots/btonomics/main.webp?enhanced';
 	import CubbyDashboard from '$lib/screenshots/cubby/dashboard.webp?enhanced';
 	import CubbyGym from '$lib/screenshots/cubby/gym-workout.webp?enhanced';
@@ -77,11 +77,18 @@
 			img: ApptitudeMain,
 			kind: 'web',
 			pos: 'top',
-			stack: 'SvelteKit · Pocketbase · Pagefind',
+			stack: 'SvelteKit · PostgreSQL · Meilisearch',
 			facts: [
-				{ label: 'Status', value: 'Live knowledge base' },
-				{ label: 'Problem', value: 'Tech learning resources scattered by topic, level, and audience' },
-				{ label: 'Outcome', value: 'Curated paths for doers, leaders, concepts, and playbooks' },
+				{ label: 'Status', value: 'Live learning and decision-support platform' },
+				{
+					label: 'Problem',
+					value:
+						'People need different support when building technical knowledge and when accountable for a live decision',
+				},
+				{
+					label: 'Outcome',
+					value: 'Guided learning paths for foundations; Consults for live decisions',
+				},
 			],
 		},
 		{

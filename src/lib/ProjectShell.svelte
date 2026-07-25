@@ -17,6 +17,7 @@
 		removed?: string;
 		wordmark?: Snippet;
 		hero?: Snippet;
+		outro?: Snippet;
 		children: Snippet;
 	}
 	let {
@@ -31,6 +32,7 @@
 		removed = '',
 		wordmark,
 		hero,
+		outro,
 		children,
 	}: Props = $props();
 </script>
@@ -67,6 +69,7 @@
 					class="hover:bg-base-100 mt-7 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
 					style="color: var(--accent-ink); border-color: color-mix(in srgb, var(--accent-ink) 45%, transparent); outline-color: var(--accent-ink)">
 					Visit site <span aria-hidden="true">&nearr;</span>
+					<span class="sr-only">(opens in a new tab)</span>
 				</a>
 			{/if}
 		</div>
@@ -100,4 +103,12 @@
 			{/if}
 		</div>
 	</section>
+
+	{#if outro}
+		<section class="border-neutral/15 border-t">
+			<div class="mx-auto max-w-5xl px-5">
+				{@render outro()}
+			</div>
+		</section>
+	{/if}
 </div>
