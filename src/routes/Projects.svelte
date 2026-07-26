@@ -129,14 +129,16 @@
 				</div>
 			{:else}
 				<!-- web specimen: hairline-framed screenshot -->
-				<div class="overflow-hidden border border-white/10 transition-colors group-hover:border-white/25">
-					<enhanced:img
-						src={p.img}
-						alt="{meta.name} screenshot"
-						loading="lazy"
-						class="aspect-video w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-						style="object-position: {p.pos};" />
-				</div>
+				{#if p.img}
+					<div class="overflow-hidden border border-white/10 transition-colors group-hover:border-white/25">
+						<enhanced:img
+							src={p.img}
+							alt="{meta.name} screenshot"
+							loading="lazy"
+							class="aspect-video w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+							style="object-position: {p.pos};" />
+					</div>
+				{/if}
 			{/if}
 		</div>
 		<div class="flex flex-col">
