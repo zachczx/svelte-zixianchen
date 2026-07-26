@@ -18,6 +18,7 @@
 	import screentimer from '$lib/screenshots/cubby/screentimer.webp';
 	import CubbyLogo from '$lib/assets/cubby-logo.webp';
 	import BackIcon from '~icons/lucide/arrow-left';
+	import ExternalLinkIcon from '~icons/lucide/external-link';
 	import Seo from '$lib/Seo.svelte';
 
 	// Features are grouped the way the app groups them. Each group is a section, each feature a row.
@@ -263,7 +264,7 @@
 			target="_blank"
 			rel="noopener"
 			class="hover:bg-base-100 mt-7 inline-flex items-center gap-2 border border-[#C42A1C]/45 px-4 py-2 text-sm font-semibold text-[#C42A1C] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C42A1C]">
-			Visit site <span aria-hidden="true">&nearr;</span>
+			Visit site <ExternalLinkIcon class="size-[1.1em]" aria-hidden="true" />
 		</a>
 	</header>
 

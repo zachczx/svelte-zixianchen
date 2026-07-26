@@ -1,6 +1,8 @@
 <script lang="ts">
 	import TagIcon from '~icons/lucide/tag';
 	import ChevronRightIcon from '~icons/lucide/chevron-right';
+	import ArrowLeftIcon from '~icons/lucide/arrow-left';
+	import ArrowRightIcon from '~icons/lucide/arrow-right';
 	import dayjs from 'dayjs';
 	import Seo from '$lib/Seo.svelte';
 
@@ -137,8 +139,9 @@
 				{#if data.series.previous}
 					<a
 						href="/blog/{data.series.previous.slug}"
-						class="hover:text-accent focus-visible:outline-accent font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
-						← Part {data.series.previous.position}
+						class="hover:text-accent focus-visible:outline-accent inline-flex items-center gap-1.5 font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
+						<ArrowLeftIcon class="size-[1.1em]" aria-hidden="true" />
+						Part {data.series.previous.position}
 					</a>
 				{:else}
 					<span></span>
@@ -146,8 +149,9 @@
 				{#if data.series.next}
 					<a
 						href="/blog/{data.series.next.slug}"
-						class="hover:text-accent focus-visible:outline-accent font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
-						Continue to Part {data.series.next.position} →
+						class="hover:text-accent focus-visible:outline-accent inline-flex items-center gap-1.5 font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
+						Continue to Part {data.series.next.position}
+						<ArrowRightIcon class="size-[1.1em]" aria-hidden="true" />
 					</a>
 				{/if}
 			</div>

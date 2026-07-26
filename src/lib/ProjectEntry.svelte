@@ -2,6 +2,7 @@
 	import { type Snippet } from 'svelte';
 	import { descriptions } from './ProjectDescriptions';
 	import AlignCenterText from './AlignCenterText.svelte';
+	import ExternalLinkIcon from '~icons/lucide/external-link';
 	interface ProjectEntryProps {
 		id: string;
 		title: Snippet;
@@ -44,7 +45,7 @@
 				target="_blank"
 				rel="noopener"
 				class="border-primary/45 text-primary mt-4 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold">
-				Visit site <span aria-hidden="true">&nearr;</span>
+				Visit site <ExternalLinkIcon class="size-[1.1em]" aria-hidden="true" />
 			</a>
 		{/if}
 	</div>

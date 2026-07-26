@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import Seo from '$lib/Seo.svelte';
+	import BackIcon from '~icons/lucide/arrow-left';
+	import ExternalLinkIcon from '~icons/lucide/external-link';
 
 	interface StackRow {
 		role: string;
@@ -47,7 +49,7 @@
 	<div class="border-neutral/15 bg-base-100 sticky top-0 z-10 border-b">
 		<div class="text-base-content/50 mx-auto flex max-w-5xl items-center justify-between px-5 py-2.5 text-xs">
 			<a href="/#projects" class="hover:text-base-content flex items-center gap-1.5">
-				<span aria-hidden="true">&larr;</span> Projects
+				<BackIcon class="size-[1.2em]" aria-hidden="true" /> Projects
 			</a>
 			<span>{name}</span>
 		</div>
@@ -73,7 +75,7 @@
 					rel="noopener"
 					class="hover:bg-base-100 mt-7 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
 					style="color: var(--accent-ink); border-color: color-mix(in srgb, var(--accent-ink) 45%, transparent); outline-color: var(--accent-ink)">
-					Visit site <span aria-hidden="true">&nearr;</span>
+					Visit site <ExternalLinkIcon class="size-[1.1em]" aria-hidden="true" />
 					<span class="sr-only">(opens in a new tab)</span>
 				</a>
 			{/if}
