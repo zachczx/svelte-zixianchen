@@ -60,7 +60,7 @@
 			pos: 'center',
 			stack: 'Go · htmx · embedded JSON',
 			facts: [
-				{ label: 'Status', value: 'Live terminology reference' },
+				{ label: 'Status', value: 'Live glossary and first-month guide' },
 				{
 					label: 'Problem',
 					value:
@@ -68,7 +68,7 @@
 				},
 				{
 					label: 'Outcome',
-					value: '3,500+ terms with contextual search and several ways to explore the glossary',
+					value: '3,500+ terms, including a 189-term first-month guide with 35 essentials and quiz practice',
 				},
 			],
 		},

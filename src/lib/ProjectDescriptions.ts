@@ -13,7 +13,7 @@ interface ProjectDescriptions {
 export const descriptions: ProjectDescriptions = {
 	abbreviation: {
 		name: 'Abbreviation',
-		subtitle: 'Search and explore Singapore Government terminology',
+		subtitle: 'A searchable glossary and first-month field guide',
 		url: 'https://abbreviation.zixian.dev',
 	},
 	appraize: {

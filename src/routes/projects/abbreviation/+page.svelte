@@ -1,9 +1,12 @@
 <script>
 	import ProjectShell from '$lib/ProjectShell.svelte';
 	import AbbreviationHome from '$lib/screenshots/abbreviation/home.png?enhanced&w=1600';
+	import AbbreviationTerms from '$lib/screenshots/abbreviation/terms.png?enhanced&w=1600';
 	import AbbreviationSearch from '$lib/screenshots/abbreviation/search.png?enhanced&w=1600';
-	import AbbreviationExplore from '$lib/screenshots/abbreviation/explore.png?enhanced&w=1600';
-	import AbbreviationExploreHistory from '$lib/screenshots/abbreviation/explore2.png?enhanced&w=1600';
+	import AbbreviationExploreConstruction from '$lib/screenshots/abbreviation/explore3.png?enhanced&w=1600';
+	import AbbreviationExploreHistory from '$lib/screenshots/abbreviation/explore4.png?enhanced&w=1600';
+	import AbbreviationFirstMonth from '$lib/screenshots/abbreviation/first-month.png?enhanced&w=1600';
+	import AbbreviationQuiz from '$lib/screenshots/abbreviation/quiz.png?enhanced&w=1600';
 
 	const stack = [
 		{ role: 'Frontend', tools: 'HTMX, Templ' },
@@ -19,7 +22,7 @@
 	accentInk="#1e293b"
 	eyebrow="Singapore Government terminology"
 	headline="The glossary I wish I had when I started work."
-	sub="It began as a list of acronyms and gradually grew into a searchable reference for 3,500+ abbreviations, service names and other terms used across the Singapore Government."
+	sub="It began as a list of acronyms and grew into a searchable glossary of 3,500+ terms, with a first-month guide and quiz for new officers."
 	url="https://abbreviation.zixian.dev"
 	{stack}>
 	{#snippet wordmark()}
@@ -71,6 +74,10 @@
 				list.
 			</p>
 		</div>
+		<enhanced:img
+			src={AbbreviationTerms}
+			alt="Alphabetical glossary view showing 363 Singapore Government terms beginning with C"
+			class="border-neutral/20 mt-5 block w-full border-2 shadow-sm" />
 	</section>
 
 	<section class="border-neutral/10 border-t py-12">
@@ -98,7 +105,8 @@
 			<p>
 				Once the entries had subject areas, statuses and relationships, it seemed a waste to expose them only through a
 				search box. I added Explore to group the data in a few useful ways: terms with several meanings, abbreviations
-				used across different fields, similar-looking names and older terms alongside their replacements.
+				used across different fields, names built from within words, lookalikes and older terms alongside their
+				replacements.
 			</p>
 			<p>
 				It is mostly another way to browse data I already had, but it has made the project feel more like a glossary
@@ -107,8 +115,8 @@
 		</div>
 		<div class="mt-5 grid gap-5">
 			<enhanced:img
-				src={AbbreviationExplore}
-				alt="Explore view grouping similar-looking Singapore Government abbreviations"
+				src={AbbreviationExploreConstruction}
+				alt="Explore view highlighting how Singapore Government abbreviations are assembled from letters within words"
 				class="border-neutral/20 block w-full border-2 shadow-sm" />
 			<enhanced:img
 				src={AbbreviationExploreHistory}
@@ -118,11 +126,62 @@
 	</section>
 
 	<section class="border-neutral/10 border-t py-12">
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">Coming back to onboarding</p>
+		<div class="text-base-content/85 mt-4 grid max-w-3xl gap-4 leading-relaxed">
+			<p class="text-2xl leading-snug font-bold">
+				Search helps once someone has a term to look up. New officers also need a way to build some familiarity before
+				they get stuck.
+			</p>
+			<p>
+				I returned to the original onboarding problem and curated 189 terms that a new officer is likely to encounter
+				early. Instead of presenting another long list, I organised them around seven workplace situations such as
+				writing and decisions, meetings, organisational roles, HR, procurement and everyday language.
+			</p>
+			<p>
+				The guide starts with 35 first-month essentials, five from each area, then lets someone search or browse the
+				wider collection when they need more context.
+			</p>
+		</div>
+		<enhanced:img
+			src={AbbreviationFirstMonth}
+			alt="First-month guide organised into seven workplace situations with 35 essential terms"
+			class="border-neutral/20 mt-5 block w-full border-2 shadow-sm" />
+	</section>
+
+	<section class="border-neutral/10 border-t py-12">
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">A low-stakes way to practise</p>
+		<div class="text-base-content/85 mt-4 grid max-w-3xl gap-4 leading-relaxed">
+			<p>
+				I also added ten-question quiz rounds for practising recall. The first-month mode draws from the 35 essentials,
+				while a broader mode ranges across the current glossary.
+			</p>
+			<p>
+				Questions work in both directions, from an abbreviation to its meaning and back again. The quiz avoids terms
+				that could produce more than one correct answer, and missed answers return for review at the end.
+			</p>
+			<p>
+				I kept it deliberately lightweight: no account, timer or leaderboard. Completed-round totals stay only in the
+				browser.
+			</p>
+		</div>
+		<enhanced:img
+			src={AbbreviationQuiz}
+			alt="A first-month quiz question showing the correct short form and a plain-language explanation"
+			class="border-neutral/20 mt-5 block w-full border-2 shadow-sm" />
+	</section>
+
+	<section class="border-neutral/10 border-t py-12">
 		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">Using LLMs to help with curation</p>
 		<div class="text-base-content/85 mt-4 grid max-w-3xl gap-4 leading-relaxed">
 			<p>
-				Adding terms and filling in their context by hand had become slow. LLM agents made it practical to search for
-				possible additions and draft metadata such as descriptions, subject areas, lifecycle status and sources.
+				Adding terms and filling in their context by hand had become slow. GPT-4.6 sol was especially useful here.
+				ChatGPT on the web and Codex had separate generous usage limits, which made it practical to keep moving between
+				them across a catalog of this size.
+			</p>
+			<p>
+				I used them as peer reviewers for each other across discovery, curation, validation and enrichment. One could
+				propose new terms or metadata such as descriptions, subject areas, lifecycle status and sources, then the other
+				could challenge the result, look for gaps and run another pass.
 			</p>
 			<p>
 				New and enriched entries go through an agent review pass followed by a scan from me. Source and verification
