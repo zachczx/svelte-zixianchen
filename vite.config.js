@@ -23,10 +23,14 @@ export default defineConfig({
 				],
 			},
 		}),
-		visualizer({
-			emitFile: true,
-			filename: 'stats.html',
-		}),
+		...(process.env.ANALYZE === 'true'
+			? [
+					visualizer({
+						emitFile: true,
+						filename: 'stats.html',
+					}),
+				]
+			: []),
 	],
 	server: {
 		port: 6173,

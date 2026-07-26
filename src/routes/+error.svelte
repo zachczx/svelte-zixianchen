@@ -4,6 +4,7 @@
 
 <svelte:head>
 	<title>{page.status} | Zixian Chen</title>
+	<meta name="robots" content="noindex" />
 </svelte:head>
 
 <div class="bg-base-200 grid min-h-dvh place-items-center px-4">

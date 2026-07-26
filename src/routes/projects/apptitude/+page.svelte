@@ -17,6 +17,7 @@
 
 <ProjectShell
 	name="Apptitude"
+	slug="apptitude"
 	accent="#0f766e"
 	accentInk="#0f766e"
 	eyebrow="Structured technology learning and decision support"

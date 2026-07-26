@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
+	import Seo from '$lib/Seo.svelte';
 
 	interface StackRow {
 		role: string;
@@ -7,6 +8,7 @@
 	}
 	interface Props {
 		name: string;
+		slug: string;
 		accent?: string;
 		accentInk?: string;
 		eyebrow?: string;
@@ -22,6 +24,7 @@
 	}
 	let {
 		name,
+		slug,
 		accent = '#f93827',
 		accentInk = accent,
 		eyebrow = '',
@@ -36,6 +39,8 @@
 		children,
 	}: Props = $props();
 </script>
+
+<Seo title="{name} — Project Case Study | Zixian Chen" description={sub || headline} pathname="/projects/{slug}" />
 
 <div class="text-base-content bg-base-200" style="--accent: {accent}; --accent-ink: {accentInk}">
 	<!-- top bar -->

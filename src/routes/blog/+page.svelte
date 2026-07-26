@@ -1,6 +1,7 @@
 <script lang="ts">
 	import dayjs from 'dayjs';
 	import { getBlogSeriesPosition } from '$lib/blogSeries';
+	import Seo from '$lib/Seo.svelte';
 
 	let { data } = $props();
 
@@ -22,10 +23,7 @@
 	]);
 </script>
 
-<svelte:head>
-	<title>Zixian's Blog</title>
-	<meta name="description" content="Zixian's blog on web dev, javascript, or random stuff." />
-</svelte:head>
+<Seo title="Zixian's Blog" description="Zixian's blog on web dev, javascript, or random stuff." pathname="/blog" />
 
 <header class="border-base-content/10 border-b px-4 pt-2 pb-8 lg:px-6">
 	<div class="text-base-content/45 font-mono text-sm">

@@ -14,6 +14,7 @@
 
 <ProjectShell
 	name="Abbreviation"
+	slug="abbreviation"
 	accent="#475569"
 	accentInk="#1e293b"
 	eyebrow="Singapore Government terminology"

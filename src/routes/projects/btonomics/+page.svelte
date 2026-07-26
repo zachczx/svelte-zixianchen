@@ -11,6 +11,7 @@
 
 <ProjectShell
 	name="BTOnomics"
+	slug="btonomics"
 	accent="#6b7e56"
 	accentInk="#15803D"
 	eyebrow="Honest lessons from an HDB renovation"

@@ -5,6 +5,7 @@
 	import EnvelopeIcon from '~icons/lucide/mail';
 	import CheckIcon from '~icons/lucide/check';
 	import ExclamationCircleIcon from '~icons/lucide/circle-alert';
+	import Seo from '$lib/Seo.svelte';
 	let navCurrent = '';
 	type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 	type Web3FormsResponse = {
@@ -73,10 +74,7 @@
 	};
 </script>
 
-<svelte:head>
-	<title>Zixian Chen - Message Me</title>
-	<meta name="description" content="Send Zixian a message." />
-</svelte:head>
+<Seo title="Zixian Chen - Message Me" description="Send Zixian a message." pathname="/contact" />
 
 <div class="bg-base-200 grid min-h-dvh grid-rows-[1fr_auto] content-center justify-items-center">
 	<Nav {navCurrent} />

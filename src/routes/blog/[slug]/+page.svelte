@@ -2,17 +2,36 @@
 	import TagIcon from '~icons/lucide/tag';
 	import ChevronRightIcon from '~icons/lucide/chevron-right';
 	import dayjs from 'dayjs';
+	import Seo from '$lib/Seo.svelte';
 
 	let { data } = $props();
 	let content = $derived(data.content);
 </script>
 
-<svelte:head>
-	<title>{data.metadata.title} | Zixian's Blog</title>
-	{#if data.metadata.description}
-		<meta name="description" content={data.metadata.description} />
-	{/if}
-</svelte:head>
+<Seo
+	title="{data.metadata.title} | Zixian's Blog"
+	description={data.metadata.description}
+	pathname="/blog/{data.metadata.slug}"
+	type="article"
+	noindex={data.metadata.listed === false}
+	publishedTime={data.metadata.date}
+	modifiedTime={data.metadata.date_updated || data.metadata.date}
+	structuredData={{
+		'@context': 'https://schema.org',
+		'@type': 'BlogPosting',
+		headline: data.metadata.title,
+		description: data.metadata.description,
+		datePublished: data.metadata.date,
+		dateModified: data.metadata.date_updated || data.metadata.date,
+		articleSection: data.metadata.category,
+		keywords: data.metadata.tags,
+		mainEntityOfPage: `https://zixianchen.com/blog/${data.metadata.slug}`,
+		author: {
+			'@type': 'Person',
+			name: 'Zixian Chen',
+			url: 'https://zixianchen.com/',
+		},
+	}} />
 <div class="px-3 pb-3 sm:px-6 xl:px-14">
 	<a
 		href="/blog"

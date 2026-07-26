@@ -2,14 +2,12 @@
 	import { onMount } from 'svelte';
 	import type { Snippet } from 'svelte';
 	import Nav from '$lib/Nav.svelte';
+	import CodeCanvas from '$lib/CodeCanvas.svelte';
 	import DarkModeIcon from '~icons/lucide/moon';
 	import LightModeIcon from '~icons/lucide/sun';
-	import { codeSnippets } from '../code-snippets';
 
 	let { children }: { children: Snippet } = $props();
 	let theme: 'light' | 'dark' = $state('dark');
-
-	const codeText = codeSnippets.filter((s) => s !== '').join(' ');
 
 	onMount(() => {
 		const savedTheme = localStorage.getItem('blog-theme');
@@ -48,7 +46,7 @@
 					class="code-z size-16 overflow-hidden bg-slate-900 lg:size-20"
 					style="view-transition-name: logo"
 					aria-hidden="true">
-					<div class="code-fill font-mono">{codeText}</div>
+					<CodeCanvas animated={false} />
 				</div>
 			</a>
 			{@render children()}
@@ -63,15 +61,6 @@
 <style>
 	.code-z {
 		clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 25% 80%, 100% 80%, 100% 100%, 0% 100%, 0% 80%, 75% 20%, 0% 20%);
-	}
-
-	.code-fill {
-		font-size: 0.4em;
-		line-height: 1.3;
-		word-break: break-all;
-		width: 100%;
-		height: 100%;
-		color: var(--color-primary-content);
 	}
 
 	.blog-shell :global(.blog-prose) {

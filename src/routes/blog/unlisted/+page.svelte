@@ -1,15 +1,16 @@
 <script lang="ts">
 	import dayjs from 'dayjs';
 	import ArrowLeftIcon from '~icons/lucide/arrow-left';
+	import Seo from '$lib/Seo.svelte';
 
 	let { data } = $props();
 </script>
 
-<svelte:head>
-	<title>Unlisted Posts — Zixian's Blog</title>
-	<meta name="description" content="Published posts kept outside the main blog index." />
-	<meta name="robots" content="noindex, nofollow, noarchive" />
-</svelte:head>
+<Seo
+	title="Unlisted Posts — Zixian's Blog"
+	description="Published posts kept outside the main blog index."
+	pathname="/blog/unlisted"
+	noindex />
 
 <header class="border-base-content/10 border-b px-4 pt-2 pb-8 lg:px-6">
 	<a

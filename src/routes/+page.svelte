@@ -2,6 +2,8 @@
 	import Nav from '$lib/Nav.svelte';
 	import { onMount } from 'svelte';
 	import WebsiteFooter from '$lib/WebsiteFooter.svelte';
+	import CodeCanvas from '$lib/CodeCanvas.svelte';
+	import Seo from '$lib/Seo.svelte';
 	import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
 	import Computer from '$lib/assets/jl-cabrera-tcH6W-49jTU-unsplash.webp?enhanced';
 	import CrayonPortrait from '$lib/assets/crayon-drawing.webp?enhanced';
@@ -11,55 +13,13 @@
 	import ArticleIcon from '~icons/lucide/file-text';
 	import ChevronDownIcon from '~icons/lucide/chevron-down';
 	import ChevronRightIcon from '~icons/lucide/chevron-right';
-	import { codeSnippets } from './code-snippets';
 	import { jobs } from './jobs';
 	import dayjs from 'dayjs';
 
 	let { data } = $props();
 	let navCurrent: string = $state('header');
 
-	function shuffle(arr: string[]) {
-		const a = [...arr];
-		for (let i = a.length - 1; i > 0; i--) {
-			const j = Math.floor(Math.random() * (i + 1));
-			[a[i], a[j]] = [a[j], a[i]];
-		}
-		return a;
-	}
-
-	const snippets = codeSnippets.filter((s) => s !== '');
-
-	function makeText() {
-		return shuffle(snippets).join(' ');
-	}
-
-	let display = $state(makeText());
-	let cursorPos = $state(0);
-
 	onMount(() => {
-		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		let interval: ReturnType<typeof setInterval> | undefined;
-
-		if (prefersReducedMotion) {
-			display = snippets.join(' ');
-			cursorPos = 0;
-		} else {
-			let old = display;
-			let next = makeText();
-			let pos = 0;
-
-			interval = setInterval(() => {
-				pos += 1;
-				if (pos >= old.length) {
-					old = next;
-					next = makeText();
-					pos = 0;
-				}
-				display = next.slice(0, pos) + old.slice(pos);
-				cursorPos = pos;
-			}, 70);
-		}
-
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) navCurrent = entry.target.id;
@@ -67,29 +27,29 @@
 		});
 		document.querySelectorAll<HTMLElement>('.navItem').forEach((el) => observer.observe(el));
 		return () => {
-			if (interval) clearInterval(interval);
 			observer.disconnect();
 		};
 	});
 </script>
 
-<svelte:head>
-	<title>Hi! I'm Zixian.</title>
-	<meta name="description" content="Hello, I'm Zixian Chen." />
-</svelte:head>
+<Seo
+	title="Zixian Chen | Public-Sector Tech by Day, Questionable Side Projects by Night"
+	description="Public-sector tech by day, questionable side projects by night. Zixian Chen builds useful things, writes about what went wrong, and occasionally codes by hand."
+	pathname="/" />
 
 <Nav {navCurrent} />
 <div class="bg-base-200 grid min-h-dvh justify-items-center 2xl:overflow-x-clip">
 	<header id="header" class="navItem relative w-full place-items-center py-20 lg:grid lg:min-h-dvh lg:py-0">
 		<div class="bg-base-200 flex w-full flex-wrap items-center justify-center gap-8 lg:min-h-dvh">
 			<div class="grid justify-items-center" style="view-transition-name: logo">
-				<div class="text-[3.3rem] leading-none font-black tracking-tight lg:text-[7.1rem]">ZIXIAN</div>
+				<h1 class="text-[3.3rem] leading-none font-black tracking-tight lg:text-[7.1rem]">
+					<span class="sr-only">Zixian Chen | Public-Sector Tech by Day, Questionable Side Projects by Night</span>
+					<span aria-hidden="true">ZIXIAN</span>
+				</h1>
 				<div
 					class="code-z relative my-1 h-44 w-44 overflow-hidden bg-slate-900 lg:my-2 lg:h-96 lg:w-96"
 					aria-hidden="true">
-					<div class="code-fill font-mono">
-						{display.slice(0, cursorPos)}<span class="code-cursor"></span>{display.slice(cursorPos)}
-					</div>
+					<CodeCanvas />
 				</div>
 			</div>
 		</div>
@@ -286,33 +246,5 @@
 		background-repeat: no-repeat;
 		background-position: left;
 		transition: background-size 0.25s ease;
-	}
-
-	.code-fill {
-		/* font-family: monospace; */
-		font-size: 0.7em;
-		line-height: 1.3;
-		word-break: break-all;
-		width: 100%;
-		height: 100%;
-		color: var(--color-primary-content);
-	}
-
-	.code-cursor {
-		border-left: 4px solid yellow;
-		animation: blink 0.7s step-end infinite;
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.code-cursor {
-			display: none;
-			animation: none;
-		}
-	}
-
-	@keyframes blink {
-		50% {
-			opacity: 0;
-		}
 	}
 </style>

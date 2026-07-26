@@ -18,6 +18,7 @@
 	import screentimer from '$lib/screenshots/cubby/screentimer.webp';
 	import CubbyLogo from '$lib/assets/cubby-logo.webp';
 	import BackIcon from '~icons/lucide/arrow-left';
+	import Seo from '$lib/Seo.svelte';
 
 	// Features are grouped the way the app groups them. Each group is a section, each feature a row.
 	const groups = [
@@ -223,6 +224,11 @@
 		{ role: 'Observability', tools: 'Grafana Cloud, Uptime Kuma' },
 	];
 </script>
+
+<Seo
+	title="Cubby — Project Case Study | Zixian Chen"
+	description="A personal ERP that turns dozens of small household frictions into one app for routines, health, money, travel, and family life."
+	pathname="/projects/cubby" />
 
 {#snippet specimen(src, alt, max)}
 	<figure class="mx-auto w-full {max}">
