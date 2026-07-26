@@ -9,7 +9,7 @@ export const blogSeries = {
 		posts: [
 			'staff-work-make-it-make-sense-before-it-goes-up',
 			'staff-work-small-stuff-is-still-part-of-staff-work',
-			'staff-work-red-comments-can-teach-a-lot',
+			'staff-work-is-everyones-problem',
 		],
 	},
 } as const satisfies Record<string, BlogSeriesDefinition>;
