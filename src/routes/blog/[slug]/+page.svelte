@@ -159,11 +159,6 @@
 	</nav>
 {/if}
 
-<!-- Prevents vite from removing it when tree shaking -->
-<span class="line highlighted add remove diff hidden"></span>
-
-<!-- Prevents vite from removing it when tree shaking -->
-
 <style>
 	article.numbered-paras {
 		counter-reset: para;
