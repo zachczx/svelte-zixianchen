@@ -169,7 +169,8 @@
 	}
 
 	article.numbered-paras > :global(p)::before {
-		content: counter(para) '.\00a0\00a0';
+		content: counter(para) '.';
+		margin-inline-end: 0.5em;
 		font-family: var(--font-mono);
 		font-size: 0.85em;
 		opacity: 0.75;
