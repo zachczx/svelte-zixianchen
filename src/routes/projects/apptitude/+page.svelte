@@ -12,6 +12,7 @@
 		{ role: 'Data', tools: 'PostgreSQL, Kysely' },
 		{ role: 'Search', tools: 'Meilisearch' },
 		{ role: 'Auth', tools: 'Better Auth' },
+		{ role: 'Observability', tools: 'Axiom, OpenTelemetry' },
 	];
 </script>
 

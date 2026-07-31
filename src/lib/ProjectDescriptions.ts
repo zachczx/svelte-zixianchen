@@ -11,10 +11,10 @@ interface ProjectDescriptions {
 }
 
 export const descriptions: ProjectDescriptions = {
-	abbreviation: {
-		name: 'Abbreviation',
-		subtitle: 'A searchable glossary and first-month field guide',
-		url: 'https://abbreviation.zixian.dev',
+	lingo: {
+		name: 'Lingo',
+		subtitle: 'The language of Singapore’s Public Service, explained',
+		url: 'https://lingo.zixian.dev',
 	},
 	appraize: {
 		name: 'Appraize',

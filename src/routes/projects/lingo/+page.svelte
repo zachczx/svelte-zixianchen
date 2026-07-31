@@ -1,0 +1,266 @@
+<script>
+	import ProjectShell from '$lib/ProjectShell.svelte';
+	import ScreenshotGallery from '$lib/ScreenshotGallery.svelte';
+	import LingoHome from '$lib/screenshots/lingo/home.png?enhanced&w=1600';
+	import LingoTermsDirectoryThumbnail from '$lib/screenshots/lingo/terms-directory.png?enhanced&w=800';
+	import LingoTermsDirectoryFull from '$lib/screenshots/lingo/terms-directory.png?enhanced&w=2400';
+	import LingoTermsSearch from '$lib/screenshots/lingo/terms-search-dc.png?enhanced&w=1600';
+	import LingoExploreConstructionThumbnail from '$lib/screenshots/lingo/explore-built-from-within.png?enhanced&w=800';
+	import LingoExploreConstructionFull from '$lib/screenshots/lingo/explore-built-from-within.png?enhanced&w=2400';
+	import LingoExploreHistoryThumbnail from '$lib/screenshots/lingo/explore-then-and-now.png?enhanced&w=800';
+	import LingoExploreHistoryFull from '$lib/screenshots/lingo/explore-then-and-now.png?enhanced&w=2400';
+	import LingoExploreLookalikesThumbnail from '$lib/screenshots/lingo/explore-lookalikes.png?enhanced&w=800';
+	import LingoExploreLookalikesFull from '$lib/screenshots/lingo/explore-lookalikes.png?enhanced&w=2400';
+	import LingoExploreMeaningsThumbnail from '$lib/screenshots/lingo/explore-most-meanings.png?enhanced&w=800';
+	import LingoExploreMeaningsFull from '$lib/screenshots/lingo/explore-most-meanings.png?enhanced&w=2400';
+	import LingoNewbie from '$lib/screenshots/lingo/newbie-overview.png?enhanced&w=1600';
+	import LingoNewbieStartersThumbnail from '$lib/screenshots/lingo/newbie-starter-terms.png?enhanced&w=800';
+	import LingoNewbieStartersFull from '$lib/screenshots/lingo/newbie-starter-terms.png?enhanced&w=2400';
+	import LingoNewbieMeetingThumbnail from '$lib/screenshots/lingo/newbie-attending-a-meeting.png?enhanced&w=800';
+	import LingoNewbieMeetingFull from '$lib/screenshots/lingo/newbie-attending-a-meeting.png?enhanced&w=2400';
+	import LingoQuizRoundThumbnail from '$lib/screenshots/lingo/quiz-newbie-round.png?enhanced&w=800';
+	import LingoQuizRoundFull from '$lib/screenshots/lingo/quiz-newbie-round.png?enhanced&w=2400';
+	import LingoQuizOverviewThumbnail from '$lib/screenshots/lingo/quiz-overview.png?enhanced&w=800';
+	import LingoQuizOverviewFull from '$lib/screenshots/lingo/quiz-overview.png?enhanced&w=2400';
+
+	const stack = [
+		{ role: 'Application', tools: 'Go, Templ, HTMX, Tailwind CSS' },
+		{ role: 'Search', tools: 'Meilisearch, Jaro-Winkler, Metaphone' },
+		{ role: 'Data', tools: 'Embedded JSON, PostgreSQL' },
+		{ role: 'Observability', tools: 'Grafana Cloud, OpenTelemetry' },
+	];
+
+	const glossaryScreenshots = [
+		{
+			thumbnail: LingoTermsDirectoryThumbnail,
+			full: LingoTermsDirectoryFull,
+			alt: 'Lingo directory showing Singapore public-service terms beginning with C',
+			caption: 'The full A to Z list, now covering more than abbreviations.',
+		},
+	];
+
+	const exploreScreenshots = [
+		{
+			thumbnail: LingoExploreConstructionThumbnail,
+			full: LingoExploreConstructionFull,
+			alt: 'Lingo Explore view showing how Singapore Public Service abbreviations are assembled from words',
+			caption: 'Some abbreviations hide their letters inside words.',
+		},
+		{
+			thumbnail: LingoExploreHistoryThumbnail,
+			full: LingoExploreHistoryFull,
+			alt: 'Lingo Explore view connecting former Singapore Public Service names with their successors',
+			caption: 'Old names and what replaced them.',
+		},
+		{
+			thumbnail: LingoExploreLookalikesThumbnail,
+			full: LingoExploreLookalikesFull,
+			alt: 'Lingo Explore view comparing similar-looking abbreviations',
+			caption: 'Terms that look similar enough to mix up.',
+		},
+		{
+			thumbnail: LingoExploreMeaningsThumbnail,
+			full: LingoExploreMeaningsFull,
+			alt: 'Lingo Explore view listing abbreviations with the most meanings',
+			caption: 'The terms with the most possible meanings.',
+		},
+	];
+
+	const newbieScreenshots = [
+		{
+			thumbnail: LingoNewbieStartersThumbnail,
+			full: LingoNewbieStartersFull,
+			alt: 'Lingo newbie guide showing ten starter terms with explanations and examples',
+			caption: 'Ten terms to start with.',
+		},
+		{
+			thumbnail: LingoNewbieMeetingThumbnail,
+			full: LingoNewbieMeetingFull,
+			alt: 'Lingo newbie guide showing terms used when attending a meeting',
+			caption: 'Terms that come up in meetings, with explanations and examples.',
+		},
+	];
+
+	const quizScreenshots = [
+		{
+			thumbnail: LingoQuizRoundThumbnail,
+			full: LingoQuizRoundFull,
+			alt: 'A Lingo newbie quiz showing the correct abbreviation for Financial Year',
+			caption: 'A ten-question Newbie round.',
+		},
+		{
+			thumbnail: LingoQuizOverviewThumbnail,
+			full: LingoQuizOverviewFull,
+			alt: 'Lingo quiz screen offering Newbie practice and a full glossary challenge',
+			caption: 'Choose between Newbie practice and the full glossary.',
+		},
+	];
+</script>
+
+<ProjectShell
+	name="Lingo"
+	slug="lingo"
+	accent="#475569"
+	accentInk="#1e293b"
+	eyebrow="Language of the Singapore Public Service"
+	headline="The glossary I wish I had when I started work."
+	sub="Lingo started as one place to look up the unfamiliar language that made onboarding harder. It now has more than 3,500 terms, a 222-term newbie guide and quiz practice."
+	url="https://lingo.zixian.dev"
+	{stack}>
+	{#snippet wordmark()}
+		<h2 class="text-4xl font-extrabold tracking-tighter text-[#475569] lg:text-5xl">Lingo</h2>
+	{/snippet}
+
+	{#snippet hero()}
+		<enhanced:img
+			src={LingoHome}
+			alt="Lingo landing page for searching Singapore public-service terminology"
+			class="border-neutral/20 block w-full border-2 shadow-sm" />
+	{/snippet}
+
+	<section class="border-neutral/10 border-t py-12">
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">The onboarding problem</p>
+		<div class="text-base-content/85 mt-4 grid max-w-3xl gap-4 leading-relaxed">
+			<p class="text-2xl leading-snug font-bold">
+				When I joined, documents and conversations were full of abbreviations I did not know.
+			</p>
+			<p>
+				I heard the same from colleagues, and internal employee surveys also pointed to unfamiliar terminology as a
+				particular pain point during onboarding.
+			</p>
+			<p>
+				The available references were scattered across PDFs, Word documents and intranet pages, so I started collecting
+				the terms in one place. It remained a personal project, but eventually became useful enough to be linked from an
+				internal onboarding guide.
+			</p>
+		</div>
+	</section>
+
+	<section class="border-neutral/10 border-t py-12">
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">Starting with a glossary</p>
+		<div class="text-base-content/85 mt-4 grid max-w-3xl gap-4 leading-relaxed">
+			<p>
+				I began with a couple of small compilations that other people had put together, then kept adding terms as I
+				encountered them. Those starting lists now make up a relatively small part of the catalogue, which later grew
+				through manual additions and LLM-assisted research.
+			</p>
+			<p>
+				Gahmen loves acronyms, and they do not always follow the tidy pattern of taking the first letter of every word.
+				GeBIZ compresses “Government Electronic Business”, while HRPS combines “HR” with “Payroll System”.
+			</p>
+			<p>
+				Then the collection moved beyond acronyms. Branded names such as ServiceSG, LifeSG and FormSG, along with
+				workplace expressions such as “seek a steer”, “take offline” and “first cut”, were also part of what a new
+				officer had to learn. So I widened the list and eventually renamed it Lingo, a glossary for the language of the
+				Singapore Public Service.
+			</p>
+		</div>
+		<ScreenshotGallery id="lingo-glossary-supporting" title="Inside the glossary" images={glossaryScreenshots} />
+	</section>
+
+	<section class="border-neutral/10 border-t py-12">
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">Meilisearch does the heavy lifting now</p>
+		<div class="text-base-content/85 mt-4 grid max-w-3xl gap-4 leading-relaxed">
+			<p>
+				Someone might remember only a few letters, part of a phrase or roughly how a name sounded, so I originally built
+				my own search using Jaro-Winkler and Metaphone to handle partial and phonetic matches.
+			</p>
+			<p>
+				It did a decent job, but as the list grew I spent more and more time fiddling with ranking. Eventually I moved
+				the main search to Meilisearch, which handles typos and ranking better than my home-grown version. The old
+				Jaro-Winkler and Metaphone search still kicks in if Meilisearch is unavailable.
+			</p>
+			<p>
+				I also added popular searches to the home page, but only canonical exact-match searches submitted through the
+				search form count. Raw phrases, IP addresses, user agents and session identifiers are not stored, and clicking a
+				popular term does not reinforce its own ranking.
+			</p>
+		</div>
+		<enhanced:img
+			src={LingoTermsSearch}
+			alt="Lingo search results showing multiple meanings of DC across Singapore Public Service domains"
+			class="border-neutral/20 mt-5 block w-full border-2 shadow-sm" />
+	</section>
+
+	<section class="border-neutral/10 border-t py-12">
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">Turning the glossary into an onboarding guide</p>
+		<div class="text-base-content/85 mt-4 grid max-w-3xl gap-4 leading-relaxed">
+			<p class="text-2xl leading-snug font-bold">
+				Search only helps after someone has already run into a term they do not know.
+			</p>
+			<p>
+				The pain point had always been onboarding, so I started arranging the terms around how new officers actually
+				encounter the Public Service: starting work, attending meetings, writing papers, navigating the hierarchy,
+				handling procurement and working across agencies.
+			</p>
+			<p>
+				The newbie guide now pulls together 222 terms across eight situations. It starts with ten terms, then opens into
+				51 essentials and the wider collection. Entries can include a plain-language explanation, examples, other ways
+				the term is heard, context and a public source.
+			</p>
+			<p>
+				I also added Explore because the data could do more than sit behind a search box. It groups terms with several
+				meanings, names built from within words, lookalikes and older terms alongside their replacements. The quiz came
+				after that, with ten-question rounds and missed answers returning for review at the end.
+			</p>
+			<p>
+				I kept the quiz deliberately lightweight: no account, timer or leaderboard. Completed-round totals stay only in
+				the browser.
+			</p>
+		</div>
+		<enhanced:img
+			src={LingoNewbie}
+			alt="Lingo newbie guide organised around eight common Public Service workplace situations"
+			class="border-neutral/20 mt-5 block w-full border-2 shadow-sm" />
+		<ScreenshotGallery id="lingo-newbie-supporting" title="Inside the newbie guide" images={newbieScreenshots} />
+		<ScreenshotGallery id="lingo-explore-supporting" title="More ways into the glossary" images={exploreScreenshots} />
+		<ScreenshotGallery id="lingo-quiz-supporting" title="Quiz practice" images={quizScreenshots} />
+	</section>
+
+	<section class="border-neutral/10 border-t py-12">
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">Adding more without making a mess</p>
+		<div class="text-base-content/85 mt-4 grid max-w-3xl gap-4 leading-relaxed">
+			<p class="text-2xl leading-snug font-bold">
+				As the glossary grew, I needed a way to accept help without letting anything go straight into search.
+			</p>
+			<p>
+				A glossary this broad will always have gaps, especially when workplace language varies across agencies. Anyone
+				can now suggest a term, its meaning, where they heard it and a public source that can help verify it.
+			</p>
+			<p>
+				Suggestions enter a private review queue. I check the meaning and context before accepting anything into the
+				curated glossary, and the form warns contributors to leave out classified, sensitive or personal information.
+			</p>
+			<p>
+				An accepted suggestion becomes a JSON draft I can copy into the glossary, together with an editorial record. I
+				still have to add it by hand, so the review workspace cannot publish directly into live search results.
+			</p>
+			<p>
+				Filling in definitions, examples and sources by hand got slow, so I use LLMs to help research new terms and find
+				missing context. I often ask one model to draft the entry and another to poke holes in it.
+			</p>
+			<p>
+				Everything still goes through review and a final scan from me. I track which entries have been checked against a
+				public reference, and the embedded JSON files remain the source of truth. The LLMs never answer live searches or
+				publish entries.
+			</p>
+		</div>
+	</section>
+
+	<section class="border-neutral/10 border-t py-12">
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">Built for when you need it</p>
+		<div class="text-base-content/85 mt-4 grid max-w-3xl gap-4 leading-relaxed">
+			<p class="text-2xl leading-snug font-bold">
+				Most people will use Lingo only when a term gets in their way, and that is fine.
+			</p>
+			<p>
+				They look it up, find the explanation and get back to whatever they were doing. The newbie guide gives new
+				officers somewhere to start before that happens, with situations they recognise and a way to practise the terms.
+			</p>
+			<p>
+				I started with a glossary because that was the simplest answer to the onboarding problem. Over time it has
+				become much closer to the onboarding resource I wanted when I joined.
+			</p>
+		</div>
+	</section>
+</ProjectShell>

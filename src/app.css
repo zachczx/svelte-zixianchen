@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import 'tw-animate-css';
 @plugin '@tailwindcss/typography';
 @plugin 'daisyui' {
 	themes: false;
@@ -66,6 +67,23 @@
 	--font-*: initial;
 	--font-sans: 'Figtree Variable', sans-serif;
 	--font-mono: 'JetBrains Mono Variable';
+
+	/* shadcn-svelte semantic colors mapped onto the existing DaisyUI themes */
+	--color-background: var(--color-base-100);
+	--color-foreground: var(--color-base-content);
+	--color-card: var(--color-base-100);
+	--color-card-foreground: var(--color-base-content);
+	--color-popover: var(--color-base-100);
+	--color-popover-foreground: var(--color-base-content);
+	--color-primary-foreground: white;
+	--color-secondary-foreground: white;
+	--color-muted: var(--color-base-200);
+	--color-muted-foreground: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+	--color-accent-foreground: var(--color-neutral);
+	--color-destructive: var(--color-warning);
+	--color-border: color-mix(in oklab, var(--color-base-content) 18%, transparent);
+	--color-input: color-mix(in oklab, var(--color-base-content) 18%, transparent);
+	--color-ring: color-mix(in oklab, var(--color-base-content) 70%, transparent);
 
 	--drop-shadow-glow: 0 0px 20px rgba(255, 255, 255, 0.95), 0 0px 65px rgba(255, 255, 255, 0.2);
 	--drop-shadow-red-glow: 0 0px 20px rgba(0, 0, 0, 0.95), 0 0px 65px rgba(0, 0, 0, 0.2);

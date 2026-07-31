@@ -12,7 +12,7 @@ published: true
 slug: adding-delay-to-css-loader-when-using-htmx-swaps
 ---
 
-I've recently been learning Go and using it for a [webapp that searches Government abbreviations and acronyms](https://abbreviation.zixian.dev). It's been a great journey so far, notwithstanding the subpar dev experience and the Svelte/Vite withdrawals that pop up from time to time. The way that Go encourages me to think about code has been really helpful. Not least the emphasis on writing left-aligned happy path code and constantly thinking about error handling. I also like HTMX, so it's all good using it with Chi and Templ.
+I've recently been learning Go and using it for [Lingo, a webapp that searches Singapore Public Service abbreviations, branded terms and workplace phrases](https://lingo.zixian.dev). It's been a great journey so far, notwithstanding the subpar dev experience and the Svelte/Vite withdrawals that pop up from time to time. The way that Go encourages me to think about code has been really helpful. Not least the emphasis on writing left-aligned happy path code and constantly thinking about error handling. I also like HTMX, so it's all good using it with Chi and Templ.
 
 Specific to UX, it's a UX best practice to show a loading animation if something takes 1s or more. (It's [not always necessary](https://www.nngroup.com/articles/progress-indicators/), but I also find it more intuitive as a user myself.) So I usually add an animated loader.
 

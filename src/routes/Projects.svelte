@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ChevronRightIcon from '~icons/lucide/chevron-right';
 	import { descriptions } from '$lib/ProjectDescriptions';
-	import AbbreviationHome from '$lib/screenshots/abbreviation/home.png?enhanced';
+	import LingoHome from '$lib/screenshots/lingo/home.png?enhanced';
 	import ApptitudeMain from '$lib/screenshots/apptitude/main.webp?enhanced';
 	import BtonomicsMain from '$lib/screenshots/btonomics/main.webp?enhanced';
 	import CubbyDashboard from '$lib/screenshots/cubby/dashboard.webp?enhanced';
@@ -45,7 +45,7 @@
 			slug: 'cubby',
 			kind: 'mobile',
 			pos: 'top',
-			stack: 'Go · SvelteKit · Postgres',
+			stack: 'Go · SvelteKit · Postgres · Grafana Cloud',
 			shots: [CubbyDashboard, CubbyGym, CubbyCoffee],
 			facts: [
 				{ label: 'Status', value: 'Active household app' },
@@ -54,21 +54,22 @@
 			],
 		},
 		{
-			slug: 'abbreviation',
-			img: AbbreviationHome,
+			slug: 'lingo',
+			img: LingoHome,
 			kind: 'web',
 			pos: 'center',
-			stack: 'Go · htmx · embedded JSON',
+			stack: 'Go · htmx · Meilisearch · Grafana Cloud',
 			facts: [
-				{ label: 'Status', value: 'Live glossary and first-month guide' },
+				{ label: 'Status', value: 'Live glossary and Public Service newbie guide' },
 				{
 					label: 'Problem',
 					value:
-						'New officers encounter abbreviations and service names before they have the context to understand them',
+						'New officers encounter abbreviations and workplace language before they have the context to understand them',
 				},
 				{
-					label: 'Outcome',
-					value: '3,500+ terms, including a 189-term first-month guide with 35 essentials and quiz practice',
+					label: 'Scope',
+					value:
+						'3,500+ entries across abbreviations, branded terms and workplace phrases; 222 newbie terms, 51 essentials and quiz practice',
 				},
 			],
 		},
@@ -77,7 +78,7 @@
 			img: ApptitudeMain,
 			kind: 'web',
 			pos: 'top',
-			stack: 'SvelteKit · PostgreSQL · Meilisearch',
+			stack: 'SvelteKit · PostgreSQL · Meilisearch · Axiom',
 			facts: [
 				{ label: 'Status', value: 'Live learning and decision-support platform' },
 				{
