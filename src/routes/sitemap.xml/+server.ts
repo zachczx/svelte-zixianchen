@@ -11,12 +11,16 @@ interface PostModule {
 }
 
 export const GET: RequestHandler = async () => {
-	const blogSlugs: string[] = [];
+	const blogPosts: { values: string[]; lastmod: string }[] = [];
 	try {
 		const posts: Record<string, PostModule> = import.meta.glob('../blog/posts/*.md', { eager: true });
 		for (const path in posts) {
-			if (posts[path].metadata.published && posts[path].metadata.listed !== false) {
-				blogSlugs.push(posts[path].metadata.slug);
+			const { date, date_updated, listed, published, slug } = posts[path].metadata;
+			if (published && listed !== false) {
+				blogPosts.push({
+					values: [slug],
+					lastmod: date_updated || date,
+				});
 			}
 		}
 	} catch {
@@ -27,7 +31,7 @@ export const GET: RequestHandler = async () => {
 		origin: 'https://zixianchen.com',
 		excludeRoutePatterns: [/^\/blog\/unlisted$/],
 		paramValues: {
-			'/blog/[slug]': blogSlugs, // e.g. ['hello-world', 'another-post']
+			'/blog/[slug]': blogPosts,
 		},
 	});
 };

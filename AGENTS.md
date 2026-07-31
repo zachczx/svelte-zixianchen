@@ -29,6 +29,7 @@ There is no dedicated test script or test framework configured yet. Treat `pnpm 
 ## Commit & Pull Request Guidelines
 
 Recent commits use Conventional Commit-style prefixes such as `feat:`, `fix:`, `refactor:`, and `style:`. Keep commit subjects imperative and scoped to one change.
+Do not include a parenthesized scope in commit subjects; use `feat: ...`, not `feat(sitemap): ...`.
 
 Do not push commits or branches unless the user explicitly asks for a push. A request to commit does not imply permission to push.
 
