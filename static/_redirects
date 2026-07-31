@@ -2,15 +2,21 @@
 /projects /#projects 301
 /projects/ /#projects 301
 
+# Abbreviation was renamed to Lingo
+/projects/abbreviation /projects/lingo 301
+/projects/abbreviation/ /projects/lingo 301
+
+# Projects folded into Cubby
+/projects/towelie /projects/cubby 301
+/projects/towelie/ /projects/cubby 301
+/projects/cancelninja /projects/cubby 301
+/projects/cancelninja/ /projects/cubby 301
+/projects/eatyourmeds /projects/cubby 301
+/projects/eatyourmeds/ /projects/cubby 301
+/projects/roamichi /projects/cubby 301
+/projects/roamichi/ /projects/cubby 301
+
 # Project write-ups consolidated into the homepage
-/projects/towelie /#projects 301
-/projects/towelie/ /#projects 301
-/projects/cancelninja /#projects 301
-/projects/cancelninja/ /#projects 301
-/projects/eatyourmeds /#projects 301
-/projects/eatyourmeds/ /#projects 301
-/projects/roamichi /#projects 301
-/projects/roamichi/ /#projects 301
 /projects/btonomics-wordpress /#projects 301
 /projects/btonomics-wordpress/ /#projects 301
 /projects/appraize /#projects 301
