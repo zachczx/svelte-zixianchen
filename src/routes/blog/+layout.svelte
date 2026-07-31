@@ -27,7 +27,7 @@
 <div
 	data-theme={theme}
 	class="blog-shell bg-base-200 text-base-content relative flex w-full flex-col items-center justify-center overflow-hidden transition-colors">
-	<div id="container" class="z-10 grid min-h-dvh w-full max-w-3xl justify-center py-6">
+	<div id="container" class="z-10 grid min-h-dvh w-full max-w-3xl grid-cols-[minmax(0,1fr)] py-6">
 		<div class="w-full min-w-0">
 			<button
 				type="button"
