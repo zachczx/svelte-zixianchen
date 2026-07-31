@@ -1,6 +1,6 @@
 ---
 title: 'Making Pagefind Work on SvelteKit'
-description: 'A current, minimal setup for adding Pagefind search to a statically generated SvelteKit site.'
+description: 'A current setup for making Pagefind search work in both local development and production on SvelteKit.'
 date: '2024-06-27'
 date_updated: '2026-08-01'
 category: 'Dev'
@@ -15,14 +15,14 @@ slug: making-pagefind-work-sveltekit
 
 I still like [Pagefind](https://pagefind.app/) for the same reason I did when I first wrote this post: it gives a static site proper full-text search without making me run a search server. The setup has also become simpler since 2024, but the old approach was solving some real problems that are still worth understanding.
 
-My original version used `vite-plugin-pagefind`, loaded Pagefind's ready-made UI globally, changed SvelteKit's prerender error handling, and rewrote `.html` result URLs. I no longer need all of those pieces, but the Vite plugin remains useful if search needs to work during `pnpm dev`.
+My original version used `vite-plugin-pagefind`, loaded Pagefind's ready-made UI globally, changed SvelteKit's prerender error handling, and rewrote `.html` result URLs. I no longer need all of those pieces, but I absolutely still need the Vite plugin: search should work during `pnpm dev`, not only after a production build.
 
-Here are the two setups I would choose between now: plain Pagefind for the smallest production integration, or the Vite plugin for a better local development experience.
+The current setup uses Pagefind's CLI to index the production build and `vite-plugin-pagefind` to make the same search bundle available on the local Vite development server.
 
 ## 1. Install Pagefind
 
 ```sh
-pnpm add -D pagefind
+pnpm add -D pagefind vite-plugin-pagefind
 ```
 
 Pagefind runs after SvelteKit has generated the static site. I made that part of the normal build command:
@@ -37,15 +37,11 @@ Pagefind runs after SvelteKit has generated the static site. I made that part of
 
 The important bit is that `--site` points to the directory produced by `adapter-static`. For this site, that directory is `build`.
 
-## 2. Optional: make search work during development
+## 2. Make search work during development
 
 Pagefind normally indexes the site after SvelteKit has built its static HTML. That means the `/pagefind/pagefind.js` bundle does not exist in a plain `pnpm dev` session.
 
-If production-like testing with `pnpm build && pnpm preview` is enough, skip this section. If you want search available on the Vite development server, this is where [`vite-plugin-pagefind`](https://github.com/Hugos68/vite-plugin-pagefind) still earns its keep:
-
-```sh
-pnpm add -D vite-plugin-pagefind
-```
+The production build command alone does not help during everyday development. [`vite-plugin-pagefind`](https://github.com/Hugos68/vite-plugin-pagefind) fills that gap by building the site, generating the index, and exposing the Pagefind bundle through Vite:
 
 ```ts
 // vite.config.ts
@@ -68,7 +64,7 @@ export default defineConfig({
 });
 ```
 
-The `eager` strategy rebuilds and indexes the output when the development server starts. Checking `npm_lifecycle_event` prevents tools such as `svelte-check`, which also load Vite in serve mode, from triggering that expensive build. The plugin is a development convenience rather than a requirement for deploying Pagefind.
+The `eager` strategy rebuilds and indexes the output when the development server starts. Checking `npm_lifecycle_event` prevents tools such as `svelte-check`, which also load Vite in serve mode, from triggering that expensive build. The plugin is part of this development setup, while the Pagefind CLI remains responsible for the production index.
 
 During development, the plugin copies the generated bundle from `build/pagefind` to `static/pagefind` so Vite can serve it. That directory is generated output, so I keep it out of Git:
 
@@ -133,9 +129,9 @@ I use the JavaScript API instead of Pagefind's ready-made UI because it lets the
 
 The returned `excerpt` contains safe, encoded HTML plus `<mark>` elements around matches, so it can be rendered as HTML and styled to fit the site. Other returned fields, such as custom metadata, should still be rendered normally rather than inserted as raw HTML.
 
-## 5. Test the built site
+## 5. Test the production build too
 
-Without the Vite plugin, the Pagefind bundle is created only after the SvelteKit build. Test the production output instead:
+The Vite plugin makes search work during `pnpm dev`, but the deployed site still uses the index created by the production build. Test that path too:
 
 ```sh
 pnpm build
@@ -154,9 +150,9 @@ This was not merely an old workaround; whether it is needed depends on the outpu
 
 ## What changed from the original setup?
 
-- `vite-plugin-pagefind` is optional, not obsolete. Keep it when search during `pnpm dev` matters.
+- `vite-plugin-pagefind` stays because search should work during `pnpm dev`, not just in a production preview.
 - Global Pagefind UI imports are unnecessary when using the JavaScript API to build a custom interface.
 - Weakening `handleHttpError` is unnecessary because the generated browser bundle is loaded dynamically rather than resolved during the SvelteKit build.
 - `.html` normalization is hosting-dependent. Pagefind removes `index.html`, but it does not universally remove the extension from flat HTML files.
 
-That is all the build integration needed: SvelteKit writes the pages, Pagefind indexes them, and Cloudflare deploys the resulting static directory.
+That is all the integration needed: the Vite plugin supplies search during local development, SvelteKit writes the production pages, Pagefind indexes them, and Cloudflare deploys the resulting static directory.
