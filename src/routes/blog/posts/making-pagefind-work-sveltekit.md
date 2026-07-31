@@ -1,8 +1,8 @@
 ---
-title: 'Making Pagefind Work on Sveltekit'
-description: "I got Pagefind to work on Sveltekit, couldn't find relevant guides, so I wrote this."
+title: 'Making Pagefind Work on SvelteKit'
+description: 'A current, minimal setup for adding Pagefind search to a statically generated SvelteKit site.'
 date: '2024-06-27'
-date_updated: '2024-07-10'
+date_updated: '2026-08-01'
 category: 'Dev'
 tags:
   - SvelteKit
@@ -13,116 +13,150 @@ published: true
 slug: making-pagefind-work-sveltekit
 ---
 
-I like [Pagefind](https://pagefind.app/docs/ui-usage/), there’s something about just having a simple js library that works instead of having to do tons of stuff backend for Meilisearch. Unlike for Astro, where [there’s a package that does everything](https://github.com/shishkin/astro-pagefind), there’s some config to do for Sveltekit and I didn’t find anything.
+I still like [Pagefind](https://pagefind.app/) for the same reason I did when I first wrote this post: it gives a static site proper full-text search without making me run a search server. The setup has also become simpler since 2024, but the old approach was solving some real problems that are still worth understanding.
 
-This is how I eventually got it to work.
+My original version used `vite-plugin-pagefind`, loaded Pagefind's ready-made UI globally, changed SvelteKit's prerender error handling, and rewrote `.html` result URLs. I no longer need all of those pieces, but the Vite plugin remains useful if search needs to work during `pnpm dev`.
 
-1.  Use [Vite-plugin-pagefind](https://github.com/Hugos68/vite-plugin-pagefind) – check out the site for more documentation, but basically ensures that the pagefind files are available after build.
+Here are the two setups I would choose between now: plain Pagefind for the smallest production integration, or the Vite plugin for a better local development experience.
 
-2.  Don’t overthink the pagefind.json you’ll need to create:
+## 1. Install Pagefind
 
-    ```js
-    // pagefind.json
+```sh
+pnpm add -D pagefind
+```
 
-    {
-        "site": "build",
-        "vite_plugin_pagefind": {
-                "assets_dir": "static",
-                "build_command": "npm run build",
-                "dev_strategy": "eager"
-        }
-    }
-    ```
+Pagefind runs after SvelteKit has generated the static site. I made that part of the normal build command:
 
-3.  Add pagefind() to vite.config.js, I had success as the first entry.
+```json
+{
+	"scripts": {
+		"build": "vite build && pagefind --site build"
+	}
+}
+```
 
-    ```js
-    // vite.config.js
+The important bit is that `--site` points to the directory produced by `adapter-static`. For this site, that directory is `build`.
 
-    import { sveltekit } from '@sveltejs/kit/vite';
-    import { enhancedImages } from '@sveltejs/enhanced-img';
-    import { defineConfig } from 'vite';
-    import pagefind from 'vite-plugin-pagefind'; // [!code highlight]
+## 2. Optional: make search work during development
 
-    export default defineConfig({
-    	plugins: [pagefind(), enhancedImages(), sveltekit()], // [!code highlight]
-    });
-    ```
+Pagefind normally indexes the site after SvelteKit has built its static HTML. That means the `/pagefind/pagefind.js` bundle does not exist in a plain `pnpm dev` session.
 
-4.  Add it to the route +page.svelte file,
+If production-like testing with `pnpm build && pnpm preview` is enough, skip this section. If you want search available on the Vite development server, this is where [`vite-plugin-pagefind`](https://github.com/Hugos68/vite-plugin-pagefind) still earns its keep:
 
-    ```js
-    // src/routes/search/+page.svelte
+```sh
+pnpm add -D vite-plugin-pagefind
+```
 
-    <script>
-        import { onMount } from 'svelte';
-        onMount(async () => {
-            const pagefind = await import('/pagefind/pagefind.js');
-            pagefind.init();
-            new PagefindUI({
-                element: '#search',
-                showImages: false,
-                resetStyles: true,
-                autofocus: true,
-            });
-        });
-    </script>
+```ts
+// vite.config.ts
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
+import { pagefind } from 'vite-plugin-pagefind';
 
-    <svelte:head>
-    <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-    </svelte:head>
+export default defineConfig({
+	plugins: [
+		...(process.env.npm_lifecycle_event === 'dev'
+			? pagefind({
+					outputDirectory: 'build',
+					assetsDirectory: 'static',
+					buildScript: 'build',
+					developStrategy: 'eager',
+				})
+			: []),
+		sveltekit(),
+	],
+});
+```
 
-    <div id="search"></div>
-    ```
+The `eager` strategy rebuilds and indexes the output when the development server starts. Checking `npm_lifecycle_event` prevents tools such as `svelte-check`, which also load Vite in serve mode, from triggering that expensive build. The plugin is a development convenience rather than a requirement for deploying Pagefind.
 
-5.  Added the relevant pagefind-ui.js and pagefind-ui.css imports to app.html and app.css respectively. It worked even if I dumped everything into app.html, I just found it neater to separate them.
+During development, the plugin copies the generated bundle from `build/pagefind` to `static/pagefind` so Vite can serve it. That directory is generated output, so I keep it out of Git:
 
-6.  Change handleHttpError to ‘warn’. Without doing this Cloudflare Pages was complaining about pagefind-ui.css being missing and this killed the build process. The package makes sure it’s there after build.
+```gitignore
+# .gitignore
+/static/pagefind
+```
 
-    ```js
-    // svelte.config.js
+Git-ignoring the directory was not enough for my ESLint flat config. ESLint still scanned the generated, minified Pagefind JavaScript and reported hundreds of errors from code I do not own. I excluded the directory there too:
 
-    import adapter from '@sveltejs/adapter-static';
-    import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-    /** @type {import('@sveltejs/kit').Config} */
+```js
+// eslint.config.js
+export default defineConfig({
+	ignores: ['build/**', 'static/pagefind/**', '.svelte-kit/**'],
+});
+```
 
-    const config = {
-    	kit: {
-    		adapter: adapter(),
-    		prerender: { handleHttpError: 'warn' },
-    	},
-    	preprocess: vitePreprocess(),
-    };
+If you use a different `assetsDirectory` or `bundleDirectory`, adjust both ignore paths to match. These exclusions only cover generated assets; the application code that imports and renders Pagefind remains linted normally.
 
-    export default config;
-    ```
+## 3. Mark the content to index
 
-7.  Next we need to process the URLs of the search results. Pagefind adds a .html to the results and that caused 404 errors for me. So let's go back to +page.svelte to add this [(credit to the plugin author's suggestion to me)](<>):
+Pagefind indexes the whole HTML body by default. I only want public blog posts in the search index, not navigation, footer text, or the rest of the portfolio, so I mark the article body explicitly:
 
-    ```js
-    // src/routes/search/+page.svelte
+```svelte
+<article data-pagefind-body>
+	<!-- post content -->
+</article>
+```
 
-    <script>
-        import { onMount } from 'svelte';
-        onMount(async () => {
-            // @ts-expect-error - Pagefind will be present at runtime
-            const pagefind = await import('/pagefind/pagefind.js');
-            pagefind.init();
-            new PagefindUI({
-                element: '#search',
-                showImages: false,
-                resetStyles: true,
-                autofocus: true,
-                // showSubResults is false by default, setting it to true causes duplicate results
-                processResult: (result) => { // [!code ++]
-                    const url = result.url.replace('.html', ''); // [!code ++]
-                    result.url = url; // [!code ++]
-                    return result; // [!code ++]
-                }, // [!code ++]
-            });
+Once Pagefind sees `data-pagefind-body`, pages without that attribute are left out of the index. On this site I only add it when a post is listed, so published-but-unlisted posts remain accessible by URL without appearing in search.
 
-        });
-    </script>
-    ```
+I also expose a little metadata for result rendering and category filtering:
 
-8.  That's all, actually.
+```svelte
+<svelte:head>
+	<meta data-pagefind-meta="date[content]" content={metadata.date} />
+	<meta data-pagefind-meta="category[content]" content={metadata.category} />
+	<meta data-pagefind-filter="category[content]" content={metadata.category} />
+</svelte:head>
+```
+
+Pagefind automatically uses the first `h1` as the result title. Metadata is searchable too, so descriptions and tags can be added the same way.
+
+## 4. Load the search API in the browser
+
+Pagefind writes its browser bundle to `build/pagefind`. That file does not exist while Vite is compiling the Svelte app, so the import must stay dynamic:
+
+```ts
+const pagefindPath = '/pagefind/pagefind.js';
+const pagefind = await import(/* @vite-ignore */ pagefindPath);
+
+await pagefind.init();
+const search = await pagefind.debouncedSearch('sveltekit');
+
+// A newer debounced search can cancel this one.
+if (!search) return;
+
+const results = await Promise.all(search.results.map((result) => result.data()));
+```
+
+I use the JavaScript API instead of Pagefind's ready-made UI because it lets the search results look like the existing blog list. `debouncedSearch` also avoids running a search on every keystroke.
+
+The returned `excerpt` contains safe, encoded HTML plus `<mark>` elements around matches, so it can be rendered as HTML and styled to fit the site. Other returned fields, such as custom metadata, should still be rendered normally rather than inserted as raw HTML.
+
+## 5. Test the built site
+
+Without the Vite plugin, the Pagefind bundle is created only after the SvelteKit build. Test the production output instead:
+
+```sh
+pnpm build
+pnpm preview
+```
+
+Pagefind removes `index.html` from result paths by default, but that is not the same as removing `.html` from flat files such as `my-post.html`. SvelteKit's static adapter can produce those flat paths, depending on the trailing-slash configuration.
+
+Cloudflare's default static-asset handling redirects `/my-post.html` to `/my-post`, but other hosts may behave differently. Inspect the URLs in the generated index. If necessary, normalize a terminal `.html` before rendering the result link:
+
+```ts
+const url = result.url.replace(/\.html$/, '');
+```
+
+This was not merely an old workaround; whether it is needed depends on the output shape and hosting platform.
+
+## What changed from the original setup?
+
+- `vite-plugin-pagefind` is optional, not obsolete. Keep it when search during `pnpm dev` matters.
+- Global Pagefind UI imports are unnecessary when using the JavaScript API to build a custom interface.
+- Weakening `handleHttpError` is unnecessary because the generated browser bundle is loaded dynamically rather than resolved during the SvelteKit build.
+- `.html` normalization is hosting-dependent. Pagefind removes `index.html`, but it does not universally remove the extension from flat HTML files.
+
+That is all the build integration needed: SvelteKit writes the pages, Pagefind indexes them, and Cloudflare deploys the resulting static directory.

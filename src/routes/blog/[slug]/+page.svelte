@@ -34,6 +34,13 @@
 			url: 'https://zixianchen.com/',
 		},
 	}} />
+<svelte:head>
+	<meta data-pagefind-meta="description[content]" content={data.metadata.description} />
+	<meta data-pagefind-meta="date[content]" content={data.metadata.date} />
+	<meta data-pagefind-meta="category[content]" content={data.metadata.category ?? ''} />
+	<meta data-pagefind-meta="tags[content]" content={data.metadata.tags.join(' / ')} />
+	<meta data-pagefind-filter="category[content]" content={data.metadata.category ?? ''} />
+</svelte:head>
 <div class="px-3 pb-3 sm:px-6 xl:px-14">
 	<a
 		href="/blog"
@@ -91,6 +98,7 @@
 	</nav>
 {/if}
 <article
+	data-pagefind-body={data.metadata.listed === false ? undefined : ''}
 	class="blog-prose prose prose-a:font-semibold prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:text-accent prose-blockquote:my-8 prose-blockquote:ms-8 prose-h2:text-2xl prose-h2:font-bold prose-p:leading-relaxed prose-li:leading-relaxed prose-p:my-6 prose-code:font-mono prose-pre:px-0 prose-pre:py-3 mt-6 w-full max-w-none px-3 sm:px-6 lg:mt-10 xl:px-14"
 	class:numbered-paras={data.metadata.category === 'Work'}>
 	{#if content}

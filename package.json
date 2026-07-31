@@ -8,7 +8,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "vite build && pagefind --site build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -36,6 +36,7 @@
 		"eslint-plugin-svelte": "^3.22.0",
 		"globals": "^17.7.0",
 		"mdsvex": "^0.12.8",
+		"pagefind": "^1.5.2",
 		"prettier": "^3.9.6",
 		"prettier-plugin-svelte": "^4.1.1",
 		"prettier-plugin-tailwindcss": "^0.8.1",
@@ -48,7 +49,8 @@
 		"typescript": "^6.0.3",
 		"typescript-eslint": "^8.65.0",
 		"unplugin-icons": "^23.0.1",
-		"vite": "^8.1.5"
+		"vite": "^8.1.5",
+		"vite-plugin-pagefind": "^1.1.1"
 	},
 	"type": "module",
 	"dependencies": {

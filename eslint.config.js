@@ -11,6 +11,7 @@ export default defineConfig(
 			'.DS_Store',
 			'node_modules/**',
 			'build/**',
+			'static/pagefind/**',
 			'.svelte-kit/**',
 			'package/**',
 			'.env',
