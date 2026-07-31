@@ -55,7 +55,7 @@
 		{#each images as image, index (image.caption)}
 			<button
 				type="button"
-				class="group focus-visible:outline-base-content/70 border-neutral/20 bg-base-100 hover:border-neutral/45 overflow-hidden border text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
+				class="group focus-visible:outline-base-content/70 border-neutral/20 bg-base-100 hover:border-neutral/45 cursor-pointer overflow-hidden border text-left transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
 				aria-label="Open full-size screenshot: {image.caption}"
 				onclick={() => openImage(index)}>
 				<div class="relative aspect-video overflow-hidden">
@@ -93,7 +93,7 @@
 					<span class="text-xs text-white/60">{selectedIndex + 1} of {images.length}</span>
 				{/if}
 				<Dialog.Close
-					class="grid size-10 place-items-center border border-white/20 transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+					class="grid size-10 cursor-pointer place-items-center border border-white/20 transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
 					aria-label="Close full-size screenshot">
 					<XIcon class="size-5" />
 				</Dialog.Close>
@@ -108,14 +108,14 @@
 				{#if images.length > 1}
 					<button
 						type="button"
-						class="absolute top-1/2 left-2 grid size-11 -translate-y-1/2 place-items-center bg-neutral-950/85 transition-colors hover:bg-neutral-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:left-4"
+						class="absolute top-1/2 left-2 grid size-11 -translate-y-1/2 cursor-pointer place-items-center bg-neutral-950/85 transition-colors hover:bg-neutral-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:left-4"
 						aria-label="Previous screenshot"
 						onclick={() => selectRelative(-1)}>
 						<ChevronLeftIcon class="size-6" />
 					</button>
 					<button
 						type="button"
-						class="absolute top-1/2 right-2 grid size-11 -translate-y-1/2 place-items-center bg-neutral-950/85 transition-colors hover:bg-neutral-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:right-4"
+						class="absolute top-1/2 right-2 grid size-11 -translate-y-1/2 cursor-pointer place-items-center bg-neutral-950/85 transition-colors hover:bg-neutral-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:right-4"
 						aria-label="Next screenshot"
 						onclick={() => selectRelative(1)}>
 						<ChevronRightIcon class="size-6" />
