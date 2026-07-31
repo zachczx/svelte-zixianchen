@@ -171,9 +171,19 @@
 				Jaro-Winkler and Metaphone search still kicks in if Meilisearch is unavailable.
 			</p>
 			<p>
-				I also added popular searches to the home page, but only canonical exact-match searches submitted through the
-				search form count. Raw phrases, IP addresses, user agents and session identifiers are not stored, and clicking a
-				popular term does not reinforce its own ranking.
+				As Lingo grew, search also had to work when someone knew what a term did but not what it was called. I added
+				plain-language descriptions to more entries and a separate description search for that kind of query.
+			</p>
+			<p>
+				The home page still shows popular exact matches, but I now keep 90 days of searches submitted through the search
+				form, including the ones that return nothing. URLs, email addresses, identity numbers and long phone-like
+				numbers are redacted before storage, while IP addresses, user agents and session identifiers stay out of the
+				search log.
+			</p>
+			<p>
+				A short survey can appear after a search returns nothing or after someone has tried a few searches. It asks
+				whether they found what they needed, and a Partly or No answer can include what went wrong and what they
+				expected to find. That tells me more than a list of successful searches ever could.
 			</p>
 		</div>
 		<enhanced:img
@@ -199,9 +209,10 @@
 				the term is heard, context and a public source.
 			</p>
 			<p>
-				I also added Explore because the data could do more than sit behind a search box. It groups terms with several
-				meanings, names built from within words, lookalikes and older terms alongside their replacements. The quiz came
-				after that, with ten-question rounds and missed answers returning for review at the end.
+				I also added Explore because the data could do more than sit behind a search box. It now has nine ways to
+				browse, including terms with several meanings, names built from within words, workplace language, acronym
+				families and terminology associated with different agencies. The quiz came after that, with ten-question rounds
+				and missed answers returning for review at the end.
 			</p>
 			<p>
 				I kept the quiz deliberately lightweight: no account, timer or leaderboard. Completed-round totals stay only in
@@ -228,12 +239,15 @@
 				can now suggest a term, its meaning, where they heard it and a public source that can help verify it.
 			</p>
 			<p>
-				Suggestions enter a private review queue. I check the meaning and context before accepting anything into the
-				curated glossary, and the form warns contributors to leave out classified, sensitive or personal information.
+				People can also report a problem with an existing entry, mark whether it is wrong, incomplete or out of date,
+				and point to the exact fields that need attention. Suggestions and reports enter the same private review queue,
+				and the public forms warn contributors to leave out classified, sensitive or personal information.
 			</p>
 			<p>
-				An accepted suggestion becomes a JSON draft I can copy into the glossary, together with an editorial record. I
-				still have to add it by hand, so the review workspace cannot publish directly into live search results.
+				I check the meaning, context and any public source before accepting a suggestion or closing a report. An
+				accepted suggestion becomes a JSON draft I can copy into the glossary, together with an editorial record, while
+				reports stay linked to the entry they concern. I still have to make the change by hand, so the review workspace
+				cannot publish directly into live search results.
 			</p>
 			<p>
 				Filling in definitions, examples and sources by hand got slow, so I use LLMs to help research new terms and find
