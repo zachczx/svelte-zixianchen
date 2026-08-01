@@ -11,11 +11,11 @@ published: true
 slug: coolify-postgres-18-pgdata-restart
 ---
 
-# My Coolify Postgres Data Kept Getting Wiped
+## My Coolify Postgres Data Kept Getting Wiped
 
 I recently started a new project using Postgres 18 Alpine on Coolify. Was setting things up, toggling options, trying SSL, making the service publicly available. So I kept restarting the service whenever I changed the options.
 
-Strangely, I noticed my data kept disappearing, and eventually I realized data disppeared whenever I restarted the coolify database. Then again after another restart.
+Strangely, I noticed my data kept disappearing, and eventually I realized it disappeared whenever I restarted the Coolify database. Then again after another restart.
 
 Running `docker volume ls -f dangling=true` confirmed it. I had a count and it turns out a new dangling volume was being created each time I restarted the database service.
 
@@ -52,7 +52,7 @@ The bind mount was correctly set up. But buried in the environment variables was
 PGDATA=/var/lib/postgresql/18/docker
 ```
 
-not `/var/lib/postgresql/data`. Postgres 18 Alpine changed the default data directory. The bind mount was working fine, but it was just pointing at the wrong place. Postgres was happily writing to `/var/lib/postgresql/18/docker` the whole time while my mounted directory was empty and got wiped on every restart.
+not `/var/lib/postgresql/data`. The [official Postgres Docker image documentation](https://hub.docker.com/_/postgres#pgdata) explains that Postgres 18 changed `PGDATA` to a version-specific path and moved the volume target to `/var/lib/postgresql`. The bind mount was working fine, but it was just pointing at the wrong place. Postgres was happily writing to `/var/lib/postgresql/18/docker` the whole time while my mounted directory was empty and got wiped on every restart.
 
 ## The Fix
 
@@ -71,6 +71,6 @@ I had continuous backups via Coolify's S3 storages so I didn't lose data. Withou
 
 ## Takeaway
 
-The `PGDATA` path varies by Postgres version. I was always using Postgres 16 Alpine because it came with Coolify in the past and I was lazy to try to upgrade it. Also, `/var/lib/postgresql/data` was always correct so I never had to think about it. Using pg18 for recently projects meant I got the newdefault and I had no idea, my bad!
+The `PGDATA` path varies by Postgres version. I was always using Postgres 16 Alpine because it came with Coolify in the past and I was lazy to try to upgrade it. Also, `/var/lib/postgresql/data` was always correct so I never had to think about it. Using Postgres 18 for recent projects meant I got the new default and I had no idea, my bad!
 
 A quick `docker inspect <container> | grep PGDATA` before setting up the storage mount would've caught this immediately. Two minutes of checking, a lot of head-scratching saved.

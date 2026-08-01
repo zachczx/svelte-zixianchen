@@ -1,6 +1,6 @@
 ---
 title: 'Coolify: Connecting Docker Compose App to Postgres DB'
-description: "For the longest time I just couldn't connect to my Postgres DB on Coolify if I deployed on Docker Compose."
+description: 'I connected a Docker Compose app to a separate Coolify Postgres service by enabling the predefined network and using the internal database URL.'
 date: '2024-11-16'
 date_updated: ''
 category: 'Systems'

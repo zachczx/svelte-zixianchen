@@ -8,7 +8,8 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && pagefind --site build",
+		"build": "pnpm generate:blog-og && vite build && pagefind --site build",
+		"generate:blog-og": "node scripts/generate-blog-og-images.mjs",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -41,6 +42,7 @@
 		"prettier-plugin-svelte": "^4.1.1",
 		"prettier-plugin-tailwindcss": "^0.8.1",
 		"rollup-plugin-visualizer": "^7.0.1",
+		"sharp": "0.35.2",
 		"super-sitemap": "^2.0.6",
 		"svelte-check": "^4.7.4",
 		"tailwind-variants": "^3.3.0",

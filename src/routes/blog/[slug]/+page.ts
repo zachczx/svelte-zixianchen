@@ -2,6 +2,7 @@ import { error } from '@sveltejs/kit';
 import type { EntryGenerator, PageLoad } from './$types';
 import type { Component } from 'svelte';
 import { resolveBlogSeriesForPost, validateBlogSeriesPosts } from '$lib/blogSeries';
+import { resolveRelatedBlogPosts, validateRelatedBlogPosts } from '$lib/relatedBlogPosts';
 
 interface MdsvexModule {
 	default: Component;
@@ -12,7 +13,12 @@ function indexPostMetadata(posts: Record<string, MdsvexModule>) {
 	return Object.fromEntries(
 		Object.entries(posts).map(([path, post]) => [
 			path.split('/').pop()?.replace(/\.md$/, '') ?? path,
-			{ title: post.metadata.title, published: post.metadata.published },
+			{
+				title: post.metadata.title,
+				description: post.metadata.description,
+				published: post.metadata.published,
+				listed: post.metadata.listed,
+			},
 		]),
 	);
 }
@@ -62,14 +68,18 @@ export const load: PageLoad = async ({ params }) => {
 	const rawContent = postsRaw[postPath];
 	const readingTime = calculateReadingTime(rawContent);
 	const headings = extractHeadings(rawContent);
-	const series = resolveBlogSeriesForPost(slug, indexPostMetadata(posts));
+	const postMetadata = indexPostMetadata(posts);
+	const series = resolveBlogSeriesForPost(slug, postMetadata);
+	const relatedPosts = resolveRelatedBlogPosts(slug, postMetadata);
 
-	return { content: post.default, metadata: post.metadata, readingTime, headings, series };
+	return { content: post.default, metadata: post.metadata, readingTime, headings, series, relatedPosts };
 };
 
 export const entries: EntryGenerator = () => {
 	const posts = import.meta.glob<MdsvexModule>('../posts/*.md', { eager: true });
-	validateBlogSeriesPosts(indexPostMetadata(posts));
+	const postMetadata = indexPostMetadata(posts);
+	validateBlogSeriesPosts(postMetadata);
+	validateRelatedBlogPosts(postMetadata);
 
 	return Object.keys(posts)
 		.filter((path) => posts[path].metadata.published)

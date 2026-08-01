@@ -15,7 +15,7 @@ People have written about staff work properly before. Commonly cited read: [_On 
 
 This is the first of three posts collecting my accumulated advice on staff work. This one is about thinking through the issue, communicating it upwards and making a recommendation.
 
-# About staff work
+## About staff work
 
 > "That's just, like, uh, your opinion, man." - The Dude
 

@@ -13,7 +13,7 @@ slug: 'staff-work-small-stuff-is-still-part-of-staff-work'
 
 This is the second of three posts on staff work. The [first](/blog/staff-work-make-it-make-sense-before-it-goes-up) covers thinking through the issue and communicating upwards. This one is about producing the actual package: papers, emails, slides and records.
 
-# The small stuff is still part of staff work
+## The small stuff is still part of staff work
 
 In my opinion, great officers are good at the small, large, short and long stuff. They can frame a difficult issue, answer a two-line query, prepare a useful deck and still notice that the wrong annex was attached. They make decisions easier to reach.
 

@@ -1,6 +1,6 @@
 ---
-title: 'Debugging Wireless@SGx on Linux Mint With Claude'
-description: 'Wireless@SGx authenticated fine on Linux Mint but TCP was silently blocked. After hours of wrong DNS fixes, setting NetworkManager to use a stable random MAC instead of the hardware address solved it.'
+title: 'Wireless@SGx Connected but No Internet on Linux Mint: The Fix'
+description: 'Wireless@SGx authenticated on Linux Mint but TCP was blocked. Setting NetworkManager to use a stable cloned MAC fixed it after hours of wrong DNS turns.'
 date: '2026-04-14'
 date_updated: '2026-04-20'
 category: 'Systems'
@@ -34,7 +34,7 @@ nmcli con mod "Wireless@SGx" wifi.cloned-mac-address stable
 nmcli con down "Wireless@SGx" && nmcli con up "Wireless@SGx"
 ```
 
-# The Longer Form
+## The Longer Form
 
 ## The Setup
 
@@ -156,11 +156,11 @@ The `nmcli con mod` change is persistent, saved to the connection file and appli
 
 My laptop runs Windows and Linux Mint on the same hardware, so my wife can still use Windows and I'll use Linux. After the phone MAC clone worked, I logged in to Windows on the same machine and realized it was connecting alright to Wireless@SGx. I initially assumed that the hardware MAC was already "promoted" via Windows and Linux should therefore inherit that state. But Claude asked me to try cloning the Windows MAC onto Linux, and that worked too.
 
-That meant Windows wasn't using the hardware MAC either. Windows 10/11 randomizes wifi MAC addresses per-network by default. Android randomizes per-SSID by default. Neither had ever connected to SGx using my actual hardware MAC `e4:c7:67:4c:89:fc`. Linux Mint's NetworkManager was the only OS using the bare hardware address. The hardware MAC had simply never been through any first-connection promotion flow on SGx's backend. To SGx, it was an unknown device.
+That meant Windows wasn't using the hardware MAC either. Windows 10/11 randomizes Wi-Fi MAC addresses per-network by default. Android randomizes per-SSID by default. Neither had ever connected to SGx using my actual hardware MAC `e4:c7:67:4c:89:fc`. Linux Mint's NetworkManager was the only OS using the bare hardware address. My working theory is that SGx treated this never-seen hardware MAC differently; I could verify the fix, but not the backend mechanism.
 
 ## The Real Fix
 
-Once I understood the problem was "Linux is the only OS using the real MAC," the fix was obvious: tell Linux to do what Windows and Android already do. NetworkManager supports a `stable` mode for MAC cloning that generates a deterministic random MAC based on the SSID and machine ID. It's consistent across reconnects (so SGx sees the same device every time) but different from the hardware address:
+Once the evidence pointed to "Linux is the only OS using the real MAC," the fix was obvious: tell Linux to do what Windows and Android already do. NetworkManager supports a `stable` mode for MAC cloning that generates a deterministic random MAC based on the SSID and machine ID. It's consistent across reconnects (so SGx sees the same device every time) but different from the hardware address:
 
 ```bash
 nmcli con mod "Wireless@SGx" wifi.cloned-mac-address stable
@@ -179,7 +179,7 @@ No need to clone another device's MAC (although that was ez), I can also use bot
 
 ## A Few Things to Know
 
-- **Why this only happens on Linux.** NetworkManager's default MAC randomization behavior randomizes for open and PSK networks but uses the real hardware MAC for 802.1X/Enterprise connections. The assumption is that some enterprise deployments rely on MAC-based access control. Windows and Android randomize regardless of network type, which is why they work on SGx out of the box and Linux doesn't.
+- **Why this may happen on Linux.** NetworkManager's default MAC randomization behavior randomizes for open and PSK networks but uses the real hardware MAC for 802.1X/Enterprise connections. Some enterprise deployments rely on MAC-based access control. Windows and Android randomize regardless of network type, which fits what I observed, although I could not verify SGx's backend behavior.
 - **PEAP re-auth isn't affected.** RADIUS uses your credentials, not the MAC, so authentication keeps working fine.
 - **If you're curious whether your real MAC works now:**
   ```bash

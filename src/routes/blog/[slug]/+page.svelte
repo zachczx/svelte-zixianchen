@@ -8,32 +8,52 @@
 
 	let { data } = $props();
 	let content = $derived(data.content);
+	let canonicalUrl = $derived(`https://zixianchen.com/blog/${data.metadata.slug}`);
+	let socialImage = $derived(`/blog/og/${data.metadata.slug}.png`);
+	let socialImageUrl = $derived(`https://zixianchen.com${socialImage}`);
 </script>
 
 <Seo
-	title="{data.metadata.title} | Zixian's Blog"
+	title="{data.metadata.title} | Zixian Chen"
 	description={data.metadata.description}
 	pathname="/blog/{data.metadata.slug}"
 	type="article"
+	image={socialImage}
+	imageAlt="{data.metadata.title}, from Zixian's Blog"
+	imageWidth={1200}
+	imageHeight={630}
+	largeImage
 	noindex={data.metadata.listed === false}
 	publishedTime={data.metadata.date}
 	modifiedTime={data.metadata.date_updated || data.metadata.date}
-	structuredData={{
-		'@context': 'https://schema.org',
-		'@type': 'BlogPosting',
-		headline: data.metadata.title,
-		description: data.metadata.description,
-		datePublished: data.metadata.date,
-		dateModified: data.metadata.date_updated || data.metadata.date,
-		articleSection: data.metadata.category,
-		keywords: data.metadata.tags,
-		mainEntityOfPage: `https://zixianchen.com/blog/${data.metadata.slug}`,
-		author: {
-			'@type': 'Person',
-			name: 'Zixian Chen',
-			url: 'https://zixianchen.com/',
+	structuredData={[
+		{
+			'@context': 'https://schema.org',
+			'@type': 'BlogPosting',
+			headline: data.metadata.title,
+			description: data.metadata.description,
+			image: socialImageUrl,
+			datePublished: data.metadata.date,
+			dateModified: data.metadata.date_updated || data.metadata.date,
+			articleSection: data.metadata.category,
+			keywords: data.metadata.tags,
+			mainEntityOfPage: canonicalUrl,
+			author: {
+				'@type': 'Person',
+				name: 'Zixian Chen',
+				url: 'https://zixianchen.com/',
+			},
 		},
-	}} />
+		{
+			'@context': 'https://schema.org',
+			'@type': 'BreadcrumbList',
+			itemListElement: [
+				{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://zixianchen.com/' },
+				{ '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://zixianchen.com/blog' },
+				{ '@type': 'ListItem', position: 3, name: data.metadata.title, item: canonicalUrl },
+			],
+		},
+	]} />
 <svelte:head>
 	<meta data-pagefind-meta="description[content]" content={data.metadata.description} />
 	<meta data-pagefind-meta="date[content]" content={data.metadata.date} />
@@ -164,6 +184,23 @@
 				{/if}
 			</div>
 		{/if}
+	</nav>
+{/if}
+{#if data.relatedPosts.length > 0}
+	<nav aria-label="Related posts" class="border-base-content/10 mt-8 border-y px-3 py-6 sm:px-6 xl:px-14">
+		<h2 class="text-xl font-bold">Related notes</h2>
+		<ul class="divide-base-content/10 mt-3 divide-y">
+			{#each data.relatedPosts as relatedPost}
+				<li class="py-3 first:pt-0 last:pb-0">
+					<a
+						href="/blog/{relatedPost.slug}"
+						class="decoration-accent hover:text-accent focus-visible:outline-accent font-semibold underline decoration-1 underline-offset-3 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
+						{relatedPost.title}
+					</a>
+					<p class="text-base-content/60 mt-1 text-sm leading-relaxed">{relatedPost.description}</p>
+				</li>
+			{/each}
+		</ul>
 	</nav>
 {/if}
 

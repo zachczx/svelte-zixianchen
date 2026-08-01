@@ -20,10 +20,6 @@
 	}
 </script>
 
-<svelte:head>
-	<meta name="keywords" content="Zixian, blog" />
-</svelte:head>
-
 <div
 	data-theme={theme}
 	class="blog-shell bg-base-200 text-base-content relative flex w-full flex-col items-center justify-center overflow-hidden transition-colors">

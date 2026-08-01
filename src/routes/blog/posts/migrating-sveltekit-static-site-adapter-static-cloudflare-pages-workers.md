@@ -1,12 +1,12 @@
 ---
-title: 'Migrating Sveltekit Static Site (adapter-static) from Cloudflare Pages to Workers'
-description: 'Going from Cloudflare Pages to Workers'
+title: 'Migrating a Static SvelteKit Site from Cloudflare Pages to Workers'
+description: 'I moved an adapter-static SvelteKit site from Cloudflare Pages to Workers with a static-assets Wrangler config and three deployment settings.'
 date: '2025-09-29'
 date_updated: ''
 category: 'Dev'
 tags:
   - Cloudflare
-  - Sveltekit
+  - SvelteKit
   - Workers
   - Pages
 published: true
@@ -15,11 +15,13 @@ slug: 'migrating-sveltekit-static-site-adapter-static-cloudflare-pages-workers'
 
 I'm a longtime fan of Cloudflare Pages. It's free, it's fast, and it's easy to get started. In the last year or so I've been reading about Cloudflare Workers, and recently I saw Cloudflare [recommending everyone to start with Workers for new projects](https://developers.cloudflare.com/workers/static-assets/migration-guides/migrate-from-pages/).
 
-I couldn't find much online about the specific setup for what I used with Cloudflare Pages, which was Sveltekit using adapter-static. It's what I've always used for all my static sites.
+I couldn't find much online about the specific setup for what I used with Cloudflare Pages, which was SvelteKit using adapter-static. It's what I've always used for all my static sites.
 
 After some digging, it turns out all I needed is to:
 
-1. Add the static assets config (not the full fledged one) of wrangler.jsonc to the root of the Sveltekit project
+## The Migration
+
+1. Add the static assets config (not the full-fledged one) of `wrangler.jsonc` to the root of the SvelteKit project
 
 ```json
 // wrangler.jsonc

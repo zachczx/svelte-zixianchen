@@ -1,5 +1,5 @@
 ---
-title: 'GPT 4.6 Sol Helped Me Fix Broken Coolify Deployments on Oracle Cloud'
+title: 'Fixing Coolify Container Networking on Oracle Cloud After a Reboot'
 description: 'A reboot restored a tangled iptables snapshot that blocked Docker container traffic. Here is how GPT 4.6 Sol helped me diagnose and clean it up.'
 date: '2026-07-26'
 date_updated: ''

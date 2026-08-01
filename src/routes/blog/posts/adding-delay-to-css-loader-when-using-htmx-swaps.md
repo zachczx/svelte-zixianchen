@@ -1,6 +1,6 @@
 ---
 title: 'Adding Delay to a CSS Loader When Using HTMX Swaps'
-description: "I wanted to solve white flashes flickering when using HTMX's hx-indicator."
+description: "I tried three ways to stop HTMX's hx-indicator from flashing: request events, a CSS delay, and the Loading States extension."
 date: '2024-08-10'
 date_updated: '2024-08-11'
 category: 'Dev'

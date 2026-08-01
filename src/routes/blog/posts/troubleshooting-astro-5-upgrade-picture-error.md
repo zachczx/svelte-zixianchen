@@ -1,6 +1,6 @@
 ---
-title: 'Troubleshooting Astro 5 Upgrade: $$Picture Error'
-description: 'Upgraded to Astro 5 and it gave me issues with the Picture component.'
+title: 'Fixing Astro 5’s Cannot Access $$Picture Build Error'
+description: 'My Astro 5 build failed with “Cannot access $$Picture before initialization.” The fix was replacing the legacy Picture import with astro:assets.'
 date: '2024-12-13'
 date_updated: ''
 category: 'Dev'
@@ -37,7 +37,7 @@ It was really frustrating. I wasn't sure if it was the (lack thereof) adapter, c
 
 For some reason I was able to get the build to succeed if I removed files that used getCollection(). This was worse, because I was on a wild goose chase for the wrong cause.
 
-I even contemplated shifting everything to Sveltekit! I must've cursed at Astro and my decision to use it multiple times. (Good 'ol Sveltekit or Go/Templ never gave me much issues...)
+I even contemplated shifting everything to SvelteKit! I must've cursed at Astro and my decision to use it multiple times. (Good 'ol SvelteKit or Go/Templ never gave me much issues...)
 
 Eventually Discord saved the day - [v9x's post was right on the money](https://discord.com/channels/830184174198718474/1314472042237661264/1314472042237661264).
 

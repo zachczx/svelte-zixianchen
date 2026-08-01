@@ -1,6 +1,6 @@
 ---
-title: 'Using Resend.com as the SMTP SaaS provider for PocketBase Emails'
-description: 'I use Resend.com, which is an SMTP SaaS provider, for PocketBase emails.'
+title: 'Configuring Resend SMTP for PocketBase Email'
+description: 'I configured Resend SMTP in PocketBase for verification and account emails, including the DNS, API key, sender, and application URL settings.'
 date: '2024-10-13'
 date_updated: ''
 category: 'Dev'
@@ -72,11 +72,11 @@ I originally wrote an earlier version of this post using Brevo as the SMTP SaaS 
 
 The problem was the emails sent via Brevo were getting caught in spam filters. My Gmail accounts sent those straight to Spam and marked them dangerous (“This message seems dangerous”).
 
-![Feels bad man](/suspicious-screenshot.webp)_Feels bad seeing my emails flagged out as dangerous._
+![Gmail warning that the Brevo test email seems dangerous](/suspicious-screenshot.webp)_Feels bad seeing my emails flagged out as dangerous._
 
 This was most likely due to the shared IP that Brevo assigned me being blacklisted and their algorithm looks out for emails where the sender IP is different from the domain name being used.
 
-### SendGrid - Getting banned right after after creating an account
+### SendGrid - Getting banned right after creating an account
 
 SendGrid's recommended on a few reddit threads, so I thought it'd be a good choice.
 
