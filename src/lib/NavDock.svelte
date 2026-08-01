@@ -72,6 +72,13 @@
 			return pathName.startsWith(item.active.key) || navCurrent === item.active.hash;
 		return false;
 	}
+
+	function ariaCurrent(item: Extract<NavItem, { kind: 'anchor' }>, active: boolean): 'location' | 'page' | undefined {
+		if (!active) return undefined;
+		if (item.active.type === 'hash') return 'location';
+		if (item.active.type === 'prefixOrHash' && !pathName.startsWith(item.active.key)) return 'location';
+		return 'page';
+	}
 </script>
 
 {#each items as item}
@@ -83,7 +90,7 @@
 		<a
 			href={item.href}
 			aria-label={item.label}
-			aria-current={active ? 'page' : undefined}
+			aria-current={ariaCurrent(item, active)}
 			class="dock group/dock focus-visible:outline-accent relative bg-transparent no-underline transition-all duration-100 ease-linear hover:no-underline focus-visible:outline-2 focus-visible:outline-offset-4">
 			<div
 				class={[
@@ -94,7 +101,7 @@
 				]}>
 				<Icon aria-hidden="true" />
 				<span
-					class="bg-neutral absolute left-1/2 hidden h-auto w-full -translate-x-1/2 justify-center overflow-hidden rounded-xs py-0.5 font-mono text-xs font-bold whitespace-nowrap text-white/90 group-hover/dock:-top-5 group-hover/dock:flex group-focus-visible/dock:-top-5 group-focus-visible/dock:flex">
+					class="bg-neutral pointer-events-none invisible absolute bottom-full left-1/2 z-10 mb-2 w-max -translate-x-1/2 rounded-xs px-2 py-1 font-mono text-xs font-bold whitespace-nowrap text-white/90 opacity-0 transition-opacity duration-100 group-hover/dock:visible group-hover/dock:opacity-100 group-focus-visible/dock:visible group-focus-visible/dock:opacity-100">
 					{item.label}
 				</span>
 			</div>

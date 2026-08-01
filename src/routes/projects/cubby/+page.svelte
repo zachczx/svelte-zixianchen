@@ -18,6 +18,7 @@
 	import screentimer from '$lib/screenshots/cubby/screentimer.webp';
 	import CubbyLogo from '$lib/assets/cubby-logo.webp';
 	import BackIcon from '~icons/lucide/arrow-left';
+	import ChevronRightIcon from '~icons/lucide/chevron-right';
 	import ExternalLinkIcon from '~icons/lucide/external-link';
 	import Seo from '$lib/Seo.svelte';
 
@@ -297,7 +298,28 @@
 	</div>
 
 	<!-- contents -->
-	<nav class="mx-auto max-w-5xl px-5 pb-14" aria-label="Sections">
+	<details class="case-study-contents mx-auto max-w-5xl px-5 pb-14 sm:hidden">
+		<summary
+			class="focus-visible:outline-accent text-base-content/80 flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 border-y border-[#C42A1C]/25 py-3 text-xs font-semibold tracking-wide focus-visible:outline-2 focus-visible:outline-offset-2">
+			<span>Explore {contents.length} sections</span>
+			<ChevronRightIcon aria-hidden="true" class="contents-chevron size-4 shrink-0 transition-transform" />
+		</summary>
+		<nav aria-label="Sections">
+			<ul class="mt-2 grid">
+				{#each contents as c (c.id)}
+					<li>
+						<a
+							href="#{c.id}"
+							class="group border-neutral/10 focus-visible:outline-accent flex min-h-11 items-center justify-between gap-4 border-b py-2 focus-visible:outline-2 focus-visible:outline-offset-[-2px]">
+							<span class="font-semibold group-hover:text-[#C42A1C]">{c.label}</span>
+							<span class="text-base-content/55 text-sm">{c.note}</span>
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</nav>
+	</details>
+	<nav class="mx-auto hidden max-w-5xl px-5 pb-14 sm:block" aria-label="Sections">
 		<p class="text-xs tracking-wide text-[#C42A1C]">Contents</p>
 		<ul class="mt-4 grid gap-x-10 sm:grid-cols-2">
 			{#each contents as c (c.id)}
@@ -421,3 +443,13 @@
 		</div>
 	</section>
 </div>
+
+<style>
+	.case-study-contents summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.case-study-contents[open] :global(.contents-chevron) {
+		transform: rotate(90deg);
+	}
+</style>

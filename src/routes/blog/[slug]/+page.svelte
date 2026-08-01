@@ -100,22 +100,31 @@
 	{/if}
 </div>
 {#if data.headings.length > 0}
-	<nav
-		class="text-base-content/50 border-base-content/10 mt-6 border-y px-3 py-4 font-mono text-sm tracking-tight sm:px-6 xl:px-14">
-		<div class="text-base-content/80 mb-2 text-xs font-bold tracking-widest uppercase">Contents</div>
-		<ol class="grid gap-1">
-			{#each data.headings as heading}
-				<li class={heading.level === 3 ? 'ml-4' : ''}>
-					<a
-						href="#{heading.slug}"
-						class="group hover:text-base-content inline-flex items-baseline gap-1 transition-colors"
-						><ChevronRightIcon
-							aria-hidden="true"
-							class="size-3 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />{heading.text}</a>
-				</li>
-			{/each}
-		</ol>
-	</nav>
+	<details
+		open={data.headings.length <= 8}
+		class="article-contents text-base-content/55 border-base-content/10 mt-6 border-y px-3 font-mono text-sm tracking-tight sm:px-6 xl:px-14">
+		<summary
+			class="focus-visible:outline-accent text-base-content/80 flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 py-3 text-xs font-bold tracking-widest uppercase focus-visible:outline-2 focus-visible:outline-offset-2">
+			<span>Contents · {data.headings.length} {data.headings.length === 1 ? 'section' : 'sections'}</span>
+			<ChevronRightIcon aria-hidden="true" class="contents-chevron size-4 shrink-0 transition-transform" />
+		</summary>
+		<nav aria-label="Article contents" class="border-base-content/10 border-t py-2">
+			<ol>
+				{#each data.headings as heading}
+					<li class={heading.level === 3 ? 'ml-6' : ''}>
+						<a
+							href="#{heading.slug}"
+							class="group hover:text-base-content focus-visible:outline-accent flex min-h-11 items-center gap-1.5 transition-colors focus-visible:outline-2 focus-visible:outline-offset-[-2px]">
+							<ChevronRightIcon
+								aria-hidden="true"
+								class="size-3 shrink-0 opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100" />
+							<span>{heading.text}</span>
+						</a>
+					</li>
+				{/each}
+			</ol>
+		</nav>
+	</details>
 {/if}
 <article
 	data-pagefind-body={data.metadata.listed === false ? undefined : ''}
@@ -205,6 +214,14 @@
 {/if}
 
 <style>
+	.article-contents summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.article-contents[open] :global(.contents-chevron) {
+		transform: rotate(90deg);
+	}
+
 	article.numbered-paras {
 		counter-reset: para;
 	}

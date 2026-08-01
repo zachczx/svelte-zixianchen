@@ -10,8 +10,6 @@
 	import Projects from './Projects.svelte';
 	import LinkedInIcon from '~icons/lucide/linkedin';
 	import GitHubIcon from '~icons/lucide/github';
-	import ArticleIcon from '~icons/lucide/file-text';
-	import ChevronDownIcon from '~icons/lucide/chevron-down';
 	import ChevronRightIcon from '~icons/lucide/chevron-right';
 	import { jobs } from './jobs';
 	import dayjs from 'dayjs';
@@ -20,14 +18,43 @@
 	let navCurrent: string = $state('header');
 
 	onMount(() => {
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) navCurrent = entry.target.id;
+		const sections = Array.from(document.querySelectorAll<HTMLElement>('.navItem'));
+		let frame: number | undefined;
+
+		const syncCurrentSection = () => {
+			const viewportAnchor = window.innerHeight * 0.4;
+			let current = sections.find((section) => {
+				const rect = section.getBoundingClientRect();
+				return rect.top <= viewportAnchor && rect.bottom > viewportAnchor;
 			});
-		});
-		document.querySelectorAll<HTMLElement>('.navItem').forEach((el) => observer.observe(el));
+
+			if (!current) {
+				current = sections.reduce<{ section: HTMLElement; distance: number } | undefined>((nearest, section) => {
+					const rect = section.getBoundingClientRect();
+					const distance = Math.min(Math.abs(rect.top - viewportAnchor), Math.abs(rect.bottom - viewportAnchor));
+					return !nearest || distance < nearest.distance ? { section, distance } : nearest;
+				}, undefined)?.section;
+			}
+
+			navCurrent = current?.id ?? 'header';
+			frame = undefined;
+		};
+
+		const queueSync = () => {
+			if (frame !== undefined) return;
+			frame = window.requestAnimationFrame(syncCurrentSection);
+		};
+
+		syncCurrentSection();
+		window.addEventListener('scroll', queueSync, { passive: true });
+		window.addEventListener('resize', queueSync);
+		window.addEventListener('hashchange', queueSync);
+
 		return () => {
-			observer.disconnect();
+			window.removeEventListener('scroll', queueSync);
+			window.removeEventListener('resize', queueSync);
+			window.removeEventListener('hashchange', queueSync);
+			if (frame !== undefined) window.cancelAnimationFrame(frame);
 		};
 	});
 </script>
@@ -38,44 +65,64 @@
 	pathname="/" />
 
 <Nav {navCurrent} />
-<div class="bg-base-200 grid min-h-dvh justify-items-center 2xl:overflow-x-clip">
-	<header id="header" class="navItem relative w-full place-items-center py-20 lg:grid lg:min-h-dvh lg:py-0">
-		<div class="bg-base-200 flex w-full flex-wrap items-center justify-center gap-8 lg:min-h-dvh">
+<main class="bg-base-200 grid min-h-dvh justify-items-center 2xl:overflow-x-clip">
+	<header id="header" class="navItem grid min-h-dvh w-full place-items-center px-4 py-12 pb-24 xl:pb-28">
+		<div class="bg-base-200 grid w-full content-center justify-items-center gap-7">
 			<div class="grid justify-items-center" style="view-transition-name: logo">
-				<h1 class="text-[3.3rem] leading-none font-black tracking-tight lg:text-[7.1rem]">
-					<span class="sr-only">Zixian Chen | Public-Sector Tech by Day, Questionable Side Projects by Night</span>
+				<h1 class="text-[clamp(3.3rem,9vw,7.1rem)] leading-none font-black tracking-tight">
+					<span class="sr-only">Zixian Chen</span>
 					<span aria-hidden="true">ZIXIAN</span>
 				</h1>
 				<div
-					class="code-z relative my-1 h-44 w-44 overflow-hidden bg-slate-900 lg:my-2 lg:h-96 lg:w-96"
+					class="code-z relative my-1 size-[clamp(11rem,40vw,24rem)] overflow-hidden bg-slate-900 lg:my-2"
 					aria-hidden="true">
 					<CodeCanvas />
 				</div>
 			</div>
+			<div class="grid max-w-2xl justify-items-center text-center">
+				<p class="text-xl leading-snug font-bold tracking-tight text-balance sm:text-2xl lg:text-3xl">
+					I notice messy problems. Then I build around them.
+				</p>
+				<p class="text-base-content/70 mt-3 max-w-xl text-sm leading-relaxed sm:text-base">
+					Public-sector technology and service delivery by day; software and candid notes after hours.
+				</p>
+				<nav aria-label="Start here" class="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-3 font-mono text-sm">
+					<a
+						href="#projects"
+						class="decoration-accent hover:text-base-content focus-visible:outline-accent text-base-content/75 inline-flex min-h-11 items-center gap-1 underline decoration-2 underline-offset-4 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
+						See what I’ve built <ChevronRightIcon aria-hidden="true" class="size-3.5" />
+					</a>
+					<a
+						href="/blog"
+						class="decoration-accent hover:text-base-content focus-visible:outline-accent text-base-content/75 inline-flex min-h-11 items-center gap-1 underline decoration-2 underline-offset-4 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
+						Read what I’ve learned <ChevronRightIcon aria-hidden="true" class="size-3.5" />
+					</a>
+				</nav>
+				<div class="mt-3 flex items-center justify-center gap-8 xl:hidden">
+					<a
+						href="https://www.linkedin.com/in/zixianchen/"
+						aria-label="LinkedIn"
+						class="text-base-content/55 hover:text-base-content focus-visible:outline-accent grid size-11 place-items-center transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
+						<LinkedInIcon aria-hidden="true" class="size-6" />
+					</a>
+					<a
+						href="https://github.com/zachczx?tab=repositories"
+						aria-label="GitHub"
+						class="text-base-content/55 hover:text-base-content focus-visible:outline-accent grid size-11 place-items-center transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
+						<GitHubIcon aria-hidden="true" class="size-6" />
+					</a>
+				</div>
+			</div>
 		</div>
-		<div class="flex w-full items-center justify-center gap-16 max-lg:pt-12 xl:hidden">
-			<a href="https://www.linkedin.com/in/zixianchen/" aria-label="LinkedIn" class="active:text-gray-500">
-				<LinkedInIcon aria-hidden="true" class="size-8" />
-			</a>
-			<a href="https://github.com/zachczx?tab=repositories" aria-label="Github" class="active:text-gray-500">
-				<GitHubIcon aria-hidden="true" class="size-8" />
-			</a>
-			<a href="/blog" aria-label="blog" class="active:text-gray-500">
-				<ArticleIcon aria-hidden="true" class="size-9" />
-			</a>
-		</div>
-		<a
-			href="#about"
-			aria-label="Scroll to interests"
-			class="text-base-content/35 hover:text-base-content/70 absolute inset-x-0 bottom-32 mx-auto hidden w-fit transition-colors xl:block">
-			<ChevronDownIcon aria-hidden="true" class="size-7" />
-		</a>
 	</header>
 
-	<section id="about" class="navItem bg-base-200 grid w-full justify-items-center px-4 py-20 lg:py-32">
+	<section
+		id="about"
+		aria-labelledby="about-heading"
+		class="navItem bg-base-200 grid w-full justify-items-center px-4 py-20 lg:py-32">
 		<div class="border-base-content/15 bg-base-100 w-full max-w-3xl border">
 			<div class="border-base-content/15 flex items-baseline justify-between border-b px-6 py-5 sm:px-8">
-				<h3 class="text-2xl font-bold tracking-tight lg:text-3xl">Interests</h3>
+				<h2 id="about-heading" class="text-2xl font-bold tracking-tight lg:text-3xl">Interests</h2>
 				<span class="text-base-content/40 text-[0.7rem] tracking-[0.25em] uppercase">Profile</span>
 			</div>
 			<div class="sm:flex">
@@ -139,12 +186,12 @@
 							{job.year}
 						</div>
 						<div>
-							<h4 class="job-title relative w-fit text-lg font-bold lg:text-2xl">
+							<h3 class="job-title relative w-fit text-lg font-bold lg:text-2xl">
 								<ChevronRightIcon
 									aria-hidden="true"
 									class="job-arrow absolute top-1/2 -left-5 size-[0.7em] -translate-y-1/2 opacity-0" />
 								{job.title}
-							</h4>
+							</h3>
 							<p
 								class="job-desc text-base-content/70 text-sm leading-relaxed transition-colors duration-200 lg:text-base">
 								{job.desc}
@@ -158,10 +205,13 @@
 
 	<div class="text-neutral-content grid w-full content-start justify-items-center bg-[#0E0E0E] lg:grid-cols-5">
 		<div class="grid w-full justify-items-center pt-8 lg:col-span-3 lg:pt-28">
-			<section class="grid w-full max-w-250 justify-items-start px-4 pb-8 lg:grid-cols-3 lg:justify-self-end lg:pb-28">
+			<section
+				id="projects"
+				aria-labelledby="projects-heading"
+				class="navItem grid w-full max-w-250 justify-items-start px-4 pb-8 lg:grid-cols-3 lg:justify-self-end lg:pb-28">
 				<div class="justify-self-start pb-8 lg:col-span-3 lg:pb-24">
 					<p class="text-neutral-content/45 font-mono text-xs tracking-[0.2em] uppercase">Side projects</p>
-					<h2 id="projects" class="navItem text-5xl font-extrabold sm:text-6xl lg:text-9xl">Night</h2>
+					<h2 id="projects-heading" class="text-5xl font-extrabold sm:text-6xl lg:text-9xl">Night</h2>
 					<p class="text-neutral-content/65 mt-3 max-w-xl text-sm leading-relaxed lg:text-base">
 						Personal tools, experiments, and small products built outside the day job.
 					</p>
@@ -178,10 +228,13 @@
 			class="hidden h-full w-full overflow-hidden bg-black lg:col-span-2 lg:grid"
 			style="background-image:url({Moon}); background-size: cover; background-position: center;">
 		</div>
-		<section id="musings" class="navItem grid w-full justify-items-center px-4 py-20 lg:col-span-5 lg:py-32">
+		<section
+			id="musings"
+			aria-labelledby="musings-heading"
+			class="navItem grid w-full justify-items-center px-4 py-20 lg:col-span-5 lg:py-32">
 			<div class="w-full max-w-3xl border border-white/15 bg-white/5">
 				<div class="border-b border-white/15 px-6 py-5 sm:px-8">
-					<h3 class="text-2xl font-bold tracking-tight lg:text-3xl">Musings</h3>
+					<h2 id="musings-heading" class="text-2xl font-bold tracking-tight lg:text-3xl">Musings</h2>
 					<p class="text-neutral-content/55 mt-2 text-sm leading-relaxed lg:text-base">Recent writing from the blog.</p>
 				</div>
 				<div class="divide-y divide-white/10 px-6 sm:px-8">
@@ -217,7 +270,7 @@
 			<WebsiteFooter />
 		</div>
 	</div>
-</div>
+</main>
 
 <style>
 	.code-z {

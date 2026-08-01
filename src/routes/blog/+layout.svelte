@@ -37,7 +37,10 @@
 					<DarkModeIcon class="size-5" aria-hidden="true" />
 				{/if}
 			</button>
-			<a href="/" class="flex justify-center pt-8 pb-12 transition-opacity hover:opacity-80" aria-label="logo">
+			<a
+				href="/"
+				class="flex justify-center pt-8 pb-12 transition-opacity hover:opacity-80"
+				aria-label="Zixian Chen — Home">
 				<div
 					class="code-z size-16 overflow-hidden bg-slate-900 lg:size-20"
 					style="view-transition-name: logo"
@@ -45,9 +48,9 @@
 					<CodeCanvas animated={false} />
 				</div>
 			</a>
-			{@render children()}
+			<main>{@render children()}</main>
 		</div>
-		<div class="mt-auto pt-10 text-center text-xs md:text-sm">© Zixian Chen</div>
+		<div class="mt-auto pt-10 pb-20 text-center text-xs md:text-sm xl:pb-28">© Zixian Chen</div>
 	</div>
 </div>
 

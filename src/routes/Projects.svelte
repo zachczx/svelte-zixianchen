@@ -22,6 +22,8 @@
 		'wronged',
 	];
 	const archive = archiveOrder.map((slug) => ({ slug, ...descriptions[slug] }));
+	type ArchiveProject = (typeof archive)[number];
+	let archiveOpen = $state(false);
 
 	type ProjectFact = {
 		label: string;
@@ -145,10 +147,10 @@
 		<div class="flex flex-col">
 			<div class="flex items-baseline gap-4">
 				<span class="text-neutral-content/55 text-sm">{String(i + 1).padStart(2, '0')}</span>
-				<h4
+				<h3
 					class="decoration-accent text-2xl font-bold tracking-tight decoration-4 underline-offset-4 transition-colors group-hover:underline lg:text-4xl">
 					{meta.name}
-				</h4>
+				</h3>
 			</div>
 			<p class="text-neutral-content/75 mt-3 max-w-md text-sm leading-relaxed lg:text-base">{meta.subtitle}</p>
 			<p class="text-neutral-content/45 mt-2 text-xs">{p.stack}</p>
@@ -173,6 +175,19 @@
 	</a>
 {/snippet}
 
+{#snippet archiveRow(a: ArchiveProject)}
+	<div class="grid gap-x-6 gap-y-1 border-b border-white/15 py-4 sm:grid-cols-[11rem_1fr_auto] sm:items-baseline">
+		<dt class="text-sm font-semibold lg:text-base">{a.name}</dt>
+		<dd>
+			<span class="text-neutral-content/70 text-sm lg:text-base">{a.subtitle}</span>
+			{#if a.stack}
+				<span class="text-neutral-content/45 mt-0.5 block text-xs">{a.stack}</span>
+			{/if}
+		</dd>
+		<dd class="text-neutral-content/65 text-xs sm:text-right">{a.lineage ?? ''}</dd>
+	</div>
+{/snippet}
+
 <section aria-label="Projects" class="grid w-full justify-self-center text-center">
 	<div id="project-list" class="grid w-full gap-y-20 text-start lg:gap-y-28">
 		{#each featured as p, i (p.slug)}
@@ -186,18 +201,31 @@
 			Retired projects, prototypes, and older builds that fed into current ones.
 		</p>
 		<dl class="mt-8 border-t border-white/15">
-			{#each archive as a (a.slug)}
-				<div class="grid gap-x-6 gap-y-1 border-b border-white/15 py-4 sm:grid-cols-[11rem_1fr_auto] sm:items-baseline">
-					<dt class="text-sm font-semibold lg:text-base">{a.name}</dt>
-					<dd>
-						<span class="text-neutral-content/70 text-sm lg:text-base">{a.subtitle}</span>
-						{#if a.stack}
-							<span class="text-neutral-content/45 mt-0.5 block text-xs">{a.stack}</span>
-						{/if}
-					</dd>
-					<dd class="text-neutral-content/65 text-xs sm:text-right">{a.lineage ?? ''}</dd>
-				</div>
+			{#each archive.slice(0, 3) as a (a.slug)}
+				{@render archiveRow(a)}
 			{/each}
 		</dl>
+		{#if archive.length > 3}
+			<details bind:open={archiveOpen} class="archive-disclosure border-b border-white/15">
+				<summary
+					class="focus-visible:outline-accent text-neutral-content/65 hover:text-neutral-content flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 py-3 font-mono text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
+					<span>{archiveOpen ? 'Hide' : 'Show'} {archive.length - 3} more retired builds</span>
+					<ChevronRightIcon
+						aria-hidden="true"
+						class={['size-4 shrink-0 transition-transform', archiveOpen && 'rotate-90']} />
+				</summary>
+				<dl>
+					{#each archive.slice(3) as a (a.slug)}
+						{@render archiveRow(a)}
+					{/each}
+				</dl>
+			</details>
+		{/if}
 	</section>
 </section>
+
+<style>
+	.archive-disclosure summary::-webkit-details-marker {
+		display: none;
+	}
+</style>

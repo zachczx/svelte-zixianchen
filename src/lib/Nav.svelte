@@ -24,9 +24,18 @@
 		if (rule.type === 'prefixOrHash') return page.url.pathname.startsWith(rule.key) || navCurrent === rule.hash;
 		return page.url.pathname.startsWith(rule.key);
 	}
+
+	function ariaCurrent(rule: ActiveRule, active: boolean): 'location' | 'page' | undefined {
+		if (!active) return undefined;
+		if (rule.type === 'hash') return 'location';
+		if (rule.type === 'prefixOrHash' && !page.url.pathname.startsWith(rule.key)) return 'location';
+		return 'page';
+	}
 </script>
 
-<nav class="z-50 grid h-fit w-full justify-center px-4 transition-all duration-300 ease-out xl:fixed xl:bottom-2">
+<nav
+	aria-label="Primary"
+	class="z-50 grid h-fit w-full justify-center px-4 transition-all duration-300 ease-out xl:fixed xl:bottom-2">
 	<div
 		style="view-transition-name: navdock;"
 		class="hidden h-20 w-fit min-w-120 items-center justify-center justify-self-center rounded border border-gray-400 bg-gray-900 px-2 shadow-sm backdrop-blur-md transition-all duration-300 ease-out xl:relative xl:flex">
@@ -37,14 +46,14 @@
 <!-- Stoic pole: a plain mono bar on narrow screens, where the playful dock is hidden. -->
 <nav
 	aria-label="Site"
-	class="border-base-content/10 bg-base-100/95 fixed inset-x-0 bottom-0 z-50 flex flex-wrap justify-center gap-x-5 gap-y-1 border-t px-4 py-3 font-mono text-xs tracking-wide uppercase backdrop-blur xl:hidden">
+	class="border-base-content/10 bg-base-100/95 fixed inset-x-0 bottom-0 z-50 grid grid-cols-5 border-t px-2 pt-1.5 pb-[calc(0.375rem+env(safe-area-inset-bottom))] font-mono text-xs tracking-wide uppercase backdrop-blur xl:hidden">
 	{#each links as link}
 		{@const active = isActive(link.active)}
 		<a
 			href={link.href}
-			aria-current={active ? 'page' : undefined}
+			aria-current={ariaCurrent(link.active, active)}
 			class={[
-				'decoration-accent decoration-2 underline-offset-4 transition-colors',
+				'decoration-accent focus-visible:outline-accent inline-flex min-h-11 items-center justify-center px-1 text-center decoration-2 underline-offset-4 transition-colors focus-visible:outline-2 focus-visible:outline-offset-0',
 				active ? 'text-base-content underline' : 'text-base-content/60 hover:text-base-content',
 			]}>
 			{link.label}
