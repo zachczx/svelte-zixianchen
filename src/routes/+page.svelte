@@ -10,6 +10,7 @@
 	import Projects from './Projects.svelte';
 	import LinkedInIcon from '~icons/lucide/linkedin';
 	import GitHubIcon from '~icons/lucide/github';
+	import ChevronDownIcon from '~icons/lucide/chevron-down';
 	import ChevronRightIcon from '~icons/lucide/chevron-right';
 	import { jobs } from './jobs';
 	import dayjs from 'dayjs';
@@ -79,26 +80,16 @@
 					<CodeCanvas />
 				</div>
 			</div>
-			<div class="grid max-w-2xl justify-items-center text-center">
-				<p class="text-xl leading-snug font-bold tracking-tight text-balance sm:text-2xl lg:text-3xl">
-					I notice messy problems. Then I build around them.
-				</p>
-				<p class="text-base-content/70 mt-3 max-w-xl text-sm leading-relaxed sm:text-base">
-					Public-sector technology and service delivery by day; software and candid notes after hours.
-				</p>
-				<nav aria-label="Start here" class="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-3 font-mono text-sm">
-					<a
-						href="#projects"
-						class="decoration-accent hover:text-base-content focus-visible:outline-accent text-base-content/75 inline-flex min-h-11 items-center gap-1 underline decoration-2 underline-offset-4 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
-						See what I’ve built <ChevronRightIcon aria-hidden="true" class="size-3.5" />
-					</a>
-					<a
-						href="/blog"
-						class="decoration-accent hover:text-base-content focus-visible:outline-accent text-base-content/75 inline-flex min-h-11 items-center gap-1 underline decoration-2 underline-offset-4 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
-						Read what I’ve learned <ChevronRightIcon aria-hidden="true" class="size-3.5" />
-					</a>
-				</nav>
-				<div class="mt-3 flex items-center justify-center gap-8 xl:hidden">
+			<div class="grid justify-items-center gap-3 text-center">
+				<a
+					href="#projects"
+					class="group/hero-link text-base-content/65 hover:text-base-content focus-visible:outline-accent grid min-h-11 content-center justify-items-center gap-0.5 px-3 font-mono text-xs tracking-[0.08em] no-underline transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
+					<span>Side projects</span>
+					<ChevronDownIcon
+						aria-hidden="true"
+						class="size-4 transition-transform duration-200 group-hover/hero-link:translate-y-0.5 group-focus-visible/hero-link:translate-y-0.5" />
+				</a>
+				<div class="flex items-center justify-center gap-8 xl:hidden">
 					<a
 						href="https://www.linkedin.com/in/zixianchen/"
 						aria-label="LinkedIn"
