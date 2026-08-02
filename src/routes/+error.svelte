@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import CrayonPortrait from '$lib/assets/crayon-drawing.webp?enhanced';
+	import DizzyCrayonPortrait from '$lib/assets/crayon-drawing-dizzy.webp?enhanced';
 
 	let isNotFound = $derived(page.status === 404);
 </script>
@@ -18,9 +18,9 @@
 		{#if isNotFound}
 			<div class="border-base-content/15 bg-base-100 -rotate-2 border p-2 shadow-[0_14px_35px_rgba(0,0,0,0.12)]">
 				<enhanced:img
-					src={CrayonPortrait}
-					alt="Crayon portrait of Zixian"
-					class="aspect-[0.89] w-44 object-cover opacity-90 grayscale-[1] sm:w-52" />
+					src={DizzyCrayonPortrait}
+					alt="Crayon portrait of Zixian looking dizzy and saying ‘Wrong page!’"
+					class="aspect-[0.89] w-44 object-cover sm:w-52" />
 			</div>
 		{/if}
 
