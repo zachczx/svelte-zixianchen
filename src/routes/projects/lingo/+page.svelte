@@ -26,8 +26,10 @@
 	const stack = [
 		{ role: 'Application', tools: 'Go, Templ, HTMX, Tailwind CSS' },
 		{ role: 'Search', tools: 'Meilisearch, Jaro-Winkler, Metaphone' },
-		{ role: 'Data', tools: 'Embedded JSON, PostgreSQL' },
+		{ role: 'Data and identity', tools: 'Embedded JSON, PostgreSQL, Stytch' },
+		{ role: 'Product analytics', tools: 'PostHog, Umami' },
 		{ role: 'Observability', tools: 'Grafana Cloud, OpenTelemetry' },
+		{ role: 'Delivery', tools: 'GitHub Actions, Playwright, Coolify' },
 	];
 
 	const glossaryScreenshots = [
@@ -104,7 +106,7 @@
 	accentInk="#1e293b"
 	eyebrow="Language of the Singapore Public Service"
 	headline="The glossary I wish I had when I started work."
-	sub="Lingo started as one place to look up the unfamiliar language that made onboarding harder. It now has more than 3,500 terms, a 222-term newbie guide and quiz practice."
+	sub="The current subheading lists the catalogue size, onboarding guide and quiz. Those remain accurate—the product documentation confirms more than 3,500 entries and 222 onboarding entries—but it misses the editorial and measurement layer."
 	url="https://lingo.zixian.dev"
 	{stack}>
 	{#snippet wordmark()}
@@ -171,8 +173,8 @@
 				Jaro-Winkler and Metaphone search still kicks in if Meilisearch is unavailable.
 			</p>
 			<p>
-				As Lingo grew, search also had to work when someone knew what a term did but not what it was called. I added
-				plain-language descriptions to more entries and a separate description search for that kind of query.
+				As Lingo grew, search also had to work when someone knew what a term did but not what it was called. I added a
+				separate description search for that kind of query, then filled in all descriptions to explain it.
 			</p>
 			<p>
 				The home page still shows popular exact matches, but I now keep 90 days of searches submitted through the search
@@ -235,19 +237,32 @@
 				As the glossary grew, I needed a way to accept help without letting anything go straight into search.
 			</p>
 			<p>
-				A glossary this broad will always have gaps, especially when workplace language varies across agencies. Anyone
-				can now suggest a term, its meaning, where they heard it and a public source that can help verify it.
+				A glossary this broad will always have gaps, especially when workplace language varies across agencies. I first
+				designed the suggestion form around separate fields for the term, meaning, agency, source and context. That made
+				the submissions easier to process, but also made suggesting something feel like filling in a form.
+			</p>
+			<p>
+				The default is now a single text box where someone can paste whatever they have, even if it is only an
+				unfamiliar term or a rough note. Structured details are still welcome for anyone who has them. I would rather
+				receive an incomplete lead that I can research than lose it because contributing felt like work.
 			</p>
 			<p>
 				People can also report a problem with an existing entry, mark whether it is wrong, incomplete or out of date,
-				and point to the exact fields that need attention. Suggestions and reports enter the same private review queue,
-				and the public forms warn contributors to leave out classified, sensitive or personal information.
+				and point to the exact fields that need attention. Suggestions, reports, survey responses and analytics now sit
+				in one private admin panel, while the public forms warn contributors to leave out classified, sensitive or
+				personal information.
 			</p>
 			<p>
-				I check the meaning, context and any public source before accepting a suggestion or closing a report. An
-				accepted suggestion becomes a JSON draft I can copy into the glossary, together with an editorial record, while
-				reports stay linked to the entry they concern. I still have to make the change by hand, so the review workspace
-				cannot publish directly into live search results.
+				The analytics view helps answer my "business" questions about the product. What are people searching for? How
+				often do searches match an entry exactly? Do visitors go on to search after reaching the home page? Are accounts
+				being used to save terms? Umami provides the broad traffic figures, while I am testing PostHog to understand
+				anonymous journeys and where people may be getting stuck.
+			</p>
+			<p>
+				I check the meaning, context and any public source before accepting a suggestion or closing a report. The panel
+				lets me review the evidence, amend the proposed entry and record the decision. An accepted suggestion becomes a
+				JSON draft I can copy into the glossary, while reports remain linked to the entry they concern. I still have to
+				make the change by hand, so the admin panel cannot publish directly into live search results.
 			</p>
 			<p>
 				Filling in definitions, examples and sources by hand got slow, so I use LLMs to help research new terms and find
@@ -257,6 +272,41 @@
 				Everything still goes through review and a final scan from me. I track which entries have been checked against a
 				public reference, and the embedded JSON files remain the source of truth. The LLMs never answer live searches or
 				publish entries.
+			</p>
+		</div>
+	</section>
+
+	<section class="border-neutral/10 border-t py-12">
+		<p class="text-xs tracking-wide" style="color: var(--accent-ink)">Keeping it light and dependable</p>
+		<div class="text-base-content/85 mt-4 grid max-w-3xl gap-4 leading-relaxed">
+			<p class="text-2xl leading-snug font-bold">
+				A site intended for public officers also has to work reasonably well on government devices.
+			</p>
+			<p>
+				Many users reach Lingo through Menlo Security's remote browser isolation. The website is opened and processed in
+				a remote browser before being sent to the device, so extra browser-side work can become more noticeable than it
+				would be on a normal connection.
+			</p>
+			<p>
+				I kept the main experience server-rendered with Go and Templ, using HTMX for focused interactions instead of
+				turning the site into a large client-side application. JavaScript is divided into page-specific bundles, so
+				someone looking up a term does not have to download the code used by the quiz, admin panel or other parts of the
+				site.
+			</p>
+			<p>
+				Adding PostHog needed the same restraint. Its heavier behaviour and session-replay code is loaded separately and
+				only on selected public pages. Recording stops when someone starts typing a search, and pages containing a query
+				use event tracking without replay. Authentication, submissions and the private admin panel are left out.
+			</p>
+			<p>
+				The release process has also grown with the application. A self-hosted GitHub Actions runner performs the same
+				checks I use locally: generating code, building the application, running the Go and browser tests, linting and
+				checking formatting. Playwright covers a small set of important user journeys rather than trying to test every
+				implementation detail.
+			</p>
+			<p>
+				After the checks pass on the main branch, the runner synchronises the Meilisearch indexes before triggering the
+				Coolify deployment. That keeps changes to the application and its search data together.
 			</p>
 		</div>
 	</section>
