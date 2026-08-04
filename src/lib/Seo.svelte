@@ -6,9 +6,6 @@
 		type?: 'website' | 'article';
 		image?: string;
 		imageAlt?: string;
-		imageWidth?: number;
-		imageHeight?: number;
-		largeImage?: boolean;
 		noindex?: boolean;
 		publishedTime?: string;
 		modifiedTime?: string;
@@ -22,9 +19,6 @@
 		type = 'website',
 		image = '/android-chrome-512x512.png',
 		imageAlt = 'Zixian Chen',
-		imageWidth = 512,
-		imageHeight = 512,
-		largeImage = false,
 		noindex = false,
 		publishedTime,
 		modifiedTime,
@@ -34,7 +28,7 @@
 	const origin = 'https://zixianchen.com';
 	const canonicalUrl = $derived(`${origin}${pathname === '/' ? '/' : pathname.replace(/\/$/, '')}`);
 	const imageUrl = $derived(new URL(image, origin).href);
-	const jsonLd = $derived(structuredData ? JSON.stringify(structuredData).replace(/</g, '\\u003c') : '');
+	const jsonLd = $derived(structuredData ? JSON.stringify(structuredData).replace(/</g, '\u003c') : '');
 	const jsonLdTag = $derived(jsonLd ? `<script type="application/ld+json">${jsonLd}</${'script'}>` : '');
 </script>
 
@@ -49,11 +43,11 @@
 	<meta property="og:description" content={description} />
 	<meta property="og:url" content={canonicalUrl} />
 	<meta property="og:image" content={imageUrl} />
-	<meta property="og:image:width" content={String(imageWidth)} />
-	<meta property="og:image:height" content={String(imageHeight)} />
+	<meta property="og:image:width" content="512" />
+	<meta property="og:image:height" content="512" />
 	<meta property="og:image:alt" content={imageAlt} />
 
-	<meta name="twitter:card" content={largeImage ? 'summary_large_image' : 'summary'} />
+	<meta name="twitter:card" content="summary" />
 
 	{#if noindex}
 		<meta name="robots" content="noindex" />

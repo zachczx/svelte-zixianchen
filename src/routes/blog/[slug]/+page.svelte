@@ -9,8 +9,6 @@
 	let { data } = $props();
 	let content = $derived(data.content);
 	let canonicalUrl = $derived(`https://zixianchen.com/blog/${data.metadata.slug}`);
-	let socialImage = $derived(`/blog/og/${data.metadata.slug}.png`);
-	let socialImageUrl = $derived(`https://zixianchen.com${socialImage}`);
 </script>
 
 <Seo
@@ -18,11 +16,6 @@
 	description={data.metadata.description}
 	pathname="/blog/{data.metadata.slug}"
 	type="article"
-	image={socialImage}
-	imageAlt="{data.metadata.title}, from Zixian's Blog"
-	imageWidth={1200}
-	imageHeight={630}
-	largeImage
 	noindex={data.metadata.listed === false}
 	publishedTime={data.metadata.date}
 	modifiedTime={data.metadata.date_updated || data.metadata.date}
@@ -32,7 +25,6 @@
 			'@type': 'BlogPosting',
 			headline: data.metadata.title,
 			description: data.metadata.description,
-			image: socialImageUrl,
 			datePublished: data.metadata.date,
 			dateModified: data.metadata.date_updated || data.metadata.date,
 			articleSection: data.metadata.category,
