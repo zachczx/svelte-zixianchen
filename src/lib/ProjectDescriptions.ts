@@ -70,7 +70,7 @@ export const descriptions: ProjectDescriptions = {
 	cubby: {
 		name: 'Cubby',
 		subtitle: 'A personal ERP for the household',
-		tldr: 'It started as a way to remember when I last changed the towels, then it grew into the app the whole family runs the house on, with two old side projects folded in.',
+		tldr: 'It started as a way to remember when I last changed the towels, then it grew into the app the whole family runs the house on, with several old side projects folded in.',
 		url: 'https://cubby.dev',
 	},
 	wronged: {

@@ -221,9 +221,10 @@
 	const stack = [
 		{ role: 'Runtime', tools: 'Go' },
 		{ role: 'Frontend', tools: 'SvelteKit, Tailwind' },
+		{ role: 'Distribution', tools: 'Progressive Web App' },
 		{ role: 'Data', tools: 'PostgreSQL' },
 		{ role: 'Auth', tools: 'Stytch' },
-		{ role: 'Observability', tools: 'Grafana Cloud, Uptime Kuma' },
+		{ role: 'Observability', tools: 'Grafana Cloud, Umami, Uptime Kuma' },
 	];
 </script>
 
@@ -437,7 +438,8 @@
 					{/each}
 				</dl>
 				<p class="text-base-content/55 mt-4 max-w-md text-sm leading-relaxed">
-					Sentry used to be in here too, but it slowed builds more than it was worth, so it came out.
+					Sentry used to be in here too, but it slowed builds more than it was worth, so it came out. A self-hosted
+					GitHub Actions runner checks the web app, main API and retained Roamichi service before changes ship.
 				</p>
 			</div>
 		</div>
