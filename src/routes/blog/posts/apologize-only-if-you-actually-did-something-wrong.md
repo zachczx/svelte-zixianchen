@@ -25,7 +25,7 @@ Why do we feel the need to apologize? And what does that habit do to us?
 
 ## Sorry seems to be the easiest word
 
-Elton John sang that _Sorry Seems to Be the Hardest Word_.
+Elton John sang that _Sorry Seems to Be the Hardest Word_ (loved it btw, I listened to Blue's version).
 
 At work, it sometimes seems to be the easiest.
 
