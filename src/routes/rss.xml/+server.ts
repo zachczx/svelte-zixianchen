@@ -30,9 +30,7 @@ export const GET: RequestHandler = () => {
 	const items = publishedPosts
 		.map((post) => {
 			const postUrl = `${origin}/blog/${post.slug}`;
-			const category = post.category
-				? `\n\t\t\t<category>${escapeXml(post.category)}</category>`
-				: '';
+			const category = post.category ? `\n\t\t\t<category>${escapeXml(post.category)}</category>` : '';
 
 			return `\t\t<item>
 \t\t\t<title>${escapeXml(post.title)}</title>
