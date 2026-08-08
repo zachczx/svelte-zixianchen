@@ -116,9 +116,7 @@ async function seedExistingPosts(env: Env, posts: { guid: string }[]): Promise<v
 	const statements = posts.map((post) =>
 		env.DB.prepare('INSERT OR IGNORE INTO seen_posts (guid) VALUES (?)').bind(post.guid),
 	);
-	statements.push(
-		env.DB.prepare('INSERT OR REPLACE INTO state (key, value) VALUES (?, ?)').bind(INITIALIZED_KEY, '1'),
-	);
+	statements.push(env.DB.prepare('INSERT OR REPLACE INTO state (key, value) VALUES (?, ?)').bind(INITIALIZED_KEY, '1'));
 	await env.DB.batch(statements);
 }
 
