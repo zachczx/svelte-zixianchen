@@ -35,8 +35,7 @@ export function parseCommand(text: string): BotCommand | undefined {
 
 export function formatNotification(message: NotificationMessage): string {
 	const description = message.description.trim();
-	const shortenedDescription =
-		description.length > 800 ? `${description.slice(0, 797).trimEnd()}...` : description;
+	const shortenedDescription = description.length > 800 ? `${description.slice(0, 797).trimEnd()}...` : description;
 	const parts = [`New post: ${message.title}`];
 
 	if (shortenedDescription) parts.push(shortenedDescription);
