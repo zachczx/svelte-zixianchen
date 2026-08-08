@@ -11,7 +11,7 @@ listed: false
 slug: 'how-i-think-about-work-and-assessments'
 ---
 
-I looked through an analysis of our recent climate survey and verbatim feedback, talked about it with everyone, and then thought about it again. I've been thinking that I should probably just be transparent about how I actually think about work, assessments, and careers in general.
+I looked through an analysis of our recent employee engagement surveys and verbatim feedback, talked about it with everyone, and then thought about it again. I've been thinking that I should probably just be transparent about how I actually think about work, assessments, and careers in general.
 
 I've talked about most of this with people individually over the years, but because I always adjusted each conversation impromptu, to whoever I was talking to and their specific situation, there wasn't a single version of it that captured everything. So I figured I'd try writing it down.
 
@@ -62,7 +62,7 @@ Office politics matter, and I won't pretend otherwise. Important, senior people 
 
 It also depends on the leader. Does the leader like you or your style? Do they feel invested enough in your growth to stick with you and give you opportunities?
 
-All of this is to say that some people's voices carry more weight than others, and some people will have an easier time pushing through their work with powerful sponsors or workstreams that happen to be in vogue.
+All of this is to say that some people's voices carry more weight than others, and some people will have an easier time pushing through their work with influential sponsors or workstreams that happen to be in vogue.
 
 But this isn't permanent. You can absolutely change your fortunes if you're down and out, and you can drop a notch or two if you coast or underperform.
 
