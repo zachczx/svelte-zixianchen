@@ -14,6 +14,7 @@ const START_MESSAGE =
 const STOP_MESSAGE = "Notifications stopped. Send /start anytime if you'd like to subscribe again.";
 const HELP_MESSAGE = 'Use /start to get new-post notifications or /stop to turn them off.';
 const QUEUE_BATCH_SIZE = 100;
+const D1_MAX_BOUND_PARAMETERS = 100;
 
 let schemaReady: Promise<void> | undefined;
 
@@ -113,9 +114,13 @@ function chunk<T>(items: T[], size: number): T[][] {
 }
 
 async function seedExistingPosts(env: Env, posts: { guid: string }[]): Promise<void> {
-	const statements = posts.map((post) =>
-		env.DB.prepare('INSERT OR IGNORE INTO seen_posts (guid) VALUES (?)').bind(post.guid),
-	);
+	const statements = chunk(
+		posts.map((post) => post.guid),
+		D1_MAX_BOUND_PARAMETERS,
+	).map((guids) => {
+		const placeholders = guids.map(() => '(?)').join(', ');
+		return env.DB.prepare(`INSERT OR IGNORE INTO seen_posts (guid) VALUES ${placeholders}`).bind(...guids);
+	});
 	statements.push(env.DB.prepare('INSERT OR REPLACE INTO state (key, value) VALUES (?, ?)').bind(INITIALIZED_KEY, '1'));
 	await env.DB.batch(statements);
 }
@@ -127,6 +132,8 @@ async function runFeedCheck(env: Env): Promise<void> {
 	if (!response.ok) throw new Error(`RSS fetch failed with HTTP ${response.status}.`);
 
 	const posts = parseRss(await response.text());
+	if (posts.length === 0) throw new Error('RSS feed contained no readable posts.');
+
 	const initialized = await env.DB.prepare('SELECT value FROM state WHERE key = ?')
 		.bind(INITIALIZED_KEY)
 		.first<{ value: string }>();
