@@ -162,8 +162,18 @@ async function runFeedCheck(env: Env): Promise<void> {
 	}
 }
 
-function isNotificationMessage(value: NotificationMessage): boolean {
-	return Boolean(value.chatId && value.guid && value.title && value.url);
+function isNotificationMessage(value: unknown): value is NotificationMessage {
+	if (!value || typeof value !== 'object') return false;
+
+	const candidate = value as Partial<NotificationMessage>;
+	return (
+		typeof candidate.chatId === 'string' &&
+		typeof candidate.description === 'string' &&
+		typeof candidate.guid === 'string' &&
+		typeof candidate.title === 'string' &&
+		typeof candidate.url === 'string' &&
+		Boolean(candidate.chatId && candidate.guid && candidate.title && candidate.url)
+	);
 }
 
 async function handleQueuedNotification(message: NotificationMessage, env: Env): Promise<TelegramApiResponse | null> {
@@ -194,11 +204,12 @@ export default {
 		ctx.waitUntil(runFeedCheck(env));
 	},
 
-	async queue(batch: QueueBatch<NotificationMessage>, env: Env): Promise<void> {
+	async queue(batch: QueueBatch<unknown>, env: Env): Promise<void> {
 		await ensureSchema(env);
 
 		for (const queuedMessage of batch.messages) {
-			if (!isNotificationMessage(queuedMessage.body)) {
+			const notification = queuedMessage.body;
+			if (!isNotificationMessage(notification)) {
 				console.error('Discarding malformed notification message.');
 				queuedMessage.ack();
 				continue;
@@ -206,7 +217,7 @@ export default {
 
 			let response: TelegramApiResponse | null;
 			try {
-				response = await handleQueuedNotification(queuedMessage.body, env);
+				response = await handleQueuedNotification(notification, env);
 			} catch (error) {
 				console.error('Telegram request failed:', error);
 				queuedMessage.retry();
@@ -219,7 +230,7 @@ export default {
 			}
 
 			if (response.error_code === 403) {
-				await env.DB.prepare('DELETE FROM subscribers WHERE chat_id = ?').bind(queuedMessage.body.chatId).run();
+				await env.DB.prepare('DELETE FROM subscribers WHERE chat_id = ?').bind(notification.chatId).run();
 				queuedMessage.ack();
 				continue;
 			}
