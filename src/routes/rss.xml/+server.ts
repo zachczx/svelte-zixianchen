@@ -4,22 +4,20 @@ export const prerender = true;
 
 const origin = 'https://zixianchen.com';
 const feedUrl = `${origin}/rss.xml`;
+const xmlEntities: Record<string, string> = {
+	'<': '&lt;',
+	'>': '&gt;',
+	'&': '&amp;',
+	"'": '&apos;',
+	'"': '&quot;',
+};
 
 interface PostModule {
 	metadata: BlogPostMetadata;
 }
 
 function escapeXml(value: string): string {
-	return value.replace(/[<>&'"]/g, (character) => {
-		const entities: Record<string, string> = {
-			'<': '&lt;',
-			'>': '&gt;',
-			'&': '&amp;',
-			"'": '&apos;',
-			'"': '&quot;',
-		};
-		return entities[character];
-	});
+	return value.replace(/[<>&'"]/g, (character) => xmlEntities[character] ?? character);
 }
 
 export const GET: RequestHandler = () => {
@@ -32,7 +30,9 @@ export const GET: RequestHandler = () => {
 	const items = publishedPosts
 		.map((post) => {
 			const postUrl = `${origin}/blog/${post.slug}`;
-			const category = post.category ? `\n\t\t\t<category>${escapeXml(post.category)}</category>` : '';
+			const category = post.category
+				? `\n\t\t\t<category>${escapeXml(post.category)}</category>`
+				: '';
 
 			return `\t\t<item>
 \t\t\t<title>${escapeXml(post.title)}</title>
@@ -44,7 +44,6 @@ export const GET: RequestHandler = () => {
 		})
 		.join('\n');
 
-	const lastBuildDate = publishedPosts[0] ? new Date(publishedPosts[0].date).toUTCString() : new Date(0).toUTCString();
 	const xml = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 \t<channel>
@@ -52,7 +51,6 @@ export const GET: RequestHandler = () => {
 \t\t<link>${origin}/blog</link>
 \t\t<description>Blog posts by Zixian Chen.</description>
 \t\t<language>en</language>
-\t\t<lastBuildDate>${lastBuildDate}</lastBuildDate>
 \t\t<atom:link href="${feedUrl}" rel="self" type="application/rss+xml" />
 ${items}
 \t</channel>
