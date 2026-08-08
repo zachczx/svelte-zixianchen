@@ -15,13 +15,15 @@ I looked through an analysis of our recent climate survey and verbatim feedback,
 
 I've talked about most of this with people individually over the years, but because I always adjusted each conversation impromptu, to whoever I was talking to and their specific situation, there wasn't a single version of it that captured everything. So I figured I'd try writing it down.
 
+**Disclaimer:** These are my own views, not privileged information, official guidelines, or anything remotely that exciting.
+
 ## How do I assess people?
 
 There's no easy answer, but here's what I've gathered so far. This isn't an exhaustive list, and it'll probably evolve over time, but these are the things I find myself coming back to.
 
 - **Impact.** Good, big things happen around you in a way that's measurable and hard to miss. The surface area of what you've affected is clearly huge, and outcomes jump out without anyone needing to squint.
 - **Sharpness in thinking.** People who can grasp something quickly, think through multiple possibilities at once, weigh risks and long-term implications, and zoom in and out between the details and the big picture without losing the thread. Logical, pragmatic, fast.
-- **Competency and technical mastery.** You know your stuff, and I can trust your judgement, which means I worry about one less thing. I want to know what people outside our org are doing, how we compare, what you've been learning lately, and honestly whether you enjoy this stuff enough to tinker with it outside office hours, because all of that tells me something real about where you are.
+- **Competency and technical mastery.** You know your stuff, and I can trust your judgement, which means I worry about one less thing. I want to know what people outside our org are doing, how we compare, what you've been learning lately, and honestly whether you enjoy this stuff enough to tinker with it outside office hours. That's a plus point to me (not a minus point if you don't), because all of that tells me something real about where you are.
 - **Breadth.** People who can connect dots across issues, see links that others don't, and adapt solutions from one domain to a completely different one.
 - **Drive and execution.** Whatever lands on your plate, you do it well and things run smoothly. You push through difficulty even when it's hard and boring and nobody's watching.
 - **Working with people.** I prioritize people who can build bridges while still keeping healthy tension in the room, because too little and we all just get scared of pushing back or saying something uncomfortable, and too much and nobody trusts each other anymore.
@@ -71,6 +73,8 @@ Ultimately, it feels better to have someone who you trust and who appreciates yo
 ## Leadership can feel like a burden
 
 It absolutely is, and I hate it too, honestly, a lot of the time. I'd much rather be an individual contributor.
+
+This isn't about any particular team or person. I've felt this across different roles over the years, and I've heard the same thing from other supervisors too.
 
 I spend a lot of time going through email submissions, marking them up with comments in red and strikethrough because Outlook doesn't have tracked changes, then going back and forth a few rounds asking questions and prompting the writer to think through what they actually meant, when honestly I could just rewrite the whole thing myself in a fraction of the time. And that's just one submission from one person. Multiply that across the team, add in the difficult conversations nobody wants to have because we're all predisposed to want nice things and happy emotions, and it adds up. I'll also be honest that over the years I've gotten lazier about this. I used to edit everything super thoroughly, but sometimes I fall prey to laziness and just edit directly. I apologize if I've done this to you.
 
