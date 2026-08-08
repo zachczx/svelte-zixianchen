@@ -17,4 +17,8 @@
 	});
 </script>
 
+<svelte:head>
+	<link rel="alternate" type="application/rss+xml" title="Zixian Chen - Blog" href="/rss.xml" />
+</svelte:head>
+
 {@render children()}
