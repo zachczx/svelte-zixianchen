@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Icon from '../Icon.astro';
+import CubbyStory from './CubbyStory.astro';
 import ScreenshotSpecimen from '../ScreenshotSpecimen.astro';
 import dashboard from '$lib/screenshots/cubby/dashboard.webp';
 import dashboardRoutines from '$lib/screenshots/cubby/dashboard-routines.webp';
@@ -25,187 +26,158 @@ const groups = [
 	{
 		label: 'Routines',
 		note: 'recurring upkeep, limits, and schedules',
+		intro:
+			'Once I could check when something was last done, I wanted the same record for the routines we repeated as a family.',
 		items: [
 			{
 				src: tasks,
 				alt: 'Cubby tasks',
 				headline: 'When did I last do this?',
-				problem:
-					"My kid's nasal spray started daily, then shifted to every two days, then three, while we were also tracking nose congestion alongside it. It was difficult enough that we didn't really track, beyond one or two messages on Telegram, and by the time we got to a doctor's consultation we couldn't answer any of her questions on how his symptoms had been.",
-				solution:
-					'A quick log for anything with a when-did-I-last question, one tap to record, one glance to answer. Each entry holds a snapshot of the interval at that moment, so we can look back at any point and know exactly what the routine was, with symptoms tracked alongside it.',
+				paragraphs: [
+					"I started with towels because I kept forgetting when I'd last washed them. A dated log was enough for that, but my kid's nasal spray needed more care. The routine changed from daily to every two days, then three, while we also tried to track congestion. Our few Telegram messages left us with very little to tell the doctor.",
+					'Each entry now keeps the interval that applied when we logged it. Changing the routine leaves that history intact, so I can look back and see what we were doing at the time.',
+				],
 			},
 			{
 				src: limits,
 				alt: 'Cubby limits',
 				headline: 'On pace, or already over',
-				problem:
-					"Screen time seemed to grow every week, then I got concerned about soda and beer too, and across all of them I needed unit conversion because a McDonald's small Coke is a very different drink from a can of Coke.",
-				solution:
-					"A weekly limit per habit tracked against a daily pace, so mid-week I can see at a glance whether I'm on track or already over, not just a raw count at the end. It's guilt-tripped me into skipping a drink more than once when I see the counter maxing out early in the week.",
+				paragraphs: [
+					'Screen time kept growing, and I wanted to keep an eye on soda and beer too. I gave each habit a weekly limit and a daily pace, so I could check how the week was going while there was still time to do something about it.',
+					"Drinks needed unit conversion because a McDonald's small Coke and a can contain different amounts. Seeing the week's allowance nearly gone has talked me out of a drink more than once.",
+				],
 			},
 			{
 				src: screentimer,
 				alt: 'Cubby screen timer',
 				headline: 'The same timers, by hand, every day',
-				problem:
-					"YouTube countdown videos weren't customizable for duration, voice, or ticking sounds, and tracking screen time meant juggling separate apps with no sense of where the week actually stood.",
-				solution:
-					'I built saved profiles so the common ones are one tap, added AI voices and ticking sounds so my kid could close his eyes without needing a video, and folded the tracking into a weekly limit so I always knew where we stood.',
+				paragraphs: [
+					'The screen timer gave me a way to connect that weekly limit to what we actually did. YouTube countdowns had fixed durations and sounds, so I built saved profiles with AI voices and ticking sounds that my kid could listen to with his eyes closed.',
+					'When a timer finishes, it logs against the limit automatically. That saved a second entry and gave the two features a reason to live in the same app.',
+				],
 			},
 			{
 				src: enrichment,
 				alt: 'Cubby enrichment schedule',
 				headline: 'The schedule nobody could find',
-				problem:
-					"Our kid's enrichment classes ended at a different time every day, and along the way we started and stopped classes, terms came with new timings, and make-up sessions got pasted into pinned Telegram messages we could never find. Across all the pins and emails we mixed up timings more than once, and usually ended up at the door waiting longer than we should have. One class required a make-up every time a public holiday fell on it, which made the whole thing even harder to follow.",
-				solution:
-					'The schedule is now the first thing you see when you open the app, so the right pickup time is one glance away, no hunting through chats or emails. Make-up sessions are clearly marked so nothing gets missed.',
+				paragraphs: [
+					"Our kid's classes ended at a different time each day. New terms brought new timings, and make-up sessions went into pinned Telegram messages and emails. We mixed them up often enough to spend quite a bit of time waiting at the door.",
+					"I put today's schedule on the dashboard, with make-up sessions marked. Pickup time was something we needed every day, so it belonged on the first screen.",
+				],
 			},
 		],
 	},
 	{
 		label: 'Health',
 		note: 'four bodies, one of them a dog',
+		intro:
+			'Some records needed more detail than a date. A workout or an illness had to make sense when I came back to it later.',
 		items: [
 			{
 				src: gymWorkout,
 				alt: 'Cubby gym workout',
 				headline: 'What should I aim for today',
-				problem:
-					"I never trained with much structure, just gut feel and whatever I could vaguely recall from last time. For cable machines I couldn't remember which plate I used, so it was agar agar the rough position of the pin. Rest timings, lift volume, whether I hit failure or did a dropset or a warmup, none of it was tracked, and I had no way to know which exercises I was actually progressing on.",
-				solution:
-					"Every set is logged with weight, reps, rest time, and notes on failure or dropsets, so before each set I can see exactly what I did last time and what to aim for. No more guessing the pin position on cable machines. There's also a lock screen so sweaty hands mid-set don't accidentally hit a destructive button.",
+				paragraphs: [
+					'At the gym I mostly went by whatever I remembered from the last session. On cable machines, that meant agar agar the position of the pin. I started logging weights, reps, rest times, and notes on failure or dropsets so I could check the previous set before the next one.',
+					"There's also a lock screen for sweaty hands around buttons mid-workout. A new personal record posts to the journal, so it shows up alongside the other things we've been doing.",
+				],
 			},
 			{
 				src: illness,
 				alt: 'Cubby illness log',
 				headline: "One log when everyone's sick at once",
-				problem:
-					'Temperatures, medicine timings, dosages, and MCs all went into Telegram messages nobody could find later, and it got worse the moment more than one of us was sick at once, because by the time we sat in front of a doctor the chronology was a blur.',
-				solution:
-					"A personal diary of medicines, symptoms, and temperatures per illness episode, so when the doctor asks what happened I can just read it out, whether it's for me, my wife, our kid, or the dog. For the dog especially it's useful, vet visits can be 8-12 months apart so I paste the vet's guidance straight in and pull it up next time without scrambling. Not trying to build an EHR, just enough to walk into a consult prepared.",
+				paragraphs: [
+					'Keeping a routine history helped, but illness needed a record of its own. Temperatures, doses, medicine timings, and MCs were scattered through Telegram, sometimes for several of us at once. By the consultation, the order of events was hard to reconstruct.',
+					"I grouped the entries by illness episode so I could read them out to the doctor. It works for me, my wife, our kid, and the dog. Vet visits can be eight to twelve months apart, so I keep the vet's guidance with the episode and pull it up next time.",
+				],
 			},
 			{
 				src: coffee,
 				alt: 'Cubby coffee recipes',
 				headline: 'Which brew actually tasted better',
-				problem:
-					'Memory only went back a cup or two, anything else was roughly recalled, and definitely not across different bags, batches, or roasters.',
-				solution:
-					'Log the parameters per brew, bean weight, water amount, timing, and grinder clicks on my Kingrinder K6, with a taste rating so I can see which combinations actually taste better.',
+				paragraphs: [
+					'Coffee was a smaller version of the same memory problem. I could recall the last cup or two, so I started saving bean and water weights, timing, and clicks on my Kingrinder K6. A taste rating lets me compare what I actually liked across bags and roasters.',
+				],
 			},
 		],
 	},
 	{
 		label: 'Home',
 		note: 'what comes in and what runs out',
+		intro: 'The smaller things stayed too, because I kept running into them at home.',
 		items: [
 			{
 				src: meals,
 				alt: 'Cubby meals',
 				headline: 'What did we eat yesterday?',
-				problem:
-					'We could never recall what we ate, even from the afternoon or the day before, and with a lot of fast food and salty food in the mix I had no real picture of what the week actually looked like.',
-				solution:
-					"Log it at the table before we leave, photo attached, so there's an actual record instead of just a vague sense.",
+				paragraphs: [
+					"We were just as bad at remembering meals, sometimes even what we'd had that afternoon. Now I log them at the table before we leave, with a photo, so I can look back at what we've eaten over the week.",
+				],
 			},
 			{
 				src: expiry,
 				alt: 'Cubby expiry tracker',
 				headline: 'The dates that actually matter',
-				problem:
-					"A friend mentioned forgetting her cosmetics expiring, and I realised I never tracked when opened milk or soy milk would go bad either, the kind of date that changes once you've opened it.",
-				solution:
-					"Log when something was opened and how long it keeps, so the actual expiry is calculated and visible at a glance. At minimum it made me much more conscious of how long my milk had left, even if I don't always keep to it.",
+				paragraphs: [
+					"A friend mentioned her cosmetics expiring, which made me think about the milk and soy milk in our fridge. Cubby calculates the expiry from when I open something and how long it keeps. I'm more conscious of how long the milk has left now, even if I don't always keep to it.",
+				],
 			},
 			{
 				src: market,
 				alt: 'Cubby market prices',
 				headline: 'Which price is actually worth it',
-				problem:
-					'I could hold a rough sense of what things cost but never the details, and for wines especially there were enough promotions and my Just Wine Club subscription that I needed an actual record to know when something was really worth buying.',
-				solution:
-					'Log prices per item so I can compare across shops and promotions, and actually know a good deal when I see one. Supermarkets here rarely show price per gram or unit, so this fills that gap too.',
+				paragraphs: [
+					"I had a rough sense of supermarket prices, but wine promotions and my Just Wine Club subscription made comparisons harder. I started recording prices by item, shop, and promotion, with unit prices to make different pack sizes comparable. The useful part is knowing which price I'd buy at again.",
+				],
 			},
 		],
 	},
 	{
 		label: 'Finance',
 		note: 'the dates that cost money',
+		intro: 'Remembering a date mattered rather more when missing it cost us money.',
 		items: [
 			{
 				src: finance,
 				alt: 'Cubby finance',
 				headline: "The fee we couldn't waive",
-				problem:
-					"I've missed credit card bills before, luckily waived both times, but my wife's annual fee wasn't, and it was expensive. With many cards each on their own fee schedule, plus bills and subscriptions on top, it's genuinely too much to keep in your head.",
-				solution:
-					'All the card fees, bills, and subscriptions in one place with dates, so nothing sneaks up and we catch the waivable ones in time.',
+				paragraphs: [
+					"I'd missed credit card bills before and had the charges waived, but my wife's annual fee wasn't waived, and it was expensive. I put card fees, bills, and subscriptions together with their dates so we could check what was coming up.",
+				],
 			},
 		],
 	},
 	{
 		label: 'Life',
 		note: 'the things worth keeping',
+		intro: 'Once we were using Cubby for the everyday things, I brought in trips and the moments I wanted to keep.',
 		items: [
 			{
 				src: travel,
 				alt: 'Cubby travel planner',
 				headline: 'Every trip, scattered everywhere',
-				problem:
-					'Trip details were scattered across emails, Telegram chats, browser tabs, and PDFs, sometimes password protected like insurance documents, and every trip meant hunting through all of it again.',
-				solution:
-					"I'd already built Roamichi as a standalone travel planner, so I folded it in whole, all of it in one place now. It still can't pull from emails automatically and isn't a full itinerary planner, but a step at a time.",
+				paragraphs: [
+					"Trips brought a different pile of things to find: emails, Telegram messages, browser tabs, and PDFs, including password-protected insurance documents. I'd already built Roamichi as a travel planner, so I folded it into Cubby. It still needs manual entry and isn't a full itinerary planner, but the trip details are together.",
+				],
 			},
 			{
 				src: growingUp,
 				alt: 'Cubby growing up',
 				headline: 'The moments worth keeping',
-				problem:
-					"I wanted to log the things my wife did that I loved but never said, and the things that frustrated me too, but a complaint ledger about your spouse is just toxic, and I'd built something similar on The Standup Podcast and landed in the same place.",
-				solution:
-					"Reframed it as a record for our kid instead, PTCs, teacher feedback, naughty moments, and the sweet ones, the kind of stuff that's worth keeping but slips out of memory fast.",
+				paragraphs: [
+					"I'd tried recording things my wife did that I appreciated, along with things that frustrated me. I'd gone down a similar path on The Standup Podcast, and a complaint ledger about your spouse felt toxic.",
+					'I turned it into a record for our kid: parent-teacher conferences, teacher feedback, naughty moments, and the sweet ones. Those were things I wanted us to remember.',
+				],
 			},
 		],
 	},
 ];
 
 const contents = [
+	{ id: 'notes', label: 'Dashboard', note: 'what belongs here' },
 	...groups.map((group) => ({ id: group.label.toLowerCase(), label: group.label, note: group.note })),
-	{ id: 'notes', label: 'Design notes', note: 'how it stays one app' },
 	{ id: 'recap', label: 'Recap', note: 'everything rolled up' },
-	{ id: 'lessons', label: "What I've learned", note: 'building with agents' },
-];
-
-const decisions = [
-	{
-		kicker: 'Prioritization',
-		title: 'What I pin, and what surfaces when it needs me',
-		points: [
-			"Pinned daily: tasks, limits, the kid's schedule, always shown",
-			"Surfaced on attention: bills due, who's in care, things running out",
-			'Everything else stays one tap away',
-		],
-	},
-	{
-		kicker: 'Data model',
-		title: 'I logged the judgment, not the data',
-		points: [
-			'A market entry is "a good price to buy at", not a price',
-			'A limit is "am I on pace", not a raw count',
-			'A coffee is "which one tasted better", not a log',
-		],
-	},
-	{
-		kicker: 'Consolidation',
-		title: 'Folded together, then wired to each other',
-		points: [
-			'Each tracker began as its own small POC, then moved into one app once it proved out',
-			'Now they feed each other, a finished screen-timer logs to its limit, a new gym PR posts to the journal',
-			'The whole lot rolls up into one dashboard and recap',
-		],
-	},
+	{ id: 'lessons', label: "What I've learned", note: 'keeping it usable' },
 ];
 
 const stack = [
@@ -228,71 +200,28 @@ const stack = [
 		</div>
 	</div>
 
-	<header class="mx-auto max-w-5xl px-5 pt-16 pb-12 lg:pt-24 lg:pb-14">
-		<img src={CubbyLogo.src} alt="Cubby" class="h-12" />
-		<p class="cubby-accent mt-8 text-xs tracking-wide">A personal ERP for the household</p>
-		<h1 class="mt-4 max-w-4xl text-4xl leading-[1.05] font-black tracking-tight text-balance sm:text-6xl lg:text-7xl">
-			It started with my towels and ended up managing our home.
-		</h1>
-		<p class="text-base-content/80 mt-6 max-w-2xl text-lg leading-relaxed">
-			Dozens of small daily frictions, each turned into its own tracker, then folded into one app that a household of
-			four and a dog now runs on.
-		</p>
-		<a
-			href="https://cubby.dev"
-			target="_blank"
-			rel="noopener"
-			class="cubby-visit hover:bg-base-100 mt-7 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
-			Visit site <Icon name="external-link" class="size-[1.1em]" />
-		</a>
+	<header class="mx-auto max-w-5xl px-5 pt-12 pb-14 lg:pt-16">
+		<div class="min-w-0">
+			<img src={CubbyLogo.src} alt="Cubby" class="h-12" />
+			<h1 class="mt-6 max-w-4xl text-4xl leading-[1.05] font-black tracking-tight text-balance sm:text-5xl lg:text-6xl">
+				It started with my towels and ended up managing our home.
+			</h1>
+			<p class="text-base-content/80 mt-6 max-w-2xl text-lg leading-relaxed">
+				We kept medicine timings and class schedules in Telegram, trip details in emails, and washing routines mostly in
+				our heads. I started with a towel reminder and kept adding things we needed. Now a household of four and a dog
+				uses Cubby.
+			</p>
+			<a
+				href="https://cubby.dev"
+				target="_blank"
+				rel="noopener"
+				class="cubby-visit hover:bg-base-100 mt-7 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold whitespace-nowrap transition-colors focus-visible:outline-2 focus-visible:outline-offset-2">
+				Visit site <Icon name="external-link" class="size-[1.1em]" />
+			</a>
+		</div>
 	</header>
 
-	<div class="mx-auto max-w-5xl px-5 pb-10">
-		<div class="mx-auto grid max-w-4xl items-start gap-10 sm:grid-cols-3 sm:gap-8">
-			<figure class="mx-auto w-full max-w-[280px]">
-				<Image
-					src={dashboard}
-					alt="Cubby home screen"
-					width={280}
-					densities={[1, 2, 3]}
-					loading="lazy"
-					decoding="async"
-					class="border-neutral/20 block h-auto w-full border-2 shadow-sm"
-				/>
-				<figcaption class="text-base-content/55 mt-3 text-center text-sm leading-relaxed">
-					Pinned routines and limits put what needs doing first.
-				</figcaption>
-			</figure>
-			<figure class="mx-auto w-full max-w-[280px]">
-				<Image
-					src={dashboardRoutines}
-					alt="Cubby home screen showing health, routines, and finance"
-					width={280}
-					densities={[1, 2, 3]}
-					loading="lazy"
-					decoding="async"
-					class="border-neutral/20 block h-auto w-full border-2 shadow-sm"
-				/>
-				<figcaption class="text-base-content/55 mt-3 text-center text-sm leading-relaxed">
-					Health, schedules, and finances surface when they need attention.
-				</figcaption>
-			</figure>
-			<figure class="mx-auto w-full max-w-[280px]">
-				<Image
-					src={dashboardFamily}
-					alt="Cubby home screen showing family moments, meals, and travel"
-					width={280}
-					densities={[1, 2, 3]}
-					loading="lazy"
-					decoding="async"
-					class="border-neutral/20 block h-auto w-full border-2 shadow-sm"
-				/>
-				<figcaption class="text-base-content/55 mt-3 text-center text-sm leading-relaxed">
-					Family moments, meals, and travel stay together in the same scroll.
-				</figcaption>
-			</figure>
-		</div>
-	</div>
+	<CubbyStory section="mockups" />
 
 	<details data-case-study-section-nav class="case-study-contents mx-auto max-w-5xl px-5 pb-14 sm:hidden">
 		<summary
@@ -335,28 +264,81 @@ const stack = [
 		</ul>
 	</nav>
 
+	<section id="notes" class="border-neutral/15 bg-base-100 scroll-mt-20 border-t">
+		<div class="mx-auto max-w-5xl px-5 py-16">
+			<div class="max-w-2xl">
+				<h2 class="text-2xl font-bold lg:text-3xl">What belongs on the dashboard</h2>
+				<p class="text-base-content/85 mt-4 leading-relaxed">
+					I want immediate access to the actions I use every day, especially logging tasks and limits. I need key
+					information, like today's pickup time, right there too. I accepted a slightly denser dashboard to keep those
+					within reach. A few sparse cards looks nicer, but that punishes me, I'd need many more clicks.
+				</p>
+			</div>
+			<div class="mx-auto mt-10 grid max-w-4xl items-start gap-10 sm:grid-cols-3 sm:gap-8">
+				<figure class="mx-auto w-full max-w-[280px]">
+					<Image
+						src={dashboard}
+						alt="Cubby home screen"
+						width={280}
+						densities={[1, 2, 3]}
+						loading="lazy"
+						decoding="async"
+						class="border-neutral/20 block h-auto w-full border-2 shadow-sm"
+					/>
+					<figcaption class="text-base-content/55 mt-3 text-center text-sm leading-relaxed">
+						Pinned routines and limits put what needs doing first.
+					</figcaption>
+				</figure>
+				<figure class="mx-auto w-full max-w-[280px]">
+					<Image
+						src={dashboardRoutines}
+						alt="Cubby home screen showing health, routines, and finance"
+						width={280}
+						densities={[1, 2, 3]}
+						loading="lazy"
+						decoding="async"
+						class="border-neutral/20 block h-auto w-full border-2 shadow-sm"
+					/>
+					<figcaption class="text-base-content/55 mt-3 text-center text-sm leading-relaxed">
+						Health, schedules, and finances surface when they need attention.
+					</figcaption>
+				</figure>
+				<figure class="mx-auto w-full max-w-[280px]">
+					<Image
+						src={dashboardFamily}
+						alt="Cubby home screen showing family moments, meals, and travel"
+						width={280}
+						densities={[1, 2, 3]}
+						loading="lazy"
+						decoding="async"
+						class="border-neutral/20 block h-auto w-full border-2 shadow-sm"
+					/>
+					<figcaption class="text-base-content/55 mt-3 text-center text-sm leading-relaxed">
+						Family moments, meals, and travel stay together in the same scroll.
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	</section>
+
 	<main class="mx-auto max-w-5xl px-5">
 		{
 			groups.map((group) => (
 				<section id={group.label.toLowerCase()} class="scroll-mt-20 pt-14">
-					<div class="border-neutral/20 flex items-baseline gap-3 border-b pb-3">
+					<div class="border-neutral/20 flex flex-wrap items-baseline gap-3 border-b pb-3">
 						<h2 class="text-base-content/85 text-sm font-semibold tracking-[0.18em] uppercase">{group.label}</h2>
 						<span class="text-base-content/50 text-xs">{group.note}</span>
 					</div>
+					<p class="text-base-content/80 mt-5 max-w-2xl leading-relaxed">{group.intro}</p>
 					<div>
 						{group.items.map((item) => (
-							<article class="border-neutral/10 grid gap-8 border-b py-10 last:border-b-0 sm:grid-cols-[1fr_auto] sm:gap-12">
+							<article class="border-neutral/10 grid gap-8 border-b py-10 last:border-b-0 sm:grid-cols-[minmax(0,1fr)_auto] sm:gap-12">
 								<div>
 									<h3 class="text-2xl leading-snug font-bold lg:text-3xl">{item.headline}</h3>
-									<div class="mt-5 grid gap-6">
-										<div>
-											<p class="text-base-content/50 text-[0.65rem] font-semibold tracking-wider uppercase">Problem</p>
-											<p class="text-base-content/85 mt-1.5 leading-relaxed">{item.problem}</p>
-										</div>
-										<div>
-											<p class="text-base-content/50 text-[0.65rem] font-semibold tracking-wider uppercase">Solution</p>
-											<p class="text-base-content/85 mt-1.5 leading-relaxed">{item.solution}</p>
-										</div>
+									<div class="text-base-content/85 mt-5 grid gap-4 leading-relaxed">
+										{item.paragraphs.map((paragraph) => (
+											<p>{paragraph}</p>
+										))}
 									</div>
 								</div>
 								<div class="sm:w-[230px]">
@@ -370,133 +352,64 @@ const stack = [
 		}
 	</main>
 
-	<section id="notes" class="border-neutral/15 bg-base-100 mt-20 scroll-mt-20 border-t">
-		<div class="mx-auto max-w-5xl px-5 py-16">
-			<p class="text-base-content/55 text-xs tracking-wide">Design notes</p>
-			<p class="border-primary/40 text-base-content/85 mt-5 max-w-3xl border-y py-5 text-xl leading-relaxed italic">
-				I built everything I wanted, and I never once worried about whether it was needed, because every piece started
-				from something already going wrong in my own life, so I was always the person it was for.
-			</p>
-			<p class="text-base-content/85 mt-8 max-w-3xl leading-relaxed">
-				Each piece started as its own small annoyance, and a pile of single-purpose trackers turns into a junk drawer
-				fast. A few decisions kept it one coherent app instead.
-			</p>
-
-			<div class="mt-8 grid gap-4 md:grid-cols-3">
-				{
-					decisions.map((decision) => (
-						<div class="border-neutral/20 border p-5">
-							<div class="cubby-accent text-[0.7rem] font-semibold tracking-wider uppercase">{decision.kicker}</div>
-							<p class="mt-2 font-semibold">{decision.title}</p>
-							<ul class="mt-3 grid gap-1.5">
-								{decision.points.map((point) => (
-									<li class="text-base-content/70 grid grid-cols-[1ch_1fr] gap-2 text-sm leading-relaxed">
-										<span class="bg-primary/70 mt-2 size-1.5 rounded-full" aria-hidden="true" />
-										<span>{point}</span>
-									</li>
-								))}
-							</ul>
-						</div>
-					))
-				}
-			</div>
-		</div>
-	</section>
-
 	<section id="recap" class="mx-auto max-w-5xl scroll-mt-20 px-5 py-16">
 		<div class="grid items-start gap-10 sm:grid-cols-[auto_1fr] sm:gap-12">
 			<ScreenshotSpecimen src={journalRecap} alt="Cubby journal recap" max="max-w-[230px]" />
 			<div class="sm:pt-2">
-				<h2 class="text-2xl font-bold lg:text-3xl">Everything tracked, rolled up</h2>
+				<h2 class="text-2xl font-bold lg:text-3xl">Looking back at the week</h2>
 				<p class="text-base-content/85 mt-4 max-w-md leading-relaxed">
-					A weekly and monthly recap that pulls from everything tracked, so the whole house has one place to look back
-					on.
+					The separate trackers feed a weekly and monthly recap. Meals, workouts, and family moments can be read
+					together, which gives us a reason to come back to what we logged.
 				</p>
 			</div>
 		</div>
 	</section>
 
+	<CubbyStory section="timeline" />
+
 	<section id="lessons" class="border-neutral/15 bg-base-100 scroll-mt-20 border-t">
 		<div class="mx-auto max-w-5xl px-5 py-16">
-			<h2 class="text-2xl font-bold lg:text-3xl">What I've learned</h2>
-			<p class="text-base-content/85 mt-4 max-w-2xl leading-relaxed">
-				Building Cubby has also changed how I think about agentic development.
-			</p>
-			<ul class="mt-8 grid max-w-3xl gap-6">
-				<li class="grid grid-cols-[1ch_1fr] gap-3">
-					<span class="bg-primary/70 mt-2.5 size-1.5 rounded-full" aria-hidden="true"></span>
-					<div>
-						<p class="font-semibold">Labels are great.</p>
-						<p class="text-base-content/75 mt-1 leading-relaxed">
-							I liked the floating dock when I first built it, but in actual use I misclicked it quite often. I
-							eventually went back to a conventional navigation bar with labels, which worked much better.
-						</p>
-					</div>
-				</li>
-				<li class="grid grid-cols-[1ch_1fr] gap-3">
-					<span class="bg-primary/70 mt-2.5 size-1.5 rounded-full" aria-hidden="true"></span>
-					<div>
-						<p class="font-semibold">There is such a thing as too many features.</p>
-						<p class="text-base-content/75 mt-1 leading-relaxed">
-							I never set out to build this much into Cubby. Each feature solved a real problem, but with this much
-							range it is difficult to keep the UX clean and coherent. I am still struggling with this.
-						</p>
-					</div>
-				</li>
-				<li class="grid grid-cols-[1ch_1fr] gap-3">
-					<span class="bg-primary/70 mt-2.5 size-1.5 rounded-full" aria-hidden="true"></span>
-					<div>
-						<p class="font-semibold">I need to stop and audit occasionally.</p>
-						<p class="text-base-content/75 mt-1 leading-relaxed">
-							GPT-5.6 Sol was very good at pushing out changes quickly, and also very happy to layer more things onto
-							the frontend architecture. I didn't notice how much had accumulated until I deliberately audited it. Some
-							pages were loading a lot of things they did not need, and fixing the obvious problems cut important
-							startup costs by around 40-50%.
-						</p>
-					</div>
-				</li>
-				<li class="grid grid-cols-[1ch_1fr] gap-3">
-					<span class="bg-primary/70 mt-2.5 size-1.5 rounded-full" aria-hidden="true"></span>
-					<div>
-						<p class="font-semibold">I didn't need to optimize everything.</p>
-						<p class="text-base-content/75 mt-1 leading-relaxed">
-							Once I started cleaning it up, I didn't need to optimize the slowest few percent of load times. Getting
-							rid of the large sources of waste and making the app substantially faster was enough.
-						</p>
-					</div>
-				</li>
-				<li class="grid grid-cols-[1ch_1fr] gap-3">
-					<span class="bg-primary/70 mt-2.5 size-1.5 rounded-full" aria-hidden="true"></span>
-					<div>
-						<p class="font-semibold">Taste still matters.</p>
-						<p class="text-base-content/75 mt-1 leading-relaxed">
-							Agentic development makes implementation much cheaper, but it does not make interaction design
-							automatically good. Something can work perfectly well and still feel slightly off. I still have to decide
-							what should be simpler, what feedback is excessive, and when a clever interaction is worse than an obvious
-							one.
-						</p>
-					</div>
-				</li>
-				<li class="grid grid-cols-[1ch_1fr] gap-3">
-					<span class="bg-primary/70 mt-2.5 size-1.5 rounded-full" aria-hidden="true"></span>
-					<div>
-						<p class="font-semibold">Cloudflare's free tier is goated.</p>
-						<p class="text-base-content/75 mt-1 leading-relaxed">
-							Moving the static frontend to Workers meant my VPS no longer had to serve it, and it cost me nothing. The
-							VPS could just run the services that actually needed a server.
-						</p>
-					</div>
-				</li>
-			</ul>
+			<div class="max-w-2xl">
+				<h2 class="text-2xl font-bold lg:text-3xl">Keeping it usable is the hard part</h2>
+				<p class="text-base-content/85 mt-5 leading-relaxed">
+					Each feature started with something I wanted to fix, so there was always a reason to add it. Together, they
+					make for a lot of app. Keeping it easy to use is something I'm still struggling with.
+				</p>
+				<p class="text-base-content/85 mt-4 leading-relaxed">
+					I liked the floating dock when I built it, but I kept misclicking it in actual use. Eventually I went back to
+					a conventional navigation bar with labels, which worked much better.
+				</p>
+				<p class="text-base-content/85 mt-4 leading-relaxed">
+					Building with agents makes it easy to add another feature. I still have to use it, notice what gets in the
+					way, and decide what to simplify. Sometimes that means giving up an interaction I liked building.
+				</p>
+			</div>
+			<details class="border-neutral/20 mt-10 max-w-3xl border-t pt-5">
+				<summary
+					class="cubby-accent cursor-pointer py-2 font-semibold focus-visible:outline-2 focus-visible:outline-offset-4"
+					>Development notes</summary
+				>
+				<div class="text-base-content/85 mt-5 grid gap-6 leading-relaxed">
+					<p>
+						GPT-5.6 Sol was quick to push out changes and happy to layer more onto the frontend architecture. I only
+						noticed how much had accumulated when I stopped to audit it. Some pages loaded things they didn't need, and
+						removing the obvious waste cut important startup costs by around 40-50%.
+					</p>
+					<p>
+						That was enough of an improvement for me. I left the slowest few percent of load times alone after dealing
+						with the large sources of waste.
+					</p>
+					<p>
+						Moving the static frontend to Cloudflare Workers freed the VPS to run the services that needed a server, and
+						the free tier covered the frontend.
+					</p>
+				</div>
+			</details>
 		</div>
 	</section>
 
 	<section class="border-neutral/15 bg-base-100 border-t">
 		<div class="mx-auto max-w-5xl px-5 py-12">
-			<p class="text-base-content/85 max-w-2xl text-lg leading-relaxed italic">
-				None of it was planned as a product, it just kept answering the next real problem, and the family ended up
-				living in it too.
-			</p>
 			<div class="mt-10">
 				<p class="text-base-content/55 text-xs tracking-wide">Built with</p>
 				<dl class="mt-4 max-w-md">
@@ -520,7 +433,10 @@ const stack = [
 
 <style>
 	.cubby-case-study {
-		--cubby-accent: #c42a1c;
+		--color-base-100: #faf8f2;
+		--color-base-200: #f5f2e9;
+		--color-base-content: #25382c;
+		--cubby-accent: #365c43;
 	}
 
 	.cubby-accent,
