@@ -1,76 +1,63 @@
+import dayjs from 'dayjs';
+
 export interface Job {
-	year: string;
 	title: string;
 	desc: string;
 	organization?: string;
-	startDate: string; // ISO year-month: 'YYYY-MM'
-	endDate?: string | null; // ISO year-month: 'YYYY-MM' or null for Present
+	startDate: string; // ISO date: 'YYYY-MM-DD'
+	endDate?: string | null; // ISO date: 'YYYY-MM-DD' or null for Present
 }
 
 export const jobs: Job[] = [
 	{
-		year: '2023',
 		title: 'Deputy Director, Service Delivery Digitalization',
 		desc: "Build, run stuff for citizens + employees services. Also dismantle what doesn't work.",
 		organization: 'Ministry of Defence of Singapore',
-		startDate: '2023-12',
+		startDate: '2023-12-01',
 		endDate: null,
 	},
 	{
-		year: '2021',
 		title: 'Deputy Director, Policy & Governance Directorate',
 		desc: 'Policies & funding for Govt cloud, on-prem hosting, SG Tech Stack, endpoint devices, dev toolchains.',
 		organization: 'Smart Nation Singapore',
-		startDate: '2021-11',
-		endDate: '2023-11',
+		startDate: '2021-11-01',
+		endDate: '2023-11-30',
 	},
 	{
-		year: '2018',
 		title: 'Assistant Director, Communications Technology',
 		desc: 'Developed & bought media analytic products. Led investments in NLP & CV research.',
 		organization: 'Ministry of Defence of Singapore',
-		startDate: '2018-11',
-		endDate: '2021-10',
+		startDate: '2018-11-01',
+		endDate: '2021-10-31',
 	},
 	{
-		year: '2017',
 		title: 'Communications Strategist',
 		desc: 'Developed comms campaigns and strategies.',
 		organization: 'Ministry of Defence of Singapore',
-		startDate: '2017-11',
-		endDate: '2018-10',
+		startDate: '2017-11-01',
+		endDate: '2018-10-31',
 	},
 	{
-		year: '2015',
 		title: 'Media Relations Officer',
 		desc: 'Did public relations work. Got earned media. Managed crisis comms.',
 		organization: 'Ministry of Defence of Singapore',
-		startDate: '2015-09',
-		endDate: '2017-10',
+		startDate: '2015-09-01',
+		endDate: '2017-10-31',
 	},
 	{
-		year: '2013',
 		title: 'NS Policy Executive',
 		desc: 'Led NS policies for sportsmen, leave, citizenship, exit control.',
 		organization: 'Ministry of Defence of Singapore',
-		startDate: '2013-06',
-		endDate: '2015-08',
+		startDate: '2013-06-01',
+		endDate: '2015-08-31',
 	},
 ];
 
 export function getJobDurationMonths(job: Job, referenceDate: Date = new Date()): number {
-	const [startYear, startMonth] = job.startDate.split('-').map(Number);
-	let endYear: number;
-	let endMonth: number;
+	const start = dayjs(job.startDate);
+	const end = job.endDate ? dayjs(job.endDate) : dayjs(referenceDate);
 
-	if (job.endDate) {
-		[endYear, endMonth] = job.endDate.split('-').map(Number);
-	} else {
-		endYear = referenceDate.getFullYear();
-		endMonth = referenceDate.getMonth() + 1;
-	}
-
-	return Math.max(1, (endYear - startYear) * 12 + (endMonth - startMonth) + 1);
+	return Math.max(1, Math.round(end.diff(start, 'month', true)));
 }
 
 export function formatDuration(durationMonths: number): string {
@@ -87,21 +74,22 @@ export function formatDuration(durationMonths: number): string {
 }
 
 export interface JobWithTenure extends Job {
+	year: string;
 	durationMonths: number;
 	durationText: string;
 	units: number; // 6-month blocks
-	percentage: number;
 }
 
 export function getJobsWithTenure(referenceDate: Date = new Date(), unitMonths: number = 6): JobWithTenure[] {
-	const durations = jobs.map((job) => getJobDurationMonths(job, referenceDate));
-	const totalMonths = durations.reduce((sum, d) => sum + d, 0);
+	return jobs.map((job) => {
+		const durationMonths = getJobDurationMonths(job, referenceDate);
 
-	return jobs.map((job, index) => ({
-		...job,
-		durationMonths: durations[index],
-		durationText: formatDuration(durations[index]),
-		units: Math.max(1, Math.round(durations[index] / unitMonths)),
-		percentage: Number(((durations[index] / totalMonths) * 100).toFixed(1)),
-	}));
+		return {
+			...job,
+			year: dayjs(job.startDate).format('YYYY'),
+			durationMonths,
+			durationText: formatDuration(durationMonths),
+			units: Math.max(1, Math.round(durationMonths / unitMonths)),
+		};
+	});
 }
