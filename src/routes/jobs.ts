@@ -3,7 +3,6 @@ import dayjs from 'dayjs';
 export interface Job {
 	title: string;
 	desc: string;
-	organization?: string;
 	startDate: string; // ISO date: 'YYYY-MM-DD'
 	endDate: string | null; // Inclusive ISO date: 'YYYY-MM-DD' or null for Present
 }
@@ -12,42 +11,36 @@ export const jobs: Job[] = [
 	{
 		title: 'Deputy Director, Service Delivery Digitalization',
 		desc: "Build, run stuff for citizens + employees services. Also dismantle what doesn't work.",
-		organization: 'Ministry of Defence of Singapore',
 		startDate: '2023-12-01',
 		endDate: null,
 	},
 	{
 		title: 'Deputy Director, Policy & Governance Directorate',
 		desc: 'Policies & funding for Govt cloud, on-prem hosting, SG Tech Stack, endpoint devices, dev toolchains.',
-		organization: 'Smart Nation Singapore',
 		startDate: '2021-11-01',
 		endDate: '2023-11-30',
 	},
 	{
 		title: 'Assistant Director, Communications Technology',
 		desc: 'Developed & bought media analytic products. Led investments in NLP & CV research.',
-		organization: 'Ministry of Defence of Singapore',
 		startDate: '2018-11-01',
 		endDate: '2021-10-31',
 	},
 	{
 		title: 'Communications Strategist',
 		desc: 'Developed comms campaigns and strategies.',
-		organization: 'Ministry of Defence of Singapore',
 		startDate: '2017-11-01',
 		endDate: '2018-10-31',
 	},
 	{
 		title: 'Media Relations Officer',
 		desc: 'Did public relations work. Got earned media. Managed crisis comms.',
-		organization: 'Ministry of Defence of Singapore',
 		startDate: '2015-09-01',
 		endDate: '2017-10-31',
 	},
 	{
 		title: 'NS Policy Executive',
 		desc: 'Led NS policies for sportsmen, leave, citizenship, exit control.',
-		organization: 'Ministry of Defence of Singapore',
 		startDate: '2013-06-01',
 		endDate: '2015-08-31',
 	},
