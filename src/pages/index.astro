@@ -10,7 +10,9 @@ import WebsiteFooter from '../components/WebsiteFooter.astro';
 import Projects from '../components/Projects.astro';
 import Moon from '$lib/assets/luke-stackpoole-TRXSkmJb40c-unsplash.webp';
 import CrayonPortrait from '$lib/assets/crayon-drawing.webp';
-import { jobs } from '../routes/jobs';
+import { getJobsWithTenure } from '../routes/jobs';
+
+const jobsWithTenure = getJobsWithTenure();
 
 const posts = (await getCollection('blog', ({ data }) => data.published && data.listed !== false))
 	.map(({ data }) => data)
@@ -126,11 +128,41 @@ const posts = (await getCollection('blog', ({ data }) => data.published && data.
 				</div>
 				<div class="grid content-start gap-y-10 lg:gap-y-16">
 					{
-						jobs.map((job) => (
-							<div class="group grid gap-y-1 lg:grid-cols-[5rem_minmax(0,1fr)]">
-								<div class="text-base-content/70 group-hover:text-base-content items-baseline text-sm transition-colors duration-200 lg:pt-1.5 lg:text-base">
-									{job.year}
+						jobsWithTenure.map((job) => (
+							<div class="group grid gap-y-2 lg:grid-cols-[5.5rem_minmax(0,1fr)] lg:gap-x-12">
+								{/* Left: Year & 6-Block Tenure Matrix */}
+								<div class="flex items-center gap-3 lg:flex-col lg:items-start lg:gap-2">
+									<span class="text-base-content/70 group-hover:text-base-content text-sm font-medium transition-colors duration-200 lg:pt-1.5 lg:text-base">
+										{job.year}
+									</span>
+									{/* Tenure Matrix: Segmented horizontal pill with tooltip (hover / focus) */}
+									<span
+										tabindex="0"
+										role="img"
+										class="group/tenure relative inline-flex cursor-help items-center py-0.5 select-none focus:outline-hidden"
+										aria-label={`Tenure: ${job.durationText}`}>
+										<span class="flex items-center gap-0.5" aria-hidden="true">
+											{Array.from({ length: job.units }).map(() => (
+												<span class="bg-base-content/50 h-1.5 w-2.5 rounded-full sm:w-3" />
+											))}
+										</span>
+
+										{/* Tooltip */}
+										<span
+											class="pointer-events-none absolute top-full left-0 z-30 mt-1.5 opacity-0 transition-opacity duration-150 ease-out group-hover/tenure:opacity-100 group-focus/tenure:opacity-100 group-focus-visible/tenure:opacity-100"
+											role="tooltip">
+											<span class="bg-neutral text-neutral-content relative flex items-center rounded-sm px-2 py-0.5 font-sans text-xs font-medium whitespace-nowrap shadow-md">
+												{job.durationText}
+												<span
+													class="border-b-neutral absolute -top-1 left-3 border-4 border-t-0 border-transparent"
+													aria-hidden="true"
+												/>
+											</span>
+										</span>
+									</span>
 								</div>
+
+								{/* Right: Title & Description */}
 								<div>
 									<h3 class="group-hover:text-base-content text-lg font-bold transition-colors duration-200 lg:text-2xl">
 										{job.title}
