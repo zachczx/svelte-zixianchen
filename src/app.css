@@ -281,7 +281,11 @@
 	::view-transition-old(navrail),
 	::view-transition-new(navrail),
 	::view-transition-old(logo),
-	::view-transition-new(logo) {
+	::view-transition-new(logo),
+	::view-transition-group(project-hero-cubby),
+	::view-transition-group(project-hero-lingo),
+	::view-transition-group(project-hero-apptitude),
+	::view-transition-group(project-hero-btonomics) {
 		animation-duration: var(--motion-duration-short);
 		animation-timing-function: var(--motion-ease-out);
 	}

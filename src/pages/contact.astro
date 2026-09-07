@@ -294,10 +294,23 @@ import WebsiteFooter from '../components/WebsiteFooter.astro';
 		border-inline-start: 2px solid currentColor;
 		color: var(--contact-muted);
 		line-height: 1.5;
+		transition:
+			opacity var(--motion-duration-short) var(--motion-ease-out),
+			transform var(--motion-duration-short) var(--motion-ease-out);
+		transition-behavior: allow-discrete;
 	}
 
 	.contact-status:not(.hidden) {
 		display: block;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	@starting-style {
+		.contact-status:not(.hidden) {
+			opacity: 0;
+			transform: translateY(-4px);
+		}
 	}
 
 	.contact-status-success {
@@ -320,6 +333,25 @@ import WebsiteFooter from '../components/WebsiteFooter.astro';
 		color: inherit;
 	}
 
+	@keyframes field-shake {
+		0%,
+		100% {
+			transform: translateX(0);
+		}
+		20%,
+		60% {
+			transform: translateX(-4px);
+		}
+		40%,
+		80% {
+			transform: translateX(4px);
+		}
+	}
+
+	.is-shaking {
+		animation: field-shake 250ms ease-in-out;
+	}
+
 	@media (min-width: 48rem) {
 		.contact-fields {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -337,6 +369,13 @@ import WebsiteFooter from '../components/WebsiteFooter.astro';
 		.contact-control,
 		.contact-submit {
 			transition-duration: 150ms;
+		}
+
+		.contact-status,
+		.is-shaking {
+			animation: none;
+			transform: none;
+			transition: none;
 		}
 
 		.contact-input-shell:active,
@@ -367,6 +406,14 @@ import WebsiteFooter from '../components/WebsiteFooter.astro';
 	form?.addEventListener('submit', async (event) => {
 		event.preventDefault();
 		if (!form.checkValidity()) {
+			const invalidField = form.querySelector<HTMLElement>(':invalid');
+			const target = invalidField?.closest('.contact-input-shell, .contact-control') ?? submit;
+			if (target) {
+				target.classList.remove('is-shaking');
+				void (target as HTMLElement).offsetWidth;
+				target.classList.add('is-shaking');
+				setTimeout(() => target.classList.remove('is-shaking'), 300);
+			}
 			form.reportValidity();
 			return;
 		}

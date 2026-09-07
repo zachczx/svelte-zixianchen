@@ -117,6 +117,7 @@ const featured: FeaturedProject[] = [
 							{project.kind === 'mobile' ? (
 								<div
 									data-motion="spatial"
+									style={`view-transition-name: project-hero-${project.slug};`}
 									class="flex items-end justify-center gap-2 transition-transform duration-500 ease-out group-focus-within:scale-[1.02] group-hover:scale-[1.02]">
 									{(project.shots ?? []).map((shot, shotIndex) => (
 										<div class="border-night-overlay/10 w-[30%] border">
@@ -133,7 +134,9 @@ const featured: FeaturedProject[] = [
 								</div>
 							) : (
 								project.img && (
-									<div class="border-night-overlay/10 group-hover:border-night-overlay/25 group-focus-within:border-night-overlay/25 overflow-hidden border transition-colors">
+									<div
+										style={`view-transition-name: project-hero-${project.slug};`}
+										class="border-night-overlay/10 group-hover:border-night-overlay/25 group-focus-within:border-night-overlay/25 overflow-hidden border transition-colors">
 										<Image
 											src={project.img}
 											alt={`${meta.name} screenshot`}
@@ -169,7 +172,10 @@ const featured: FeaturedProject[] = [
 								<span>{domain}</span>
 								<span class="text-night-content/75 flex items-center gap-1 font-mono">
 									Read case study
-									<Icon name="chevron-right" class="size-3.5" />
+									<Icon
+										name="chevron-right"
+										class="size-3.5 transition-transform duration-200 ease-out group-focus-within:translate-x-1 group-hover:translate-x-1"
+									/>
 								</span>
 							</div>
 						</div>
