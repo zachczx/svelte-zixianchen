@@ -5,7 +5,7 @@ export interface Job {
 	desc: string;
 	organization?: string;
 	startDate: string; // ISO date: 'YYYY-MM-DD'
-	endDate?: string | null; // Inclusive ISO date: 'YYYY-MM-DD' or null for Present
+	endDate: string | null; // Inclusive ISO date: 'YYYY-MM-DD' or null for Present
 }
 
 export const jobs: Job[] = [
@@ -55,9 +55,9 @@ export const jobs: Job[] = [
 
 export function getJobDurationMonths(job: Job, referenceDate: Date = new Date()): number {
 	const start = dayjs(job.startDate);
-	const end = job.endDate ? dayjs(job.endDate).add(1, 'day') : dayjs(referenceDate);
+	const endExclusive = job.endDate ? dayjs(job.endDate).add(1, 'day') : dayjs(referenceDate);
 
-	return Math.max(1, end.diff(start, 'month'));
+	return Math.max(1, endExclusive.diff(start, 'month'));
 }
 
 export function formatDuration(durationMonths: number): string {
