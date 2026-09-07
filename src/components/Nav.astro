@@ -265,8 +265,8 @@ const mobileLinks = links.slice(0, 5);
 				'--nav-ink': [current['--nav-ink'], `var(--nav-${palette}-ink)`],
 				'--nav-muted': [current['--nav-muted'], `var(--nav-${palette}-muted)`],
 				'--nav-rule': [current['--nav-rule'], `var(--nav-${palette}-rule)`],
-				duration: 300,
-				ease: 'linear',
+				duration: 220,
+				ease: 'cubic-bezier(0.16, 1, 0.3, 1)',
 			});
 			toneAnimation = animation;
 
@@ -300,8 +300,8 @@ const mobileLinks = links.slice(0, 5);
 				'--home-content': [current['--home-content'], palette['--home-content']],
 				'--home-muted': [current['--home-muted'], palette['--home-muted']],
 				'--home-overlay': [current['--home-overlay'], palette['--home-overlay']],
-				duration: 300,
-				ease: 'linear',
+				duration: 220,
+				ease: 'cubic-bezier(0.16, 1, 0.3, 1)',
 			});
 			homeToneAnimation = animation;
 			applyNavTone(navTone);
