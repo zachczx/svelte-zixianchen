@@ -116,18 +116,25 @@ const posts = (await getCollection('blog', ({ data }) => data.published && data.
 						target="_blank"
 						rel="me noopener noreferrer"
 						aria-label="LinkedIn (opens in a new tab)"
-						class="border-base-content/20 text-base-content/70 hover:border-base-content/40 hover:bg-base-100 hover:text-base-content focus-visible:outline-accent mt-6 inline-flex min-h-11 items-center gap-2 border px-3.5 text-sm font-semibold no-underline transition-[border-color,background-color,color] focus-visible:outline-2 focus-visible:outline-offset-2">
+						class="group/link border-base-content/20 text-base-content/70 hover:border-base-content/40 hover:bg-base-100 hover:text-base-content focus-visible:outline-accent mt-6 inline-flex min-h-11 items-center gap-2 border px-3.5 text-sm font-semibold no-underline transition-[border-color,background-color,color] focus-visible:outline-2 focus-visible:outline-offset-2">
 						LinkedIn
-						<Icon name="external-link" class="size-3.5 opacity-60" />
+						<Icon
+							name="external-link"
+							class="size-3.5 opacity-60 transition-transform duration-200 ease-out group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 group-focus-visible/link:translate-x-0.5 group-focus-visible/link:-translate-y-0.5"
+						/>
 					</a>
 				</div>
 				<div class="grid content-start gap-y-10 lg:gap-y-16">
 					{
 						jobs.map((job) => (
-							<div class="grid gap-y-1 lg:grid-cols-[5rem_minmax(0,1fr)]">
-								<div class="text-base-content/70 items-baseline text-sm lg:pt-1.5 lg:text-base">{job.year}</div>
+							<div class="group grid gap-y-1 lg:grid-cols-[5rem_minmax(0,1fr)]">
+								<div class="text-base-content/70 group-hover:text-base-content items-baseline text-sm transition-colors duration-200 lg:pt-1.5 lg:text-base">
+									{job.year}
+								</div>
 								<div>
-									<h3 class="text-lg font-bold lg:text-2xl">{job.title}</h3>
+									<h3 class="group-hover:text-base-content text-lg font-bold transition-colors duration-200 lg:text-2xl">
+										{job.title}
+									</h3>
 									<p class="text-base-content/70 text-sm leading-relaxed lg:text-base">{job.desc}</p>
 								</div>
 							</div>
@@ -155,9 +162,12 @@ const posts = (await getCollection('blog', ({ data }) => data.published && data.
 							target="_blank"
 							rel="me noopener noreferrer"
 							aria-label="GitHub (opens in a new tab)"
-							class="text-night-content/70 hover:text-night-content focus-visible:outline-accent border-night-overlay/20 hover:border-night-overlay/40 hover:bg-night-overlay/5 mt-6 inline-flex min-h-11 items-center gap-2 border px-3.5 text-sm font-semibold no-underline transition-[border-color,background-color,color] focus-visible:outline-2 focus-visible:outline-offset-2">
+							class="group/link text-night-content/70 hover:text-night-content focus-visible:outline-accent border-night-overlay/20 hover:border-night-overlay/40 hover:bg-night-overlay/5 mt-6 inline-flex min-h-11 items-center gap-2 border px-3.5 text-sm font-semibold no-underline transition-[border-color,background-color,color] focus-visible:outline-2 focus-visible:outline-offset-2">
 							GitHub
-							<Icon name="external-link" class="size-3.5 opacity-60" />
+							<Icon
+								name="external-link"
+								class="size-3.5 opacity-60 transition-transform duration-200 ease-out group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 group-focus-visible/link:translate-x-0.5 group-focus-visible/link:-translate-y-0.5"
+							/>
 						</a>
 					</div>
 

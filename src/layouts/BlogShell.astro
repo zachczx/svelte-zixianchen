@@ -37,7 +37,7 @@ const { pathName } = Astro.props;
 					stroke-width="2"
 					stroke-linecap="round"
 					stroke-linejoin="round"
-					class="size-5"
+					class="col-start-1 row-start-1 size-5"
 					aria-hidden="true">
 					<circle cx="12" cy="12" r="4"></circle><path
 						d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
@@ -52,7 +52,7 @@ const { pathName } = Astro.props;
 					stroke-width="2"
 					stroke-linecap="round"
 					stroke-linejoin="round"
-					class="hidden size-5"
+					class="col-start-1 row-start-1 size-5"
 					aria-hidden="true">
 					<path
 						d="M20.985 12.486A9 9 0 1 1 11.514 3.015c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.801.4"
@@ -70,13 +70,8 @@ const { pathName } = Astro.props;
 	const shell = document.querySelector<HTMLElement>('#blog-shell');
 	const button = document.querySelector<HTMLButtonElement>('#blog-theme-toggle');
 	if (button && shell) {
-		const lightIcon = button.querySelector<SVGElement>('[data-theme-icon="light"]');
-		const darkIcon = button.querySelector<SVGElement>('[data-theme-icon="dark"]');
-
 		const syncButton = () => {
 			const theme = shell.dataset.theme === 'light' ? 'light' : 'dark';
-			lightIcon?.classList.toggle('hidden', theme !== 'dark');
-			darkIcon?.classList.toggle('hidden', theme !== 'light');
 			button.setAttribute('aria-label', theme === 'dark' ? 'Switch blog to light mode' : 'Switch blog to dark mode');
 			button.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
 		};
@@ -92,6 +87,40 @@ const { pathName } = Astro.props;
 </script>
 
 <style>
+	#blog-theme-toggle [data-theme-icon] {
+		transition:
+			transform var(--motion-duration-short) var(--motion-ease-out),
+			opacity var(--motion-duration-short) var(--motion-ease-out);
+	}
+
+	.blog-shell[data-theme='dark'] [data-theme-icon='light'] {
+		opacity: 1;
+		transform: rotate(0deg) scale(1);
+	}
+
+	.blog-shell[data-theme='dark'] [data-theme-icon='dark'] {
+		opacity: 0;
+		transform: rotate(-45deg) scale(0.65);
+		pointer-events: none;
+	}
+
+	.blog-shell[data-theme='light'] [data-theme-icon='light'] {
+		opacity: 0;
+		transform: rotate(45deg) scale(0.65);
+		pointer-events: none;
+	}
+
+	.blog-shell[data-theme='light'] [data-theme-icon='dark'] {
+		opacity: 1;
+		transform: rotate(0deg) scale(1);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		#blog-theme-toggle [data-theme-icon] {
+			transition: none;
+		}
+	}
+
 	.blog-shell :global(.blog-prose) {
 		--tw-prose-body: var(--color-base-content);
 		--tw-prose-headings: var(--color-base-content);

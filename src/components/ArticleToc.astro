@@ -59,7 +59,8 @@ const sectionLabel = headings.length
 
 	<aside data-article-toc-desktop hidden aria-labelledby="article-contents-heading">
 		<h2 id="article-contents-heading" class="toc-heading">Contents</h2>
-		<nav aria-label="Article contents">
+		<nav aria-label="Article contents" class="relative">
+			<span data-toc-indicator class="toc-indicator" aria-hidden="true"></span>
 			<ol>
 				{
 					headings.map((heading) => (
@@ -103,6 +104,8 @@ const sectionLabel = headings.length
 			const allLinks = [...desktopLinks, ...mobileLinks];
 			const wideViewport = window.matchMedia('(min-width: 80rem)');
 			const defaultLabel = currentLabel.textContent?.trim() || `${headings.length} sections`;
+			const indicator = desktopToc.querySelector<HTMLElement>('[data-toc-indicator]');
+			const desktopNav = desktopToc.querySelector<HTMLElement>('nav');
 			let activeId: string | undefined;
 			let frame: number | undefined;
 
@@ -122,6 +125,24 @@ const sectionLabel = headings.length
 				}
 			};
 
+			const updateIndicator = (id?: string) => {
+				if (!wideViewport.matches || !indicator || !desktopNav) return;
+				if (!id) {
+					desktopNav.dataset.hasActive = 'false';
+					return;
+				}
+				const activeLink = desktopLinks.find((link) => link.dataset.tocId === id);
+				if (!activeLink) {
+					desktopNav.dataset.hasActive = 'false';
+					return;
+				}
+				const navRect = desktopNav.getBoundingClientRect();
+				const linkRect = activeLink.getBoundingClientRect();
+				const top = linkRect.top - navRect.top + (linkRect.height - 16) / 2;
+				indicator.style.transform = `translateY(${Math.round(top)}px)`;
+				desktopNav.dataset.hasActive = 'true';
+			};
+
 			const setCurrent = (id?: string) => {
 				if (activeId === id) return;
 				activeId = id;
@@ -137,6 +158,9 @@ const sectionLabel = headings.length
 				if (wideViewport.matches && id) {
 					const activeLink = desktopLinks.find((link) => link.dataset.tocId === id);
 					if (activeLink) keepLinkVisible(desktopToc, activeLink);
+					updateIndicator(id);
+				} else if (desktopNav) {
+					desktopNav.dataset.hasActive = 'false';
 				}
 
 				if (mobileToc.open && id) {
@@ -160,6 +184,7 @@ const sectionLabel = headings.length
 					current = headings.at(-1);
 				}
 				setCurrent(current?.id);
+				if (wideViewport.matches) updateIndicator(current?.id ?? activeId);
 			};
 
 			const queueSync = () => {
@@ -352,19 +377,23 @@ const sectionLabel = headings.length
 		font-size: 0.8125rem;
 	}
 
-	[data-article-toc-desktop] a[aria-current='location'] {
-		position: relative;
-	}
-
-	[data-article-toc-desktop] a[aria-current='location']::before {
+	.toc-indicator {
 		position: absolute;
-		inset-block-start: 50%;
 		inset-inline-start: -0.75rem;
+		inset-block-start: 0;
 		width: 0.125rem;
 		height: 1rem;
 		background: var(--blog-night-accent);
-		content: '';
-		transform: translateY(-50%);
+		opacity: 0;
+		transform: translateY(0);
+		transition:
+			transform var(--motion-duration-short) var(--motion-ease-out),
+			opacity var(--motion-duration-short) var(--motion-ease-out);
+		pointer-events: none;
+	}
+
+	[data-article-toc-desktop] nav[data-has-active='true'] .toc-indicator {
+		opacity: 1;
 	}
 
 	[data-article-toc-desktop] a:focus-visible {
@@ -429,7 +458,8 @@ const sectionLabel = headings.length
 		.contents-chevron,
 		.article-contents a,
 		.article-contents .toc-link-marker,
-		[data-article-toc-desktop] a {
+		[data-article-toc-desktop] a,
+		.toc-indicator {
 			transition-duration: 0ms;
 		}
 	}

@@ -50,7 +50,7 @@ const filters = [
 			<button
 				data-clear-search
 				type="button"
-				class="text-base-content/45 hover:bg-base-content/[0.07] hover:text-base-content focus-visible:outline-accent absolute top-1/2 right-2 hidden size-11 -translate-y-1/2 cursor-pointer place-items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2"
+				class="text-base-content/45 hover:bg-base-content/[0.07] hover:text-base-content focus-visible:outline-accent absolute top-1/2 right-2 grid size-11 -translate-y-1/2 cursor-pointer place-items-center rounded focus-visible:outline-2 focus-visible:outline-offset-2"
 				aria-label="Clear blog search">
 				<Icon name="x" class="size-4" />
 			</button>
@@ -67,7 +67,7 @@ const filters = [
 						type="button"
 						aria-pressed={index === 0 ? 'true' : 'false'}
 						class:list={[
-							'focus-visible:outline-accent inline-flex min-h-11 cursor-pointer items-center gap-2 rounded px-3 font-mono text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2',
+							'focus-visible:outline-accent inline-flex min-h-11 cursor-pointer items-center gap-2 rounded px-3 font-mono text-sm transition-[background-color,color] duration-150 ease-out focus-visible:outline-2 focus-visible:outline-offset-2',
 							index === 0
 								? 'bg-accent text-neutral'
 								: 'text-base-content/65 hover:bg-base-content/[0.06] hover:text-base-content',
@@ -76,7 +76,7 @@ const filters = [
 						<span
 							data-filter-count
 							class:list={[
-								'min-w-5 rounded-sm px-1.5 py-0.5 text-center text-xs leading-none tabular-nums',
+								'min-w-5 rounded-sm px-1.5 py-0.5 text-center text-xs leading-none tabular-nums transition-[background-color,color] duration-150 ease-out',
 								index === 0 ? 'bg-neutral/15 text-neutral/80' : 'bg-accent/20 text-base-content/75',
 							]}>
 							{filter.count}
@@ -344,8 +344,7 @@ const filters = [
 		};
 
 		const refresh = () => {
-			clearButton.classList.toggle('hidden', !query);
-			clearButton.classList.toggle('grid', Boolean(query));
+			clearButton.classList.toggle('is-visible', Boolean(query));
 			syncFilters();
 			void runSearch();
 		};
@@ -438,5 +437,29 @@ const filters = [
 
 	[data-search-results].is-refreshing {
 		opacity: 0.45;
+	}
+
+	[data-clear-search] {
+		visibility: hidden;
+		opacity: 0;
+		transform: translateY(-50%) scale(0.8);
+		pointer-events: none;
+		transition:
+			opacity var(--motion-duration-micro) var(--motion-ease-out),
+			transform var(--motion-duration-micro) var(--motion-ease-out),
+			visibility var(--motion-duration-micro) var(--motion-ease-out);
+	}
+
+	[data-clear-search].is-visible {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(-50%) scale(1);
+		pointer-events: auto;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		[data-clear-search] {
+			transition: none;
+		}
 	}
 </style>
