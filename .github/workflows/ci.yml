@@ -5,17 +5,80 @@ on:
     branches:
       - main
   pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - edited
   workflow_dispatch:
 
 permissions:
   contents: read
 
+# Keep lightweight PR-policy edits separate from full CI so changing a title or
+# description does not cancel an in-progress build for the same pull request.
 concurrency:
-  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}-${{ github.event.action == 'edited' && 'policy-edit' || 'build' }}
   cancel-in-progress: true
 
 jobs:
+  pr-title:
+    name: PR title policy
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+
+    steps:
+      - name: Validate pull request title
+        shell: bash
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          if [[ "$PR_AUTHOR" == "dependabot[bot]" ]]; then
+            echo "Dependabot PR: keeping the bot's dependency title convention."
+            exit 0
+          fi
+
+          prefix_pattern='^(feat|fix|refactor|chore|docs|test|perf|style|build|ci|revert)!?$'
+
+          if [[ "$PR_TITLE" != *": "* ]]; then
+            echo "::error::Pull request title must use Conventional Commit format: <type>: <summary>"
+            echo "  $PR_TITLE"
+            exit 1
+          fi
+
+          prefix="${PR_TITLE%%:*}"
+          summary="${PR_TITLE#*: }"
+
+          if [[ ! "$prefix" =~ $prefix_pattern ]]; then
+            echo "::error::Pull request title has an invalid Conventional Commit prefix: '$prefix'"
+            echo "Scopes are not used in this repository."
+            echo "Allowed types: feat, fix, refactor, chore, docs, test, perf, style, build, ci, revert."
+            exit 1
+          fi
+
+          if [[ -z "$summary" ]]; then
+            echo "::error::Pull request title must include a summary after ': '."
+            exit 1
+          fi
+
+          type="${prefix%!}"
+          body_lower="${PR_BODY,,}"
+          if [[ "$type" == "style" && "$body_lower" != *"code style"* ]]; then
+            echo "::error::Pull request title uses the 'style' type but the PR body does not contain the phrase 'code style' (case-insensitive)."
+            echo "Use style only for code style changes such as formatting or whitespace; use feat, fix, or refactor for UI changes."
+            exit 1
+          fi
+
   check:
+    name: Check
+    needs: pr-title
+    if: >-
+      always() &&
+      (needs.pr-title.result == 'success' || needs.pr-title.result == 'skipped') &&
+      (github.event_name != 'pull_request' || github.event.action != 'edited')
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
