@@ -52,6 +52,8 @@ For rendering or CSS changes, verify the affected routes at representative mobil
 
 Recent commits use Conventional Commit-style prefixes such as `feat:`, `fix:`, `refactor:`, and `style:`. Keep commit subjects imperative and scoped to one change. Do not include a parenthesized scope in commit subjects; use `feat: ...`, not `feat(sitemap): ...`.
 
+Pull request titles follow the same unscoped Conventional Commit format and are enforced by CI. Do not use parenthesized scopes in pull request titles.
+
 Do not push commits or branches unless the user explicitly asks for a push. A request to commit does not imply permission to push.
 
 Pull requests should include a short summary, linked issue when applicable, commands run, and screenshots or screen recordings for visual changes. Call out client-JavaScript changes, asset additions, and any deployment implications for Cloudflare or static output.
