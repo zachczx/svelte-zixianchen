@@ -87,5 +87,3 @@ I've felt all of the stuff I wrote above. But that's unfortunately the burden of
 ## Closing thoughts
 
 I don't have all the answers, and I'm honestly still figuring a lot of this out as I go. If you're on my team and something here doesn't sit right, or you just need to let off some steam, my Venting Machine FormSG form is always open. And please keep using my Rate Zixian form too, I really read everything.
-
-Look out for the next essay :)
