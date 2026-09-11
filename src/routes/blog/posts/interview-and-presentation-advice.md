@@ -69,9 +69,9 @@ The start of an interview is usually the point where I'm most conscious that I'm
 
 So I rehearse the first few lines more than the rest. I think about how I'll introduce myself, what I might say if they start with some version of "tell us about yourself", and roughly how I want that first answer to begin. For a presentation, it's the opening and how I'm going to frame the thing I'm there to talk about.
 
-I won't memorize a 2 min speech (that's too robotic alrady), but I'll practise the opening disproportionately hard. I want the first minute or two to feel familiar enough that I know where I'm going, without sounding like I'm reciting something.
+I won't memorize a 2 min speech (that's too robotic alrady), but I'll practice the opening disproportionately hard. I want the first minute or two to feel familiar enough that I know where I'm going, without sounding like I'm reciting something.
 
-Once those first couple of minutes are out of the way, I've settled down, and then I can stop performing the preparation and start having the conversation.
+Once those first couple of minutes are out of the way, I've settled down, and then I can stop performing the prep and start having the conversation.
 
 ## Mentally playing through the whole interview
 
@@ -121,7 +121,7 @@ For a leadership interview, I might think through questions like:
 
 ## Preparing for the questions nobody wants to ask
 
-This is probably the more useful part of the preparation because if there's a weak part of my experience, something that went badly, an awkward decision I made or an obvious question hanging over a project, I'd rather wrestle with it at home than discover my answer while several people are staring at me.
+This is probably the more useful part of the prep because if there's a weak part of my experience, something that went badly, an awkward decision I made or an obvious question hanging over a project, I'd rather wrestle with it at home than discover my answer while several people are staring at me.
 
 I do the same thing with presentations. I look at the deck and ask where my evidence is weakest, which recommendation is likely to annoy someone, whether I've quietly made an assumption that somebody senior will spot immediately, and which slide I'm praying nobody asks the obvious follow-up about.
 
@@ -129,7 +129,7 @@ It's quite comforting when the difficult question eventually appears and I reali
 
 ## Getting the key message right
 
-Before I practise anything, I need to know what I'm actually trying to get across. For an interview, what are the two or three things I want them to understand about me by the end? For a presentation, what's the one conclusion or decision I need the room to leave with? If I can't state that cleanly to myself, practising the delivery isn't going to fix it.
+Before I practice anything, I need to know what I'm actually trying to get across. For an interview, what are the two or three things I want them to understand about me by the end? For a presentation, what's the one conclusion or decision I need the room to leave with? If I can't state that cleanly to myself, practicing the delivery isn't going to fix it.
 
 The panel controls the questions, and I still go in knowing the things about me or my experience that I hope they walk away understanding. I've definitely left conversations before and thought:
 
@@ -173,13 +173,13 @@ Please don't reply:
 
 If there's a natural opening in the conversation, I'll engage with it and see where it goes. If everybody is obviously trying to end the interview, adding a bonus five-minute sales pitch is probably not going to save anything.
 
-## Preparation helps me sound more like myself
+## Prep helps me sound more like myself
 
 Someone once asked whether I remain my "true authentic self" during interviews or put on a different image. I think I'm still myself, obviously with a stronger filter than when I'm having lunch with my friends. I know I'm being assessed, so I choose my words more carefully and suppress some of the stupid shit I might otherwise say.
 
 My views stay mine though. If I've got a strong view about something relevant, I'd rather explain what I actually think and why. Whoever hires me will meet the real version eventually, and I've got to work there, so successfully hiding everything inconvenient about me for an hour doesn't seem particularly useful to either side.
 
-Preparation helps cos the first version of an honest answer can be rubbish. I might ramble, bury the point under five caveats, give way too much background or take forever to work out how I want to say it. Practising means I've already gone through some of that mess before the interview.
+Prep helps cos the first version of an honest answer can be rubbish. I might ramble, bury the point under five caveats, give way too much background or take forever to work out how I want to say it. Practicing means I've already gone through some of that mess before the interview.
 
 Once I'm comfortable with my own material, I also have more attention left for the people in front of me. I can listen properly, shorten an answer when they clearly get it, go deeper when somebody seems interested, and change direction when the question isn't what I expected.
 
