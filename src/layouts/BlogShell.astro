@@ -1,6 +1,7 @@
 ---
 import Nav from '../components/Nav.astro';
 import WebsiteFooter from '../components/WebsiteFooter.astro';
+import PostHog from '../components/PostHog.astro';
 
 interface Props {
 	pathName: string;
@@ -8,6 +9,8 @@ interface Props {
 
 const { pathName } = Astro.props;
 ---
+
+<PostHog />
 
 <div
 	id="blog-shell"

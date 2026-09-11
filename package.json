@@ -11,6 +11,7 @@
 		"dev:worker": "pnpm build && pnpm db:migrate:local && wrangler dev",
 		"build": "astro build && pagefind --site dist && node scripts/validate-static-build.mjs && node scripts/validate-client-boundaries.mjs",
 		"preview": "astro preview",
+		"test:feedback": "node scripts/test-feedback.mjs",
 		"cf-typegen": "wrangler types",
 		"check": "pnpm cf-typegen && pnpm check:astro",
 		"check:astro": "astro check",
@@ -24,6 +25,7 @@
 	"devDependencies": {
 		"@astrojs/check": "^0.9.10",
 		"@eslint/js": "^10.0.1",
+		"@playwright/test": "^1.63.0",
 		"@shikijs/transformers": "^4.4.3",
 		"@tailwindcss/typography": "^0.5.20",
 		"@types/node": "^26.4.1",
@@ -52,6 +54,7 @@
 		"@tailwindcss/vite": "4.3.3",
 		"animejs": "^4.5.0",
 		"dayjs": "^1.11.23",
+		"posthog-js": "^1.429.1",
 		"sharp": "^0.35.4",
 		"wrangler": "^4.129.0"
 	}

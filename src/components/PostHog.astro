@@ -1,0 +1,29 @@
+<script>
+	import { feedbackConfig } from '../lib/feedback-config';
+
+	const config = feedbackConfig(import.meta.env, window.location.hostname);
+
+	// Local testing requires an explicit opt-in and a separate project token.
+	if (config) {
+		import('posthog-js')
+			.then(({ default: posthog }) => {
+				posthog.init(config.key, {
+					api_host: config.apiHost,
+					ui_host: config.uiHost,
+					defaults: '2026-05-30',
+					capture_pageview: true,
+					capture_pageleave: false,
+					autocapture: false,
+					capture_dead_clicks: false,
+					capture_exceptions: false,
+					capture_performance: false,
+					disable_session_recording: true,
+					person_profiles: 'identified_only',
+					disable_surveys: false,
+				});
+			})
+			.catch(() => {
+				// Optional feedback must not interrupt the site when the SDK is unavailable.
+			});
+	}
+</script>
