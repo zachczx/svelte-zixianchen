@@ -91,6 +91,24 @@ I think of it as the nerdier office-worker version of what athletes do when they
 
 This is probably the purest version of making fewer things novel on the day. I cannot know what the panel will ask. I can at least make the setting itself less unfamiliar.
 
+## I rehearse screwing up too
+
+The mental run-through is not always a perfect interview where I answer everything beautifully and leave to imaginary applause. I think about what happens when something goes wrong too.
+
+Maybe somebody asks something I genuinely did not anticipate. Maybe I start an answer and realize halfway through that I have gone down the wrong path. Maybe I know I could have answered the previous question much better. Maybe my mind just goes completely blank. Presentations have their own versions: I lose my place, somebody challenges an assumption I had not considered, the discussion goes somewhere strange, or a slide that seemed obvious at home suddenly needs much more explanation in the room.
+
+I think it is worth preparing for those moments because the first mistake is often much less damaging than what we do after it.
+
+If my mind goes blank, I can pause. If I do not know, I can say I have not dealt with that exact situation and reason from what I do know. If I realize an answer is going nowhere, I can stop digging, reset and answer the actual question. If I think later that I answered something badly, I can correct it briefly if a natural opening appears instead of spending the next ten minutes desperately trying to manufacture one.
+
+The important part is to keep moving.
+
+You already shat the bed. Do not spend the rest of the interview rolling around in it.
+
+I do not want to announce that I am nervous, apologize three times, visibly replay the mistake in my head, or let one lousy answer contaminate the next five. Quite often the panel has already moved on. In a presentation, the room may barely register a stumble that feels enormous to me.
+
+Recovery is part of the performance too. I cannot prepare for every thing that might go wrong, but I can prepare not to fall apart when one of them does.
+
 ## Come on, some questions are predictable
 
 There will always be questions I did not expect, but interviews have enough predictable bits that I can think through the obvious ones beforehand. You can normally anticipate quite a lot from the role, your own experience and what the organization is dealing with.
