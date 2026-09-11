@@ -13,11 +13,11 @@ const { path, title } = Astro.props;
 	data-pagefind-ignore
 	hidden
 	class="article-feedback mx-5 mt-10 border-t pt-6 sm:mx-6 xl:mx-14"
-	aria-label="Article feedback">
+	aria-label="Post feedback">
 	<form>
 		<fieldset>
-			<legend class="text-xl font-semibold">Was this article relevant to you?</legend>
-			<p class="feedback-hint mt-2 text-base">Help me improve this article.</p>
+			<legend class="text-xl font-semibold">Was this post relevant to you?</legend>
+			<p class="feedback-hint mt-2 text-base">Help me improve this post.</p>
 			<div class="mt-4 flex flex-wrap gap-3">
 				{
 					['Yes', 'Somewhat', 'No'].map((answer) => (

@@ -13,7 +13,7 @@ const survey = {
 		{
 			id: 'clarity',
 			type: 'single_choice',
-			question: 'Was this article relevant to you?',
+			question: 'Was this post relevant to you?',
 			choices: ['Yes', 'Somewhat', 'No'],
 		},
 		{ id: 'detail', type: 'open', question: 'What could make it more useful?', optional: true },
@@ -96,7 +96,7 @@ async function interceptPostHog(page: Page, blocked = false) {
 
 const article = '/blog/so-you-want-bigger-job';
 const otherArticle = '/blog/adding-backblaze-b2-bucket-to-coolify';
-const section = (page: Page) => page.getByRole('region', { name: 'Article feedback' });
+const section = (page: Page) => page.getByRole('region', { name: 'Post feedback' });
 async function choose(page: Page, answer = 'Somewhat') {
 	await expect(section(page)).toBeVisible();
 	await section(page).getByText(answer, { exact: true }).click();

@@ -11,7 +11,7 @@ Reviewed 11 September 2026. This is a focused pattern audit, not evidence that a
 
 ## Chosen interaction
 
-An inline form immediately after the article, before series/related navigation. The approved wording is �Was this article relevant to you?� with Yes / Somewhat / No. All answers have equal visual weight. A visible accent-filled Send feedback button makes the action clear; choosing an answer enables it and reveals an optional comment. The explicit send adds one action compared with one-click voting, but avoids recording accidental choices and sends one complete response rather than stitching partial events together.
+An inline form immediately after the article, before series/related navigation. The approved wording is �Was this post relevant to you?� with Yes / Somewhat / No. All answers have equal visual weight. A visible accent-filled Send feedback button makes the action clear; choosing an answer enables it and reveals an optional comment. The explicit send adds one action compared with one-click voting, but avoids recording accidental choices and sends one complete response rather than stitching partial events together.
 
 Native radio semantics support keyboard navigation. Theme tokens support both blog themes. The form confirms only an accepted capture response, preserves failed submissions for retry, remembers successful completion per article in browser storage, and counts impressions only when visible. No popup, forced rating, public vote totals, login, or new Worker endpoint.
 
