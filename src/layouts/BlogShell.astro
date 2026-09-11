@@ -1,0 +1,162 @@
+---
+import Nav from '../components/Nav.astro';
+import WebsiteFooter from '../components/WebsiteFooter.astro';
+import PostHog from '../components/PostHog.astro';
+
+interface Props {
+	pathName: string;
+}
+
+const { pathName } = Astro.props;
+---
+
+<PostHog />
+
+<div
+	id="blog-shell"
+	data-theme="dark"
+	class="blog-shell bg-base-200 text-base-content relative flex w-full flex-col items-center justify-center overflow-x-clip transition-colors">
+	<script is:inline>
+		(() => {
+			const shell = document.currentScript?.parentElement;
+			const savedTheme = localStorage.getItem('blog-theme');
+			if (shell && (savedTheme === 'light' || savedTheme === 'dark')) shell.dataset.theme = savedTheme;
+		})();
+	</script>
+	<div id="container" class="z-10 grid min-h-dvh w-full max-w-3xl grid-cols-[minmax(0,1fr)] pt-20 pb-6">
+		<div class="w-full min-w-0">
+			<button
+				id="blog-theme-toggle"
+				type="button"
+				class="border-base-content/20 bg-base-100/80 text-base-content hover:bg-base-300 focus-visible:outline-accent absolute top-16 right-4 z-20 grid size-11 cursor-pointer place-items-center rounded-full border backdrop-blur transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 sm:top-16 sm:right-6"
+				aria-label="Switch blog to light mode"
+				title="Switch to light mode">
+				<svg
+					data-theme-icon="light"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="col-start-1 row-start-1 size-5"
+					aria-hidden="true">
+					<circle cx="12" cy="12" r="4"></circle><path
+						d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+					></path>
+				</svg>
+				<svg
+					data-theme-icon="dark"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="col-start-1 row-start-1 size-5"
+					aria-hidden="true">
+					<path
+						d="M20.985 12.486A9 9 0 1 1 11.514 3.015c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.801.4"
+					></path>
+				</svg>
+			</button>
+			<main><slot /></main>
+		</div>
+		<WebsiteFooter />
+	</div>
+	<Nav navCurrent="" {pathName} />
+</div>
+
+<script>
+	const shell = document.querySelector<HTMLElement>('#blog-shell');
+	const button = document.querySelector<HTMLButtonElement>('#blog-theme-toggle');
+	if (button && shell) {
+		const syncButton = () => {
+			const theme = shell.dataset.theme === 'light' ? 'light' : 'dark';
+			button.setAttribute('aria-label', theme === 'dark' ? 'Switch blog to light mode' : 'Switch blog to dark mode');
+			button.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+		};
+
+		syncButton();
+		button.addEventListener('click', () => {
+			const theme = shell.dataset.theme === 'dark' ? 'light' : 'dark';
+			shell.dataset.theme = theme;
+			localStorage.setItem('blog-theme', theme);
+			syncButton();
+		});
+	}
+</script>
+
+<style>
+	#blog-theme-toggle [data-theme-icon] {
+		transition:
+			transform var(--motion-duration-short) var(--motion-ease-out),
+			opacity var(--motion-duration-short) var(--motion-ease-out);
+	}
+
+	.blog-shell[data-theme='dark'] [data-theme-icon='light'] {
+		opacity: 1;
+		transform: rotate(0deg) scale(1);
+	}
+
+	.blog-shell[data-theme='dark'] [data-theme-icon='dark'] {
+		opacity: 0;
+		transform: rotate(-45deg) scale(0.65);
+		pointer-events: none;
+	}
+
+	.blog-shell[data-theme='light'] [data-theme-icon='light'] {
+		opacity: 0;
+		transform: rotate(45deg) scale(0.65);
+		pointer-events: none;
+	}
+
+	.blog-shell[data-theme='light'] [data-theme-icon='dark'] {
+		opacity: 1;
+		transform: rotate(0deg) scale(1);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		#blog-theme-toggle [data-theme-icon] {
+			transition: none;
+		}
+	}
+
+	.blog-shell :global(.blog-prose) {
+		--tw-prose-body: var(--color-base-content);
+		--tw-prose-headings: var(--color-base-content);
+		--tw-prose-lead: color-mix(in oklab, var(--color-base-content) 80%, transparent);
+		--tw-prose-links: var(--color-base-content);
+		--tw-prose-bold: var(--color-base-content);
+		--tw-prose-counters: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+		--tw-prose-bullets: color-mix(in oklab, var(--color-base-content) 50%, transparent);
+		--tw-prose-hr: color-mix(in oklab, var(--color-base-content) 20%, transparent);
+		--tw-prose-quotes: color-mix(in oklab, var(--color-base-content) 80%, transparent);
+		--tw-prose-quote-borders: color-mix(in oklab, var(--color-base-content) 30%, transparent);
+		--tw-prose-captions: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+		--tw-prose-code: var(--color-base-content);
+	}
+
+	.blog-shell :global([data-blog-index] > main + div),
+	.blog-shell :global(article[data-article-content] + div),
+	.blog-shell > #container > div > main > :global(main + div) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+	}
+
+	.blog-shell :global([data-blog-index] > main + div)::before,
+	.blog-shell :global([data-blog-index] > main + div)::after,
+	.blog-shell :global(article[data-article-content] + div)::before,
+	.blog-shell :global(article[data-article-content] + div)::after,
+	.blog-shell > #container > div > main > :global(main + div)::before,
+	.blog-shell > #container > div > main > :global(main + div)::after {
+		content: '';
+		width: 2.5rem;
+		height: 1px;
+		background: currentColor;
+	}
+</style>
