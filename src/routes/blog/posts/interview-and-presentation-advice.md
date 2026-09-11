@@ -47,7 +47,7 @@ The same experience can be useful in very different ways. A difficult project mi
 
 For most interviews, saying the answers aloud is enough for me. The mirror comes out when the interview feels especially consequential, or when I'm rusty enough that I want to see what I actually look like while answering.
 
-I did this particularly for my Public Service Leadership Programme (PSLP) application eons ago. There were a few interviews in that process, some with pretty big-shot panels, and I practiced those in front of a mirror a lot. Tbh I found it to work well for me, or at least I thought it did. By the time I got into the actual interview, I'd already seen myself say the answers enough times that the whole thing felt much less foreign.
+I did this particularly for one of my applications eons ago. There were a few interviews in that process with some panel interviews, and I practiced those in front of a mirror a lot. Tbh I found it to work well for me, or at least I thought it did. By the time I got into the actual interview, I'd already seen myself say the answers enough times that the whole thing felt much less foreign.
 
 I can see it being useful when you're pretty new to interviews too, because you pick up your habits quickly. Once you know what you look and sound like, the mirror can go back to being a mirror.
 
