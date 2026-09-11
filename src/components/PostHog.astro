@@ -1,5 +1,6 @@
 <script>
 	import { feedbackConfig } from '../lib/feedback-config';
+	import { articleFeedback } from '../lib/article-feedback';
 
 	const config = feedbackConfig(import.meta.env, window.location.hostname);
 
@@ -19,7 +20,10 @@
 					capture_performance: false,
 					disable_session_recording: true,
 					person_profiles: 'identified_only',
-					disable_surveys: false,
+					disable_surveys: true,
+				});
+				void articleFeedback(posthog, config).catch(() => {
+					// Unavailable feedback stays hidden without interrupting reading.
 				});
 			})
 			.catch(() => {

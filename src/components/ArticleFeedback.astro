@@ -1,0 +1,95 @@
+---
+interface Props {
+	path: string;
+	title: string;
+}
+const { path, title } = Astro.props;
+---
+
+<section
+	data-article-feedback
+	data-article-path={path}
+	data-article-title={title}
+	data-pagefind-ignore
+	hidden
+	class="article-feedback mx-5 mt-10 border-t pt-6 sm:mx-6 xl:mx-14"
+	aria-label="Article feedback">
+	<form>
+		<fieldset>
+			<legend class="text-xl font-semibold">Was this article relevant to you?</legend>
+			<p class="feedback-hint mt-2 text-base">Help me improve this article.</p>
+			<div class="mt-4 flex flex-wrap gap-3">
+				{
+					['Yes', 'Somewhat', 'No'].map((answer) => (
+						<label class="feedback-choice relative cursor-pointer">
+							<input class="sr-only" type="radio" name="relevance" value={answer} required />
+							<span class="inline-flex min-h-11 min-w-20 items-center justify-center rounded-md border px-4 py-2">
+								{answer}
+							</span>
+						</label>
+					))
+				}
+			</div>
+		</fieldset>
+		<div data-feedback-detail hidden class="mt-5">
+			<label for="article-feedback-note" data-followup-label class="block text-base"
+				>What could make it more useful? (optional)</label
+			>
+			<textarea
+				id="article-feedback-note"
+				maxlength="2000"
+				rows="3"
+				class="mt-2 block w-full resize-y rounded-md border px-3 py-2"></textarea>
+		</div>
+		<button type="submit" disabled class="feedback-submit mt-4 min-h-11 rounded-md px-5 py-2 font-semibold"
+			>Send feedback</button
+		>
+		<p role="alert" class="mt-2 text-sm"></p>
+	</form>
+	<p role="status" tabindex="-1" class="text-base"></p>
+</section>
+<style>
+	.article-feedback {
+		border-color: var(--blog-night-rule);
+		color: var(--blog-night-text);
+	}
+	.feedback-choice span,
+	textarea {
+		border-color: var(--blog-night-muted);
+		background: var(--blog-night-surface);
+	}
+	.feedback-choice:hover span {
+		border-color: var(--blog-night-accent);
+		background: var(--blog-night-surface-hover);
+	}
+	.feedback-choice input:checked + span {
+		border-color: var(--blog-night-accent);
+		color: var(--blog-night-accent);
+		box-shadow: inset 0 0 0 1px var(--blog-night-accent);
+	}
+	.feedback-choice input:focus-visible + span,
+	textarea:focus-visible,
+	button:focus-visible {
+		outline: 2px solid var(--blog-night-accent);
+		outline-offset: 3px;
+	}
+	textarea {
+		color: inherit;
+		caret-color: var(--blog-night-accent);
+	}
+	.feedback-submit {
+		background: #ffd65a;
+		color: #0e0e0e;
+		cursor: pointer;
+	}
+	.feedback-submit:hover {
+		filter: brightness(1.1);
+	}
+	.feedback-submit:disabled {
+		opacity: 0.85;
+		cursor: not-allowed;
+	}
+	.feedback-hint {
+		color: var(--blog-night-muted);
+	}
+</style>

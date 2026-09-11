@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import { getCollection, render } from 'astro:content';
 import dayjs from 'dayjs';
 import ArticleToc from '../../components/ArticleToc.astro';
+import ArticleFeedback from '../../components/ArticleFeedback.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogShell from '../../layouts/BlogShell.astro';
 import { resolveBlogSeriesForPost, validateBlogSeriesPosts } from '$lib/blogSeries';
@@ -181,6 +182,7 @@ const structuredData = [
 			]}>
 			<Content />
 		</article>
+		{post.data.listed !== false && <ArticleFeedback path={`/blog/${post.data.slug}`} title={post.data.title} />}
 		<div class="text-base-content/30 mt-10 px-5 text-center font-mono text-xs tracking-widest sm:px-6 xl:px-14">
 			END OF POST
 		</div>
