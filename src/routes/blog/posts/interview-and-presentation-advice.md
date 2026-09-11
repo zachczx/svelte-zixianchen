@@ -67,7 +67,11 @@ Recording also exposes how long the answers really are. If I thought I gave a qu
 
 The start of an interview is usually the point where I'm most conscious that I'm being interviewed. Once the conversation gets going, I tend to settle down and it feels much easier.
 
-So I rehearse the first few lines more than the rest. I think about how I'll introduce myself, what I might say if they start with some version of "tell us about yourself", and roughly how I want that first answer to begin.
+So I rehearse the first few lines more than the rest. I think about how I'll introduce myself, what I might say if they start with some version of "tell us about yourself", and roughly how I want that first answer to begin. For a presentation, it's the opening and how I'm going to frame the thing I'm there to talk about.
+
+I won't memorize a 2 min speech (that's too robotic alrady), but I'll practise the opening disproportionately hard. I want the first minute or two to feel familiar enough that I know where I'm going, without sounding like I'm reciting something.
+
+Once those first couple of minutes are out of the way, I've settled down, and then I can stop performing the preparation and start having the conversation.
 
 ## Mentally playing through the whole interview
 
@@ -123,7 +127,9 @@ I do the same thing with presentations. I look at the deck and ask where my evid
 
 It's quite comforting when the difficult question eventually appears and I realize I've already fought with some version of it before. I may still need to think because the question will rarely be identical, but at least I'm not starting from zero.
 
-## Deciding what they should remember
+## Getting the key message right
+
+Before I practise anything, I need to know what I'm actually trying to get across. For an interview, what are the two or three things I want them to understand about me by the end? For a presentation, what's the one conclusion or decision I need the room to leave with? If I can't state that cleanly to myself, practising the delivery isn't going to fix it.
 
 The panel controls the questions, and I still go in knowing the things about me or my experience that I hope they walk away understanding. I've definitely left conversations before and thought:
 
