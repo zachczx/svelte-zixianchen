@@ -107,7 +107,7 @@ You already shat the bed. Do not spend the rest of the interview rolling around 
 
 I do not want to announce that I am nervous, apologize three times, visibly replay the mistake in my head, or let one lousy answer contaminate the next five. Quite often the panel has already moved on. In a presentation, the room may barely register a stumble that feels enormous to me.
 
-Recovery is part of the performance too. I cannot prepare for every thing that might go wrong, but I can prepare not to fall apart when one of them does.
+Recovery is part of the performance too. I cannot prepare for everything that might go wrong, but I can prepare not to fall apart when one of those things does.
 
 ## Come on, some questions are predictable
 
