@@ -1,0 +1,348 @@
+<div class="mx-auto max-w-5xl px-5 py-12 sm:py-16">
+	<header class="max-w-2xl">
+		<h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Designing Cubby by living with it</h2>
+		<p class="mt-5 leading-relaxed">
+			I use Cubby every day, which means I keep running into my own decisions. Some things I liked when I built them
+			became annoying quite quickly. Others took longer to notice, especially when I was the one who knew how everything
+			worked.
+		</p>
+	</header>
+	<div class="mt-10 max-w-2xl">
+		<div>
+			<section id="everyday-use" class="scroll-mt-28 pb-16 last:pb-0">
+				<h3 class="border-neutral/30 border-t pt-6 text-3xl leading-snug font-bold">What I reach for every day</h3>
+				<section id="daily-actions" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">Why Home is crowded</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							I log tasks and limits several times a day, so opening their pages each time became tedious. I wanted the
+							things I did every day within one scroll and one interaction, even if that meant Home was a bit crowded.
+						</p>
+						<p>
+							That meant some duplication. For a Limit, I wanted enough state to understand the allowance and a quick
+							way to add to it. History and configuration could stay on the Limits page. Tasks on Home could help me act
+							on what needed attention, while the Tasks page kept the larger working set.
+						</p>
+						<p>
+							I could have made Home a summary with links into each feature, but then I'd keep paying for that tidy
+							structure every time I wanted to log something. I accepted a denser dashboard because I wanted to do the
+							common things where I already was.
+						</p>
+					</div>
+					<a class="mt-5 inline-block py-2 text-sm font-semibold underline underline-offset-4" href="#notes"
+						>See the dashboard</a
+					>
+				</section>
+				<section id="shared-hub" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">
+						I tried to put too much into the same interaction
+					</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							I kept coming back to the idea of a common hub for Tasks, Limits and the other logs. They had quite a lot
+							in common underneath, especially timestamps and histories, so it seemed like there should be a way to
+							bring them together. Each attempt mostly felt like I'd put several features next to each other.
+						</p>
+						<p>
+							Logging a drink takes almost no thought, but a Task might need me to decide whether to do it now or leave
+							it. With an illness, I might want to write quite a bit about what happened.
+						</p>
+						<p>
+							A Limit also needs to show how the week is going after I add something. An illness entry might need a
+							photo or a medicine dose. I still wanted to reuse code where it helped. I think the shared schema fooled
+							me into thinking the UI should be shared too.
+						</p>
+					</div>
+				</section>
+				<section id="frequency" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">More space for stuff I actually use</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							At one point, my rough order of use was Tasks, then Limits, Meals, Prices, Illness, Expiry, Gym and
+							Growing Up. That order can change, but there's a long tail of features I use much less often.
+						</p>
+						<p>
+							I had to get used to giving them uneven amounts of space. Something could be important and still not
+							deserve a permanent Home card. Meanwhile, something completely mundane could deserve a spot right there
+							because I did it several times a day.
+						</p>
+						<p>
+							Tasks was a useful example. I used it a lot, but because I could do so much from Home, I had less reason
+							to open the Tasks page itself. Another feature might deserve a navigation slot simply because I actually
+							needed to open its page.
+						</p>
+					</div>
+				</section>
+			</section>
+			<section id="domain-decisions" class="scroll-mt-28 pb-16 last:pb-0">
+				<h3 class="border-neutral/30 border-t pt-6 text-3xl leading-snug font-bold">
+					Where the data model stopped helping
+				</h3>
+				<section id="natural-capture" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">Just wanted to write a note</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							I had structured symptoms in the illness tracker because I thought they'd be useful to compare later. But
+							when my son was unwell, I often just wanted to record what I'd noticed. Something like a small ulcer under
+							his tongue the night before, then a painful sore on his foot in the morning, although he otherwise seemed
+							well.
+						</p>
+						<p>
+							Choosing symptom categories felt like too much work. I could write down what I saw without having to
+							decide exactly what to call it. Temperature and medicine timings were different because those were already
+							specific things I wanted to record.
+						</p>
+						<p>
+							A photo could help me see how something had changed, while a doctor's note kept what had been assessed or
+							advised. Those were useful things to capture in their own forms. Structured symptoms might still be useful
+							later. But when my son was unwell, categorizing everything while I was trying to record what happened was
+							just annoying.
+						</p>
+						<p>
+							So I made Note the first action in Add an update, with structured symptoms still available alongside it. I
+							could write the observation down immediately and use the more specific inputs when I needed them.
+						</p>
+					</div>
+					<a class="mt-5 inline-block py-2 text-sm font-semibold underline underline-offset-4" href="#health"
+						>See the illness feature</a
+					>
+				</section>
+				<section id="sleep-domain" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">Sleepwalking needed somewhere of its own</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							When I wanted to record sleepwalking, I already had Tasks and Illness in Cubby. It would have been
+							convenient to put the episode into whichever existing feature was closest, but neither felt like a
+							convincing fit. An unusual observation didn't automatically belong in an illness record.
+						</p>
+						<p>
+							A generic event log would have lost the sleep context too. I wanted to keep an episode with the night it
+							happened, alongside sleep and wake times. Naps and patterns across nights also made more sense together,
+							so Sleep got its own model.
+						</p>
+						<p>
+							That still left a separate question about where it should appear. Sleep could have its own proper record
+							without automatically earning a card on Home or a prime navigation slot.
+						</p>
+					</div>
+				</section>
+				<section id="task-grouping" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">Task headings had to help me decide what to do</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							Tasks could have been divided up according to their dates and statuses. But when I opened the page, I was
+							usually working out what to deal with soon and what I'd already let slip. The things I could leave until
+							later needed somewhere to sit too.
+						</p>
+						<p>
+							I settled on Today &amp; Tomorrow, Delayed, and Backlog. Those headings did some of the interpretation I'd
+							otherwise have to do each time I scanned the dates. I could see the kind of decision I needed to make
+							before reading every item.
+						</p>
+					</div>
+				</section>
+				<section id="timeline-role" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">Timeline helped me get my bearings</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							Time was a connection I actually wanted across Cubby. Medicine timings could sit near illness
+							observations, and a day could include meals as well as a workout. I wanted to see what had just happened
+							and what was coming up, which gave Timeline a purpose that the common hub had struggled to find.
+						</p>
+						<p>
+							I considered making it the main screen, but chronology couldn't decide everything that deserved my
+							attention. An overdue Task or a frequently used Limit could matter more than whichever event happened to
+							come next.
+						</p>
+						<p>
+							I kept a compact Timeline on Home, with a full view when I wanted more detail. It tells me roughly where
+							we are in the day without turning Home into a chronological feed.
+						</p>
+					</div>
+				</section>
+			</section>
+			<section id="dashboard-design" class="scroll-mt-28 pb-16 last:pb-0">
+				<h3 class="border-neutral/30 border-t pt-6 text-3xl leading-snug font-bold">
+					Making room without making a mess
+				</h3>
+				<section id="surface-hierarchy" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">Everything started to look like a card</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							For a while, a card was the obvious way to contain each thing on Home. It separated the information neatly
+							and made a component easy to move around. But once I had enough of them, the white rounded cards on tinted
+							sections started to look like stickers on coloured paper.
+						</p>
+						<p>
+							Each card seemed reasonable on its own. Together, they gave too many things the same weight. A small
+							metric could sit directly on its section background, while denser information or a group of related
+							actions still benefited from a container.
+						</p>
+						<p>
+							So I stopped giving everything its own white box. Related stuff could sit together, and the things that
+							actually needed a container could keep one.
+						</p>
+					</div>
+				</section>
+				<section id="responsive-layout" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">Mobile needed a different arrangement</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							Limits made this obvious. On desktop, several small items could sit beside each other and save a lot of
+							vertical space. Trying to carry that same arrangement onto a phone made each item cramped, with awkward
+							wrapping that slowed down scanning.
+						</p>
+						<p>
+							I increasingly preferred a single reading flow on mobile and used the extra width on desktop. The item
+							still needed to be recognizable, and its action had to behave the same way, but its position didn't need
+							to prove that it was the same component.
+						</p>
+					</div>
+				</section>
+				<section id="contextual-groups" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">
+						Household became a category for almost everything
+					</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							Household started as a useful group, then kept absorbing things because so much of Cubby could plausibly
+							go there. Eventually the label told me very little about what I'd find inside it.
+						</p>
+						<p>
+							Tasks and Limits were awkward in a different way because they could apply to almost any part of life. I
+							tried groups based on the person, the domain and the purpose of the information, but none gave me a
+							taxonomy that worked everywhere.
+						</p>
+						<p>
+							Eventually I stopped trying to find one taxonomy that worked everywhere. Home needed groups that were easy
+							to scan, while navigation needed groups that helped me find stuff. The database could organize the same
+							records differently again.
+						</p>
+					</div>
+				</section>
+				<section id="home-customization" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">Pin was a Home setting in the wrong place</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							I initially put a pin control on individual Limits because it seemed convenient to choose one right there.
+							But it became unclear what the pin meant, particularly when the same Limit appeared in different places.
+							Was I changing something in Limits or choosing what appeared on Home?
+						</p>
+						<p>
+							What I wanted was to choose the Limits in my Home quick log, so I moved that into Customize on the Home
+							section. That gave the setting a clear place to live and let the individual tiles go back to showing the
+							allowance and the add button. I could also remove the old pin behavior from the shared component, which
+							was one less thing to keep around.
+						</p>
+					</div>
+					<a class="mt-5 inline-block py-2 text-sm font-semibold underline underline-offset-4" href="#notes"
+						>See Customize on the current Home screen</a
+					>
+				</section>
+				<section id="clear-controls" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">Liked the dock until I kept misclicking it</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							I liked the floating dock when I built it, but I kept misclicking it in actual use. Eventually I went back
+							to a conventional navigation bar with labels, which worked much better. It was a bit annoying to give up
+							something I'd enjoyed building.
+						</p>
+						<p>
+							I ran into a similar problem when I made create buttons more compact. New task and Add flight became less
+							obvious when I replaced the words with generic icons, so I restored the labels. Moving a page title beside
+							the back button was a better way to save space because I could reclaim a row and still read everything.
+						</p>
+						<p>
+							A back arrow can stay compact because its meaning is familiar. I'd taken that too far with actions that
+							actually needed words. Now if a label doesn't fit, I try fixing the layout before deleting the label.
+						</p>
+					</div>
+					<a class="mt-5 inline-block py-2 text-sm font-semibold underline underline-offset-4" href="#notes"
+						>See the current navigation in the dashboard screenshots</a
+					>
+				</section>
+			</section>
+			<section id="visual-feedback" class="scroll-mt-28 pb-16 last:pb-0">
+				<h3 class="border-neutral/30 border-t pt-6 text-3xl leading-snug font-bold">How it felt after repeated use</h3>
+				<section id="surface-colours" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">
+						Colours matched in code but looked wrong together
+					</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							Using one colour at different opacities seemed like a tidy way to build the palette. Once I had tinted
+							sections and cards, though, that colour was blending against several different backgrounds.
+						</p>
+						<p>
+							I ended up with intermediate shades that looked washed out and slightly dirty. There was no single
+							obviously wrong colour, but the whole page had lost some crispness. The variables were consistent while
+							the colours I actually saw weren't.
+						</p>
+						<p>
+							So I started choosing the actual surface colour I wanted instead of insisting everything come from one
+							neat opacity formula.
+						</p>
+					</div>
+				</section>
+				<section id="repeated-feedback" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">Small responses mattered alot</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							When I add to a Limit, the moving fill shows me that it registered. Haptic feedback helps too, especially
+							when I'm logging something while doing something else and would otherwise have to check the screen again.
+						</p>
+						<p>
+							Some completions get a brief star effect, and a bigger moment can have confetti. I initially thought of
+							these as polish, but using the same quick actions several times a day made an ambiguous response more
+							annoying than I'd expected. Just felt nicer.
+						</p>
+						<p>
+							The filled squircle is a good example. Watching the water move connects the action to the allowance I have
+							left, without another message to read. That made the animation useful even before I considered whether I
+							liked how it looked.
+						</p>
+					</div>
+				</section>
+				<section id="quiet-feedback" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">Had to be more careful with the celebrations</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							But recording my kid's temperature would be a strange moment for confetti. The save had succeeded, but
+							someone was still sick. The feedback system now has separate levels, with confetti reserved for
+							milestones. An ordinary save can confirm that the record went through without a celebration.
+						</p>
+
+						<p>
+							I also wanted to stop short of points and streaks. There's already enough to keep up with at home, and I
+							wanted the small interactions to feel good without giving us another score to maintain.
+						</p>
+					</div>
+				</section>
+			</section>
+			<section id="another-user" class="scroll-mt-28 pb-16 last:pb-0">
+				<h3 class="border-neutral/30 border-t pt-6 text-3xl leading-snug font-bold">
+					Someone else has to want to use it
+				</h3>
+				<section id="useful-to-others" class="scroll-mt-28 pt-9 pb-6">
+					<h4 class="text-2xl leading-snug font-bold text-balance">My wife still says, “You can do it for me”</h4>
+					<div class="mt-5 grid gap-4 leading-relaxed">
+						<p>
+							My wife sometimes says, “You can do it for me.” That's fair enough because we share a household and I can
+							record it for her. But if she keeps finding it easier to tell me than to open Cubby, I have to take that
+							seriously.
+						</p>
+						<p>
+							I'm a fairly forgiving user of my own app because I know where everything is and why I built it. I already
+							think the information is worth recording. She might find the process troublesome, or she might just get
+							less out of the record than I do.
+						</p>
+						<p>
+							I'm still figuring that part out. Making a button clearer might help with the first problem, but if
+							keeping Cubby up to date mainly benefits me, it's understandable that she'd rather leave it to me.
+						</p>
+					</div>
+				</section>
+			</section>
+		</div>
+	</div>
+</div>
