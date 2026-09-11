@@ -121,3 +121,8 @@ jobs:
 
       - name: Validate Workers deployment config
         run: pnpm exec wrangler deploy --dry-run
+
+      - name: Verify browser survey integration
+        run: |
+          pnpm exec playwright install --with-deps chromium
+          pnpm test:feedback
