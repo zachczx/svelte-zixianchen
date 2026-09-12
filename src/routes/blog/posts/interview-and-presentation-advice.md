@@ -1,5 +1,5 @@
 ---
-title: 'The Interview and Presentation Advice People Gave Me'
+title: 'Interview and Presentation Advice People Gave Me'
 description: 'Advice I picked up over the years and still use for interviews and big presentations: rehearse aloud, prepare for the ugly questions, and make fewer things novel on the day.'
 date: '2026-09-11'
 date_updated: '2026-09-11'
