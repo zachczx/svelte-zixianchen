@@ -33,7 +33,25 @@ const origin = 'https://zixianchen.com';
 const canonicalPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
 const canonicalUrl = `${origin}${canonicalPath}`;
 const imageUrl = new URL(image, origin).href;
-const jsonLd = structuredData ? JSON.stringify(structuredData).replace(/</g, '\\u003c') : undefined;
+let resolvedStructuredData = structuredData;
+
+if (canonicalPath === '/') {
+	const websiteStructuredData = {
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'Zixian Chen',
+		alternateName: 'Zixian',
+		url: `${origin}/`,
+	};
+
+	resolvedStructuredData = structuredData
+		? Array.isArray(structuredData)
+			? [websiteStructuredData, ...structuredData]
+			: [websiteStructuredData, structuredData]
+		: websiteStructuredData;
+}
+
+const jsonLd = resolvedStructuredData ? JSON.stringify(resolvedStructuredData).replace(/</g, '\\u003c') : undefined;
 ---
 
 <!doctype html>
